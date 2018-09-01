@@ -19,7 +19,7 @@ func search(nums []int, target int) int {
 }
 
 func main() {
-	nums := []int{}
+	nums := []int{10, 20, 30}
 	target := 10
 	ans := search(nums, target)
 	fmt.Println(ans)
