@@ -4,6 +4,6 @@ I believe doing algo every day is a long term investment in my life
 
 #### Started at Sept 1st 2018
 
-| Day  | Task |
-| --- | --- |
-| 1 | binary search |
+| Day  | Task | From |
+| --- | --- | --- |
+| 1 | [binary search](/leetcode/704-binary-search) | [leetcode](https://leetcode.com/problems/binary-search/description/) |
