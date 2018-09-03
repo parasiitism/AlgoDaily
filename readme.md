@@ -29,4 +29,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | --- | --- | --- | --- |
 | 1 | [binary search](/leetcode/704-binary-search) | search | [leetcode 704](https://leetcode.com/problems/binary-search) |
 | 2 | [sqrt(x)](/leetcode/69-sqrt-x) | search | [leetcode 69](https://leetcode.com/problems/sqrtx/) |
-| 3 | [sqrt(x)](/leetcode/33-search-in-rotated-sorted-array) | search | [leetcode 33](https://leetcode.com/problems/search-in-rotated-sorted-array) |
+| 3 | [search in rotated sorted array](/leetcode/33-search-in-rotated-sorted-array) | search | [leetcode 33](https://leetcode.com/problems/search-in-rotated-sorted-array) |
