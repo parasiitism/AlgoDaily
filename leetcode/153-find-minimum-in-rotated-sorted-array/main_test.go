@@ -22,8 +22,26 @@ func TestSearch(t *testing.T) {
 		}
 	})
 	t.Run("3 items array", func(t *testing.T) {
+		ans := findMin([]int{3, 1, 2})
+		if ans != 1 {
+			t.Error(`fail`)
+		}
+	})
+	t.Run("3 items array", func(t *testing.T) {
 		ans := findMin([]int{4, 5, 6, 7, 0, 1, 2})
 		if ans != 0 {
+			t.Error(`fail`)
+		}
+	})
+	t.Run("3 items array", func(t *testing.T) {
+		ans := findMin([]int{5, 1, 2, 3, 4})
+		if ans != 1 {
+			t.Error(`fail`)
+		}
+	})
+	t.Run("3 items array", func(t *testing.T) {
+		ans := findMin([]int{4, 5, 1, 2, 3})
+		if ans != 1 {
 			t.Error(`fail`)
 		}
 	})
