@@ -33,3 +33,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 4 | [Find Peak Element](/leetcode/162-find-peak-element) | search | [leetcode 162](https://leetcode.com/problems/find-peak-element/) ||
 | 5 | [Find Minimum in Rotated Sorted Array](/leetcode/153-find-minimum-in-rotated-sorted-array) | search | [leetcode 153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) ||
 | 6 | [Find Minimum in Rotated Sorted Array](/leetcode/153-find-minimum-in-rotated-sorted-array) | search | [leetcode 153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) | 2 extra solutions for day5 |
+| 7 | [Search for a Range](/leetcode/34-search-for-a-range) | search | [leetcode 34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | |
