@@ -20,8 +20,7 @@ I believe practising algorithm every day is a long-term investment in my life.
 #### Questions will be from
 - leetcode
 - hackerrank
-- some computer science basics
-- whatever...
+- ...
 
 #### Started on September 1st 2018
 
