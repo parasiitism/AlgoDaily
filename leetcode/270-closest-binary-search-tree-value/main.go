@@ -34,7 +34,7 @@ func closestValue0(root *TreeNode, target float64) int {
 	return closest
 }
 
-// recursion with return value
+// recursive depth first search with return value
 func closestValue(root *TreeNode, target float64) int {
 	cur_diff := math.Abs(target - float64(root.Val))
 	left := math.MaxInt64
@@ -55,6 +55,32 @@ func closestValue(root *TreeNode, target float64) int {
 		return right
 	}
 	return root.Val
+}
+
+// iterative dfs
+func itr_dfs(root *TreeNode, target float64) int {
+
+	result := math.MaxInt64
+
+	var stack []*TreeNode
+	stack = append(stack, root)
+	for len(stack) > 0 {
+		var pop *TreeNode
+		pop, stack = stack[len(stack)-1], stack[:len(stack)-1]
+
+		if math.Abs(float64(pop.Val)-target) < math.Abs(float64(result)-target) {
+			result = pop.Val
+		}
+
+		if pop.Left != nil {
+			stack = append(stack, pop.Left)
+		}
+		if pop.Right != nil {
+			stack = append(stack, pop.Right)
+		}
+	}
+
+	return result
 }
 
 func main() {

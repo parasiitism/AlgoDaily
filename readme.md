@@ -34,4 +34,5 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 6 | [Find Minimum in Rotated Sorted Array](/leetcode/153-find-minimum-in-rotated-sorted-array) | search | [leetcode 153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) | 2 extra solutions for day5 |
 | 7 | [Search for a Range](/leetcode/34-search-for-a-range) | search | [leetcode 34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | |
 | 8 | [Find K Closest Elements](/leetcode/658-find-k-closest-elements) | search | [leetcode 658](https://leetcode.com/problems/find-k-closest-elements) | |
-| 9 | [](/leetcode/270-closest-binary-search-tree-value) | search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | |
+| 9 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | |
+| 10 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | revise day9 problems with legit recursive & iterative dfs |
