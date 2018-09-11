@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -13,7 +12,7 @@ type TreeNode struct {
 
 // depth first search O(n)
 // This a not a good way to do dfs cos it is nested
-func closestValue(root *TreeNode, target float64) int {
+func closestValue0(root *TreeNode, target float64) int {
 	closest := root.Val
 	var dfs func(cur *TreeNode)
 	dfs = func(cur *TreeNode) {
@@ -35,24 +34,28 @@ func closestValue(root *TreeNode, target float64) int {
 	return closest
 }
 
-func main() {
-	root := &TreeNode{4,
-		&TreeNode{2,
-			&TreeNode{1, nil, nil},
-			&TreeNode{3, nil, nil},
-		},
-		&TreeNode{5, nil, nil},
+// recursion with return value
+func closestValue(root *TreeNode, target float64) int {
+	cur_diff := math.Abs(target - float64(root.Val))
+	left := math.MaxInt64
+	right := math.MaxInt64
+	if root.Left != nil {
+		left = closestValue(root.Left, target)
 	}
-	ans := closestValue(root, -2.1)
-	fmt.Println(ans)
+	left_diff := math.Abs(target - float64(left))
+	if root.Right != nil {
+		right = closestValue(root.Right, target)
+	}
+	right_diff := math.Abs(target - float64(right))
+	if cur_diff < left_diff && cur_diff < right_diff {
+		return root.Val
+	} else if left_diff < cur_diff && left_diff < right_diff {
+		return left
+	} else if right_diff < cur_diff && right_diff < left_diff {
+		return right
+	}
+	return root.Val
+}
 
-	root = &TreeNode{4,
-		&TreeNode{2,
-			&TreeNode{1, nil, nil},
-			nil,
-		},
-		&TreeNode{5, nil, nil},
-	}
-	ans = closestValue(root, 1.1)
-	fmt.Println(ans)
+func main() {
 }
