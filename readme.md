@@ -36,3 +36,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 8 | [Find K Closest Elements](/leetcode/658-find-k-closest-elements) | search | [leetcode 658](https://leetcode.com/problems/find-k-closest-elements) | |
 | 9 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | |
 | 10 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | revise day9 problems with legit recursive & iterative dfs |
+| 11 | [Breadth First Search](/miscellaneous/breadth-first-search) | tree | | basics: revise breadth first search |
