@@ -38,3 +38,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 10 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | revise day9 problems with legit recursive & iterative dfs |
 | 11 | [Breadth First Search](/miscellaneous/breadth-first-search) | tree | | basics: revise breadth first search |
 | 12 | [Search in a Sorted Array of Unknown Size](/leetcode/702-search-in-a-sorted-array-of-unknown-size) | search | [leetcode 702](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size) | golang unsupported on leetcode, do it in python instead |
+| 13 | [Pow(x, n)](/leetcode/50-powx-n) | search | [leetcode 50](https://leetcode.com/problems/powx-n) | golang unsupported on leetcode, do it in python instead |
