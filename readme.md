@@ -40,3 +40,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 12 | [Search in a Sorted Array of Unknown Size](/leetcode/702-search-in-a-sorted-array-of-unknown-size) | search | [leetcode 702](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size) | golang unsupported on leetcode, do it in python instead |
 | 13 | [Pow(x, n)](/leetcode/50-powx-n) | search | [leetcode 50](https://leetcode.com/problems/powx-n) | i failed to come up with the solution myself, the solution is mind blowing |
 | 14 | [Valid Perfect Square](/leetcode/367-valid-perfect-square) | search | [leetcode 50](https://leetcode.com/problems/valid-perfect-square) ||
+| 15 | [Find Smallest Letter Greater Than Target](/leetcode/744-find-smallest-letter-greater-than-target) | search | [leetcode 50](https://leetcode.com/problems/find-smallest-letter-greater-than-target) | be careful of the lower & upper bounds' implementation|
