@@ -37,7 +37,6 @@ func LowerBoundBinarySearch(arr []int, target int) int {
 			min = mean + 1
 		}
 	}
-	fmt.Println(min, max)
 	return min
 }
 
@@ -55,7 +54,6 @@ func UpperBoundBinarySearch(arr []int, target int) int {
 			max = mean - 1
 		}
 	}
-	fmt.Println(min, max)
 	return max
 }
 
