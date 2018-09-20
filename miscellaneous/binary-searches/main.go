@@ -70,3 +70,5 @@ func main() {
 	fmt.Println(LowerBoundBinarySearch(b, 6))
 	fmt.Println(UpperBoundBinarySearch(b, 6))
 }
+
+// no test cases, i am lazy
