@@ -41,4 +41,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 13 | [Pow(x, n)](/leetcode/50-powx-n) | search | [leetcode 50](https://leetcode.com/problems/powx-n) | i failed to come up with the solution myself, the solution is mind blowing |
 | 14 | [Valid Perfect Square](/leetcode/367-valid-perfect-square) | search | [leetcode 50](https://leetcode.com/problems/valid-perfect-square) ||
 | 15 | [Find Smallest Letter Greater Than Target](/leetcode/744-find-smallest-letter-greater-than-target) | search | [leetcode 50](https://leetcode.com/problems/find-smallest-letter-greater-than-target) | |
-| 16 | binary search and derivatives | search | | be careful of the lower & upper bounds' implementation |
+| 16 | binary search and derivatives | search | | [my article](https://medium.com/@CalvinChankf/how-to-deal-with-lower-upper-bound-binary-search-b9ce744673df) |
