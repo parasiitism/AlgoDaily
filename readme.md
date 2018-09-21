@@ -43,3 +43,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 15 | [Find Smallest Letter Greater Than Target](/leetcode/744-find-smallest-letter-greater-than-target) | search | [leetcode 50](https://leetcode.com/problems/find-smallest-letter-greater-than-target) | |
 | 16 | [Lower & Upper Bound Binary Searches](/miscellaneous/binary-searches) | search | | [my medium article](https://medium.com/@CalvinChankf/how-to-deal-with-lower-upper-bound-binary-search-b9ce744673df) |
 | 17 | [Intersection of Two Arrays](/leetcode/349-intersection-of-two-arrays) | search, hashtable | [leetcode 349](https://leetcode.com/problems/intersection-of-two-arrays) | |
+| 18 | [Intersection of Two Arrays II](/leetcode/349-intersection-of-two-arrays-ii) | search, hashtable | [leetcode 350](https://leetcode.com/problems/intersection-of-two-arrays-ii) | |
