@@ -45,3 +45,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 17 | [Intersection of Two Arrays](/leetcode/349-intersection-of-two-arrays) | search, hashtable | [leetcode 349](https://leetcode.com/problems/intersection-of-two-arrays) | |
 | 18 | [Intersection of Two Arrays II](/leetcode/349-intersection-of-two-arrays-ii) | search, hashtable | [leetcode 350](https://leetcode.com/problems/intersection-of-two-arrays-ii) | |
 | 19 | [Two Sum II](/leetcode/167-two-sum-ii-input-array-is-sorted) | search, hashtable | [leetcode 167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | |
+| 19 | [Find the Duplicate Number](/leetcode/287-find-the-duplicate-number) | search, hashtable | [leetcode 287](https://leetcode.com/problems/find-the-duplicate-number/description/) | |
