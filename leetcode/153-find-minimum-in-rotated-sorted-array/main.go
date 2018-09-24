@@ -1,6 +1,8 @@
 package main
 
-import "math"
+import (
+	"math"
+)
 
 // linear
 func findMin2(nums []int) int {
@@ -28,8 +30,9 @@ func findMin1(nums []int) int {
 	return nums[min]
 }
 
-// mutated binary search
-func findMin(nums []int) int {
+// suggested solution: mutated binary search
+// actually i think it is hard to come up cos the "base cases" is too unusual
+func findMin0(nums []int) int {
 	min := 0
 	max := len(nums) - 1
 	if len(nums) == 1 {
@@ -56,6 +59,34 @@ func findMin(nums []int) int {
 		}
 	}
 	return -1
+}
+
+// this derived solution(from suggested) is a lot easier to understand
+func findMin(nums []int) int {
+	min := 0
+	max := len(nums) - 1
+	if len(nums) == 1 {
+		return nums[0]
+	}
+	if nums[min] < nums[max] {
+		return nums[min]
+	}
+	// keep 2 items at the end
+	for min+1 < max {
+		mean := (min + max) / 2
+		// always keep the pivot point e.g. 51234, 23451
+		if nums[min] < nums[mean] {
+			min = mean
+		} else {
+			max = mean
+		}
+	}
+	// check the remains
+	if nums[min] < nums[max] {
+		return nums[min]
+	} else {
+		return nums[max]
+	}
 }
 
 func main() {
