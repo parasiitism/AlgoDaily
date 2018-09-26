@@ -6,7 +6,11 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// suggested
+// leetcode doesn't support go for this question, i did it in python
+
+// my first intuitve workable attempt: see main.py
+
+// suggested solution by leetcoders: O(logn)
 func inorderSuccessor(root *TreeNode, p *TreeNode) *TreeNode {
 	var successor *TreeNode
 	node := root
@@ -21,11 +25,9 @@ func inorderSuccessor(root *TreeNode, p *TreeNode) *TreeNode {
 	return successor
 }
 
-// another: see main.py
-
 // another:
-// first, in order traverse through the tree and save each node into an array
-// second, return the array[target+1]
+// 1. in order traverse through the tree and save each node into an array
+// 2. return the array[target+1]
 // complexity: O(2n) so i wont implement it
 
 func main() {

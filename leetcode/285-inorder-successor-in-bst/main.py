@@ -1,5 +1,4 @@
-# once i have finished, 
-# i just realized that leetcode only supports up to python2.7 for this question LOL
+# leetcode doesn't support go for this question, i did it in python first
 
 import sys
 # Definition for a binary tree node.
@@ -9,6 +8,7 @@ class TreeNode(object):
     self.left = None
     self.right = None
 
+# my intuitive thought: find the smallest node which is just larger than the target
 # O(logn)
 class Solution(object):
   dest = None
@@ -27,11 +27,11 @@ class Solution(object):
     
 
   def check(self, root, p):
-    x = root.val - p
+    x = root.val - p.val
     y = sys.maxsize
     
     if self.dest != None:
-      y = self.dest.val - p
+      y = self.dest.val - p.val
 
     if x == 0:
       self.found = True
@@ -39,9 +39,9 @@ class Solution(object):
     if x < y and x > 0:
       self.dest = root
     
-    if root.val <= p and root.right != None:
+    if root.val <= p.val and root.right != None:
       self.check(root.right, p)
-    if root.val > p and root.left != None:
+    if root.val > p.val and root.left != None:
       self.check(root.left, p)
 
 a = TreeNode(5)
@@ -57,7 +57,7 @@ b.right = e
 d.left = f
 
 # try to search every number
-ans = Solution().inorderSuccessor(a, 0)
+ans = Solution().inorderSuccessor(a, e)
 print("ans=", ans)
 if ans != None:
   print("ans.val=", ans.val)
