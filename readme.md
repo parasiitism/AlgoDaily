@@ -48,4 +48,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 20 | [Find the Duplicate Number](/leetcode/287-find-the-duplicate-number) | search, hashtable | [leetcode 287](https://leetcode.com/problems/find-the-duplicate-number/description/) | |
 | 21 | [Find Minimum in Rotated Sorted Array II](/leetcode/154-find-minimum-in-rotated-sorted-array-ii) | search | [leetcode 154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | |
 | 22 | [Validate Binary Search Tree](/leetcode/98-validate-binary-search-tree) | tree | [leetcode 98](https://leetcode.com/problems/validate-binary-search-tree/description/) | |
-| 23 | [Inorder Successor in BST](/leetcode/285-inorder-successor-in-bst) | tree | [leetcode 285](https://leetcode.com/problems/inorder-successor-in-bst/) | |
+| 23 | [Inorder Successor in BST](/leetcode/285-inorder-successor-in-bst) | tree | [leetcode 285](https://leetcode.com/problems/inorder-successor-in-bst/) | the suggested solution is jaw-dropping |

@@ -11,6 +11,9 @@ function TreeNode(val) {
  * @param {TreeNode} p
  * @return {TreeNode}
  */
+
+// OMG, how can people come up with this solution, not intuitive at the first glance
+
 var inorderSuccessor = function(root, p) {
   let successor = null;
   let node = root;
