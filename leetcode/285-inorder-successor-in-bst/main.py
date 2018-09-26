@@ -9,6 +9,7 @@ class TreeNode(object):
     self.left = None
     self.right = None
 
+# O(logn)
 class Solution(object):
   dest = None
   found = False
@@ -28,7 +29,7 @@ class Solution(object):
   def check(self, root, p):
     x = root.val - p
     y = sys.maxsize
-    print(y)
+    
     if self.dest != None:
       y = self.dest.val - p
 
