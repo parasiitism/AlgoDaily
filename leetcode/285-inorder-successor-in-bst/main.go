@@ -6,6 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// suggested
 func inorderSuccessor(root *TreeNode, p *TreeNode) *TreeNode {
 	var successor *TreeNode
 	node := root
@@ -19,6 +20,13 @@ func inorderSuccessor(root *TreeNode, p *TreeNode) *TreeNode {
 	}
 	return successor
 }
+
+// another: see main.py
+
+// another:
+// first, in order traverse through the tree and save each node into an array
+// second, return the array[target+1]
+// complexity: O(2n) so i wont implement it
 
 func main() {
 
