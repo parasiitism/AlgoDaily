@@ -38,7 +38,7 @@ class BSTIterator1(object):
         self.arr = self.arr[1:]
     return result.val
 
-# suggested solution
+# suggested solution: idea from Iterative Inorder Traversal of BST
 class BSTIterator:
     def __init__(self, root):
         self.stack = []
