@@ -50,3 +50,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 22 | [Validate Binary Search Tree](/leetcode/98-validate-binary-search-tree) | tree | [leetcode 98](https://leetcode.com/problems/validate-binary-search-tree/description/) | |
 | 23 | [Inorder Successor in BST](/leetcode/285-inorder-successor-in-bst) | tree | [leetcode 285](https://leetcode.com/problems/inorder-successor-in-bst/) | my O(logn) solution is unique ✌🏻, tho the suggested solution is jaw-dropping and much more terse |
 | 24 | [Depth First Search](/miscellaneous/depth-first-search) | tree | | |
+| 25 | [Binary Search Tree Iterator](/leetcode/173-binary-search-tree-iterator) | tree | [leetcode 173](https://leetcode.com/problems/binary-search-tree-iterator/description/) | my first solution was super slow tho it passes the OJ |

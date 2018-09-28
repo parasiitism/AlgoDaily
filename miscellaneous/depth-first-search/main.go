@@ -42,6 +42,5 @@ func main() {
 			&TreeNode{7, nil, nil},
 		},
 	}
-	fmt.Println(`sfs`)
 	dfs(root)
 }
