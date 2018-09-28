@@ -6,7 +6,8 @@ class TreeNode(object):
     self.left = None
     self.right = None
 
-class BSTIterator(object):
+# my first intuitive attempt
+class BSTIterator1(object):
   
   def __init__(self, root):
     """
@@ -37,6 +38,34 @@ class BSTIterator(object):
         self.arr = self.arr[1:]
     return result.val
 
+# suggested solution
+class BSTIterator:
+    def __init__(self, root):
+        self.stack = []
+        self.pushLeft(root)
+
+    def hasNext(self):
+        return len(self.stack) > 0
+
+    # trick1: 
+    #   after pop, push the right node into the stack(if it is null, pushLeft() will ignore it)
+    def next(self):
+        temp = self.stack.pop()
+        self.pushLeft(temp.right)
+        return temp.val
+        
+    # trick2:
+    #   push the left node(from the parent's right child) into the stack
+    #   , therefore the time complexity will be just O(height)
+    def pushLeft(self, node):
+        while node is not None:
+            self.stack.append(node)
+            node = node.left
+            
+#       5
+#    3      6
+#  2  4 
+# 1
 # a = TreeNode(5)
 # b = TreeNode(3)
 # c = TreeNode(6)
@@ -49,10 +78,21 @@ class BSTIterator(object):
 # b.right = e
 # d.left = f
 
+
+#   2
+# 1
+a = TreeNode(2)
+b = TreeNode(1)
+a.left = b
+
+#   1
+#     2
+#       3
 a = TreeNode(1)
 b = TreeNode(2)
-b.left = None
+c = TreeNode(3)
 a.right = b
+b.right = c
 
 i, v = BSTIterator(a), []
 while i.hasNext():
