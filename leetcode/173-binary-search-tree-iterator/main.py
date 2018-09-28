@@ -1,3 +1,5 @@
+# leetcode doesn't support golang submission for this question
+
 class TreeNode(object):
   def __init__(self, x):
     self.val = x
