@@ -21,6 +21,28 @@ func BST2SortedArray(root *TreeNode) {
 	}
 }
 
+// iterative in-order traversal on BST
+func InorderIterative(root *TreeNode) {
+	var stack []*TreeNode
+	curr := root
+	for curr != nil || len(stack) > 0 {
+		// all the way down to the left most leaf
+		for curr != nil {
+			stack = append(stack, curr)
+			curr = curr.Left
+		}
+		// pop the item from the stack
+		pop := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		// do something on the popped node
+		fmt.Println(pop.Val)
+		// take the nearest right sibling then iterate again
+		if pop.Right != nil {
+			stack = append(stack, pop.Right)
+		}
+	}
+}
+
 func main() {
 	// 		5
 	//	2		8
@@ -36,4 +58,6 @@ func main() {
 		},
 	}
 	BST2SortedArray(root)
+	fmt.Println(",")
+	InorderIterative(root)
 }
