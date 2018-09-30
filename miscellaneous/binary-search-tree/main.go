@@ -11,17 +11,19 @@ type TreeNode struct {
 }
 
 // recursive in-order traversal on BST
-func BST2SortedArray(root *TreeNode) {
+// this is also the way that transforms a BST to an sorted array
+func InorderRecursive(root *TreeNode) {
 	if root.Left != nil {
-		BST2SortedArray(root.Left)
+		InorderRecursive(root.Left)
 	}
 	fmt.Println(root.Val)
 	if root.Right != nil {
-		BST2SortedArray(root.Right)
+		InorderRecursive(root.Right)
 	}
 }
 
 // iterative in-order traversal on BST
+// this is also the way that transforms a BST to an sorted array
 func InorderIterative(root *TreeNode) {
 	var stack []*TreeNode
 	curr := root
@@ -57,7 +59,7 @@ func main() {
 			&TreeNode{9, nil, nil},
 		},
 	}
-	BST2SortedArray(root)
+	InorderRecursive(root)
 	fmt.Println(",")
 	InorderIterative(root)
 }
