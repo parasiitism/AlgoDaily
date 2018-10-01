@@ -45,6 +45,28 @@ func InorderIterative(root *TreeNode) {
 	}
 }
 
+// pre-order traversal on BST
+func PreorderRecursive(root *TreeNode) {
+	fmt.Println(root.Val)
+	if root.Left != nil {
+		PreorderRecursive(root.Left)
+	}
+	if root.Right != nil {
+		PreorderRecursive(root.Right)
+	}
+}
+
+// post-order traversal on BST
+func PostorderRecursive(root *TreeNode) {
+	if root.Left != nil {
+		PostorderRecursive(root.Left)
+	}
+	if root.Right != nil {
+		PostorderRecursive(root.Right)
+	}
+	fmt.Println(root.Val)
+}
+
 func main() {
 	// 		5
 	//	2		8
@@ -62,4 +84,8 @@ func main() {
 	InorderRecursive(root)
 	fmt.Println(",")
 	InorderIterative(root)
+	fmt.Println(",")
+	PreorderRecursive(root)
+	fmt.Println(",")
+	PostorderRecursive(root)
 }
