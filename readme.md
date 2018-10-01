@@ -54,3 +54,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 25 | [Binary Search Tree Iterator](/leetcode/173-binary-search-tree-iterator) | BST | [leetcode 173](https://leetcode.com/problems/binary-search-tree-iterator/description/) | my first solution was super slow tho it passes the OJ. The suggested solution is awesome |
 | 26 | [Search in a Binary Search Tree](/leetcode/700-search-in-a-binary-search-tree) | tree | [leetcode 26](https://leetcode.com/problems/search-in-a-binary-search-tree/description/) | |
 | 27 | [Iterative inorder traversal on BST](/miscellaneous/binary-search-tree) | BST | | |
+| 28 | [Pre & post order traversal on BST](/miscellaneous/binary-search-tree) | BST | | |
