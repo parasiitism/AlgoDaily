@@ -55,4 +55,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 26 | [Search in a Binary Search Tree](/leetcode/700-search-in-a-binary-search-tree) | tree | [leetcode 26](https://leetcode.com/problems/search-in-a-binary-search-tree/description/) | |
 | 27 | [Iterative inorder traversal on BST](/miscellaneous/binary-search-tree) | BST | | |
 | 28 | [Pre & post order traversal on BST](/miscellaneous/binary-search-tree) | BST | | |
-| 29 | [Insert into a Binary Search Tree](/leetcode/701-insert-into-a-binary-search-tree) | BST | [leetcode 171](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | |
+| 29 | [Insert into a Binary Search Tree](/leetcode/701-insert-into-a-binary-search-tree) | BST | [leetcode 171](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | recursive & iterative |

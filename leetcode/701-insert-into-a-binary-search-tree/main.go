@@ -6,7 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// way of search, iteratively
+// iterative search
 func insertIntoBST(root *TreeNode, val int) *TreeNode {
 	if root == nil {
 		return &TreeNode{val, nil, nil}
@@ -33,6 +33,31 @@ func insertIntoBST(root *TreeNode, val int) *TreeNode {
 	return root
 }
 
+// recursive search
+func insertIntoBST1(root *TreeNode, val int) *TreeNode {
+	if root == nil {
+		return &TreeNode{val, nil, nil}
+	}
+	var recursive func(curr *TreeNode)
+	recursive = func(curr *TreeNode) {
+		if val > curr.Val {
+			if curr.Right != nil {
+				recursive(curr.Right)
+			} else {
+				curr.Right = &TreeNode{val, nil, nil}
+			}
+		} else {
+			if curr.Left != nil {
+				recursive(curr.Left)
+			} else {
+				curr.Left = &TreeNode{val, nil, nil}
+			}
+		}
+	}
+	recursive(root)
+	return root
+}
+
 // another way:
 // unfold the tree into an array,
 // construct an binary tree based on the array
@@ -50,6 +75,6 @@ func main() {
 		},
 		&TreeNode{7, nil, nil},
 	}
-	ans := insertIntoBST(root, 5)
+	ans := insertIntoBST1(root, 5)
 	println(ans.Right.Left.Val)
 }
