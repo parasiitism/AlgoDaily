@@ -1,6 +1,6 @@
 AlGoDaily
 ===
-I believe practising algorithm every day is a long-term investment in my life.
+I believe that practising algorithm every day is a long-term investment in my life.
 
 #### Why Golang?
 - No reason, just for fun
@@ -56,3 +56,4 @@ I believe practising algorithm every day is a long-term investment in my life.
 | 27 | [Iterative inorder traversal on BST](/miscellaneous/binary-search-tree) | BST | | |
 | 28 | [Pre & post order traversal on BST](/miscellaneous/binary-search-tree) | BST | | |
 | 29 | [Insert into a Binary Search Tree](/leetcode/701-insert-into-a-binary-search-tree) | BST | [leetcode 171](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | recursive & iterative |
+| 30 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | my 1st attempt was super discursive LOL |
