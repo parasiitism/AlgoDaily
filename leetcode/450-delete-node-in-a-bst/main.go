@@ -113,11 +113,13 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 	return root
 }
 
-// recursive
+// suggested solution, recursive
+//
 func deleteNode1(root *TreeNode, key int) *TreeNode {
 	if root == nil {
 		return nil
 	}
+	// case 2 and case3
 	if root.Val == key {
 		if root.Left == nil {
 			return root.Right
@@ -127,13 +129,14 @@ func deleteNode1(root *TreeNode, key int) *TreeNode {
 		}
 		suc := searchSuccessor(root)
 		root.Val = suc.Val
-		root.Right = deleteNode(root.Right, suc.Val)
+		root.Right = deleteNode1(root.Right, suc.Val)
 		return root
 	}
+	// search and replace the target with the successor
 	if root.Val < key {
-		root.Right = deleteNode(root.Right, key)
+		root.Right = deleteNode1(root.Right, key)
 	} else {
-		root.Left = deleteNode(root.Left, key)
+		root.Left = deleteNode1(root.Left, key)
 	}
 	return root
 }
