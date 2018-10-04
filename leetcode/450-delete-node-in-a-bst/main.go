@@ -113,6 +113,43 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 	return root
 }
 
+// recursive
+func deleteNode1(root *TreeNode, key int) *TreeNode {
+	if root == nil {
+		return nil
+	}
+	if root.Val == key {
+		if root.Left == nil {
+			return root.Right
+		}
+		if root.Right == nil {
+			return root.Left
+		}
+		suc := searchSuccessor(root)
+		root.Val = suc.Val
+		root.Right = deleteNode(root.Right, suc.Val)
+		return root
+	}
+	if root.Val < key {
+		root.Right = deleteNode(root.Right, key)
+	} else {
+		root.Left = deleteNode(root.Left, key)
+	}
+	return root
+}
+
+func searchSuccessor(root *TreeNode) *TreeNode {
+	successor := root.Right
+	for true {
+		if successor.Left != nil {
+			successor = successor.Left
+		} else {
+			break
+		}
+	}
+	return successor
+}
+
 func main() {
 	// for BST, it was too tedious to write testcases here, i did the testcases on leetcode instead
 }
