@@ -114,5 +114,5 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 }
 
 func main() {
-
+	// for BST, it was too tedious to write testcases here, i did the testcases on leetcode instead
 }
