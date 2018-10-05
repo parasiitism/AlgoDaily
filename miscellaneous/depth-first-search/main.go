@@ -30,13 +30,35 @@ func dfs(root *TreeNode) {
 
 // recursive
 // pre-order
-func dfsRecursive(root *TreeNode) {
+func dfsRecursivePreorder(root *TreeNode) {
 	if root == nil {
 		return
 	}
 	fmt.Println(root.Val)
-	dfsRecursive(root.Left)
-	dfsRecursive(root.Right)
+	dfsRecursivePreorder(root.Left)
+	dfsRecursivePreorder(root.Right)
+}
+
+// recursive
+// in-order
+func dfsRecursiveInorder(root *TreeNode) {
+	if root == nil {
+		return
+	}
+	dfsRecursiveInorder(root.Left)
+	fmt.Println(root.Val)
+	dfsRecursiveInorder(root.Right)
+}
+
+// recursive
+// post-order
+func dfsRecursivePostorder(root *TreeNode) {
+	if root == nil {
+		return
+	}
+	dfsRecursivePostorder(root.Left)
+	dfsRecursivePostorder(root.Right)
+	fmt.Println(root.Val)
 }
 
 func main() {
@@ -53,6 +75,10 @@ func main() {
 			&TreeNode{7, nil, nil},
 		},
 	}
-	// dfs(root)
-	dfsRecursive(root)
+
+	dfs(root)
+
+	dfsRecursivePreorder(root)
+	dfsRecursiveInorder(root)
+	dfsRecursivePostorder(root)
 }
