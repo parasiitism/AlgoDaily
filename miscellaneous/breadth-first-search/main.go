@@ -11,6 +11,7 @@ type TreeNode struct {
 }
 
 // breadth first search
+// iterative
 func bfs(root *TreeNode) {
 	var queue []*TreeNode
 	queue = append(queue, root)
