@@ -59,3 +59,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 30 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | my 1st attempt was super discursive LOL |
 | 31 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | to understand the recursive approach |
 | 32 | [Pre & In & Post Order Depth First Search](/miscellaneous/depth-first-search) | tree | | revision on tree traversals |
+| 33 | [Kth Largest Element in a Stream](/leetcode/703-kth-largest-element-in-a-stream) | BST | [leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream) | my first attempt "Time Limit Exceeded" |
