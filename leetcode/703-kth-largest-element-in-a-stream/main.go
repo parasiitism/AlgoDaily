@@ -6,6 +6,7 @@ import (
 
 type TreeNode struct {
 	Val   int
+	Cnt   int
 	Left  *TreeNode
 	Right *TreeNode
 }
@@ -33,20 +34,20 @@ func insertIntoBST(root *TreeNode, val int) *TreeNode {
 	for true {
 		if val > curr.Val {
 			if curr.Right != nil {
-				// curr.Cnt++
+				curr.Cnt++
 				curr = curr.Right
 			} else {
 				curr.Right = &TreeNode{val, 1, nil, nil}
-				// curr.Cnt++
+				curr.Cnt++
 				break
 			}
 		} else { // it includes < and =
 			if curr.Left != nil {
-				// curr.Cnt++
+				curr.Cnt++
 				curr = curr.Left
 			} else {
 				curr.Left = &TreeNode{val, 1, nil, nil}
-				// curr.Cnt++
+				curr.Cnt++
 				break
 			}
 		}
@@ -54,24 +55,50 @@ func insertIntoBST(root *TreeNode, val int) *TreeNode {
 	return root
 }
 
+// suggested solution
 func (this *KthLargest) Add(val int) int {
 	// 1. insert
 	this.Bst = insertIntoBST(this.Bst, val)
-	// 2. search kth largest in a BST
-	var arr []int
-	var inorder func(node *TreeNode)
-	inorder = func(node *TreeNode) {
-		if node == nil {
-			return
-		}
-		inorder(node.Left)
-		arr = append(arr, node.Val)
-		inorder(node.Right)
-	}
-	inorder(this.Bst)
+	// 2. search kth largest in a BST using Cnt
+	count := this.K
+	curr := this.Bst
 
-	return arr[len(arr)-this.K]
+	for count > 0 {
+		pos := 1
+		if curr.Right != nil {
+			pos = pos + curr.Right.Cnt
+		}
+		if count == pos {
+			break
+		} else if count > pos {
+			count = count - pos
+			curr = curr.Left
+		} else {
+			curr = curr.Right
+		}
+	}
+	return curr.Val
 }
+
+// Time Limit Exceeded
+// func (this *KthLargest) Add(val int) int {
+// 	// 1. insert
+// 	this.Bst = insertIntoBST(this.Bst, val)
+// 	// 2. search kth largest in a BST
+// 	var arr []int
+// 	var inorder func(node *TreeNode)
+// 	inorder = func(node *TreeNode) {
+// 		if node == nil {
+// 			return
+// 		}
+// 		inorder(node.Left)
+// 		arr = append(arr, node.Val)
+// 		inorder(node.Right)
+// 	}
+// 	inorder(this.Bst)
+
+// 	return arr[len(arr)-this.K]
+// }
 
 //
 func main() {
