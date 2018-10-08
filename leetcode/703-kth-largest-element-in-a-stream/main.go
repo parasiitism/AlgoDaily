@@ -1,9 +1,12 @@
 package main
 
 import (
+	"container/heap"
 	"fmt"
 )
 
+// suggested solution 1: BST
+// -----------------------------------------------------------------------------------
 type TreeNode struct {
 	Val   int
 	Cnt   int
@@ -55,7 +58,29 @@ func insertIntoBST(root *TreeNode, val int) *TreeNode {
 	return root
 }
 
-// suggested solution 1: BST
+/*
+// my first attempt: unfold the BST into an sorted array, return the arr[n-k], O(n)
+// failed: Time Limit Exceeded
+func (this *KthLargest) Add(val int) int {
+	// 1. insert
+	this.Bst = insertIntoBST(this.Bst, val)
+	// 2. search kth largest in a BST
+	var arr []int
+	var inorder func(node *TreeNode)
+	inorder = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		inorder(node.Left)
+		arr = append(arr, node.Val)
+		inorder(node.Right)
+	}
+	inorder(this.Bst)
+
+	return arr[len(arr)-this.K]
+}
+*/
+
 func (this *KthLargest) Add(val int) int {
 	// 1. insert
 	this.Bst = insertIntoBST(this.Bst, val)
@@ -80,29 +105,64 @@ func (this *KthLargest) Add(val int) int {
 	return curr.Val
 }
 
-// Time Limit Exceeded
-// func (this *KthLargest) Add(val int) int {
-// 	// 1. insert
-// 	this.Bst = insertIntoBST(this.Bst, val)
-// 	// 2. search kth largest in a BST
-// 	var arr []int
-// 	var inorder func(node *TreeNode)
-// 	inorder = func(node *TreeNode) {
-// 		if node == nil {
-// 			return
-// 		}
-// 		inorder(node.Left)
-// 		arr = append(arr, node.Val)
-// 		inorder(node.Right)
-// 	}
-// 	inorder(this.Bst)
+// Suggested solution: min heap
+// -----------------------------------------------------------------------------------
 
-// 	return arr[len(arr)-this.K]
-// }
+// heap implementation
+type IntHeap []int
 
-//
+func (h IntHeap) Len() int           { return len(h) }
+func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
+func (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
+
+func (h *IntHeap) Push(x interface{}) {
+	// Push and Pop use pointer receivers because they modify the slice's length,
+	// not just its contents.
+	*h = append(*h, x.(int))
+}
+
+func (h *IntHeap) Pop() interface{} {
+	old := *h
+	n := len(old)
+	x := old[n-1]
+	*h = old[0 : n-1]
+	return x
+}
+
+// real thing
+type KthLargest1 struct {
+	Nums *IntHeap
+	K    int
+}
+
+func Constructor1(k int, nums []int) KthLargest1 {
+	// array to BST
+	h := &IntHeap{}
+	heap.Init(h)
+	// push all elements to the heap
+	for i := 0; i < len(nums); i++ {
+		heap.Push(h, nums[i])
+	}
+	// remove the smaller elements from the heap such that only the k largest elements are in the heap
+	for len(*h) > k {
+		heap.Pop(h)
+	}
+	return KthLargest1{h, k}
+}
+
+func (this *KthLargest1) Add1(val int) int {
+	if len(*this.Nums) < this.K {
+		heap.Push(this.Nums, val)
+	} else if val > (*this.Nums)[0] {
+		heap.Push(this.Nums, val)
+		heap.Pop(this.Nums)
+	}
+	return (*this.Nums)[0]
+}
+
 func main() {
-	temp := Constructor(3, []int{5, 7, 3, 8, 1, 9})
-	res := temp.Add(2)
+	temp := Constructor1(3, []int{5, 7, 3, 8, 1, 9})
+	res := temp.Add1(2)
+	res = temp.Add1(10)
 	fmt.Println(res)
 }
