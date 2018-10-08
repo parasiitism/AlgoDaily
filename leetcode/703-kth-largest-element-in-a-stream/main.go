@@ -55,7 +55,7 @@ func insertIntoBST(root *TreeNode, val int) *TreeNode {
 	return root
 }
 
-// suggested solution
+// suggested solution 1: BST
 func (this *KthLargest) Add(val int) int {
 	// 1. insert
 	this.Bst = insertIntoBST(this.Bst, val)
