@@ -1,3 +1,5 @@
+# leetcode doesnt support golang submissions
+
 class TreeNode(object):
   def __init__(self, x):
     self.val = x
