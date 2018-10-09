@@ -61,3 +61,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 32 | [Pre & In & Post Order Depth First Search](/miscellaneous/depth-first-search) | tree | | revision on tree traversals |
 | 33 | [Kth Largest Element in a Stream](/leetcode/703-kth-largest-element-in-a-stream) | BST | [leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream) | my first attempt "Time Limit Exceeded" |
 | 34 | [Kth Largest Element in a Stream](/leetcode/703-kth-largest-element-in-a-stream) | BST | [leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream) | learned what is `heap` and did a heap solution |
+| 35 | [Lowest Common Ancestor of a Binary Search Tree](/leetcode/235-lowest-common-ancestor-of-a-binary-search-tree) | BST | [leetcode 235](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | |
