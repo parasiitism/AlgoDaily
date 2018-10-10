@@ -63,3 +63,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 34 | [Kth Largest Element in a Stream](/leetcode/703-kth-largest-element-in-a-stream) | BST | [leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream) | learned what is `heap` and did a heap solution |
 | 35 | [Lowest Common Ancestor of a Binary Search Tree](/leetcode/235-lowest-common-ancestor-of-a-binary-search-tree) | BST | [leetcode 235](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | |
 | 36 | [Convert Sorted Array to Binary Search Tree](/leetcode/108-convert-sorted-array-to-binary-search-tree) | BST | [leetcode 108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree) | |
+| 37 | [Balanced Binary Tree](/leetcode/110-balanced-binary-tree) | Tree | [leetcode 110](https://leetcode.com/problems/balanced-binary-tree) | |
