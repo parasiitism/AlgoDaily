@@ -10,7 +10,7 @@ class TreeNode(object):
 
 # my intuitive solution:
 # get the paths, compare the paths
-# O(p+q+min(p,q)) = O(3n)= O(n) TLE 🙄
+# O(p+q+min(p,q)) = O(3k) = O(n) TLE 🙄
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
         """
@@ -50,6 +50,19 @@ class Solution(object):
         if node.val == target.val:
             return x
         return self.dfs(node.left, target, x) or self.dfs(node.right, target, x)
+
+# suggested solution:
+# recursion ./236.png
+# O(n)
+class Solution1(object):
+    def lowestCommonAncestor(self, root, p, q):
+        if root == None or root == p or root == q:
+            return root
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+        if left != None and right != None:
+            return root
+        return left if left != None else right
 
 #     5
 #   3   6
