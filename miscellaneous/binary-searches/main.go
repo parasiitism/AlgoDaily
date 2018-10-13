@@ -63,12 +63,38 @@ func UpperBoundBinarySearch(arr []int, target int) int {
 	return -1
 }
 
+// recursive
+func RecursiveBinarySearch(arr []int, target int) int {
+	min := 0
+	max := len(arr) - 1
+	return recursion(arr, min, max, target)
+}
+
+// write this outside the main function,
+// so to understand the logic of returning
+func recursion(arr []int, min int, max int, target int) int {
+	if min > max {
+		return -1
+	}
+	mean := (min + max) / 2
+	if arr[mean] == target {
+		return mean
+	}
+	left := recursion(arr, min, mean-1, target)
+	right := recursion(arr, mean+1, max, target)
+	if left != -1 {
+		return left
+	}
+	return right
+}
+
 func main() {
 	a := []int{1, 2, 3, 4, 5}
 	b := []int{1, 2, 3, 3, 3, 4, 6}
 	fmt.Println(CommonBinarySearch(a, 4))
 	fmt.Println(LowerBoundBinarySearch(b, 6))
 	fmt.Println(UpperBoundBinarySearch(b, 6))
+	fmt.Println(RecursiveBinarySearch(a, 2))
 }
 
 // no test cases, i am lazy
