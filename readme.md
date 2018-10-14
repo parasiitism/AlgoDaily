@@ -67,3 +67,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 38 | [Contains Duplicate III](/leetcode/220-contains-duplicate-iii) | array, BST, bucket | [leetcode 220](https://leetcode.com/problems/contains-duplicate-iii) | 🧐 I don't understand the suggested solutions in BST and Bucket |
 | 39 | [Lowest Common Ancestor of a Binary Tree](/leetcode/236-lowest-common-ancestor-of-a-binary-tree) | tree | [leetcode 226](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree) | even O(n) leads to Time Limit Exceeded, what a draconian challenge. checkout suggestion |
 | 40 | [Recursive Binary Search](/miscellaneous/binary-searches) | tree | | to understand the logic of recursion |
+| 41 | [Binary Tree Preorder Traversal](/leetcode/144-binary-tree-preorder-traversal) | tree | | |
