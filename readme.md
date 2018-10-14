@@ -71,3 +71,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 40 | [Recursive Binary Search](/miscellaneous/binary-searches) | tree | | to understand the logic of recursion |
 | 41 | [Binary Tree Preorder Traversal](/leetcode/144-binary-tree-preorder-traversal) | tree | | |
 | 42 | [N-ary Tree Preorder Traversal](/leetcode/589-n-ary-tree-preorder-traversal) | N-ary | [leetcode 589](https://leetcode.com/problems/n-ary-tree-preorder-traversal/description/)| |
+| 43 | [Binary Tree Inorder Traversal](/leetcode/94-binary-tree-inorder-traversal) | tree | [leetcode 94](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)| the iterative solution is mind blowing |
