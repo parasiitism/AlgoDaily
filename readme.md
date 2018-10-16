@@ -73,3 +73,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 42 | [N-ary Tree Preorder Traversal](/leetcode/589-n-ary-tree-preorder-traversal) | N-ary | [leetcode 589](https://leetcode.com/problems/n-ary-tree-preorder-traversal/description/)| |
 | 43 | [Binary Tree Inorder Traversal](/leetcode/94-binary-tree-inorder-traversal) | tree | [leetcode 94](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)| the iterative solution is mind blowing |
 | 44 | [Binary Tree Postorder Traversal](/leetcode/145-binary-tree-postorder-traversal) | tree | [leetcode 145](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)| |
+| 45 | [Binary Tree Postorder Traversal](/leetcode/145-binary-tree-postorder-traversal) | tree | [leetcode 145](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)| to understand the trick of the iterative solution|
