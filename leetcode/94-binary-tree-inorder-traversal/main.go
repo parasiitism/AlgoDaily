@@ -35,13 +35,16 @@ func inorderTraversal1(root *TreeNode) []int {
 	var stack []*TreeNode
 	curr := root
 	for curr != nil || len(stack) > 0 {
+		// get to the left-most node
 		for curr != nil {
 			stack = append(stack, curr)
 			curr = curr.Left
 		}
+		// put the node in to the result
 		pop := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 		result = append(result, pop.Val)
+		// consider the right node
 		curr = pop.Right
 	}
 	return result
