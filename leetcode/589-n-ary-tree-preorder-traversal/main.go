@@ -7,6 +7,7 @@ type NaryNode struct {
 	Children []*NaryNode
 }
 
+// iterative
 func preorder(root *NaryNode) []int {
 	if root == nil {
 		return []int{}
@@ -24,6 +25,8 @@ func preorder(root *NaryNode) []int {
 	}
 	return result
 }
+
+// i am too lazy, read .py for the recursive one
 
 func main() {
 
