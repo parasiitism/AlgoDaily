@@ -18,3 +18,22 @@ class Solution(object):
         ans.append(root.val)
         return ans
 
+# iterative
+class Solution1(object):
+    def postorder(self, root):
+        """
+        :type root: Node
+        :rtype: List[int]
+        """
+        if not root:
+            return []
+        stack = []
+        stack.append(root)
+        result = []
+        while len(stack) > 0:
+            pop = stack.pop()
+            result = [pop.val] + result
+            # mind the order of the children
+            for i in range(len(pop.children)):
+                stack.append(pop.children[i])
+        return result
