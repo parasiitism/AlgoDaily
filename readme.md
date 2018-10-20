@@ -70,11 +70,12 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 39 | [Lowest Common Ancestor of a Binary Tree](/leetcode/236-lowest-common-ancestor-of-a-binary-tree) | tree | [leetcode 226](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree) | even O(n) leads to Time Limit Exceeded, what a draconian challenge. checkout suggestion |
 | 40 | [Recursive Binary Search](/miscellaneous/binary-searches) | tree | | to understand the logic of recursion |
 | 41 | [Binary Tree Preorder Traversal](/leetcode/144-binary-tree-preorder-traversal) | tree | | |
-| 42 | [N-ary Tree Preorder Traversal](/leetcode/589-n-ary-tree-preorder-traversal) | N-ary | [leetcode 589](https://leetcode.com/problems/n-ary-tree-preorder-traversal/description/)| |
+| 42 | [N-ary Tree Preorder Traversal](/leetcode/589-n-ary-tree-preorder-traversal) | N-ary tree | [leetcode 589](https://leetcode.com/problems/n-ary-tree-preorder-traversal/description/)| |
 | 43 | [Binary Tree Inorder Traversal](/leetcode/94-binary-tree-inorder-traversal) | tree | [leetcode 94](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)| the iterative solution is mind blowing |
 | 44 | [Binary Tree Postorder Traversal](/leetcode/145-binary-tree-postorder-traversal) | tree | [leetcode 145](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)| |
 | 45 | [Binary Tree Postorder Traversal](/leetcode/145-binary-tree-postorder-traversal) | tree | [leetcode 145](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)| to understand the trick of the iterative solution|
-| 46 | [N-ary Tree Postorder Traversal](/leetcode/590-n-ary-tree-postorder-traversal) | tree | [leetcode 590](https://leetcode.com/problems/n-ary-tree-postorder-traversal/description/)| |
+| 46 | [N-ary Tree Postorder Traversal](/leetcode/590-n-ary-tree-postorder-traversal) | N-ary tree | [leetcode 590](https://leetcode.com/problems/n-ary-tree-postorder-traversal/description/)| |
 | 47 | [Binary Tree Level Order Traversal](/leetcode/102-binary-tree-level-order-traversal) | tree | [leetcode 102](https://leetcode.com/problems/binary-tree-level-order-traversal/)| |
-| 48 | [N-ary Tree Level Order Traversal](/leetcode/429-n-ary-tree-level-order-traversal) | tree | [leetcode 102](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)| |
+| 48 | [N-ary Tree Level Order Traversal](/leetcode/429-n-ary-tree-level-order-traversal) | N-ary tree | [leetcode 102](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)| |
 | 49 | [Maximum Depth of Binary Tree](/leetcode/104-maximum-depth-of-binary-tree) | tree | [leetcode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| |
+| 50 | [Maximum Depth of N-ary Tree](/leetcode/559-maximum-depth-of-n-ary-tree) | N-ary tree | [leetcode 104](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/)| |
