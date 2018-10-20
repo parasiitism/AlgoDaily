@@ -8,7 +8,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// iterative
+// dfs, iterative
 
 type Stack struct {
 	Node  *TreeNode
@@ -38,6 +38,20 @@ func maxDepth(root *TreeNode) int {
 	return maxDepth
 }
 
+// dfs, recursive
+
+func maxDepth1(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	left := maxDepth1(root.Left)
+	right := maxDepth1(root.Right)
+	if left > right {
+		return left + 1
+	}
+	return right + 1
+}
+
 func main() {
 	// 		5
 	//	2		8
@@ -57,5 +71,7 @@ func main() {
 		},
 	}
 	ans := maxDepth(root)
+	fmt.Println(ans)
+	ans = maxDepth1(root)
 	fmt.Println(ans)
 }
