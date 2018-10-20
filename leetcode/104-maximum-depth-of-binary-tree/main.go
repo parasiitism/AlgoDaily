@@ -52,6 +52,39 @@ func maxDepth1(root *TreeNode) int {
 	return right + 1
 }
 
+// bfs, iterative
+
+type Queue struct {
+	Node  *TreeNode
+	Depth int
+}
+
+func maxDepth2(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	maxDepth := 0
+	var queue []*Queue
+	queue = append(queue, &Queue{root, 1})
+	for len(queue) > 0 {
+		n := len(queue)
+		for i := 0; i < n; i++ {
+			head := queue[0]
+			queue = queue[1:len(queue)]
+			if head.Depth > maxDepth {
+				maxDepth = head.Depth
+			}
+			if head.Node.Left != nil {
+				queue = append(queue, &Queue{head.Node.Left, head.Depth + 1})
+			}
+			if head.Node.Right != nil {
+				queue = append(queue, &Queue{head.Node.Right, head.Depth + 1})
+			}
+		}
+	}
+	return maxDepth
+}
+
 func main() {
 	// 		5
 	//	2		8
@@ -73,5 +106,7 @@ func main() {
 	ans := maxDepth(root)
 	fmt.Println(ans)
 	ans = maxDepth1(root)
+	fmt.Println(ans)
+	ans = maxDepth2(root)
 	fmt.Println(ans)
 }
