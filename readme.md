@@ -79,3 +79,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 48 | [N-ary Tree Level Order Traversal](/leetcode/429-n-ary-tree-level-order-traversal) | N-ary tree | [leetcode 102](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)| |
 | 49 | [Maximum Depth of Binary Tree](/leetcode/104-maximum-depth-of-binary-tree) | tree | [leetcode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| |
 | 50 | [Maximum Depth of N-ary Tree](/leetcode/559-maximum-depth-of-n-ary-tree) | N-ary tree | [leetcode 104](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/)| |
+| 51 | [Symmetric Tree](/leetcode/101-symmetric-tree) | tree | [leetcode 101](https://leetcode.com/problems/symmetric-tree/)| |
