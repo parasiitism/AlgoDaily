@@ -17,11 +17,13 @@ func isSymmetric(root *TreeNode) bool {
 	var stackB []*TreeNode
 	stackA = append(stackA, root.Left)
 	stackB = append(stackB, root.Right)
+	// consider nil pointer error, use &&
 	for len(stackA) > 0 && len(stackB) > 0 {
 		popA := stackA[len(stackA)-1]
 		popB := stackB[len(stackB)-1]
 		stackA = stackA[0 : len(stackA)-1]
 		stackB = stackB[0 : len(stackB)-1]
+		// take care of nil pointer error on stack push operations
 		if popA != nil && popB != nil {
 			if popA.Val != popB.Val {
 				return false
@@ -32,6 +34,7 @@ func isSymmetric(root *TreeNode) bool {
 			stackB = append(stackB, popB.Right)
 			stackB = append(stackB, popB.Left)
 		} else {
+			// check ni here so that i can write less 'if clause' for the above 4 stack push operations
 			if popA == nil && popB != nil || popA != nil && popB == nil {
 				return false
 			}
