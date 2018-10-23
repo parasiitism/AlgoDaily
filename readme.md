@@ -80,3 +80,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 49 | [Maximum Depth of Binary Tree](/leetcode/104-maximum-depth-of-binary-tree) | tree | [leetcode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| |
 | 50 | [Maximum Depth of N-ary Tree](/leetcode/559-maximum-depth-of-n-ary-tree) | N-ary tree | [leetcode 104](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/)| |
 | 51 | [Symmetric Tree](/leetcode/101-symmetric-tree) | tree | [leetcode 101](https://leetcode.com/problems/symmetric-tree/)| |
+| 52 | [Path Sum](/leetcode/112-path-sum) | tree | [leetcode 112](https://leetcode.com/problems/path-sum/)| iterative, recursive|
