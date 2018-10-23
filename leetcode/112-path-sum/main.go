@@ -39,6 +39,25 @@ func hasPathSum(root *TreeNode, sum int) bool {
 	return false
 }
 
+// dfs, recursive
+func hasPathSum1(root *TreeNode, sum int) bool {
+	if root == nil {
+		return false
+	}
+	if root.Left == nil && root.Right == nil && sum-root.Val == 0 {
+		return true
+	}
+	var left bool
+	var right bool
+	if root.Left != nil {
+		left = hasPathSum1(root.Left, sum-root.Val)
+	}
+	if root.Right != nil {
+		right = hasPathSum1(root.Right, sum-root.Val)
+	}
+	return left || right
+}
+
 func main() {
 	// 		1
 	//	2		2
@@ -55,6 +74,8 @@ func main() {
 	}
 	ans := hasPathSum(root, 7)
 	fmt.Println(ans)
+	ans = hasPathSum1(root, 7)
+	fmt.Println(ans)
 	// 		1
 	// 2
 	root = &TreeNode{1,
@@ -62,5 +83,7 @@ func main() {
 		nil,
 	}
 	ans = hasPathSum(root, 1)
+	fmt.Println(ans)
+	ans = hasPathSum1(root, 1)
 	fmt.Println(ans)
 }
