@@ -43,10 +43,27 @@ func isSymmetric(root *TreeNode) bool {
 	return true
 }
 
+// recursive
+func isSymmetric1(root *TreeNode) bool {
+	return checkmirror(root, root)
+}
+func checkmirror(a *TreeNode, b *TreeNode) bool {
+	if a == nil && b == nil {
+		return true
+	}
+	if a == nil || b == nil {
+		return false
+	}
+	isValueEq := a.Val == b.Val
+	isLeftEq := checkmirror(a.Left, b.Right)
+	isRightEq := checkmirror(a.Right, b.Left)
+	return isValueEq && isLeftEq && isRightEq
+}
+
 func main() {
 	// 		1
 	//	2		2
-	// 3 4 4 4
+	// 3 4 4 3
 	root := &TreeNode{1,
 		&TreeNode{2,
 			&TreeNode{3, nil, nil},
@@ -54,9 +71,11 @@ func main() {
 		},
 		&TreeNode{2,
 			&TreeNode{4, nil, nil},
-			nil,
+			&TreeNode{3, nil, nil},
 		},
 	}
 	ans := isSymmetric(root)
+	fmt.Println(ans)
+	ans = isSymmetric1(root)
 	fmt.Println(ans)
 }
