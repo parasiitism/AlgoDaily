@@ -83,4 +83,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 52 | [Path Sum](/leetcode/112-path-sum) | tree | [leetcode 112](https://leetcode.com/problems/path-sum/)| iterative, recursive|
 | 53 | [Populating Next Right Pointers in Each Node I & II](/leetcode/116-populating-next-right-pointers-in-each-node) | tree | [leetcode 116](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)| actaully my initial solution is O(n) in complexity and use only O(1) in space, it is good enough to apply on II as well |
 | 54 | [Construct String from Binary Tree](/leetcode/606-construct-string-from-binary-tree) | tree | [leetcode 606](https://leetcode.com/problems/construct-string-from-binary-tree/)| |
-| 55 | [Binary Tree Right Side View](/leetcode/606-binary-tree-right-side-view) | tree | [leetcode 199](https://leetcode.com/problems/binary-tree-right-side-view/)| |
+| 55 | [Binary Tree Right Side View](/leetcode/199-binary-tree-right-side-view) | tree | [leetcode 199](https://leetcode.com/problems/binary-tree-right-side-view/)| |
