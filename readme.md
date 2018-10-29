@@ -85,3 +85,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 54 | [Construct String from Binary Tree](/leetcode/606-construct-string-from-binary-tree) | tree | [leetcode 606](https://leetcode.com/problems/construct-string-from-binary-tree/)| |
 | 55 | [Binary Tree Right Side View](/leetcode/199-binary-tree-right-side-view) | tree | [leetcode 199](https://leetcode.com/problems/binary-tree-right-side-view/)| |
 | 56 | [Construct Binary Tree from Inorder and Postorder Traversal](/leetcode/106-construct-binary-tree-from-inorder-and-postorder-traversal) | tree | [leetcode 106](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)| |
+| 57 | [Construct Binary Tree from Preorder and Inorder Traversal](/leetcode/105-construct-binary-tree-from-preorder-and-inorder-traversal) | tree | [leetcode 105](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| |
