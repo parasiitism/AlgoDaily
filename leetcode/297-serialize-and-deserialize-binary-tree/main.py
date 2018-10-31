@@ -51,12 +51,14 @@ class Codec:
 
 #       1
 #    2      3
+#      4
 a = TreeNode(1)
 b = TreeNode(2)
 c = TreeNode(3)
-# a.left = b
+d = TreeNode(4)
+a.left = b
 a.right = c
-
+b.right = d
 # Your Codec object will be instantiated and called as such:
 codec = Codec()
 # codec.deserialize(codec.serialize(root))
