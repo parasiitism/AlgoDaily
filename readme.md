@@ -90,3 +90,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 59 | [Serialize and Deserilize Binary Tree](/leetcode/297-serialize-and-deserialize-binary-tree) | 
 tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| serialize |
 | 60 | [Serialize and Deserilize Binary Tree](/leetcode/297-serialize-and-deserialize-binary-tree) | tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| deserialize ✌🏻 this is a HARD question, i made it finally. this concept is very important 📌 |
+| 61 | [Serialize and Deserilize BST](/leetcode/449-serialize-and-deserialize-bst) | tree | [leetcode 449](https://leetcode.com/problems/serialize-and-deserialize-bst/)| 😎 actually the concept of day60 is applicable here in BST |

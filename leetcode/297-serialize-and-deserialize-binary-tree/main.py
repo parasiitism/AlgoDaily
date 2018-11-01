@@ -42,9 +42,7 @@ class Codec:
                 result.pop()
         # to string
         temp = ','.join(str(e) if e is not None else 'null' for e in result)
-        result = '['+temp+']'
-        print(result)
-        return result
+        return '['+temp+']'
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
@@ -115,5 +113,6 @@ c.right = e
 # Your Codec object will be instantiated and called as such:
 codec = Codec()
 haha = codec.serialize(a)
+print(haha)
 node = codec.deserialize(haha)
 codec.test_level_order(node)
