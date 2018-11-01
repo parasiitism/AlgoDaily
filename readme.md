@@ -89,4 +89,4 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 58 | [Construct Binary Tree from Preorder and Postorder Traversal](/leetcode/889-construct-binary-tree-from-preorder-and-postorder-traversal) | tree | [leetcode 889](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)| similar to day 56,57|
 | 59 | [Serialize and Deserilize Binary Tree](/leetcode/297-serialize-and-deserialize-binary-tree) | 
 tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| serialize |
-| 60 | [Serialize and Deserilize Binary Tree](/leetcode/297-serialize-and-deserialize-binary-tree) | tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| working on deserialize |
+| 60 | [Serialize and Deserilize Binary Tree](/leetcode/297-serialize-and-deserialize-binary-tree) | tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| deserialize ✌🏻 this is a HARD question, i made it finally. this concept is very important 📌 |

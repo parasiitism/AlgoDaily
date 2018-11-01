@@ -61,21 +61,20 @@ class Codec:
         i = 1
         while len(queue) > 0:
             n = len(queue)
-            print(n)
             for j in range(n):
                 head = queue.pop(0)
-                if i+j < len(arr):
-                    left = TreeNode(arr[i+j])
+                if i+2*j < len(arr) and arr[i+2*j] is not None:
+                    left = TreeNode(arr[i+2*j])
                     head.left = left
                     queue.append(left)
-                if i+j+1 < len(arr):
-                    right = TreeNode(arr[i+j+1])
+                if i+2*j+1 < len(arr) and arr[i+2*j+1] is not None:
+                    right = TreeNode(arr[i+2*j+1])
                     head.right = right
                     queue.append(right)
-                i += 2
+            i += 2*n
         return root
 
-    def levelOrder(self, root):
+    def test_level_order(self, root):
         """
         :type root: TreeNode
         :rtype: List[List[int]]
@@ -87,8 +86,8 @@ class Codec:
         queue.append(root)
         while len(queue) > 0:
             level = []
-            lengthOfLevel = len(queue)
-            for idx in range(0, lengthOfLevel):
+            level_node_count = len(queue)
+            for idx in range(0, level_node_count):
                 node = queue.pop(0)
                 level.append(node.val)
                 if node.left != None:
@@ -112,9 +111,9 @@ a.left = b
 a.right = c
 c.left = d
 c.right = e
+
 # Your Codec object will be instantiated and called as such:
 codec = Codec()
-# codec.deserialize(codec.serialize(root))
 haha = codec.serialize(a)
 node = codec.deserialize(haha)
-codec.levelOrder(node)
+codec.test_level_order(node)
