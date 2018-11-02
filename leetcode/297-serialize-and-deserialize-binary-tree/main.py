@@ -9,6 +9,9 @@ class TreeNode(object):
         self.right = None
 
 
+# my 1st approach
+# bfs, iterative
+# it is what leetcode does
 class Codec:
 
     def serialize(self, root):
@@ -72,29 +75,31 @@ class Codec:
             i += 2*n
         return root
 
-    def test_level_order(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        """
-        result = []
-        if not root:
-            return result
-        queue = []
-        queue.append(root)
-        while len(queue) > 0:
-            level = []
-            level_node_count = len(queue)
-            for idx in range(0, level_node_count):
-                node = queue.pop(0)
-                level.append(node.val)
-                if node.left != None:
-                    queue.append(node.left)
-                if node.right != None:
-                    queue.append(node.right)
-            result.append(level)
-        print(result)
+
+# for checking
+def test_level_order(root):
+    """
+    :type root: TreeNode
+    :rtype: List[List[int]]
+    """
+    result = []
+    if not root:
         return result
+    queue = []
+    queue.append(root)
+    while len(queue) > 0:
+        level = []
+        level_node_count = len(queue)
+        for idx in range(0, level_node_count):
+            node = queue.pop(0)
+            level.append(node.val)
+            if node.left != None:
+                queue.append(node.left)
+            if node.right != None:
+                queue.append(node.right)
+        result.append(level)
+    print(result)
+    return result
 
 
 #       1
@@ -115,4 +120,4 @@ codec = Codec()
 haha = codec.serialize(a)
 print(haha)
 node = codec.deserialize(haha)
-codec.test_level_order(node)
+test_level_order(node)
