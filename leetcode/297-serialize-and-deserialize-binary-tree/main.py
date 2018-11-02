@@ -11,7 +11,7 @@ class TreeNode(object):
 
 # my 1st approach
 # bfs, iterative
-# it is what leetcode does
+# it is what leetcode does, e.g. [1,2,3,null,null,4,5]
 class Codec:
 
     def serialize(self, root):
@@ -76,6 +76,40 @@ class Codec:
         return root
 
 
+# suggested approach
+# dfs, recursive, e.g. 1,2,null,null,3,4,null,null,5,null,null,
+class Codec1:
+
+    def serialize(self, root):
+        result = []
+
+        def helper(node):
+            if node is None:
+                result.append('null')
+            else:
+                result.append(str(node.val))
+                helper(node.left)
+                helper(node.right)
+            return
+
+        helper(root)
+        return ','.join(result)
+
+    def deserialize(self, data):
+        def helper(arr):
+            if arr[0] == 'null':
+                arr.pop(0)
+                return None
+            node = TreeNode(arr.pop(0))
+            node.left = helper(arr)
+            node.right = helper(arr)
+            return node
+
+        temp = data.split(',')
+        root = helper(temp)
+        return root
+
+
 # for checking
 def test_level_order(root):
     """
@@ -115,9 +149,16 @@ a.right = c
 c.left = d
 c.right = e
 
-# Your Codec object will be instantiated and called as such:
+# test bfs
 codec = Codec()
-haha = codec.serialize(a)
-print(haha)
-node = codec.deserialize(haha)
+serial = codec.serialize(a)
+print(serial)
+node = codec.deserialize(serial)
+test_level_order(node)
+
+# test dfs
+codec = Codec1()
+serial = codec.serialize(a)
+print(serial)
+node = codec.deserialize(serial)
 test_level_order(node)
