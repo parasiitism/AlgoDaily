@@ -36,7 +36,7 @@ class Codec:
     def deserialize(self, data):
         if data == None or len(data) == 0:
             return None
-        dictt = json.loads(data)
+        dic = json.loads(data)
 
         def helper(node):
             if node == None:
@@ -46,7 +46,7 @@ class Codec:
                 root.children.append(helper(child))
             return root
 
-        return helper(dictt)
+        return helper(dic)
 
 
 # suggested solution:
