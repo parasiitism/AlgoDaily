@@ -31,8 +31,7 @@ class Codec:
                 result['children'].append(helper(child))
             return result
 
-        final_dic = helper(root)
-        return json.dumps(final_dic)
+        return helper(root)
 
     def deserialize(self, data):
         if data == None or len(data) == 0:
