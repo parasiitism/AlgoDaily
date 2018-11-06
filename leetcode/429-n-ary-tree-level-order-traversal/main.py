@@ -3,6 +3,7 @@ class Node(object):
         self.val = val
         self.children = children
 
+
 class Solution(object):
     def levelOrder(self, root):
         """
@@ -23,15 +24,16 @@ class Solution(object):
                 temp = queue[0]
                 queue = queue[1:]
                 nodes_on_the_same_level.append(temp.val)
-                # add its children to the queue 
+                # add its children to the queue
                 for j in range(len(temp.children)):
                     if temp.children[j] != None:
                         queue.append(temp.children[j])
             result.append(nodes_on_the_same_level)
         return result
 
+
 #       1
-#   2   3   4   
+#   2   3   4
 #  5 6
 # 7
 a = Node(1, [])
