@@ -15,7 +15,7 @@ class TreeNode(object):
         self.right = None
 
 
-class Queue(object):
+class EncodeQueue(object):
     def __init__(self, node, is_first=False, parent=None):
         self.node = node
         self.is_first = is_first
@@ -36,7 +36,7 @@ class Codec:
             return []
         result_root = None
         queue = []
-        queue.append(Queue(root))
+        queue.append(EncodeQueue(root))
         while len(queue) > 0:
             size = len(queue)
             current = None
@@ -61,8 +61,8 @@ class Codec:
                 # add its children to the queue
                 for j in range(len(temp.node.children)):
                     child = temp.node.children[j]
-                    q_child = Queue(child, True if j ==
-                                    0 else False, temp_node)
+                    q_child = EncodeQueue(child, True if j ==
+                                          0 else False, temp_node)
                     queue.append(q_child)
 
         return result_root
