@@ -22,6 +22,12 @@ class EncodeQueue(object):
         self.parent = parent
 
 
+class DecodeStack(object):
+    def __init__(self, node, parent=None):
+        self.node = node
+        self.parent = parent
+
+
 class Codec:
 
     # The left child of each node in the binary tree is the next sibling of the node in the N-ary tree.
@@ -33,7 +39,7 @@ class Codec:
         :rtype: TreeNode
         """
         if root == None:
-            return []
+            return None
         result_root = None
         queue = []
         queue.append(EncodeQueue(root))
@@ -73,9 +79,33 @@ class Codec:
         :type data: TreeNode
         :rtype: Node
         """
+        if data == None:
+            return None
+        result_root = None
+        current = None
+        stack = []
+        stack.append(DecodeStack(data))
+        while len(stack) > 0:
+            tail = stack.pop()
+            temp = Node(tail.node.val, [])
+
+            if result_root == None:
+                result_root = temp
+            elif tail.parent != None:
+                tail.parent.children = [temp]
+                current = tail.parent
+            else:
+                current.children.append(temp)
+
+            if tail.node.right != None:
+                stack.append(DecodeStack(tail.node.right, parent=temp))
+            if tail.node.left != None:
+                stack.append(DecodeStack(tail.node.left))
+
+        return result_root
 
 
-# test
+# test b-tree
 def test_preorder(root):
     if root == None:
         return
@@ -112,6 +142,43 @@ def test_level_order(root):
     return result
 
 
+# test nary-tree
+def test_n_preorder(root):
+    if root == None:
+        return
+    print(root.val)
+    for child in root.children:
+        test_n_preorder(child)
+
+
+def test_n_level_order(root):
+    """
+    :type root: Node
+    :rtype: List[List[int]]
+    """
+    if root == None:
+        return []
+    result = []
+    queue = []
+    queue.append(root)
+    while len(queue) > 0:
+        size = len(queue)
+        nodes_on_the_same_level = []
+        # iterate the nodes on the same level
+        for i in range(size):
+                # add each node to an array
+            temp = queue[0]
+            queue = queue[1:]
+            nodes_on_the_same_level.append(temp.val)
+            # add its children to the queue
+            for j in range(len(temp.children)):
+                if temp.children[j] != None:
+                    queue.append(temp.children[j])
+        result.append(nodes_on_the_same_level)
+    print(result)
+    return result
+
+
 #       1
 #   2   3   4
 #      5 6    7
@@ -133,3 +200,7 @@ codec = Codec()
 t = codec.encode(a)
 test_preorder(t)
 test_level_order(t)
+
+u = codec.decode(t)
+test_n_preorder(u)
+test_n_level_order(u)
