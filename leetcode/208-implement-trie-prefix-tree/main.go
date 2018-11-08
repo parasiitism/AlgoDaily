@@ -58,10 +58,22 @@ func (this *Trie) Search(word string) bool {
 	return false
 }
 
-// /** Returns if there is any word in the trie that starts with the given prefix. */
-// func (this *Trie) StartsWith(prefix string) bool {
-
-// }
+/** Returns if there is any word in the trie that starts with the given prefix. */
+func (this *Trie) StartsWith(prefix string) bool {
+	current := this
+	for i := 0; i < len(prefix); i++ {
+		charactor := string(prefix[i])
+		if value, existed := current.children[charactor]; existed {
+			if i == len(prefix)-1 {
+				return true
+			}
+			current = &value
+		} else {
+			return false
+		}
+	}
+	return false
+}
 
 func main() {
 	var hashtable = make(map[string]string)
@@ -86,5 +98,6 @@ func main() {
 	t.Insert("abc")
 	t.Insert("app")
 	fmt.Println(t)
-	fmt.Println(t.Search("ap"))
+	fmt.Println(t.Search("app"))
+	fmt.Println(t.StartsWith("a"))
 }
