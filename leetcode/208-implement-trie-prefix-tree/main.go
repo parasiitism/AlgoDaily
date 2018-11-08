@@ -27,8 +27,8 @@ func (this *Trie) Insert(word string) {
 		charactor := string(word[i])
 
 		var temp Trie
-		if _, existed := current.children[charactor]; existed {
-			temp = current.children[charactor]
+		if value, existed := current.children[charactor]; existed {
+			temp = value
 		} else {
 			temp = Constructor()
 		}
@@ -41,10 +41,22 @@ func (this *Trie) Insert(word string) {
 	}
 }
 
-// /** Returns if the word is in the trie. */
-// func (this *Trie) Search(word string) bool {
-
-// }
+/** Returns if the word is in the trie. */
+func (this *Trie) Search(word string) bool {
+	current := this
+	for i := 0; i < len(word); i++ {
+		charactor := string(word[i])
+		if value, existed := current.children[charactor]; existed {
+			if i == len(word)-1 && value.isWord {
+				return true
+			}
+			current = &value
+		} else {
+			return false
+		}
+	}
+	return false
+}
 
 // /** Returns if there is any word in the trie that starts with the given prefix. */
 // func (this *Trie) StartsWith(prefix string) bool {
@@ -74,4 +86,5 @@ func main() {
 	t.Insert("abc")
 	t.Insert("app")
 	fmt.Println(t)
+	fmt.Println(t.Search("ap"))
 }
