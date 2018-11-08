@@ -7,37 +7,30 @@ import (
 // type but, in my opinion, it is a class
 type Trie struct {
 	isWord   bool
-	children map[string]Trie
+	children map[string]*Trie
 }
 
 /** Initialize your data structure here. */
 func Constructor() Trie {
-	root := Trie{false, make(map[string]Trie)}
-	return root
+	return Trie{false, make(map[string]*Trie)}
 }
 
 /** Inserts a word into the trie. */
 func (this *Trie) Insert(word string) {
-	if len(word) == 0 {
-		return
-	}
 	current := this
 	for i := 0; i < len(word); i++ {
-
 		charactor := string(word[i])
-
-		var temp Trie
+		var temp *Trie
 		if value, existed := current.children[charactor]; existed {
 			temp = value
 		} else {
-			temp = Constructor()
+			temp = &Trie{false, make(map[string]*Trie)}
 		}
-
 		if i == len(word)-1 {
 			temp.isWord = true
 		}
 		current.children[charactor] = temp
-		current = &temp
+		current = temp
 	}
 }
 
@@ -50,7 +43,7 @@ func (this *Trie) Search(word string) bool {
 			if i == len(word)-1 && value.isWord {
 				return true
 			}
-			current = &value
+			current = value
 		} else {
 			return false
 		}
@@ -67,7 +60,7 @@ func (this *Trie) StartsWith(prefix string) bool {
 			if i == len(prefix)-1 {
 				return true
 			}
-			current = &value
+			current = value
 		} else {
 			return false
 		}
@@ -76,28 +69,10 @@ func (this *Trie) StartsWith(prefix string) bool {
 }
 
 func main() {
-	var hashtable = make(map[string]string)
-	// fmt.Println(hashtable)
-	hashtable["a"] = "calvi"
-	hashtable["b"] = "calvin"
-	// fmt.Println(hashtable["c"])
-	// fmt.Println(hashtable)
-
-	// a_node := make(map[string]Trie)
-	// a_node["b"] = nil
-	// b := Trie{false, a_node}
-	a := Trie{false, make(map[string]Trie)}
-	b := Trie{false, make(map[string]Trie)}
-	a.children["a"] = b
-	// fmt.Println(a)
-	if _, ok := a.children["a"]; ok {
-		// fmt.Println(a.children["a"])
-	}
-
 	t := Constructor()
 	t.Insert("abc")
 	t.Insert("app")
 	fmt.Println(t)
-	fmt.Println(t.Search("app"))
+	fmt.Println(t.Search("appp"))
 	fmt.Println(t.StartsWith("a"))
 }
