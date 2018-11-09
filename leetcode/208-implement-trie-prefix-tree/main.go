@@ -6,8 +6,8 @@ import (
 
 // type but, in my opinion, it is a class
 type Trie struct {
-	isWord   bool
-	children map[string]*Trie
+	IsWord   bool
+	Children map[string]*Trie
 }
 
 /** Initialize your data structure here. */
@@ -21,15 +21,15 @@ func (this *Trie) Insert(word string) {
 	for i := 0; i < len(word); i++ {
 		charactor := string(word[i])
 		var temp *Trie
-		if value, existed := current.children[charactor]; existed {
+		if value, existed := current.Children[charactor]; existed {
 			temp = value
 		} else {
 			temp = &Trie{false, make(map[string]*Trie)}
 		}
 		if i == len(word)-1 {
-			temp.isWord = true
+			temp.IsWord = true
 		}
-		current.children[charactor] = temp
+		current.Children[charactor] = temp
 		current = temp
 	}
 }
@@ -39,8 +39,8 @@ func (this *Trie) Search(word string) bool {
 	current := this
 	for i := 0; i < len(word); i++ {
 		charactor := string(word[i])
-		if value, existed := current.children[charactor]; existed {
-			if i == len(word)-1 && value.isWord {
+		if value, existed := current.Children[charactor]; existed {
+			if i == len(word)-1 && value.IsWord {
 				return true
 			}
 			current = value
@@ -56,7 +56,7 @@ func (this *Trie) StartsWith(prefix string) bool {
 	current := this
 	for i := 0; i < len(prefix); i++ {
 		charactor := string(prefix[i])
-		if value, existed := current.children[charactor]; existed {
+		if value, existed := current.Children[charactor]; existed {
 			if i == len(prefix)-1 {
 				return true
 			}
