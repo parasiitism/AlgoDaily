@@ -73,4 +73,6 @@ func main() {
 	fmt.Println(obj.Sum("a"))
 	obj.Insert("ap", 3)
 	fmt.Println(obj.Sum("a"))
+	obj.Insert("ap", 3)
+	fmt.Println(obj.Sum("a"))
 }

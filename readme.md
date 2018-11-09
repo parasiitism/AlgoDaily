@@ -97,3 +97,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 64 | [Encode N-ary Tree to Binary Tree](/leetcode/431-encode-n-ary-tree-to-binary-tree) | tree | [leetcode 431](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/)| encode ✅ decode ✅ This question is pretty hard, it spent me 2 nights but it was worth doing. |
 | 65 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 108](https://leetcode.com/problems/implement-trie-prefix-tree/)| insert |
 | 66 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 108](https://leetcode.com/problems/implement-trie-prefix-tree/)| search, startwith |
+| 67 | [Map Sum Pairs](/leetcode/677-map-sum-pairs) | trie | [leetcode 677](https://leetcode.com/problems/map-sum-pairs/)| i like this |
