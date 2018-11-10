@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// this is incorrect
+// honestly, i think this is incorrect
 // since when we consider "  Aa  Bb  Cc  " and ["A","B","C"], the Oj expects "  A  B  C  "
 // rather than "A B C"
 func replaceWords(dict []string, sentence string) string {
@@ -22,6 +22,7 @@ func replaceWords(dict []string, sentence string) string {
 		}
 		result = append(result, temp_result)
 	}
+	// if we can just use "strings.Join", what if the original sentence has multiple space in a row?
 	return strings.Join(result, " ")
 }
 
