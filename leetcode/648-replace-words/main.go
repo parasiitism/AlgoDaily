@@ -25,8 +25,52 @@ func replaceWords(dict []string, sentence string) string {
 	return strings.Join(result, " ")
 }
 
+// correct but it is too slow, although it doesnt result in TLE
+func replaceWords1(dict []string, sentence string) string {
+	i := 0
+	j := 0
+	result := ""
+	for true {
+		if string(sentence[j]) == " " {
+			result += " "
+			i++
+			j++
+			if j == len(sentence) {
+				break
+			}
+		} else {
+			j++
+			if j == len(sentence) {
+				word := sentence[i:j]
+				temp_result := sentence[i:j]
+				for k := 0; k < len(dict); k++ {
+					dic := dict[k]
+					if len(dic) > 0 && strings.HasPrefix(word, dic) && len(dic) < len(temp_result) {
+						temp_result = dic
+					}
+				}
+				result += temp_result
+				break
+			}
+			if string(sentence[j]) == " " {
+				word := sentence[i:j]
+				temp_result := sentence[i:j]
+				for k := 0; k < len(dict); k++ {
+					dic := dict[k]
+					if len(dic) > 0 && strings.HasPrefix(word, dic) && len(dic) < len(temp_result) {
+						temp_result = dic
+					}
+				}
+				result += temp_result
+				i = j
+			}
+		}
+	}
+	return result
+}
+
 func main() {
-	fmt.Println(strings.HasPrefix("Gopher", "Go"))
-	fmt.Println(strings.HasPrefix("Gopher", "ph"))
-	fmt.Println(strings.HasPrefix("Gopher", ""))
+	d := []string{"cat", "bat", "rat", "ra"}
+	s := "the cattle was rattled by , the  battery"
+	fmt.Println(replaceWords1(d, s))
 }
