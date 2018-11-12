@@ -99,4 +99,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 66 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 208](https://leetcode.com/problems/implement-trie-prefix-tree/)| search, startwith |
 | 67 | [Map Sum Pairs](/leetcode/677-map-sum-pairs) | trie | [leetcode 677](https://leetcode.com/problems/map-sum-pairs/)| i like this |
 | 68 | [replace-words](/leetcode/648-replace-words) | string | [leetcode 648](https://leetcode.com/problems/replace-words/)| my 1st hasty solution got passed, but i think it is incorrect so i made another one |
-| 69 | [replace-words](/leetcode/211-add-and-search-word-data-structure-design) | string | [leetcode 211](https://leetcode.com/problems/add-and-search-word-data-structure-design/)| |
+| 69 | [replace-words](/leetcode/211-add-and-search-word-data-structure-design) | string | [leetcode 211](https://leetcode.com/problems/add-and-search-word-data-structure-design/)| AddWord |
