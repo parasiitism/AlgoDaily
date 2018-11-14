@@ -101,3 +101,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 68 | [replace-words](/leetcode/648-replace-words) | string | [leetcode 648](https://leetcode.com/problems/replace-words/)| my 1st hasty solution got passed, but i think it is incorrect so i made another one |
 | 69 | [replace-words](/leetcode/211-add-and-search-word-data-structure-design) | string | [leetcode 211](https://leetcode.com/problems/add-and-search-word-data-structure-design/)| AddWord |
 | 70 | [replace-words](/leetcode/211-add-and-search-word-data-structure-design) | string | [leetcode 211](https://leetcode.com/problems/add-and-search-word-data-structure-design/)| Search |
+| 71 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 208](https://leetcode.com/problems/implement-trie-prefix-tree/)| another approach: array instead of hashtable and it is faster |
