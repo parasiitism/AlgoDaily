@@ -103,3 +103,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 70 | [Add and Search Word Data Structure](/leetcode/211-add-and-search-word-data-structure-design) | string | [leetcode 211](https://leetcode.com/problems/add-and-search-word-data-structure-design/)| Search |
 | 71 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 208](https://leetcode.com/problems/implement-trie-prefix-tree/)| another approach: array instead of hashtable and it is faster |
 | 72 | [Design Search Autocomplete System](/leetcode/642-design-search-autocomplete-system) | trie | [leetcode 642](https://leetcode.com/problems/design-search-autocomplete-system/)| constructor and insert |
+| 73 | [Design Search Autocomplete System](/leetcode/642-design-search-autocomplete-system) | trie | [leetcode 642](https://leetcode.com/problems/design-search-autocomplete-system/)| search(incomplete) |
