@@ -166,6 +166,6 @@ func main() {
 	obj.Input('b')
 	obj.Input('c')
 	obj.Input('#')
-	fmt.Println(obj.Input('a'))
-	fmt.Println(obj.UserTrie.Children['a'])
+	fmt.Println(obj.Input('c'))
+	// fmt.Println(obj.UserTrie.Children['a'])
 }
