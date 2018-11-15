@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 type Trie struct {
@@ -62,14 +63,14 @@ func insert(userTrie *Trie, sentence string, time int) {
 
 func (this *AutocompleteSystem) search() []string {
 	// find the target node
-	sentence := this.UserInput
+	query := this.UserInput
 	current := this.UserTrie
 	var targetNode *Trie
-	for i := 0; i < len(sentence); i++ {
-		charactor := sentence[i]
+	for i := 0; i < len(query); i++ {
+		charactor := query[i]
 		if value, existed := current.Children[charactor]; existed {
 			current = value
-			if i == len(sentence)-1 {
+			if i == len(query)-1 {
 				targetNode = value
 			}
 		}
@@ -78,22 +79,35 @@ func (this *AutocompleteSystem) search() []string {
 		return []string{}
 	}
 	// iterate the target node children
-	var results []string
-	//dfs
+	var results []Result
+	// dfs
 	var stack []*Stack
 	stack = append(stack, &Stack{"", targetNode})
 	for len(stack) > 0 {
 		pop := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
-		if len(pop.trie.Children) == 0 {
-			results = append(results, pop.prefix)
+		if pop.trie.IsWord {
+			temp := Result{query + pop.prefix, pop.trie.Cnt}
+			results = append(results, temp)
 		}
 		// add children into stack
 		for key, value := range pop.trie.Children {
 			stack = append(stack, &Stack{pop.prefix + string(key), value})
 		}
 	}
-	return results
+	// sort
+	descendingOccurence := func(r1, r2 *Result) bool {
+		return r1.Occurence > r2.Occurence
+	}
+	acendingAlphabet := func(r1, r2 *Result) bool {
+		return r1.Str < r2.Str
+	}
+	OrderedBy(descendingOccurence, acendingAlphabet).Sort(results)
+	var sortedResults []string
+	for i := 0; i < len(results) && i < 3; i++ {
+		sortedResults = append(sortedResults, results[i].Str)
+	}
+	return sortedResults
 }
 
 type Stack struct {
@@ -101,15 +115,57 @@ type Stack struct {
 	trie   *Trie
 }
 
+type Result struct {
+	Str       string
+	Occurence int
+}
+
+// sort by multiple keys
+type lessFunc func(p1, p2 *Result) bool
+type multiSorter struct {
+	results []Result
+	less    []lessFunc
+}
+
+func (ms *multiSorter) Sort(results []Result) {
+	ms.results = results
+	sort.Sort(ms)
+}
+func OrderedBy(less ...lessFunc) *multiSorter {
+	return &multiSorter{
+		less: less,
+	}
+}
+
+// interface
+func (ms *multiSorter) Len() int {
+	return len(ms.results)
+}
+func (ms *multiSorter) Swap(i, j int) {
+	ms.results[i], ms.results[j] = ms.results[j], ms.results[i]
+}
+func (ms *multiSorter) Less(i, j int) bool {
+	p, q := &ms.results[i], &ms.results[j]
+	var k int
+	for k = 0; k < len(ms.less)-1; k++ {
+		less := ms.less[k]
+		switch {
+		case less(p, q):
+			return true
+		case less(q, p):
+			return false
+		}
+	}
+	return ms.less[k](p, q)
+}
+
 func main() {
-	sentences := []string{"i love you", "island", "iroman", "i love leetcode"}
-	times := []int{5, 3, 2, 2}
+	sentences := []string{"abc", "abbc", "a"}
+	times := []int{3, 3, 3}
 	obj := Constructor(sentences, times)
-	obj.Input('a')
 	obj.Input('b')
 	obj.Input('c')
 	obj.Input('#')
-	fmt.Println(obj.UserTrie.Children['a'])
 	fmt.Println(obj.Input('a'))
-	fmt.Println(obj.Input('b'))
+	fmt.Println(obj.UserTrie.Children['a'])
 }
