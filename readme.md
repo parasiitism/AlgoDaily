@@ -105,3 +105,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 72 | [Design Search Autocomplete System](/leetcode/642-design-search-autocomplete-system) | trie | [leetcode 642](https://leetcode.com/problems/design-search-autocomplete-system/)| constructor and insert |
 | 73 | [Design Search Autocomplete System](/leetcode/642-design-search-autocomplete-system) | trie | [leetcode 642](https://leetcode.com/problems/design-search-autocomplete-system/)| search(incomplete) |
 | 73 | [Design Search Autocomplete System](/leetcode/642-design-search-autocomplete-system) | trie | [leetcode 642](https://leetcode.com/problems/design-search-autocomplete-system/)| WTF with leetcode |
+| 74 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 208](https://leetcode.com/problems/implement-trie-prefix-tree/)| just do it again with python cos im gonna try autocomplete with python |
