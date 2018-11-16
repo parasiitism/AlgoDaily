@@ -106,11 +106,13 @@ func (this *AutocompleteSystem) search() []string {
 	return sortedResults
 }
 
+// for the dfs
 type Stack struct {
 	prefix string
 	trie   *Trie
 }
 
+// for the results
 type Result struct {
 	Str       string
 	Occurence int
