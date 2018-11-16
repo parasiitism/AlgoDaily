@@ -64,19 +64,15 @@ func insert(userTrie *Trie, sentence string, time int) {
 func (this *AutocompleteSystem) search() []string {
 	// find the target node
 	query := this.UserInput
-	current := this.UserTrie
-	var targetNode *Trie
+	targetNode := this.UserTrie
 	for i := 0; i < len(query); i++ {
 		charactor := query[i]
-		if value, existed := current.Children[charactor]; existed {
-			current = value
-			if i == len(query)-1 {
-				targetNode = value
-			}
+		if value, existed := targetNode.Children[charactor]; existed {
+			targetNode = value
+		} else {
+			// it means it cant find the target
+			return []string{}
 		}
-	}
-	if targetNode == nil {
-		return []string{}
 	}
 	// iterate the target node children
 	var results []Result
@@ -137,7 +133,7 @@ func OrderedBy(less ...lessFunc) *multiSorter {
 	}
 }
 
-// interface
+// interface for sorting and i use multi sorter
 func (ms *multiSorter) Len() int {
 	return len(ms.results)
 }
