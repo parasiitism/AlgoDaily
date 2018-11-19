@@ -2,69 +2,58 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 func exist(board [][]byte, word string) bool {
+	if len(word) == 0 {
+		return false
+	}
 	// find the "heads" in the matrix
 	head := word[0]
-	candidates := [][]int{}
+	byte_word := []byte(word)
 	for row := 0; row < len(board); row++ {
 		for col := 0; col < len(board[0]); col++ {
 			if board[row][col] == head {
-				candidates = append(candidates, []int{row, col})
+				if dfs(row, col, byte_word, board) {
+					return true
+				}
 			}
 		}
 	}
-	// for each head, find the path
-
-	// declare rescursion
-	var dfs func(row int, col int, tail string, history map[string]bool) bool
-	dfs = func(row int, col int, tail string, history map[string]bool) bool {
-		if row < 0 || row+1 > len(board) || col < 0 || col+1 > len(board[0]) || len(tail) < 1 {
-			return false
-		}
-
-		i := strconv.Itoa(row)
-		j := strconv.Itoa(col)
-		key := i + "," + j
-
-		if _, existed := history[key]; existed {
-			return false
-		}
-		if board[row][col] == tail[0] {
-
-			new_history := make(map[string]bool)
-			for k, v := range history {
-				new_history[k] = v
-			}
-			new_history[key] = true
-
-			if len(tail) == 1 {
-				return true
-			} else if len(tail) > 1 {
-				t := tail[1:]
-				a := dfs(row-1, col, t, new_history)
-				b := dfs(row+1, col, t, new_history)
-				c := dfs(row, col-1, t, new_history)
-				d := dfs(row, col+1, t, new_history)
-				return a || b || c || d
-			}
-		}
-		return false
-	}
-
-	for i := 0; i < len(candidates); i++ {
-		candidate := candidates[i]
-		if dfs(candidate[0], candidate[1], word, make(map[string]bool)) {
-			return true
-		}
-	}
-
 	return false
 }
 
+func dfs(row int, col int, tail []byte, board [][]byte) bool {
+	if row < 0 || row >= len(board) {
+		return false
+	}
+	if col < 0 || col >= len(board[row]) {
+		return false
+	}
+	if board[row][col] != tail[0] {
+		return false
+	}
+	// board[row][col] == tail[0] now
+	if len(tail) == 1 {
+		return true
+	}
+
+	temp := board[row][col]
+	board[row][col] = '.'
+
+	t := tail[1:]
+	found := dfs(row-1, col, t, board) ||
+		dfs(row+1, col, t, board) ||
+		dfs(row, col-1, t, board) ||
+		dfs(row, col+1, t, board)
+
+	board[row][col] = temp
+
+	return found
+}
+
 func main() {
+	// false
 	matrix := [][]byte{
 		{'A', 'B', 'C', 'E'},
 		{'S', 'F', 'C', 'S'},
@@ -72,12 +61,14 @@ func main() {
 	}
 	fmt.Println(exist(matrix, "ABCCEDG"))
 
+	// true
 	matrix = [][]byte{
 		{'a', 'b'},
 		{'c', 'd'},
 	}
 	fmt.Println(exist(matrix, "cdba"))
 
+	// true
 	matrix = [][]byte{
 		{'A', 'B', 'C', 'E'},
 		{'S', 'F', 'E', 'S'},
@@ -85,6 +76,7 @@ func main() {
 	}
 	fmt.Println(exist(matrix, "ABCESEEEFS"))
 
+	// false
 	matrix = [][]byte{
 		{'a', 'a'},
 	}
