@@ -110,3 +110,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 76 | [Design Search Autocomplete System](/leetcode/642-design-search-autocomplete-system) | trie | [leetcode 642](https://leetcode.com/problems/design-search-autocomplete-system/)| i finally made it in golang and I BEAT 100% submissions |
 | 77 | [Word Search](/leetcode/79-word-search) | trie | [leetcode 79](https://leetcode.com/problems/word-search/)| my 1st attempt got TLE, it is weird cos the notion is correct |
 | 78 | [Word Search II](/leetcode/212-word-search-ii) | trie | [leetcode 212](https://leetcode.com/problems/word-search-ii/)| its actually a follow-up of day77 problem, tho my snippet can only beats 14% 😭 |
+| 79 | [Moving Average from Data Stream](/leetcode/346-moving-average-from-data-stream) | queue | [leetcode 346](https://leetcode.com/problems/moving-average-from-data-stream/)| |
