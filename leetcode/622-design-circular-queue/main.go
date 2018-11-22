@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 type MyCircularQueue struct {
 	Head  int
 	Tail  int
@@ -14,12 +18,33 @@ func Constructor(k int) MyCircularQueue {
 
 /** Insert an element into the circular queue. Return true if the operation is successful. */
 func (this *MyCircularQueue) EnQueue(value int) bool {
-
+	if this.IsFull() {
+		return false
+	}
+	if this.IsEmpty() {
+		this.Head = 0
+	}
+	this.Tail = (this.Tail + 1) % this.Size
+	if this.Tail == len(this.Queue) {
+		this.Queue = append(this.Queue, value)
+	} else {
+		this.Queue[this.Tail] = value
+	}
+	return true
 }
 
 /** Delete an element from the circular queue. Return true if the operation is successful. */
 func (this *MyCircularQueue) DeQueue() bool {
-
+	if this.IsEmpty() {
+		return false
+	}
+	if this.Head == this.Tail {
+		this.Head = -1
+		this.Tail = -1
+		return true
+	}
+	this.Head = (this.Head + 1) % this.Size
+	return true
 }
 
 /** Get the front item from the queue. */
@@ -40,7 +65,7 @@ func (this *MyCircularQueue) Rear() int {
 
 /** Checks whether the circular queue is empty or not. */
 func (this *MyCircularQueue) IsEmpty() bool {
-	return this.Head == this.Tail
+	return this.Head == -1
 }
 
 /** Checks whether the circular queue is full or not. */
@@ -49,5 +74,16 @@ func (this *MyCircularQueue) IsFull() bool {
 }
 
 func main() {
-
+	obj := Constructor(3)
+	obj.EnQueue(1)
+	obj.EnQueue(2)
+	fmt.Println(obj.EnQueue(3))
+	fmt.Println(obj.EnQueue(4), obj)
+	fmt.Println(obj.IsFull())
+	fmt.Println(obj.DeQueue())
+	fmt.Println(obj.IsFull())
+	fmt.Println(obj.EnQueue(4))
+	fmt.Println(obj.IsFull())
+	fmt.Println(obj.Front())
+	fmt.Println(obj.Rear())
 }
