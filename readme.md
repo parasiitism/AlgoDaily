@@ -111,4 +111,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 77 | [Word Search](/leetcode/79-word-search) | trie | [leetcode 79](https://leetcode.com/problems/word-search/)| my 1st attempt got TLE, it is weird cos the notion is correct |
 | 78 | [Word Search II](/leetcode/212-word-search-ii) | trie | [leetcode 212](https://leetcode.com/problems/word-search-ii/)| its actually a follow-up of day77 problem, tho my snippet can only beats 14% 😭 |
 | 79 | [Moving Average from Data Stream](/leetcode/346-moving-average-from-data-stream) | queue | [leetcode 346](https://leetcode.com/problems/moving-average-from-data-stream/)| 2 solutions |
-| 80 | [Design Circular Queue](/leetcode/622-design-circular-queue) | queue | [leetcode 622](https://leetcode.com/problems/design-circular-queue/)| front, rear, isEmpty, isFull |
+| 80 | [Design Circular Queue](/leetcode/622-design-circular-queue) | queue | [leetcode 622](https://leetcode.com/problems/design-circular-queue/)| front, rear, isEmpty, isFull, enqueue, dequeue |
+| 81 | [Walls and Gates](/leetcode/286-walls-and-gates) | queue/tree | [leetcode 286](https://leetcode.com/problems/walls-and-gates/)| it is actually a lot easier to implement using dfs than using queue |
