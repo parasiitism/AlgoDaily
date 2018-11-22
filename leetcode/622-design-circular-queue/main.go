@@ -5,7 +5,6 @@ type MyCircularQueue struct {
 
 /** Initialize your data structure here. Set the size of the queue to be k. */
 func Constructor(k int) MyCircularQueue {
-	return MyCircularQueue{0, 0, []int{}}
 }
 
 /** Insert an element into the circular queue. Return true if the operation is successful. */
