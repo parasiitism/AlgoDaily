@@ -113,4 +113,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 79 | [Moving Average from Data Stream](/leetcode/346-moving-average-from-data-stream) | queue | [leetcode 346](https://leetcode.com/problems/moving-average-from-data-stream/)| 2 solutions |
 | 80 | [Design Circular Queue](/leetcode/622-design-circular-queue) | queue | [leetcode 622](https://leetcode.com/problems/design-circular-queue/)| front, rear, isEmpty, isFull, enqueue, dequeue |
 | 81 | [Walls and Gates](/leetcode/286-walls-and-gates) | queue/tree | [leetcode 286](https://leetcode.com/problems/walls-and-gates/)| it is actually a lot easier to implement using dfs than using queue |
-| 82 | [Number of Islands](/leetcode/200-number-of-islands) | queue/tree | [leetcode 200](https://leetcode.com/problems/number-of-islands/)| 1st attempt beats 9.4%, 2nd attempt beats 100% |
+| 82 | [Number of Islands](/leetcode/200-number-of-islands) | queue/tree | [leetcode 200](https://leetcode.com/problems/number-of-islands/)| 1st attempt:dfs beats 9.4%, 2nd attempt:dfs beats 100%, 3rd attempt:bfs beats 50.43% |
