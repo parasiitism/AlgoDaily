@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func wallsAndGates(rooms [][]int) {
@@ -34,11 +35,13 @@ func dfs(rooms [][]int, i int, j int, steps int) {
 }
 
 func main() {
+	inf := math.MaxInt32
+	fmt.Println(inf)
 	mapp := [][]int{
-		{2147483647, -1, 0, 2147483647},
-		{2147483647, 2147483647, 2147483647, -1},
-		{2147483647, -1, 2147483647, -1},
-		{0, -1, 2147483647, 2147483647},
+		{inf, -1, 0, inf},
+		{inf, inf, inf, -1},
+		{inf, -1, inf, -1},
+		{0, -1, inf, inf},
 	}
 	wallsAndGates(mapp)
 	fmt.Println(mapp)
