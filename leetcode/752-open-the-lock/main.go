@@ -19,7 +19,7 @@ func openLock(deadends []string, target string) int {
 	for i := 0; i < len(deadends); i++ {
 		deadends_hash[deadends[i]] = true
 	}
-	// for visited path
+	// for visited paths
 	visited := make(map[string]bool)
 	// iterate the mutations
 	var queue []Queue
