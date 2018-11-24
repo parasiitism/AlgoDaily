@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"strconv"
 )
 
 type Queue struct {
@@ -11,20 +11,17 @@ type Queue struct {
 }
 
 func openLock(deadends []string, target string) int {
-
 	if len(target) == 0 {
 		return -1
 	}
-
+	// search optimization
 	deadends_hash := make(map[string]bool)
 	for i := 0; i < len(deadends); i++ {
 		deadends_hash[deadends[i]] = true
 	}
-
+	// for visited path
 	visited := make(map[string]bool)
-
-	minSteps := math.MaxInt32
-
+	// iterate the mutations
 	var queue []Queue
 	queue = append(queue, Queue{"0000", 0})
 	for len(queue) > 0 {
@@ -39,40 +36,25 @@ func openLock(deadends []string, target string) int {
 		if _, existed := deadends_hash[node]; existed {
 			continue
 		}
-		if node == target && steps < minSteps {
-			minSteps = steps
+		if node == target {
+			return steps
 		} else {
 			// for every digit
 			for i := 0; i < len(node); i++ {
-				digit := node[i]
+				digit := int(node[i] - '0')
 				// -1
-				var dec string
-				if digit == '0' {
-					dec = "9"
-				} else {
-					dec = string(digit - 1)
-				}
+				dec := strconv.Itoa((digit + 9) % 10)
 				queue = append(queue, Queue{node[:i] + dec + node[i+1:], steps + 1})
 				// +1
-				var inc string
-				if digit == '9' {
-					inc = "0"
-				} else {
-					inc = string(digit + 1)
-				}
+				inc := strconv.Itoa((digit + 1) % 10)
 				queue = append(queue, Queue{node[:i] + inc + node[i+1:], steps + 1})
 			}
 		}
 	}
-	if minSteps == math.MaxInt32 {
-		return -1
-	}
-	return minSteps
+	return -1
 }
 
 func main() {
-	// a := '0'
-	// fmt.Println(string(a - 1))
 	a := []string{"0201", "0101", "0102", "1212", "2002"}
 	b := "0202"
 	fmt.Println(openLock(a, b))
