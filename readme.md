@@ -115,3 +115,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 81 | [Walls and Gates](/leetcode/286-walls-and-gates) | queue/tree | [leetcode 286](https://leetcode.com/problems/walls-and-gates/)| it is actually a lot easier to implement using dfs than using queue |
 | 82 | [Number of Islands](/leetcode/200-number-of-islands) | queue/tree | [leetcode 200](https://leetcode.com/problems/number-of-islands/)| 1st attempt:dfs beats 9.4%, 2nd attempt:dfs beats 100%, 3rd attempt:bfs beats 50.43% |
 | 83 | [Open the Lock](/leetcode/752-open-the-lock) | queue/tree | [leetcode 752](https://leetcode.com/problems/open-the-lock/)| very interesting question, 1st attempt beats 5%, 2nd attempt beats 85% |
+| 84 | [Perfect Squares](/leetcode/279-perfect-squares) | queue/tree | [leetcode 279](https://leetcode.com/problems/perfect-squares/)| bfs: 204ms beats 36% |
