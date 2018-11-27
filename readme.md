@@ -118,3 +118,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 84 | [Perfect Squares](/leetcode/279-perfect-squares) | queue/tree | [leetcode 279](https://leetcode.com/problems/perfect-squares/)| bfs: 204ms beats 36% |
 | 85 | [Count Primes](/leetcode/204-count-primes) | dynamic programming | [leetcode 204](https://leetcode.com/problems/count-primes/)| 1st attempt TLE, 2nd attempt: learned from the others, 3rd: optimization |
 | 86 | [Min Stack](/leetcode/155-min-stack) | stack | [leetcode 155](https://leetcode.com/problems/min-stack/)| ⭐️ |
+| 87 | [Valid Parentheses](/leetcode/20-valid-parentheses) | stack | [leetcode 20](https://leetcode.com/problems/valid-parentheses/)| |
