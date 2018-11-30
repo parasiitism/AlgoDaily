@@ -120,3 +120,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 86 | [Min Stack](/leetcode/155-min-stack) | stack | [leetcode 155](https://leetcode.com/problems/min-stack/)| ⭐️ |
 | 87 | [Valid Parentheses](/leetcode/20-valid-parentheses) | stack | [leetcode 20](https://leetcode.com/problems/valid-parentheses/)| |
 | 88 | [Daily Temperatures](/leetcode/739-daily-temperatures) | stack | [leetcode 739](https://leetcode.com/problems/daily-temperatures/)| kinda dynamic programming approach |
+| 89 | [Evaluate Reverse Polish Notation](/leetcode/150-evaluate-reverse-polish-notation/submissions) | stack | [leetcode 739](https://leetcode.com/problems/evaluate-reverse-polish-notation/submissions/)| very direct, beats 100% |
