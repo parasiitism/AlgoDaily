@@ -11,13 +11,12 @@ I believe that practising algorithm every day is a long-term investment in my li
 - Tree
 - N-aray Tree
 - Trie
-- Hash table
-- Hash table
-- Sorting
-- Linked list
 - Stack
 - Queue
 - Graph
+- Hash table
+- Sorting
+- Linked list
 - Dynamic programming
 - and more...
 
@@ -120,4 +119,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 86 | [Min Stack](/leetcode/155-min-stack) | stack | [leetcode 155](https://leetcode.com/problems/min-stack/)| ⭐️ |
 | 87 | [Valid Parentheses](/leetcode/20-valid-parentheses) | stack | [leetcode 20](https://leetcode.com/problems/valid-parentheses/)| |
 | 88 | [Daily Temperatures](/leetcode/739-daily-temperatures) | stack | [leetcode 739](https://leetcode.com/problems/daily-temperatures/)| kinda dynamic programming approach |
-| 89 | [Evaluate Reverse Polish Notation](/leetcode/150-evaluate-reverse-polish-notation/submissions) | stack | [leetcode 739](https://leetcode.com/problems/evaluate-reverse-polish-notation/submissions/)| very direct, beats 100% |
+| 89 | [Evaluate Reverse Polish Notation](/leetcode/150-evaluate-reverse-polish-notation) | stack | [leetcode 739](https://leetcode.com/problems/evaluate-reverse-polish-notation/)| very direct, beats 100% |
+| 90 | [Clone Graph](/leetcode/133-clone-graph/) | graph | [leetcode 133](https://leetcode.com/problems/clone-graph/)| ⭐️ 1st graph question: bfs for now, will try different approaches |
