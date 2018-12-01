@@ -56,4 +56,29 @@ class Solution1:
                 # connect old node
                 else:
                     visited[tail].neighbors.append(visited[nb])
-        return tail
+        return root
+
+
+# dfs, recursive
+class Solution2:
+    # @param node, a undirected graph node
+    # @return a undirected graph node
+    def cloneGraph(self, node):
+        if not node:
+            return node
+        root = UndirectedGraphNode(node.label)
+        visited = {node: root}
+
+        def _dfs(n):
+            for nb in n.neighbors:
+                if nb in visited:
+                    visited[n].neighbors.append(visited[nb])
+                else:
+                    temp = UndirectedGraphNode(nb.label)
+                    visited[nb] = temp
+                    visited[n].neighbors.append(temp)
+                    _dfs(nb, temp)
+
+        _dfs(node, root)
+
+        return root
