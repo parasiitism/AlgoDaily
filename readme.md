@@ -121,4 +121,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 88 | [Daily Temperatures](/leetcode/739-daily-temperatures) | stack | [leetcode 739](https://leetcode.com/problems/daily-temperatures/)| kinda dynamic programming approach |
 | 89 | [Evaluate Reverse Polish Notation](/leetcode/150-evaluate-reverse-polish-notation) | stack | [leetcode 739](https://leetcode.com/problems/evaluate-reverse-polish-notation/)| very direct, beats 100% |
 | 90 | [Clone Graph](/leetcode/133-clone-graph/) | graph | [leetcode 133](https://leetcode.com/problems/clone-graph/)| ⭐️ 1st graph question: iterative bfs for now, will try different approaches |
-| 91 | [Clone Graph](/leetcode/133-clone-graph/) | graph | [leetcode 133](https://leetcode.com/problems/clone-graph/)| ⭐️ 2nd attempt: iterative dfs, 3rd attempt: recursive dfs |
+| 91 | [Clone Graph](/leetcode/133-clone-graph/) | graph, stack, queue | [leetcode 133](https://leetcode.com/problems/clone-graph/)| ⭐️ 2nd attempt: iterative dfs, 3rd attempt: recursive dfs |
+| 92 | [Target Sum](/leetcode/494-target-sum/) | graph, stack | [leetcode 494](https://leetcode.com/problems/target-sum/)| 1st attempt: iterative dfs beats 57% |
