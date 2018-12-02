@@ -63,11 +63,11 @@ I believe that practising algorithm every day is a long-term investment in my li
 | 32 | [Pre & In & Post Order Depth First Search](/miscellaneous/depth-first-search) | tree | | revision on tree traversals |
 | 33 | [Kth Largest Element in a Stream](/leetcode/703-kth-largest-element-in-a-stream) | BST | [leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream) | my first attempt "Time Limit Exceeded" |
 | 34 | [Kth Largest Element in a Stream](/leetcode/703-kth-largest-element-in-a-stream) | BST | [leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream) | learned what is `heap` and did a heap solution |
-| 35 | [Lowest Common Ancestor of a Binary Search Tree](/leetcode/235-lowest-common-ancestor-of-a-binary-search-tree) | BST | [leetcode 235](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | |
+| 35 | [Lowest Common Ancestor of a Binary Search Tree](/leetcode/235-lowest-common-ancestor-of-a-binary-search-tree) | BST | [leetcode 235](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | ⭐ |
 | 36 | [Convert Sorted Array to Binary Search Tree](/leetcode/108-convert-sorted-array-to-binary-search-tree) | BST | [leetcode 108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree) | |
 | 37 | [Balanced Binary Tree](/leetcode/110-balanced-binary-tree) | Tree | [leetcode 110](https://leetcode.com/problems/balanced-binary-tree) | |
 | 38 | [Contains Duplicate III](/leetcode/220-contains-duplicate-iii) | array, BST, bucket | [leetcode 220](https://leetcode.com/problems/contains-duplicate-iii) | 🧐 I don't understand the suggested solutions in BST and Bucket |
-| 39 | [Lowest Common Ancestor of a Binary Tree](/leetcode/236-lowest-common-ancestor-of-a-binary-tree) | tree | [leetcode 226](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree) | even O(n) leads to Time Limit Exceeded, what a draconian challenge. checkout suggestion |
+| 39 | [Lowest Common Ancestor of a Binary Tree](/leetcode/236-lowest-common-ancestor-of-a-binary-tree) | tree | [leetcode 226](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree) | ⭐ even O(2n) leads to Time Limit Exceeded, what a draconian challenge. checkout suggestion |
 | 40 | [Recursive Binary Search](/miscellaneous/binary-searches) | tree | | to understand the logic of recursion |
 | 41 | [Binary Tree Preorder Traversal](/leetcode/144-binary-tree-preorder-traversal) | tree | | |
 | 42 | [N-ary Tree Preorder Traversal](/leetcode/589-n-ary-tree-preorder-traversal) | N-ary tree | [leetcode 589](https://leetcode.com/problems/n-ary-tree-preorder-traversal/description/)| |
