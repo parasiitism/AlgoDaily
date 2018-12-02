@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// dfs iterative, beats 57.14%
+// iterative dfs, beats 57.14%
 type Stack struct {
 	Depth int
 	Sum   int
@@ -31,6 +31,26 @@ func findTargetSumWays(nums []int, S int) int {
 	return result
 }
 
+// recursive dfs, beats 27.57%
+func findTargetSumWays1(nums []int, S int) int {
+	return dfs(nums, S, -1, 0, 0)
+}
+
+func dfs(nums []int, S int, depth int, sum int, result int) int {
+	if len(nums) != 0 && depth == len(nums)-1 && sum == S {
+		return result + 1
+	}
+	a := 0
+	b := 0
+	if depth+1 < len(nums) {
+		a = dfs(nums, S, depth+1, sum+nums[depth+1], result)
+		b = dfs(nums, S, depth+1, sum-nums[depth+1], result)
+	}
+	return a + b
+}
+
 func main() {
-	fmt.Println(findTargetSumWays([]int{1, 1, 1, 1, 2}, 4))
+	a := []int{1, 1, 1, 1, 2}
+	fmt.Println(findTargetSumWays(a, 4))
+	fmt.Println(findTargetSumWays1(a, 4))
 }
