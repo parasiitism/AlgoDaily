@@ -124,3 +124,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 91 | [Clone Graph](/leetcode/133-clone-graph/) | graph, stack, queue | [leetcode 133](https://leetcode.com/problems/clone-graph/)| ⭐️ 2nd attempt: iterative dfs, 3rd attempt: recursive dfs |
 | 92 | [Target Sum](/leetcode/494-target-sum/) | graph, stack | [leetcode 494](https://leetcode.com/problems/target-sum/)| 1st attempt: iterative dfs beats 57%. 2nd attempt: recursive dfs beats 27% |
 | 93 | [Implement Queue using Stacks](/leetcode/232-implement-queue-using-stacks/) | queue, stack | [leetcode 232](https://leetcode.com/problems/implement-queue-using-stacks/)| 📌 classic question. my classic solution also beats 100% |
+| 94 | [Implement Stack using Queues](/leetcode/225-implement-stack-using-queues/) | queue, stack | [leetcode 225](https://leetcode.com/problems/implement-stack-using-queues/)| 📌 classic question. my classic solution also beats 100% |
