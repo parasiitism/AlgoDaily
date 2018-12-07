@@ -127,4 +127,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 94 | [Implement Stack using Queues](/leetcode/225-implement-stack-using-queues/) | queue, stack | [leetcode 225](https://leetcode.com/problems/implement-stack-using-queues/)| 📌 classic question. my classic solution also beats 100% |
 | 95 | [Decode String](/leetcode/394-decode-string/) | stack | [leetcode 394](https://leetcode.com/problems/decode-string/)| 🤡 interesting question, beats 100% using a stack |
 | 96 | [Flood Fill](/leetcode/733-flood-fill/) | recursion, queue | [leetcode 733](https://leetcode.com/problems/flood-fill/)| actually the question is quite similar to the one on day82. recursion beats 92%, bfs beats 11% |
-| 97 | [Design HashSet](/leetcode/705-design-hashset/) | hashtable | [leetcode 705](https://leetcode.com/problems/design-hashset/)| very good question. 1st navie approach beats 6.9% |
+| 97 | [Design HashSet](/leetcode/705-design-hashset/) | hashtable | [leetcode 705](https://leetcode.com/problems/design-hashset/)| very good question. 1st navie approach beats 6.9%, 2nd another naive beats 51% |
