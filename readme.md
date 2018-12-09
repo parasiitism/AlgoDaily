@@ -129,3 +129,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 96 | [Flood Fill](/leetcode/733-flood-fill/) | recursion, queue | [leetcode 733](https://leetcode.com/problems/flood-fill/)| actually the question is quite similar to the one on day82. recursion beats 92%, bfs beats 11% |
 | 97 | [Design HashSet](/leetcode/705-design-hashset/) | hashtable | [leetcode 705](https://leetcode.com/problems/design-hashset/)| very good question. 1st navie approach beats 6.9%, 2nd another naive beats 51% |
 | 98 | [Design HashMap](/leetcode/705-design-hashmap/) | hashtable | [leetcode 706](https://leetcode.com/problems/design-hashmap/)| very good question. 1st navie approach beats 3.28% |
+| 99 | [Contains Duplicate](/leetcode/217-contains-duplicate/) | hashtable | [leetcode 217](https://leetcode.com/problems/contains-duplicate/)| |
