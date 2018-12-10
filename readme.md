@@ -15,6 +15,7 @@ I believe that practising algorithm every day is a long-term investment in my li
 - Queue
 - Graph
 - Hash table
+- Bit Operation
 - Sorting
 - Linked list
 - Dynamic programming
@@ -130,3 +131,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 97 | [Design HashSet](/leetcode/705-design-hashset/) | hashtable | [leetcode 705](https://leetcode.com/problems/design-hashset/)| very good question. 1st navie approach beats 6.9%, 2nd another naive beats 51% |
 | 98 | [Design HashMap](/leetcode/705-design-hashmap/) | hashtable | [leetcode 706](https://leetcode.com/problems/design-hashmap/)| very good question. 1st navie approach beats 3.28% |
 | 99 | [Contains Duplicate](/leetcode/217-contains-duplicate/) | hashtable | [leetcode 217](https://leetcode.com/problems/contains-duplicate/)| |
+| 100 | [Single Number](/leetcode/136-single-number/) | hashtable, beat operation | [leetcode 136](https://leetcode.com/problems/single-number/)| ✌🏻🤓 day 100 with a 📌 classic question, 1st beats 51% |
