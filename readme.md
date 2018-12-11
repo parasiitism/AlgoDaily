@@ -132,3 +132,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 98 | [Design HashMap](/leetcode/705-design-hashmap/) | hashtable | [leetcode 706](https://leetcode.com/problems/design-hashmap/)| very good question. 1st navie approach beats 3.28% |
 | 99 | [Contains Duplicate](/leetcode/217-contains-duplicate/) | hashtable | [leetcode 217](https://leetcode.com/problems/contains-duplicate/)| |
 | 100 | [Single Number](/leetcode/136-single-number/) | hashtable, math, beat operation | [leetcode 136](https://leetcode.com/problems/single-number/)| ✌🏻🤓 day 100 with a 📌 classic question, 1st, 2nd beats 51%, 3rd beats 100% |
+| 101 | [Happy Number](/leetcode/202-happy-number/) | hashtable | [leetcode 202](https://leetcode.com/problems/happy-number/)| very interesting question |
