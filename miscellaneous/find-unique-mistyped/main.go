@@ -7,8 +7,9 @@ import (
 )
 
 /*
-There is a sorted sequence from 1 to N,
-but there is a number mistyped and the order of the sequence is messed-up. \
+⭐️ Basic question but not an easy one. I was asked by a friend who works at a top startup
+
+There is a sorted sequence from 1 to N, but there is a number mistyped and the order of the sequence is messed-up.
 Please find out the unique mistyped number in an unsorted array.
 
 e.g.
@@ -22,8 +23,9 @@ output: 3(u can also print out the missing one: 4)
 
 conditions:
 1. start from 1
-2. only one number is mistyped
+2. only one number is mistyped and guarentee that there must be a mistyed number
 3. the mistyped number can be at any index in the array
+4. the number of items in the array will be from 2 to 1000(from 2 to 1000000000 for advanced attempts)
 
 */
 
