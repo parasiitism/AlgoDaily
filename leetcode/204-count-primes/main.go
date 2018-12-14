@@ -27,8 +27,8 @@ func countPrimes(n int) int {
 }
 
 //	learned from the others:
-//	1. hashtable for primes
-//	2. for each number, set it multiples as noPrimes to speed the further calculations
+//	1. hashtable for not-primes
+//	2. for each number, set it multiples as noPrimes to speed up the further calculations
 func countPrimes1(n int) int {
 	if n < 2 {
 		return 0
@@ -48,8 +48,8 @@ func countPrimes1(n int) int {
 }
 
 //	optimization the hashtable approach: replace arr instead of hashtable to preclude the hashing calculation
-//	1. dummy arry for prime or not
-//	2. for each number, set it multiples as noPrimes to speed the further calculations
+//	1. dummy arry for not-primes
+//	2. for each number, set it multiples as noPrimes to speed up the further calculations
 func countPrimes2(n int) int {
 	if n < 2 {
 		return 0
