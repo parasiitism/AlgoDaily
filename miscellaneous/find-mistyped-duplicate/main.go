@@ -27,7 +27,7 @@ conditions:
 
 */
 
-// naive
+// naive: iterative for each
 // O(n^2)
 // space O(1)
 // im not gonna test it
@@ -42,7 +42,7 @@ func find_mistyped_naive(nums []int) int {
 	return -1
 }
 
-// less naive
+// less naive: binary search
 // 1: sort the array
 // 2: binary search on each item
 // O(nlogn)
