@@ -27,6 +27,7 @@ conditions:
 
 */
 
+// approach 1
 // naive: iterative for each
 // O(n^2)
 // space O(1)
@@ -42,6 +43,7 @@ func find_mistyped_naive(nums []int) int {
 	return -1
 }
 
+// approach 2
 // less naive: binary search
 // 1: sort the array
 // 2: binary search on each item
@@ -79,6 +81,7 @@ func binary_search(arr []int, target int) int {
 	return -1
 }
 
+// approach 3
 // what i usually do for duplicates
 // hashtable
 // O(n)
@@ -97,6 +100,7 @@ func findMistyped(nums []int) int {
 	return -1
 }
 
+// approach 4
 // i figured it out just because i took the GRE recently
 // math
 // O(n)
@@ -131,6 +135,7 @@ func findMistyped_math(nums []int) int {
 	return int(math.Round(result))
 }
 
+// approach 5
 // however,
 // the above solution has a problem for a large number set e.g. N=10000000, x! will stackoverflow the int64
 // therefore we should not use 'mutiply'
