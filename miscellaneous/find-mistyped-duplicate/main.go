@@ -131,9 +131,46 @@ func findMistyped_math(nums []int) int {
 	return int(math.Round(result))
 }
 
+// however,
+// the above solution has a problem for a large number set e.g. N=10000000, x! will stackoverflow the int64
+// therefore we should not use 'mutiply'
+// lets say for [1, 2, 3, 3, 5, 6] what if we...
+// a^2 + b^2 + c^2 + d^2 + e^2 + f^2 = 91
+// 					minus both sides
+// a^2 + b^2 + c^2 + c^2 + d^2 + f^2 = 84
+// there will be an equation, e^2 - c^2 = 91-75 = 7
+// e - c = 1
+// e + c = 7
+// c=3, e=4
+func findMistyped_math_advanced(nums []int) int {
+	p1 := 0
+	p2 := 0
+	s1 := 0
+	s2 := 0
+	// find original product and sum
+	for i := 1; i <= len(nums); i++ {
+		p1 += i * i
+		s1 += i
+	}
+	// find current product and sum
+	for i := 0; i < len(nums); i++ {
+		p2 += nums[i] * nums[i]
+		s2 += nums[i]
+	}
+	p_diff := p1 - p2
+	s_diff := s1 - s2
+	result := (p_diff/s_diff - s_diff) / 2
+	return result
+}
+
 func main() {
 	// expect 3
 	fmt.Println(findMistyped_math([]int{1, 3, 2, 5, 6, 3}))
 	// expect 6
 	fmt.Println(findMistyped_math([]int{1, 6, 3, 4, 5, 6}))
+
+	// expect 3
+	fmt.Println(findMistyped_math_advanced([]int{1, 3, 2, 5, 6, 3}))
+	// expect 6
+	fmt.Println(findMistyped_math_advanced([]int{1, 6, 3, 4, 5, 6}))
 }
