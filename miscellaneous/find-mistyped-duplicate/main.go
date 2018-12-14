@@ -42,7 +42,7 @@ func find_mistyped_naive(nums []int) int {
 	return -1
 }
 
-// a bit better
+// less naive
 // 1: sort the array
 // 2: binary search on each item
 // O(nlogn)
