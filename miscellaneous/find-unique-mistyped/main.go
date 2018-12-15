@@ -58,7 +58,6 @@ func find_mistyped_less_naive(nums []int) int {
 		ex := []int{}
 		ex = append(ex, nums[0:i]...)
 		ex = append(ex, nums[i+1:]...)
-		fmt.Println(ex)
 		tempIdx := binary_search(ex, nums[i])
 		if tempIdx != -1 {
 			return nums[tempIdx]
