@@ -7,6 +7,7 @@ import (
 
 // naive solution
 // 1 map for order plus 1 arry for occurrence for each string
+// beats 1.00%
 func isIsomorphic(s string, t string) bool {
 	hash1 := make(map[string]int)
 	hash1map := []string{}
@@ -45,6 +46,32 @@ func isIsomorphic(s string, t string) bool {
 	return true
 }
 
+// optimal
+// just save the last occurrent idx of each charactor
+// beats 5.88%
+// I dont know why it gets so slow. Actually, it is very similar to the 'common' solution which beats 50%
+func isIsomorphic1(s string, t string) bool {
+	hashS, hashT := make(map[byte]int), make(map[byte]int)
+	for i := 0; i < len(s); i++ {
+		curS, curT := s[i], t[i]
+		_, exS := hashS[curS]
+		_, exT := hashT[curT]
+		if !exS && !exT { // both not exist
+			hashS[curS] = i
+			hashT[curT] = i
+		} else if exS && exT { // both find the last idx of corresponding cur in corresponding hashtable
+			if hashS[curS] != hashT[curT] {
+				return false // the last indexes are not the sames
+			}
+			hashS[curS] = i
+			hashT[curT] = i
+		} else {
+			return false // one exists but it counterpart doesnt
+		}
+	}
+	return true
+}
+
 func main() {
 	// m := make(map[string]string)
 	// m["c"] = "cc"
@@ -54,5 +81,5 @@ func main() {
 	// fmt.Println(m)
 	// fmt.Println(reflect.ValueOf(m).MapKeys())
 	// fmt.Println(m["a"] == m["c"])
-	fmt.Println(isIsomorphic("foo", "bar"))
+	fmt.Println(isIsomorphic1("paper", "title"))
 }
