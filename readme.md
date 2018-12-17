@@ -136,3 +136,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 102 | [Ugly Number](/leetcode/263-ugly-number/) | math, recursion | [leetcode 263](https://leetcode.com/problems/ugly-number/)| 1st beats 5%, 2nd beats 5%, optimal beats 100% |
 | 103 | [Two Sum](/leetcode/1-two-sum/) | hashtable | [leetcode 1](https://leetcode.com/problems/two-sum/)| O(n) beats 100%, O(2n) beats 55%, O(n^2) beats 14%  |
 | 104 | [Find the Unique Mistyped Item In an Unsorted Array](/miscellaneous/find-unique-mistyped/) | hashtable | | ⭐️ Basic but not easy. I was asked by a friend who works at a top startup |
+| 105 | [Isomorphic Strings](/leetcode/isomorphic-strings/) | hashtable | [leetcode 205](https://leetcode.com/problems/isomorphic-strings/) | 1st beats 1% |
