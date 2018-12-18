@@ -21,9 +21,9 @@ I believe that practising algorithm every day is a long-term investment in my li
 - Dynamic programming
 - and more...
 
-#### Questions will be from
-- leetcode
-- hackerrank
+#### Questions from
+- [leetcode](https://leetcode.com)
+- [project euler](https://projecteuler.net)
 - ...
 
 #### Started on September 1st 2018
@@ -138,3 +138,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 104 | [Find the Unique Mistyped Item In an Unsorted Array](/miscellaneous/find-unique-mistyped/) | hashtable | | ⭐️ Basic but not easy. I was asked by a friend who works at a top startup |
 | 105 | [Isomorphic Strings](/leetcode/205-isomorphic-strings/) | hashtable | [leetcode 205](https://leetcode.com/problems/isomorphic-strings/) | 1st beats 1%, 2nd beats 5.88% |
 | 106 | [Minimum Index Sum of Two Lists](/leetcode/599-minimum-index-sum-of-two-lists/) | hashtable | [leetcode 599](https://leetcode.com/problems/minimum-index-sum-of-two-lists/) | 1st beats 93.33% |
+| 107 | [Largest product in a grid](/euler/11/) | array | [euler 11](https://projecteuler.net/problem=11/) |  |
