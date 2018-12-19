@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+// 1. naive solution: brute-force
+// for each item, find the counterpart by loop through the rest of the array
+// O(n^2)
+// i am not gonna implement it
+
+// 2. hash table
 // this question is kinda tricky
 // since the question says "at most k", it means the range can be less than k
 // herefore we actually just need to store the previous index of duplicate charactors

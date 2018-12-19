@@ -1,6 +1,6 @@
 AlGoDaily
 ===
-I believe that practising algorithm every day is a long-term investment in my life.
+I believe that practising algorithms every day is a long-term investment in my life.
 
 #### Why Golang?
 - No reason, just for fun
@@ -141,3 +141,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 107 | [Largest product in a grid](/euler/11/) | array | [euler 11](https://projecteuler.net/problem=11/) |  |
 | 108 | [First Unique Character in a String](/leetcode/387-first-unique-character-in-a-string/) | hashtable | [leetcode 387](https://leetcode.com/problems/first-unique-character-in-a-string/) | 1st beats 10.32%, 2nd beats 100% |
 | 109 | [Contains Duplicate II](/leetcode/219-contains-duplicate-ii/) | hashtable | [leetcode 219](https://leetcode.com/problems/contains-duplicate-ii/) | 1st beats 87.34% |
+| 109 | [Amicable numbers](/euler/21/) | array | [euler 21](https://projecteuler.net/problem=21) | 2nd question today |
