@@ -140,3 +140,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 106 | [Minimum Index Sum of Two Lists](/leetcode/599-minimum-index-sum-of-two-lists/) | hashtable | [leetcode 599](https://leetcode.com/problems/minimum-index-sum-of-two-lists/) | 1st beats 93.33% |
 | 107 | [Largest product in a grid](/euler/11/) | array | [euler 11](https://projecteuler.net/problem=11/) |  |
 | 108 | [First Unique Character in a String](/leetcode/387-first-unique-character-in-a-string/) | hashtable | [leetcode 387](https://leetcode.com/problems/first-unique-character-in-a-string/) | 1st beats 10.32%, 2nd beats 100% |
+| 109 | [Contains Duplicate II](/leetcode/219-contains-duplicate-ii/) | hashtable | [leetcode 219](https://leetcode.com/problems/contains-duplicate-ii/) | 1st beats 87.34% |
