@@ -142,3 +142,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 108 | [First Unique Character in a String](/leetcode/387-first-unique-character-in-a-string/) | hashtable | [leetcode 387](https://leetcode.com/problems/first-unique-character-in-a-string/) | 1st beats 10.32%, 2nd beats 100% |
 | 109 | [Contains Duplicate II](/leetcode/219-contains-duplicate-ii/) | hashtable | [leetcode 219](https://leetcode.com/problems/contains-duplicate-ii/) | 1st beats 87.34% |
 | 109 | [Amicable numbers](/euler/21/) | array | [euler 21](https://projecteuler.net/problem=21) | 2nd question today |
+| 110 | [Logger Rate Limiter](/leetcode/359-logger-rate-limiter/) | hashtable | [leetcode 359](https://leetcode.com/problems/logger-rate-limiter/) | i think there is only one common solution |
