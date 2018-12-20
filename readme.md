@@ -143,4 +143,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 109 | [Contains Duplicate II](/leetcode/219-contains-duplicate-ii/) | hashtable | [leetcode 219](https://leetcode.com/problems/contains-duplicate-ii/) | 1st beats 87.34% |
 | 109 | [Amicable numbers](/euler/21/) | array | [euler 21](https://projecteuler.net/problem=21) | 2nd question today |
 | 110 | [Logger Rate Limiter](/leetcode/359-logger-rate-limiter/) | hashtable | [leetcode 359](https://leetcode.com/problems/logger-rate-limiter/) | i think there is only one common solution |
-| 110 | [Group Anagrams](/leetcode/49-group-anagrams/) | hashtable | [leetcode 49](https://leetcode.com/problems/group-anagrams/) | 1st beats 96.55% |
+| 110 | [Group Anagrams](/leetcode/49-group-anagrams/) | hashtable | [leetcode 49](https://leetcode.com/problems/group-anagrams/) | 1st beats 96.55%, 2nd beats 89.66% |
