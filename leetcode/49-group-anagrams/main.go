@@ -9,8 +9,8 @@ import (
 // 1st attempt: hashtable
 // 1 pass for iterating the words and put the words into corresponding hashtable
 // 1 pass for grouping the values from hashtable into the result
-// Time O(n) n:number of characters
-// Space O(m*n) m:number of keys, it depends on the characters composition in the input
+// Time O(n*klogk) n:number of words, k:length of charactors, klogk is due to the sorting
+// Space O(k*n)
 // beats 96.55%
 func groupAnagrams(strs []string) [][]string {
 	hash := make(map[string][]string)
