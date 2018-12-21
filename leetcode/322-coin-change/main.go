@@ -80,6 +80,41 @@ func dfs(coins []int, amount int, hash map[int]int) int {
 	return min
 }
 
+// 3rd attempt
+// learned from others: bottom-up
+// e.g. coins = [1,2,5], amount = 7
+// f(0) = 0 // so if f(100-100), it output 0+1=1
+// f(1) = min(f(1)) + 1
+// f(2) = min(f(1)+f(0)) + 1
+// f(3) = min(f(2)+f(1)) + 1
+// f(4) = min(f(3)+f(2)) + 1
+// f(5) = min(f(4)+f(3)+f(0)) + 1
+// f(6) = min(f(5)+f(4)+f(1)) + 1
+// f(7) = min(f(6)+f(5)+f(2)) + 1
+// ...
+// this beats 96.2%
+func coinChange2(coins []int, amount int) int {
+	dp := make([]int, amount+1) // store the min-steps from bottpm to top
+	// initialize them by setting each of them a big value
+	// except for base case, f(0), because we need f(0) = 0 to calculate the combined steps
+	for i := 1; i < len(dp); i++ {
+		dp[i] = amount + 1
+	}
+	// store the steps from bottom to top
+	for target := 1; target <= amount; target++ {
+		for j := 0; j < len(coins); j++ {
+			coin := coins[j]
+			if target >= coin && dp[target-coin]+1 < dp[target] {
+				dp[target] = dp[target-coin] + 1
+			}
+		}
+	}
+	if dp[amount] > amount {
+		return -1
+	}
+	return dp[amount]
+}
+
 func main() {
 	fmt.Println(coinChange([]int{5}, 5))
 	fmt.Println(coinChange([]int{1, 2, 5}, 7))
@@ -90,4 +125,9 @@ func main() {
 	fmt.Println(coinChange1([]int{1, 2, 5}, 7))
 	fmt.Println(coinChange1([]int{2}, 3))
 	fmt.Println(coinChange1([]int{1, 7, 11, 13, 17}, 152))
+
+	fmt.Println(coinChange2([]int{5}, 5))
+	fmt.Println(coinChange2([]int{1, 2, 5}, 7))
+	fmt.Println(coinChange2([]int{2}, 3))
+	fmt.Println(coinChange2([]int{1, 7, 11, 13, 17}, 152))
 }
