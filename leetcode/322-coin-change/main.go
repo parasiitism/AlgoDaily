@@ -48,7 +48,7 @@ func coinChange(coins []int, amount int) int {
 
 // 2nd attempt
 // dfs + hashtable
-// count steps from bottom to top; memorize the min steps for calculated amount
+// count steps from top to bottom; memorize the min steps for calculated amount
 // beats 25.32%
 func coinChange1(coins []int, amount int) int {
 	hash := make(map[int]int)
