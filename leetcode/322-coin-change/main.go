@@ -46,9 +46,48 @@ func coinChange(coins []int, amount int) int {
 	return min
 }
 
+// 2nd attempt
+// dfs + hashtable
+// count steps from bottom to top; memorize the min steps for calculated amount
+// beats 25.32%
+func coinChange1(coins []int, amount int) int {
+	hash := make(map[int]int)
+	result := dfs(coins, amount, hash)
+	if result == math.MaxUint32 {
+		return -1
+	}
+	return result
+}
+
+func dfs(coins []int, amount int, hash map[int]int) int {
+	if amount == 0 {
+		return 0
+	} else if amount < 0 {
+		return math.MaxUint32
+	}
+	if v, x := hash[amount]; x {
+		return v
+	}
+	min := math.MaxUint32
+	for i := 0; i < len(coins); i++ {
+		coin := coins[i]
+		temp := dfs(coins, amount-coin, hash)
+		if temp+1 < min {
+			min = temp + 1
+		}
+	}
+	hash[amount] = min
+	return min
+}
+
 func main() {
 	fmt.Println(coinChange([]int{5}, 5))
 	fmt.Println(coinChange([]int{1, 2, 5}, 7))
 	fmt.Println(coinChange([]int{2}, 3))
 	fmt.Println(coinChange([]int{1, 7, 11, 13, 17}, 152))
+
+	fmt.Println(coinChange1([]int{5}, 5))
+	fmt.Println(coinChange1([]int{1, 2, 5}, 7))
+	fmt.Println(coinChange1([]int{2}, 3))
+	fmt.Println(coinChange1([]int{1, 7, 11, 13, 17}, 152))
 }
