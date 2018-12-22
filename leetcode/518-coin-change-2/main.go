@@ -5,6 +5,7 @@ import "fmt"
 // 1st attempt
 // dfs with not-duplicate paths
 // see euler/31/explanation.jpeg
+// O(all paths) <- TLE on leetcode. Obviously, leetcode doesn't want us to traverse all the combination paths
 func change(amount int, coins []int) int {
 	return dfs(coins, amount, 0)
 }
