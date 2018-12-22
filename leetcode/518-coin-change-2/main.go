@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
+// 1st attempt
 // dfs with not-duplicate paths
-// see ./explanation.jpeg
-func CoinSums(coins []int, n int) int {
-	return dfs(coins, n, 0)
+// see euler/31/explanation.jpeg
+func change(amount int, coins []int) int {
+	return dfs(coins, amount, 0)
 }
-
 func dfs(coins []int, n int, cur int) int {
 	if n == 0 {
 		return 1
@@ -23,7 +23,6 @@ func dfs(coins []int, n int, cur int) int {
 }
 
 func main() {
-	a := []int{1, 2, 5, 10, 20, 50, 100, 200}
-	fmt.Println(CoinSums(a, 5))
-	fmt.Println(CoinSums(a, 200))
+	fmt.Println(change(200, []int{1, 2, 5, 10, 20, 50, 100, 200}))
+	fmt.Println(change(500, []int{3, 5, 7, 8, 9, 10, 11}))
 }

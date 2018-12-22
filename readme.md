@@ -145,3 +145,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 110 | [Logger Rate Limiter](/leetcode/359-logger-rate-limiter/) | hashtable | [leetcode 359](https://leetcode.com/problems/logger-rate-limiter/) | i think there is only one common solution |
 | 110 | [Group Anagrams](/leetcode/49-group-anagrams/) | hashtable | [leetcode 49](https://leetcode.com/problems/group-anagrams/) | 1st beats 96.55%, 2nd beats 89.66% |
 | 111 | [Coin Change](/leetcode/322-coin-change/) | hashtable, dynamic programming | [leetcode 322](https://leetcode.com/problems/coin-change/) | ⭐️ 2 years ago, I gave up. today i nailed it💪🏻 1st beats 13.75%, 2nd beats 25.32%, 3rd beats 96.2% |
+| 112 | [Coin sums](/euler/31/) | hashtable, tree, dynamic programming | [euler 31](https://projecteuler.net/problem=31) | ⭐️ this question is similar to the one on day111 - another classic DP problem |
+| 112 | [Coin Change II](/leetcode/518-coin-change-2/) | hashtable, tree, dynamic programming | [leetcode 518](https://leetcode.com/problems/coin-change-2/) | ⭐️ this question is exactly the same with euler 31 but leetcode is draconian in the Time Limit |
