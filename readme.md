@@ -152,3 +152,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 115 | [Intersection of Two Linked Lists](/leetcode/160-intersection-of-two-linked-lists/) | linked list | [leetcode 160](https://leetcode.com/problems/intersection-of-two-linked-lists/) | tricky linked list question, 3 approaches but only one is considered as Linked List related |
 | 115 | [Reverse Linked List](/leetcode/206-reverse-linked-list/) | linked list | [leetcode 206](https://leetcode.com/problems/revers-linked-list/) | 2nd approach is more linked list related |
 | 115 | [FizzBuzz](/leetcode/412-fizz-buzz/) | array | [leetcode 206](https://leetcode.com/problems/fizz-buzz/) | 1st beats 82.49%, 2nd beats 95.48% |
+| 115 | [Multiples of 3 and 5](/euler/1/) | array | [euler 1](https://projecteuler.net/problem=1) | did it in a row becos it is similar to day115 q3 FizzBuzz |
