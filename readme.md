@@ -148,3 +148,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 112 | [Combination Sum IV](/leetcode-377-combination-sum-iv/) | hashtable, tree, dynamic programming | [leetcode 377](https://projecteuler.net/problem=31) | ⭐️ classic DP, classic solution |
 | 112 | [Coin Sums](/euler/31/) | hashtable, tree, dynamic programming | [euler 31](https://projecteuler.net/problem=31) | ⭐️ this question is similar to the previous one but the tricky thing is it requires DIFFERENT combinations |
 | 113 | [Coin Change II](/leetcode/518-coin-change-2/) | hashtable, tree, dynamic programming | [leetcode 518](https://leetcode.com/problems/coin-change-2/) | ⭐️ this question is exactly the same with the two on day112 but leetcode is draconian in the Time Limit |
+| 114 | [Design Linked List](/leetcode/707-design-linked-list/) | linked list | [leetcode 707](https://leetcode.com/problems/design-linked-list/) | classic implementation of linked list operation |
