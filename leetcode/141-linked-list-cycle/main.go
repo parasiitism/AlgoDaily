@@ -25,7 +25,7 @@ func hasCycle(head *ListNode) bool {
 	return false
 }
 
-// another approach: hash table
+// easy approach: hash table
 // time		O(n)
 // space	O(n)
 // beats 43.68%

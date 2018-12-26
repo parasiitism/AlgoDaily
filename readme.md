@@ -153,4 +153,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 115 | [Reverse Linked List](/leetcode/206-reverse-linked-list/) | linked list | [leetcode 206](https://leetcode.com/problems/revers-linked-list/) | 📌 2nd approach is more linked list related |
 | 115 | [FizzBuzz](/leetcode/412-fizz-buzz/) | array | [leetcode 206](https://leetcode.com/problems/fizz-buzz/) | 1st beats 82.49%, 2nd beats 95.48% |
 | 115 | [Multiples of 3 and 5](/euler/1/) | array | [euler 1](https://projecteuler.net/problem=1) | did it in a row becos it is similar to day115 q3 FizzBuzz |
-| 116 | [Linked List Cycle](/leetcode/141-linked-list-cycle/) | hashtable | [leetcode 116](https://leetcode.com/problems/linked-list-cycle/) | 📌 classic linked list question |
+| 116 | [Linked List Cycle](/leetcode/141-linked-list-cycle/) | linked list | [leetcode 141](https://leetcode.com/problems/linked-list-cycle/) | 📌 classic question |
+| 116 | [Linked List Cycle II](/leetcode/142-linked-list-cycle-ii/) | linked list | [leetcode 142](https://leetcode.com/problems/linked-list-cycle-ii/) | 📌 classic question |
