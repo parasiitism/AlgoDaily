@@ -155,4 +155,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 115 | [Multiples of 3 and 5](/euler/1/) | array | [euler 1](https://projecteuler.net/problem=1) | did it in a row becos it is similar to day115 q3 FizzBuzz |
 | 116 | [Linked List Cycle](/leetcode/141-linked-list-cycle/) | linked list | [leetcode 141](https://leetcode.com/problems/linked-list-cycle/) | 📌 classic question |
 | 116 | [Linked List Cycle II](/leetcode/142-linked-list-cycle-ii/) | linked list | [leetcode 142](https://leetcode.com/problems/linked-list-cycle-ii/) | 📌 classic question |
-| 117 | [Remove Nth Node From End of List](/leetcode/19-remove-nth-node-from-end-of-list/) | linked list | [leetcode 19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 📌 classic question |
+| 117 | [Remove Nth Node From End of List](/leetcode/19-remove-nth-node-from-end-of-list/) | linked list | [leetcode 19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 📌 classic question, 1 classic + 2 other approaches |
