@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"strconv"
 )
 
 // actually it works but leetcode doesn't allow unordered
 func permuteUnique(nums []int) [][]int {
+	sort.Ints(nums)
 	result := [][]int{}
 	hash := make(map[string]bool)
 	var dfs func(arr []int, path []int, prefix string)
