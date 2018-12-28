@@ -67,6 +67,25 @@ func rightSideView1(root *TreeNode) []int {
 	return result
 }
 
+// recursive dfs
+// more concise and terse
+func rightSideView2(root *TreeNode) []int {
+	result := []int{}
+	var dfs func(node *TreeNode, level int)
+	dfs = func(node *TreeNode, level int) {
+		if node == nil {
+			return
+		}
+		if level > len(result) {
+			result = append(result, node.Val)
+		}
+		dfs(node.Right, level+1)
+		dfs(node.Left, level+1)
+	}
+	dfs(root, 1)
+	return result
+}
+
 func main() {
 	// 		5
 	//	2		8
@@ -88,5 +107,7 @@ func main() {
 	ans := rightSideView(root)
 	fmt.Println(ans)
 	ans = rightSideView1(root)
+	fmt.Println(ans)
+	ans = rightSideView2(root)
 	fmt.Println(ans)
 }
