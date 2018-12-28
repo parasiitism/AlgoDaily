@@ -94,6 +94,45 @@ func isValidSudoku1(board [][]byte) bool {
 	return true
 }
 
+// 2nd attempt
+// the 2nd attempt can be optimied as using 1 hashtable
+// "5" in row 1 => 1row5
+// "5" in row 1 => 1col5
+// "5" in box 1 => 1box5
+// time 	O(n)
+// space 	O(n)
+// beats 31.25%
+func isValidSudoku2(board [][]byte) bool {
+	hash := make(map[string]bool)
+	for i := 0; i < 9; i++ {
+		for j := 0; j < 9; j++ {
+			if board[i][j] == '.' {
+				continue
+			}
+			temp := string(board[i][j])
+
+			rowKey := strconv.Itoa(i) + "row" + temp
+			if _, x := hash[rowKey]; x {
+				return false
+			}
+			hash[rowKey] = true
+
+			colKey := strconv.Itoa(j) + "col" + temp
+			if _, x := hash[colKey]; x {
+				return false
+			}
+			hash[colKey] = true
+
+			boxKey := strconv.Itoa(i/3*3+j/3) + "box" + temp
+			if _, x := hash[boxKey]; x {
+				return false
+			}
+			hash[boxKey] = true
+		}
+	}
+	return true
+}
+
 func main() {
 	a := [][]byte{
 		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
@@ -106,5 +145,5 @@ func main() {
 		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
 		{'.', '.', '.', '.', '8', '.', '.', '7', '9'},
 	}
-	fmt.Println(isValidSudoku1(a))
+	fmt.Println(isValidSudoku2(a))
 }
