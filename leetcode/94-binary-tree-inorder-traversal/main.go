@@ -27,6 +27,8 @@ func inorderTraversal(root *TreeNode) []int {
 }
 
 // iterative
+// 1. put left child into stack recusively
+// 2. when we pop a stack, set current to the pop.right such that we will not consider any node which was in the stack(avoid duplicate)
 func inorderTraversal1(root *TreeNode) []int {
 	if root == nil {
 		return []int{}

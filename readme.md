@@ -56,8 +56,8 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 24 | [Depth First Search](/miscellaneous/depth-first-search) | tree | | |
 | 25 | [Binary Search Tree Iterator](/leetcode/173-binary-search-tree-iterator) | BST | [leetcode 173](https://leetcode.com/problems/binary-search-tree-iterator/description/) | my first solution was super slow tho it passes the OJ. The suggested solution is awesome |
 | 26 | [Search in a Binary Search Tree](/leetcode/700-search-in-a-binary-search-tree) | tree | [leetcode 26](https://leetcode.com/problems/search-in-a-binary-search-tree/description/) | |
-| 27 | [Iterative inorder traversal on BST](/miscellaneous/binary-search-tree) | BST | | |
-| 28 | [Pre & post order traversal on BST](/miscellaneous/binary-search-tree) | BST | | |
+| 27 | [Iterative inorder traversal on BST](/miscellaneous/binary-tree-traversals) | Binary Tree | | |
+| 28 | [Pre & post order traversal on BST](/miscellaneous/binary-tree-traversals) | Binary Tree | | |
 | 29 | [Insert into a Binary Search Tree](/leetcode/701-insert-into-a-binary-search-tree) | BST | [leetcode 171](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | recursive & iterative |
 | 30 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | my 1st attempt was super discursive LOL |
 | 31 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | to understand the recursive approach |

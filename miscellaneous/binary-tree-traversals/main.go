@@ -16,7 +16,7 @@ func InorderRecursive(root *TreeNode) {
 	if root.Left != nil {
 		InorderRecursive(root.Left)
 	}
-	fmt.Println(root.Val)
+	fmt.Print(root.Val)
 	if root.Right != nil {
 		InorderRecursive(root.Right)
 	}
@@ -37,22 +37,35 @@ func InorderIterative(root *TreeNode) {
 		pop := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 		// do something on the popped node
-		fmt.Println(pop.Val)
-		// take the nearest right sibling then iterate again
-		if pop.Right != nil {
-			stack = append(stack, pop.Right)
-		}
+		fmt.Print(pop.Val)
+		curr = pop.Right
 	}
 }
 
 // pre-order traversal on BST
 func PreorderRecursive(root *TreeNode) {
-	fmt.Println(root.Val)
+	fmt.Print(root.Val)
 	if root.Left != nil {
 		PreorderRecursive(root.Left)
 	}
 	if root.Right != nil {
 		PreorderRecursive(root.Right)
+	}
+}
+
+func PreorderIterative(root *TreeNode) {
+	stack := []*TreeNode{}
+	stack = append(stack, root)
+	for len(stack) > 0 {
+		top := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		fmt.Print(top.Val)
+		if top.Right != nil {
+			stack = append(stack, top.Right)
+		}
+		if top.Left != nil {
+			stack = append(stack, top.Left)
+		}
 	}
 }
 
@@ -64,7 +77,27 @@ func PostorderRecursive(root *TreeNode) {
 	if root.Right != nil {
 		PostorderRecursive(root.Right)
 	}
-	fmt.Println(root.Val)
+	fmt.Print(root.Val)
+}
+
+func PostorderIterative(root *TreeNode) {
+	stack := []*TreeNode{}
+	stack = append(stack, root)
+	arr := []*TreeNode{}
+	for len(stack) > 0 {
+		top := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		arr = append(arr, top)
+		if top.Left != nil {
+			stack = append(stack, top.Left)
+		}
+		if top.Right != nil {
+			stack = append(stack, top.Right)
+		}
+	}
+	for i := len(arr) - 1; i >= 0; i-- {
+		fmt.Print(arr[i].Val)
+	}
 }
 
 func main() {
@@ -81,11 +114,19 @@ func main() {
 			&TreeNode{9, nil, nil},
 		},
 	}
+	// in order
 	InorderRecursive(root)
 	fmt.Println(",")
 	InorderIterative(root)
 	fmt.Println(",")
+	// pre order
 	PreorderRecursive(root)
 	fmt.Println(",")
+	PreorderIterative(root)
+	fmt.Println(",")
+	// post order
 	PostorderRecursive(root)
+	fmt.Println(",")
+	PostorderIterative(root)
+	fmt.Println(",")
 }
