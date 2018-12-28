@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 // very straight forward solution
-// O(3n)
+// time		O(3n)
+// space 	O(n)
 // beats 31.25%
 func isValidSudoku(board [][]byte) bool {
 	for i := 0; i < 9; i++ {
@@ -50,6 +54,46 @@ func check3x3(board [][]byte, x int, y int) bool {
 	return true
 }
 
+// 2nd attempt
+// use 3 hashtables
+// "5" in row 1 => 1,5
+// "5" in row 1 => 1,5
+// "5" in box 1 => 1,5
+// time 	O(n)
+// space 	O(n)
+// beats 31.25%
+func isValidSudoku1(board [][]byte) bool {
+	rowHash := make(map[string]bool)
+	colHash := make(map[string]bool)
+	boxHash := make(map[string]bool)
+	for i := 0; i < 9; i++ {
+		for j := 0; j < 9; j++ {
+			if board[i][j] == '.' {
+				continue
+			}
+			temp := string(board[i][j])
+			rowKey := strconv.Itoa(i) + "," + temp
+			if _, x := rowHash[rowKey]; x {
+				return false
+			}
+			rowHash[rowKey] = true
+
+			colKey := strconv.Itoa(j) + "," + temp
+			if _, x := colHash[colKey]; x {
+				return false
+			}
+			colHash[colKey] = true
+
+			boxKey := strconv.Itoa(i/3*3+j/3) + "," + temp
+			if _, x := boxHash[boxKey]; x {
+				return false
+			}
+			boxHash[boxKey] = true
+		}
+	}
+	return true
+}
+
 func main() {
 	a := [][]byte{
 		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
@@ -62,5 +106,5 @@ func main() {
 		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
 		{'.', '.', '.', '.', '8', '.', '.', '7', '9'},
 	}
-	fmt.Println(isValidSudoku(a))
+	fmt.Println(isValidSudoku1(a))
 }
