@@ -2,7 +2,10 @@ package main
 
 import "fmt"
 
-func permutation(input []int) [][]int {
+// time		O(len(nums)!)
+// space	O(1)
+// beats 77.21%
+func permute(nums []int) [][]int {
 	result := [][]int{}
 	var dfs func(arr []int, path []int)
 	dfs = func(arr []int, path []int) {
@@ -13,7 +16,7 @@ func permutation(input []int) [][]int {
 				temp := arr[i]
 
 				copy := []int{}
-				copy = append(copy, arr...) // in golang, we must copy the slice becos when b:=a, the b is actually just a wrapper of the integers with the same address(shadow copy)
+				copy = append(copy, arr...)
 				trim := append(copy[:i], copy[i+1:]...)
 
 				nextpath := []int{}
@@ -24,12 +27,12 @@ func permutation(input []int) [][]int {
 			}
 		}
 	}
-	dfs(input, []int{})
+	dfs(nums, []int{})
 	return result
 }
 
 func main() {
-	res := permutation([]int{1, 2, 3})
+	res := permute([]int{1, 2, 3})
 	fmt.Println(res)
 	fmt.Println(len(res))
 }
