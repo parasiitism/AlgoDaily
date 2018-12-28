@@ -39,6 +39,35 @@ func oddEvenList(head *ListNode) *ListNode {
 	return dump.Next
 }
 
+// classic solution: inplace
+// ./idea.png
+// time		O(n)
+// space	O(1)
+func oddEvenList1(head *ListNode) *ListNode {
+	if head == nil {
+		return nil
+	}
+	result := head
+	odd := head
+	dump := &ListNode{0, head}
+	even := dump
+	var oddTail *ListNode
+	for odd != nil {
+		temp := odd.Next
+		if temp != nil {
+			odd.Next = odd.Next.Next
+		}
+		even.Next = temp
+		if odd.Next == nil {
+			oddTail = odd
+		}
+		odd = odd.Next
+		even = even.Next
+	}
+	oddTail.Next = dump.Next
+	return result
+}
+
 func _printList(l *ListNode) {
 	c := l
 	for c != nil {
@@ -53,9 +82,11 @@ func main() {
 	c := &ListNode{3, nil}
 	d := &ListNode{4, nil}
 	e := &ListNode{5, nil}
+	// f := &ListNode{6, nil}
 	a.Next = b
 	b.Next = c
 	c.Next = d
 	d.Next = e
-	_printList(oddEvenList(a))
+	// e.Next = f
+	_printList(oddEvenList1(a))
 }
