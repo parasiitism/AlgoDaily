@@ -7,13 +7,14 @@ import (
 
 // actually it works but leetcode doesn't allow unordered
 func permuteUnique(nums []int) [][]int {
-	// result := [][]int{}
-	hash := make(map[string][]int)
+	result := [][]int{}
+	hash := make(map[string]bool)
 	var dfs func(arr []int, path []int, prefix string)
 	dfs = func(arr []int, path []int, prefix string) {
 		if len(arr) == 0 {
 			if _, x := hash[prefix]; !x {
-				hash[prefix] = path
+				hash[prefix] = true
+				result = append(result, path)
 			}
 		} else {
 			for i := 0; i < len(arr); i++ {
@@ -32,10 +33,6 @@ func permuteUnique(nums []int) [][]int {
 		}
 	}
 	dfs(nums, []int{}, "")
-	result := [][]int{}
-	for _, v := range hash {
-		result = append(result, v)
-	}
 	return result
 }
 
