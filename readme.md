@@ -19,6 +19,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 - Sorting
 - Linked list
 - Dynamic programming
+- Backtracking
 - Permutations
 - and more...
 
@@ -147,8 +148,8 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 110 | [Group Anagrams](/leetcode/49-group-anagrams/) | hashtable | [leetcode 49](https://leetcode.com/problems/group-anagrams/) | 1st beats 96.55%, 2nd beats 89.66% |
 | 111 | [Coin Change](/leetcode/322-coin-change/) | hashtable, dynamic programming | [leetcode 322](https://leetcode.com/problems/coin-change/) | ⭐️ 2 years ago, I gave up. today i nailed it 💪🏻 1st beats 13.75%, 2nd beats 25.32%, 3rd beats 96.2% |
 | 112 | [Combination Sum IV](/leetcode-377-combination-sum-iv/) | hashtable, tree, dynamic programming | [leetcode 377](https://projecteuler.net/problem=31) | ⭐️ classic DP, classic solution |
-| 112 | [Coin Sums](/euler/31/) | hashtable, tree, dynamic programming | [euler 31](https://projecteuler.net/problem=31) | ⭐️ this question is similar to the previous one but the tricky thing is it requires DIFFERENT combinations |
-| 113 | [Coin Change II](/leetcode/518-coin-change-2/) | hashtable, tree, dynamic programming | [leetcode 518](https://leetcode.com/problems/coin-change-2/) | ⭐️ this question is exactly the same with the two on day112 but leetcode is draconian in the Time Limit |
+| 112 | [Coin Sums](/euler/31/) | hashtable, tree, dynamic programming, backtracking | [euler 31](https://projecteuler.net/problem=31) | ⭐️ this question is similar to the previous one but the tricky thing is it requires DIFFERENT combinations |
+| 113 | [Coin Change II](/leetcode/518-coin-change-2/) | hashtable, tree, dynamic programming, backtracking | [leetcode 518](https://leetcode.com/problems/coin-change-2/) | ⭐️ this question is exactly the same with the two on day112 but leetcode is draconian in the Time Limit |
 | 114 | [Design Linked List](/leetcode/707-design-linked-list/) | linked list | [leetcode 707](https://leetcode.com/problems/design-linked-list/) | 📌 classic implementation of linked list operation |
 | 115 | [Intersection of Two Linked Lists](/leetcode/160-intersection-of-two-linked-lists/) | linked list | [leetcode 160](https://leetcode.com/problems/intersection-of-two-linked-lists/) | 📌 tricky linked list question, 3 approaches but only one is considered as Linked List related |
 | 115 | [Reverse Linked List](/leetcode/206-reverse-linked-list/) | linked list | [leetcode 206](https://leetcode.com/problems/revers-linked-list/) | 📌 2nd approach is more linked list related |

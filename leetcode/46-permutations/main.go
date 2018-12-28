@@ -32,7 +32,7 @@ func permute(nums []int) [][]int {
 }
 
 func main() {
-	res := permute([]int{1, 2, 3})
+	res := permute([]int{1, 1, 3})
 	fmt.Println(res)
 	fmt.Println(len(res))
 }
