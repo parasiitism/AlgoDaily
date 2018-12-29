@@ -28,8 +28,9 @@ func permuteUnique(nums []int) [][]int {
 
 				nextpath := []int{}
 				nextpath = append(nextpath, path...)
-				nextpath = append(path, temp)
+				nextpath = append(nextpath, temp)
 
+				// dfs [:i]+[i+1:]
 				dfs(trim, nextpath, prefix+strconv.Itoa(temp))
 			}
 		}
@@ -38,6 +39,40 @@ func permuteUnique(nums []int) [][]int {
 	return result
 }
 
+func permuteUnique1(nums []int) [][]int {
+	sort.Ints(nums)
+	result := [][]int{}
+	seen := make([]bool, len(nums))
+
+	var dfs func(arr []int, path []int)
+	dfs = func(arr []int, path []int) {
+		if len(arr) == 0 {
+			result = append(result, path)
+		} else {
+			for i := 0; i < len(arr); i++ {
+				temp := arr[i]
+				if i > 0 && temp == arr[i-1] && seen[i-1] == false {
+					continue
+				}
+				copy := []int{}
+				copy = append(copy, arr...)
+				trim := append(copy[:i], copy[i+1:]...)
+
+				nextpath := []int{}
+				nextpath = append(nextpath, path...)
+				nextpath = append(path, temp)
+
+				// dfs [:i]+[i+1:]
+				seen[i] = true
+				dfs(trim, nextpath)
+				seen[i] = false
+			}
+		}
+	}
+	dfs(nums, []int{})
+	return result
+}
+
 func main() {
-	fmt.Println(permuteUnique([]int{1, 1, 2, 2}))
+	fmt.Println(permuteUnique1([]int{1, 1, 2, 2}))
 }
