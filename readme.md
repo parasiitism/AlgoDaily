@@ -165,3 +165,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 118 | [Permutations](/miscellaneous/permutations) | permutations | | 📌 basic |
 | 118 | [Permutations](/leetcode/46-permutations) | permutations | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 77.21% |
 | 119 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 📌 1st attempt 7.41% |
+| 120 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 2nd day on the same question for understanding 📌 2nd attempt 100% |

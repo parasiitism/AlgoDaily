@@ -6,7 +6,11 @@ import (
 	"strconv"
 )
 
-// actually it works but leetcode doesn't allow unordered
+// naive approach
+// recursively dfs all the possibilities and avoid duplicate paths by using a hashtable
+// time		O(n!)
+// space	O(n!)
+// beats 7.41%
 func permuteUnique(nums []int) [][]int {
 	sort.Ints(nums)
 	result := [][]int{}
@@ -39,33 +43,48 @@ func permuteUnique(nums []int) [][]int {
 	return result
 }
 
+// optimize naive the above approach
+// recursively dfs all the possibilities and avoid duplicate paths by using a hashtable
+/*
+e.g. 2,-1,3,-1
+sort it such that nums = -1,-1,2,3
+
+compute permutations of -1(index 0)
+skip computation for index 1 becos -1(index 0) has been considered
+compute permutations of 2(index 2)
+compute permutations of 3(index 3)
+*/
+// time		O(n!) worst case
+// space	O(n!)
+// beats 100%
 func permuteUnique1(nums []int) [][]int {
 	sort.Ints(nums)
 	result := [][]int{}
-	seen := make([]bool, len(nums))
 
 	var dfs func(arr []int, path []int)
 	dfs = func(arr []int, path []int) {
 		if len(arr) == 0 {
 			result = append(result, path)
 		} else {
+			hash := make(map[int]bool)
 			for i := 0; i < len(arr); i++ {
-				temp := arr[i]
-				if i > 0 && temp == arr[i-1] && seen[i-1] == false {
+
+				if _, x := hash[arr[i]]; x {
 					continue
 				}
+				hash[arr[i]] = true
+
+				temp := arr[i]
+
 				copy := []int{}
 				copy = append(copy, arr...)
 				trim := append(copy[:i], copy[i+1:]...)
 
 				nextpath := []int{}
 				nextpath = append(nextpath, path...)
-				nextpath = append(path, temp)
+				nextpath = append(nextpath, temp)
 
-				// dfs [:i]+[i+1:]
-				seen[i] = true
 				dfs(trim, nextpath)
-				seen[i] = false
 			}
 		}
 	}
