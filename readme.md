@@ -163,6 +163,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 118 | [Palindrome Linked List](/leetcode/234-palindrome-linked-list/) | linked list | [leetcode 234](https://leetcode.com/problems/palindrome-linked-list/) | naive beats 100% LOL |
 | 118 | [Valid Sudoku](/leetcode/36-valid-sodoku/) | hashtable | [leetcode 36](https://leetcode.com/problems/valid-sodoku/) | very straight forward O(3n) solution beats 31.25%. But the 2 one-pass solutions also beats 31.25% 🤔 |
 | 118 | [Permutations](/miscellaneous/permutations) | permutations | | 📌 basic |
-| 118 | [Permutations](/leetcode/46-permutations) | permutations | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 77.21% |
+| 118 | [Permutations](/leetcode/46-permutations) | permutations | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 recursive beats 77.21%, iterative beats 77.14% |
 | 119 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 📌 1st attempt 7.41% |
 | 120 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 2nd day on the same question for understanding 📌 2nd attempt use hashtable which beats 100%(46.47% for python) |
