@@ -43,7 +43,7 @@ func permuteUnique(nums []int) [][]int {
 	return result
 }
 
-// optimize naive the above approach
+// optimize the above naive approach
 // recursively dfs all the possibilities and avoid duplicate paths by using a hashtable
 /*
 e.g. 2,-1,3,-1
@@ -93,5 +93,6 @@ func permuteUnique1(nums []int) [][]int {
 }
 
 func main() {
+	// [-1,2,-1,2,1,-1,2,1]
 	fmt.Println(permuteUnique1([]int{1, 1, 2, 2}))
 }
