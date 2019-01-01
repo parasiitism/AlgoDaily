@@ -57,49 +57,11 @@ func findKth1(a []int, b []int, k int) int {
 
 // so far the fastest solution
 // binary search
-// https://www.algorithmsandme.com/find-kth-smallest-element-in-two-sorted-arrays/
-// but the implementation is buggy
-/*
-func findKth2(a []int, b []int, k int) int {
-	lenA := len(a)
-	lenB := len(b)
+// Time  O(logk)
+// Space O(1)
+// see main.py
+// https://stackoverflow.com/questions/4607945/how-to-find-the-kth-smallest-element-in-the-union-of-two-sorted-arrays
 
-	if lenA+lenB < k {
-		return -1
-	}
-
-	iMin := 0
-	iMax := lenA - 1
-	if k-2 < lenA {
-		iMax = k - 2
-	}
-	fmt.Println(iMin, iMax)
-
-	i := 0
-	j := 0
-
-	for iMin <= iMax {
-		i = (iMin + iMax) / 2
-		j = k - 2 - i // i+j=k-2 since arrays start from 0
-		fmt.Println(i, j)
-		if j > 0 && b[j-1] > a[i] {
-			// i is too small, must increase it
-			iMin = i + 1
-		} else if i > 0 && a[i-1] > b[j] {
-			// i is too big, must decrease it
-			iMax = i - 1
-		} else {
-			// i is perfect
-			if a[i] > b[j] {
-				return a[i]
-			}
-			return b[j]
-		}
-	}
-	fmt.Println(iMin, iMax)
-	return -1
-}
-*/
 func main() {
 
 	// a := []int{1, 2, 3}
