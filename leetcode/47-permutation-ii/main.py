@@ -35,7 +35,7 @@ class Solution(object):
             self.dfs(nums[:i] + nums[i+1:], prefix + [nums[i]])
 
 
-print(Solution().permuteUnique([1, 1, 2]))
+# print(Solution().permuteUnique([1, 1, 2]))
 
 # iterative insertion using a hashtable to avoid duplicate result
 #   1
@@ -45,6 +45,7 @@ print(Solution().permuteUnique([1, 1, 2]))
 #   2,1         1,2
 #  ^ ^ ^       ^ ^ ^
 #  3 3 3       3 3 3
+# beats 29.92%
 
 
 def permuteUnique(nums):
@@ -65,5 +66,29 @@ def permuteUnique(nums):
     return perms
 
 
-print(permuteUnique([1, 1]))
-print(permuteUnique([1, 1, 2]))
+# print(permuteUnique([1, 1]))
+# print(permuteUnique([1, 1, 2]))
+
+# suggested solution is kinda confusing
+# put it here for study
+# beats 99.91%
+
+def permuteUnique1(nums):
+    """
+    :type nums: List[int]
+    :rtype: List[List[int]]
+    """
+    perms = [[]]
+    for num in nums:  # for each number
+        new_perms = []
+        for perm in perms:  # for each temporary result
+            for i in range(len(perm)+1):  # for each slot
+                new_perms.append(perm[:i]+[num]+perm[i:])
+                # if the current number equals to the digit(at i) of current perm(not the new_perm), break
+                if i < len(perm) and perm[i] == num:
+                    break
+        perms = new_perms
+    return perms
+
+
+print(permuteUnique1([1, 1, 2]))
