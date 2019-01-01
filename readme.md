@@ -166,4 +166,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 118 | [Permutations](/leetcode/46-permutations) | permutations | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 recursive beats 77.21%, iterative beats 77.14% |
 | 119 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 📌 1st attempt 7.41% |
 | 120 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 2nd day on the same question for understanding 📌 2nd attempt use hashtable which beats 100%(46.47% for python) |
-| 121 | [Find the K th Element in 2 Sorted Arrays](miscellaneous/kth-element-in-2-sorted-arrays) | array | asked by a friend | 1st O(nlogn), 2nd O(m+n) |
+| 121 | [Median of Two Sorted Arrays](/leetcode/4-median-of-two-sorted-arrays) | array | [leetcode](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 1st O(nlogn), 2nd O(m+n) |
+| 121 | [Find the K th Element in 2 Sorted Arrays](/miscellaneous/kth-element-in-2-sorted-arrays) | array | asked by a friend | 1st O(nlogn), 2nd O(m+n) |
