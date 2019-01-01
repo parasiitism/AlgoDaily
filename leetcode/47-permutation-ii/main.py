@@ -35,5 +35,35 @@ class Solution(object):
             self.dfs(nums[:i] + nums[i+1:], prefix + [nums[i]])
 
 
-s = Solution()
-print(s.permuteUnique([1, 1, 2]))
+print(Solution().permuteUnique([1, 1, 2]))
+
+# iterative insertion using a hashtable to avoid duplicate result
+#   1
+#  ^ ^
+#  2 2
+#
+#   2,1         1,2
+#  ^ ^ ^       ^ ^ ^
+#  3 3 3       3 3 3
+
+
+def permuteUnique(nums):
+    nums = sorted(nums)
+    perms = [[]]
+    seen = {}
+    for num in nums:  # for each number
+        new_perms = []
+        for perm in perms:  # for each temporary result
+            for i in range(len(perm)+1):  # for each slot
+                temp = perm[:i] + [num] + perm[i:]
+                key = str(temp)
+                if key in seen:
+                    continue
+                seen[key] = True
+                new_perms.append(temp)
+        perms = new_perms
+    return perms
+
+
+print(permuteUnique([1, 1]))
+print(permuteUnique([1, 1, 2]))

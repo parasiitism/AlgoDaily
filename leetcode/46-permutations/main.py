@@ -40,11 +40,11 @@ class Solution(object):
 
 def permute1(nums):
     perms = [[]]
-    for n in nums:
+    for num in nums:  # for each number
         new_perms = []
-        for perm in perms:
-            for i in range(len(perm)+1):
-                new_perms.append(perm[:i] + [n] + perm[i:])
+        for perm in perms:  # for each temporary result
+            for i in range(len(perm)+1):  # for each slot
+                new_perms.append(perm[:i] + [num] + perm[i:])
         perms = new_perms
     return perms
 
