@@ -37,32 +37,33 @@ func combine(n int, k int) [][]int {
 }
 
 /*
-	Recursive implementation similar to permutations
+	Recursive implementation similar to permutations(without inner functions)
 	Time O(nCk)
 	Space O(nCk) due to the recrusion
-	beats 1.22% (python version beats 21.53%) WTF
+	beats 9.76%
 */
 func combine1(n int, k int) [][]int {
 	if k < 1 || k > n {
 		return [][]int{}
 	}
+	return dfs(1, n, []int{}, k)
+}
+
+func dfs(start int, n int, path []int, k int) [][]int {
 	result := [][]int{}
-	var dfs func(start int, path []int)
-	dfs = func(start int, path []int) {
-		if len(path) == k {
-			result = append(result, path)
-		} else {
-			for i := start; i <= n; i++ {
-				// copy thing
-				nextpath := []int{}
-				nextpath = append(nextpath, path...)
-				nextpath = append(nextpath, i)
-				// dfs(nums[i+1:], path+[nums[i]])
-				dfs(i+1, nextpath)
-			}
+	if len(path) == k {
+		return [][]int{path}
+	} else {
+		for i := start; i <= n; i++ {
+			// copy thing
+			nextpath := []int{}
+			nextpath = append(nextpath, path...)
+			nextpath = append(nextpath, i)
+			// dfs(nums[i+1:], path+[nums[i]])
+			temp := dfs(i+1, n, nextpath, k)
+			result = append(result, temp...)
 		}
 	}
-	dfs(1, []int{})
 	return result
 }
 
