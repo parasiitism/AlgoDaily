@@ -40,7 +40,7 @@ func combine(n int, k int) [][]int {
 	Recursive implementation similar to permutations(without inner functions)
 	Time O(nCk)
 	Space O(nCk) due to the recrusion
-	beats 9.76%
+	beats 9.76% better due to the inner function removal
 */
 func combine1(n int, k int) [][]int {
 	if k < 1 || k > n {
@@ -67,12 +67,48 @@ func dfs(start int, n int, path []int, k int) [][]int {
 	return result
 }
 
+/*
+	Iterative using a stack
+	Time	O(nCk)
+	Space O(nCk) the stack
+	beats 12.20%
+*/
+
+func combine2(n int, k int) [][]int {
+	if k < 1 || k > n {
+		return [][]int{}
+	}
+	result := [][]int{}
+	stack := []Stack{}
+	stack = append(stack, Stack{1, []int{}})
+	for len(stack) > 0 {
+		pop := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		if len(pop.Path) == k {
+			result = append(result, pop.Path)
+		} else {
+			for i := pop.Start; i <= n; i++ {
+				nextpath := []int{}
+				nextpath = append(nextpath, pop.Path...)
+				nextpath = append(nextpath, i)
+				stack = append(stack, Stack{i + 1, nextpath})
+			}
+		}
+	}
+	return result
+}
+
+type Stack struct {
+	Start int
+	Path  []int
+}
+
 func main() {
 	fmt.Println(combine(4, 2))
 	fmt.Println(combine(4, 3))
 	fmt.Println(combine(5, 4))
 
-	fmt.Println(combine1(4, 2))
-	fmt.Println(combine1(4, 3))
-	fmt.Println(combine1(5, 4))
+	fmt.Println(combine2(4, 2))
+	fmt.Println(combine2(4, 3))
+	fmt.Println(combine2(5, 4))
 }
