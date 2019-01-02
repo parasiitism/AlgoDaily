@@ -20,6 +20,7 @@ func permutations(input []int) [][]int {
 				nextpath = append(nextpath, path...)
 				nextpath = append(path, temp)
 
+				// dfs(arr[:i]+arr[i+1:], path+[arr[i]])
 				dfs(trim, nextpath)
 			}
 		}

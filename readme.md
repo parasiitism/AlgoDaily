@@ -21,6 +21,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 - Dynamic programming
 - Backtracking
 - Permutations
+- Combinations
 - and more...
 
 #### Questions from
