@@ -167,4 +167,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 119 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 📌 1st attempt 7.41% |
 | 120 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 2nd day on the same question for understanding 📌 2nd attempt use hashtable which beats 100%(46.47% for python) |
 | 121 | [Median of Two Sorted Arrays](/leetcode/4-median-of-two-sorted-arrays) | array | [leetcode](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 1st O(nlogn), 2nd O(m+n) already beats 100%, suggested solution is hard to understand |
-| 121 | [Find the K th Element in 2 Sorted Arrays](/miscellaneous/kth-element-in-2-sorted-arrays) | array | asked by a friend | 1st O(nlogn), 2nd O(m+n), suggested solution is hard to understand(see main.pyå) |
+| 121 | [Find the K th Element in 2 Sorted Arrays](/miscellaneous/kth-element-in-2-sorted-arrays) | array | asked by a friend | 1st O(nlogn), 2nd O(m+n), suggested solution is hard to understand(see main.py) |
+| 122 | [Next Permutation](/leetcode/next-permutation) | permutation | [leetcode](https://leetcode.com/problems/next-permutation/) | 1st O(nlogn) beats 100% |
