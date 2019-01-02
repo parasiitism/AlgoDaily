@@ -22,7 +22,7 @@ func permute(nums []int) [][]int {
 
 				nextpath := []int{}
 				nextpath = append(nextpath, path...)
-				nextpath = append(path, temp)
+				nextpath = append(nextpath, temp)
 
 				dfs(trim, nextpath)
 			}

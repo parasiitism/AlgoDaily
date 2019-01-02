@@ -170,3 +170,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 121 | [Median of Two Sorted Arrays](/leetcode/4-median-of-two-sorted-arrays) | array | [leetcode](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 1st O(nlogn), 2nd O(m+n) already beats 100%, suggested solution is hard to understand |
 | 121 | [Find the K th Element in 2 Sorted Arrays](/miscellaneous/kth-element-in-2-sorted-arrays) | array | asked by a friend | 1st O(nlogn), 2nd O(m+n), suggested solution is hard to understand(see main.py) |
 | 122 | [Next Permutation](/leetcode/next-permutation) | permutation, array | [leetcode](https://leetcode.com/problems/next-permutation/) | 1st O(n) beats 100%, 2nd O(n) is terse and it beats 100% |
+| 122 | [Combinations](/leetcode/combinations) | combinations, array | [leetcode](https://leetcode.com/problems/combinations/) | 📌 1st beats 1.22% |
