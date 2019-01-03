@@ -169,4 +169,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 121 | [Find the K th Element in 2 Sorted Arrays](/miscellaneous/kth-element-in-2-sorted-arrays) | array | asked by a friend | 1st O(nlogn), 2nd O(m+n), suggested solution is hard to understand(see main.py) |
 | 122 | [Next Permutation](/leetcode/31-next-permutation) | backtracking, array | [leetcode](https://leetcode.com/problems/next-permutation/) | 1st O(n) beats 100%, 2nd O(n) is terse and it beats 100% |
 | 122 | [Combinations](/leetcode/77-combinations) | backtracking, array | [leetcode](https://leetcode.com/problems/combinations/) | 📌 1st beats 1.22%, 2nd beats 9.76%, 3rd beats 12.20% |
-| 123 | [Subsets](/leetcode/78-subsets) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets/) | 📌 1st beats 35.29% |
+| 123 | [Subsets](/leetcode/78-subsets) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets/) | 📌 |
