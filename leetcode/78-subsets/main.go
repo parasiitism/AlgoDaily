@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /*
-	Recursive DFS
+	Recursive DFS, see ./idea.jpeg
 	Time    O(2^n)
 	Space   O(2^n) recursion
 	beats 100%
@@ -26,7 +26,7 @@ func dfs(nums []int, path []int) [][]int {
 }
 
 /*
-	Iterative DFS
+	Iterative DFS, see ./idea.jpeg
 	Time    O(2^n)
 	Space   O(2^n) stack
 	beats 100%
@@ -56,6 +56,31 @@ type Stack struct {
 	Path []int
 }
 
+/*
+	Iteratively append the next item to calculated items
+	e.g. [1,2,3]
+	[]
+	[],[1]
+	[],[1],[2],[1,2]
+	[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]
+	Time    O(2^n)
+	Space   O(2^n)
+	beats 	100%
+*/
+func subsets2(nums []int) [][]int {
+	result := [][]int{[]int{}}
+	for i := 0; i < len(nums); i++ {
+		n := len(result)
+		for j := 0; j < n; j++ {
+			cop := []int{}
+			cop = append(cop, result[j]...)
+			cop = append(cop, nums[i])
+			result = append(result, cop)
+		}
+	}
+	return result
+}
+
 func main() {
-	fmt.Println(subsets1([]int{1, 2, 3}))
+	fmt.Println(subsets2([]int{1, 2, 3}))
 }

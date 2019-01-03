@@ -1,6 +1,6 @@
 class Solution(object):
     """
-    recursive dfs
+    Recursive DFS
     Time    O(2^n)
     Space   O(2^n) recursion
     beats   35.29%
@@ -28,7 +28,7 @@ print(len(Solution().subsets([1, 2, 3, 4, 5])))
 
 class Solution1(object):
     """
-    iterative dfs
+    Iterative DFS
     Time    O(2^n)
     Space   O(2^n)
     beats   3.67%
@@ -51,4 +51,30 @@ class Solution1(object):
         return result
 
 
-print(Solution().subsets([1, 2, 3]))
+print(Solution1().subsets([1, 2, 3]))
+
+
+class Solution2(object):
+    """
+    Iteratively append the next item to calculated items
+    e.g. [1,2,3]
+    []
+    [],[1]
+    [],[1],[2],[1,2]
+    [],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]
+    Time    O(2^n)
+    Space   O(2^n)
+    beats   35.29%
+    """
+
+    def subsets(self, nums):
+        res = [[]]
+        for num in nums:
+            n = len(res)
+            for i in range(n):
+                res += [res[i]+[num]]
+            # the above 3 lines can be reduced as res += [item+[num] for item in res] # but only beats 15.25%
+        return res
+
+
+print(Solution2().subsets([1, 2, 3]))
