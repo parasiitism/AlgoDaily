@@ -28,7 +28,7 @@ print(len(Solution().subsets([1, 2, 3, 4, 5])))
 
 class Solution1(object):
     """
-    recursive dfs
+    iterative dfs
     Time    O(2^n)
     Space   O(2^n)
     beats   3.67%
