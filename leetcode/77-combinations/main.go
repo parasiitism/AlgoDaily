@@ -4,7 +4,7 @@ import "fmt"
 
 /*
 	Recursive implementation similar to permutations
-	Time O(nCk)
+	Time	O(nCk)
 	Space O(nCk) due to the recrusion
 	beats 1.22% (python version beats 13.88%)
 */
@@ -38,7 +38,7 @@ func combine(n int, k int) [][]int {
 
 /*
 	Recursive implementation similar to permutations(without inner functions)
-	Time O(nCk)
+	Time	O(nCk)
 	Space O(nCk) due to the recrusion
 	beats 9.76% better due to the inner function removal
 */

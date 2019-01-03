@@ -19,9 +19,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 - Sorting
 - Linked list
 - Dynamic programming
-- Backtracking
-- Permutations
-- Combinations
+- Backtracking(Permutations & Combinations & Subsets...etc)
 - and more...
 
 #### Questions from
@@ -163,11 +161,12 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 118 | [Odd Even Linked List](/leetcode/328-odd-even-linked-list/) | linked list | [leetcode 118](https://leetcode.com/problems/odd-even-linked-list/) | both naive and classic approach still beats 100% LOL |
 | 118 | [Palindrome Linked List](/leetcode/234-palindrome-linked-list/) | linked list | [leetcode 234](https://leetcode.com/problems/palindrome-linked-list/) | naive beats 100% LOL |
 | 118 | [Valid Sudoku](/leetcode/36-valid-sodoku/) | hashtable | [leetcode 36](https://leetcode.com/problems/valid-sodoku/) | very straight forward O(3n) solution beats 31.25%. But the 2 one-pass solutions also beats 31.25% 🤔 |
-| 118 | [Permutations](/miscellaneous/permutations) | permutations | | 📌 basic |
-| 118 | [Permutations](/leetcode/46-permutations) | permutations | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 recursive beats 77.21%, iterative beats 77.14% |
-| 119 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 📌 1st attempt 7.41% |
-| 120 | [Permutations II](/leetcode/47-permutations-ii) | permutations | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 2nd day on the same question for understanding 📌 2nd attempt use hashtable which beats 100%(46.47% for python) |
+| 118 | [Permutations](/miscellaneous/permutations) | backtracking | | 📌 basic |
+| 118 | [Permutations](/leetcode/46-permutations) | backtracking | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 recursive beats 77.21%, iterative beats 77.14% |
+| 119 | [Permutations II](/leetcode/47-permutations-ii) | backtracking | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 📌 1st attempt 7.41% |
+| 120 | [Permutations II](/leetcode/47-permutations-ii) | backtracking | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 2nd day on the same question for understanding 📌 2nd attempt use hashtable which beats 100%(46.47% for python) |
 | 121 | [Median of Two Sorted Arrays](/leetcode/4-median-of-two-sorted-arrays) | array | [leetcode](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 1st O(nlogn), 2nd O(m+n) already beats 100%, suggested solution is hard to understand |
 | 121 | [Find the K th Element in 2 Sorted Arrays](/miscellaneous/kth-element-in-2-sorted-arrays) | array | asked by a friend | 1st O(nlogn), 2nd O(m+n), suggested solution is hard to understand(see main.py) |
-| 122 | [Next Permutation](/leetcode/next-permutation) | permutation, array | [leetcode](https://leetcode.com/problems/next-permutation/) | 1st O(n) beats 100%, 2nd O(n) is terse and it beats 100% |
-| 122 | [Combinations](/leetcode/combinations) | combinations, array | [leetcode](https://leetcode.com/problems/combinations/) | 📌 1st beats 1.22%, 2nd beats 9.76%, 3rd beats 12.20% |
+| 122 | [Next Permutation](/leetcode/31-next-permutation) | backtracking, array | [leetcode](https://leetcode.com/problems/next-permutation/) | 1st O(n) beats 100%, 2nd O(n) is terse and it beats 100% |
+| 122 | [Combinations](/leetcode/77-combinations) | backtracking, array | [leetcode](https://leetcode.com/problems/combinations/) | 📌 1st beats 1.22%, 2nd beats 9.76%, 3rd beats 12.20% |
+| 123 | [Subsets](/leetcode/78-subsets) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets/) | 📌 1st beats 35.29% |

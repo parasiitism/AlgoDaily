@@ -10,7 +10,7 @@ import (
 // recursively dfs all the possibilities and avoid duplicate paths by using a hashtable
 // time		O(n!)
 // space	O(n!)
-// beats 7.41%
+// beats 	7.41%
 func permuteUnique(nums []int) [][]int {
 	sort.Ints(nums)
 	result := [][]int{}
@@ -56,7 +56,7 @@ compute permutations of 3(index 3)
 */
 // time		O(n!) worst case
 // space	O(n!)
-// beats 100%
+// beats 	100%
 func permuteUnique1(nums []int) [][]int {
 	sort.Ints(nums)
 	result := [][]int{}

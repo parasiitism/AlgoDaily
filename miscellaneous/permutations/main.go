@@ -40,7 +40,7 @@ func permutations_recusive(input []int) [][]int {
 //  3 3 3       3 3 3
 // time		O(n!)
 // space	O(1)
-// beats 77.14%
+// beats	77.14%
 func permutations_iterative(nums []int) [][]int {
 	perms := [][]int{[]int{}}
 	for i := 0; i < len(nums); i++ {

@@ -1,9 +1,9 @@
 class Solution(object):
     """
     Implementation similar to permutations
-    Time O(nCk)
-    Space O(nCk) due to the recrusion
-    beats 13.88%
+    Time    O(nCk)
+    Space   O(nCk) due to the recrusion
+    beats   13.88%
     """
 
     def __init__(self):
@@ -37,9 +37,9 @@ print(r)
 class Solution1(object):
     """
     Implementation similar to permutations
-    Time O(nCk)
-    Space O(nCk) due to the recrusion
-    beats 21.53%
+    Time    O(nCk)
+    Space   O(nCk) due to the recrusion
+    beats   21.53%
     """
 
     def __init__(self):

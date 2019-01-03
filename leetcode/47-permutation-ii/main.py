@@ -9,9 +9,9 @@
 # compute permutations of 2(index 2)
 # compute permutations of 3(index 3)
 
-# time    O(n!) worst case
-# space	O(n!)
-# beats 46.47%
+# time      O(n!) worst case
+# space	    O(n!)
+# beats     46.47%
 
 
 class Solution(object):
