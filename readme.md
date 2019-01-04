@@ -170,4 +170,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 122 | [Next Permutation](/leetcode/31-next-permutation) | backtracking, array | [leetcode](https://leetcode.com/problems/next-permutation/) | 1st O(n) beats 100%, 2nd O(n) is terse and it beats 100% |
 | 122 | [Combinations](/leetcode/77-combinations) | backtracking, array | [leetcode](https://leetcode.com/problems/combinations/) | 📌 1st beats 1.22%, 2nd beats 9.76%, 3rd beats 12.20% |
 | 123 | [Subsets](/leetcode/78-subsets) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets/) | 📌 both 1st, 2nd & 3rd beat 100 but python vers beat 35.29%, 3.67% and 35.29% only 🤔 |
-| 123 | [Subsets II](/leetcode/78-subsets-ii) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets-ii/) | 📌 both 1st beats 100 but python ver beat 41.22% only 🤔 |
+| 123 | [Subsets II](/leetcode/78-subsets-ii) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets-ii/) | 📌 1st beats 100% but python ver beat 41.22% only 🤔 |
+| 124 | [Subsets II](/leetcode/78-subsets-ii) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets-ii/) | 📌 spent more time to understand the iterative approach, although it eventaully beats merely 29.41% |
