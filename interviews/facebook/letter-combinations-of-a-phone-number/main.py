@@ -178,6 +178,7 @@ class Solution(object):
 
 
 s = Solution()
+print(s.phone_dial_combo("0123456789"))
 # print(s.phone_dial_combo("2"))
 # print(s.phone_dial_combo("22"))
 # print(s.phone_dial_combo("222"))
