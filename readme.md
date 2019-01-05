@@ -172,4 +172,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 123 | [Subsets](/leetcode/78-subsets) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets/) | 📌 both 1st, 2nd & 3rd beat 100 but python vers beat 35.29%, 3.67% and 35.29% only 🤔 |
 | 123 | [Subsets II](/leetcode/78-subsets-ii) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets-ii/) | 📌 1st beats 100% but python ver beat 41.22% only 🤔 |
 | 124 | [Subsets II](/leetcode/78-subsets-ii) | backtracking, array | [leetcode](https://leetcode.com/problems/subsets-ii/) | 📌 spent more time to understand the iterative approach, although it eventaully beats merely 29.41% |
-| 125 | [Phone Dial Combination](/interviews/facebook/phone-dial-combinations) | backtracking, array | interview | asked by the facebook interviewer |
+| 125 | [Letter Combinations of Phone Dial](/interviews/facebook/letter-combinations-of-phone-dial) | backtracking, array | interview | asked by the facebook interviewer |
