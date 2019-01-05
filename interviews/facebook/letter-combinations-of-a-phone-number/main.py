@@ -14,20 +14,22 @@
          |  +  |      
          +--+--+
 
-   Write a function that given a string of numbers as input returns all possible string translations
-
+   Write a function that given a string of numbers as an input, returns all possible string combinations.
    e.g. 1
-   2 -> "A"
-   22 -> "B"
-   222 -> "C"
-   2233 -> "BE"
-
-   e.g. 2
    For 2223 
    2 2 2 3 -> AAAD
    22  2 3 -> BAD
    2 22  3 -> ABD
    222   3 -> CD
+   The result will be [AAAD, BAD, ABD, CD]
+   
+   e.g. 2
+   for 22223, the result will be
+   2 2 2 2 3 -> AAAAD
+   22  2 2 3 -> BAAD
+   2 22  2 3 -> ABAD
+   222   2 3 -> CAD
+   The result will be [AAAAD, BAAD, ABAD, CAD]
 
    Questions to ask the interviewer:
    - input only contains numbers?
