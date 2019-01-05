@@ -123,7 +123,7 @@ class Solution(object):
             if distinct_number_str == "0":
                 numbers_result.append(["+"])
             elif distinct_number_str == "1":
-                pass  # do nothing
+                numbers_result.append([" "])
             elif distinct_number_str[0] == "7" or distinct_number_str[0] == "9":
                 combo = self.combo(distinct_number_str, 4)
                 numbers_result.append(combo)
@@ -158,15 +158,15 @@ class Solution(object):
         """
         combos = []
 
-        def dfs(numsber_str, path):
+        def dfs(numbers_str, path):
             nonlocal combos
-            if len(numsber_str) == 0:
+            if len(numbers_str) == 0:
                 combos.append(path)
             else:
                 for i in range(1, n_of_digits):
                     # very important: we need to check becos arr[i:] wont produce array length less than 0
-                    if len(numsber_str) >= i:
-                        dfs(numsber_str[i:], path+[numsber_str[:i]])
+                    if len(numbers_str) >= i:
+                        dfs(numbers_str[i:], path+[numbers_str[:i]])
         dfs(numbers, [])
 
         res = []
