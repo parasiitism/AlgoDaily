@@ -91,12 +91,11 @@ class Solution(object):
 
         """
             split the input into an array of distinct numbers
-            e.g. 2223344
-            [ 222, 333, 44 ]
+            e.g. 2223344 -> [ 222, 333, 44 ]
         """
         cur = ""
         acc = ""
-        distinct_number_strs = []  # e.g. [ 2222, 333, 44]
+        distinct_number_strs = []  # e.g. [ 2222, 333, 44 ]
         numbers += "."  # for adding the last acc in the below forloop
         for number in numbers:
             if number == cur:
@@ -124,10 +123,10 @@ class Solution(object):
             elif distinct_number_str == "1":
                 pass  # do nothing
             elif distinct_number_str[0] == "7" or distinct_number_str[0] == "9":
-                combo = self.combo4(distinct_number_str)
+                combo = self.combo(distinct_number_str, 4)
                 numbers_result.append(combo)
             else:
-                combo = self.combo3(distinct_number_str)
+                combo = self.combo(distinct_number_str, 3)
                 numbers_result.append(combo)
 
         """
@@ -150,35 +149,10 @@ class Solution(object):
             result = temp
         return result
 
-    def combo3(self, numbers):
+    def combo(self, numbers, n_of_digits):
         """
-        for 2,3,4,5,6,8
-        """
-        combos = []
-
-        def dfs(numsber_str, path):
-            nonlocal combos
-            if len(numsber_str) == 0:
-                combos.append(path)
-            else:
-                for i in range(1, 4):  # 1,2,3
-                    # very important: we need to check becos arr[i:] wont produce array length less than 0
-                    if len(numsber_str) >= i:
-                        dfs(numsber_str[i:], path+[numsber_str[:i]])
-        dfs(numbers, [])
-
-        res = []
-        for combo in combos:
-            s = ""
-            for chars in combo:
-                s += self.mapping[chars]
-            res.append(s)
-
-        return res
-
-    def combo4(self, numbers):
-        """
-        for 7(PQRS) and 9(WXYZ)
+        n_of_digits = 3 for 2,3,4,5,6,8
+        n_of_digits = 4 for 7(PQRS) and 9(WXYZ)
         """
         combos = []
 
@@ -187,7 +161,7 @@ class Solution(object):
             if len(numsber_str) == 0:
                 combos.append(path)
             else:
-                for i in range(1, 5):  # 1,2,3,4
+                for i in range(1, n_of_digits):
                     # very important: we need to check becos arr[i:] wont produce array length less than 0
                     if len(numsber_str) >= i:
                         dfs(numsber_str[i:], path+[numsber_str[:i]])
@@ -207,10 +181,11 @@ s = Solution()
 # print(s.phone_dial_combo("2"))
 # print(s.phone_dial_combo("22"))
 # print(s.phone_dial_combo("222"))
+# print(s.phone_dial_combo("2223"))
 # print(s.phone_dial_combo("2222"))
 # print(s.phone_dial_combo("22233"))
 # print(s.phone_dial_combo("222233"))
 # print(s.phone_dial_combo("222337"))
 # print(s.phone_dial_combo("2223344"))
-# print(s.phone_dial_combo("2223370"))
-# print(s.phone_dial_combo("01227777"))
+# print(s.phone_dial_combo("2223377"))
+print(s.phone_dial_combo("04122777788"))
