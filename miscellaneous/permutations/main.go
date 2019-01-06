@@ -63,7 +63,23 @@ func permutations_iterative(nums []int) [][]int {
 	return perms
 }
 
+// CS106B
+func permuteStr(str string) {
+	var helper func(s string, prefix string)
+	helper = func(s string, prefix string) {
+		if len(s) == 0 {
+			fmt.Println(prefix)
+		} else {
+			for i := 0; i < len(s); i++ {
+				helper(s[:i]+s[i+1:], prefix+string(s[i]))
+			}
+		}
+	}
+	helper(str, "")
+}
+
 func main() {
 	fmt.Println(permutations_recusive([]int{1, 2, 3, 4}))
 	fmt.Println(permutations_iterative([]int{1, 2, 3, 4}))
+	permuteStr("marty")
 }
