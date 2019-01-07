@@ -161,18 +161,17 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 118 | [Odd Even Linked List](/leetcode/328-odd-even-linked-list/) | linked list | [leetcode 118](https://leetcode.com/problems/odd-even-linked-list/) | both naive and classic approach still beats 100% LOL |
 | 118 | [Palindrome Linked List](/leetcode/234-palindrome-linked-list/) | linked list | [leetcode 234](https://leetcode.com/problems/palindrome-linked-list/) | naive beats 100% LOL |
 | 118 | [Valid Sudoku](/leetcode/36-valid-sodoku/) | hashtable | [leetcode 36](https://leetcode.com/problems/valid-sodoku/) | very straight forward O(3n) solution beats 31.25%. But the 2 one-pass solutions also beats 31.25% 🤔 |
-| 118 | [Permutations](/miscellaneous/permutations) | backtracking | | 📌 basic |
-| 118 | [Permutations](/leetcode/46-permutations) | backtracking | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 recursive beats 77.21%, iterative beats 77.14% |
-| 119 | [Permutations II](/leetcode/47-permutations-ii) | backtracking | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 📌 1st attempt 7.41% |
-| 120 | [Permutations II](/leetcode/47-permutations-ii) | backtracking | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 2nd day on the same question for understanding 📌 2nd attempt use hashtable which beats 100%(46.47% for python) |
+| 118 | [Permutations](/miscellaneous/permutations) | backtracking, recursion | | 📌 basic |
+| 118 | [Permutations](/leetcode/46-permutations) | backtracking, recursion | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 recursive beats 77.21%, iterative beats 77.14% |
+| 119 | [Permutations II](/leetcode/47-permutations-ii) | backtracking, recursion | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 📌 1st attempt 7.41% |
+| 120 | [Permutations II](/leetcode/47-permutations-ii) | backtracking, recursion | [leetcode 47](https://leetcode.com/problems/permutations-ii/) | 2nd day on the same question for understanding 📌 2nd attempt use hashtable which beats 100%(46.47% for python) |
 | 121 | [Median of Two Sorted Arrays](/leetcode/4-median-of-two-sorted-arrays) | array | [leetcode 4](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 1st O(nlogn), 2nd O(m+n) already beats 100%, suggested solution is hard to understand |
 | 121 | [Find the K th Element in 2 Sorted Arrays](/miscellaneous/kth-element-in-2-sorted-arrays) | array | asked by a friend | 1st O(nlogn), 2nd O(m+n), suggested solution is hard to understand(see main.py) |
-| 122 | [Next Permutation](/leetcode/31-next-permutation) | backtracking, array | [leetcode 31](https://leetcode.com/problems/next-permutation/) | 1st O(n) beats 100%, 2nd O(n) is terse and it beats 100% |
-| 122 | [Combinations](/leetcode/77-combinations) | backtracking, array | [leetcode 77](https://leetcode.com/problems/combinations/) | 📌 1st beats 1.22%, 2nd beats 9.76%, 3rd beats 12.20% |
-| 123 | [Subsets](/leetcode/78-subsets) | backtracking, array | [leetcode 78](https://leetcode.com/problems/subsets/) | 📌 both 1st, 2nd & 3rd beat 100 but python vers beat 35.29%, 3.67% and 35.29% only 🤔 |
-| 123 | [Subsets II](/leetcode/90-subsets-ii) | backtracking, array | [leetcode 90](https://leetcode.com/problems/subsets-ii/) | 📌 1st beats 100% but python ver beat 41.22% only 🤔 |
-| 124 | [Subsets II](/leetcode/90-subsets-ii) | backtracking, array | [leetcode 90](https://leetcode.com/problems/subsets-ii/) | 📌 spent more time to understand the iterative approach, although it eventaully beats merely 29.41% |
-| 125 | [Letter Combinations of a Phone Number](/interviews/facebook/letter-combinations-of-a-phone-number) | backtracking,
- array | interview | asked by the facebook interviewer |
+| 122 | [Next Permutation](/leetcode/31-next-permutation) | backtracking, recursion | [leetcode 31](https://leetcode.com/problems/next-permutation/) | 1st O(n) beats 100%, 2nd O(n) is terse and it beats 100% |
+| 122 | [Combinations](/leetcode/77-combinations) | backtracking, recursion | [leetcode 77](https://leetcode.com/problems/combinations/) | 📌 1st beats 1.22%, 2nd beats 9.76%, 3rd beats 12.20% |
+| 123 | [Subsets](/leetcode/78-subsets) | backtracking, recursion | [leetcode 78](https://leetcode.com/problems/subsets/) | 📌 both 1st, 2nd & 3rd beat 100 but python vers beat 35.29%, 3.67% and 35.29% only 🤔 |
+| 123 | [Subsets II](/leetcode/90-subsets-ii) | backtracking, recursion | [leetcode 90](https://leetcode.com/problems/subsets-ii/) | 📌 1st beats 100% but python ver beat 41.22% only 🤔 |
+| 124 | [Subsets II](/leetcode/90-subsets-ii) | backtracking, recursion | [leetcode 90](https://leetcode.com/problems/subsets-ii/) | 📌 spent more time to understand the iterative approach, although it eventaully beats merely 29.41% |
+| 125 | [Letter Combinations of a Phone Number](/interviews/facebook/letter-combinations-of-a-phone-number) | recursion | interview | asked by the facebook interviewer |
 | 126 | [Recursion](/miscellaneous/recursion) | recursion |  | a little intro of recursion of Standford CS106B |
-| 127 | [Combination Sum II](/leetcode/216-combination-sum-iii) | backtracking | [leetcode 216](https://leetcode.com/problems/combination-sum-iii) | very similer to [day112](/euler/31/) |
+| 127 | [Combination Sum II](/leetcode/216-combination-sum-iii) | recursion, backtracking | [leetcode 216](https://leetcode.com/problems/combination-sum-iii) | very similer to [day112](/euler/31/) |
