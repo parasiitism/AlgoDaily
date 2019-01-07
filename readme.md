@@ -174,4 +174,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 124 | [Subsets II](/leetcode/90-subsets-ii) | backtracking, recursion | [leetcode 90](https://leetcode.com/problems/subsets-ii/) | 📌 spent more time to understand the iterative approach, although it eventaully beats merely 29.41% |
 | 125 | [Letter Combinations of a Phone Number](/interviews/facebook/letter-combinations-of-a-phone-number) | recursion | interview | asked by the facebook interviewer |
 | 126 | [Recursion](/miscellaneous/recursion) | recursion |  | a little intro of recursion of Standford CS106B |
-| 127 | [Combination Sum II](/leetcode/216-combination-sum-iii) | recursion, backtracking | [leetcode 216](https://leetcode.com/problems/combination-sum-iii) | very similer to [day112](/euler/31/) |
+| 127 | [Combination Sum II](/leetcode/40-combination-sum-ii) | recursion, backtracking | [leetcode 40](https://leetcode.com/problems/combination-sum-ii) | very similer to [day119](/euler/31/) |
+| 127 | [Combination Sum III](/leetcode/216-combination-sum-iii) | recursion, backtracking | [leetcode 216](https://leetcode.com/problems/combination-sum-iii) | very similer to [day112](/leetcode/47-permutations-ii) and [Subsets II](/leetcode/90-subsets-ii) |
