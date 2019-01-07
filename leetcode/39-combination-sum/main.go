@@ -7,41 +7,8 @@ import (
 )
 
 /*
-naive approach: top-down recursion
-TLE because there are too many duplicate calculations
-func combinationSum(candidates []int, target int) [][]int {
-	result := [][]int{}
-	seen := make(map[string]bool)
-	var dfs func(num int, path []int)
-	dfs = func(num int, path []int) {
-		if num == 0 {
-			sort.Ints(path)
-			key := ints2str(path)
-			if _, x := seen[key]; !x {
-				seen[key] = true
-				result = append(result, path)
-			}
-		} else if num > 0 {
-			for i := 0; i < len(candidates); i++ {
-				cur := candidates[i]
-				nextPath := []int{}
-				nextPath = append(nextPath, path...)
-				nextPath = append(nextPath, cur)
-				if num < cur {
-					break
-				}
-				dfs(num-cur, nextPath)
-			}
-		}
-	}
-	dfs(target, []int{})
-	return result
-}
-*/
-
-/*
 	1st attempt:
-	- bottom-up dynamic programming approch
+	- iterative bottom-up dynamic programming approch
 	- use a hashtable to avoid duplicates
 	e.g. candidates = [2,3,5], target = 8
 	f[0] = []
@@ -100,8 +67,48 @@ func ints2str(nums []int) string {
 	return result
 }
 
+/*
+	2nd approach:
+	- recursive dfs
+	- sort the input to make sure that all the later candidates are larger
+	- avoid duplicate by considering the candidates only which are >= num
+	beats 63.08%
+*/
+func combinationSum1(candidates []int, target int) [][]int {
+	sort.Ints(candidates)
+	result := [][]int{}
+	var dfs func(num int, path []int, fromIdx int)
+	dfs = func(num int, path []int, fromIdx int) {
+		if num == 0 {
+			result = append(result, path)
+		} else if num > 0 {
+			// very important:
+			// start the recursion only with the candidates which are >= fromIdx
+			for i := fromIdx; i < len(candidates); i++ {
+				cur := candidates[i]
+				nextPath := []int{}
+				nextPath = append(nextPath, path...)
+				nextPath = append(nextPath, cur)
+				if num < cur {
+					break
+				}
+				// very important:
+				// start the next recursion from current index(not the i+1)
+				// because we need to consider duplicates numbers in candidates
+				dfs(num-cur, nextPath, i)
+			}
+		}
+	}
+	dfs(target, []int{}, 0)
+	return result
+}
+
 func main() {
 	fmt.Println(combinationSum([]int{2, 3, 5}, 8))
 	fmt.Println(combinationSum([]int{2, 3, 6, 7}, 7))
 	fmt.Println(combinationSum([]int{1, 2, 3, 4}, 15))
+
+	fmt.Println(combinationSum1([]int{2, 3, 5}, 8))
+	fmt.Println(combinationSum1([]int{2, 3, 6, 7}, 7))
+	fmt.Println(combinationSum1([]int{1, 2, 3, 4}, 15))
 }

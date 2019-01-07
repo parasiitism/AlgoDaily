@@ -1,6 +1,7 @@
-"""
+class Solution(object):
+    """
     1st attempt:
-    - bottom-up dynamic programming approch
+    - iterative bottom-up dynamic programming approch
     - use a hashtable to avoid duplicates
     e.g. candidates = [2,3,5], target = 8
     f[0] = []
@@ -13,10 +14,8 @@
     f[7] = [[2,2,3],[2,5]]
     f[8] = [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
     beats 15.56%
-"""
+    """
 
-
-class Solution(object):
     def combinationSum(self, candidates, target):
         """
         :type candidates: List[int]
@@ -54,3 +53,38 @@ class Solution(object):
 print(Solution().combinationSum([2, 3, 5], 8))
 print(Solution().combinationSum([2, 3, 6, 7], 7))
 print(Solution().combinationSum([1, 2, 3, 4], 15))
+
+
+class Solution1(object):
+    """
+    2nd approach: recursive dfs, avoid duplicate by considering the candidates which are >= num
+    beats 76.61%
+    """
+
+    def __init__(self):
+        self.result = []
+
+    def combinationSum(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        candidates.sort()
+        self.dfs(candidates, target, [], 0)
+        return self.result
+
+    def dfs(self, candidates, target, path, from_idx):
+        if target == 0:
+            self.result.append(path)
+            return
+        for i in range(from_idx, len(candidates)):
+            if target < candidates[i]:
+                return
+            can = candidates[i]
+            self.dfs(candidates, target-can, path+[can], i)
+
+
+print(Solution1().combinationSum([2, 3, 5], 8))
+print(Solution1().combinationSum([2, 3, 6, 7], 7))
+print(Solution1().combinationSum([1, 2, 3, 4], 15))

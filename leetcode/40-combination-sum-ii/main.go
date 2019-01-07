@@ -31,7 +31,7 @@ func combinationSum2(candidates []int, target int) [][]int {
 				nextPath := []int{}
 				nextPath = append(nextPath, path...)
 				nextPath = append(nextPath, cur)
-				dfs(num-cur, nextPath, i+1)
+				dfs(num-cur, nextPath, i+1) // i+1: only consider the candidates > current candidates
 			}
 		}
 	}
