@@ -24,8 +24,8 @@ func fib(N int) int {
 }
 
 // bottom-up iterative
-// Time 	O(n)
-// Space	O(n)
+// Time 	O(n) iterate from 1 to N
+// Space	O(n) for the array
 // 0ms beats 100%
 func fib1(N int) int {
 	arr := []int{}
