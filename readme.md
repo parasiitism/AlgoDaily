@@ -182,3 +182,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 128 | [Min Cost Climbing Staris](/leetcode/746-min-cost-climbing-stairs) | dynamic programming | [leetcode 746](https://leetcode.com/problems/min-cost-climbing-stairs/) | 📌 classic DP. bruce forece recursion TLE. bottom-up iteration beats 100% |
 | 128 | [First Missing Positive](/leetcode/41-first-missing-positive) | array | [leetcode 41](https://leetcode.com/problems/first-missing-positive/) | 1 in go beats 100%, 2 in python |
 | 129 | [Meeting Rooms](/leetcode/252-meeting-rooms) | array, sort | [leetcode 252](https://leetcode.com/problems/meeting-rooms/) | 1st beats 100% 🎉 takeaway: sort.Slice() |
+| 129 | [Meeting Rooms II](/leetcode/253-meeting-rooms-ii) | array, sort | [leetcode 253](https://leetcode.com/problems/meeting-rooms-ii/) | 1st 112ms, no beat due to the leetcode update |
