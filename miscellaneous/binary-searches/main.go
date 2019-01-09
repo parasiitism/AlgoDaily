@@ -72,6 +72,8 @@ func RecursiveBinarySearch(arr []int, target int) int {
 
 // write this outside the main function,
 // so to understand the logic of returning
+
+/* go over all the paths
 func recursion(arr []int, min int, max int, target int) int {
 	if min > max {
 		return -1
@@ -86,6 +88,22 @@ func recursion(arr []int, min int, max int, target int) int {
 		return left
 	}
 	return right
+}
+*/
+
+// same as above but go over less paths and more concise
+func recursion(arr []int, min int, max int, target int) int {
+	if min > max {
+		return -1
+	}
+	mean := (min + max) / 2
+	if arr[mean] == target {
+		return mean
+	}
+	if target < arr[mean] {
+		return recursion(arr, min, mean-1, target)
+	}
+	return recursion(arr, mean+1, max, target)
 }
 
 func main() {
