@@ -184,4 +184,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 129 | [Meeting Rooms](/leetcode/252-meeting-rooms) | array, sort | [leetcode 252](https://leetcode.com/problems/meeting-rooms/) | 1st beats 100% 🎉 takeaway: sort.Slice() |
 | 129 | [Meeting Rooms II](/leetcode/253-meeting-rooms-ii) | array, sort | [leetcode 253](https://leetcode.com/problems/meeting-rooms-ii/) | 1st beats 0%, 2nd beats 96.97% |
 | 130 | [Reverse Integer](/leetcode/7-reverse-integer) | array | [leetcode 7](https://leetcode.com/problems/reverse-integer/) | 📌 1st & 2nd approach 4ms. i gave up 2 years ago, now i finally know how to do it |
-| 130 | [Merge Sorted Array](/leetcode/88-merge-sorted-array) | sort, array | [leetcode 88](https://leetcode.com/problems/merge-sorted-array/) | 📌 1st naive approach 0ms |
+| 130 | [Merge Sorted Array](/leetcode/88-merge-sorted-array) | sort, array | [leetcode 88](https://leetcode.com/problems/merge-sorted-array/) | 📌 1st naive approach 0ms. 2nd is learned from others |
