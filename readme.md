@@ -183,3 +183,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 128 | [First Missing Positive](/leetcode/41-first-missing-positive) | array | [leetcode 41](https://leetcode.com/problems/first-missing-positive/) | 1 in go beats 100%, 2 in python |
 | 129 | [Meeting Rooms](/leetcode/252-meeting-rooms) | array, sort | [leetcode 252](https://leetcode.com/problems/meeting-rooms/) | 1st beats 100% 🎉 takeaway: sort.Slice() |
 | 129 | [Meeting Rooms II](/leetcode/253-meeting-rooms-ii) | array, sort | [leetcode 253](https://leetcode.com/problems/meeting-rooms-ii/) | 1st beats 0%, 2nd beats 96.97% |
+| 130 | [Reverse Integer](/leetcode/7-reverse-integer) | array | [leetcode 7](https://leetcode.com/problems/reverse-integer/) | 📌 1st & 2nd approach 4ms. i gave up 2 years ago, now i finally know how to do it |
