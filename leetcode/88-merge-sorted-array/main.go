@@ -26,7 +26,7 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 
 /*
 	1nd approach: learned from others
-	https://www.youtube.com/watch?v=rZ9lcXCWSUg
+	https://www.youtube.com/watch?v=rZ9lcXCWSUg / ./idea_from_byte_by_byte.mp4
 	compress .mov to .mp4: ffmpeg -i idea_from_byte_by_byte.mov -vcodec libx264 -crf 20 output.mp4
 	- 3 pointers
 	- replace thr nums1 from backward with larger values iteratively
