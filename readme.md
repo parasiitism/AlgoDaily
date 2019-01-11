@@ -186,3 +186,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 130 | [Reverse Integer](/leetcode/7-reverse-integer) | array | [leetcode 7](https://leetcode.com/problems/reverse-integer/) | 📌 1st & 2nd approach 4ms. i gave up 2 years ago, now i finally know how to do it |
 | 130 | [Merge Sorted Array](/leetcode/88-merge-sorted-array) | sort, array | [leetcode 88](https://leetcode.com/problems/merge-sorted-array/) | 📌 1st naive approach 0ms. 2nd is learned from others |
 | 131 | [Longest Common Substring](/miscellaneous/longest-common-substring) | array, dynamic programming | | 📌 1st is naive. 2nd approach is classic |
+| 131 | [Search a 2D Matrix](/miscellaneous/74-search-a-2d-matrix) | binary search | [leetcode 74](https://leetcode.com/problems/search-a-2d-matrix/) | revise binary search, both 1st and 2nd is 8ms |
