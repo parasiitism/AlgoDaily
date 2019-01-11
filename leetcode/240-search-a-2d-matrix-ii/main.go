@@ -90,6 +90,22 @@ func binarySearch(nums []int, target int) int {
 	return -1
 }
 
+/*
+	2nd many binary searches LOL
+	Time O(nlogn)
+	32 ms, beats 100.00%
+*/
+func searchMatrix1(matrix [][]int, target int) bool {
+	for i := 0; i < len(matrix); i++ {
+		temp := matrix[i]
+		x := binarySearch(temp, target)
+		if x > -1 {
+			return true
+		}
+	}
+	return false
+}
+
 func main() {
 
 	a := [][]int{
