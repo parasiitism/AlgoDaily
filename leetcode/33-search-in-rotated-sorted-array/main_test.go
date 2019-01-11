@@ -9,7 +9,7 @@ func TestSearch(t *testing.T) {
 		target := 4
 		ans := search(nums, target)
 		if ans != 0 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -18,7 +18,7 @@ func TestSearch(t *testing.T) {
 		target := 5
 		ans := search(nums, target)
 		if ans != 1 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -27,7 +27,7 @@ func TestSearch(t *testing.T) {
 		target := 6
 		ans := search(nums, target)
 		if ans != 2 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -36,7 +36,7 @@ func TestSearch(t *testing.T) {
 		target := 7
 		ans := search(nums, target)
 		if ans != 3 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -45,7 +45,7 @@ func TestSearch(t *testing.T) {
 		target := 0
 		ans := search(nums, target)
 		if ans != 4 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -54,7 +54,7 @@ func TestSearch(t *testing.T) {
 		target := 2
 		ans := search(nums, target)
 		if ans != 6 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -63,7 +63,7 @@ func TestSearch(t *testing.T) {
 		target := 7
 		ans := search(nums, target)
 		if ans != 3 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -72,7 +72,7 @@ func TestSearch(t *testing.T) {
 		target := 8
 		ans := search(nums, target)
 		if ans != 4 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -81,7 +81,7 @@ func TestSearch(t *testing.T) {
 		target := 1
 		ans := search(nums, target)
 		if ans != 5 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -90,7 +90,7 @@ func TestSearch(t *testing.T) {
 		target := 1
 		ans := search(nums, target)
 		if ans != -1 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -99,7 +99,7 @@ func TestSearch(t *testing.T) {
 		target := 5
 		ans := search(nums, target)
 		if ans != 0 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -108,7 +108,7 @@ func TestSearch(t *testing.T) {
 		target := 1
 		ans := search(nums, target)
 		if ans != 1 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -117,7 +117,7 @@ func TestSearch(t *testing.T) {
 		target := 1
 		ans := search(nums, target)
 		if ans != 0 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
@@ -126,7 +126,7 @@ func TestSearch(t *testing.T) {
 		target := 5
 		ans := search(nums, target)
 		if ans != 1 {
-			t.Error(`fail`)
+			t.Error(`fail `, ans)
 		}
 	})
 
