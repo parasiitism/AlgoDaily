@@ -6,6 +6,10 @@ import "fmt"
 	2nd approach
 	- brute force
 	92ms beats 46.15%
+	Time of Constructor O(1)
+	Space of Constructor O(n)
+	Time of SumRange O(n)
+	Space of SumRange O(1)
 */
 type NumArray struct {
 	Arr []int
@@ -26,6 +30,10 @@ func (this *NumArray) SumRange(i int, j int) int {
 /*
 	2nd approach
 	- for earch item in the array, cache the sum from start
+	Time of Constructor O(n)
+	Space of Constructor O(n)
+	Time of SumRange O(1)
+	Space of SumRange O(1)
 	44ms beats 100%
 */
 type NumArray1 struct {

@@ -2,19 +2,40 @@ package main
 
 import "fmt"
 
+/*
+	1st attempt
+	- similar approach to the leetcode 303
+	Time of Constructor O(n)
+	Space of Constructor O(n)
+	Time of SumRange O(n)
+	Space of SumRange O(1)
+	52ms beats 80%
+*/
 type NumMatrix struct {
-	Matrix [][]int
+	Arr [][]int
 }
 
 func Constructor(matrix [][]int) NumMatrix {
-	return NumMatrix{matrix}
+	arr := [][]int{}
+	for i := 0; i < len(matrix); i++ {
+		temp := []int{}
+		sum := 0
+		for j := 0; j < len(matrix[i]); j++ {
+			sum += matrix[i][j]
+			temp = append(temp, sum)
+		}
+		arr = append(arr, temp)
+	}
+	return NumMatrix{arr}
 }
 
 func (this *NumMatrix) SumRegion(row1 int, col1 int, row2 int, col2 int) int {
 	result := 0
 	for i := row1; i <= row2; i++ {
-		for j := col1; j <= col2; j++ {
-			result += this.Matrix[i][j]
+		if col1 == 0 {
+			result += this.Arr[i][col2]
+		} else if col1 <= col2 {
+			result += this.Arr[i][col2] - this.Arr[i][col1-1]
 		}
 	}
 	return result
