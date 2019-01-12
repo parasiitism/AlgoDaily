@@ -188,3 +188,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 131 | [Longest Common Substring](/miscellaneous/longest-common-substring) | array, dynamic programming | | 📌 1st is naive. 2nd approach is classic |
 | 131 | [Search a 2D Matrix](/leetcode/74-search-a-2d-matrix) | binary search | [leetcode 74](https://leetcode.com/problems/search-a-2d-matrix/) | revise binary search, both 1st and 2nd is 8ms |
 | 131 | [Search a 2D Matrix II](/leetcode/240-search-a-2d-matrix-ii) | binary search | [leetcode 240](https://leetcode.com/problems/search-a-2d-matrix-ii/) | revise binary search, 1st and 2nd are 32ms beats 100% |
+| 132 | [Longest Common Subsequence](/miscellaneous/longest-common-subsequence) | array, dynamic programming | | 📌 1st dynamic programming |

@@ -42,7 +42,7 @@ func longestCommonSubstring(s1 string, s2 string) string {
 
 /*
 	2nd approach: learned from others https://www.youtube.com/watch?v=aVFWW3pBQFo
-	- dynamic programming,
+	- dynamic programming
 	- construct a 2D array which cache the common substrings on previous iteration
 	- see ./idea.jpeg
 	Time	O(n^2)
