@@ -41,7 +41,41 @@ func findHalf(nums []int, target int, isMore bool) []int {
 	return res
 }
 
+/*
+	in-place version
+	ref:
+	-	https://gist.github.com/imwally/58d6bb9bf9da098064054f73a19cdca1
+	- https://www.youtube.com/watch?v=SLauY6PpjW4
+*/
+func quickSortInPlace(nums []int) {
+	quick(nums, 0, len(nums)-1)
+}
+
+func quick(nums []int, min int, max int) {
+	if min > max {
+		return
+	}
+	pIdx := partition(nums, min, max)
+	quick(nums, min, pIdx-1)
+	quick(nums, pIdx+1, max)
+}
+
+func partition(nums []int, min int, max int) int {
+	pivot := nums[max]
+	j := min
+	for i := min; i < max; i++ {
+		if pivot > nums[i] {
+			nums[i], nums[j] = nums[j], nums[i]
+			j++
+		}
+	}
+	nums[j], nums[max] = nums[max], nums[j]
+	return j
+}
+
 func main() {
 	a := []int{64, 25, 12, 22, 11, 38, 54, 90}
-	fmt.Println(quickSort(a))
+	// fmt.Println(quickSort(a))
+	quickSortInPlace(a)
+	fmt.Println(a)
 }
