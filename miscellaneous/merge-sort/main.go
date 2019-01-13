@@ -4,9 +4,9 @@ import "fmt"
 
 /*
 	merge sort: https://www.geeksforgeeks.org/merge-sort/
-	- divides input array in two halves recursively
+	- divides input array into two halves recursively
 	- merge two sorted halves and then return
-	- this version occupys space(not in-place)
+	- this version occupies space(not in-place)
 	- first divide, second process; the procedure is similar to post order traversal
 	Time	O(nlogn)
 	Space O(n)
