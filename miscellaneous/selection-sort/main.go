@@ -6,7 +6,8 @@ import "fmt"
 	Selection Sort:
 	- The selection sort algorithm sorts an array by repeatedly finding the minimum element
 		(considering ascending order) from unsorted part and putting it at the beginning
-	- in-place
+	- do it in-place to save some space
+	- https://en.wikipedia.org/wiki/Selection_sort
 */
 func selectionSort(nums []int) {
 	for i := 0; i < len(nums); i++ {
