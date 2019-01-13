@@ -18,9 +18,7 @@ func selectionSort(nums []int) {
 				min_idx = j
 			}
 		}
-		temp := nums[i]
-		nums[i] = nums[min_idx]
-		nums[min_idx] = temp
+		nums[i], nums[min_idx] = nums[min_idx], nums[i]
 	}
 }
 
