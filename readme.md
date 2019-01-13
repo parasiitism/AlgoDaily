@@ -193,3 +193,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 132 | [Range Sum Query 2D - Immutable](/leetcode/304-range-sum-query-2d-immutable) | array, dynamic programming | | 1st beats 80% |
 | 133 | [Selection Sort](/miscellaneous/selection-sort) | sort | | revise sorting |
 | 133 | [Insertion Sort](/miscellaneous/insertion-sort) | sort | | revise sorting |
+| 133 | [Merge Sort](/miscellaneous/merge-sort) | sort | | revise sorting |
