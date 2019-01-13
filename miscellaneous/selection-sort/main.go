@@ -3,11 +3,12 @@ package main
 import "fmt"
 
 /*
-	Selection Sort:
-	- The selection sort algorithm sorts an array by repeatedly finding the minimum element
+	Selection Sort: https://en.wikipedia.org/wiki/Selection_sort
+	- The selection sort algorithm sorts an array by repeatedly SELECTING the minimum element
 		(considering ascending order) from unsorted part and putting it at the beginning
 	- do it in-place to save some space
-	- https://en.wikipedia.org/wiki/Selection_sort
+	Time		O(n^2)
+	Space		O(1)
 */
 func selectionSort(nums []int) {
 	for i := 0; i < len(nums); i++ {
