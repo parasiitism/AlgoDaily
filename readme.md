@@ -197,4 +197,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 133 | [Insertion Sort](/miscellaneous/insertion-sort) | sort | | revise sorting |
 | 133 | [Merge Sort](/miscellaneous/merge-sort) | sort | | revise sorting |
 | 133 | [Quick Sort](/miscellaneous/quick-sort) | sort | | revise sorting. spaced & in-place |
-| 134 | [Rectangle Overlap](/leetcode/836-rectangle-overlap) | math | [leetode 836](https://leetcode.com/problems/rectangle-overlap) | |
+| 134 | [Rectangle Overlap](/leetcode/836-rectangle-overlap) | math | [leetode 836](https://leetcode.com/problems/rectangle-overlap) | i hate this kind of questions |
+| 134 | [Rectangle Area](/leetcode/223-rectangle-area) | math | [leetode 223](https://leetcode.com/problems/rectangle-area/) | i hate this kind of questions |
