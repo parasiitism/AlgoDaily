@@ -191,6 +191,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 132 | [Longest Common Subsequence](/miscellaneous/longest-common-subsequence) | array, dynamic programming | | 📌 1st dynamic programming. 2nd recursive, 3rd recursive memorization |
 | 132 | [Range Sum Query - Immutable](/leetcode/303-range-sum-query-immutable) | array, dynamic programming | | 1st brute force beats 46%, 2nd cache beats 100% |
 | 132 | [Range Sum Query 2D - Immutable](/leetcode/304-range-sum-query-2d-immutable) | array, dynamic programming | | 1st beats 80% |
+| 133 | [Bubble Sort](/miscellaneous/bubble-sort) | sort | | revise sorting |
 | 133 | [Selection Sort](/miscellaneous/selection-sort) | sort | | revise sorting |
 | 133 | [Insertion Sort](/miscellaneous/insertion-sort) | sort | | revise sorting |
 | 133 | [Merge Sort](/miscellaneous/merge-sort) | sort | | revise sorting |
