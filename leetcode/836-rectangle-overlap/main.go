@@ -6,7 +6,7 @@ import "fmt"
 	naive approach: check if lines overlap
 	Time	O(1)
 */
-func isRectangleOverlap(rec1 []int, rec2 []int) bool {
+func isRectangleOverlap1(rec1 []int, rec2 []int) bool {
 	xOverlap := false
 	if rec1[0] < rec2[0] && rec1[2] > rec2[0] {
 		xOverlap = true
@@ -24,6 +24,21 @@ func isRectangleOverlap(rec1 []int, rec2 []int) bool {
 		yOverlap = true
 	}
 	return xOverlap && yOverlap
+}
+
+/*
+	shorter approach
+	- find if rec1 outside rec2
+*/
+func isRectangleOverlap(rec1 []int, rec2 []int) bool {
+	notOverlap := false
+	if rec1[2] <= rec2[0] || rec1[0] >= rec2[2] {
+		notOverlap = true
+	}
+	if rec1[3] <= rec2[1] || rec1[1] >= rec2[3] {
+		notOverlap = true
+	}
+	return !notOverlap
 }
 
 func main() {
