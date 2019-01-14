@@ -200,3 +200,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 134 | [Rectangle Overlap](/leetcode/836-rectangle-overlap) | math | [leetode 836](https://leetcode.com/problems/rectangle-overlap) | i hate this kind of questions |
 | 134 | [Rectangle Area](/leetcode/223-rectangle-area) | math | [leetode 223](https://leetcode.com/problems/rectangle-area/) | i hate this kind of questions |
 | 134 | [Minimum Absolute Difference in BST](/leetcode/530-minimum-absolute-difference-in-bst) | BST | [leetode 530](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | |
+| 134 | [Find Bottom Left Tree Value](/leetcode/513-find-bottom-left-tree-value) | BST | [leetode 513](https://leetcode.com/problems/find-bottom-left-tree-value/) | 1st bfs 12ms beats 100% |
