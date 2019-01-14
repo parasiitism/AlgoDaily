@@ -9,7 +9,7 @@ type TreeNode struct {
 }
 
 /*
-	1st approach: bfs
+	1st approach:
 	- bfs
 	- the result is the 1st item in the bottom layer of the tree
 	12ms beats 100%
@@ -35,6 +35,32 @@ func findBottomLeftValue(root *TreeNode) int {
 			}
 		}
 	}
+	return bottomLeft
+}
+
+/*
+	2nd approach
+	- dfs
+	- the result is actually the node who reaches new deepest layer in the tree
+	12ms beats 100%
+	14jan2019
+*/
+func findBottomLeftValue1(root *TreeNode) int {
+	maxLevel := 1
+	bottomLeft := root.Val
+	var dfs func(node *TreeNode, level int)
+	dfs = func(node *TreeNode, level int) {
+		if node == nil {
+			return
+		}
+		if level > maxLevel {
+			bottomLeft = node.Val
+			maxLevel = level
+		}
+		dfs(node.Left, level+1)
+		dfs(node.Right, level+1)
+	}
+	dfs(root, 1)
 	return bottomLeft
 }
 
@@ -64,7 +90,7 @@ func main() {
 			},
 		},
 	}
-	fmt.Println(findBottomLeftValue(root))
+	fmt.Println(findBottomLeftValue1(root))
 	// 			7
 	//		3		11
 	// 0	 6 8  15
@@ -94,5 +120,5 @@ func main() {
 			},
 		},
 	}
-	fmt.Println(findBottomLeftValue(root))
+	fmt.Println(findBottomLeftValue1(root))
 }
