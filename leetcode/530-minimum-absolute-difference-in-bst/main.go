@@ -17,6 +17,7 @@ type TreeNode struct {
 	- the min diff is actually the min diff between 2 adjacent elements
 	Time	O(2n)
 	Space O(n)
+	14jan2019
 */
 func getMinimumDifference(root *TreeNode) int {
 	arr := []int{}
@@ -36,6 +37,33 @@ func getMinimumDifference(root *TreeNode) int {
 			min = arr[i+1] - arr[i]
 		}
 	}
+	return min
+}
+
+/*
+	2nd approach
+	- inorder traverse the BST
+	- the min diff is actually the min diff between the current node and the predecessor
+	Time	O(n)
+	Space O(1)
+	14jan2019
+*/
+func getMinimumDifference1(root *TreeNode) int {
+	min := math.MaxInt64
+	var predecessor *TreeNode
+	var inorder func(node *TreeNode)
+	inorder = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		inorder(node.Left)
+		if predecessor != nil && node.Val-predecessor.Val < min {
+			min = node.Val - predecessor.Val
+		}
+		predecessor = node
+		inorder(node.Right)
+	}
+	inorder(root)
 	return min
 }
 
@@ -65,5 +93,5 @@ func main() {
 			},
 		},
 	}
-	fmt.Println(getMinimumDifference(root))
+	fmt.Println(getMinimumDifference1(root))
 }
