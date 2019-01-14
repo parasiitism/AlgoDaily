@@ -93,9 +93,22 @@ func TestSearch(t *testing.T) {
 	t.Run("0", func(t *testing.T) {
 		// 			min
 		//		nil		max
-		root = &TreeNode{math.MinInt64,
+		root = &TreeNode{math.MinInt32,
 			nil,
-			&TreeNode{math.MaxInt64, nil, nil},
+			&TreeNode{math.MaxInt32, nil, nil},
+		}
+		ans = isValidBST(root)
+		if ans != true {
+			t.Error(`fail`)
+		}
+	})
+
+	t.Run("0", func(t *testing.T) {
+		// 				0
+		//		min 	max
+		root = &TreeNode{0,
+			&TreeNode{math.MinInt32, nil, nil},
+			&TreeNode{math.MaxInt32, nil, nil},
 		}
 		ans = isValidBST(root)
 		if ans != true {
