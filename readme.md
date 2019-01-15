@@ -26,6 +26,8 @@ I believe that practising algorithms every day is a long-term investment in my l
 #### Questions from
 - [leetcode](https://leetcode.com)
 - [project euler](https://projecteuler.net)
+- glassdoor
+- interviews
 - ...
 
 #### Started on September 1st 2018
@@ -205,3 +207,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 135 | [Find Pivot Index](/leetcode/724-find-pivot-index) | array, math | [leetode 724](https://leetcode.com/problems/find-pivot-index/) | i failed to come up with a correct approach, learned from others |
 | 135 | [Largest Number At Least Twice of Others](/leetcode/747-largest-number-at-least-twice-of-others) | array, sort | [leetode 747](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | 1st O(nlogn), 2nd O(n) |
 | 135 | [Plus One](/leetcode/66-plus-one) | array | [leetode 66](https://leetcode.com/problems/plus-one/) | should be just one solution |
+| 135 | [Find the Invalid Node in a BST](/miscellaneous/find-invalid-node-in-bst) | array | glassdoor |  |

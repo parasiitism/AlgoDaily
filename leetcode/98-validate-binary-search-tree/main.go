@@ -5,9 +5,12 @@ import (
 )
 
 /*
-	Questions to ask interviwers
+	Questions to ask:
 	- what if there are duplicate node.vals?
 	- what is the integraer range of node.val? -2^32 -> 2^32-1 ?
+
+	Follow up:
+	- find the invalid node in a BST
 */
 
 type TreeNode struct {
