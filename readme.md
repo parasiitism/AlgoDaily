@@ -208,3 +208,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 135 | [Largest Number At Least Twice of Others](/leetcode/747-largest-number-at-least-twice-of-others) | array, sort | [leetode 747](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | 1st O(nlogn), 2nd O(n) |
 | 135 | [Plus One](/leetcode/66-plus-one) | array | [leetode 66](https://leetcode.com/problems/plus-one/) | should be just one solution |
 | 135 | [Find the Invalid Node in a BST](/miscellaneous/find-invalid-node-in-bst) | array | glassdoor |  |
+| 135 | [Minimum Distance Between BST Nodes](/leetcode/783-minimum-distance-between-bst-nodes) | BST | [leetode 783](https://leetcode.com/problems/minimum-distance-between-bst-nodes/) | this question is exactly the same wih [leetcode 530](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)|
