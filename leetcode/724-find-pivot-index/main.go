@@ -3,6 +3,12 @@ package main
 import "fmt"
 
 /*
+	Questions to ask:
+	- will there be more than one pivot? if yes, return which?
+	- return what for an empty array?
+	- return what for a single-element array?
+	- will there be a list of the same number? e.g. [1,1,1,1,1] & [1,1,1,1,1,1]?
+
 	i failed to come up with a correct approach to this question
 	learned from others
 	1.index: 0, num: 1, left: 0, right: 27
