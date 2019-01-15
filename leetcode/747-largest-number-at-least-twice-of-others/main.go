@@ -15,9 +15,10 @@ import (
 	- see if cop[len(cop)-1] >= cop[len(cop)-2]*2
 	Time		O(nlogn)
 	Space		O(n)
+	0ms beats 100%
 	15jan2019
 */
-func dominantIndex(nums []int) int {
+func dominantIndex1(nums []int) int {
 	if len(nums) == 0 {
 		return -1
 	}
@@ -35,6 +36,30 @@ func dominantIndex(nums []int) int {
 		}
 	}
 	return -1
+}
+
+/*
+	1st approach:
+	- find the max
+	- see if each nums[i] is > nums[maxIdx]
+	Time		O(2n)
+	Space		O(1)
+	0ms beats 100%
+	15jan2019
+*/
+func dominantIndex(nums []int) int {
+	maxIdx := 0
+	for i := 0; i < len(nums); i++ {
+		if nums[i] > nums[maxIdx] {
+			maxIdx = i
+		}
+	}
+	for i := 0; i < len(nums); i++ {
+		if i != maxIdx && nums[maxIdx] < nums[i]*2 {
+			return -1
+		}
+	}
+	return maxIdx
 }
 
 func main() {
