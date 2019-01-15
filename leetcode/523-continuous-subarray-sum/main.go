@@ -21,8 +21,12 @@ import "fmt"
 						4	10	13
 							6	 7
 		^		^		^	 ^	 ^
+	Time	O(n^2)
+	Space	O(n(n+1)/2)
+	104ms beats 0%
+	15jan2019
 */
-func checkSubarraySum(nums []int, k int) bool {
+func checkSubarraySum1(nums []int, k int) bool {
 	sumArr := [][]int64{}
 	for i := 0; i < len(nums); i++ {
 		sum := []int64{}
@@ -39,6 +43,33 @@ func checkSubarraySum(nums []int, k int) bool {
 		}
 		sum = append(sum, int64(nums[i]))
 		sumArr = append(sumArr, sum)
+	}
+	return false
+}
+
+/*
+	2nd approach: optimize the above approach
+	- actually we just need to compare the previuous arr and the current arr, so we can use 1d array instead of 2d
+	Time	O(n^2)
+	Space	O(n(n+1)/2)
+	92ms beats 33.33%
+	15jan2019
+*/
+func checkSubarraySum(nums []int, k int) bool {
+	sumArr := []int64{}
+	for i := 0; i < len(nums); i++ {
+		sum := []int64{}
+		for j := 0; j < len(sumArr); j++ {
+			temp := sumArr[j] + int64(nums[i])
+			if k != 0 && temp%int64(k) == 0 {
+				return true
+			} else if temp == 0 && k == 0 {
+				return true
+			}
+			sum = append(sum, temp)
+		}
+		sum = append(sum, int64(nums[i]))
+		sumArr = sum
 	}
 	return false
 }
