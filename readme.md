@@ -210,4 +210,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 135 | [Find the Invalid Node in a BST](/miscellaneous/find-invalid-node-in-bst) | array | glassdoor |  |
 | 135 | [Minimum Distance Between BST Nodes](/leetcode/783-minimum-distance-between-bst-nodes) | BST | [leetode 783](https://leetcode.com/problems/minimum-distance-between-bst-nodes/) | this question is exactly the same wih [leetcode 530](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)|
 | 135 | [Unique Email Addresses](/leetcode/929-unique-email-addresses) | string | [leetode 929](https://leetcode.com/problems/unique-email-addresses/) | |
-| 135 | [Continuous Subarray Sum](/leetcode/523-continuous-subarray-sum) | array | [leetode 523](https://leetcode.com/problems/continuous-subarray-sum/) | 1st approach 104ms beats 0% LOL, 2nd approach 92ms beats 33.33% |
+| 135 | [Continuous Subarray Sum](/leetcode/523-continuous-subarray-sum) | array | [leetode 523](https://leetcode.com/problems/continuous-subarray-sum/) | 1st 104ms beats 0% LOL, 2nd 92ms beats 33.33% |
+| 135 | [String to Integer (atoi)](/leetcode/8-string-to-integer-atoi) | array | [leetode 8](https://leetcode.com/problems/string-to-integer-atoi/) | 1st & 2nd 4ms beats 100%, fuck the corner cases |
