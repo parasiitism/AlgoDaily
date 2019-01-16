@@ -11,16 +11,48 @@ import (
 	- change traverse direction if need
 	- traverse direction priority: right, down, left, up
 	Time	O(n)
-	Space	O(1)
+	Space	O(n)
 	16jan2019
 */
-func spiralOrder(matrix [][]int) []int {
+func spiralOrder1(matrix [][]int) []int {
 	if len(matrix) == 0 {
 		return []int{}
 	}
 	if len(matrix[0]) == 0 {
 		return []int{}
 	}
+
+	// return i, j, dir
+	var changeDir func(i int, j int, dir int) (int, int, int)
+	changeDir = func(i int, j int, dir int) (int, int, int) {
+		tempDir := dir
+		if tempDir == 0 { // go down
+			if i+1 < len(matrix) && matrix[i+1][j] != math.MaxInt64 {
+				return i + 1, j, 1
+			}
+			tempDir = 1
+		}
+		if tempDir == 1 { // go left
+			if j-1 >= 0 && matrix[i][j-1] != math.MaxInt64 {
+				return i, j - 1, 2
+			}
+			tempDir = 2
+		}
+		if tempDir == 2 { // go up
+			if i-1 >= 0 && matrix[i-1][j] != math.MaxInt64 {
+				return i - 1, j, 3
+			}
+			tempDir = 3
+		}
+		if tempDir == 3 { // go right
+			if j+1 < len(matrix[i]) && matrix[i][j+1] != math.MaxInt64 {
+				return i, j + 1, 0
+			}
+			tempDir = 0
+		}
+		return -1, -1, -1
+	}
+
 	dir := 0 // -1, 0, 1, 2, 3 = none, right, down, left ,up
 	i, j := 0, 0
 	res := []int{}
@@ -32,62 +64,126 @@ func spiralOrder(matrix [][]int) []int {
 			if tempJ < len(matrix[i]) && matrix[i][tempJ] != math.MaxInt64 {
 				j++
 			} else {
-				i, j, dir = changeDir(i, j, dir, matrix)
+				i, j, dir = changeDir(i, j, dir)
 			}
 		} else if dir == 1 {
 			tempI := i + 1
 			if tempI < len(matrix) && matrix[tempI][j] != math.MaxInt64 {
 				i++
 			} else {
-				i, j, dir = changeDir(i, j, dir, matrix)
+				i, j, dir = changeDir(i, j, dir)
 			}
 		} else if dir == 2 {
 			tempJ := j - 1
 			if tempJ >= 0 && matrix[i][tempJ] != math.MaxInt64 {
 				j--
 			} else {
-				i, j, dir = changeDir(i, j, dir, matrix)
+				i, j, dir = changeDir(i, j, dir)
 			}
 		} else if dir == 3 {
 			tempI := i - 1
 			if tempI >= 0 && matrix[tempI][j] != math.MaxInt64 {
 				i--
 			} else {
-				i, j, dir = changeDir(i, j, dir, matrix)
+				i, j, dir = changeDir(i, j, dir)
 			}
 		}
 	}
 	return res
 }
 
-// return i, j, dir
-func changeDir(i int, j int, dir int, matrix [][]int) (int, int, int) {
-	tempDir := dir
-	if tempDir == 0 { // go down
-		if i+1 < len(matrix) && matrix[i+1][j] != math.MaxInt64 {
-			return i + 1, j, 1
-		}
-		tempDir = 1
+/*
+	2nd approach
+	- same as the above without using math.MaxInt64
+	Time	O(2n)
+	Space	O(n)
+	16jan2019
+*/
+func spiralOrder(matrix [][]int) []int {
+	if len(matrix) == 0 {
+		return []int{}
 	}
-	if tempDir == 1 { // go left
-		if j-1 >= 0 && matrix[i][j-1] != math.MaxInt64 {
-			return i, j - 1, 2
-		}
-		tempDir = 2
+	if len(matrix[0]) == 0 {
+		return []int{}
 	}
-	if tempDir == 2 { // go up
-		if i-1 >= 0 && matrix[i-1][j] != math.MaxInt64 {
-			return i - 1, j, 3
+	// visited
+	visited := [][]int{}
+	for i := 0; i < len(matrix); i++ {
+		temp := []int{}
+		for j := 0; j < len(matrix[i]); j++ {
+			temp = append(temp, 0)
 		}
-		tempDir = 3
+		visited = append(visited, temp)
 	}
-	if tempDir == 3 { // go right
-		if j+1 < len(matrix[i]) && matrix[i][j+1] != math.MaxInt64 {
-			return i, j + 1, 0
+
+	// return i, j, dir
+	var changeDir func(i int, j int, dir int) (int, int, int)
+	changeDir = func(i int, j int, dir int) (int, int, int) {
+		tempDir := dir
+		if tempDir == 0 { // go down
+			if i+1 < len(matrix) && visited[i+1][j] != 1 {
+				return i + 1, j, 1
+			}
+			tempDir = 1
 		}
-		tempDir = 0
+		if tempDir == 1 { // go left
+			if j-1 >= 0 && visited[i][j-1] != 1 {
+				return i, j - 1, 2
+			}
+			tempDir = 2
+		}
+		if tempDir == 2 { // go up
+			if i-1 >= 0 && visited[i-1][j] != 1 {
+				return i - 1, j, 3
+			}
+			tempDir = 3
+		}
+		if tempDir == 3 { // go right
+			if j+1 < len(matrix[i]) && visited[i][j+1] != 1 {
+				return i, j + 1, 0
+			}
+			tempDir = 0
+		}
+		return -1, -1, -1
 	}
-	return -1, -1, -1
+
+	dir := 0 // -1, 0, 1, 2, 3 = none, right, down, left ,up
+	i, j := 0, 0
+	res := []int{}
+	for dir > -1 {
+		res = append(res, matrix[i][j])
+		visited[i][j] = 1
+		if dir == 0 {
+			tempJ := j + 1
+			if tempJ < len(matrix[i]) && visited[i][tempJ] != 1 {
+				j++
+			} else {
+				i, j, dir = changeDir(i, j, dir)
+			}
+		} else if dir == 1 {
+			tempI := i + 1
+			if tempI < len(matrix) && visited[tempI][j] != 1 {
+				i++
+			} else {
+				i, j, dir = changeDir(i, j, dir)
+			}
+		} else if dir == 2 {
+			tempJ := j - 1
+			if tempJ >= 0 && visited[i][tempJ] != 1 {
+				j--
+			} else {
+				i, j, dir = changeDir(i, j, dir)
+			}
+		} else if dir == 3 {
+			tempI := i - 1
+			if tempI >= 0 && visited[tempI][j] != 1 {
+				i--
+			} else {
+				i, j, dir = changeDir(i, j, dir)
+			}
+		}
+	}
+	return res
 }
 
 func main() {
