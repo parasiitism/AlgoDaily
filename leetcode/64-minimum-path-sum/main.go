@@ -7,9 +7,9 @@ import (
 
 /*
 	1st approach:
-	- brute force with memorization
-	Time	...it is hard to determind
-	Space	O(m*n)
+	- recursive brute force with memorization
+	Time	O(<2^(m+n)) it depends on the input
+	Space	O(m+n) the depth of the routes
 	220 ms beats 0.00%
 */
 func minPathSum(grid [][]int) int {
@@ -43,6 +43,48 @@ func minPathSum(grid [][]int) int {
 	}
 	dfs(0, 0, 0)
 	return min
+}
+
+/*
+	2nd approach: dynamic programming
+	- dp[i][j] = grid[i][j] + min(dp[i-1][j], dp[i][j-1])
+	- https://leetcode.com/articles/minimum-path-sum/
+	Time	O(m*n)
+	Space	O(m*n)
+	8ms beats 100%
+	16jan2019
+*/
+func minPathSum1(grid [][]int) int {
+	dp := [][]int{}
+	for i := 0; i < len(grid); i++ {
+		temp := []int{}
+		for j := 0; j < len(grid[i]); j++ {
+			temp = append(temp, 0)
+		}
+		dp = append(dp, temp)
+	}
+
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[i]); j++ {
+			if i-1 < 0 && j-1 < 0 {
+				dp[i][j] = grid[i][j]
+			} else if i-1 < 0 {
+				dp[i][j] = grid[i][j] + dp[i][j-1]
+			} else if j-1 < 0 {
+				dp[i][j] = grid[i][j] + dp[i-1][j]
+			} else {
+				dp[i][j] = grid[i][j] + findMin(dp[i][j-1], dp[i-1][j])
+			}
+		}
+	}
+	return dp[len(grid)-1][len(grid[0])-1]
+}
+
+func findMin(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }
 
 func main() {

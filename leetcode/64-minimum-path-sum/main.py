@@ -1,34 +1,29 @@
-import sys
-
 class Solution(object):
-    def __init__(self):
-        self.mininum = sys.maxsize
-        self.cache = []
-
     def minPathSum(self, grid):
         """
-        :type grid: List[List[int]]
-        :rtype: int
+        2nd approach: dynamic programming
+	    - dp[i][j] = grid[i][j] + min(dp[i-1][j], dp[i][j-1])
+	    - https://leetcode.com/articles/minimum-path-sum/
+        Time    O(m*n)
+        Space   O(m*n)
+        16jan2019
         """
-        if len(grid) == 0:
-            return 0
-        for i in range(0,len(grid)):
-            self.cache.append([sys.maxsize] * len(grid[i]))
-        self.dfs(grid, 0, 0, 0)
-        return self.mininum
+        dp = []
+        for i in range(len(grid)):
+            temp = [0]*len(grid[i])
+            dp.append(temp)
 
-    def dfs(self, grid, i, j, prevSum):
-        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]):
-            return
-        temp = prevSum + grid[i][j]
-        if i == len(grid)-1 and j == len(grid[0])-1 and temp < self.mininum:
-            self.mininum = temp
-        if temp >= self.mininum or temp >= self.cache[i][j]:
-            return
-        self.cache[i][j] = temp
-        self.dfs(grid, i+1, j, temp)
-        self.dfs(grid, i, j+1, temp)
-
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if i-1 < 0 and j-1 < 0:
+                    dp[i][j] = grid[i][j]
+                elif i-1 < 0:
+                    dp[i][j] = grid[i][j] + dp[i][j-1]
+                elif j-1 < 0:
+                    dp[i][j] = grid[i][j] + dp[i-1][j]
+                else:
+                    dp[i][j] = grid[i][j] + min(dp[i][j-1], dp[i-1][j])
+        return dp[len(grid)-1][len(grid[0])-1]
 
 print(Solution().minPathSum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]))
 

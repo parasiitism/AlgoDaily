@@ -216,4 +216,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 136 | [Spiral Matrix](/leetcode/54-spiral-matrix) | array | [leetode 54](https://leetcode.com/problems/spiral-matrix/) | 1st, 2nd beats 100% ⭐️ 3rd is stunning |
 | 136 | [Pascals Triangle](/leetcode/118-pascals-triangle) | array | [leetode 118](https://leetcode.com/problems/pascals-triangle/) | 1st beats 100% |
 | 136 | [Pascals Triangle II](/leetcode/119-pascals-triangle-ii) | array | [leetode 119](https://leetcode.com/problems/pascals-triangle-ii/) | 1st, 2nd beats 100% |
-| 136 | [Minimum Path Sum](/leetcode/64-minimum-path-sum) | array, dynamic programming | [leetode 64](https://leetcode.com/problems/minimum-path-sum/) | 1st 220ms beats 0% |
+| 136 | [Minimum Path Sum](/leetcode/64-minimum-path-sum) | array, dynamic programming | [leetode 64](https://leetcode.com/problems/minimum-path-sum/) | 1st 220ms beats 0%, 📌 2nd beats 100% |
