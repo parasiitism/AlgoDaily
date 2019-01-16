@@ -212,3 +212,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 135 | [Unique Email Addresses](/leetcode/929-unique-email-addresses) | string | [leetode 929](https://leetcode.com/problems/unique-email-addresses/) | |
 | 135 | [Continuous Subarray Sum](/leetcode/523-continuous-subarray-sum) | array | [leetode 523](https://leetcode.com/problems/continuous-subarray-sum/) | 1st 104ms beats 0% LOL, 2nd 92ms beats 33.33% |
 | 135 | [String to Integer (atoi)](/leetcode/8-string-to-integer-atoi) | array | [leetode 8](https://leetcode.com/problems/string-to-integer-atoi/) | 1st & 2nd 4ms beats 100%, fuck the corner cases |
+| 136 | [Diagonal Traverse](/leetcode/498-diagonal-traverse) | array | [leetode 498](https://leetcode.com/problems/diagonal-traverse/) | 1st beats 22.22% |
