@@ -99,7 +99,7 @@ func spiralOrder1(matrix [][]int) []int {
 	Space	O(n)
 	16jan2019
 */
-func spiralOrder(matrix [][]int) []int {
+func spiralOrder2(matrix [][]int) []int {
 	if len(matrix) == 0 {
 		return []int{}
 	}
@@ -182,6 +182,50 @@ func spiralOrder(matrix [][]int) []int {
 				i, j, dir = changeDir(i, j, dir)
 			}
 		}
+	}
+	return res
+}
+
+/*
+	3rd approach: learned from others
+	https://leetcode.com/articles/spiral-matrix/
+	- the basic idea is to set min and max for both row and col
+	- print the nums layer by layer, one layer = right+down+left+up
+	Time	O(n)
+	Space	O(n)
+	16jan2019
+*/
+func spiralOrder(matrix [][]int) []int {
+	if len(matrix) == 0 {
+		return []int{}
+	}
+	if len(matrix[0]) == 0 {
+		return []int{}
+	}
+	res := []int{}
+	minRow := 0
+	maxRow := len(matrix) - 1
+	minCol := 0
+	maxCol := len(matrix[0]) - 1
+	for minRow <= maxRow && minCol <= maxCol {
+		for j := minCol; j <= maxCol; j++ {
+			res = append(res, matrix[minRow][j])
+		}
+		for i := minRow + 1; i <= maxRow; i++ {
+			res = append(res, matrix[i][maxCol])
+		}
+		if minCol < maxCol && minRow < maxRow {
+			for j := maxCol - 1; j >= minCol; j-- {
+				res = append(res, matrix[maxRow][j])
+			}
+			for i := maxRow - 1; i > minRow; i-- {
+				res = append(res, matrix[i][minRow])
+			}
+		}
+		minRow++
+		maxRow--
+		minCol++
+		maxCol--
 	}
 	return res
 }
