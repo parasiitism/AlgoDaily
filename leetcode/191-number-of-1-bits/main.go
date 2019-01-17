@@ -1,6 +1,11 @@
 package main
 
 /*
+	Questions to ask:
+	- input out of bound?
+*/
+
+/*
 	1st approach: classic bit op
 	Time	O(number of bits of num)
 	Space	O(1)
