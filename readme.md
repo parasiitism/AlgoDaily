@@ -218,3 +218,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 136 | [Pascals Triangle II](/leetcode/119-pascals-triangle-ii) | array | [leetode 119](https://leetcode.com/problems/pascals-triangle-ii/) | 1st, 2nd beats 100% |
 | 136 | [Minimum Path Sum](/leetcode/64-minimum-path-sum) | array, dynamic programming | [leetode 64](https://leetcode.com/problems/minimum-path-sum/) | 1st 220ms beats 0%, 📌 2nd beats 100% |
 | 137 | [Jewels and Stones](/leetcode/771-jewels-and-stones) | hashtable | [leetode 771](https://leetcode.com/problems/jewels-and-stones/) | 1st hashtable 0ms beats 100% |
+| 137 | [Number of 1 Bits](/leetcode/191-number-of-1-bits) | bit op | [leetode 191](https://leetcode.com/problems/number-of-1-bits/) | 📌 |
