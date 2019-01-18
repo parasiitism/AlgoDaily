@@ -220,3 +220,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 137 | [Jewels and Stones](/leetcode/771-jewels-and-stones) | hashtable | [leetode 771](https://leetcode.com/problems/jewels-and-stones/) | 1st hashtable 0ms beats 100% |
 | 137 | [Number of 1 Bits](/leetcode/191-number-of-1-bits) | bit op | [leetode 191](https://leetcode.com/problems/number-of-1-bits/) | 📌 the key here is to practice bit operation, i ignore any attempts using strings |
 | 137 | [Reverse Bits](/leetcode/190-reverse-bits) | bit op | [leetode 190](https://leetcode.com/problems/reverse-bits/) | 📌 the key here is to practice bit operation, i ignore any attempts using strings |
+| 138 | [LRU Cache](/leetcode/146-lru-cache) | hashtable, linked list | [leetode 146](https://leetcode.com/problems/lru-cache/) | 📌📌📌 |
