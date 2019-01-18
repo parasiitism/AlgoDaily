@@ -222,3 +222,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 137 | [Reverse Bits](/leetcode/190-reverse-bits) | bit op | [leetode 190](https://leetcode.com/problems/reverse-bits/) | 📌 the key here is to practice bit operation, i ignore any attempts using strings |
 | 138 | [LRU Cache](/leetcode/146-lru-cache) | hashtable, linked list | [leetode 146](https://leetcode.com/problems/lru-cache/) | 📌📌📌 |
 | 138 | [Correct Flights Route](/miscellaneous/correct-flights-route) | array | interview | 🤔 interesting |
+| 138 | [Length of Last Word](/leetcode/58-length-of-last-word) | array | [leetcode 58](https://leetcode.com/problems/length-of-last-word/) | not a good question |
