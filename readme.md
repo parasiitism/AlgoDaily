@@ -224,3 +224,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 138 | [Correct Flights Route](/miscellaneous/correct-flights-route) | array | interview | 🤔 interesting...1st O(n^2), 2nd O(n) |
 | 138 | [Length of Last Word](/leetcode/58-length-of-last-word) | array | [leetcode 58](https://leetcode.com/problems/length-of-last-word/) | not a good question |
 | 139 | [Count and Say](/leetcode/38-count-and-say) | array | [leetcode 38](https://leetcode.com/problems/count-and-say/) | ⭐️ |
+| 139 | [LFU Cache](/leetcode/460-lfu-cache) | hashtable, linked list | [leetode 460](https://leetcode.com/problems/lfu-cache/) | 📌📌📌 1st attempt learned from others, 2nd attempt is my own and new way to implement it(although it is not efficient)|
