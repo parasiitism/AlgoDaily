@@ -10,9 +10,12 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// depth first search O(n)
-// This a not a good way to do dfs cos it is nested
-func closestValue0(root *TreeNode, target float64) int {
+// depth first search
+// Time		O(n)
+// Space	O(height of the tree) the call stack
+// beats 14.29%
+// 10sep2018
+func closestValue(root *TreeNode, target float64) int {
 	closest := root.Val
 	var dfs func(cur *TreeNode)
 	dfs = func(cur *TreeNode) {
@@ -35,7 +38,7 @@ func closestValue0(root *TreeNode, target float64) int {
 }
 
 // recursive depth first search with return value
-func closestValue(root *TreeNode, target float64) int {
+func closestValue1(root *TreeNode, target float64) int {
 	cur_diff := math.Abs(target - float64(root.Val))
 	left := math.MaxInt64
 	right := math.MaxInt64
@@ -58,7 +61,7 @@ func closestValue(root *TreeNode, target float64) int {
 }
 
 // iterative dfs
-func itr_dfs(root *TreeNode, target float64) int {
+func closestValue2(root *TreeNode, target float64) int {
 
 	result := math.MaxInt64
 
@@ -81,6 +84,30 @@ func itr_dfs(root *TreeNode, target float64) int {
 	}
 
 	return result
+}
+
+// BST search
+// Time		O(logn)
+// Space	O(height of the tree) the call stack
+// beats 100%
+// 20jan2019
+func closestValue3(root *TreeNode, target float64) int {
+	closest := root.Val
+	var dfs func(cur *TreeNode)
+	dfs = func(cur *TreeNode) {
+		diff := math.Abs(target - float64(closest))
+		cur_diff := math.Abs(target - float64(cur.Val))
+		if cur_diff < diff {
+			closest = cur.Val
+		}
+		if target < float64(cur.Val) && cur.Left != nil {
+			dfs(cur.Left)
+		} else if target > float64(cur.Val) && cur.Right != nil {
+			dfs(cur.Right)
+		}
+	}
+	dfs(root)
+	return closest
 }
 
 func main() {

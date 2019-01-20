@@ -11,7 +11,7 @@ func TestSearch(t *testing.T) {
 			},
 			&TreeNode{5, nil, nil},
 		}
-		ans := itr_dfs(root, 2.1)
+		ans := closestValue3(root, 2.1)
 		if ans != 2 {
 			t.Error(`fail`)
 		}
@@ -25,7 +25,7 @@ func TestSearch(t *testing.T) {
 			},
 			&TreeNode{5, nil, nil},
 		}
-		ans := itr_dfs(root, 1.1)
+		ans := closestValue3(root, 1.1)
 		if ans != 1 {
 			t.Error(`fail`)
 		}
@@ -36,7 +36,7 @@ func TestSearch(t *testing.T) {
 			&TreeNode{14, nil, nil},
 			nil,
 		}
-		ans := itr_dfs(root, -14)
+		ans := closestValue3(root, -14)
 		if ans != 14 {
 			t.Error(`fail`)
 		}
@@ -47,7 +47,7 @@ func TestSearch(t *testing.T) {
 			nil,
 			nil,
 		}
-		ans := itr_dfs(root, -14)
+		ans := closestValue3(root, -14)
 		if ans != 0 {
 			t.Error(`fail`)
 		}

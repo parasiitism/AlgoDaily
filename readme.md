@@ -59,7 +59,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 23 | [Inorder Successor in BST](/leetcode/285-inorder-successor-in-bst) | binary tree | [leetcode 285](https://leetcode.com/problems/inorder-successor-in-bst/) | my O(logn) solution is unique ✌🏻, tho the suggested solution is jaw-dropping and much more terse |
 | 24 | [Depth First Search](/miscellaneous/depth-first-search) | binary tree | | |
 | 25 | [Binary Search Tree Iterator](/leetcode/173-binary-search-tree-iterator) | BST | [leetcode 173](https://leetcode.com/problems/binary-search-tree-iterator/description/) | my first solution was super slow tho it passes the OJ. The suggested solution is awesome |
-| 26 | [Search in a Binary Search Tree](/leetcode/700-search-in-a-binary-search-tree) | binary tree | [leetcode 26](https://leetcode.com/problems/search-in-a-binary-search-tree/description/) | |
+| 26 | [Search in a Binary Search Tree](/leetcode/700-search-in-a-binary-search-tree) | binary tree | [leetcode 700](https://leetcode.com/problems/search-in-a-binary-search-tree/description/) | |
 | 27 | [Iterative inorder traversal on BST](/miscellaneous/binary-tree-traversals) | binary tree | | 📌 |
 | 28 | [Pre & post order traversal on BST](/miscellaneous/binary-tree-traversals) | binary tree | | 📌 |
 | 29 | [Insert into a Binary Search Tree](/leetcode/701-insert-into-a-binary-search-tree) | BST | [leetcode 171](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | recursive & iterative |
