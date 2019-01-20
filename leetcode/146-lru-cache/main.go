@@ -5,19 +5,21 @@ package main
 
 /*
 	initial thought:
-	- use a hashtable to store the key & value to archieve put & get Time = O(1)
-	- however, we want to prioritize the items by its recency.
-	1. We should need an sorted array(sorted by recency), i.e. arr = arr[i]+arr[i+1]+target
-	2. how to find the key value in the sorted array? what if we store the key & index such that we can loop up from the arr easier
-	3. then the look up(from arr) complexity is O(1)
-	- but wait, if we remove any item from the array, we need to update the hashtable, the set time complexity will be O(n)
-	- what if we store a key & the pointer of the arr in the hashtable? such that it can remove itself from the arr?
-	- but then we will take O(n) to iterate the array and remove the target item...
-	- what if we use a doubly linked list? so when we remove an item,
-	we can just look up the node pointer(doubly linked list) from the hashtable, then set node.prev.next = node.next and node.next.prev = node.prev
-	- then the put & get Time = O(1)
+	1. use a hashtable to store the key & value to archieve put & get Time = O(1)
+	2. however, we want to prioritize the items by its **recency**
+			1. we need a sorted array(sorted by recency), i.e. arr = arr[i]+arr[i+1]+target
+			2. but how to find the key value in the sorted array? what if we store the key & index such that we can loop up from the arr easier. the look up(from arr) complexity is O(1)
+	3. but wait, if we remove any item from the array, we need to update the hashtable, the set time complexity will be O(n)
+	4. what if we store a key & the pointer of the arr in the hashtable? such that it can remove itself from the arr?
+	5. but then we will take O(n) to iterate the array and remove the target item...
+	6. oh what if we use a doubly linked list? so when we remove an item, we can just look up the node pointer(doubly linked list) from the hashtable, then set
+			```
+			node.prev.next = node.next
+			node.next.prev = node.prev
+			```
+	7. then both operations(put & get) will be O(1) time 🎉🎉🎉
 
-	class approach:
+	classic approach:
 	- use a hashtable to store the key and pointer of doubly linked list node
 	- use doubly linked list to prioritize the item according to its recency
 	Time if put & get O(1)

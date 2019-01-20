@@ -2,6 +2,7 @@
   2nd attempt
   put O(1) if size<cap, O(n) if size>=cap
   get O(1)
+  280ms beats 27.27%
   19jan2019
 */
 
