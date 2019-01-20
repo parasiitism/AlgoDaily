@@ -42,7 +42,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 6 | [Find Minimum in Rotated Sorted Array](/leetcode/153-find-minimum-in-rotated-sorted-array) | binary search | [leetcode 153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) | 2 extra solutions for day5 |
 | 7 | [Search for a Range](/leetcode/34-search-for-a-range) | binary search | [leetcode 34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | |
 | 8 | [Find K Closest Elements](/leetcode/658-find-k-closest-elements) | binary search | [leetcode 658](https://leetcode.com/problems/find-k-closest-elements) | |
-| 9 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | binary search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | |
+| 9 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | binary search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | 1st attemp 10sep2018, 2nd 20jan2019 |
 | 10 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | binary search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | revise day9 problems with legit recursive & iterative dfs |
 | 11 | [Breadth First Search](/miscellaneous/breadth-first-search) | tree | | basics: revise breadth first search |
 | 12 | [Search in a Sorted Array of Unknown Size](/leetcode/702-search-in-a-sorted-array-of-unknown-size) | binary search | [leetcode 702](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size) | golang unsupported on leetcode, do it in python instead |
@@ -225,4 +225,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 138 | [Length of Last Word](/leetcode/58-length-of-last-word) | array | [leetcode 58](https://leetcode.com/problems/length-of-last-word/) | not a good question |
 | 139 | [Count and Say](/leetcode/38-count-and-say) | array | [leetcode 38](https://leetcode.com/problems/count-and-say/) | ⭐️ |
 | 139 | [LFU Cache](/leetcode/460-lfu-cache) | hashtable, linked list | [leetode 460](https://leetcode.com/problems/lfu-cache/) | 📌📌📌 1st attempt learned from others, 2nd attempt is my own and new way to implement it(although it is not efficient)|
-| 140 | [Count Complete Tree Nodes](/leetcode/222-count-complete-tree-nodes) | binary tree | [leetode 222](https://leetcode.com/problems/count-complete-tree-nodes/) | |
+| 140 | [Count Complete Tree Nodes](/leetcode/222-count-complete-tree-nodes) | binary tree | [leetode 222](https://leetcode.com/problems/count-complete-tree-nodes/) | 1st 24ms beats 92%, 2nd 20ms beats 100% |
