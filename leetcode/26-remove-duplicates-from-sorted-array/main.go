@@ -17,7 +17,7 @@ import "fmt"
   220ms beats 2.04%
   21jan2019
 */
-func removeDuplicates(nums []int) int {
+func removeDuplicates1(nums []int) int {
 	if len(nums) == 0 {
 		return 0
 	}
@@ -45,6 +45,30 @@ func removeDuplicates(nums []int) int {
 	return cnt
 }
 
+/*
+  2nd approach:
+	- 2 pointers
+	- it is too slow to shift all the items, just replace the arr[slow] with arr[fast]
+  - return slow
+  Time    O(n)
+  Space   O(1)
+  60ms beats 100%
+  21jan2019
+*/
+func removeDuplicates(nums []int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+	slow := 0
+	for fast := 1; fast < len(nums); fast++ {
+		if nums[fast] != nums[slow] {
+			slow++
+			nums[slow] = nums[fast]
+		}
+	}
+	return slow + 1
+}
+
 func main() {
 	a := []int{}
 	fmt.Println(removeDuplicates(a))
@@ -67,6 +91,10 @@ func main() {
 	fmt.Println(a)
 
 	a = []int{1, 2, 2}
+	fmt.Println(removeDuplicates(a))
+	fmt.Println(a)
+
+	a = []int{0, 0, 0, 1, 1, 1, 1}
 	fmt.Println(removeDuplicates(a))
 	fmt.Println(a)
 
