@@ -38,6 +38,37 @@ func findMin(a, b int) int {
 	return b
 }
 
+/*
+	2nd approach
+	- 2 pointers: one from the front, one from the end
+	- move inward by retaining the heightest amongst the arr[i] and arr[j]
+	- https://leetcode.com/articles/container-with-most-water/
+	Time		O(n)
+	Space		O(1)
+	16ms beats 100%
+	21jan2019
+*/
+func maxArea1(height []int) int {
+	if len(height) < 2 {
+		return 0
+	}
+	max := 0
+	i, j := 0, len(height)-1
+	for j > i {
+		h := findMin(height[i], height[j])
+		a := h * (j - i)
+		if a > max {
+			max = a
+		}
+		if height[i] < height[j] {
+			i++
+		} else {
+			j--
+		}
+	}
+	return max
+}
+
 func main() {
-	fmt.Println(maxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
+	fmt.Println(maxArea1([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
 }

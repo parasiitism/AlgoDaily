@@ -226,4 +226,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 139 | [Count and Say](/leetcode/38-count-and-say) | array | [leetcode 38](https://leetcode.com/problems/count-and-say/) | ⭐️ |
 | 139 | [LFU Cache](/leetcode/460-lfu-cache) | hashtable, linked list | [leetode 460](https://leetcode.com/problems/lfu-cache/) | 📌📌📌 1st attempt learned from others, 2nd attempt is my own and new way to implement it(although it is not efficient)|
 | 140 | [Count Complete Tree Nodes](/leetcode/222-count-complete-tree-nodes) | binary tree | [leetode 222](https://leetcode.com/problems/count-complete-tree-nodes/) | 1st 24ms beats 92%, 2nd 20ms beats 100% |
-| 141 | [Container With Most Water](/leetcode/11-container-with-most-water) | array | [leetode 11](https://leetcode.com/problems/container-with-most-water/) | 1st 368ms beats 34% |
+| 141 | [Container With Most Water](/leetcode/11-container-with-most-water) | array | [leetode 11](https://leetcode.com/problems/container-with-most-water/) | 1st 368ms beats 34%, 2nd 12ms beats 100% |
