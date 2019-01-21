@@ -19,7 +19,7 @@ import "fmt"
 	544ms beats 2.04%
 	21jan2019
 */
-func strStr(haystack string, needle string) int {
+func strStr1(haystack string, needle string) int {
 	if len(needle) == 0 {
 		return 0
 	}
@@ -40,6 +40,28 @@ func strStr(haystack string, needle string) int {
 				break
 			}
 			i++
+		}
+	}
+	return -1
+}
+
+/*
+	1st approach:
+	- brute force
+	- for each char, check if the later chars between haystack and needle are the same
+	Time		O(n)
+	Space		O(1)
+	544ms beats 100%
+	21jan2019
+*/
+func strStr(haystack string, needle string) int {
+	if len(needle) == 0 {
+		return 0
+	}
+	lenN := len(needle)
+	for i := 0; i < len(haystack)-lenN+1; i++ {
+		if haystack[i:i+lenN] == needle {
+			return i
 		}
 	}
 	return -1

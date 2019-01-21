@@ -228,4 +228,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 140 | [Count Complete Tree Nodes](/leetcode/222-count-complete-tree-nodes) | binary tree | [leetode 222](https://leetcode.com/problems/count-complete-tree-nodes/) | 1st 24ms beats 92%, 2nd 20ms beats 100% |
 | 141 | [Container With Most Water](/leetcode/11-container-with-most-water) | array | [leetode 11](https://leetcode.com/problems/container-with-most-water/) | 1st 368ms beats 34%, 2nd 12ms beats 100% |
 | 141 | [Add Binary](/leetcode/67-add-binary) | array, string | [leetode 67](https://leetcode.com/problems/add-binary/) | 1st 0ms beats 100% |
-| 141 | [Implement strStr()](/leetcode/28-implement-strstr) | array, string | [leetode 28](https://leetcode.com/problems/implement-strstr/) | 1st 544ms beats 2.04% |
+| 141 | [Implement strStr()](/leetcode/28-implement-strstr) | array, string | [leetode 28](https://leetcode.com/problems/implement-strstr/) | 1st 544ms beats 2.04%, 2nd 0ms beats 100% |
