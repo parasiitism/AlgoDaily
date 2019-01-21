@@ -47,8 +47,8 @@ func strStr1(haystack string, needle string) int {
 
 /*
 	1st approach:
-	- brute force
-	- for each char, check if the later chars between haystack and needle are the same
+	- slice substring
+	- for each char, slic the substring and compare
 	Time		O(n)
 	Space		O(1)
 	544ms beats 100%
