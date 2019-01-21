@@ -230,3 +230,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 141 | [Add Binary](/leetcode/67-add-binary) | array, string | [leetode 67](https://leetcode.com/problems/add-binary/) | 1st 0ms beats 100% |
 | 141 | [Implement strStr()](/leetcode/28-implement-strstr) | array, string | [leetode 28](https://leetcode.com/problems/implement-strstr/) | 1st 544ms beats 2.04%, 2nd 0ms beats 100% |
 | 141 | [Longest Common Prefix](/leetcode/14-longest-common-prefix) | array, string | [leetode 14](https://leetcode.com/problems/longest-common-prefix/) | 1st 4ms beats 12.90%, 2nd 0ms beats 100% |
+| 141 | [Remove Duplicates from Sorted Array](/leetcode/26-remove-duplicates-from-sorted-array) | array, string | [leetode 14](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 1st 220ms beats 2.04%(.py 19% .js 47%) |
