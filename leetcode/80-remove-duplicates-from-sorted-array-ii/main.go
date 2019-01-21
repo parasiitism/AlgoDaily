@@ -6,12 +6,12 @@ import "fmt"
 	1st approach:
   - there is no in-place pop/slice in golang, i can only shift the array item by item
   - return unique items
-  Time    O(n^2)
+  Time    O(n)
   Space   O(n) hashtable
   8ms beats 100%
   21jan2019
 */
-func removeDuplicates(nums []int) int {
+func removeDuplicates1(nums []int) int {
 	if len(nums) == 0 {
 		return 0
 	}
@@ -45,6 +45,29 @@ func removeDuplicates(nums []int) int {
 		total++
 	}
 	return cnt
+}
+
+/*
+	learned from others
+	- move the slow only if the previous two are the same OR the current and the previous are the same
+	- https://www.youtube.com/watch?v=d4QrBMtg57I
+  Time    O(n)
+  Space   O(n) hashtable
+  8ms beats 100%
+  21jan2019
+*/
+func removeDuplicates(nums []int) int {
+	if len(nums) < 3 {
+		return len(nums)
+	}
+	slow := 2
+	for i := 2; i < len(nums); i++ {
+		if nums[slow-1] != nums[slow-2] || nums[i] != nums[slow-1] {
+			nums[slow] = nums[i]
+			slow++
+		}
+	}
+	return slow
 }
 
 func main() {
