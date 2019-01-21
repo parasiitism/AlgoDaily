@@ -62,7 +62,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 26 | [Search in a Binary Search Tree](/leetcode/700-search-in-a-binary-search-tree) | binary tree | [leetcode 700](https://leetcode.com/problems/search-in-a-binary-search-tree/description/) | |
 | 27 | [Iterative inorder traversal on BST](/miscellaneous/binary-tree-traversals) | binary tree | | 📌 |
 | 28 | [Pre & post order traversal on BST](/miscellaneous/binary-tree-traversals) | binary tree | | 📌 |
-| 29 | [Insert into a Binary Search Tree](/leetcode/701-insert-into-a-binary-search-tree) | BST | [leetcode 171](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | recursive & iterative |
+| 29 | [Insert into a Binary Search Tree](/leetcode/701-insert-into-a-binary-search-tree) | BST | [leetcode 701](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | recursive & iterative |
 | 30 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | my 1st attempt was super discursive LOL |
 | 31 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | to understand the recursive approach |
 | 32 | [Pre & In & Post Order Depth First Search](/miscellaneous/depth-first-search) | tree | | revision on tree traversals |
@@ -226,3 +226,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 139 | [Count and Say](/leetcode/38-count-and-say) | array | [leetcode 38](https://leetcode.com/problems/count-and-say/) | ⭐️ |
 | 139 | [LFU Cache](/leetcode/460-lfu-cache) | hashtable, linked list | [leetode 460](https://leetcode.com/problems/lfu-cache/) | 📌📌📌 1st attempt learned from others, 2nd attempt is my own and new way to implement it(although it is not efficient)|
 | 140 | [Count Complete Tree Nodes](/leetcode/222-count-complete-tree-nodes) | binary tree | [leetode 222](https://leetcode.com/problems/count-complete-tree-nodes/) | 1st 24ms beats 92%, 2nd 20ms beats 100% |
+| 141 | [Container With Most Water](/leetcode/11-container-with-most-water) | array | [leetode 11](https://leetcode.com/problems/container-with-most-water/) | 1st 368ms beats 34% |
