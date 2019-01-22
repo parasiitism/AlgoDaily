@@ -232,3 +232,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 141 | [Longest Common Prefix](/leetcode/14-longest-common-prefix) | array, string | [leetode 14](https://leetcode.com/problems/longest-common-prefix/) | 1st 4ms beats 12.90%, 2nd 0ms beats 100% |
 | 141 | [Remove Duplicates from Sorted Array](/leetcode/26-remove-duplicates-from-sorted-array) | array, string | [leetode 14](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 1st 220ms beats 2.04%(.py 19% .js 47%), 2nd 60ms beats 100% |
 | 141 | [Remove Duplicates from Sorted Array II](/leetcode/80-remove-duplicates-from-sorted-array-ii) | array, string | [leetode 80](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | 1st, 2nd 8ms beats 100% |
+| 142 | [Spiral Matrix II](/leetcode/59-spiral-matrix-ii) | array, string | [leetode 59](https://leetcode.com/problems/spiral-matrix-ii/) | 1st 0ms beats 100% |
