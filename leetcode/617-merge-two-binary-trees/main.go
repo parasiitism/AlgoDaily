@@ -50,6 +50,28 @@ func mergeTrees(t1 *TreeNode, t2 *TreeNode) *TreeNode {
 	return node
 }
 
+/*
+	2nd attempt
+	- same as above
+	- simplify the logic
+	Time	O(n)
+	Space O(max(h))
+	36ms beats 100%
+	22jan2019
+*/
+func mergeTrees1(t1 *TreeNode, t2 *TreeNode) *TreeNode {
+	if t1 == nil {
+		return t2
+	}
+	if t2 == nil {
+		return t1
+	}
+	node := &TreeNode{t1.Val + t2.Val, nil, nil}
+	node.Left = mergeTrees(t1.Left, t2.Left)
+	node.Right = mergeTrees(t1.Right, t2.Right)
+	return node
+}
+
 func main() {
 
 }
