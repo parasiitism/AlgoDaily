@@ -31,7 +31,25 @@ func findMin(a, b int) int {
 	return b
 }
 
+/*
+	2nd approach
+	- optimize the 1st approach
+	- actually when u sort the array, the left item must be smaller than the right
+	Time	O(logn)
+	Space	O(1)
+	128ms beats 12.33%
+	23jan2019
+*/
+func arrayPairSum1(nums []int) int {
+	sum := 0
+	sort.Ints(nums)
+	for i := 0; i < len(nums); i += 2 {
+		sum += nums[i]
+	}
+	return sum
+}
+
 func main() {
-	fmt.Println(arrayPairSum([]int{1, 4, 3, 2}))
-	fmt.Println(arrayPairSum([]int{1, 4, 3, 2, -3, -4, -3, -2}))
+	fmt.Println(arrayPairSum1([]int{1, 4, 3, 2}))
+	fmt.Println(arrayPairSum1([]int{1, 4, 3, 2, -3, -4, -3, -2}))
 }
