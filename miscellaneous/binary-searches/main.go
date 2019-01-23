@@ -113,6 +113,8 @@ func main() {
 	fmt.Println(LowerBoundBinarySearch(b, 6))
 	fmt.Println(UpperBoundBinarySearch(b, 6))
 	fmt.Println(RecursiveBinarySearch(a, 2))
+	c := []int{2, 3, 6, 8}
+	fmt.Println(LowerBoundBinarySearch(c, 7))
 }
 
 // no test cases, i am lazy

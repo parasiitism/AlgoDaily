@@ -237,4 +237,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 143 | [Reverse String](/leetcode/344-reverse-string) | string | [leetode 344](https://leetcode.com/problems/reverse-string/) | |
 | 143 | [Array Partition I](/leetcode/561-array-partition-i) | array | [leetode 561](https://leetcode.com/problems/array-partition-i/) | 1st beats 5.48%, 2nd 128ms beats 12.33% |
 | 143 | [Remove Element](/leetcode/27-remove-element) | array | [leetode 27](https://leetcode.com/problems/remove-element/) | 1st beats 100%. i also implement it in JS with 2 ways |
-| 143 | [Minimum Size Subarray Sum](/leetcode/209-minimum-size-subarray-sum) | array | [leetode 209](https://leetcode.com/problems/minimum-size-subarray-sum/) | 1st beats 5.8% |
+| 143 | [Minimum Size Subarray Sum](/leetcode/209-minimum-size-subarray-sum) | array | [leetode 209](https://leetcode.com/problems/minimum-size-subarray-sum/) | 1st beats 5.8%, 2nd beats 20% |

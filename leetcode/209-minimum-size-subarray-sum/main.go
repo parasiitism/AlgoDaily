@@ -54,6 +54,34 @@ func minSubArrayLen(s int, nums []int) int {
 	return res
 }
 
+/*
+	2nd approach
+	- for each item, calculate from arr[i] to arr[j], if sum >= s and j-1+1<res, res = j - 1 + 1
+	Time	O(n^2)
+	Space O(1)
+	2488 ms beats 20.29%
+	23jan2019
+*/
+func minSubArrayLen1(s int, nums []int) int {
+	res := math.MaxInt64
+	for i := 0; i < len(nums); i++ {
+		sum := 0
+		for j := i; j < len(nums); j++ {
+			sum += nums[j]
+			if sum >= s {
+				if j-i+1 < res {
+					res = j - i + 1
+				}
+				break
+			}
+		}
+	}
+	if res == math.MaxInt64 {
+		return 0
+	}
+	return res
+}
+
 func main() {
-	fmt.Println(minSubArrayLen(0, []int{2, 3, 1, 2, 4, 3}))
+	fmt.Println(minSubArrayLen1(6, []int{2, 3, 1, 2, 4, 3}))
 }
