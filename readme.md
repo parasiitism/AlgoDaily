@@ -26,8 +26,9 @@ I believe that practising algorithms every day is a long-term investment in my l
 #### Questions from
 - [leetcode](https://leetcode.com)
 - [project euler](https://projecteuler.net)
-- glassdoor
 - interviews
+- glassdoor
+- 1point3acres
 - ...
 
 #### Started on September 1st 2018
@@ -243,3 +244,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 143 | [Flipping an Image](/leetcode/832-flipping-an-image) | array | [leetode 832](https://leetcode.com/problems/flipping-an-image/) | |
 | 144 | [Most Common Word](/leetcode/819-most-common-word) | string | [leetode 819](https://leetcode.com/problems/most-common-word/) | takeaway: python=>`re.split(r'\W+', paragraph)`. go=>`regexp.MustCompile(`[!?',;. ]`)`. js=>`paragraph.split(/[!?',;. ]/)`|
 | 144 | [Most Common Word](/leetcode/572-subtree-of-another-tree) | tree | [leetode 572](https://leetcode.com/problems/subtree-of-another-tree/) | 1st 24ms beats 100% |
+| 144 | [Subtree with Maximum Average](/interviews/amazon/subtree-with-maximum-average) | tree | 1point3acres |  |

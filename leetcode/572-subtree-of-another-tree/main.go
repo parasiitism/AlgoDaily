@@ -11,6 +11,7 @@ type TreeNode struct {
 	- will there be empty nodes s or t ?
 	- if both empty, what should i return?
 	- so what i need to check is whether the trees have the same structure and values, but not the addresses/pointers of the nodes?
+	amazon OA: https://wdxtub.com/interview/14520850399861.html
 */
 
 /*
