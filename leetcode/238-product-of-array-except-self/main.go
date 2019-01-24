@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 /*
 	- no zeros?
@@ -32,8 +35,9 @@ func productExceptSelf(nums []int) []int {
 }
 
 /*
-	follow up:
-	- do it without using division
+	follow up: do it without using division
+	- TLE
+	it takes too long to use naive division using subtraction
 */
 func productExceptSelf1(nums []int) []int {
 	product := 1
@@ -61,26 +65,30 @@ func productExceptSelf1(nums []int) []int {
 }
 
 // 6 = 3*2 = 2+2+2
-func divideWithoutDivision(num int, target int) int {
+func divideWithoutDivision(dividend int, divisor int) int {
 	sign := 1
-	if (num < 0 && target > 0) || (num > 0 && target < 0) {
+	if (dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0) {
 		sign = -1
 	}
-
-	if num < 0 {
-		num = -num
+	if dividend < 0 {
+		dividend = -dividend
 	}
-
-	if target < 0 {
-		target = -target
+	if divisor < 0 {
+		divisor = -divisor
 	}
-
 	cnt := 0
-	for num >= target {
-		num -= target
+	for dividend >= divisor {
+		dividend -= divisor
 		cnt++
 	}
-	return sign * cnt
+	temp := sign * cnt
+	if temp < math.MinInt32 {
+		return math.MinInt32
+	}
+	if temp > math.MaxInt32 {
+		return math.MaxInt32
+	}
+	return temp
 }
 
 func main() {
