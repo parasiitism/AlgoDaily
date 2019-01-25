@@ -248,3 +248,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 144 | [Divide Two Integers](/leetcode/29-divide-two-integers) | math | [leetcode 29](https://leetcode.com/problems/divide-two-integers/) | 📌 classic question in hk interviews |
 | 144 | [Product of Array Except Self](/leetcode/238-product-of-array-except-self) | math | [leetcode 238](https://leetcode.com/problems/product-of-array-except-self/) | using / got beting 60%. naive got TLE, proper approach 2836ms beats 5.92% |
 | 145 | [Find Distinct Substrings with Exactly K Distinct Characters](/interviews/amazon/distinct-substrings-k-distinct-characters) | backtracking, recursion | | 📌 similar to [Combinations](/leetcode/77-combinations) |
+| 145 | [K Closest Points to Origin](/leetcode/973-k-closest-points-to-origin) | sort, heap | [leetcode 973](https://leetcode.com/problems/k-closest-points-to-origin/) | 📌 1st beats 72.46%. 2nd beats 98.95% in python |
