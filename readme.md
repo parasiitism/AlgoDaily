@@ -246,4 +246,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 144 | [Most Common Word](/leetcode/572-subtree-of-another-tree) | tree | [leetode 572](https://leetcode.com/problems/subtree-of-another-tree/) | 1st 24ms beats 100% |
 | 144 | [Subtree with Maximum Average](/interviews/amazon/subtree-with-maximum-average) | tree | 1point3acres |  |
 | 144 | [Divide Two Integers](/leetcode/29-divide-two-integers) | math | [leetcode 29](https://leetcode.com/problems/divide-two-integers/) | 📌 classic question in hk interviews |
-| 144 | [Product of Array Except Self](/leetcode/238-product-of-array-except-self) | math | [leetcode 238](https://leetcode.com/problems/product-of-array-except-self/) | using / got beting 60%. naive got TLE |
+| 144 | [Product of Array Except Self](/leetcode/238-product-of-array-except-self) | math | [leetcode 238](https://leetcode.com/problems/product-of-array-except-self/) | using / got beting 60%. naive got TLE, proper approach 2836ms beats 5.92% |
