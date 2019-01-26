@@ -253,4 +253,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 145 | [Longest Substring with At Most Two Distinct Characters](/leetcode/159-longest-substring-with-at-most-two-distinct-characters) | array, hashtable | [leetcode 159](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) | 1st, 2nd beat 17.65% |
 | 145 | [Maximize Distance to Closest Person](/leetcode/849-maximize-distance-to-closest-person) | array | [leetcode 849](https://leetcode.com/problems/maximize-distance-to-closest-person/) | 1st beats 100% |
 | 146 | [Max Stack](/leetcode/716-max-stack) | stack | [leetcode 716](https://leetcode.com/problems/max-stack/) | very similar to [Day 86: Min Stack](/leetcode/155-min-stack) |
-| 146 | [Middle of the Linked List](/leetcode/876-middle-of-the-linked-list) | stack | [leetcode 876](https://leetcode.com/problems/middle-of-the-linked-list/) | 📌 |
+| 146 | [Middle of the Linked List](/leetcode/876-middle-of-the-linked-list) | linked list | [leetcode 876](https://leetcode.com/problems/middle-of-the-linked-list/) | 📌 |
+| 146 | [Insert into a Cyclic Sorted List](/leetcode/708-insert-into-a-cyclic-sorted-list) | linked list | [leetcode 708](https://leetcode.com/problems/insert-into-a-cyclic-sorted-list/) | 📌 |
