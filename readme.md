@@ -252,3 +252,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 145 | [Gray Code](/leetcode/89-gray-code) | array, bit op | [leetcode 89](https://leetcode.com/problems/gray-code/) | 🤔 interesting |
 | 145 | [Longest Substring with At Most Two Distinct Characters](/leetcode/159-longest-substring-with-at-most-two-distinct-characters) | array, hashtable | [leetcode 159](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) | 1st, 2nd beat 17.65% |
 | 145 | [Maximize Distance to Closest Person](/leetcode/849-maximize-distance-to-closest-person) | array | [leetcode 849](https://leetcode.com/problems/maximize-distance-to-closest-person/) | 1st beats 100% |
+| 146 | [Max Stack](/leetcode/716-max-stack) | stack | [leetcode 716](https://leetcode.com/problems/max-stack/) | very similar to [Day 86: Min Stack](/leetcode/155-min-stack) |
