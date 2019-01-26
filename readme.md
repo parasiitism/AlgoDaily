@@ -255,4 +255,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 146 | [Max Stack](/leetcode/716-max-stack) | stack | [leetcode 716](https://leetcode.com/problems/max-stack/) | very similar to [Day 86: Min Stack](/leetcode/155-min-stack) |
 | 146 | [Middle of the Linked List](/leetcode/876-middle-of-the-linked-list) | linked list | [leetcode 876](https://leetcode.com/problems/middle-of-the-linked-list/) | 📌 |
 | 146 | [Insert into a Cyclic Sorted List](/leetcode/708-insert-into-a-cyclic-sorted-list) | linked list | [leetcode 708](https://leetcode.com/problems/insert-into-a-cyclic-sorted-list/) | 📌 |
+| 146 | [Merge Two Sorted Lists](/leetcode/21-merge-k-sorted-lists) | linked list | [leetcode 21](https://leetcode.com/problems/merge-two-sorted-lists/) | 📌 |
 | 146 | [Merge k Sorted Lists](/leetcode/23-merge-k-sorted-lists) | linked list | [leetcode 23](https://leetcode.com/problems/merge-k-sorted-lists/) | 📌 naive approach runs faster than the decent approach 😂 |

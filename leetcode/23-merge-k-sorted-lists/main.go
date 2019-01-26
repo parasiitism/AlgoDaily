@@ -18,7 +18,7 @@ type ListNode struct {
 */
 
 /*
-	0th approach
+	0th approach: naive way
 	- iterate the list and put all the values into an array
 	- sort the array
 	- make that array into a linked list
