@@ -261,3 +261,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 147 | [Network Delay Time](/leetcode/743-network-delay-time) | graph | [leetcode 743](https://leetcode.com/problems/network-delay-time/) | 📌 Dijkstra's Algorithm. Altenative: DFS |
 | 147 | [Cheapest Flights Within K Stops](/leetcode/787-cheapest-flights-within-k-stops) | graph | [leetcode 787](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | BTS: TLE. need to use 📌 Dijkstra's variation |
 | 148 | [Longest Palindromic Substring](/leetcode/5-longest-palindromic-substring) | string | [leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/) | ⭐️ |
+| 148 | [Maximum Size Subarray Sum Equals k](/leetcode/325-maximum-size-subarray-sum-equals-k) | array | [leetcode 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | 1st appraoach LTE, 2nd approach learned from others which beats 100%|
