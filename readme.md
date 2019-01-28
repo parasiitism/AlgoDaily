@@ -259,4 +259,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 146 | [Merge k Sorted Lists](/leetcode/23-merge-k-sorted-lists) | linked list | [leetcode 23](https://leetcode.com/problems/merge-k-sorted-lists/) | 📌 naive approach runs faster than the decent approach 😂 |
 | 146 | [Remove Duplicates from Sorted List II](/leetcode/82-remove-duplicates-from-sorted-list-ii) | linked list | [leetcode 82](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | 📌 1st, 2nd beats 100% |
 | 147 | [Network Delay Time](/leetcode/743-network-delay-time) | graph | [leetcode 743](https://leetcode.com/problems/network-delay-time/) | 📌 Dijkstra's Algorithm. Altenative: DFS |
-| 147 | [Cheapest Flights Within K Stops](/leetcode/787-cheapest-flights-within-k-stops) | graph | [leetcode 787](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | BTS: TLE. need to use 📌 Dijkstra's with a constraint |
+| 147 | [Cheapest Flights Within K Stops](/leetcode/787-cheapest-flights-within-k-stops) | graph | [leetcode 787](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | BTS: TLE. need to use 📌 Dijkstra's variation |
+| 148 | [Longest Palindromic Substring](/leetcode/5-longest-palindromic-substring) | string | [leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/) | ⭐️ |
