@@ -3,6 +3,12 @@ package main
 import "fmt"
 
 /*
+	Questions to ask
+	- what if empty?
+	- what if only one charactor?
+*/
+
+/*
 	navie approach
 	- brute force
 	- for each char, chop the charactors from the back and check if the substring is a palindrom
