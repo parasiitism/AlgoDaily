@@ -269,3 +269,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 149 | [Window Sum](/interviews/amazon/window-sum/) | array | glassdoor | ⭐️ |
 | 149 | [To Lower Case](/leetcode/709-to-lower-case/) | array | [leetcode 709](https://leetcode.com/problems/to-lower-case/) | ️ |
 | 149 | [Sort Array By Parity](/leetcode/905-sort-array-by-parity/) | array | [leetcode 905](https://leetcode.com/problems/sort-array-by-parity/) | ️ |
+| 149 | [Robot Return to Origin](/leetcode/657-robot-return-to-origin/) | string | [leetcode 657](https://leetcode.com/problems/robot-return-to-origin/) | ️1st beats 100%, 2nd beats 0% 😂 |
