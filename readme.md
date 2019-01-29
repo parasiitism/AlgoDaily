@@ -273,3 +273,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 149 | [Robot Return to Origin](/leetcode/657-robot-return-to-origin/) | string | [leetcode 657](https://leetcode.com/problems/robot-return-to-origin/) | ️1st beats 100%, 2nd beats 0% 😂 |
 | 149 | [Find Anagram Mappings](/leetcode/760-find-anagram-mappings/) | array | [leetcode 760](https://leetcode.com/problems/find-anagram-mappings/) | ️|
 | 149 | [Uncommon Words from Two Sentences](/leetcode/884-uncommon-words-from-two-sentences/) | hashtable | [leetcode 884](https://leetcode.com/problems/uncommon-words-from-two-sentences/) | ️|
+| 149 | [Rotate String](/leetcode/796-rotate-string/) | string | [leetcode 796](https://leetcode.com/problems/rotate-string/) | ️|
