@@ -75,7 +75,7 @@ func reverseList2(head *ListNode) *ListNode {
 	return dump.Next
 }
 
-// helper
+// helpers
 func arr2list(arr []int) *ListNode {
 	dump := &ListNode{0, nil}
 	dumpCur := dump
