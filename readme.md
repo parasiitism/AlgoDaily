@@ -262,6 +262,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 148 | [Longest Palindromic Substring](/leetcode/5-longest-palindromic-substring) | string | [leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/) | ⭐️ |
 | 148 | [Maximum Size Subarray Sum Equals k](/leetcode/325-maximum-size-subarray-sum-equals-k) | array | [leetcode 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | 1st appraoach LTE, 2nd approach learned from others which beats 100%|
 | 148 | [Subarray Sum Equals K](/leetcode/560-subarray-sum-equals-k) | array | [leetcode 560](https://leetcode.com/problems/subarray-sum-equals-k/) | 1st appraoach refers to [leetcode 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/), therefore i came up with the idea immediately which beats 100% |
-| 149 | [Maze](/interviews/amazon/maze/) | array | glassdoor | |
+| 149 | [Maze](/interviews/amazon/maze/) | array | glassdoor | ️⭐️ |
 | 149 | [2 Sum Closest](/interviews/amazon/closest-2-sum/) | array | glassdoor | ⭐️ |
 | 149 | [Reverse 2nd Half of a Linked List](/interviews/amazon/reverse-2nd-half-linked-list/) | linked list | glassdoor | ⭐️ |
+| 149 | [Window Sum](/interviews/amazon/window-sum/) | array | glassdoor | ⭐️ |
