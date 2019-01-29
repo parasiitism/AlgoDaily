@@ -267,3 +267,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 149 | [Reverse 2nd Half of a Linked List](/interviews/amazon/reverse-2nd-half-linked-list/) | linked list | glassdoor | 📌 |
 | 149 | [Reverse Linked List II](/leetcode/92-reverse-linked-list-ii/) | linked list | [leetcode 92](https://leetcode.com/problems/reverse-linked-list-ii/) | ️📌 |
 | 149 | [Window Sum](/interviews/amazon/window-sum/) | array | glassdoor | ⭐️ |
+| 149 | [To Lower Case](/leetcode/709-to-lower-case/) | array | [leetcode 709](https://leetcode.com/problems/to-lower-case/) | ️ |
