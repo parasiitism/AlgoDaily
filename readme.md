@@ -268,3 +268,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 149 | [Reverse Linked List II](/leetcode/92-reverse-linked-list-ii/) | linked list | [leetcode 92](https://leetcode.com/problems/reverse-linked-list-ii/) | ️📌 |
 | 149 | [Window Sum](/interviews/amazon/window-sum/) | array | glassdoor | ⭐️ |
 | 149 | [To Lower Case](/leetcode/709-to-lower-case/) | array | [leetcode 709](https://leetcode.com/problems/to-lower-case/) | ️ |
+| 149 | [Sort Array By Parity](/leetcode/905-sort-array-by-parity/) | array | [leetcode 905](https://leetcode.com/problems/sort-array-by-parity/) | ️ |
