@@ -52,6 +52,29 @@ func reverseList1(head *ListNode) *ListNode {
 	return cur
 }
 
+// 3rd approach: similar to 2nd but use a dump
+// 1->2->3
+// 2->1->3
+// tine		O(n)
+// space 	O(1) since in-place
+// beats 100%
+func reverseList2(head *ListNode) *ListNode {
+	if head == nil {
+		return nil
+	}
+	dump := &ListNode{-1, nil}
+	dump.Next = head
+	striker := head.Next
+	for striker != nil {
+		temp := dump.Next
+		dump.Next = striker
+		head.Next = striker.Next
+		striker.Next = temp
+		striker = head.Next
+	}
+	return dump.Next
+}
+
 // helper
 func arr2list(arr []int) *ListNode {
 	dump := &ListNode{0, nil}
@@ -73,6 +96,6 @@ func printList(l *ListNode) {
 
 func main() {
 	a := arr2list([]int{1, 2, 3, 4, 5})
-	b := reverseList1(a)
+	b := reverseList2(a)
 	printList(b)
 }
