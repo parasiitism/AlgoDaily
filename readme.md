@@ -264,5 +264,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 148 | [Subarray Sum Equals K](/leetcode/560-subarray-sum-equals-k) | array | [leetcode 560](https://leetcode.com/problems/subarray-sum-equals-k/) | 1st appraoach refers to [leetcode 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/), therefore i came up with the idea immediately which beats 100% |
 | 149 | [Maze](/interviews/amazon/maze/) | array | glassdoor | ️⭐️ |
 | 149 | [2 Sum Closest](/interviews/amazon/closest-2-sum/) | array | glassdoor | ⭐️ |
-| 149 | [Reverse 2nd Half of a Linked List](/interviews/amazon/reverse-2nd-half-linked-list/) | linked list | glassdoor | ⭐️ |
+| 149 | [Reverse 2nd Half of a Linked List](/interviews/amazon/reverse-2nd-half-linked-list/) | linked list | glassdoor | 📌 |
+| 149 | [Reverse Linked List II](/leetcode/92-reverse-linked-list-ii/) | linked list | [leetcode 92](https://leetcode.com/problems/reverse-linked-list-ii/) | ️📌 |
 | 149 | [Window Sum](/interviews/amazon/window-sum/) | array | glassdoor | ⭐️ |
