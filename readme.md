@@ -275,3 +275,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 149 | [Uncommon Words from Two Sentences](/leetcode/884-uncommon-words-from-two-sentences/) | hashtable | [leetcode 884](https://leetcode.com/problems/uncommon-words-from-two-sentences/) | ️|
 | 149 | [Rotate String](/leetcode/796-rotate-string/) | string | [leetcode 796](https://leetcode.com/problems/rotate-string/) | ️|
 | 150 | [Find Leaves of Binary Tree](/leetcode/336-find-leaves-of-binary-tree/) | tree | [leetcode 336](https://leetcode.com/problems/find-leaves-of-binary-tree/) | ️1st O(h*n) beats 100% |
+| 150 | [Second Minimum Node In a Binary Tree](/leetcode/671-second-minimum-node-in-a-binary-tree/) | tree | [leetcode 671](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/) | ️1st, 2nd O(n) beats 100% |
