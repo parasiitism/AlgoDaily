@@ -274,3 +274,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 149 | [Find Anagram Mappings](/leetcode/760-find-anagram-mappings/) | array | [leetcode 760](https://leetcode.com/problems/find-anagram-mappings/) | ️|
 | 149 | [Uncommon Words from Two Sentences](/leetcode/884-uncommon-words-from-two-sentences/) | hashtable | [leetcode 884](https://leetcode.com/problems/uncommon-words-from-two-sentences/) | ️|
 | 149 | [Rotate String](/leetcode/796-rotate-string/) | string | [leetcode 796](https://leetcode.com/problems/rotate-string/) | ️|
+| 150 | [Find Leaves of Binary Tree](/leetcode/336-find-leaves-of-binary-tree/) | tree | [leetcode 336](https://leetcode.com/problems/find-leaves-of-binary-tree/) | ️1st O(h*n) beats 100% |
