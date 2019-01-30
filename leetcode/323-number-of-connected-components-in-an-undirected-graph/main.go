@@ -4,11 +4,11 @@ import "fmt"
 
 /*
 	1st approach
-	- use array of set(hashtables)
-	- if a and b are not in the same hashtable, combine hashtables
-	- if a is found but b is not, add b to the hashtable which has a
-	- if b is found but a is not, add a to the hashtable which has b
-	- if a and b are not found, create a new hashtable for them
+	1. use array of set(hashtables)
+	2. if a and b are not in the same hashtable, combine hashtables
+	3. if a is found but b is not, add b to the hashtable which has a
+	4. if b is found but a is not, add a to the hashtable which has b
+	5. if a and b are not found, create a new hashtable for them
 	Time		O(n*m) m depends on the distribution of the nunmbers(numbers of hashtables)
 	Space		O(n) although we have many hashtables, the nodes are unique, the hashtables actually store at most the number of nodes
 	40ms beats 100%
