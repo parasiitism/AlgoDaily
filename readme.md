@@ -280,3 +280,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 150 | [Increasing Order Search Tree](/leetcode/897-increasing-order-search-tree/) | tree | [leetcode 897](https://leetcode.com/problems/increasing-order-search-tree/) | ️1st O(n) beats 100% |
 | 150 | [Reverse Words in a String II](/leetcode/186-reverse-words-in-a-string-ii/) | array | [leetcode 186](https://leetcode.com/problems/reverse-words-in-a-string-ii/) | ️1st O(n) beats 100% |
 | 150 | [Compare Version Numbers](/leetcode/165-compare-version-numbers/) | array | [leetcode 165](https://leetcode.com/problems/compare-version-numbers/) | ️1st O(n) beats 100% |
+| 150 | [Sum Root to Leaf Numbers](/leetcode/129-sum-root-to-leaf-numbers/) | tree | [leetcode 129](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | ️1st, 2nd O(n) beats 100% |
