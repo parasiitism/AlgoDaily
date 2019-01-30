@@ -281,3 +281,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 150 | [Reverse Words in a String II](/leetcode/186-reverse-words-in-a-string-ii/) | array | [leetcode 186](https://leetcode.com/problems/reverse-words-in-a-string-ii/) | ️1st O(n) beats 100% |
 | 150 | [Compare Version Numbers](/leetcode/165-compare-version-numbers/) | array | [leetcode 165](https://leetcode.com/problems/compare-version-numbers/) | ️1st O(n) beats 100% |
 | 150 | [Sum Root to Leaf Numbers](/leetcode/129-sum-root-to-leaf-numbers/) | tree | [leetcode 129](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | ️1st, 2nd O(n) beats 100% |
+| 150 | [Number of Connected Components in an Undirected Graph](/leetcode/323-number-of-connected-components-in-an-undirected-graph/) | hashtable, graph | [leetcode 323](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | ️1st beats 100% |
