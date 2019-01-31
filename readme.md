@@ -285,3 +285,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 150 | [Maximum Binary Tree](/leetcode/654-maximum-binary-tree/) | tree | [leetcode 654](https://leetcode.com/problems/maximum-binary-tree/) | ️1st beats 0%. 2nd beats 100% |
 | 151 | [Rotate Function](/leetcode/396-rotate-function/) | tree | [leetcode 396](https://leetcode.com/problems/rotate-function/) | ️1st O(n^2) beats 100%, 2nd O(n) beats 100% |
 | 151 | [Rotate List](/leetcode/61-rotate-list/) | linked list | [leetcode 61](https://leetcode.com/problems/rotate-list/) | ️1st O(n) beats 100% |
+| 151 | [Arithmetic Slices](/leetcode/413-arithmetic-slices/) | array | [leetcode 413](https://leetcode.com/problems/arithmetic-slices/) | ️1st O(n) beats 100% |
