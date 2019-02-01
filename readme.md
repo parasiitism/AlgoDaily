@@ -289,4 +289,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 152 | [Round Robin](/interviews/amazon/round-robin/) | queue | glassdoor | ️📌📌📌 |
 | 152 | [Sliding Window Median](/leetcode/480-sliding-window-median/) | array | [leetcode 480](https://leetcode.com/problems/sliding-window-median/) | ⭐️ 1st O(n*nlogn) 100% |
 | 152 | [Permutation in String](/leetcode/567-permutation-in-string/) | hashtable, array, string | [leetcode 480](https://leetcode.com/problems/permutation-in-string/) | ⭐️ 1st O(n^2) hashtable beats  0%, 2nd O(n^2) `[26]int{}` beats 40% |
-| 152 | [Set Matrix Zeroes](/leetcode/73-set-matrix-zeroes/) | hashtable, array | [leetcode 73](https://leetcode.com/problems/set-matrix-zeroes/) | 1st O(n) beats 52%, 2nd O(n^2) |
+| 152 | [Set Matrix Zeroes](/leetcode/73-set-matrix-zeroes/) | hashtable, array | [leetcode 73](https://leetcode.com/problems/set-matrix-zeroes/) | 1st O(n) beats 52% |
