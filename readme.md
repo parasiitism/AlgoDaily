@@ -288,3 +288,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 151 | [Arithmetic Slices](/leetcode/413-arithmetic-slices/) | array | [leetcode 413](https://leetcode.com/problems/arithmetic-slices/) | ️1st O(n) beats 100% |
 | 152 | [Round Robin](/interviews/amazon/round-robin/) | queue | glassdoor | ️📌📌📌 |
 | 152 | [Sliding Window Median](/leetcode/480-sliding-window-median/) | array | [leetcode 480](https://leetcode.com/problems/sliding-window-median/) | ⭐️ 1st O(n*nlogn) 100% |
+| 152 | [Permutation in String](/leetcode/567-permutation-in-string/) | hashtable, array, string | [leetcode 480](https://leetcode.com/problems/permutation-in-string/) | ⭐️ 1st O(n^2) hashtable beats  0%, 2nd O(n^2) `[26]int{}` beats 40% |
