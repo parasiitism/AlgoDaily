@@ -294,3 +294,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 153 | [Top K Frequent Words](/leetcode/692-top-k-frequent-words/) | hashtable, bucket sort | [leetcode 692](https://leetcode.com/problems/top-k-frequent-words/) | 1st O(2nlogn) beats 25%. 2nd O(nlogn) beats 100%. takeaway: sort things with priority queue using priority WITH other params |
 | 153 | [Sort Characters By Frequency](/leetcode/451-sort-characters-by-frequency/) | hashtable, bucket sort | [leetcode 451](https://leetcode.com/problems/sort-characters-by-frequency/) | 1st O(n) beats 66% |
 | 153 | [Zigzag Iterator](/leetcode/281-zigzag-iterator/) | array | [leetcode 281](https://leetcode.com/problems/zigzag-iterator/) | 1st O(k) beats 61%. leetcode doesn't support golang, did it in python |
+| 153 | [Triangle](/leetcode/120-triangle/) | dfs, dynamic programming | [leetcode 120](https://leetcode.com/problems/triangle/) | 📌 1st TLE, 2nd MLE |
