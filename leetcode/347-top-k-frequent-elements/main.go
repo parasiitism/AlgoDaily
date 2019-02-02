@@ -6,11 +6,19 @@ import (
 )
 
 /*
+	Questions to ask:
+	- will there will element has the same frequency?
+*/
+
+/*
 	1st approach
 	- count num: freq into a hashtable
 	- put the hashtable key&value into a priority queue
 	- the first k elements are the top k elements in the priority queue
 
+
+	Time	O(nlogn)
+	Space	O(n)
 	20ms beats 64.29%
 	1feb2019
 */
@@ -92,7 +100,58 @@ func (pq *PriorityQueue) update(item *Item, freq int, num int) {
 	heap.Fix(pq, item.Index)
 }
 
+/*
+	2nd approach
+	- similar to approach 1 but use bucket sort concept O(n) instead of a heap O(logn)
+
+	Time	O(n)
+	Space	O(n)
+	20ms beats 64.29%
+	1feb2019
+*/
+func topKFrequent1(nums []int, k int) []int {
+	if k > len(nums) {
+		return []int{}
+	}
+	ht := make(map[int]int)
+	maxOccur := 0
+	// count the freq for each num
+	for _, num := range nums {
+		if _, x := ht[num]; x {
+			ht[num]++
+		} else {
+			ht[num] = 1
+		}
+		if ht[num] > maxOccur {
+			maxOccur = ht[num]
+		}
+	}
+	// create a bucket, the index is the freq of nums
+	bucket := make([][]int, maxOccur+1)
+	for key, freq := range ht {
+		bucket[freq] = append(bucket[freq], key)
+	}
+	// get the most frequent k
+	res := []int{}
+	j := 0
+	for i := len(bucket) - 1; i >= 0; i-- {
+		b := bucket[i]
+		for _, x := range b {
+			if j < k {
+				res = append(res, x)
+				j++
+			}
+		}
+	}
+
+	return res
+}
+
 func main() {
-	fmt.Println(topKFrequent([]int{1, 1, 1, 2, 2, 3}, 2))
-	fmt.Println(topKFrequent([]int{1, 1, 1, 2, 2, 3, 4, 1, 2, 1, 3, 3, 4, 3}, 2))
+	maxOccur := 5
+	bucket := make([][]int, maxOccur)
+	fmt.Println(bucket)
+
+	fmt.Println(topKFrequent1([]int{1, 1, 1, 2, 2, 3}, 2))
+	fmt.Println(topKFrequent1([]int{1, 1, 1, 2, 2, 3, 4, 1, 2, 1, 3, 3, 4, 3}, 2))
 }
