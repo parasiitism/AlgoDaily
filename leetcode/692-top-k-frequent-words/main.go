@@ -15,8 +15,8 @@ import (
 	1st approach
 	1. count num: freq into a hashtable
 	2. sort the hashtable keys
-	2. put the hashtable key&value into a bucket with freq as an index
-	3. the first k elements are the top k elements in the bucket
+	3. put the hashtable key&value into a bucket with freq as an index
+	4. the first k elements are the top k elements in the bucket
 
 
 	Time	O(nlogn)
