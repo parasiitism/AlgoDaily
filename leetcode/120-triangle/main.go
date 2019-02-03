@@ -101,15 +101,44 @@ func dfs(triangle [][]int, i, j int, ht [][][]int) []int {
 	return []int{}
 }
 
+/*
+	3rd approach
+	- bottom up
+	- select the path with min cost from bottom to top, mutate the input array
+	Time	O(n)
+	Space	O(n)
+	4ms beats 100%
+*/
+func minimumTotal2(triangle [][]int) int {
+	if len(triangle) == 0 {
+		return 0
+	}
+	for i := len(triangle) - 2; i >= 0; i-- {
+		for j := 0; j < len(triangle[i]); j++ {
+			left := triangle[i+1][j] + triangle[i][j]
+			right := triangle[i+1][j+1] + triangle[i][j]
+			triangle[i][j] = findMin(left, right)
+		}
+	}
+	return triangle[0][0]
+}
+
+func findMin(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
 func main() {
 
 	a := [][]int{}
-	fmt.Println(minimumTotal1(a)) // 0
+	fmt.Println(minimumTotal2(a)) // 0
 
 	a = [][]int{
 		{2},
 	}
-	fmt.Println(minimumTotal1(a)) // 2
+	fmt.Println(minimumTotal2(a)) // 2
 
 	a = [][]int{
 		{2},
@@ -117,7 +146,7 @@ func main() {
 		{6, 5, 7},
 		{4, 1, 8, 3},
 	}
-	fmt.Println(minimumTotal1(a)) // 11
+	fmt.Println(minimumTotal2(a)) // 11
 
 	a = [][]int{
 		{-2},
@@ -125,7 +154,7 @@ func main() {
 		{-6, -5, -7},
 		{-4, -1, -8, -3},
 	}
-	fmt.Println(minimumTotal1(a)) // -21
+	fmt.Println(minimumTotal2(a)) // -21
 
 	a = [][]int{
 		{-2},
@@ -133,5 +162,5 @@ func main() {
 		{-6, -5, -7},
 		{-4, 1, 8, -3},
 	}
-	fmt.Println(minimumTotal1(a)) // -9
+	fmt.Println(minimumTotal2(a)) // -9
 }
