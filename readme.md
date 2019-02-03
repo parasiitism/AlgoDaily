@@ -295,3 +295,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 153 | [Sort Characters By Frequency](/leetcode/451-sort-characters-by-frequency/) | hashtable, bucket sort | [leetcode 451](https://leetcode.com/problems/sort-characters-by-frequency/) | 1st O(n) beats 66% |
 | 153 | [Zigzag Iterator](/leetcode/281-zigzag-iterator/) | array | [leetcode 281](https://leetcode.com/problems/zigzag-iterator/) | 1st O(k) beats 61%. leetcode doesn't support golang, did it in python |
 | 153 | [Triangle](/leetcode/120-triangle/) | dfs, dynamic programming | [leetcode 120](https://leetcode.com/problems/triangle/) | 📌 1st TLE, 2nd MLE. 3rd dp in O(n) beats 100% |
+| 153 | [Products' Average Rating](/interviews/amazon/product-top5-average-rating/) | array | glassdoor | ⭐️ |
