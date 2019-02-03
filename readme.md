@@ -299,3 +299,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 154 | [Greatest Common Divisor](/interviews/amazon/gcd/) | math | glassdoor | ⭐️ takeaway: Euclidian Algorithm |
 | 154 | [Least Common Multiple](/interviews/amazon/lcm/) | math | glassdoor | ⭐️ takeaway: A * B = LCM * GCD |
 | 154 | [Cells Mutation](/interviews/amazon/cells-mutation/) | array | glassdoor | ⭐️ |
+| 154 | [Amplitude of a Tree](/interviews/amazon/amplitude-of-a-tree/) | tree | glassdoor | ⭐️ |
