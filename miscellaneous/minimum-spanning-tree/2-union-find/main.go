@@ -14,6 +14,8 @@ import (
 	3. union the vertexs and put the vertexs in the result set if the vertexs are not connected
 	5. the edges in the set are the result
 
+	ref: https://www.youtube.com/watch?v=5xosHRdxqHA
+
 	Time		O(n*m+nlogn)
 	Space		O(n)
 */
