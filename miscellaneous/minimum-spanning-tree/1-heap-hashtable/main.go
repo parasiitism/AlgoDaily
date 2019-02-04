@@ -15,10 +15,9 @@ import (
 	4. ignore the edges which are present in one cluster(since the edges with min cost come first, we can ignore the later edges)
 	5. the "considered" edges are the result
 
-	Time		O(n*m)
+	Time		O(nlogn)
 	Space		O(n)
 */
-
 func miniumSpanningTree(edges [][]int) [][]int {
 	var res [][]int
 	var hts []map[int]bool

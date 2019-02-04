@@ -48,7 +48,7 @@ func (this *QuickUnion) Union(p int, q int) {
 	if pId == qId {
 		return
 	}
-	this.Ids[q] = pId
+	this.Ids[qId] = pId
 	this.Count--
 }
 

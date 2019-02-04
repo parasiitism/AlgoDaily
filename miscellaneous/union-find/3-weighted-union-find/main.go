@@ -22,7 +22,7 @@ func Constructor(n int) UnionFind {
 	}
 	caps := []int{}
 	for i := 0; i < n; i++ {
-		caps = append(caps, i)
+		caps = append(caps, 1)
 	}
 	return UnionFind{n, ids, caps}
 }
@@ -31,6 +31,7 @@ func (this *UnionFind) GetCount() int {
 	return this.Count
 }
 
+// O(logN)
 func (this *UnionFind) Find(key int) int {
 	if key < len(this.Ids) {
 		// loop to find to ultimate root
@@ -43,7 +44,7 @@ func (this *UnionFind) Find(key int) int {
 	return -1
 }
 
-// union to the bigger tree
+// union to the bigger tree, O(N)
 func (this *UnionFind) Union(p int, q int) {
 	if p < 0 || p+1 > len(this.Ids) || q < 0 || q+1 > len(this.Ids) {
 		return
@@ -54,12 +55,12 @@ func (this *UnionFind) Union(p int, q int) {
 		return
 	}
 
-	if this.Caps[p] < this.Caps[q] {
-		this.Ids[p] = qId
-		this.Caps[q] += this.Caps[p]
+	if this.Caps[pId] < this.Caps[qId] {
+		this.Ids[pId] = qId
+		this.Caps[qId] += this.Caps[pId]
 	} else {
-		this.Ids[q] = pId
-		this.Caps[p] += this.Caps[q]
+		this.Ids[qId] = pId
+		this.Caps[pId] += this.Caps[qId]
 	}
 	this.Count--
 }

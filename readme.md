@@ -300,4 +300,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 154 | [Cells Mutation](/interviews/amazon/cells-mutation/) | array | glassdoor | ⭐️ |
 | 154 | [Amplitude of a Tree](/interviews/amazon/amplitude-of-a-tree/) | tree | glassdoor | ⭐️ |
 | 155 | [Union Find](/miscellaneous/union-find/) | graph, union find | [Study Union Find](https://www.cnblogs.com/SeaSky0606/p/4752941.html) | 📌 Quick Find 👎🏻 -> Quick Union 🤔 -> Union Find 🎉 |
-| 155 | [Minimum Spanning Tree](/miscellaneous/minimum-spanning-tree/) | graph, union find | [Study Union Find](https://www.cnblogs.com/SeaSky0606/p/4752941.html) | 📌 heap+hashtable 🤔 |
+| 155 | [Minimum Spanning Tree](/miscellaneous/minimum-spanning-tree/) | graph, union find | [Study Union Find](https://www.cnblogs.com/SeaSky0606/p/4752941.html) | 📌 heap+hashtable 🤔 -> Union Find(Kruskal) 🎉 |
