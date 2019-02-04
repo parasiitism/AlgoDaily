@@ -21,6 +21,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 - Dynamic programming
 - Backtracking(Permutations & Combinations & Subsets...etc)
 - Math
+- Union Find
 - and more...
 
 #### Questions from
@@ -300,3 +301,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 154 | [Least Common Multiple](/interviews/amazon/lcm/) | math | glassdoor | ⭐️ takeaway: A * B = LCM * GCD |
 | 154 | [Cells Mutation](/interviews/amazon/cells-mutation/) | array | glassdoor | ⭐️ |
 | 154 | [Amplitude of a Tree](/interviews/amazon/amplitude-of-a-tree/) | tree | glassdoor | ⭐️ |
+| 155 | [Union Find](/miscellaneous/union-find/) | union find | [Study Union Find](https://www.cnblogs.com/SeaSky0606/p/4752941.html) | 📌 Quick Find 👎🏻 -> Quick Union 🤔 -> Union Find 🎉 |
