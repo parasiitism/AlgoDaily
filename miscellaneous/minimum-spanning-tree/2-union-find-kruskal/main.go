@@ -14,10 +14,16 @@ import (
 	3. union the vertexs and put the vertexs in the result set if the vertexs are not connected
 	5. the edges in the set are the result
 
-	ref: https://www.youtube.com/watch?v=5xosHRdxqHA
+	Optimization
+	- if the weights are dicrete and the range is known, sort the edges with a bucket-sort in linear time O(n)
 
-	Time		O(n*m+nlogn)
-	Space		O(n)
+	⭐️ Kruskal vs Prim, we should use Kruskal
+	- when the graph is sparse, number of edges(E) ~= number of vertexes(V) ,like E ~= V
+	- when the edges are already sorted or if we can sort them in linear time
+
+	Time		O(E log E) E: number of edges
+	Space		O(E) edges in the heap
+	ref: https://www.youtube.com/watch?v=5xosHRdxqHA
 */
 func miniumSpanningTree(n int, edges [][]int) [][]int {
 	// sort, O(nlogn)

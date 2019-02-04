@@ -300,4 +300,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 154 | [Cells Mutation](/interviews/amazon/cells-mutation/) | array | glassdoor | ⭐️ |
 | 154 | [Amplitude of a Tree](/interviews/amazon/amplitude-of-a-tree/) | tree | glassdoor | ⭐️ |
 | 155 | [Union Find](/miscellaneous/union-find/) | graph, union find | [Study Union Find](https://github.com/tclxspy/Articles/blob/master/algorithm/MD/%E7%AE%97%E6%B3%95%2308--%E6%B7%B1%E5%85%A5%E8%AF%A6%E8%A7%A3%E5%B9%B6%E6%9F%A5%E9%9B%86union-find%E7%AE%97%E6%B3%95.md) | 📌 Quick Find 👎🏻 -> Quick Union 🤔 -> Union Find 🎉 |
-| 155 | [Minimum Spanning Tree](/miscellaneous/minimum-spanning-tree/) | graph, union find | [Study MST](https://www.youtube.com/watch?v=5xosHRdxqHA) | 📌 heap+hashtable 🤔 -> Union Find(Kruskal) 🎉 |
+| 155 | [Minimum Spanning Tree](/miscellaneous/minimum-spanning-tree/) | graph, union find | [Study MST](https://www.youtube.com/watch?v=5xosHRdxqHA) | 📌 heap + list of hashtables 🤔 -> Kruskal(Union Find) 🎉 or Prim(heap + hashtable) |
