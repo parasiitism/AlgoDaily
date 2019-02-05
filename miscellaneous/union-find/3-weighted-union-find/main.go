@@ -17,11 +17,9 @@ type UnionFind struct {
 
 func Constructor(n int) UnionFind {
 	ids := []int{}
-	for i := 0; i < n; i++ {
-		ids = append(ids, i)
-	}
 	caps := []int{}
 	for i := 0; i < n; i++ {
+		ids = append(ids, i)
 		caps = append(caps, 1)
 	}
 	return UnionFind{n, ids, caps}
