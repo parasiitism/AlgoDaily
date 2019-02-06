@@ -3,6 +3,9 @@ class Solution(object):
         """
         :type matrix: List[List[int]]
         :rtype: void Do not return anything, modify matrix in-place instead.
+
+        Time    O(n)
+        Space   O(n) allocation of the new array
         """
         if clockwise:
             return self.clockewise(matrix)
