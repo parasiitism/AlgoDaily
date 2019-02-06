@@ -1,5 +1,6 @@
 """
-  Given that the input number of rows and columns are the same, rotate the matrix in-place
+    Given that the input number of rows and columns are the same, rotate the matrix in-place
+    - advanced version of leetcode 48
 """
 
 
@@ -11,6 +12,7 @@ class Solution(object):
 
         Time    O(n)
         Space   O(1) just swap+transpose in-place
+        24ms beats 94.08%
         """
         if clockwise:
             self.transpose(matrix)
@@ -27,7 +29,7 @@ class Solution(object):
     def swapCols(self, matrix):
         for i in range(len(matrix)):
             n = len(matrix[0])-1
-            for j in range(n):
+            for j in range(len(matrix[0])):
                 if n-j > j:
                     matrix[i][j], matrix[i][n-j] = matrix[i][n-j], matrix[i][j]
 
