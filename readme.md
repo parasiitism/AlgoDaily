@@ -307,3 +307,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 157 | [Four Integers](/interviews/amazon/4-integers/) | array | glassdoor | O(nlogn) |
 | 157 | [Rotate a Matrix](/interviews/amazon/rotate-matrix/) | array | glassdoor | 1st space O(n), 📌 i2nd space O(1) in-place |
 | 157 | [Rotate Image](/leetcode/48-rotate-image/) | array | [leetcode 48](https://leetcode.com/problems/rotate-image/) | 📌 inplace |
+| 157 | [Copy List with Random Pointer](/leetcode/copy-list-with-random-pointer/) | linked list | [leetcode 138](https://leetcode.com/problems/copy-list-with-random-pointer/) | ⭐️ |
