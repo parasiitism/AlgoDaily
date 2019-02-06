@@ -305,3 +305,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 156 | [Minimum Window Substring](/leetcode/76-minimum-window-substring/) | 2pointers, hashtable | [leetcode 76](https://leetcode.com/problems/minimum-window-substring/) | 1st O(n) beats 20% |
 | 157 | [LRU Cache Miss Count](/interviews/amazon/lru-cache-miss-count/) | linked list, hashtable | glassdoor | 1st O(n^2), 2nd O(n) |
 | 157 | [Four Integers](/interviews/amazon/4-integers/) | array | glassdoor | O(nlogn) |
+| 157 | [Rotate a Matrix](/interviews/amazon/rotate-matrix/) | array | glassdoor | 1st space O(n) |
