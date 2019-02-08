@@ -17,20 +17,20 @@ import "fmt"
 
 	Time    O(V+E)
 	Space   O(V)
-	28ms beats 67.27%
+	20ms beats 100%
 */
 func findOrder(numCourses int, prerequisites [][]int) []int {
 	// prepare a list to save to children for each node
-	graph := [][]int{}
+	connections := [][]int{}
 	for i := 0; i < numCourses; i++ {
-		graph = append(graph, []int{})
+		connections = append(connections, []int{})
 	}
-	// iterate though the edges and put them into the corresponding nodes in the graph
+	// iterate though the edges and put them into the corresponding nodes in the connections
 	for i := 0; i < len(prerequisites); i++ {
 		prereq := prerequisites[i]
 		prev := prereq[1]
 		cur := prereq[0]
-		graph[prev] = append(graph[prev], cur)
+		connections[prev] = append(connections[prev], cur)
 	}
 	// iterate though the nodes and see if there is a cycle
 	seen := make(map[int]int)
@@ -40,7 +40,7 @@ func findOrder(numCourses int, prerequisites [][]int) []int {
 	var exploreVertex func(curIdx int) bool
 	exploreVertex = func(curIdx int) bool {
 		seen[curIdx] = 1
-		children := graph[curIdx]
+		children := connections[curIdx]
 		for i := 0; i < len(children); i++ {
 			child := children[i]
 			if v, x := seen[child]; x {
