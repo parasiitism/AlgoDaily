@@ -80,9 +80,12 @@ class Solution(object):
         2. for each node, put the children in
             e.g. [4, 3], [1, 0], [5, 2], [5, 4], [5, 1], [2, 3]
             children list = [[], [0], [3], [], [3], [2,4,1]]
-        3. use a hashtable to store the visited node, 1=visiting, 2=visited
-        4. use a stack to store the nodes which no longer has unvisited children
-        5. the result is the stack in the reversed order
+        3. count the indegree for each node(indegree = the number of incoming edges)
+        4. put the nodes with 0 indegree into a queue
+        5. if the queue is not empty, append the dequeued node to the result and in the same time decrement it's children's indegree
+        6  after decrement, if there are nodes which has 0 indegree, put them into the queue
+        7. do 6) and 7) until the queue becomes empty
+        8. need a 'cnt' to check if there is a cycle(for detail: see comment)
 
         Time    O(V+E)
         Space   O(V)
@@ -90,27 +93,27 @@ class Solution(object):
         """
         # prepare a list to save to children for each node
         connections = []
-        indegree = []
+        indegrees = []
         for i in range(numCourses):
             connections.append([])
-            indegree.append(0)
+            indegrees.append(0)
         # iterate though the edges and put them into the corresponding node in the connections
         for prereq in prerequisites:
             prev, cur = prereq[1], prereq[0]
             connections[prev].append(cur)
-            indegree[cur] += 1
+            indegrees[cur] += 1
 
         # put the nodes which has no incoming edges
         queue = []
         for i in range(numCourses):
-            if indegree[i] == 0:
+            if indegrees[i] == 0:
                 queue.append(i)
 
-        res = []
         # a count to check if the graph has a cycle
         # if there is a cycle, there will be a node's indegree never becomes 0
         # it means it will not be push to the queue therefore the the cnt will be inconsistent with the numCourses
         cnt = 0
+        res = []
         while len(queue) > 0:
             head = queue.pop(0)
             res.append(head)
@@ -118,9 +121,9 @@ class Solution(object):
             children = connections[head]
             for child in children:
                 # subtract 1 for all destinations which the current node points(prereq) to
-                indegree[child] -= 1
+                indegrees[child] -= 1
                 # if indegree of that child is 0, out it to the queue
-                if indegree[child] == 0:
+                if indegrees[child] == 0:
                     queue.append(child)
 
         if cnt == numCourses:
