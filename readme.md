@@ -315,3 +315,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 159 | [Course Schedule II](/leetcode/210-course-schedule-ii/) | graph | [leetcode 210](https://leetcode.com/problems/210-course-schedule-ii/) | 📌 DFS, BFS |
 | 160 | [Order Dependency](/interviews/amazon/order-dependency/) | graph | glassdoor | 📌 DFS, BFS |
 | 160 | [Graph Valid Tree](/leetcode/261-graph-valid-tree/) | graph, union find | [leetcode 261](https://leetcode.com/problems/graph-valid-tree/) | 📌 1st union find O(nlogn) beats 100% |
+| 160 | [Merge Strings](/interviews/amazon/merge-strings/) | array | glassdoor | ⭐️ very similar to ZigZag iterator |

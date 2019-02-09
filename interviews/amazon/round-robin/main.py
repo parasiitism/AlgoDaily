@@ -19,7 +19,7 @@ def roundRobin1(arrivals, executions, quantum):
         - use a queue
         - put the first item first
     """
-    if len(arrivals) == 0 or len(executions) == 0 or len(arrivals) != len(executions):
+    if len(arrivals) == 0 or len(executions) == 0 or len(arrivals) != len(executions) or quantum == 0:
         return 0
     q = []
     curTime = 0
@@ -38,7 +38,7 @@ def roundRobin1(arrivals, executions, quantum):
         totalWait += curTime - arr
         # task got done, update the current time
         curTime += min(quantum, exc)
-        # put the tasks to the queue which the arrival time < current time
+        # put the tasks to the queue which the arrival time <= current time
         while i < len(arrivals) and arrivals[i] <= curTime:
             q.append((arrivals[i], executions[i]))
             i += 1
@@ -56,6 +56,8 @@ def roundRobin2(arrivals, executions, quantum):
         - use a queue
         - put the items in the loop
     """
+    if len(arrivals) == 0 or len(executions) == 0 or len(arrivals) != len(executions) or quantum == 0:
+        return 0
     q = []
     curTime = 0
     totalWait = 0
@@ -93,3 +95,6 @@ print(roundRobin2([0, 1, 3, 5, 6], [5, 3, 6, 1, 4], 3))
 print(roundRobin2([0, 1, 2, 3], [5, 3, 8, 6], 3))
 # 2.3333333
 print(roundRobin2([0, 1, 4], [5, 2, 3], 3))
+
+# start from 1s, 7.2
+print(roundRobin2([1, 1, 3, 5, 6], [5, 3, 6, 1, 4], 3))
