@@ -245,7 +245,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 144 | [Subtree with Maximum Average](/interviews/amazon/subtree-with-maximum-average) | tree | 1point3acres |  |
 | 144 | [Divide Two Integers](/leetcode/29-divide-two-integers) | math | [leetcode 29](https://leetcode.com/problems/divide-two-integers/) | 📌 classic question in hk interviews |
 | 144 | [Product of Array Except Self](/leetcode/238-product-of-array-except-self) | math | [leetcode 238](https://leetcode.com/problems/product-of-array-except-self/) | using / got beting 60%. naive got TLE, proper approach 2836ms beats 5.92% |
-| 145 | [Find Distinct Substrings with Exactly K Distinct Characters](/interviews/amazon/distinct-substrings-k-distinct-characters) | backtracking, recursion | | 📌 similar to [Combinations](/leetcode/77-combinations) |
 | 145 | [K Closest Points to Origin](/leetcode/973-k-closest-points-to-origin) | sort, heap | [leetcode 973](https://leetcode.com/problems/k-closest-points-to-origin/) | 📌 1st beats 72.46%. 2nd beats 98.95% in python |
 | 145 | [Gray Code](/leetcode/89-gray-code) | array, bit op | [leetcode 89](https://leetcode.com/problems/gray-code/) | 🤔 interesting |
 | 145 | [Longest Substring with At Most Two Distinct Characters](/leetcode/159-longest-substring-with-at-most-two-distinct-characters) | array, hashtable | [leetcode 159](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) | 1st, 2nd beat 17.65% |
@@ -316,3 +315,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 160 | [Order Dependency](/interviews/amazon/order-dependency/) | graph | glassdoor | 📌 DFS, BFS |
 | 160 | [Graph Valid Tree](/leetcode/261-graph-valid-tree/) | graph, union find | [leetcode 261](https://leetcode.com/problems/graph-valid-tree/) | 📌 1st union find O(nlogn) beats 100% |
 | 160 | [Merge Strings](/interviews/amazon/merge-strings/) | array | glassdoor | ⭐️ very similar to ZigZag iterator |
+| 160 | [Find Distinct Substrings with Exactly K Distinct Characters](/interviews/amazon/distinct-substrings-k-distinct-characters) | array | | 📌1st O(n^3) |
