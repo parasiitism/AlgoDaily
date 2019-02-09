@@ -311,5 +311,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 158 | [Path Sum IV](/leetcode/666-path-sum-iv/) | linked list | [leetcode 138](https://leetcode.com/problems/path-sum-iv/) | 1st O(4n) |
 | 158 | [Binary Tree Vertical Order Traversal](/leetcode/314-binary-tree-vertical-order-traversal/) | tree | [leetcode 314](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | 1st recursive, 2nd iterative, both O(n) |
 | 158 | [Course Schedule](/leetcode/207-course-schedule/) | graph | [leetcode 207](https://leetcode.com/problems/course-schedule/) | 1st LTE, 📌 2nd Classic Approach: Topological Ordering |
-| 159 | [Course Schedule II](/leetcode/210-course-schedule-ii/) | graph | [leetcode 210](https://leetcode.com/problems/210-course-schedule-ii/) | 📌 1st: [Topological Ordering in DFS](https://www.youtube.com/watch?v=ddTC4Zovtbc) 2nd: [Topological Ordering in BFS/Khan's](https://www.youtube.com/watch?v=_LuIvEi_kZk) |
-| 159 | [Order Dependency](/interviews/amazon/order-dependency/) | graph | glassdoor | 📌 1st: Topological Ordering in DFS |
+| 159 | [Topological Ordering](/miscellaneous/topological-sort/) | graph | study | 📌 1st: [Topological Ordering with DFS](https://www.youtube.com/watch?v=ddTC4Zovtbc) 📌 2nd: [Topological Ordering with BFS/Khan's](https://www.youtube.com/watch?v=_LuIvEi_kZk) |
+| 159 | [Course Schedule II](/leetcode/210-course-schedule-ii/) | graph | [leetcode 210](https://leetcode.com/problems/210-course-schedule-ii/) | 📌 DFS, BFS |
+| 160 | [Order Dependency](/interviews/amazon/order-dependency/) | graph | glassdoor | 📌 DFS, BFS |

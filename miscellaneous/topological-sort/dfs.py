@@ -6,33 +6,33 @@ class Solution(object):
         :rtype: List[int]
         """
         # prepare a list to save to children for each node
-        graph = []
+        connections = []
         for i in range(numCourses):
-            graph.append([])
-        # iterate though the edges and put them into the corresponding node in the graph
+            connections.append([])
+        # iterate though the edges and put them into the corresponding node in the connections
         for prereq in prerequisites:
             pre, cur = prereq[0], prereq[1]
-            graph[pre].append(cur)
+            connections[pre].append(cur)
         # iterate all the vertexes
         seen = set()
         stack = []
         for i in range(numCourses):
             if i in seen:
                 continue
-            self.exploreVertex(graph, i, seen, stack)
+            self.exploreVertex(connections, i, seen, stack)
         # result is the stack in a reversed order
         res = []
         while len(stack) > 0:
             res.append(stack.pop())
         return res
 
-    def exploreVertex(self, graph, curIdx, seen, stack):
+    def exploreVertex(self, connections, curIdx, seen, stack):
         seen.add(curIdx)
-        children = graph[curIdx]
+        children = connections[curIdx]
         for child in children:
             if child in seen:
                 continue
-            self.exploreVertex(graph, child, seen, stack)
+            self.exploreVertex(connections, child, seen, stack)
         stack.append(curIdx)
 
 

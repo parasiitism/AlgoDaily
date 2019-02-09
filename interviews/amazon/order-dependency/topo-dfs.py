@@ -1,5 +1,6 @@
 """
-    Topological Sorting/Ordering
+    Topological Sorting/Ordering with DFS
+
     1. create a list to save to children for each node
     2. for each node, put the children in
         e.g. [4, 3], [1, 0], [5, 2], [5, 4], [5, 1], [2, 3]
