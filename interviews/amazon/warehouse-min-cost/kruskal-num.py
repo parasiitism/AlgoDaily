@@ -38,7 +38,7 @@ def warehouseMinCost(edges):
 
 class UnionFind(object):
     def __init__(self, n):
-        self.count = 0
+        self.count = n
         self.ids = []
         self.caps = []
         for i in range(n):

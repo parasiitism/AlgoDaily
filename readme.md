@@ -12,7 +12,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 - N-aray Tree(Trie)
 - Stack
 - Queue
-- Graph(Dijkstra, Union Find, Minimum Spanning Tree, Topological Ordering...etc)
+- Graph(Dijkstra, Union Find, Kruskal, Prim's, Minimum Spanning Tree, Topological Ordering...etc)
 - Hash table
 - Bit Operation
 - Sorting
@@ -314,3 +314,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 159 | [Topological Ordering](/miscellaneous/topological-sort/) | graph | study | 📌 1st: [Topological Ordering with DFS](https://www.youtube.com/watch?v=ddTC4Zovtbc) 📌 2nd: [Topological Ordering with BFS/Khan's](https://www.youtube.com/watch?v=_LuIvEi_kZk) |
 | 159 | [Course Schedule II](/leetcode/210-course-schedule-ii/) | graph | [leetcode 210](https://leetcode.com/problems/210-course-schedule-ii/) | 📌 DFS, BFS |
 | 160 | [Order Dependency](/interviews/amazon/order-dependency/) | graph | glassdoor | 📌 DFS, BFS |
+| 160 | [Graph Valid Tree](/leetcode/261-graph-valid-tree/) | graph, union find | [leetcode 261](https://leetcode.com/problems/graph-valid-tree/) | 📌 1st union find O(nlogn) beats 100% |
