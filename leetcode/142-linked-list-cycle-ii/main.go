@@ -34,21 +34,57 @@ func detectCycle1(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
 	}
-	fast := head.Next
 	slow := head
+	fast := head.Next
 	for fast != nil && fast.Next != nil && slow != nil {
 		if fast == slow {
 			break
 		}
-		fast = fast.Next.Next
 		slow = slow.Next
+		fast = fast.Next.Next
 	}
 	// no cycle
 	if fast != slow {
 		return nil
 	}
 	slow = head
-	fast = head.Next
+	fast = fast.Next
+	for slow != fast {
+		slow = slow.Next
+		fast = fast.Next
+	}
+	return slow // fast
+}
+
+// easier to understand the classic approach
+// 1. check if there is a cycle
+// 2. slow pointer => a+b+c+b= 2(a+b) <= fast pointer
+// 													a=c
+// see ./idea.jpeg
+// time 	O(n)
+// space	O(1)
+// 8ms beats 100%
+func detectCycle2(head *ListNode) *ListNode {
+	if head == nil {
+		return nil
+	}
+	slow := head
+	fast := head
+	var intersection *ListNode
+	for fast != nil && fast.Next != nil && slow != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+		if fast == slow {
+			intersection = slow
+			break
+		}
+	}
+	// no cycle
+	if intersection == nil {
+		return nil
+	}
+	slow = head
+	fast = intersection
 	for slow != fast {
 		slow = slow.Next
 		fast = fast.Next
