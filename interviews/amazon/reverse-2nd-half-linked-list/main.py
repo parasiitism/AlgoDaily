@@ -18,7 +18,8 @@ class Solution(object):
         1st approach
         - use a dump head
         """
-
+        if head == None:
+            return None
         # very important:
         # find the midpoint's parent instead of the midpoint
         # such that we can mutate the 2nd half
@@ -55,7 +56,8 @@ class Solution1(object):
         1st approach
         - mutate the slow pointer directly
         """
-
+        if head == None:
+            return None
         # very important:
         # find the midpoint's parent instead of the midpoint
         # such that we can mutate the 2nd half

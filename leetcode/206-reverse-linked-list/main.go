@@ -44,10 +44,10 @@ func reverseList1(head *ListNode) *ListNode {
 	}
 	cur := head
 	for head.Next != nil { // since we are replacing the head.next, the loop should end when there is no next
-		temp := head.Next     // the middle node
-		head.Next = temp.Next // or head.Next.Next
-		temp.Next = cur       // put the middle node in front of cur
-		cur = temp            // assign cur as head
+		temp := head.Next          // the middle node
+		head.Next = head.Next.Next // or head.Next.Next
+		temp.Next = cur            // put the middle node in front of cur
+		cur = temp                 // assign cur as head
 	}
 	return cur
 }
