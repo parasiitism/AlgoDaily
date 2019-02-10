@@ -29,6 +29,7 @@ def cellsMutation(cells, k):
         return []
     cnt = 0
     nextCells = [0]+cells+[0]
+    k = k % 8
     while cnt < k:
         temp = []
         temp.append(0)
@@ -45,3 +46,5 @@ def cellsMutation(cells, k):
 
 print(cellsChange([1, 0, 0, 0, 0, 1, 0, 0], 1))
 print(cellsChange([1, 0, 0, 0, 0, 1, 0, 0], 2))
+print(cellsChange([1, 0, 0, 0, 0, 1, 0, 0], 3))
+print(cellsChange([1, 0, 0, 0, 0, 1, 0, 0], 8))
