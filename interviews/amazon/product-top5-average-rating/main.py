@@ -27,16 +27,16 @@ def top5average(products):
         else:
             ht[key] = [val]
     # calculate the average
-    res = []
+    res = {}
     for k in ht:
         v = ht[k]
         if len(v) > 5:
             v = v[:5]
             avr = sum(v)/5.0
-            res.append(avr)
+            res[k] = avr
         else:
             avr = sum(v)/float(len(v))
-            res.append(avr)
+            res[k] = avr
     return res
 
 
