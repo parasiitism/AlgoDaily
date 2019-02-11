@@ -1,5 +1,5 @@
 """
-    Found the greatest common divisor between 2 numbers
+    Find the greatest common divisor between 2 numbers
 
     Questions:
     - negtive numbers?
@@ -7,42 +7,43 @@
 """
 
 
-def findGCD(num1, num2):
-    """
-        Euclidian Algorithm
-        - be careful of the corner cases
-    """
-    if num1 == num2:
-        return num1
-    if num1 == 0 or num2 == 0:
-        return 0
+class Solution(object):
+    def gcd(self, arr):
+        """
+            Euclidian Algorithm
+            dividend = divisor*quotient+remainder
+            100=45*2+10
+            45=10*4+5
+            10=5*2+0
+            in the last row, the remainder is 0, therefore 5 is the common divisor
+        """
+        if len(arr) == 0:
+            return 0
+        res = arr[0]
+        for i in range(1, len(arr)):
+            res = self.findGcd(res, arr[i])
+        return res
 
-    dividend = 0
-    divisor = 0
-    if num1 < num2:
-        dividend = num2
-        divisor = num1
-    else:
-        dividend = num1
-        divisor = num2
-
-    while True:
-        mode = dividend % divisor
-        if mode == 0:
-            break
-        else:
+    def findGcd(self, a, b):
+        if a == 0 or b == 0:
+            return 0
+        dividend = max(a, b)
+        divisor = min(a, b)
+        while divisor != 0:
+            remainder = dividend % divisor
+            if remainder == 0:
+                break
             dividend = divisor
-            divisor = mode
+            divisor = remainder
+        return divisor
 
-    return divisor
 
-
-print(findGCD(34, 306))
-print(findGCD(1701, 3768))
-print(findGCD(-1701, 3768))  # ?
-print(findGCD(1701, -3768))  # ?
-print(findGCD(-1701, -3768))  # ?
-print(findGCD(1, 2))
-print(findGCD(34, 34))
-print(findGCD(0, 306))
-print(findGCD(34, 0))
+print(Solution().gcd([1206, 3768, 366]))
+print(Solution().gcd(
+    [2 * 11 * 13 * 17 * 19 * 23, 13 * 17 * 23 * 3, 2 * 13 * 17]))
+print(Solution().gcd([17, 19, 11]))
+print(Solution().gcd([-1701, 3768]))  # ?
+print(Solution().gcd([1701, -3768]))  # ?
+print(Solution().gcd([-1701, -3768]))  # ?
+print(Solution().gcd([1, 2]))
+print(Solution().gcd([]))
