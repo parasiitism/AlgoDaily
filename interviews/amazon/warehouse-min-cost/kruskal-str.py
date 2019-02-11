@@ -14,7 +14,6 @@ def warehouseMinCost(edges):
     Cautions
     - u r given all the edges
     - ids are strings
-    - we are sure that all the edges belong to the same set/cluster
     """
     wareHousesSet = set()
     for edge in edges:
@@ -32,15 +31,17 @@ def warehouseMinCost(edges):
         if c1 != c2:
             c.union(edge[0], edge[1])
             res.append(edge)
+    if c.getCount() > 1:
+        return []
     return res
 
 
 class UnionFind(object):
-    def __init__(self, vertexes):
-        self.count = 0
+    def __init__(self, vertices):
+        self.count = len(vertices)
         self.ids = {}
         self.caps = {}
-        for vertex in vertexes:
+        for vertex in vertices:
             self.ids[vertex] = vertex
             self.caps[vertex] = 1
 
@@ -79,13 +80,29 @@ class UnionFind(object):
         return self.find(p) == self.find(q)
 
 
-a = [('a', 'b', 4),
-     ('a', 'f', 2),
-     ('b', 'f', 5),
-     ('b', 'c', 6),
-     ('c', 'f', 1),
-     ('d', 'e', 2),
-     ('e', 'f', 4),
-     ('c', 'd', 3)]
+a = [
+    ('a', 'b', 4),
+    ('a', 'f', 2),
+    ('b', 'f', 5),
+    ('b', 'c', 6),
+    ('c', 'f', 1),
+    ('d', 'e', 2),
+    ('e', 'f', 4),
+    ('c', 'd', 3)
+]
+
+print(warehouseMinCost(a))
+
+a = [
+    ('a', 'b', 4),
+    ('a', 'f', 2),
+    ('b', 'f', 5),
+    ('b', 'c', 6),
+    ('c', 'f', 1),
+    ('d', 'e', 2),
+    ('e', 'f', 4),
+    ('c', 'd', 3),
+    ('g', 'h', 1),
+]
 
 print(warehouseMinCost(a))

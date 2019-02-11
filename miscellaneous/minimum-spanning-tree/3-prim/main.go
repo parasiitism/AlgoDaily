@@ -15,9 +15,9 @@ import (
 	- use finbonacci heap to sort the edges
 
 	️️⭐️ Kruskal vs Prim, we should use Prim
-	- when the graph is dense, number of edges(E) > number of vertexes(V) ,like E > V^2
+	- when the graph is dense, number of edges(E) > number of vertices(V) ,like E > V^2
 
-	Time	O(E log V) E: number of edges, V: number of vertexes
+	Time	O(E log V) E: number of edges, V: number of vertices
 	Space	O(E + V) hashtable + heap
 */
 func miniumSpanningTree(edges [][]int) [][]int {

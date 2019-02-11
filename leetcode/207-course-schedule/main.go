@@ -19,7 +19,7 @@ import "fmt"
 	3. dfs each node to see if there is a cycle
 	4. return true if no cycle
 
-	Time	O(V+E) V: number of vertexes, E: number og edges
+	Time	O(V+E) V: number of vertices, E: number og edges
 	Space	O(V)
 
 	16ms beats 94.81%

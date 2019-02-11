@@ -27,7 +27,7 @@ class Solution(object):
         for prereq in prerequisites:
             prev, cur = prereq[1], prereq[0]
             connections[prev].append(cur)
-        # iterate all the vertexes
+        # iterate all the vertices
         seen = {}
         stack = []
         for i in range(numCourses):

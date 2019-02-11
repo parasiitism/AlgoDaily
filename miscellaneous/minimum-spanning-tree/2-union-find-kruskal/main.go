@@ -18,7 +18,7 @@ import (
 	- if the weights are dicrete and the range is known, sort the edges with a bucket-sort in linear time O(n)
 
 	⭐️ Kruskal vs Prim, we should use Kruskal
-	- when the graph is sparse, number of edges(E) ~= number of vertexes(V) ,like E ~= V
+	- when the graph is sparse, number of edges(E) ~= number of vertices(V) ,like E ~= V
 	- when the edges are already sorted or if we can sort them in linear time
 
 	Time		O(E log E) E: number of edges
