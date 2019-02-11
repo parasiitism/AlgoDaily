@@ -1,6 +1,6 @@
 """
     Given that the input number of rows and columns are the same, rotate the matrix in-place
-    - advanced version of leetcode 48
+    - an advanced version of leetcode 48
 """
 
 

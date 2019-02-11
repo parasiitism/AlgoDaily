@@ -43,5 +43,21 @@ a.right = c
 b.left = d
 b.right = e
 c.left = f
+print(Solution().treeAmplitude(a))
 
+
+#       8
+#    2     3
+#  4 5    6
+a = TreeNode(8)
+b = TreeNode(2)
+c = TreeNode(3)
+d = TreeNode(4)
+e = TreeNode(5)
+f = TreeNode(6)
+a.left = b
+a.right = c
+b.left = d
+b.right = e
+c.left = f
 print(Solution().treeAmplitude(a))
