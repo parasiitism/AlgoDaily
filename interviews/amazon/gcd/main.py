@@ -16,6 +16,9 @@ class Solution(object):
             45=10*4+5
             10=5*2+0
             in the last row, the remainder is 0, therefore 5 is the common divisor
+
+            Time    O(n)
+            Space   O(1)
         """
         if len(arr) == 0:
             return 0

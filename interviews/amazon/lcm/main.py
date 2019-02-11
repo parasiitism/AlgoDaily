@@ -1,40 +1,54 @@
-def findGCD(num1, num2):
-    """
-        Euclidian Algorithm
-        - be careful of the corner cases
-    """
-    if num1 == num2:
-        return num1
-    if num1 == 0 or num2 == 0:
-        return 0
+"""
+    Find the LCM between n numbers
 
-    dividend = 0
-    divisor = 0
-    if num1 < num2:
-        dividend = num2
-        divisor = num1
-    else:
-        dividend = num1
-        divisor = num2
+    Questions:
+    - negtive numbers?
+    - zeros?
+"""
 
-    while True:
-        mode = dividend % divisor
-        if mode == 0:
-            break
-        else:
+
+class Solution(object):
+    def lcm(self, nums):
+        """
+            a * b = lcm * gcd, we can use the gcd to find lcm using lcm = a*b/gcd
+            To find the gcd, we can use Euclidian Algorithm
+            100=45*2+10
+            45=10*4+5
+            10=5*2+0
+            in the last row, the remainder is 0, therefore 5 is the common divisor
+
+            Time    O(n)
+            Space   O(1)
+        """
+        if len(nums) == 0:
+            return 0
+        res = nums[0]
+        for i in range(1, len(nums)):
+            res = self.findLcm(res, nums[i])
+        return res
+
+    def findLcm(self, a, b):
+        if a == 0 or b == 0:
+            return 0
+        return a * b / self.findGcd(a, b)
+
+    def findGcd(self, a, b):
+        if a == 0 or b == 0:
+            return 0
+        dividend = max(a, b)
+        divisor = min(a, b)
+        while divisor != 0:
+            remainder = dividend % divisor
+            if remainder == 0:
+                break
             dividend = divisor
-            divisor = mode
-
-    return divisor
-
-
-# use the GCD
-# num1 * num2 = LCM * GCD
-def findLCM(num1, num2):
-    return num1*num2/findGCD(num1, num2)
+            divisor = remainder
+        return divisor
 
 
-print(findLCM(54, 24))
+print(Solution().lcm([3, 2]))
+print(Solution().lcm([0, 6]))
+print(Solution().lcm([38, 85]))
 
 
 # don't use GCD
