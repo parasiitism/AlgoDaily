@@ -317,3 +317,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 160 | [Merge Strings](/interviews/amazon/merge-strings/) | array | glassdoor | ⭐️ very similar to ZigZag iterator |
 | 160 | [Find Distinct Substrings with Exactly K Distinct Characters](/interviews/amazon/distinct-substrings-k-distinct-characters) | array | | 📌1st O(n^3), 2nd O(n^2) |
 | 161 | [Reorder Log Files](/leetcode/937-reorder-log-files) | array | [leetcode 937](https://leetcode.com/problems/reorder-log-files/) | 1st O(nlogn) |
+| 161 | [Dijkstra's Algorithm on a Directed Graph](/miscellaneous/dijkstra) | graph | study | 📌 |
