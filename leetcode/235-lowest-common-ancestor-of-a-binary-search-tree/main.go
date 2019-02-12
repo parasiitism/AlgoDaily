@@ -6,27 +6,29 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+/*
+	idea similar to binary search
+	- if p and q < current node, move the current to the left
+	- if p and q > current node, move the current to the right
+	- if current node is between p and q, this is the answer
+
+	Time	O(logn) -> O(n). O(logn) if the tree is complete, O(n) if the tree is like a linked list
+	Space O(h)
+
+	28 ms, faster than 98.46%
+*/
 func LowestCommonAncestor(root *TreeNode, p *TreeNode, q *TreeNode) *TreeNode {
-	curr := root
-	var left *TreeNode
-	var right *TreeNode
-	if p.Val < q.Val {
-		left = p
-		right = q
-	} else {
-		left = q
-		right = p
-	}
+	parent := root
 	for true {
-		if curr.Left != nil && right.Val < curr.Val {
-			curr = curr.Left
-		} else if curr.Right != nil && left.Val > curr.Val {
-			curr = curr.Right
+		if p.Val < parent.Val && q.Val < parent.Val {
+			parent = parent.Left
+		} else if p.Val > parent.Val && q.Val > parent.Val {
+			parent = parent.Right
 		} else {
 			break
 		}
 	}
-	return curr
+	return parent
 }
 
 func main() {
