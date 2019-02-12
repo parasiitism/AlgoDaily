@@ -2,15 +2,19 @@
 import sys
 
 # Definition for a binary tree node.
+
+
 class TreeNode(object):
-  def __init__(self, x):
-    self.val = x
-    self.left = None
-    self.right = None
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 # my intuitive solution:
 # get the paths, compare the paths
-# O(p+q+min(p,q)) = O(3k) = O(n) TLE 🙄
+# O(p+q+min(p,q)) = O(3k) = O(n) TLE
+
+
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
         """
@@ -38,10 +42,10 @@ class Solution(object):
         while i < minLen:
             if longer[i].val != shorter[i].val:
                 break
-            i=i+1
+            i = i+1
 
         return longer[i-1]
-    
+
     def dfs(self, node, target, route):
         if node is None:
             return None
@@ -54,6 +58,8 @@ class Solution(object):
 # suggested solution:
 # recursion ./236.png
 # O(n)
+
+
 class Solution1(object):
     def lowestCommonAncestor(self, root, p, q):
         if root == None or root == p or root == q:
@@ -64,10 +70,11 @@ class Solution1(object):
             return root
         return left if left != None else right
 
+
 #     5
 #   3   6
 # 2  4
-#1
+# 1
 a = TreeNode(5)
 b = TreeNode(3)
 c = TreeNode(6)
@@ -81,5 +88,5 @@ b.right = e
 d.left = f
 
 print("ada")
-ans = Solution().lowestCommonAncestor(a, TreeNode(3), TreeNode(6))
+ans = Solution1().lowestCommonAncestor(a, d, e)
 print("ans=", ans.val)
