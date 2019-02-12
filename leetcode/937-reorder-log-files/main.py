@@ -27,7 +27,7 @@ class Solution(object):
             else:
                 temp = ""
                 for i in range(1, len(words)):
-                    temp += words[i]
+                    temp += words[i] + " "
                 temp += words[0]
                 letters.append((log, temp))
         letters = sorted(letters, key=lambda x: x[1])
