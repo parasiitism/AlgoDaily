@@ -241,7 +241,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 143 | [Reverse Only Letters](/leetcode/917-reverse-only-letters) | array | [leetode 917](https://leetcode.com/problems/reverse-only-letters/) | |
 | 143 | [Flipping an Image](/leetcode/832-flipping-an-image) | array | [leetode 832](https://leetcode.com/problems/flipping-an-image/) | |
 | 144 | [Most Common Word](/leetcode/819-most-common-word) | string | [leetode 819](https://leetcode.com/problems/most-common-word/) | takeaway: python=>`re.split(r'\W+', paragraph)`. go=>`regexp.MustCompile(`[!?',;. ]`)`. js=>`paragraph.split(/[!?',;. ]/)`|
-| 144 | [Most Common Word](/leetcode/572-subtree-of-another-tree) | tree | [leetode 572](https://leetcode.com/problems/subtree-of-another-tree/) | 1st 24ms beats 100% |
+| 144 | [Subtree of Another Tree](/leetcode/572-subtree-of-another-tree) | tree | [leetode 572](https://leetcode.com/problems/subtree-of-another-tree/) | 1st 24ms beats 100% |
 | 144 | [Subtree with Maximum Average](/interviews/amazon/subtree-with-maximum-average) | tree | 1point3acres |  |
 | 144 | [Divide Two Integers](/leetcode/29-divide-two-integers) | math | [leetcode 29](https://leetcode.com/problems/divide-two-integers/) | 📌 classic question in hk interviews |
 | 144 | [Product of Array Except Self](/leetcode/238-product-of-array-except-self) | math | [leetcode 238](https://leetcode.com/problems/product-of-array-except-self/) | using / got beting 60%. naive got TLE, proper approach 2836ms beats 5.92% |
@@ -316,3 +316,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 160 | [Graph Valid Tree](/leetcode/261-graph-valid-tree/) | graph, union find | [leetcode 261](https://leetcode.com/problems/graph-valid-tree/) | 📌 1st union find O(nlogn) beats 100% |
 | 160 | [Merge Strings](/interviews/amazon/merge-strings/) | array | glassdoor | ⭐️ very similar to ZigZag iterator |
 | 160 | [Find Distinct Substrings with Exactly K Distinct Characters](/interviews/amazon/distinct-substrings-k-distinct-characters) | array | | 📌1st O(n^3), 2nd O(n^2) |
+| 161 | [Reorder Log Files](/leetcode/937-reorder-log-files) | array | [leetcode 937](https://leetcode.com/problems/reorder-log-files/) | 1st O(nlogn) |
