@@ -29,7 +29,7 @@ class Dependency(object):
         self.pre = pre
 
 
-def find(dependencies):
+def topologicalOrderingBFS(dependencies):
     connections = {}
     indegrees = {}
     nodesSet = set()
@@ -81,6 +81,7 @@ def find(dependencies):
     return []
 
 
+# normal 1: https://www.jianshu.com/p/deceb6173865 0->5 => f->a
 a = Order('a')
 b = Order('b')
 c = Order('c')
@@ -96,5 +97,65 @@ dependencies = [
     Dependency(e, f),
     Dependency(e, b),
 ]
+print(topologicalOrderingBFS(dependencies))
 
-print(find(dependencies))
+# normal 2: https://www.youtube.com/watch?v=ddTC4Zovtbc
+a = Order('a')
+b = Order('b')
+c = Order('c')
+d = Order('d')
+e = Order('e')
+f = Order('f')
+g = Order('g')
+h = Order('h')
+dependencies = [
+    Dependency(g, f),
+    Dependency(f, d),
+    Dependency(d, b),
+    Dependency(f, e),
+    Dependency(h, e),
+    Dependency(e, c),
+    Dependency(c, b),
+    Dependency(c, a),
+]
+print(topologicalOrderingBFS(dependencies))
+
+# 2 graphs
+a = Order('a')
+b = Order('b')
+c = Order('c')
+d = Order('d')
+e = Order('e')
+f = Order('f')
+g = Order('g')
+h = Order('h')
+dependencies = [
+    Dependency(a, b),
+    Dependency(d, e),
+    Dependency(d, c),
+    Dependency(c, f),
+    Dependency(b, f),
+    Dependency(e, f),
+    Dependency(e, b),
+    Dependency(g, h),
+]
+print(topologicalOrderingBFS(dependencies))
+
+# cyclic
+a = Order('a')
+b = Order('b')
+c = Order('c')
+d = Order('d')
+e = Order('e')
+f = Order('f')
+dependencies = [
+    Dependency(a, b),
+    Dependency(d, e),
+    Dependency(d, c),
+    Dependency(c, f),
+    Dependency(b, f),
+    Dependency(e, f),
+    Dependency(e, b),
+    Dependency(f, d),
+]
+print(topologicalOrderingBFS(dependencies))
