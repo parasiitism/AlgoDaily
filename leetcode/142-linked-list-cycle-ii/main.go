@@ -71,7 +71,7 @@ func detectCycle2(head *ListNode) *ListNode {
 	slow := head
 	fast := head
 	var intersection *ListNode
-	for fast != nil && fast.Next != nil && slow != nil {
+	for fast != nil && fast.Next != nil {
 		slow = slow.Next
 		fast = fast.Next.Next
 		if fast == slow {

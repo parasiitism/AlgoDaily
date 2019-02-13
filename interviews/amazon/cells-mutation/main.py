@@ -24,12 +24,13 @@ def cellsMutation(cells, k):
     """
         Time    O(kn)
         Space   O(n)
+
+        passed 12 out of 12 testcases
     """
-    if len(cells) < 1 or k < 1:
+    if len(cells) < 1 or k < 0:
         return []
     cnt = 0
     nextCells = [0]+cells+[0]
-    k = k % 8
     while cnt < k:
         temp = []
         temp.append(0)

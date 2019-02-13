@@ -19,6 +19,8 @@ class Solution(object):
 
             Time    O(n)
             Space   O(1)
+
+            amcat amazon: passed 13 out of 13 testcases
         """
         if len(arr) == 0:
             return 0
