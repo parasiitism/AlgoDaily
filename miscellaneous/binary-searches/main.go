@@ -23,6 +23,55 @@ func CommonBinarySearch(arr []int, target int) int {
 	return -1
 }
 
+// find the number than smaller or equal to the target
+// e.g. 1
+// 12345, search for 4
+// ans = index = 3
+// e.g. 2
+// 1357, search for 4
+// ans = index = 1
+func CommonBinarySearchNoLargerThanTarget(arr []int, target int) int {
+	min := 0
+	max := len(arr) - 1
+	for min <= max {
+		mean := (min + max) / 2
+		if target == arr[mean] {
+			return mean
+		} else if target > arr[mean] {
+			min = mean + 1
+		} else if target < arr[mean] {
+			max = mean - 1
+		}
+	}
+	return max
+}
+
+// find the number than smaller or equal to the target
+// e.g. 1
+// 12345, search for 4
+// ans = index = 3
+// e.g. 2
+// 1357, search for 4
+// ans = index = 2
+func CommonBinarySearchNoSmallerThanTarget(arr []int, target int) int {
+	min := 0
+	max := len(arr) - 1
+	for min <= max {
+		mean := (min + max) / 2
+		if target == arr[mean] {
+			return mean
+		} else if target > arr[mean] {
+			min = mean + 1
+		} else if target < arr[mean] {
+			max = mean - 1
+		}
+	}
+	if min == len(arr) {
+		return -1
+	}
+	return min
+}
+
 // lower bound
 // 1233345, search for 3
 // ans = index = 2
@@ -107,14 +156,35 @@ func recursion(arr []int, min int, max int, target int) int {
 }
 
 func main() {
+
+	// common
+	fmt.Println("----normal----")
 	a := []int{1, 2, 3, 4, 5}
-	b := []int{1, 2, 3, 3, 3, 4, 6}
 	fmt.Println(CommonBinarySearch(a, 4))
-	fmt.Println(LowerBoundBinarySearch(b, 6))
-	fmt.Println(UpperBoundBinarySearch(b, 6))
 	fmt.Println(RecursiveBinarySearch(a, 2))
-	c := []int{2, 3, 6, 8}
-	fmt.Println(LowerBoundBinarySearch(c, 7))
+
+	// smaller than or equal to
+	fmt.Println("----smaller than or equal to----")
+	b := []int{1, 3, 5, 7}
+	fmt.Println(CommonBinarySearchNoLargerThanTarget(b, 0))
+	fmt.Println(CommonBinarySearchNoLargerThanTarget(b, 2))
+	fmt.Println(CommonBinarySearchNoLargerThanTarget(b, 4))
+	fmt.Println(CommonBinarySearchNoLargerThanTarget(b, 6))
+	fmt.Println(CommonBinarySearchNoLargerThanTarget(b, 8))
+
+	// equal to or larger than
+	fmt.Println("----equal to or larger than----")
+	fmt.Println(CommonBinarySearchNoSmallerThanTarget(b, 0))
+	fmt.Println(CommonBinarySearchNoSmallerThanTarget(b, 2))
+	fmt.Println(CommonBinarySearchNoSmallerThanTarget(b, 4))
+	fmt.Println(CommonBinarySearchNoSmallerThanTarget(b, 6))
+	fmt.Println(CommonBinarySearchNoSmallerThanTarget(b, 8))
+
+	// boundaries
+	fmt.Println("----boundaries----")
+	c := []int{1, 2, 3, 3, 3, 4, 6}
+	fmt.Println(LowerBoundBinarySearch(c, 6))
+	fmt.Println(UpperBoundBinarySearch(c, 6))
 }
 
 // no test cases, i am lazy
