@@ -318,6 +318,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 160 | [Find Distinct Substrings with Exactly K Distinct Characters](/interviews/amazon/distinct-substrings-k-distinct-characters) | array | | 📌1st O(n^3), 2nd O(n^2) |
 | 161 | [Reorder Log Files](/leetcode/937-reorder-log-files) | array | [leetcode 937](https://leetcode.com/problems/reorder-log-files/) | 1st O(nlogn) |
 | 161 | [Dijkstra's Algorithm on a Directed Graph](/miscellaneous/dijkstra) | graph | study | 📌 |
+| 161 | [Dijkstra's Algorithm on an Undirected Graph](/miscellaneous/dijkstra) | graph | study | 📌 |
 | 161 | [Find All Anagrams in a String](/leetcode/438-find-all-anagrams-in-a-string) | string | [leetcode 438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | 1st O(kn) |
 | 162 | [Optimal Flights](/interviews/amazon/closest-2-sum) | binary search | interview | 1st O(n^2), 2nd O(nlogn) |
 | 162 | [Max Area of Island](/leetcode/695-max-area-of-island) | array | [leetcode 695](https://leetcode.com/problems/max-area-of-island/) | 1st O(n) |
