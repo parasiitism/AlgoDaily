@@ -15,7 +15,7 @@
     return [[1, 3], [3, 2]]
   
     Questions to ask:
-    - will there be 2 or more pairs have the same sum?
+    - will there be 2 or more pairs have the same sum? yes
     - the result must contains 2 items? what if [1,2,10] and 10, should i just return 10?
     - will there be no result?
     - all numbers in nums > 0?
