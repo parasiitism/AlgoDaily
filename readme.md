@@ -2,8 +2,8 @@ AlGoDaily
 ===
 I believe that practising algorithms every day is a long-term investment in my life.
 
-#### Why Golang?
-- No reason, just for fun
+#### Languages
+- Golang, python
 
 #### Target topics
 - Binary Search
