@@ -324,3 +324,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 162 | [Max Area of Island](/leetcode/695-max-area-of-island) | array | [leetcode 695](https://leetcode.com/problems/max-area-of-island/) | 1st O(n) |
 | 162 | [Find K Pairs with Smallest Sums](/leetcode/373-find-k-pairs-with-smallest-sums) | array | [leetcode 373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | 1st 2nd O(nlogn) |
 | 163 | [Number of Distinct Islands](/leetcode/694-number-of-distinct-islands) | array | [leetcode 694](https://leetcode.com/problems/number-of-distinct-islands/) | 1st O(nk) |
+| 163 | [Kth Largest Element in an Array](/leetcode/215-kth-largest-element-in-an-array) | array, heap | [leetcode 215](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 1st, 2nd O(nlogn) |
