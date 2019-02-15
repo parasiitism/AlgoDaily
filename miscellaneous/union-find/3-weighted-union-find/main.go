@@ -6,7 +6,7 @@ import "fmt"
 	Write		O(M)
 	Find		O(logn)
 	Union		O(N)
-	Overall	O(MN) ...worst case
+	Overall	O(MlogN)
 */
 
 type UnionFind struct {

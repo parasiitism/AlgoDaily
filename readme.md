@@ -326,3 +326,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 163 | [Number of Distinct Islands](/leetcode/694-number-of-distinct-islands) | array | [leetcode 694](https://leetcode.com/problems/number-of-distinct-islands/) | 1st O(nk) |
 | 163 | [Kth Largest Element in an Array](/leetcode/215-kth-largest-element-in-an-array) | array, heap | [leetcode 215](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 1st, 2nd O(nlogn) |
 | 163 | [Number of Islands II](/leetcode/305-number-of-islands-ii) | array | [leetcode 305](https://leetcode.com/problems/number-of-islands-ii/) | 1st O(n^2) beats 6% LOL |
+| 163 | [Redundant Connection](/leetcode/684-redundant-connection) | union find | [leetcode 684](https://leetcode.com/problems/redundant-connection/) | 📌 O(nlogn) |
