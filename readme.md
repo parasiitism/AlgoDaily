@@ -320,11 +320,12 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 161 | [Dijkstra's Algorithm on a Directed Graph](/miscellaneous/dijkstra) | graph | study | 📌 |
 | 161 | [Dijkstra's Algorithm on an Undirected Graph](/miscellaneous/dijkstra) | graph | study | 📌 |
 | 161 | [Find All Anagrams in a String](/leetcode/438-find-all-anagrams-in-a-string) | string | [leetcode 438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | 1st O(kn) |
-| 162 | [Optimal Flights](/interviews/amazon/closest-2-sum) | binary search | interview | 1st O(n^2), 2nd O(nlogn) |
+| 162 | [Optimal Flights](/interviews/amazon/closest-2-sum) | binary search | interview | 📌1st O(n^2), 2nd O(nlogn) |
 | 162 | [Max Area of Island](/leetcode/695-max-area-of-island) | array | [leetcode 695](https://leetcode.com/problems/max-area-of-island/) | 1st O(n) |
 | 162 | [Find K Pairs with Smallest Sums](/leetcode/373-find-k-pairs-with-smallest-sums) | array | [leetcode 373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | 1st 2nd O(nlogn) |
 | 163 | [Number of Distinct Islands](/leetcode/694-number-of-distinct-islands) | array | [leetcode 694](https://leetcode.com/problems/number-of-distinct-islands/) | 1st O(nk) |
 | 163 | [Kth Largest Element in an Array](/leetcode/215-kth-largest-element-in-an-array) | array, heap | [leetcode 215](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 1st, 2nd O(nlogn) |
 | 163 | [Number of Islands II](/leetcode/305-number-of-islands-ii) | array | [leetcode 305](https://leetcode.com/problems/number-of-islands-ii/) | 1st O(n^2) beats 6% LOL |
-| 163 | [Redundant Connection](/leetcode/684-redundant-connection) | union find | [leetcode 684](https://leetcode.com/problems/redundant-connection/) | 📌 O(nlogn) |
-| 164 | [Friends Circles](/leetcode/547-friend-circles) | union find | [leetcode 684](https://leetcode.com/problems/friend-circles/) | 📌 O(nlogn) |
+| 163 | [Redundant Connection](/leetcode/684-redundant-connection) | union find | [leetcode 684](https://leetcode.com/problems/redundant-connection/) | O(nlogn) |
+| 164 | [Friends Circles](/leetcode/547-friend-circles) | union find | [leetcode 547](https://leetcode.com/problems/friend-circles/) | O(nlogn) |
+| 164 | [Sentence Similarity II](/leetcode/737-sentence-similarity-ii) | union find | [leetcode 737](https://leetcode.com/problems/sentence-similarity-ii/) | O(nlogn) |
