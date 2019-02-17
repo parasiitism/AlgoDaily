@@ -329,3 +329,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 163 | [Redundant Connection](/leetcode/684-redundant-connection) | union find | [leetcode 684](https://leetcode.com/problems/redundant-connection/) | O(nlogn) |
 | 164 | [Friends Circles](/leetcode/547-friend-circles) | union find | [leetcode 547](https://leetcode.com/problems/friend-circles/) | O(nlogn) |
 | 164 | [Sentence Similarity II](/leetcode/737-sentence-similarity-ii) | union find | [leetcode 737](https://leetcode.com/problems/sentence-similarity-ii/) | O(nlogn) |
+| 165 | [Sentence Similarity](/leetcode/734-sentence-similarity) | hashtable | [leetcode 734](https://leetcode.com/problems/sentence-similarity/) | ⭐O(n) |
