@@ -14,6 +14,8 @@ type TreeNode struct {
 
 /*
 	1st approach: bottom up recusrion
+	- return the value of the node if it is a univalue subtree
+
 	Time    O(n)
 	Space   O(h)
 	4 ms, faster than 100.00%
@@ -37,6 +39,44 @@ func countUnivalSubtrees(root *TreeNode) int {
 		return math.MaxInt64
 	}
 	dfs(root, math.MaxInt64)
+	return res
+}
+
+/*
+	1st approach: bottom up recusrion
+	- but return boolean instead of int value
+
+	Time    O(n)
+	Space   O(h)
+	4 ms, faster than 100.00%
+*/
+func countUnivalSubtrees1(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	res := 0
+	var dfs func(node *TreeNode) bool
+	dfs = func(node *TreeNode) bool {
+		if node == nil {
+			return true
+		}
+		left := dfs(node.Left)
+		right := dfs(node.Right)
+
+		if left == false || right == false {
+			return false
+		}
+
+		if node.Left != nil && node.Val != node.Left.Val {
+			return false
+		}
+		if node.Right != nil && node.Val != node.Right.Val {
+			return false
+		}
+		res++
+		return true
+	}
+	dfs(root)
 	return res
 }
 
