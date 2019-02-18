@@ -333,4 +333,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 165 | [Sentence Similarity](/leetcode/734-sentence-similarity) | hashtable | [leetcode 734](https://leetcode.com/problems/sentence-similarity/) | ⭐O(n) |
 | 166 | [Heap](/miscellaneous/heap) | heap | study | 📌 implement a heap with push, pop and heapify |
 | 166 | [Heap Sort](/miscellaneous/heap) | heap, sort | study | 📌 implement heapsort using a heap |
-| 166 | [Generate Parentheses](/leetcode/22-generate-parentheses) | backtracking | study | 📌1 st O(2^2n) beats 5% |
+| 166 | [Generate Parentheses](/leetcode/22-generate-parentheses) | backtracking | study | 📌1st O(2^2n) beats 5% |
+| 166 | [Count Univalue Subtrees](/leetcode/250-count-univalue-subtrees) | tree | [leetcode 250](https://leetcode.com/problems/count-univalue-subtrees/) | 📌1st O(n) 100% |
