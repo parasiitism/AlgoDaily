@@ -16,6 +16,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 - Hash table
 - Bit Operation
 - Sorting
+- Heap
 - Linked list
 - Dynamic programming
 - Backtracking(Permutations & Combinations & Subsets...etc)
