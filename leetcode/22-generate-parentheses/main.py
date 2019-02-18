@@ -5,8 +5,7 @@ class Solution(object):
 
     def generateParenthesis(self, n):
         """
-        :type n: int
-        :rtype: List[str]
+        148ms beats 2.52%
         """
         if n <= 0:
             return []
@@ -34,6 +33,37 @@ class Solution(object):
                 else:
                     return False
         return len(stack) == 0
+
+
+print(Solution().generateParenthesis(-1))
+print(Solution().generateParenthesis(0))
+print(Solution().generateParenthesis(1))
+print(Solution().generateParenthesis(2))
+print(Solution().generateParenthesis(3))
+
+
+class Solution(object):
+
+    def __init__(self):
+        self.res = []
+
+    def generateParenthesis(self, n):
+        """
+        24 ms, faster than 100.00%
+        """
+        if n <= 0:
+            return []
+        self.permuate("", 0, 0, n)
+        return self.res
+
+    def permuate(self, s, open_cnt, close_cnt, n):
+        if len(s) == 2*n:
+            self.res.append(s)
+            return
+        if open_cnt < n:
+            self.permuate(s + "(", open_cnt+1, close_cnt, n)
+        if close_cnt < open_cnt:
+            self.permuate(s + ")", open_cnt, close_cnt+1, n)
 
 
 print(Solution().generateParenthesis(-1))
