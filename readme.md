@@ -330,3 +330,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 164 | [Friends Circles](/leetcode/547-friend-circles) | union find | [leetcode 547](https://leetcode.com/problems/friend-circles/) | O(nlogn) |
 | 164 | [Sentence Similarity II](/leetcode/737-sentence-similarity-ii) | union find | [leetcode 737](https://leetcode.com/problems/sentence-similarity-ii/) | O(nlogn) |
 | 165 | [Sentence Similarity](/leetcode/734-sentence-similarity) | hashtable | [leetcode 734](https://leetcode.com/problems/sentence-similarity/) | ⭐O(n) |
+| 166 | [Heap](/miscellaneous/heap) | heap | study | 📌 implement a heap with push, pop and heapify |
+| 166 | [Heap Sort](/miscellaneous/heap) | heap, sort | study | 📌 implement heapsort using a heap |
