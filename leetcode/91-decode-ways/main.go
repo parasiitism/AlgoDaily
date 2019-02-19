@@ -10,7 +10,7 @@ import (
 */
 
 /*
-	2nd approach: brute force with memorization
+	2nd approach: brute force, bottom up with memorization
 	1. go through all the paths
 	2. for each path, when it comes to an end return 1
 	3. memorize the substrings and their "ways" to avoid duplicate calculations
@@ -22,30 +22,30 @@ import (
 */
 func numDecodings(s string) int {
 	seen := make(map[string]int)
-	var helper func(sub string) int
-	helper = func(sub string) int {
-		if v, x := seen[sub]; x {
-			return v
-		}
-		if len(sub) == 0 {
-			return 1
-		}
-		left := 0
-		right := 0
-		a := sub[0] - '0'
-		if a > 0 {
-			left = helper(sub[1:])
-		}
-		if len(sub) > 1 {
-			b, _ := strconv.Atoi(sub[:2])
-			if a > 0 && b > 9 && b < 27 {
-				right = helper(sub[2:])
-			}
-		}
-		seen[sub] = left + right
-		return left + right
+	return helper(s, seen)
+}
+
+func helper(sub string, seen map[string]int) int {
+	if v, x := seen[sub]; x {
+		return v
 	}
-	return helper(s)
+	if len(sub) == 0 {
+		return 1
+	}
+	left := 0
+	right := 0
+	a := sub[0] - '0'
+	if a > 0 {
+		left = helper(sub[1:], seen)
+	}
+	if len(sub) > 1 {
+		b, _ := strconv.Atoi(sub[:2])
+		if b < 27 {
+			right = helper(sub[2:], seen)
+		}
+	}
+	seen[sub] = left + right
+	return left + right
 }
 
 func main() {
