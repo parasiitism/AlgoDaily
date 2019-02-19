@@ -335,3 +335,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 166 | [Heap Sort](/miscellaneous/heap) | heap, sort | study | 📌 implement heapsort using a heap |
 | 166 | [Generate Parentheses](/leetcode/22-generate-parentheses) | backtracking | study | 📌1st O(2^2n) beats 5% |
 | 166 | [Count Univalue Subtrees](/leetcode/250-count-univalue-subtrees) | tree | [leetcode 250](https://leetcode.com/problems/count-univalue-subtrees/) | 📌1st O(n) 100% |
+| 167 | [Decode Ways](/leetcode/91-decode-ways) | dynamic programing | [leetcode 91](https://leetcode.com/problems/decode-ways/) | ⭐️1st brute force TLE, 2nd memorized brute force O(n) beats 100%  |
