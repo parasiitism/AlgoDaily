@@ -340,4 +340,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 167 | [Merge Intervals](/leetcode/56-merge-intervals) | sort, greedy | [leetcode 56](https://leetcode.com/problems/merge-intervals/) | ⭐️interval |
 | 168 | [Non-overlapping Intervals](/leetcode/435-non-overlapping-intervals) | sort, greedy | [leetcode 435](https://leetcode.com/problems/non-overlapping-intervals/) | ⭐️interval |
 | 168 | [Minimum Number of Arrows to Burst Balloons](/leetcode/452-minimum-number-of-arrows-to-burst-balloons) | sort, greedy | [leetcode 452](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | ⭐️interval |
-| 168 | [Unique Paths II](/leetcode/63-unique-paths-ii) | dynamic programing | [leetcode 63](https://leetcode.com/problems/unique-paths-ii/) | 📌classic DP, 1st bottom up recursion with memorization, O(mn) beat 79% |
+| 168 | [Unique Paths II](/leetcode/63-unique-paths-ii) | dynamic programing | [leetcode 63](https://leetcode.com/problems/unique-paths-ii/) | 📌classic DP, 1st bottom up recursion with memorization O(mn) beat 79%, 2nd dp array beats 100% |
