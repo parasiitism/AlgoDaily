@@ -27,7 +27,7 @@ func eraseOverlapIntervals(intervals []Interval) int {
 	if len(intervals) < 2 {
 		return 0
 	}
-	// sort the intervals by start time
+	// sort the intervals by start time, order by end time
 	sort.Slice(intervals, func(i, j int) bool {
 		if intervals[i].Start != intervals[j].Start {
 			return intervals[i].Start < intervals[j].Start

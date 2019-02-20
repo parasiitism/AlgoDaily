@@ -184,8 +184,8 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 128 | [Climbing Staris](/leetcode/70-climbing-stairs) | recursion, dynamic programming | [leetcode 70](https://leetcode.com/problems/climbing-stairs/) | 📌 classic DP. top-down recursion beats 100%. bottom-up iteration beats 100% |
 | 128 | [Min Cost Climbing Staris](/leetcode/746-min-cost-climbing-stairs) | dynamic programming | [leetcode 746](https://leetcode.com/problems/min-cost-climbing-stairs/) | 📌 classic DP. bruce forece recursion TLE. bottom-up iteration beats 100% |
 | 128 | [First Missing Positive](/leetcode/41-first-missing-positive) | array | [leetcode 41](https://leetcode.com/problems/first-missing-positive/) | 1 in go beats 100%, 2 in python |
-| 129 | [Meeting Rooms](/leetcode/252-meeting-rooms) | array, sort | [leetcode 252](https://leetcode.com/problems/meeting-rooms/) | 1st beats 100% 🎉 takeaway: sort.Slice() |
-| 129 | [Meeting Rooms II](/leetcode/253-meeting-rooms-ii) | array, sort | [leetcode 253](https://leetcode.com/problems/meeting-rooms-ii/) | 1st beats 0%, 2nd beats 96.97% |
+| 129 | [Meeting Rooms](/leetcode/252-meeting-rooms) | sort, greedy | [leetcode 252](https://leetcode.com/problems/meeting-rooms/) | ⭐️interval, 1st beats 100% 🎉takeaway: sort.Slice() |
+| 129 | [Meeting Rooms II](/leetcode/253-meeting-rooms-ii) | sort, greedy | [leetcode 253](https://leetcode.com/problems/meeting-rooms-ii/) | ⭐️interval, 1st beats 0%, 2nd beats 96.97% |
 | 130 | [Reverse Integer](/leetcode/7-reverse-integer) | array | [leetcode 7](https://leetcode.com/problems/reverse-integer/) | 📌 1st & 2nd approach 4ms. i gave up 2 years ago, now i finally know how to do it |
 | 130 | [Merge Sorted Array](/leetcode/88-merge-sorted-array) | sort, array | [leetcode 88](https://leetcode.com/problems/merge-sorted-array/) | 📌 1st naive approach 0ms. 2nd is learned from others |
 | 131 | [Longest Common Substring](/miscellaneous/longest-common-substring) | array, dynamic programming | | 📌 1st is naive. 2nd approach is classic |
@@ -337,5 +337,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 166 | [Count Univalue Subtrees](/leetcode/250-count-univalue-subtrees) | tree | [leetcode 250](https://leetcode.com/problems/count-univalue-subtrees/) | 📌1st O(n) 100% |
 | 167 | [Decode Ways](/leetcode/91-decode-ways) | dynamic programing | [leetcode 91](https://leetcode.com/problems/decode-ways/) | ⭐️1st brute force TLE, 2nd memorized brute force O(n) beats 100%  |
 | 167 | [Unique Paths](/leetcode/62-unique-paths) | dynamic programing | [leetcode 62](https://leetcode.com/problems/unique-paths/) | ⭐️1st bottom up recursion with memorization, O(mn) beats 100%  |
-| 167 | [Merge Intervals](/leetcode/56-merge-intervals) | sort | [leetcode 56](https://leetcode.com/problems/merge-intervals/) | ⭐️ |
-| 168 | [Non-overlapping Intervals](/leetcode/435-non-overlapping-intervals) | sort | [leetcode 435](https://leetcode.com/problems/non-overlapping-intervals/) | ⭐️ |
+| 167 | [Merge Intervals](/leetcode/56-merge-intervals) | sort, greedy | [leetcode 56](https://leetcode.com/problems/merge-intervals/) | ⭐️interval |
+| 168 | [Non-overlapping Intervals](/leetcode/435-non-overlapping-intervals) | sort, greedy | [leetcode 435](https://leetcode.com/problems/non-overlapping-intervals/) | ⭐️interval |
+| 168 | [Minimum Number of Arrows to Burst Balloons](/leetcode/452-minimum-number-of-arrows-to-burst-balloons) | sort, greedy | [leetcode 452](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | ⭐️interval |
