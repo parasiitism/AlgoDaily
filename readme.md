@@ -341,3 +341,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 168 | [Non-overlapping Intervals](/leetcode/435-non-overlapping-intervals) | sort, greedy | [leetcode 435](https://leetcode.com/problems/non-overlapping-intervals/) | ⭐️interval |
 | 168 | [Minimum Number of Arrows to Burst Balloons](/leetcode/452-minimum-number-of-arrows-to-burst-balloons) | sort, greedy | [leetcode 452](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | ⭐️interval |
 | 168 | [Largest BST Subtree](/leetcode/333-largest-bst-subtree) | BST | [leetcode 333](https://leetcode.com/problems/largest-bst-subtree/) | 1st O(n^2) |
+| 168 | [Range Sum of BST](/leetcode/938-range-sum-of-bst) | BST | [leetcode 938](https://leetcode.com/problems/range-sum-of-bst/) | 1st recursive, 2nd iterative, both O(n) beat 98% |
