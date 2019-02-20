@@ -338,3 +338,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 167 | [Decode Ways](/leetcode/91-decode-ways) | dynamic programing | [leetcode 91](https://leetcode.com/problems/decode-ways/) | ⭐️1st brute force TLE, 2nd memorized brute force O(n) beats 100%  |
 | 167 | [Unique Paths](/leetcode/62-unique-paths) | dynamic programing | [leetcode 62](https://leetcode.com/problems/unique-paths/) | ⭐️1st bottom up recursion with memorization, O(mn) beats 100%  |
 | 167 | [Merge Intervals](/leetcode/56-merge-intervals) | sort | [leetcode 56](https://leetcode.com/problems/merge-intervals/) | ⭐️ |
+| 168 | [Non-overlapping Intervals](/leetcode/435-non-overlapping-intervals) | sort | [leetcode 435](https://leetcode.com/problems/non-overlapping-intervals/) | ⭐️ |
