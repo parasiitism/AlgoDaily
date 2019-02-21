@@ -7,9 +7,14 @@ type TreeNode struct {
 }
 
 /*
-	leetcode doesn't support go for this question, i did it in python
-	my first intuitve workable attempt: see main.py
-	suggested solution by leetcoders: O(logn)
+	Decent iterative approach:
+	1. if the current node.val > target, pass down and update successor with node
+	2. if the current node.val <= target, pass down
+	3. do 1 & 2 intil current node is null
+
+	Time	O(logn)
+	Space	O(h)
+	24 ms, faster than 100.00%
 */
 func inorderSuccessor(root *TreeNode, p *TreeNode) *TreeNode {
 	var successor *TreeNode

@@ -146,7 +146,7 @@ func deleteNode1(root *TreeNode, key int) *TreeNode {
 		suc := searchSuccessor(root)
 		root.Val = suc.Val
 		// trickiest line:
-		// actually there are 2 cases for a successor
+		// actually there are only 2 cases for a legit successor
 		// case1: a leaf node -> replace by null
 		// case2: a node just has a right child -> replace by it right child
 		root.Right = deleteNode1(root.Right, suc.Val)
