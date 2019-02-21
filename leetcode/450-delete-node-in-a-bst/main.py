@@ -13,7 +13,7 @@ class Solution(object):
 
         Time		O(h) height of tree
         Space		O(h) recursion
-        372 ms, faster than 94.59%
+        56 ms, faster than 99.87%
         21feb2019 updated
         """
         if root == None:
