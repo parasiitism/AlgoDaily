@@ -113,26 +113,46 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 	return root
 }
 
-// suggested solution, recursive
-//
+/*
+	suggested solution: recursion
+	- the basic idea is that
+	- for every node, search and replace the target with the successor if needed
+	e.g. it is actually a bottom-up approach:
+	- if it is the target node, return its successor
+	- if it is just an unrelated node, return itself
+	- the trickiest operation is to replace the successor with nil / its right child
+
+	Time		O(h) height of tree
+	Space		O(h) recursion
+	372 ms, faster than 94.59%
+	21feb2019 updated
+*/
 func deleteNode1(root *TreeNode, key int) *TreeNode {
 	if root == nil {
 		return nil
 	}
-	// case 2 and case3
 	if root.Val == key {
-		if root.Left == nil {
+		if root.Left == nil && root.Right == nil {
+			// case 1: no children
+			return nil
+		} else if root.Left == nil {
+			// case 2: 1 child
 			return root.Right
-		}
-		if root.Right == nil {
+		} else if root.Right == nil {
+			// case 2: 1 child
 			return root.Left
 		}
+		// case 3: 2 children
 		suc := searchSuccessor(root)
 		root.Val = suc.Val
+		// trickiest line:
+		// actually there are 2 cases for a successor
+		// case1: a leaf node -> replace by null
+		// case2: a node just has a right child -> replace by it right child
 		root.Right = deleteNode1(root.Right, suc.Val)
 		return root
 	}
-	// search and replace the target with the successor
+	// search and replace the target with the successor if needed
 	if root.Val < key {
 		root.Right = deleteNode1(root.Right, key)
 	} else {
@@ -143,12 +163,8 @@ func deleteNode1(root *TreeNode, key int) *TreeNode {
 
 func searchSuccessor(root *TreeNode) *TreeNode {
 	successor := root.Right
-	for true {
-		if successor.Left != nil {
-			successor = successor.Left
-		} else {
-			break
-		}
+	for successor.Left != nil {
+		successor = successor.Left
 	}
 	return successor
 }

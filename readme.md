@@ -64,7 +64,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 28 | [Pre & post order traversal on BST](/miscellaneous/binary-tree-traversals) | binary tree | | 📌 |
 | 29 | [Insert into a Binary Search Tree](/leetcode/701-insert-into-a-binary-search-tree) | BST | [leetcode 701](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | recursive & iterative |
 | 30 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | my 1st attempt was super discursive LOL |
-| 31 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | to understand the recursive approach |
+| 31 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | 📌 classic approach, bottom up recursion to replace the target node with its successor |
 | 32 | [Pre & In & Post Order Depth First Search](/miscellaneous/depth-first-search) | tree | | revision on tree traversals |
 | 33 | [Kth Largest Element in a Stream](/leetcode/703-kth-largest-element-in-a-stream) | BST | [leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream) | my first attempt "Time Limit Exceeded" |
 | 34 | [Kth Largest Element in a Stream](/leetcode/703-kth-largest-element-in-a-stream) | BST | [leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream) | learned what is `heap` and did a heap solution |
