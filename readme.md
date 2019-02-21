@@ -342,4 +342,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 168 | [Minimum Number of Arrows to Burst Balloons](/leetcode/452-minimum-number-of-arrows-to-burst-balloons) | sort, greedy | [leetcode 452](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | ⭐️interval |
 | 168 | [Largest BST Subtree](/leetcode/333-largest-bst-subtree) | BST | [leetcode 333](https://leetcode.com/problems/largest-bst-subtree/) | 1st O(n^2) |
 | 168 | [Range Sum of BST](/leetcode/938-range-sum-of-bst) | BST | [leetcode 938](https://leetcode.com/problems/range-sum-of-bst/) | 1st recursive, 2nd iterative, both O(n) beat 98% |
+| 169 | [Delete a node in a BST](/leetcode/450-delete-node-in-a-bst) | BST | [leetcode 450](https://leetcode.com/problems/delete-node-in-a-bst/description/) | 📌2 classic approaches, bottom up recursion to replace the target node with its predecessor or successor |
 | 169 | [Inorder Successor in BST](/leetcode/285-inorder-successor-in-bst) | binary tree | [leetcode 285](https://leetcode.com/problems/inorder-successor-in-bst/) | 📌 [revise day23] iterative and recursive O(logn) |
