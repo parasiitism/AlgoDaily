@@ -6,11 +6,11 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// leetcode doesn't support go for this question, i did it in python
-
-// my first intuitve workable attempt: see main.py
-
-// suggested solution by leetcoders: O(logn)
+/*
+	leetcode doesn't support go for this question, i did it in python
+	my first intuitve workable attempt: see main.py
+	suggested solution by leetcoders: O(logn)
+*/
 func inorderSuccessor(root *TreeNode, p *TreeNode) *TreeNode {
 	var successor *TreeNode
 	node := root
