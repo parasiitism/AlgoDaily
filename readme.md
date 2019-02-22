@@ -348,3 +348,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 169 | [Closest Binary Search Tree Value II](/leetcode/272-closest-binary-search-tree-value-ii) | BST | [leetcode 272](https://leetcode.com/problems/closest-binary-search-tree-value-ii/) | ⭐ 1st O(nlogn)|
 | 170 | [Split BST](/leetcode/776-split-bst) | BST | [leetcode 776](https://leetcode.com/problems/split-bst/) | 📌📌📌 super hard recursion question, must revise again |
 | 170 | [Unique Word Abbreviation](/leetcode/288-unique-word-abbreviation) | hashtable | [leetcode 288](https://leetcode.com/problems/unique-word-abbreviation/) | |
+| 170 | [Longest Substring Without Repeating Characters](/leetcode/3-longest-substring-without-repeating-characters) | hashtable | [leetcode 3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 📌 1st O(n^2), 2nd O(n) |
