@@ -347,3 +347,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 169 | [Inorder Successor in BST II](/leetcode/510-inorder-successor-in-bst-ii) | BST | [leetcode 510](https://leetcode.com/problems/inorder-successor-in-bst-ii/) | ⭐️ interesting, would be a potential follow-up of [leetcode 285](https://leetcode.com/problems/inorder-successor-in-bst/) |
 | 169 | [Closest Binary Search Tree Value II](/leetcode/272-closest-binary-search-tree-value-ii) | BST | [leetcode 272](https://leetcode.com/problems/closest-binary-search-tree-value-ii/) | ⭐ 1st O(nlogn)|
 | 170 | [Split BST](/leetcode/776-split-bst) | BST | [leetcode 776](https://leetcode.com/problems/split-bst/) | 📌📌📌 super hard recursion question, must revise again |
+| 170 | [Unique Word Abbreviation](/leetcode/288-unique-word-abbreviation) | hashtable | [leetcode 288](https://leetcode.com/problems/unique-word-abbreviation/) | |
