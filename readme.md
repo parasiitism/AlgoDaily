@@ -350,3 +350,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 170 | [Unique Word Abbreviation](/leetcode/288-unique-word-abbreviation) | hashtable | [leetcode 288](https://leetcode.com/problems/unique-word-abbreviation/) | |
 | 170 | [Longest Substring Without Repeating Characters](/leetcode/3-longest-substring-without-repeating-characters) | hashtable | [leetcode 3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 📌 1st O(n^2), 2nd O(n) |
 | 170 | [Repeated DNA Sequences](/leetcode/187-repeated-dna-sequences) | hashtable | [leetcode 187](https://leetcode.com/problems/repeated-dna-sequences/) | 1st O(n) |
+| 170 | [Find Duplicate Subtrees](/leetcode/652-find-duplicate-subtrees) | hashtable, tree | [leetcode 652](https://leetcode.com/problems/find-duplicate-subtrees/) | 1st O(n) |
