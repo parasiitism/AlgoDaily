@@ -352,3 +352,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 170 | [Repeated DNA Sequences](/leetcode/187-repeated-dna-sequences) | hashtable | [leetcode 187](https://leetcode.com/problems/repeated-dna-sequences/) | 1st O(n) |
 | 170 | [Find Duplicate Subtrees](/leetcode/652-find-duplicate-subtrees) | hashtable, tree | [leetcode 652](https://leetcode.com/problems/find-duplicate-subtrees/) | 1st O(n) |
 | 170 | [Group Shifted Strings](/leetcode/249-group-shifted-strings) | hashtable | [leetcode 249](https://leetcode.com/problems/group-shifted-strings/) | O(n) |
+| 171 | [K-th Symbol in Grammar](/leetcode/779-k-th-symbol-in-grammar) | hashtable | [leetcode 779](https://leetcode.com/problems/k-th-symbol-in-grammar/) | 1st LTE. 📌2nd tricky recursion. see ./idea.jpeg |
