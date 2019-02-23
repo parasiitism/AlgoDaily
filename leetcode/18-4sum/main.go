@@ -53,7 +53,47 @@ func fourSum(nums []int, target int) [][]int {
 	return res
 }
 
+/*
+	2nd approach: 2 pointers
+	1. sort the numbers to make sure that the key will be unique
+	2. for each num[i] + num[j], use 2 pointers, from the front and from the end, to find the pairs which nums[i]+nums[j]+nums[start]+nums[end] sum up to target
+	3. use a set to deduplicate
+
+	Time	O(n^3)
+	Space	O(n)
+	12 ms, faster than 95.12%
+*/
+func fourSum1(nums []int, target int) [][]int {
+	sort.Ints(nums)
+	quadruples := make(map[string][]int)
+	for i := 0; i < len(nums); i++ {
+		for j := i + 1; j < len(nums); j++ {
+			start := j + 1
+			end := len(nums) - 1
+			for start < end {
+				temp := nums[i] + nums[j] + nums[start] + nums[end]
+				if temp == target {
+					key := strconv.Itoa(nums[i]) + "," + strconv.Itoa(nums[j]) + "," + strconv.Itoa(nums[start]) + "," + strconv.Itoa(nums[end])
+					o := []int{nums[i], nums[j], nums[start], nums[end]}
+					quadruples[key] = o
+					start++
+					end--
+				} else if temp < target {
+					start++
+				} else {
+					end--
+				}
+			}
+		}
+	}
+	res := [][]int{}
+	for _, v := range quadruples {
+		res = append(res, v)
+	}
+	return res
+}
+
 func main() {
 	fmt.Println(fourSum([]int{1, 0, -1, 0, -2, 2}, 0))
-	fmt.Println(fourSum([]int{-3, -1, 0, 2, 4, 5}, 2))
+	fmt.Println(fourSum1([]int{-3, -1, 0, 2, 4, 5}, 2))
 }
