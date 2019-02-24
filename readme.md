@@ -359,3 +359,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 171 | [4Sum II](/leetcode/454-4sum-ii) | hashtable | [leetcode 454](https://leetcode.com/problems/4sum-ii/) | 📌1st O(n^3), 2nd O(n^2) |
 | 171 | [Insert Delete GetRandom O(1)](/leetcode/380-insert-delete-getrandom-o1) | hashtable | [leetcode 380](https://leetcode.com/problems/insert-delete-getrandom-o1/) | 1st random O(n) beats 6%, 📌2nd random O(1) beats 100% |
+| 171 | [Insert Delete GetRandom O(1) - Duplicates allowed](/leetcode/381-insert-delete-getrandom-o1-duplicates-allowed) | hashtable | [leetcode 381](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/) | 1st random O(n) beats 6% |
