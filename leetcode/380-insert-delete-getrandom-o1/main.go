@@ -63,7 +63,7 @@ func (this *RandomizedSet) GetRandom() int {
 	2nd approach: hashtable + array
 	- save value: index in hashtable
 	- when delete, swap the target item and the last item in the array, and remove the last item
-	- see ./idea.png
+	- see ./idea_add.png and ./idea_remove.png
 
 	Insert Time				O(1)
 	Remove Time				O(1)
@@ -97,9 +97,9 @@ func (this *RandomizedSet1) Remove(val int) bool {
 	if _, x := this.HashTable[val]; x {
 		// find the target index of the val from the hashtable
 		targetIdx := this.HashTable[val]
-		// assign the last item
+		// assign the last item to the target index
 		this.HashTable[this.Arr[len(this.Arr)-1]] = targetIdx
-		// swap the keys between m[val] and the last item
+		// swap the target item and the last item
 		this.Arr[targetIdx], this.Arr[len(this.Arr)-1] = this.Arr[len(this.Arr)-1], this.Arr[targetIdx]
 		// remove the last item
 		this.Arr = this.Arr[:len(this.Arr)-1]
