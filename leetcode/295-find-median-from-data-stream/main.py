@@ -92,6 +92,7 @@ class MedianFinder(object):
     def __init__(self):
         self.bst = None
         self.count = 0
+        self.sortedList = []
 
     def addNum(self, num):
         """
@@ -105,30 +106,17 @@ class MedianFinder(object):
 
     def findMedian(self):
         """
-        O(n/2)
+        O(n)
         """
-        s = []
-        half = int(self.count/2)+1
-
-        def inorderBst(node):
-            nonlocal half
-            if node == None:
-                return
-            inorderBst(node.left)
-            for i in range(node.count):
-                if half <= 0:
-                    return
-                s.append(node.val)
-                half -= 1
-            inorderBst(node.right)
-        inorderBst(self.bst)
-
+        self.sortedList = []
+        self.inorderBst(self.bst)
+        half = self.count/2
         if self.count == 0:
             return 0
         elif self.count % 2 == 0:
-            return float(s[-2]+s[-1])/2.0
+            return float(self.sortedList[half-1]+self.sortedList[half])/2.0
         else:
-            return s[-1]
+            return self.sortedList[half]
 
     def insertIntoBST(self, root, num):
         """
@@ -149,9 +137,92 @@ class MedianFinder(object):
             else:
                 self.insertIntoBST(root.right, num)
 
+    def inorderBst(self, node):
+        if node == None:
+            return
+        self.inorderBst(node.left)
+        self.sortedList += node.count*[node.val]
+        self.inorderBst(node.right)
+
+
+# obj = MedianFinder()
+# obj.addNum(1)
+# print(obj.findMedian())
+
+# print("---")
+
+# obj = MedianFinder()
+# obj.addNum(1)
+# obj.addNum(2)
+# print(obj.findMedian())
+
+# print("---")
+
+# obj = MedianFinder()
+# obj.addNum(1)
+# obj.addNum(3)
+# obj.addNum(2)
+# print(obj.findMedian())
+
+# print("---")
+
+# obj = MedianFinder()
+# obj.addNum(5)
+# obj.addNum(3)
+# obj.addNum(4)
+# obj.addNum(3)
+# obj.addNum(1)
+# obj.addNum(2)
+# obj.addNum(6)
+# print(obj.findMedian())
+
+
+"""
+    3rd approach: 2 heaps
+    - minheap for right half
+    - maxheap for left half
+    - therefore the mean will always be the max of maxheap and the min of minheap
+    - https://leetcode.com/articles/find-median-from-data-stream/
+
+    336 ms, faster than 48.83%
+"""
+
+
+class MedianFinder(object):
+
+    def __init__(self):
+        # for right half
+        self.maxheap = []
+        # for left half
+        self.minheap = []
+
+    def addNum(self, num):
+        """
+        O(5*logn)
+        """
+        # first add to minheap
+        heapq.heappush(self.minheap, num)
+        # pop the right half and add the min to the left half
+        m = heapq.heappop(self.minheap)
+        heapq.heappush(self.maxheap, -m)
+        # if left half length is larger, put the max item back to right half
+        if len(self.minheap) < len(self.maxheap):
+            n = heapq.heappop(self.maxheap)
+            heapq.heappush(self.minheap, -n)
+
+    def findMedian(self):
+        """
+        O(1)
+        """
+        if len(self.minheap) != len(self.maxheap):
+            return self.minheap[0]
+        return (self.minheap[0] - self.maxheap[0])/2.0
+
 
 obj = MedianFinder()
 obj.addNum(1)
+print(obj.maxheap)
+print(obj.minheap)
 print(obj.findMedian())
 
 print("---")
@@ -159,6 +230,8 @@ print("---")
 obj = MedianFinder()
 obj.addNum(1)
 obj.addNum(2)
+print(obj.maxheap)
+print(obj.minheap)
 print(obj.findMedian())
 
 print("---")
@@ -167,6 +240,8 @@ obj = MedianFinder()
 obj.addNum(1)
 obj.addNum(3)
 obj.addNum(2)
+print(obj.maxheap)
+print(obj.minheap)
 print(obj.findMedian())
 
 print("---")
@@ -179,4 +254,6 @@ obj.addNum(3)
 obj.addNum(1)
 obj.addNum(2)
 obj.addNum(6)
+print(obj.maxheap)
+print(obj.minheap)
 print(obj.findMedian())
