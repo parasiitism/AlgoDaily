@@ -24,15 +24,20 @@ type MedianFinder struct {
 
 /** initialize your data structure here. */
 func Constructor() MedianFinder {
+	// for right half
 	left := &MaxHeap{}
+	// for left half
 	right := &MinHeap{}
 	return MedianFinder{left, right}
 }
 
 func (this *MedianFinder) AddNum(num int) {
+	// first add to minheap
 	heap.Push(this.minHeap, num)
+	// pop the right half and add the min to the left half
 	m := heap.Pop(this.minHeap)
 	heap.Push(this.maxHeap, m)
+	// if left half length is larger, put the max item back to right half
 	if this.minHeap.Len() < this.maxHeap.Len() {
 		n := heap.Pop(this.maxHeap)
 		heap.Push(this.minHeap, n)
@@ -40,8 +45,8 @@ func (this *MedianFinder) AddNum(num int) {
 }
 
 func (this *MedianFinder) FindMedian() float64 {
-	fmt.Println(this.maxHeap)
-	fmt.Println(this.minHeap)
+	// fmt.Println(this.maxHeap)
+	// fmt.Println(this.minHeap)
 	if this.minHeap.Len() != this.maxHeap.Len() {
 		return float64((*this.minHeap)[0])
 	}
