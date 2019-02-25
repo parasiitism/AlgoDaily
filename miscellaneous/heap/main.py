@@ -13,7 +13,7 @@ class Heap(object):
         for o in arr:
             self.heapPush(o)
 
-    # shift up
+    # shift up: O(logN)
     def heapPush(self, target):
         self.nums.append(target)
         curIdx = len(self.nums) - 1
@@ -25,7 +25,7 @@ class Heap(object):
             else:
                 break
 
-    # shift down
+    # shift down:  O(logN)
     def heapPop(self):
         pop = self.nums[0]
         p = self.nums.pop()
