@@ -368,3 +368,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 174 | [Remove duplicates from a string in O(1) space](/interviews/dbs/remove-duplicates-from-string) | hashtable, bucket | [geeksforgeeks](https://www.geeksforgeeks.org/remove-duplicates-from-a-string-in-o1-extra-space/) | ⭐ 1st O(n) space, 2nd O(1) space |
 | 175 | [Design Hit Counter](/leetcode/362-design-hit-counter) | hashtable, array | [leetcode 362](https://leetcode.com/problems/design-hit-counter) | ⭐ 1st python OrderedDict O(1) for all operations beats 100%, 2nd hashtable+array beats 100% |
 | 175 | [Design Tic-Tac-Toe](/leetcode/348-design-tic-tac-toe) | array | [leetcode 348](https://leetcode.com/problems/design-tic-tac-toe/) | 1st O(n^2), 😱2nd O(1) |
+| 175 | [Valid Tic-Tac-Toe State](/leetcode/794-valid-tic-tac-toe-state/) | array | [leetcode 794](https://leetcode.com/problems/tic-tac-toe-state/) | 1st is so stupid |
