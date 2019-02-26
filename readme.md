@@ -364,3 +364,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 173 | [Lonely Pixel I](/leetcode/531-lonely-pixel-i) | hashtable | [leetcode 295](https://leetcode.com/problems/lonely-pixel-i/) | 1st, 2nd beats 100% |
 | 173 | [Minimum Add/Delete to Make Parentheses Valid](/leetcode/921-minimum-add-to-make-parentheses-valid) | stack | [leetcode 295](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | 1st O(n) beats 100% |
 | 173 | [Largest Permutation](/interviews/dbs/largest-permutation) | permutation | [geeksforgeeks](https://www.geeksforgeeks.org/dbs-hack2hire-interview-experience-tech-associate/) | |
+| 174 | [Integer to English Words](/leetcode/273-integer-to-english-words) | array | [leetcode 273](https://leetcode.com/problems/integer-to-english-words) | ⭐️tedious but frequently asked |
