@@ -1,3 +1,13 @@
+"""
+    Given a list of integer, return the largest number which can be made from them
+    e.g.1
+    [54, 546, 548, 60] => 6054854654
+
+    e.g.2
+    [1, 34, 3, 98, 9, 76, 45, 4] => 998764543431
+"""
+
+
 class Solution(object):
     def __init__(self):
         self.res = 0
