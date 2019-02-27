@@ -25,7 +25,7 @@ func numberToWords(num int) string {
 		num = num / 1000
 		threeDigitsWords := threeDigitsToWords(remain)
 		if len(threeDigitsWords) > 0 {
-			temp = threeDigitsToWords(remain) + " " + d[i] + " " + temp
+			temp = threeDigitsWords + " " + d[i] + " " + temp
 		}
 		i++
 		if num == 0 {
