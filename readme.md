@@ -371,3 +371,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 175 | [Valid Tic-Tac-Toe State](/leetcode/794-valid-tic-tac-toe-state/) | array | [leetcode 794](https://leetcode.com/problems/tic-tac-toe-state/) | my thought is so stupid |
 | 176 | [Repeated Substring Pattern](/leetcode/459-repeated-substring-pattern/) | array | [leetcode 459](https://leetcode.com/problems/repeated-substring-pattern/) | 1st O(n^2), 2nd O(n) |
 | 176 | [Repeated String Match](/leetcode/686-repeated-string-match/) | array | [leetcode 686](https://leetcode.com/problems/repeated-string-match/) | 1st O(kn) |
+| 176 | [License Key Formatting](/leetcode/482-license-key-formatting/) | array, stack | [leetcode 482](https://leetcode.com/problems/license-key-formatting/) | 1st O(n) |
