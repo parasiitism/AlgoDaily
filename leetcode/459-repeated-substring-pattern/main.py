@@ -42,6 +42,10 @@ class Solution(object):
         S = abcab
         SS = bcababca <= (S+S)[1:-1] stripe out the front and end
         check of S is in SS, return false
+
+        Time	O(n)
+        Space	O(n)
+        20ms beats 100%
         """
         if not s:
             return False

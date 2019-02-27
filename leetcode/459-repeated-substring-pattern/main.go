@@ -41,9 +41,13 @@ func check(s, sub string) bool {
 	S = abcab
 	SS = bcababca <= (S+S)[1:-1] stripe out the front and end
 	check of S is in SS, return false
+
+	Time	O(n)
+	Space	O(n)
+	4ms beats 100%
 */
 func repeatedSubstringPattern1(s string) bool {
-	ss := (s + s)
+	ss := s + s
 	ss = ss[1 : len(ss)-1]
 	return strings.Index(ss, s) > -1
 }
