@@ -10,7 +10,7 @@
 
     e.g.2
     maxTravelDist = 20
-    forwardRouteList = [[1, 8], [2, 15], [3, 9]],
+    forwardRouteList = [[1, 8], [2, 15], [3, 9]]
     returnRouteList = [[1, 8], [2, 11], [3, 12]]
     return [[1, 3], [3, 2]]
   
@@ -79,6 +79,8 @@ def optimalUtilization1(maxTravelDist, forwardRouteList, returnRouteList):
     res = []
     for forw in forwardRouteList:
         targetIdx = bsearch(returnRouteList, maxTravelDist-forw[1])
+        if targetIdx < 0:
+            continue
         target = returnRouteList[targetIdx]
         curTotal = forw[1]+target[1]
         if curTotal >= total and curTotal <= maxTravelDist:

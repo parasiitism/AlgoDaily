@@ -2,7 +2,7 @@ https://www.glassdoor.com.hk/Interview/DBS-Bank-Hyderabad-Interview-Questions-EI
 
 - interger to english words ✅
 - remove duplicate characters from string in O(1) ✅
-- 2sum
+- 2sum, 2sum closest in one array, 2sum closest in 2 arrays ✅
 
 https://www.geeksforgeeks.org/dbs-hack2hire-interview-experience-tech-associate/
 
