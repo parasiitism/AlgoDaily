@@ -373,3 +373,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 176 | [Repeated String Match](/leetcode/686-repeated-string-match/) | array | [leetcode 686](https://leetcode.com/problems/repeated-string-match/) | 1st O(kn) |
 | 176 | [License Key Formatting](/leetcode/482-license-key-formatting/) | array, stack | [leetcode 482](https://leetcode.com/problems/license-key-formatting/) | 1st O(n) |
 | 176 | [Serialize and Deserialize array of string](/interviews/dbs/serialize-deserialize-array) | array | [geeksforgeeks](https://www.geeksforgeeks.org/serialize-deserialize-array-string/) | O(n) |
+| 177 | [Letter Case Permutation](/leetcode/784-letter-case-permutation) | permutation | [leetcode 784](https://leetcode.com/problems/letter-case-permutation/) | 1st permutation+hashset O(2^n), 2nd permutation O(2^n) |
