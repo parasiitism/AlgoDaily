@@ -374,4 +374,5 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 176 | [License Key Formatting](/leetcode/482-license-key-formatting/) | array, stack | [leetcode 482](https://leetcode.com/problems/license-key-formatting/) | 1st O(n) |
 | 176 | [Serialize and Deserialize array of string](/interviews/dbs/serialize-deserialize-array) | array | [geeksforgeeks](https://www.geeksforgeeks.org/serialize-deserialize-array-string/) | O(n) |
 | 177 | [Letter Case Permutation](/leetcode/784-letter-case-permutation) | permutation | [leetcode 784](https://leetcode.com/problems/letter-case-permutation/) | 1st permutation+hashset O(2^n), 2nd permutation O(2^n) |
-| 177 | [Best Time to Buy and Sell Stock](/leetcode/121-best-time-to-buy-and-sell-stock) | dynamic programming | [leetcode 121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 📌1st dp O(n), 2nd heap O(nlogn)|
+| 177 | [Best Time to Buy and Sell Stock](/leetcode/121-best-time-to-buy-and-sell-stock) | dynamic programming | [leetcode 121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 📌1st dp O(n), 2nd heap O(nlogn) |
+| 177 | [Best Time to Buy and Sell Stock II](/leetcode/122-best-time-to-buy-and-sell-stock-ii) | dynamic programming | [leetcode 122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | 📌1st, 2nd dp O(n) |
