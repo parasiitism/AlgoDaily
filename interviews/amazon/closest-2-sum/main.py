@@ -1,5 +1,5 @@
 """
-    Given 2 arrays of n integers, forwardRouteList and returnRouteList
+    Given 2 arrays of n flights, [id, travel distance], forwardRouteList and returnRouteList
     find the pair(s) in nums such that the sum is closest(<=) to a given number, target
 
     e.g.1
