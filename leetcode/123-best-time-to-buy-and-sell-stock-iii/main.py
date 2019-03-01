@@ -3,6 +3,7 @@ class Solution(object):
         """
         1st approach:
         - use the algo from Best Time to Buy and Sell Stock I
+        - for each i, calculate the maxProfit(prices[:i]) + maxProfit(prices[i:]) and put them into the result
 
         Time    O(n^2)
         Space   O(1)
@@ -27,6 +28,62 @@ class Solution(object):
             if price - bay > diff:
                 diff = price - bay
         return diff
+
+
+print(Solution().maxProfit([3, 3, 5, 0, 0, 3, 1, 4]))
+print(Solution().maxProfit([1, 2, 3, 4, 5]))
+print(Solution().maxProfit([7, 6, 4, 3, 1]))
+print(Solution().maxProfit([7, 1, 5, 3, 6, 4]))
+print(Solution().maxProfit([7, 6, 4, 3, 1]))
+print(Solution().maxProfit([2, 4]))
+print(Solution().maxProfit([2, 4, 1]))
+print(Solution().maxProfit([2, 4, 1, 4]))
+
+print("------")
+
+
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        2nd approach: optimize the 1st approach
+        - try to compensate some space for optimization
+        - save the maxprofit on each day when we traverse forward
+        - save the maxprofit on each day when we traverse backward
+        - the result will be the max sum of profit on day i, which is forward[i]+backward[i]
+
+        Time    O(2n)
+        Space   O(1)
+        1988 ms, faster than 5.24%
+        """
+        if len(prices) < 2:
+            return 0
+        # save the maxprofit on each day when we traverse forward
+        bay = prices[0]
+        forwardDiff = 0
+        forwardDiffs = []
+        for price in prices:
+            if price < bay:
+                bay = price
+            if price - bay > forwardDiff:
+                forwardDiff = price - bay
+            forwardDiffs.append(forwardDiff)
+        # save the maxprofit on each day when we traverse backward
+        peak = prices[-1]
+        backwardDiff = 0
+        backwardDiffs = []
+        for i in range(len(prices)-1, -1, -1):
+            price = prices[i]
+            if price > peak:
+                peak = price
+            if peak - price > backwardDiff:
+                backwardDiff = peak - price
+            backwardDiffs = [backwardDiff] + backwardDiffs
+        # the result will be the max sum of profit on day i, which is forward[i]+backward[i]
+        result = 0
+        for i in range(len(forwardDiffs)):
+            result = max(result, forwardDiffs[i]+backwardDiffs[i])
+
+        return result
 
 
 print(Solution().maxProfit([3, 3, 5, 0, 0, 3, 1, 4]))
