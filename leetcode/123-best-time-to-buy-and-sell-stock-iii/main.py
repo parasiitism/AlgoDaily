@@ -50,6 +50,7 @@ class Solution(object):
         - save the maxprofit on each day when we traverse forward
         - save the maxprofit on each day when we traverse backward
         - the result will be the max sum of profit on day i, which is forward[i]+backward[i]
+        - see ./idea.jpeg
 
         Time    O(2n)
         Space   O(1)
