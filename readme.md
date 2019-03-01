@@ -376,3 +376,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 177 | [Letter Case Permutation](/leetcode/784-letter-case-permutation) | permutation | [leetcode 784](https://leetcode.com/problems/letter-case-permutation/) | 1st permutation+hashset O(2^n), 2nd permutation O(2^n) |
 | 177 | [Best Time to Buy and Sell Stock](/leetcode/121-best-time-to-buy-and-sell-stock) | dynamic programming | [leetcode 121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 📌1st dp O(n), 2nd heap O(nlogn) |
 | 177 | [Best Time to Buy and Sell Stock II](/leetcode/122-best-time-to-buy-and-sell-stock-ii) | dynamic programming | [leetcode 122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | 📌1st, 2nd dp O(n) |
+| 178 | [Best Time to Buy and Sell Stock III](/leetcode/123-best-time-to-buy-and-sell-stock-iii) | dynamic programming | [leetcode 122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | 📌1st O(n^2) LTE |
