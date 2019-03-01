@@ -378,3 +378,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 177 | [Best Time to Buy and Sell Stock II](/leetcode/122-best-time-to-buy-and-sell-stock-ii) | dynamic programming | [leetcode 122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | 📌📌📌1st, 2nd dp O(n) |
 | 178 | [Best Time to Buy and Sell Stock III](/leetcode/123-best-time-to-buy-and-sell-stock-iii) | dynamic programming | [leetcode 122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | 📌📌📌1st O(n^2) LTE, 2nd O(2n) beats 32% |
 | 178 | [Minimum Time Difference](/leetcode/539-minimum-time-difference) | sort | [leetcode 539](https://leetcode.com/problems//leetcode/minimum-time-difference/) | 1st O(nlogn) beats 73%, 2nd O(n) beats 93% |
+| 178 | [Next Closest Time](/leetcode/681-next-closest-time) | string | [leetcode 681](https://leetcode.com/problems//leetcode/next-closest-time/) | ⭐️ so many corner cases, it was the worst attempt i ever made |
