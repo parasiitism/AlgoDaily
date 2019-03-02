@@ -381,3 +381,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 178 | [Next Closest Time](/leetcode/681-next-closest-time) | string | [leetcode 681](https://leetcode.com/problems/leetcode/next-closest-time/) | ⭐️ so many corner cases, it was the worst attempt i ever made |
 | 179 | [Game of Life](/leetcode/289-game-of-life) | array, bit op | [leetcode 289](https://leetcode.com/problems/leetcode/game-of-life/) | 1st space O(mn), 2nd space O(1)|
 | 179 | [Add Two Numbers](/leetcode/2-add-two-numbers) | linked list | [leetcode 2](https://leetcode.com/problems/leetcode/add-two-numbers/) | 📌1st, 2nd O(n)|
+| 179 | [Add Two Numbers II](/leetcode/445-add-two-numbers-ii) | linked list | [leetcode 445](https://leetcode.com/problems/leetcode/add-two-numbers-ii/) | 📌1st O(n)|
