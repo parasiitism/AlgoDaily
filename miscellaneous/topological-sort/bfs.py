@@ -122,6 +122,11 @@ class Solution(object):
 
 
 print(Solution().findOrder([
-    ['A', 'C'], ['B', 'C'], ['C', 'E'], [
-        'B', 'D'], ['E', 'F'], ['D', 'F'], ['F', 'G']
+    ('A', 'C'),
+    ('B', 'C'),
+    ('C', 'E'),
+    ('B', 'D'),
+    ('E', 'F'),
+    ('D', 'F'),
+    ('F', 'G'),
 ]))

@@ -383,3 +383,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 179 | [Add Two Numbers](/leetcode/2-add-two-numbers) | linked list | [leetcode 2](https://leetcode.com/problems/leetcode/add-two-numbers/) | 📌1st, 2nd O(n)|
 | 179 | [Add Two Numbers II](/leetcode/445-add-two-numbers-ii) | linked list | [leetcode 445](https://leetcode.com/problems/leetcode/add-two-numbers-ii/) | 📌1st O(n)|
 | 179 | [Topological Ordering Of IDs](/miscellaneous/topological-sort) | graph | revise | implement topological ordering of a list of IDs |
+| 179 | [Alien Dictionary](leetcode/269-alien-dictionary) | array, graph | [leetcode 269](https://leetcode.com/problems/leetcode/alien-dictionary/) | 📌1st BFS, 2nd DFS |
