@@ -2,7 +2,7 @@ class Solution(object):
     def findOrder(self, numCourses, prerequisites):
         """
         :type numCourses: int
-        :type prerequisites: List[List[int]]
+        :type prerequisites: List[List[int]] e.g. [[to1, from1], [to2, from2],...]
         :rtype: List[int]
 
         2nd appraoch: Topological Ordering in BFS
@@ -67,3 +67,61 @@ print(Solution().findOrder(
 
 print(Solution().findOrder(
     6, [[3, 4], [0, 1], [2, 5], [4, 5], [1, 5], [3, 2], [5, 3]]))
+
+
+# node values are not limited to numbers
+# 1->5 works
+# a->b works too
+class Solution(object):
+    def findOrder(self, prerequisites):
+        """
+        :type prerequisites: List[List[int/string]] e.g. [[to1, from1], [to2, from2],...]
+        :rtype: List[int/string]
+        """
+        # get all the nodes
+        nodesSet = set()
+        for src, dest in prerequisites:
+            nodesSet.add(src)
+            nodesSet.add(dest)
+        nodes = list(nodesSet)
+        # init all the indegrees
+        indegrees = {}
+        for node in nodes:
+            indegrees[node] = 0
+        # get all the connections/adjacents list
+        connections = {}
+        for src, dest in prerequisites:
+            # construct adjacent list
+            if src not in connections:
+                connections[src] = [dest]
+            else:
+                connections[src].append(dest)
+            # add indegree for each node
+            indegrees[dest] += 1
+        # get the nodes with 0 indegree
+        queue = []
+        for key in indegrees:
+            if indegrees[key] == 0:
+                queue.append(key)
+        # dequeue node from the queue and put it into the result
+        res = []
+        while len(queue) > 0:
+            dq = queue.pop(0)
+            res.append(dq)
+            if dq in connections:
+                children = connections[dq]
+                for child in children:
+                    indegrees[child] -= 1
+                    if indegrees[child] == 0:
+                        queue.append(child)
+        # return [] if there is a cycle
+        for key in indegrees:
+            if indegrees[key] > 0:
+                return []
+        return res
+
+
+print(Solution().findOrder([
+    ['A', 'C'], ['B', 'C'], ['C', 'E'], [
+        'B', 'D'], ['E', 'F'], ['D', 'F'], ['F', 'G']
+]))
