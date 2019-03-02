@@ -380,4 +380,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 178 | [Minimum Time Difference](/leetcode/539-minimum-time-difference) | sort | [leetcode 539](https://leetcode.com/problems//leetcode/minimum-time-difference/) | 1st O(nlogn) beats 73%, 2nd O(n) beats 93% |
 | 178 | [Next Closest Time](/leetcode/681-next-closest-time) | string | [leetcode 681](https://leetcode.com/problems/leetcode/next-closest-time/) | ⭐️ so many corner cases, it was the worst attempt i ever made |
 | 179 | [Game of Life](/leetcode/289-game-of-life) | array, bit op | [leetcode 289](https://leetcode.com/problems/leetcode/game-of-life/) | 1st space O(mn), 2nd space O(1)|
-| 179 | [Add Two Numbers](/leetcode/2-add-two-numbers) | linked list | [leetcode 2](https://leetcode.com/problems/leetcode/add-two-numbers/) | 📌|
+| 179 | [Add Two Numbers](/leetcode/2-add-two-numbers) | linked list | [leetcode 2](https://leetcode.com/problems/leetcode/add-two-numbers/) | 📌1st, 2nd O(n)|
