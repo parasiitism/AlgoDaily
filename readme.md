@@ -385,3 +385,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 179 | [Topological Ordering Of IDs](/miscellaneous/topological-sort) | graph | revise | implement topological ordering of a list of IDs |
 | 179 | [Alien Dictionary](leetcode/269-alien-dictionary) | array, graph | [leetcode 269](https://leetcode.com/problems/leetcode/alien-dictionary/) | 📌1st BFS, 2nd DFS |
 | 180 | [Letter Combinations of a Phone Number](leetcode/17-letter-combinations-of-a-phone-number) | recursion | [leetcode 17](https://leetcode.com/problems/leetcode/letter-combinations-of-a-phone-number) | 📌|
+| 180 | [Multiply Strings](leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/leetcode/multiply-strings) | 📌|
