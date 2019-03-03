@@ -377,12 +377,13 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 177 | [Best Time to Buy and Sell Stock](/leetcode/121-best-time-to-buy-and-sell-stock) | dynamic programming | [leetcode 121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 📌📌📌1st dp O(n), 2nd heap O(nlogn) |
 | 177 | [Best Time to Buy and Sell Stock II](/leetcode/122-best-time-to-buy-and-sell-stock-ii) | dynamic programming | [leetcode 122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | 📌📌📌1st, 2nd dp O(n) |
 | 178 | [Best Time to Buy and Sell Stock III](/leetcode/123-best-time-to-buy-and-sell-stock-iii) | dynamic programming | [leetcode 122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | 📌📌📌1st O(n^2) LTE, 2nd O(2n) beats 32% |
-| 178 | [Minimum Time Difference](/leetcode/539-minimum-time-difference) | sort | [leetcode 539](https://leetcode.com/problems//leetcode/minimum-time-difference/) | 1st O(nlogn) beats 73%, 2nd O(n) beats 93% |
-| 178 | [Next Closest Time](/leetcode/681-next-closest-time) | string | [leetcode 681](https://leetcode.com/problems/leetcode/next-closest-time/) | ⭐️ so many corner cases, it was the worst attempt i ever made |
-| 179 | [Game of Life](/leetcode/289-game-of-life) | array, bit op | [leetcode 289](https://leetcode.com/problems/leetcode/game-of-life/) | 1st space O(mn), 2nd space O(1)|
-| 179 | [Add Two Numbers](/leetcode/2-add-two-numbers) | linked list | [leetcode 2](https://leetcode.com/problems/leetcode/add-two-numbers/) | 📌1st, 2nd O(n)|
-| 179 | [Add Two Numbers II](/leetcode/445-add-two-numbers-ii) | linked list | [leetcode 445](https://leetcode.com/problems/leetcode/add-two-numbers-ii/) | 📌1st O(n)|
+| 178 | [Minimum Time Difference](/leetcode/539-minimum-time-difference) | sort | [leetcode 539](https://leetcode.com/problems//minimum-time-difference/) | 1st O(nlogn) beats 73%, 2nd O(n) beats 93% |
+| 178 | [Next Closest Time](/leetcode/681-next-closest-time) | string | [leetcode 681](https://leetcode.com/problems/next-closest-time/) | ⭐️ so many corner cases, it was the worst attempt i ever made |
+| 179 | [Game of Life](/leetcode/289-game-of-life) | array, bit op | [leetcode 289](https://leetcode.com/problems/game-of-life/) | 1st space O(mn), 2nd space O(1)|
+| 179 | [Add Two Numbers](/leetcode/2-add-two-numbers) | linked list | [leetcode 2](https://leetcode.com/problems/add-two-numbers/) | 📌1st, 2nd O(n)|
+| 179 | [Add Two Numbers II](/leetcode/445-add-two-numbers-ii) | linked list | [leetcode 445](https://leetcode.com/problems/add-two-numbers-ii/) | 📌1st O(n)|
 | 179 | [Topological Ordering Of IDs](/miscellaneous/topological-sort) | graph | revise | implement topological ordering of a list of IDs |
-| 179 | [Alien Dictionary](leetcode/269-alien-dictionary) | array, graph | [leetcode 269](https://leetcode.com/problems/leetcode/alien-dictionary/) | 📌1st BFS, 2nd DFS |
-| 180 | [Letter Combinations of a Phone Number](leetcode/17-letter-combinations-of-a-phone-number) | recursion | [leetcode 17](https://leetcode.com/problems/leetcode/letter-combinations-of-a-phone-number) | 📌|
-| 180 | [Multiply Strings](leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/leetcode/multiply-strings) | 📌|
+| 179 | [Alien Dictionary](leetcode/269-alien-dictionary) | array, graph | [leetcode 269](https://leetcode.com/problems/alien-dictionary/) | 📌1st BFS, 2nd DFS |
+| 180 | [Letter Combinations of a Phone Number](leetcode/17-letter-combinations-of-a-phone-number) | recursion | [leetcode 17](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | 📌|
+| 180 | [Multiply Strings](leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/multiply-strings) | 📌|
+| 180 | [Add Strings](leetcode/415-add-strings) | array | [leetcode 415](https://leetcode.com/problems/add-strings) | 📌|

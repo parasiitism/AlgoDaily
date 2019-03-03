@@ -61,11 +61,6 @@ func multiply(num1 string, num2 string) string {
 }
 
 func main() {
-	/*
-	   "498828660196"
-	   "840477629533"
-	*/
-
 	fmt.Println(multiply("12", "345"))
 	fmt.Println(multiply("99", "99"))
 	fmt.Println(multiply("1", "12"))
