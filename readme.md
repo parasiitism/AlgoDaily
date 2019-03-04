@@ -10,15 +10,16 @@ I believe that practising algorithms every day is a long-term investment in my l
 - Binary Search Tree
 - Binary Tree
 - N-aray Tree(Trie)
+- Graph(Dijkstra, Union Find, Kruskal, Prim's, Minimum Spanning Tree, Topological Ordering...etc)
 - Stack
 - Queue
-- Graph(Dijkstra, Union Find, Kruskal, Prim's, Minimum Spanning Tree, Topological Ordering...etc)
-- Hash table
-- Bit Operation
+- Array
 - Sorting
+- Hash Table
 - Heap
 - Linked list
-- Dynamic programming
+- Bit Operation
+- Dynamic programming(Kadan's)
 - Backtracking(Permutations & Combinations & Subsets...etc)
 - Math
 - and more...
@@ -388,4 +389,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 180 | [Multiply Strings](leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/multiply-strings) | 📌|
 | 180 | [Add Strings](leetcode/415-add-strings) | array | [leetcode 415](https://leetcode.com/problems/add-strings) | 📌|
 | 181 | [Valid Word Square](leetcode/422-valid-word-square) | array | [leetcode 422](https://leetcode.com/problems/valid-word-square) | |
-| 181 | [Maximum Subarray](leetcode/53-maximum-subarray) | array | [leetcode 53](https://leetcode.com/problems/maximum-subarray) | 1st O(n^2) 📌|
+| 181 | [Maximum Subarray](leetcode/53-maximum-subarray) | array | [leetcode 53](https://leetcode.com/problems/maximum-subarray) | 1st O(n^2) 📌2nd, 3rd O(n) Kadan's Algorithm |
