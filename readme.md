@@ -388,3 +388,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 180 | [Multiply Strings](leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/multiply-strings) | 📌|
 | 180 | [Add Strings](leetcode/415-add-strings) | array | [leetcode 415](https://leetcode.com/problems/add-strings) | 📌|
 | 181 | [Valid Word Square](leetcode/422-valid-word-square) | array | [leetcode 422](https://leetcode.com/problems/valid-word-square) | |
+| 181 | [Maximum Subarray](leetcode/53-maximum-subarray) | array | [leetcode 53](https://leetcode.com/problems/maximum-subarray) | 1st O(n^2) 📌|
