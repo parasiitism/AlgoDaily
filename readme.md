@@ -391,3 +391,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 181 | [Valid Word Square](leetcode/422-valid-word-square) | array | [leetcode 422](https://leetcode.com/problems/valid-word-square) | |
 | 181 | [Maximum Subarray](leetcode/53-maximum-subarray) | array | [leetcode 53](https://leetcode.com/problems/maximum-subarray) | 1st O(n^2) 📌📌📌2nd, 3rd O(n) Kadan's Algorithm. This problem can be applied to Minimum Subarray |
 | 181 | [Maximum Product Subarray](leetcode/152-maximum-product-subarray) | array | [leetcode 152](https://leetcode.com/problems/maximum-product-subarray) | 1st O(n^2) 📌📌📌2nd O(n) Kadan's Algorithm. This problem can be applied to Minimum Product Subarray |
+| 181 | [Subarray Product Less Than K](leetcode/713-subarray-product-less-than-k) | array | [leetcode 713](https://leetcode.com/problems/subarray-product-less-than-k) | ⭐️sliding window |
