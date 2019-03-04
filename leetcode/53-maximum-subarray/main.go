@@ -29,7 +29,7 @@ func maxSubArray(nums []int) int {
 }
 
 /*
-	2nd approach: dynamic programming, kadan's algorithm
+	2nd approach: dynamic programming, Kadan's algorithm
 	- for each item, store the max among itself, or extend the previous max with itself
 		e.g. dp[i] chooses between dp[i-1]+nums[i] and nums[i]
 	- the result is the largest dp[i]
