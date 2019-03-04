@@ -1,9 +1,9 @@
-AlGoDaily
+AlgoDaily
 ===
 I believe that practising algorithms every day is a long-term investment in my life.
 
 #### Languages
-- Golang, python
+- golang, python, js
 
 #### Target topics
 - Binary Search
@@ -26,8 +26,8 @@ I believe that practising algorithms every day is a long-term investment in my l
 #### Questions from
 - [leetcode](https://leetcode.com)
 - [project euler](https://projecteuler.net)
-- interviews
 - glassdoor
+- interviews
 - ...
 
 #### Started on September 1st 2018
@@ -387,3 +387,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 180 | [Letter Combinations of a Phone Number](leetcode/17-letter-combinations-of-a-phone-number) | recursion | [leetcode 17](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | 📌|
 | 180 | [Multiply Strings](leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/multiply-strings) | 📌|
 | 180 | [Add Strings](leetcode/415-add-strings) | array | [leetcode 415](https://leetcode.com/problems/add-strings) | 📌|
+| 181 | [Valid Word Square](leetcode/422-valid-word-square) | array | [leetcode 422](https://leetcode.com/problems/valid-word-square) | |
