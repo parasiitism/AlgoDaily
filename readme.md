@@ -394,3 +394,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 181 | [Subarray Product Less Than K](leetcode/713-subarray-product-less-than-k) | array | [leetcode 713](https://leetcode.com/problems/subarray-product-less-than-k) | ⭐️sliding window |
 | 182 | [Word Ladder](leetcode/127-word-ladder) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder) | 1st LTE, ⭐️2nd O(n^26*l) |
 | 182 | [Word Ladder II](leetcode/126-word-ladder-ii) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder-ii) | LTE, revise later |
+| 182 | [Minimum Genetic Mutation](leetcode/433-minimum-genetic-mutation) | bfs, hashtable | [leetcode 433](https://leetcode.com/problems/minimum-genetic-mutation) | 1st O(MN) |
