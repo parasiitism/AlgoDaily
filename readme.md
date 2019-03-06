@@ -398,3 +398,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 183 | [Bold Words in String](leetcode/758-bold-words-in-string/) | hashtable, sort | [leetcode 433](https://leetcode.com/problems/bold-words-in-string/) | 1st O(nlogn): interval problem |
 | 183 | [Add Bold Tag in String](leetcode/616-add-bold-tag-in-string/) | hashtable, sort | [leetcode 616](https://leetcode.com/problems/add-bold-tag-in-string/) | 1st O(nlogn): interval problem |
 | 183 | [Number of Segments in a String](leetcode/434-number-of-segments-in-a-string/) | string | [leetcode 616](https://leetcode.com/problems/number-of-segments-in-a-string/) | takeaway`strings.Fields(s)`|
+| 183 | [Sort Colors](leetcode/75-sort-colors/) | bucket | [leetcode 75](https://leetcode.com/problems/sort-colors/) | 1st bucket sort |
