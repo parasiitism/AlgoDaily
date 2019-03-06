@@ -31,42 +31,28 @@ func sortColors(nums []int) {
 }
 
 /*
-	2nd approach: bucket sort but just dont init an array LOL
+	2nd approach:
+	- move the zeros to the front
+	- move the twos to the back
+	- see leetcode 283) moving zeros
 
 	Time	O(n)
-	Space	O(3)
+	Space	O(2)
 	0 ms, faster than 100.00%
 */
 func sortColors1(nums []int) {
-	zero := 0
-	one := 0
-	two := 0
-	for _, num := range nums {
-		if num == 0 {
-			zero++
-		} else if num == 1 {
-			one++
-		} else if num == 2 {
-			two++
+	idx0 := -1
+	for i := 0; i < len(nums); i++ {
+		if nums[i] == 0 {
+			nums[idx0+1], nums[i] = nums[i], nums[idx0+1]
+			idx0++
 		}
 	}
-	index := 0
-	if zero > 0 {
-		for i := 0; i < zero; i++ {
-			nums[index] = 0
-			index++
-		}
-	}
-	if one > 0 {
-		for i := 0; i < one; i++ {
-			nums[index] = 1
-			index++
-		}
-	}
-	if two > 0 {
-		for i := 0; i < two; i++ {
-			nums[index] = 2
-			index++
+	idx2 := len(nums)
+	for i := len(nums) - 1; i >= 0; i-- {
+		if nums[i] == 2 {
+			nums[idx2-1], nums[i] = nums[i], nums[idx2-1]
+			idx2--
 		}
 	}
 }
