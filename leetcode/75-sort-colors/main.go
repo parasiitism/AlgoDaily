@@ -11,7 +11,7 @@ import "fmt"
 	1st approach: bucket sort
 
 	Time	O(n)
-	Space	O(n)
+	Space	O(3)
 	0 ms, faster than 100.00%
 */
 func sortColors(nums []int) {
@@ -31,13 +31,54 @@ func sortColors(nums []int) {
 }
 
 /*
+	2nd approach: bucket sort but just dont init an array LOL
+
+	Time	O(n)
+	Space	O(3)
+	0 ms, faster than 100.00%
+*/
+func sortColors1(nums []int) {
+	zero := 0
+	one := 0
+	two := 0
+	for _, num := range nums {
+		if num == 0 {
+			zero++
+		} else if num == 1 {
+			one++
+		} else if num == 2 {
+			two++
+		}
+	}
+	index := 0
+	if zero > 0 {
+		for i := 0; i < zero; i++ {
+			nums[index] = 0
+			index++
+		}
+	}
+	if one > 0 {
+		for i := 0; i < one; i++ {
+			nums[index] = 1
+			index++
+		}
+	}
+	if two > 0 {
+		for i := 0; i < two; i++ {
+			nums[index] = 2
+			index++
+		}
+	}
+}
+
+/*
 	2nd approach: merge sort
 
 	Time	O(nlogn)
 	Space	O(n)
 	0 ms, faster than 100.00%
 */
-func sortColors1(nums []int) {
+func sortColors0(nums []int) {
 	temp := mergeSort(nums)
 	for i := 0; i < len(nums); i++ {
 		nums[i] = temp[i]
