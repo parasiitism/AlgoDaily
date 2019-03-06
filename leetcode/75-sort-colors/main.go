@@ -8,6 +8,49 @@ import "fmt"
 */
 
 /*
+	0th approach: merge sort
+
+	Time	O(nlogn)
+	Space	O(n)
+	0 ms, faster than 100.00%
+*/
+func sortColors0(nums []int) {
+	temp := mergeSort(nums)
+	for i := 0; i < len(nums); i++ {
+		nums[i] = temp[i]
+	}
+}
+
+func mergeSort(nums []int) []int {
+	// divide
+	if len(nums) == 1 {
+		return nums
+	}
+	mean := len(nums) / 2
+	arr1 := mergeSort(nums[:mean])
+	arr2 := mergeSort(nums[mean:])
+	// merge 2 sorted arrays
+	i, j := 0, 0
+	result := []int{}
+	for i < len(arr1) && j < len(arr2) {
+		if arr1[i] < arr2[j] {
+			result = append(result, arr1[i])
+			i++
+		} else {
+			result = append(result, arr2[j])
+			j++
+		}
+	}
+	if i < len(arr1) {
+		result = append(result, arr1[i:]...)
+	}
+	if j < len(arr2) {
+		result = append(result, arr2[j:]...)
+	}
+	return result
+}
+
+/*
 	1st approach: bucket sort
 
 	Time	O(n)
@@ -58,51 +101,45 @@ func sortColors1(nums []int) {
 }
 
 /*
-	2nd approach: merge sort
+	3rd approach: suggested solution
+	- the basic idea is 3 pointers partitioning the array into 3 parts and swap
+	- https://leetcode.com/problems/sort-colors/discuss/26481/Python-O(n)-1-pass-in-place-solution-with-explanation
+	- https://en.wikipedia.org/wiki/Dutch_national_flag_problem
 
-	Time	O(nlogn)
-	Space	O(n)
+	iterations:
+	[1 0 1 2 0 2]
+	[1 0 1 2 0 2]
+	[0 1 1 2 0 2]
+	[0 1 1 2 0 2]
+	[0 1 1 0 2 2]
+	[0 0 1 1 2 2]
+	[0 0 1 1 2 2]
+
+	Time	O(d)
+	Space	O(1)
 	0 ms, faster than 100.00%
 */
-func sortColors0(nums []int) {
-	temp := mergeSort(nums)
-	for i := 0; i < len(nums); i++ {
-		nums[i] = temp[i]
-	}
-}
-
-func mergeSort(nums []int) []int {
-	// divide
-	if len(nums) == 1 {
-		return nums
-	}
-	mean := len(nums) / 2
-	arr1 := mergeSort(nums[:mean])
-	arr2 := mergeSort(nums[mean:])
-	// merge 2 sorted arrays
-	i, j := 0, 0
-	result := []int{}
-	for i < len(arr1) && j < len(arr2) {
-		if arr1[i] < arr2[j] {
-			result = append(result, arr1[i])
-			i++
+func sortColors2(nums []int) {
+	zero := 0
+	one := 0
+	two := len(nums) - 1
+	for one <= two {
+		if nums[one] == 0 {
+			nums[zero], nums[one] = nums[one], nums[zero]
+			zero++
+			one++
+		} else if nums[one] == 1 {
+			one++
 		} else {
-			result = append(result, arr2[j])
-			j++
+			nums[one], nums[two] = nums[two], nums[one]
+			two--
 		}
 	}
-	if i < len(arr1) {
-		result = append(result, arr1[i:]...)
-	}
-	if j < len(arr2) {
-		result = append(result, arr2[j:]...)
-	}
-	return result
 }
 
 func main() {
 	a := []int{2, 0, 1, 2, 0, 1}
-	sortColors1(a)
+	sortColors2(a)
 	fmt.Println(a)
 
 	a = []int{}
