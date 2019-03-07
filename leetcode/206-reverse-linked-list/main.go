@@ -7,11 +7,13 @@ type ListNode struct {
 	Next *ListNode
 }
 
-// naive approach
-// pu the nodes into an array and reversively put the items into the result
-// time		O(2n)
-// space	O(n)
-// but it beats 100% LOL
+/*
+	naive approach
+	pu the nodes into an array and reversively put the items into the result
+	time		O(2n)
+	space	O(n)
+	but it beats 100% LOL
+*/
 func reverseList(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
@@ -31,13 +33,15 @@ func reverseList(head *ListNode) *ListNode {
 	return dump.Next
 }
 
-// 2nd approach: inplace replacement(learned from others)
-// https://leetcode.com/explore/learn/card/linked-list/219/classic-problems/1204/
-// 1->2->3
-// 2->1->3
-// tine		O(n)
-// space 	O(1) since in-place
-// beats 100%
+/*
+	2nd approach: inplace replacement(learned from others)
+	https://leetcode.com/explore/learn/card/linked-list/219/classic-problems/1204/
+	1->2->3
+	2->1->3
+	tine		O(n)
+	space 	O(1) since in-place
+	beats 100%
+*/
 func reverseList1(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
@@ -52,12 +56,14 @@ func reverseList1(head *ListNode) *ListNode {
 	return cur
 }
 
-// 3rd approach: similar to 2nd but use a dump
-// 1->2->3
-// 2->1->3
-// tine		O(n)
-// space 	O(1) since in-place
-// beats 100%
+/*
+	3rd approach: similar to 2nd but use a dump
+	1->2->3
+	2->1->3
+	tine		O(n)
+	space 	O(1) since in-place
+	beats 100%
+*/
 func reverseList2(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
@@ -71,6 +77,25 @@ func reverseList2(head *ListNode) *ListNode {
 		head.Next = striker.Next
 		striker.Next = temp
 		striker = head.Next
+	}
+	return dump.Next
+}
+
+/*
+	4th approach: similar to 2nd but use a dump
+	1->2->3
+	2->1->3
+	tine		O(n)
+	space 	O(1) since in-place
+	beats 100%
+*/
+func reverseList3(head *ListNode) *ListNode {
+	dump := &ListNode{-1, head}
+	for head != nil && head.Next != nil {
+		temp := head.Next
+		head.Next = head.Next.Next
+		temp.Next = dump.Next
+		dump.Next = temp
 	}
 	return dump.Next
 }
