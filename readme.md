@@ -384,25 +384,26 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 179 | [Add Two Numbers](/leetcode/2-add-two-numbers) | linked list | [leetcode 2](https://leetcode.com/problems/add-two-numbers/) | 📌1st, 2nd O(n)|
 | 179 | [Add Two Numbers II](/leetcode/445-add-two-numbers-ii) | linked list | [leetcode 445](https://leetcode.com/problems/add-two-numbers-ii/) | 📌1st O(n)|
 | 179 | [Topological Ordering Of IDs](/miscellaneous/topological-sort) | graph | revise | implement topological ordering of a list of IDs |
-| 179 | [Alien Dictionary](leetcode/269-alien-dictionary) | array, graph | [leetcode 269](https://leetcode.com/problems/alien-dictionary/) | 📌1st BFS, 2nd DFS |
-| 180 | [Letter Combinations of a Phone Number](leetcode/17-letter-combinations-of-a-phone-number) | recursion | [leetcode 17](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | 📌|
-| 180 | [Multiply Strings](leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/multiply-strings) | 📌|
-| 180 | [Add Strings](leetcode/415-add-strings) | array | [leetcode 415](https://leetcode.com/problems/add-strings) | 📌|
+| 179 | [Alien Dictionary](/leetcode/269-alien-dictionary) | array, graph | [leetcode 269](https://leetcode.com/problems/alien-dictionary/) | 📌1st BFS, 2nd DFS |
+| 180 | [Letter Combinations of a Phone Number](/leetcode/17-letter-combinations-of-a-phone-number) | recursion | [leetcode 17](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | 📌|
+| 180 | [Multiply Strings](/leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/multiply-strings) | 📌|
+| 180 | [Add Strings](/leetcode/415-add-strings) | array | [leetcode 415](https://leetcode.com/problems/add-strings) | 📌|
 | 181 | [Valid Word Square](leetcode/422-valid-word-square) | array | [leetcode 422](https://leetcode.com/problems/valid-word-square) | |
-| 181 | [Maximum Subarray](leetcode/53-maximum-subarray) | array | [leetcode 53](https://leetcode.com/problems/maximum-subarray) | 1st O(n^2) 📌📌📌2nd, 3rd O(n) Kadan's Algorithm. This problem can be applied to Minimum Subarray |
-| 181 | [Maximum Product Subarray](leetcode/152-maximum-product-subarray) | array | [leetcode 152](https://leetcode.com/problems/maximum-product-subarray) | 1st O(n^2) 📌📌📌2nd O(n) Kadan's Algorithm. This problem can be applied to Minimum Product Subarray |
-| 181 | [Subarray Product Less Than K](leetcode/713-subarray-product-less-than-k) | array | [leetcode 713](https://leetcode.com/problems/subarray-product-less-than-k) | ⭐️sliding window |
-| 182 | [Word Ladder](leetcode/127-word-ladder) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder) | 1st LTE, ⭐️2nd O(n^26*l) |
-| 182 | [Word Ladder II](leetcode/126-word-ladder-ii) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder-ii) | LTE, revise later |
-| 182 | [Minimum Genetic Mutation](leetcode/433-minimum-genetic-mutation) | bfs, hashtable | [leetcode 433](https://leetcode.com/problems/minimum-genetic-mutation) | 1st O(MN) |
-| 183 | [Bold Words in String](leetcode/758-bold-words-in-string/) | hashtable, sort | [leetcode 433](https://leetcode.com/problems/bold-words-in-string/) | ️️⭐️1st O(nlogn): interval problem |
-| 183 | [Add Bold Tag in String](leetcode/616-add-bold-tag-in-string/) | hashtable, sort | [leetcode 616](https://leetcode.com/problems/add-bold-tag-in-string/) | ⭐️1st O(nlogn): interval problem |
-| 183 | [Number of Segments in a String](leetcode/434-number-of-segments-in-a-string/) | string | [leetcode 616](https://leetcode.com/problems/number-of-segments-in-a-string/) | takeaway`strings.Fields(s)`|
-| 183 | [Sort Colors](leetcode/75-sort-colors/) | bucket | [leetcode 75](https://leetcode.com/problems/sort-colors/) | 0th merge sort O(nlogn), 1st bucket sort O(2n), 📌2nd moving zeros swap O(2n), 📌3rd partitioning swap O(n) |
-| 183 | [Move Zeroes](leetcode/283-move-zeroes/) | array | [leetcode 75](https://leetcode.com/problems/move-zeroes/) | ⭐️swap |
-| 183 | [Missing Number](leetcode/268-missing-number/) | bucket, math | [leetcode 268](https://leetcode.com/problems/missing-number/) | 1st math O(n), 2nd bucket O(2n) |
-| 184 | [Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/) | linked list | [leetcode 24](https://leetcode.com/problems/swap-nodes-in-pairs/) | 📌 |
-| 184 | [Reverse Nodes in k-Group](leetcode/25-reverse-nodes-in-k-group/) | linked list | [leetcode 25](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 📌|
-| 184 | [Sort List](leetcode/148-sort-list/) | linked list, sort | [leetcode 148](https://leetcode.com/problems/sort-list/) | 📌merge sort |
-| 184 | [Peeking Iterator](leetcode/284-peeking-iterator/) | design | [leetcode 284](https://leetcode.com/problems/peeking-iterator/) | leetcode doesnt support golang |
-| 184 | [One Edit Distance](leetcode/161-one-edit-distance/) | array | [leetcode 161](https://leetcode.com/problems/one-edit-distance/) | 1st O(3n), 2nd O(n) |
+| 181 | [Maximum Subarray](/leetcode/53-maximum-subarray) | array | [leetcode 53](https://leetcode.com/problems/maximum-subarray) | 1st O(n^2) 📌📌📌2nd, 3rd O(n) Kadan's Algorithm. This problem can be applied to Minimum Subarray |
+| 181 | [Maximum Product Subarray](/leetcode/152-maximum-product-subarray) | array | [leetcode 152](https://leetcode.com/problems/maximum-product-subarray) | 1st O(n^2) 📌📌📌2nd O(n) Kadan's Algorithm. This problem can be applied to Minimum Product Subarray |
+| 181 | [Subarray Product Less Than K](/leetcode/713-subarray-product-less-than-k) | array | [leetcode 713](https://leetcode.com/problems/subarray-product-less-than-k) | ⭐️sliding window |
+| 182 | [Word Ladder](/leetcode/127-word-ladder) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder) | 1st LTE, ⭐️2nd O(n^26*l) |
+| 182 | [Word Ladder II](/leetcode/126-word-ladder-ii) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder-ii) | LTE, revise later |
+| 182 | [Minimum Genetic Mutation](/leetcode/433-minimum-genetic-mutation) | bfs, hashtable | [leetcode 433](https://leetcode.com/problems/minimum-genetic-mutation) | 1st O(MN) |
+| 183 | [Bold Words in String](/leetcode/758-bold-words-in-string/) | hashtable, sort | [leetcode 433](https://leetcode.com/problems/bold-words-in-string/) | ️️⭐️1st O(nlogn): interval problem |
+| 183 | [Add Bold Tag in String](/leetcode/616-add-bold-tag-in-string/) | hashtable, sort | [leetcode 616](https://leetcode.com/problems/add-bold-tag-in-string/) | ⭐️1st O(nlogn): interval problem |
+| 183 | [Number of Segments in a String](/leetcode/434-number-of-segments-in-a-string/) | string | [leetcode 616](https://leetcode.com/problems/number-of-segments-in-a-string/) | takeaway`strings.Fields(s)`|
+| 183 | [Sort Colors](/leetcode/75-sort-colors/) | bucket | [leetcode 75](https://leetcode.com/problems/sort-colors/) | 0th merge sort O(nlogn), 1st bucket sort O(2n), 📌2nd moving zeros swap O(2n), 📌3rd partitioning swap O(n) |
+| 183 | [Move Zeroes](/leetcode/283-move-zeroes/) | array | [leetcode 75](https://leetcode.com/problems/move-zeroes/) | ⭐️swap |
+| 183 | [Missing Number](/leetcode/268-missing-number/) | bucket, math | [leetcode 268](https://leetcode.com/problems/missing-number/) | 1st math O(n), 2nd bucket O(2n) |
+| 184 | [Swap Nodes in Pairs](/leetcode/24-swap-nodes-in-pairs/) | linked list | [leetcode 24](https://leetcode.com/problems/swap-nodes-in-pairs/) | 📌 |
+| 184 | [Reverse Nodes in k-Group](/leetcode/25-reverse-nodes-in-k-group/) | linked list | [leetcode 25](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 📌|
+| 184 | [Sort List](/leetcode/148-sort-list/) | linked list, sort | [leetcode 148](https://leetcode.com/problems/sort-list/) | 📌merge sort |
+| 184 | [Peeking Iterator](/leetcode/284-peeking-iterator/) | design | [leetcode 284](https://leetcode.com/problems/peeking-iterator/) | leetcode doesnt support golang |
+| 184 | [One Edit Distance](/leetcode/161-one-edit-distance/) | array | [leetcode 161](https://leetcode.com/problems/one-edit-distance/) | 1st O(3n), 2nd O(n) |
+| 184 | [Zero/K Sum Subarray(s)](/miscellaneous/zero-sum-subarray/) | array | glassdoor | 📌similar to [leetcode 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) and [leetcode 560](https://leetcode.com/problems/subarray-sum-equals-k/) |

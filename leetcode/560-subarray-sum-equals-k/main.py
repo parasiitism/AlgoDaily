@@ -22,15 +22,17 @@ class Solution(object):
         ht = {}
         for i in range(len(nums)):
             acc += nums[i]
+            # if acc == k, it is one of the target subarray
             if acc == k:
                 res += 1
+            # if acc-k == k, it is one of the target subarray
             if acc-k in ht:
                 res += ht[acc-k]
+            # put the acc into the hashtable
             if acc not in ht:
                 ht[acc] = 1
             else:
                 ht[acc] += 1
-
         return res
 
 
