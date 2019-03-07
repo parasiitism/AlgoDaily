@@ -1,7 +1,7 @@
 package main
 
 /*
-	1st approach:
+	1st approach: 3 passes
 	1. check if the result of removing of any character in s equals t
 	2. check if the result of removing of any character in t equals s
 	3. check if removing any same-positioned character in both s and t which makes them the same
@@ -41,6 +41,52 @@ func isOneEditDistance(s string, t string) bool {
 		}
 	}
 	return false
+}
+
+/*
+	2nd approach: 1 pass
+
+	There're 3 possibilities to satisfy the question:
+	1) Replace 1 char:
+ 	  s: a B c
+ 	  t: a D c
+  2) Delete 1 char from s:
+	  s: a D  b c
+	  t: a    b c
+  3) Delete 1 char from t
+	  s: a   b c
+	  t: a D b c
+
+	Time		O(min(S,T))
+	Space		O(1)
+	0 ms, faster than 100.00%
+*/
+func isOneEditDistance1(s string, t string) bool {
+	for i := 0; i < min(len(s), len(t)); i++ {
+		if s[i] != t[i] {
+			if len(s) == len(t) {
+				// s has the same length as t, so the only possibility is replacing one char in s and t
+				return s[i+1:] == t[i+1:]
+			} else if len(s) > len(t) {
+				// s is longer than t, so the only possibility is deleting one char from s
+				return s[i+1:] == t[i:]
+			} else {
+				// t is longer than s, so the only possibility is deleting one char from t
+				return s[i:] == t[i+1:]
+			}
+		}
+	}
+	if len(s)-len(t) == 1 || len(t)-len(s) == 1 {
+		return true
+	}
+	return false
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }
 
 func main() {

@@ -404,4 +404,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 184 | [Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/) | linked list | [leetcode 24](https://leetcode.com/problems/swap-nodes-in-pairs/) | 📌 |
 | 184 | [Reverse Nodes in k-Group](leetcode/25-reverse-nodes-in-k-group/) | linked list | [leetcode 25](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 📌|
 | 184 | [Sort List](leetcode/148-sort-list/) | linked list, sort | [leetcode 148](https://leetcode.com/problems/sort-list/) | 📌merge sort |
-| 184 | [One Edit Distance](leetcode/161-one-edit-distance/) | array | [leetcode 161](https://leetcode.com/problems/one-edit-distance/) |  |
+| 184 | [One Edit Distance](leetcode/161-one-edit-distance/) | array | [leetcode 161](https://leetcode.com/problems/one-edit-distance/) | 1st O(3n), 2nd O(n) |
