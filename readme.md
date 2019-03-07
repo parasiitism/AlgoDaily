@@ -401,3 +401,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 183 | [Sort Colors](leetcode/75-sort-colors/) | bucket | [leetcode 75](https://leetcode.com/problems/sort-colors/) | 0th merge sort O(nlogn), 1st bucket sort O(2n), 📌2nd moving zeros swap O(2n), 📌3rd partitioning swap O(n) |
 | 183 | [Move Zeroes](leetcode/283-move-zeroes/) | array | [leetcode 75](https://leetcode.com/problems/move-zeroes/) | ⭐️swap |
 | 183 | [Missing Number](leetcode/268-missing-number/) | bucket, math | [leetcode 268](https://leetcode.com/problems/missing-number/) | 1st math O(n), 2nd bucket O(2n) |
+| 184 | [Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/) | linked list | [leetcode 24](https://leetcode.com/problems/swap-nodes-in-pairs/) | 📌 |
