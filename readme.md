@@ -403,3 +403,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 183 | [Missing Number](leetcode/268-missing-number/) | bucket, math | [leetcode 268](https://leetcode.com/problems/missing-number/) | 1st math O(n), 2nd bucket O(2n) |
 | 184 | [Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/) | linked list | [leetcode 24](https://leetcode.com/problems/swap-nodes-in-pairs/) | 📌 |
 | 184 | [Reverse Nodes in k-Group](leetcode/25-reverse-nodes-in-k-group/) | linked list | [leetcode 25](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 📌|
+| 184 | [Sort List](leetcode/148-sort-list/) | linked list, sort | [leetcode 148](https://leetcode.com/problems/sort-list/) | 📌merge sort |

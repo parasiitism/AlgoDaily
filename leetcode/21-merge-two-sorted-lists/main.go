@@ -42,7 +42,7 @@ func mergeTwoLists0(l1 *ListNode, l2 *ListNode) *ListNode {
 	1st approach
 	- idea like merge sort
 	Time	O(N)
-	Space	O(N)
+	Space	O(N) result
 	4ms beats 100%
 */
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
@@ -69,6 +69,39 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 		cur.Next = curB
 		curB = curB.Next
 		cur = cur.Next
+	}
+	// append intermediate result to result
+	return dump.Next
+}
+
+/*
+	2nd approach
+	- optimize the above approach
+
+	Time	O(N)
+	Space	O(N) result
+	4ms beats 100%
+*/
+func mergeTwoLists2(l1 *ListNode, l2 *ListNode) *ListNode {
+	curA := l1
+	curB := l2
+	dump := &ListNode{0, nil}
+	cur := dump
+	for curA != nil && curB != nil {
+		if curA.Val < curB.Val {
+			cur.Next = curA
+			curA = curA.Next
+		} else {
+			cur.Next = curB
+			curB = curB.Next
+		}
+		cur = cur.Next
+	}
+	if curA != nil {
+		cur.Next = curA
+	}
+	if curB != nil {
+		cur.Next = curB
 	}
 	// append intermediate result to result
 	return dump.Next
