@@ -5,31 +5,34 @@ import (
 	"math"
 )
 
-func findMaxAverage(nums []int) float64 {
-	if len(nums) == 0 {
+/*
+	1st approach: sliding window
+
+	Time	O(n)
+	Space	O(1)
+	124 ms, faster than 100.00%
+*/
+func findMaxAverage(nums []int, k int) float64 {
+	if len(nums) == 0 || k < 1 {
 		return 0
 	}
-	dp := [][]int{}
-	firstItem := []int{nums[0], 1} // [sum, count] count can be either heritate from the previuous item(+1) or the item itself(1)
-	dp = append(dp, firstItem)
-	for i := 1; i < len(nums); i++ {
-		temp := []int{}
-		if dp[i-1][0]+nums[i] > nums[i] {
-			temp = []int{dp[i-1][0] + nums[i], dp[i-1][1] + 1}
-		} else {
-			temp = []int{nums[i], 1}
-		}
-		dp = append(dp, temp)
+	resSum := math.MinInt64
+	windowSum := 0
+	for i := 0; i < k && i < len(nums); i++ {
+		windowSum += nums[i]
 	}
-	res := -math.MaxFloat64
-	for i := 0; i < len(dp); i++ {
-		if float64(dp[i][0]) > res {
-			res = float64(dp[i][0]) / float64(dp[i][1])
+	resSum = windowSum
+
+	for i := k; i < len(nums); i++ {
+		windowSum += nums[i] - nums[i-k]
+		if windowSum > resSum {
+			resSum = windowSum
 		}
 	}
-	return res
+
+	return float64(resSum) / float64(k)
 }
 
 func main() {
-	fmt.Println(findMaxAverage([]int{1, 12, -5, -6, 50, 3}))
+	fmt.Println(findMaxAverage([]int{1, 12, -5, -6, 50, 3}, 4))
 }
