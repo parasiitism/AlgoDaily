@@ -409,3 +409,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 184 | [Zero/K Sum Subarray(s)](/miscellaneous/zero-sum-subarray/) | array | glassdoor | 📌similar to [leetcode 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) and [leetcode 560](https://leetcode.com/problems/subarray-sum-equals-k/) |
 | 185 | [Edit Distance](/leetcode/72-edit-distance/) | dynamic programming | [leetcode 72](https://leetcode.com/problems/edit-distance/) | 📌📌📌 similar to LCS |
 | 185 | [Shortest Unsorted Continuous Subarray](/leetcode/581-shortest-unsorted-continuous-subarray/) | sort, array | [leetcode 581](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/) | 1st O(nlogn), 2nd O(n) |
+| 185 | [Maximum Average Subarray](/miscellaneous/max-average-subarray/) | dynamic programming | glassdoor | 📌1st O(nlogn), 2nd O(n) |
