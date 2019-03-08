@@ -411,3 +411,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 185 | [Shortest Unsorted Continuous Subarray](/leetcode/581-shortest-unsorted-continuous-subarray/) | sort, array | [leetcode 581](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/) | 1st O(nlogn), 2nd O(n) |
 | 185 | [Maximum Average Subarray](/miscellaneous/max-average-subarray/) | dynamic programming | glassdoor | 📌1st O(nlogn), 2nd O(n) |
 | 185 | [Maximum Average Subarray I](/leetcode/643-maximum-average-subarray-i/) | array | glassdoor | sliding window O(n) |
+| 185 | [Subdomain Visit Count](/leetcode/811-subdomain-visit-count/) | string | [leetcode 811](https://leetcode.com/problems/subdomain-visit-count/) | 1st O(n) |
