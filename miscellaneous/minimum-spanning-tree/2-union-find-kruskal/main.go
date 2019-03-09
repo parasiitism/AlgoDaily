@@ -21,8 +21,10 @@ import (
 	- when the graph is sparse, number of edges(E) ~= number of vertices(V) ,like E ~= V
 	- when the edges are already sorted or if we can sort them in linear time
 
-	Time		O(E log E) E: number of edges
-	Space		O(E) edges in the heap
+	Time		O(E log E) + O(V log V) <= sort the edges + union find
+	Space		O(V) edges in union find
+  E: number of edges, V: number of vertices
+
 	ref: https://www.youtube.com/watch?v=5xosHRdxqHA
 */
 func miniumSpanningTree(n int, edges [][]int) [][]int {
