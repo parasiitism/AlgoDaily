@@ -19,6 +19,9 @@ import (
 
 	Time	O(E log V) E: number of edges, V: number of vertices
 	Space	O(E + V) hashtable + heap
+
+	ref:
+	- https://www.youtube.com/watch?v=YyLaRffCdk4
 */
 func miniumSpanningTree(edges [][]int) [][]int {
 	res := [][]int{}
