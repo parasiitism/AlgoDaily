@@ -415,4 +415,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 185 | [Trapping Rain Water](/leetcode/42-trapping-rain-water/) | dynamic programming | [leetcode 42](https://leetcode.com/problems/trapping-rain-water/) | 1st O(3n) |
 | 186 | [Unique Binary Search Trees](/leetcode/96-unique-binary-search-trees/) | dynamic programming | [leetcode 96](https://leetcode.com/problems/unique-binary-search-trees/) | ⭐️[Catalan Number Sequence](https://en.wikipedia.org/wiki/Catalan_number) very similar to the Fibonacci Sequence |
 | 187 | [Valid Palindrome](/leetcode/125-valid-palindrome/) | 2pointers | [leetcode 125](https://leetcode.com/problems/valid-palindrome/) | 📌|
-| 187 | [Valid Palindrome II](/leetcode/680-valid-palindrome-ii/) | 2pointers | [leetcode 680](https://leetcode.com/problems/valid-palindrome-ii/) | 📌|
+| 187 | [Valid Palindrome II](/leetcode/680-valid-palindrome-ii/) | 2pointers | [leetcode 680](https://leetcode.com/problems/valid-palindrome-ii/) | 📌1st O(n), 2nd O(n) too but more readable|
