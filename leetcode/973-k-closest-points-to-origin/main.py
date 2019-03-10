@@ -108,6 +108,9 @@ class Solution(object):
         - optimize the 2nd
         - use builtin timsort
 
+        ref:
+        - https://www.youtube.com/watch?v=Hoixgm4-P4M&t=133s
+
         Time    O(nlogn) -> O(n)
         Space   O(n)
         436 ms, faster than 43.33%
