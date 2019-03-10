@@ -66,3 +66,30 @@ class Solution(object):
 print(Solution().kClosest([[1, 3], [-2, 2]], 1))
 print(Solution().kClosest([[1, 3], [-2, 2]], 3))
 print(Solution().kClosest([[3, 3], [5, -1], [-2, 4]], 2))
+
+
+class Solution(object):
+    def kClosest(self, points, K):
+        """
+        :type points: List[List[int]]
+        :type K: int
+        :rtype: List[List[int]]
+
+
+        3rd approach: 
+        - optimize the 2nd
+        - use builtin timsort
+
+        Time    O(nlogn)
+        Space   O(n)
+        392 ms, faster than 72.84% 
+        10mar2019
+        """
+        points = sorted(
+            points, key=lambda x: x[0]*x[0] + x[1]*x[1])
+        return points[:K]
+
+
+print(Solution().kClosest([[1, 3], [-2, 2]], 1))
+print(Solution().kClosest([[1, 3], [-2, 2]], 3))
+print(Solution().kClosest([[3, 3], [5, -1], [-2, 4]], 2))
