@@ -48,7 +48,7 @@ class Solution(object):
 
         Time    O(nlogn)
         Space   O(n)
-        96 ms, faster than 69.73%
+        396 ms, faster than 69.73%
         10mar2019
         """
         arr = []
@@ -62,11 +62,6 @@ class Solution(object):
                 res.append(arr[i][1])
         return res
 
-
-# a = [[], []]
-# print(a)
-# a[0].append((1, 3))
-# print(a)
 
 print(Solution().kClosest([[1, 3], [-2, 2]], 1))
 print(Solution().kClosest([[1, 3], [-2, 2]], 3))
