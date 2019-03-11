@@ -410,7 +410,7 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 185 | [Edit Distance](/leetcode/72-edit-distance/) | dynamic programming | [leetcode 72](https://leetcode.com/problems/edit-distance/) | 📌📌📌 similar to LCS |
 | 185 | [Shortest Unsorted Continuous Subarray](/leetcode/581-shortest-unsorted-continuous-subarray/) | sort, array | [leetcode 581](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/) | 1st O(nlogn), 2nd O(n) |
 | 185 | [Maximum Average Subarray](/miscellaneous/max-average-subarray/) | dynamic programming | glassdoor | 📌1st O(nlogn), 2nd O(n) |
-| 185 | [Maximum Average Subarray I](/leetcode/643-maximum-average-subarray-i/) | array | glassdoor | sliding window O(n) |
+| 185 | [Maximum Average Subarray I](/leetcode/643-maximum-average-subarray-i/) | array | [leetcode 643](https://leetcode.com/problems/maximum-average-subarray-i) | sliding window O(n) |
 | 185 | [Subdomain Visit Count](/leetcode/811-subdomain-visit-count/) | string | [leetcode 811](https://leetcode.com/problems/subdomain-visit-count/) | 1st O(n) |
 | 185 | [Trapping Rain Water](/leetcode/42-trapping-rain-water/) | dynamic programming | [leetcode 42](https://leetcode.com/problems/trapping-rain-water/) | 1st O(3n) |
 | 186 | [Unique Binary Search Trees](/leetcode/96-unique-binary-search-trees/) | dynamic programming | [leetcode 96](https://leetcode.com/problems/unique-binary-search-trees/) | ⭐️[Catalan Number Sequence](https://en.wikipedia.org/wiki/Catalan_number) very similar to the Fibonacci Sequence |
