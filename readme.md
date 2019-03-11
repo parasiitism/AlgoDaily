@@ -418,3 +418,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 187 | [Valid Palindrome II](/leetcode/680-valid-palindrome-ii/) | 2pointers | [leetcode 680](https://leetcode.com/problems/valid-palindrome-ii/) | 📌1st O(n), 2nd O(n) too but more readable|
 | 188 | [Cut Off Trees for Golf Event](/leetcode/675-cut-off-trees-for-golf-event/) | heap, sort | [leetcode 675](https://leetcode.com/problems/cut-off-trees-for-golf-event/) | 📌1st heap, 2nd sort |
 | 188 | [Lowest Common Ancestor of a N-ary Tree](/miscellaneous/lowest-common-ancestor/) | tree | glassdoor | ⭐️ |
+| 188 | [Distance Between 2 Values in a BST](/miscellaneous/distane-between-2-values-in-bst/) | tree | glassdoor | ⭐️build BST => find LCA => ans = depth(a) + depth(b) - 2*depth(lca) |
