@@ -1,3 +1,4 @@
+from collections import *
 """
   Doubly Linked List + Hashtable
 
@@ -90,3 +91,64 @@ c.get("b")
 c.get("b")
 c.get("b")
 print(c.listHead)
+
+"""
+    2nd approach: use orderdict
+
+    Time of put():    O(1)
+    Time of get():    O(1)
+    940 ms, faster than 6.85%
+"""
+
+
+class LRUCache(object):
+
+    def __init__(self, capacity):
+        """
+        :type capacity: int
+        """
+        self.capacity = capacity
+        self.od = OrderedDict()
+
+    def get(self, key):
+        """
+        :type key: int
+        :rtype: int
+        """
+        if key in self.od:
+            v = self.od[key]
+            del self.od[key]
+            self.od[key] = v
+            return v
+        return -1
+
+    def put(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: void
+        """
+        if key in self.od:
+            del self.od[key]
+            self.od[key] = value
+        else:
+            self.od[key] = value
+            if len(self.od) > self.capacity:
+                firstKey = None
+                for key in self.od:
+                    firstKey = key
+                    break
+                del self.od[firstKey]
+
+
+c = LRUCache(2)
+c.put("c", 123)
+c.put("a", 456)
+c.put("b", 789)
+print(c.od)
+c.put("a", 123)
+print(c.od)
+c.get("b")
+c.get("b")
+c.get("b")
+print(c.od)
