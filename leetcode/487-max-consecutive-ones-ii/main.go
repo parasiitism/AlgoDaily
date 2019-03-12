@@ -17,7 +17,7 @@ import "fmt"
 
 	Time	O(2n)
 	Space	O(n)
-	40 ms, faster than 87.50%
+	44 ms, faster than 62.50%
 */
 func findMaxConsecutiveOnes(nums []int) int {
 	// make [1,0,1,1,0] to [1,0,2,0]
@@ -30,7 +30,9 @@ func findMaxConsecutiveOnes(nums []int) int {
 				arr = append(arr, count)
 			}
 		} else {
-			arr = append(arr, count)
+			if count > 0 {
+				arr = append(arr, count)
+			}
 			count = 0
 			arr = append(arr, 0)
 		}
