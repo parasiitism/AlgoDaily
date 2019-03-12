@@ -420,3 +420,5 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 188 | [Lowest Common Ancestor of a N-ary Tree](/miscellaneous/lowest-common-ancestor/) | tree | glassdoor | ⭐️ |
 | 188 | [Distance Between 2 Values in a BST](/miscellaneous/distane-between-2-values-in-bst/) | tree | glassdoor | ⭐️build BST => find LCA => ans = depth(a) + depth(b) - 2*depth(lca) |
 | 189 | [Reverse Words in a String](/leetcode/151-reverse-words-in-a-string/) | string | [leetcode 151](https://leetcode.com/problems/reverse-words-in-a-string/) | 1st time=space=O(n)|
+| 189 | [Max Consecutive Ones](/leetcode/485-max-consecutive-ones) | array | [leetcode 485](https://leetcode.com/problems/max-consecutive-ones/) | O(n) |
+| 189 | [Max Consecutive Ones II](/leetcode/487-max-consecutive-ones-ii) | array | [leetcode 487](https://leetcode.com/problems/max-consecutive-ones-ii/) | O(2n) |
