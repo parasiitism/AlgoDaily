@@ -422,4 +422,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 189 | [Reverse Words in a String](/leetcode/151-reverse-words-in-a-string/) | string | [leetcode 151](https://leetcode.com/problems/reverse-words-in-a-string/) | 1st time=space=O(n)|
 | 189 | [Max Consecutive Ones](/leetcode/485-max-consecutive-ones) | array | [leetcode 485](https://leetcode.com/problems/max-consecutive-ones/) | O(n) |
 | 189 | [Max Consecutive Ones II](/leetcode/487-max-consecutive-ones-ii) | array | [leetcode 487](https://leetcode.com/problems/max-consecutive-ones-ii/) | O(2n) |
-| 189 | [Max Consecutive Ones III](/leetcode/1004-max-consecutive-ones-iii) | array | [leetcode 1004](https://leetcode.com/problems/max-consecutive-ones-iii/) | O(n^2) |
+| 189 | [Max Consecutive Ones III](/leetcode/1004-max-consecutive-ones-iii) | array | [leetcode 1004](https://leetcode.com/problems/max-consecutive-ones-iii/) | 1st O(n^2), 2nd O(2n) |

@@ -66,14 +66,50 @@ func longestOnes(A []int, K int) int {
 	return res
 }
 
+/*
+	2nd approach: 2 pointers
+	- fast pointer is the index of iteration
+	- slow pointer is the index which indicates the nums[slow:fast+1] having valid count of zeros
+	- learned from others: https://leetcode.com/problems/max-consecutive-ones-iii/discuss/247543/O(n)-Java-Solution-using-sliding-window
+	- see ./idea.jpeg
+
+	Time	O(2n)
+	Space	O(1)
+	60 ms, faster than 100.00%
+*/
+func longestOnes1(A []int, K int) int {
+	slow := 0
+	i := 0
+	zeroCnt := 0
+	res := 0
+	for ; i < len(A); i++ {
+		// if current num == 0, increment
+		if A[i] == 0 {
+			zeroCnt++
+		}
+		// move the slow pointer forward until we get a legit number of zeros
+		for zeroCnt > K {
+			if A[slow] == 0 {
+				zeroCnt--
+			}
+			slow++
+		}
+		// compare with the intermediate result
+		if i-slow+1 > res {
+			res = i - slow + 1
+		}
+	}
+	return res
+}
+
 func main() {
-	fmt.Println(longestOnes([]int{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2))
-	fmt.Println(longestOnes([]int{0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1}, 3))
+	fmt.Println(longestOnes1([]int{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2))
+	fmt.Println(longestOnes1([]int{0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1}, 3))
 
-	fmt.Println(longestOnes([]int{1, 0, 1, 1, 0}, 2))
-	fmt.Println(longestOnes([]int{1, 0, 1, 1, 1}, 2))
-	fmt.Println(longestOnes([]int{1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1}, 2))
+	fmt.Println(longestOnes1([]int{1, 0, 1, 1, 0}, 2))
+	fmt.Println(longestOnes1([]int{1, 0, 1, 1, 1}, 2))
+	fmt.Println(longestOnes1([]int{1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1}, 2))
 
-	fmt.Println(longestOnes([]int{1}, 2))
-	fmt.Println(longestOnes([]int{1, 1, 1}, 2))
+	fmt.Println(longestOnes1([]int{1}, 2))
+	fmt.Println(longestOnes1([]int{1, 1, 1}, 2))
 }
