@@ -419,3 +419,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 188 | [Cut Off Trees for Golf Event](/leetcode/675-cut-off-trees-for-golf-event/) | heap, sort | [leetcode 675](https://leetcode.com/problems/cut-off-trees-for-golf-event/) | 📌1st heap, 2nd sort |
 | 188 | [Lowest Common Ancestor of a N-ary Tree](/miscellaneous/lowest-common-ancestor/) | tree | glassdoor | ⭐️ |
 | 188 | [Distance Between 2 Values in a BST](/miscellaneous/distane-between-2-values-in-bst/) | tree | glassdoor | ⭐️build BST => find LCA => ans = depth(a) + depth(b) - 2*depth(lca) |
+| 189 | [Reverse Words in a String](/leetcode/151-reverse-words-in-a-string/) | string | [leetcode 151](https://leetcode.com/problems/reverse-words-in-a-string/) | 1st time=space=O(n)|
