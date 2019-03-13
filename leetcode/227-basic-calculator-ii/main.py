@@ -104,7 +104,7 @@ print(Solution().calculate("0-2147483647"))
 print("-----")
 
 """
-    1st approach:
+    2nd approach:
     - use 1 stack
     - 1 buffer for number(cos it might have more than one digit)
     - 1 buffer for operand
