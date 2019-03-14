@@ -24,7 +24,6 @@ def warehouseMinCost(edges):
     wareHouses = list(wareHousesSet)
     # the ids start from 1, i dont want to assign 0->1, 1->2, so i just simply add one dummy cap at index 0
     c = UnionFind(len(wareHouses)+1)
-
     res = []
     edges = sorted(edges, key=lambda x: x[2])
     for edge in edges:
