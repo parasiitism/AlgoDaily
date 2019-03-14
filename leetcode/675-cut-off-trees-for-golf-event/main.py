@@ -124,7 +124,7 @@ print("-----")
     3. bfs through the forest to calculate the steps
 
     Time    O(M*N + TlogT + T*M*N)
-    10896 ms, faster than 5.58%
+    10024 ms, faster than 5.40%
 """
 
 
@@ -143,7 +143,7 @@ class Solution(object):
                 if forest[i][j] > 1:
                     trees.append((forest[i][j], i, j))
         trees = sorted(trees, key=lambda x: x[0])
-        # pop the pq and calculate the steps between each node, as well as the starting point
+        # pop the arr and calculate the steps between each node, start from the starting point
         totalSteps = 0
         curPos = [0, 0]
         while len(trees) > 0:
@@ -159,9 +159,7 @@ class Solution(object):
         # 2d array for visited nodes
         visited = []
         for i in range(len(forest)):
-            temp = []
-            for j in range(len(forest[i])):
-                temp.append(False)
+            temp = len(forest[i])*[False]
             visited.append(temp)
         # bfs through the forest
         q = []
@@ -179,7 +177,6 @@ class Solution(object):
             if i == targetI and j == targetJ:
                 return steps
             elif forest[i][j] >= 1:
-                print("what", i, j)
                 q.append((i-1, j, steps+1))
                 q.append((i, j-1, steps+1))
                 q.append((i+1, j, steps+1))
@@ -188,26 +185,26 @@ class Solution(object):
         return -1
 
 
-# a = [
-#     [1, 2, 3],
-#     [0, 0, 4],
-#     [7, 6, 5],
-# ]
-# print(Solution().cutOffTree(a))
+a = [
+    [1, 2, 3],
+    [0, 0, 4],
+    [7, 6, 5],
+]
+print(Solution().cutOffTree(a))
 
-# a = [
-#     [1, 2, 3],
-#     [0, 0, 0],
-#     [7, 6, 5],
-# ]
-# print(Solution().cutOffTree(a))
+a = [
+    [1, 2, 3],
+    [0, 0, 0],
+    [7, 6, 5],
+]
+print(Solution().cutOffTree(a))
 
-# a = [
-#     [2, 3, 4],
-#     [0, 0, 5],
-#     [8, 7, 6],
-# ]
-# print(Solution().cutOffTree(a))
+a = [
+    [2, 3, 4],
+    [0, 0, 5],
+    [8, 7, 6],
+]
+print(Solution().cutOffTree(a))
 
 a = [
     [1, 0],
@@ -215,8 +212,8 @@ a = [
 ]
 print(Solution().cutOffTree(a))
 
-# a = [
-#     [1, 3, 0, 2],
-#     [1, 1, 3, 1],
-# ]
-# print(Solution().cutOffTree(a))
+a = [
+    [1, 3, 0, 2],
+    [1, 1, 3, 1],
+]
+print(Solution().cutOffTree(a))

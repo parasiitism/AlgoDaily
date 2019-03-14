@@ -49,7 +49,7 @@ print(Solution().findAnagrams("abab", "ab"))
 
 
 """
-    2nd approach:
+    2nd approach: sliding window
     - check if each substring is an anagram but dont use slice in every iteration
 
     Time    O(n*m)
