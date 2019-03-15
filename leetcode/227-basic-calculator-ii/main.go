@@ -9,12 +9,12 @@ import (
 	2nd approach:
 	- 1 stack for saving the numbers
 	- 1 buffer for number(cos it might have more than one digit)
-	- 1 buffer for operand
+	- 1 buffer for operator
 	- if the current character is a digit, sum up with the previous digit e.g. `"23" -> 2*10+3`
-	- if the current character is an operand
-	1. operate the number with the previous operand
+	- if the current character is an operator
+	1. operate the number with the previous operator
 	2. and put the result into the stack
-	3. set the current character as the next operand
+	3. set the current character as the next operator
 	- sum up all the numbers in the stack to get the result
 
 	takeaway:
@@ -27,25 +27,25 @@ import (
 */
 
 func calculate(s string) int {
-	stack, operand, curNum := []int{}, '+', 0
+	stack, operator, curNum := []int{}, '+', 0
 	for i := 0; i < len(s); i++ {
 		if unicode.IsDigit(rune(s[i])) == true {
 			curNum = curNum*10 + int(s[i]) - 48 // " sum up the multi-digit number e.g. "23" -> 2*10+3
 		}
 		if i+1 == len(s) || (s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/') {
-			if operand == '+' {
+			if operator == '+' {
 				stack = append(stack, curNum)
-			} else if operand == '-' {
+			} else if operator == '-' {
 				stack = append(stack, -curNum)
-			} else if operand == '*' {
+			} else if operator == '*' {
 				pop, stack := stack[len(stack)-1], stack[:len(stack)-1] // pop stack
 				stack = append(stack, pop*curNum)                       // mutate the value and add it back
-			} else if operand == '/' {
+			} else if operator == '/' {
 				pop, stack := stack[len(stack)-1], stack[:len(stack)-1] // pop stack
 				stack = append(stack, pop/curNum)                       // mutate the value and add it back
 			}
-			operand = rune(s[i]) // reset operand
-			curNum = 0           // reset current number
+			operator = rune(s[i]) // reset operator
+			curNum = 0            // reset current number
 		}
 	}
 	result := 0 // sum up the numbers in the stack

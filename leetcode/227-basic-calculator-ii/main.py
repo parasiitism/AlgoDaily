@@ -107,11 +107,11 @@ print("-----")
     2nd approach:
     - use 1 stack
     - 1 buffer for number(cos it might have more than one digit)
-    - 1 buffer for operand
+    - 1 buffer for operator
     - if th current character is a digit
-        1. operate the numbers with the previous operand
+        1. operate the numbers with the previous operator
         2. and put the result into the stack 
-        3. set the current character as the next operand
+        3. set the current character as the next operator
     - sum up all the numbers in the stack to get the result
 
     Time    O(2n)
@@ -127,7 +127,7 @@ class Solution(object):
         :rtype: int
         """
         stack = []
-        operand = "+"
+        operator = "+"
         temp = 0
         i = 0
         while i < len(s):
@@ -135,19 +135,19 @@ class Solution(object):
                 temp = temp*10 + int(s[i])
             if (i+1 == len(s))\
                     or (i < len(s) and (s[i] == "+" or s[i] == "-" or s[i] == "*" or s[i] == "/")):
-                if operand == "+":
+                if operator == "+":
                     stack.append(temp)
-                elif operand == "-":
+                elif operator == "-":
                     stack.append(-temp)
-                elif operand == "*":
+                elif operator == "*":
                     stack.append(stack.pop()*temp)
-                elif operand == "/":
+                elif operator == "/":
                     p = stack.pop()
                     res = abs(p)/temp
                     if p < 0:
                         res *= -1
                     stack.append(res)
-                operand = s[i]
+                operator = s[i]
                 temp = 0
             i += 1
         result = 0
