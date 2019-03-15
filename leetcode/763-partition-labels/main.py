@@ -4,7 +4,7 @@ from collections import *
     1st approach:
     - use oredered dict
     - put all the keys into the ordered dict
-    - for finding the farthest reach of deletion
+    - find the farthest reach of deletion
     - for each character, decrement the count in the ordereddict
     - check if the occurence in the front of the current char are all zeros
 
@@ -58,3 +58,48 @@ class Solution(object):
                         key, cnt = items[i]
                         del od[key]
         return res
+
+
+print(Solution().partitionLabels("abccaddbeffe"))
+
+"""
+    2nd approach:
+    - simplify and optimze the 1st approach
+    - we can just save the char: last index in the hashtable
+    - find the farthest reach of deletion during iteration
+    - once i == farthest reach, the substring between i and previous end(this start point) is the result
+
+    Time    O(n)
+    Space   O(n)
+    28 ms, faster than 93.82%
+"""
+
+
+class Solution(object):
+    def partitionLabels(self, S):
+        """
+        :type S: str
+        :rtype: List[int]
+        """
+        # put all the keys into the ordered dict
+        m = {}
+        for i in range(len(S)):
+            c = S[i]
+            m[c] = i
+        res = []
+        # for finding the farthest reach
+        farthest = 0
+        # for recording the substring start point
+        startPoint = 0
+        # iterate the string to record the farthest point a substring can reach
+        for i in range(len(S)):
+            c = S[i]
+            farthest = max(farthest, m[c])
+            # check if the farthest == i. if yes, it means the substring btw startpoint and i is one of the result
+            if i == farthest:
+                res.append(farthest-startPoint+1)
+                startPoint = i+1
+        return res
+
+
+print(Solution().partitionLabels("abccaddbeffe"))
