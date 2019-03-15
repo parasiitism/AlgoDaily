@@ -428,4 +428,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 190 | [Basic Calculator II](/leetcode/227-basic-calculator-ii) | string, queue, stack | [leetcode 227](https://leetcode.com/problems/basic-calculator-ii/) | 1st O(2n), takeaway: `isdigit()` in python, `unicode.IsDigit()` in golang, and `isinstance(a, int)` in python for type checking, 2nd O(2n) too but more concise |
 | 191 | [Array Partition by Occurence](/interviews/amazon/array-partition-by-occurence/) | hashtable | interview | ⭐️ O(n^2) |
 | 192 | [Partition Labels](/leetcode/763-partition-labels) | hashtable | [leetcode 763](https://leetcode.com/problems/partition-labels/) | ️️️⭐️WTF, I was asked about it yestarday during an interview. 1st O(n^2). 2nd O(n) |
-| 192 | [Basic Calculator](/leetcode/224-basic-calculator) | string, stack | [leetcode 224](https://leetcode.com/problems/basic-calculator/) | 1st O(2n) tedious operation beats 25% |
+| 192 | [Basic Calculator](/leetcode/224-basic-calculator) | string, stack | [leetcode 224](https://leetcode.com/problems/basic-calculator/) | 1st O(2n) tedious operation beats 25%, 2nd O(n) beats 90% |
