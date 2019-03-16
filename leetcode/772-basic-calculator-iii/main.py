@@ -60,5 +60,67 @@ class Solution(object):
 # "(2+6* 3+5- (3*14/7+2)*5)+3"=-12
 print(Solution().calculate("1 + 1"))
 print(Solution().calculate(" 6-4 / 2 "))
+print(Solution().calculate("1-(2+3)"))
+print(Solution().calculate("2*(5+5*2)/3+(6/2+8)"))
+print(Solution().calculate("(2+6* 3+5- (3*14/7+2)*5)+3"))
+
+print("-----")
+
+
+"""
+    2nd approach: better recursion
+    - transform input array into an array so that we can use pop()
+    - the logic is similar to the 1st approach but we dont need to find the closing parenthesis before go into a (...)
+
+    Time    O(n)
+    Space   O(n)
+    80 ms, faster than 22.22%
+"""
+
+
+class Solution(object):
+
+    def calculate(self, s):
+        arr = []
+        for c in s:
+            arr.append(c)
+        return self.helper(arr)
+
+    def helper(self, s):
+        if len(s) == 0:
+            return 0
+        stack = []
+        sign = '+'
+        num = 0
+        while len(s) > 0:
+            c = s.pop(0)
+            if c.isdigit():
+                num = num*10+int(c)
+            if c == '(':
+                # do recursion to calculate the sum within the next (...)
+                num = self.helper(s)
+            if len(s) == 0 or (c == '+' or c == '-' or c == '*' or c == '/' or c == ')'):
+                if sign == '+':
+                    stack.append(num)
+                elif sign == '-':
+                    stack.append(-num)
+                elif sign == '*':
+                    stack[-1] = stack[-1]*num
+                elif sign == '/':
+                    stack[-1] = int(stack[-1]/float(num))
+                sign = c
+                num = 0
+                if sign == ')':
+                    break
+        return sum(stack)
+
+
+# "1 + 1" = 2
+# " 6-4 / 2 " = 4
+# "2*(5+5*2)/3+(6/2+8)" = 21
+# "(2+6* 3+5- (3*14/7+2)*5)+3"=-12
+print(Solution().calculate("1 + 1"))
+print(Solution().calculate(" 6-4 / 2 "))
+print(Solution().calculate("1-(2+3)"))
 print(Solution().calculate("2*(5+5*2)/3+(6/2+8)"))
 print(Solution().calculate("(2+6* 3+5- (3*14/7+2)*5)+3"))
