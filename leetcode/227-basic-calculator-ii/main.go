@@ -21,7 +21,7 @@ import (
 	- unicode.IsDigit()
 	- rune, byte transform
 
-	Time    O(2n)
+	Time    O(n)
 	Space   O(n) the stack
 	4 ms, faster than 97.37%
 */

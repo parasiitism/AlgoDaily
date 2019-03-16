@@ -110,51 +110,44 @@ print("-----")
     - 1 buffer for operator
     - if th current character is a digit
         1. operate the numbers with the previous operator
-        2. and put the result into the stack 
+        2. and put the result into the stack
         3. set the current character as the next operator
     - sum up all the numbers in the stack to get the result
 
     Time    O(2n)
     Space   O(n) the stack
-    184 ms, faster than 37.77%
+    152 ms, faster than 51.65%
 """
 
 
 class Solution(object):
     def calculate(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
         stack = []
-        operator = "+"
-        temp = 0
-        i = 0
-        while i < len(s):
-            if s[i].isdigit():
-                temp = temp*10 + int(s[i])
-            if (i+1 == len(s))\
-                    or (i < len(s) and (s[i] == "+" or s[i] == "-" or s[i] == "*" or s[i] == "/")):
-                if operator == "+":
-                    stack.append(temp)
-                elif operator == "-":
-                    stack.append(-temp)
-                elif operator == "*":
-                    stack.append(stack.pop()*temp)
-                elif operator == "/":
-                    p = stack.pop()
-                    res = abs(p)/temp
-                    if p < 0:
-                        res *= -1
-                    stack.append(res)
-                operator = s[i]
-                temp = 0
-            i += 1
-        result = 0
-        for num in stack:
-            result += num
-        return result
+        sign = '+'
+        num = 0
+        for i in range(len(s)):
+            c = s[i]
+            if c.isdigit():
+                num = num*10+int(c)
+            if i + 1 == len(s) or (c == '+' or c == '-' or c == '*' or c == '/'):
+                if sign == '+':
+                    stack.append(num)
+                elif sign == '-':
+                    stack.append(-num)
+                elif sign == '*':
+                    stack[-1] = stack[-1]*num
+                elif sign == '/':
+                    stack[-1] = int(stack[-1]/float(num))
+                sign = c
+                num = 0
+        return sum(stack)
 
+
+# python2 integer division floors to smaller integer, but we circumvent it by doing float division
+# https://www.quora.com/What-does-floor-division-in-Python-do
+a = -3
+b = 2
+print(int(a/float(b)))
 
 # 47
 print(Solution().calculate("3+22*2"))
