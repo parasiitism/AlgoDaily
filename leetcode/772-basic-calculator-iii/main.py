@@ -4,7 +4,7 @@
 
     Time    O(n^2) because we have to find the correspondign closing parenthesis for recursion
     Space   O(n)
-    188 ms, faster than 9.26%
+    204 ms, faster than 7.41%
 """
 
 
@@ -22,8 +22,19 @@ class Solution(object):
                 num = num*10+int(c)
 
             if c == '(':
-                # do recursion
-                end = self.findClosing(s[i:])
+                # find the corresponding ")"
+                pCnt = 0
+                end = 0
+                clone = s[i:]
+                while end < len(clone):
+                    if clone[end] == '(':
+                        pCnt += 1
+                    elif clone[end] == ')':
+                        pCnt -= 1
+                        if pCnt == 0:
+                            break
+                    end += 1
+                # do recursion to calculate the sum within the next (...)
                 num = self.calculate(s[i+1:i+end])
                 i += end
 
@@ -39,17 +50,8 @@ class Solution(object):
                 sign = c
                 num = 0
             i += 1
-        return sum(stack)
 
-    def findClosing(self, s):
-        pCnt = 0
-        for i in range(len(s)):
-            if s[i] == '(':
-                pCnt += 1
-            elif s[i] == ')':
-                pCnt -= 1
-                if pCnt == 0:
-                    return i
+        return sum(stack)
 
 
 # "1 + 1" = 2
