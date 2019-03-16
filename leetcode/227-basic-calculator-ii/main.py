@@ -108,8 +108,8 @@ print("-----")
     - use 1 stack
     - 1 buffer for number(cos it might have more than one digit)
     - 1 buffer for operator
-    - if th current character is a digit
-        1. operate the numbers with the previous operator
+    - if th current character is an operator
+        1. operate the current number with the previous operator
         2. and put the result into the stack
         3. set the current character as the next operator
     - sum up all the numbers in the stack to get the result
