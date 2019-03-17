@@ -431,3 +431,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 192 | [Basic Calculator](/leetcode/224-basic-calculator) | string, stack | [leetcode 224](https://leetcode.com/problems/basic-calculator/) | 1st O(2n) tedious operation beats 25%, 2nd concise O(2n) beats 90% |
 | 193 | [Basic Calculator III](/leetcode/772-basic-calculator) | string, stack, recursion | [leetcode 772](https://leetcode.com/problems/basic-calculator-iii/) | 1st O(n^2) recursion, 2nd O(n) recursion |
 | 193 | [Sort Transformed Array](/leetcode/360-sort-transformed-array) | 2pointers | [leetcode 360](https://leetcode.com/problems/sort-transformed-array/) | 1st O(n) |
+| 194 | [Quick Select](/miscellaneous/quick-select) | sort | revision | revise [Quick Sort](/miscellaneous/quick-sort) and use it to find the k-th smallest element in O(n) time |
