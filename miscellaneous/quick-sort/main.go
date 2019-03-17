@@ -45,32 +45,31 @@ func findHalf(nums []int, target int, isMore bool) []int {
 	in-place version
 	ref:
 	-	https://gist.github.com/imwally/58d6bb9bf9da098064054f73a19cdca1
-	- https://www.youtube.com/watch?v=SLauY6PpjW4
+	- https://www.youtube.com/watch?v=COk73cpQbFQ
 */
 func quickSortInPlace(nums []int) {
 	quick(nums, 0, len(nums)-1)
 }
 
-func quick(nums []int, min int, max int) {
-	if min > max {
-		return
+func quick(nums []int, start int, end int) {
+	if start < end {
+		pIdx := partition(nums, start, end)
+		quick(nums, start, pIdx-1)
+		quick(nums, pIdx+1, end)
 	}
-	pIdx := partition(nums, min, max)
-	quick(nums, min, pIdx-1)
-	quick(nums, pIdx+1, max)
 }
 
-func partition(nums []int, min int, max int) int {
-	pivot := nums[max]
-	j := min
-	for i := min; i < max; i++ {
-		if pivot > nums[i] {
-			nums[i], nums[j] = nums[j], nums[i]
-			j++
+func partition(nums []int, start int, end int) int {
+	pivot := nums[end]
+	pIdx := start
+	for i := start; i < end; i++ {
+		if nums[i] < pivot {
+			nums[i], nums[pIdx] = nums[pIdx], nums[i]
+			pIdx++
 		}
 	}
-	nums[j], nums[max] = nums[max], nums[j]
-	return j
+	nums[pIdx], nums[end] = nums[end], nums[pIdx]
+	return pIdx
 }
 
 func main() {
