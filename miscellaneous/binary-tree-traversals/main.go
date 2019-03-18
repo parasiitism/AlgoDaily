@@ -22,6 +22,20 @@ func InorderRecursive(root *TreeNode) {
 	}
 }
 
+func InorderRecursiveReturn(root *TreeNode) []int {
+	arr := []int{}
+	if root.Left != nil {
+		left := InorderRecursiveReturn(root.Left)
+		arr = append(arr, left...)
+	}
+	arr = append(arr, root.Val)
+	if root.Right != nil {
+		right := InorderRecursiveReturn(root.Right)
+		arr = append(arr, right...)
+	}
+	return arr
+}
+
 // iterative in-order traversal on BST
 // this is also the way that transforms a BST to an sorted array
 func InorderIterative(root *TreeNode) {
@@ -116,6 +130,8 @@ func main() {
 	}
 	// in order
 	InorderRecursive(root)
+	fmt.Println(",")
+	fmt.Println(InorderRecursiveReturn(root))
 	fmt.Println(",")
 	InorderIterative(root)
 	fmt.Println(",")
