@@ -22,11 +22,11 @@ func maxProfit(prices []int) int {
 	diff := 0
 	for i := 0; i < len(prices); i++ {
 		price := prices[i]
-		if price-bay > diff {
-			diff = price - bay
-		}
 		if price < bay {
 			bay = price
+		}
+		if price-bay > diff {
+			diff = price - bay
 		}
 	}
 	return diff
@@ -76,6 +76,14 @@ func (h *IntHeap) Pop() interface{} {
 }
 
 func main() {
+	fmt.Println(maxProfit([]int{7, 1, 5, 3, 6, 4}))
+	fmt.Println(maxProfit([]int{7, 6, 4, 3, 1}))
+	fmt.Println(maxProfit([]int{2, 4}))
+	fmt.Println(maxProfit([]int{2, 4, 1}))
+	fmt.Println(maxProfit([]int{2, 4, 1, 4}))
+
+	fmt.Println("-----")
+
 	fmt.Println(maxProfit1([]int{7, 1, 5, 3, 6, 4}))
 	fmt.Println(maxProfit1([]int{7, 6, 4, 3, 1}))
 	fmt.Println(maxProfit1([]int{2, 4}))
