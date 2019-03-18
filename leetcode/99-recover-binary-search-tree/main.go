@@ -75,6 +75,49 @@ func InorderRecursive(root *TreeNode) []int {
 	return arr
 }
 
+/*
+	2nd approach: inorder
+	- actually the inorder traversal of a BST is suppoed to be a sorted list of a valid
+	- so in the traversal, if the prev node >= current node, we found the swap nodes
+
+	learned from others
+	- https://www.youtube.com/watch?v=2rsGbHnIDV0
+
+	Time	O(n)
+	Space	O(n)
+	20 ms, faster than 100.00%
+*/
+func recoverTree1(root *TreeNode) {
+	if root == nil {
+		return
+	}
+	var a *TreeNode
+	var b *TreeNode
+	var prev *TreeNode
+
+	// 1,2,3,4,5,6,7
+	// 1,7,3,4,5,6,2
+	//	 ^ ^     ^ ^ there are 2 times that prev>=curr
+	var inorder func(node *TreeNode)
+	inorder = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		inorder(node.Left)
+		if prev != nil && prev.Val >= node.Val {
+			if a == nil {
+				a = prev
+			}
+			b = node
+		}
+		prev = node
+		inorder(node.Right)
+	}
+	inorder(root)
+
+	a.Val, b.Val = b.Val, a.Val
+}
+
 func main() {
 
 }

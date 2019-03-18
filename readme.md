@@ -433,4 +433,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 193 | [Sort Transformed Array](/leetcode/360-sort-transformed-array) | 2pointers | [leetcode 360](https://leetcode.com/problems/sort-transformed-array/) | 1st O(n) |
 | 194 | [Quick Select](/miscellaneous/quick-select) | sort | revision | revise [Quick Sort](/miscellaneous/quick-sort) and use it to find the k-th smallest element in O(n) time |
 | 195 | [01 Matrix](/leetcode/542-01-matrix) | bfs, dynamic programming | [leetcode 542](https://leetcode.com/problems/01-matrix/) | 1st BFS O(n^2) LTE, 2nd DP O(2n) beats 96% |
-| 195 | [Recover Binary Search Tree](/leetcode/99-recover-binary-search-tree) | tree | [leetcode 99](https://leetcode.com/problems/recover-binary-search-tree/) | 1st inroder+sort O(nlogn) |
+| 195 | [Recover Binary Search Tree](/leetcode/99-recover-binary-search-tree) | tree | [leetcode 99](https://leetcode.com/problems/recover-binary-search-tree/) | 1st inroder+sort O(nlogn), 2nd inorder O(n) |
