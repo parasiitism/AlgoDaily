@@ -6,7 +6,7 @@ import (
 
 /*
 	Questions to ask:
-	- what if there are duplicate node.vals?
+	- what if there are duplicate node.vals? if there are duplicate values, it is invalid
 	- what is the integraer range of node.val? -2^32 -> 2^32-1 ?
 
 	Follow up:
@@ -20,60 +20,29 @@ type TreeNode struct {
 }
 
 /*
-	naive approach
-	- compare the left & right to min & max before recursion
-	12ms beats 30.77%
-	25sep2018
+	1st approach
+	- compare the node.val with min & max in each recursion
+	Time 	O(n)
+	Space	O(h)
+	4ms beats 100%
+	14jan2019
 */
-func isValidBST1(root *TreeNode) bool {
-	if root == nil {
-		return true
-	}
-	return check(root, math.MinInt64, math.MaxInt64)
+func isValidBST(root *TreeNode) bool {
+	return dfs(root, math.MinInt64, math.MaxInt64)
 }
 
-func check(root *TreeNode, min int, max int) bool {
-	left := true
-	right := true
-	if root.Left != nil {
-		if (root.Left.Val == math.MinInt64 || min < root.Left.Val) && root.Left.Val < root.Val {
-			left = check(root.Left, min, root.Val)
-		} else {
-			return false
-		}
+func dfs(node *TreeNode, min int, max int) bool {
+	if node == nil {
+		return true
 	}
-	if root.Right != nil {
-		if root.Val < root.Right.Val && (root.Right.Val == math.MaxInt64 || root.Right.Val < max) {
-			right = check(root.Right, root.Val, max)
-		} else {
-			return false
-		}
+	if node.Val <= min || node.Val >= max {
+		return false
 	}
-	return left && right
+	return dfs(node.Left, min, node.Val) && dfs(node.Right, node.Val, max)
 }
 
 /*
 	2nd approach
-	- compare the node.val with min & max in each recursion
-	8ms beats 100%
-	14jan2019
-*/
-func isValidBST2(root *TreeNode) bool {
-	var check func(node *TreeNode, min int, max int) bool
-	check = func(node *TreeNode, min int, max int) bool {
-		if node == nil {
-			return true
-		}
-		if node.Val <= min || node.Val >= max {
-			return false
-		}
-		return check(node.Left, min, node.Val) && check(node.Right, node.Val, max)
-	}
-	return check(root, math.MinInt64, math.MaxInt64)
-}
-
-/*
-	3rd approach
 	- compare the node.val with min & max in each iteration
 	8ms beats 100%
 	14jan2019
@@ -84,7 +53,7 @@ type Stack struct {
 	Max  int
 }
 
-func isValidBST(root *TreeNode) bool {
+func isValidBST1(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}

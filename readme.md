@@ -56,7 +56,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 19 | [Two Sum II](/leetcode/167-two-sum-ii-input-array-is-sorted) | binary search, hashtable | [leetcode 167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | |
 | 20 | [Find the Duplicate Number](/leetcode/287-find-the-duplicate-number) | binary search, hashtable | [leetcode 287](https://leetcode.com/problems/find-the-duplicate-number/description/) | |
 | 21 | [Find Minimum in Rotated Sorted Array II](/leetcode/154-find-minimum-in-rotated-sorted-array-ii) | binary search | [leetcode 154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | |
-| 22 | [Validate Binary Search Tree](/leetcode/98-validate-binary-search-tree) | binary tree | [leetcode 98](https://leetcode.com/problems/validate-binary-search-tree/description/) | 📌 1st 25sep2018, 2nd&3rd 14jan2019 |
+| 22 | [Validate Binary Search Tree](/leetcode/98-validate-binary-search-tree) | binary tree | [leetcode 98](https://leetcode.com/problems/validate-binary-search-tree/description/) | 📌 1st 25sep2018 2nd 18mar2019 |
 | 23 | [Inorder Successor in BST](/leetcode/285-inorder-successor-in-bst) | binary tree | [leetcode 285](https://leetcode.com/problems/inorder-successor-in-bst/) | my O(logn) solution is unique ✌🏻, tho the suggested solution is jaw-dropping and much more terse |
 | 24 | [Depth First Search](/miscellaneous/depth-first-search) | binary tree | | |
 | 25 | [Binary Search Tree Iterator](/leetcode/173-binary-search-tree-iterator) | BST | [leetcode 173](https://leetcode.com/problems/binary-search-tree-iterator/description/) | my first solution was super slow tho it passes the OJ. The suggested solution is awesome |
