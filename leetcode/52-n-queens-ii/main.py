@@ -6,7 +6,7 @@
 
     Time    O(n^4) for each coordinate, we need to check if safe
     Space   O(n^2)
-    348 ms, faster than 6.62%
+    340 ms, faster than 5.46%
 """
 
 
