@@ -45,7 +45,7 @@ func findMin2(nums []int) int {
 	}
 	for min <= max {
 		// if all numbers are sorted, left < right so that left is the mininum
-		if nums[min] <= nums[max] {
+		if nums[min] < nums[max] {
 			return nums[min]
 		}
 		// get the mean

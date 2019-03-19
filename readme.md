@@ -35,12 +35,12 @@ I believe that practising algorithms every day is a long-term investment in my l
 
 | Day  | Task | Type | From | remarks |
 | --- | --- | --- | --- | --- |
-| 1 | [binary search](/leetcode/704-binary-search) | binary search | [leetcode 704](https://leetcode.com/problems/binary-search) ||
+| 1 | [binary search](/leetcode/704-binary-search) | binary search | [leetcode 704](https://leetcode.com/problems/binary-search) | 📌 |
 | 2 | [sqrt(x)](/leetcode/69-sqrt-x) | binary search | [leetcode 69](https://leetcode.com/problems/sqrtx/) ||
-| 3 | [search in rotated sorted array](/leetcode/33-search-in-rotated-sorted-array) | binary search | [leetcode 33](https://leetcode.com/problems/search-in-rotated-sorted-array) ||
+| 3 | [search in rotated sorted array](/leetcode/33-search-in-rotated-sorted-array) | binary search | [leetcode 33](https://leetcode.com/problems/search-in-rotated-sorted-array) | 📌 |
 | 4 | [Find Peak Element](/leetcode/162-find-peak-element) | binary search | [leetcode 162](https://leetcode.com/problems/find-peak-element/) ||
-| 5 | [Find Minimum in Rotated Sorted Array](/leetcode/153-find-minimum-in-rotated-sorted-array) | binary search | [leetcode 153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) ||
-| 6 | [Find Minimum in Rotated Sorted Array](/leetcode/153-find-minimum-in-rotated-sorted-array) | binary search | [leetcode 153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) | 2 extra solutions for day5 |
+| 5 | [Find Minimum in Rotated Sorted Array](/leetcode/153-find-minimum-in-rotated-sorted-array) | binary search | [leetcode 153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) | 📌 |
+| 6 | [Find Minimum in Rotated Sorted Array](/leetcode/153-find-minimum-in-rotated-sorted-array) | binary search | [leetcode 153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) | 📌2 extra solutions for day5 |
 | 7 | [Search for a Range](/leetcode/34-search-for-a-range) | binary search | [leetcode 34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | |
 | 8 | [Find K Closest Elements](/leetcode/658-find-k-closest-elements) | binary search | [leetcode 658](https://leetcode.com/problems/find-k-closest-elements) | |
 | 9 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | binary search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | 1st attemp 10sep2018, 2nd 20jan2019 |
@@ -55,7 +55,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 18 | [Intersection of Two Arrays II](/leetcode/349-intersection-of-two-arrays-ii) | binary search, hashtable | [leetcode 350](https://leetcode.com/problems/intersection-of-two-arrays-ii) | |
 | 19 | [Two Sum II](/leetcode/167-two-sum-ii-input-array-is-sorted) | binary search, hashtable | [leetcode 167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | |
 | 20 | [Find the Duplicate Number](/leetcode/287-find-the-duplicate-number) | binary search, hashtable | [leetcode 287](https://leetcode.com/problems/find-the-duplicate-number/description/) | |
-| 21 | [Find Minimum in Rotated Sorted Array II](/leetcode/154-find-minimum-in-rotated-sorted-array-ii) | binary search | [leetcode 154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | |
+| 21 | [Find Minimum in Rotated Sorted Array II](/leetcode/154-find-minimum-in-rotated-sorted-array-ii) | binary search | [leetcode 154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | 📌 very hard classic question |
 | 22 | [Validate Binary Search Tree](/leetcode/98-validate-binary-search-tree) | binary tree | [leetcode 98](https://leetcode.com/problems/validate-binary-search-tree/description/) | 📌 1st 25sep2018 2nd 18mar2019 |
 | 23 | [Inorder Successor in BST](/leetcode/285-inorder-successor-in-bst) | binary tree | [leetcode 285](https://leetcode.com/problems/inorder-successor-in-bst/) | my O(logn) solution is unique ✌🏻, tho the suggested solution is jaw-dropping and much more terse |
 | 24 | [Depth First Search](/miscellaneous/depth-first-search) | binary tree | | |
