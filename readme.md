@@ -438,3 +438,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 196 | [N-Queens](/leetcode/51-n-queens) | backtracking | [leetcode 51](https://leetcode.com/problems/n-queens/) | 📌1st classic backtracking approach |
 | 196 | [N-Queens II](/leetcode/52-n-queens-ii) | backtracking | [leetcode 52](https://leetcode.com/problems/n-queens-ii/) | 📌1st classic backtracking approach |
 | 196 | [Search in Rotated Sorted Array II](/leetcode/81-search-in-rotated-sorted-array-ii) | binary search | [leetcode 81](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | 📌classic binary search question similar to [leetcode 33](https://leetcode.com/problems/search-in-rotated-sorted-array/) |
+| 196 | [Kth Smallest Element in a Sorted Matrix](/leetcode/378-kth-smallest-element-in-a-sorted-matrix) | heap, binary search | [leetcode 378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | ⭐️ 1st O(nlogn) |
