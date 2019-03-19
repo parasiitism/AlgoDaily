@@ -435,4 +435,5 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 195 | [01 Matrix](/leetcode/542-01-matrix) | bfs, dynamic programming | [leetcode 542](https://leetcode.com/problems/01-matrix/) | 1st BFS O(n^2) LTE, 2nd DP O(2n) beats 96% |
 | 195 | [Recover Binary Search Tree](/leetcode/99-recover-binary-search-tree) | tree | [leetcode 99](https://leetcode.com/problems/recover-binary-search-tree/) | 1st inroder+sort O(nlogn), 2nd inorder O(n) |
 | 195 | [Baseball Game](/leetcode/682-baseball-game) | stack | [leetcode 682](https://leetcode.com/problems/baseball-game/) | 1st O(n) |
-| 195 | [Sort a Stack using a Stack](/miscellaneous/sort-stack) | stack | [Sort Stacks](https://www.youtube.com/watch?v=nll-b4GeiX4) | ⭐️ |
+| 195 | [Sort a Stack using a Stack](/miscellaneous/sort-stack) | stack | [Sort Stacks](https://www.youtube.com/watch?v=nll-b4GeiX4) | ⭐️|
+| 195 | [N-Queens](/leetcode/51-n-queens) | backtracking | [leetcode 51](https://leetcode.com/problems/n-queens/) | 📌1st classic backtracking approach |
