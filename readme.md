@@ -437,3 +437,4 @@ beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 195 | [Baseball Game](/leetcode/682-baseball-game) | stack | [leetcode 682](https://leetcode.com/problems/baseball-game/) | 1st O(n) |
 | 195 | [Sort a Stack using a Stack](/miscellaneous/sort-stack) | stack | [Sort Stacks](https://www.youtube.com/watch?v=nll-b4GeiX4) | ⭐️|
 | 196 | [N-Queens](/leetcode/51-n-queens) | backtracking | [leetcode 51](https://leetcode.com/problems/n-queens/) | 📌1st classic backtracking approach |
+| 196 | [N-Queens II](/leetcode/52-n-queens-ii) | backtracking | [leetcode 52](https://leetcode.com/problems/n-queens-ii/) | 📌1st classic backtracking approach |

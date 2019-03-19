@@ -13,20 +13,20 @@
 class Solution(object):
 
     def __init__(self):
-        self.result = []
+        self.result = set()
 
-    def solveNQueens(self, n):
+    def totalNQueens(self, n):
         """
         :type n: int
         :rtype: List[List[str]]
         """
         b = Board(n)
         self.backtracking(b, 0, n)
-        return self.result
+        return len(self.result)
 
     def backtracking(self, b, col, n):
         if col == n:
-            self.result.append(b.clone())
+            self.result.add(b.stringify())
             return
         for i in range(n):
             if b.isSafe(i, col):
@@ -66,13 +66,14 @@ class Board(object):
                         return False
         return True
 
-    def clone(self):
+    def stringify(self):
         # O(n)
-        temp = []
+        temp = ""
         for i in range(self.n):
-            temp.append(self.m[i])
+            temp += self.m[i]
         return temp
 
 
-print(Solution().solveNQueens(4))
-print(Solution().solveNQueens(5))
+print(Solution().totalNQueens(4))
+print(Solution().totalNQueens(5))
+print(Solution().totalNQueens(8))

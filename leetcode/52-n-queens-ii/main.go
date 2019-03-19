@@ -10,19 +10,19 @@ import "fmt"
 
    Time    O(n^4) for each coordinate, we need to check if safe
    Space   O(n^2)
-   12 ms, faster than 57.89%
+   4 ms, faster than 31.37%
 */
-func solveNQueens(n int) [][]string {
+func totalNQueens(n int) int {
 	// init board
 	board := BoardConstructor(n)
 	// result
-	result := [][]string{}
+	result := make(map[string]bool)
 
 	var backtracking func(b *Board, col, n int)
 	backtracking = func(b *Board, col, n int) {
 		if col == n {
 			// fmt.Println(b.M)
-			result = append(result, b.Clone())
+			result[b.Stringify()] = true
 			return
 		}
 		for i := 0; i < n; i++ {
@@ -35,7 +35,7 @@ func solveNQueens(n int) [][]string {
 	}
 
 	backtracking(&board, 0, n)
-	return result
+	return len(result)
 }
 
 // board class
@@ -89,14 +89,16 @@ func (b *Board) IsSafe(row, col int) bool {
 	return true
 }
 
-func (b *Board) Clone() []string {
-	m := []string{}
+func (b *Board) Stringify() string {
+	m := ""
 	for i := 0; i < b.N; i++ {
-		m = append(m, b.M[i])
+		m += b.M[i]
 	}
 	return m
 }
 
 func main() {
-	fmt.Println(solveNQueens(4))
+	fmt.Println(totalNQueens(4))
+	fmt.Println(totalNQueens(5))
+	fmt.Println(totalNQueens(8))
 }
