@@ -4,7 +4,7 @@ import "fmt"
 
 /*
 	 1st approach: backtracking
-	 - - https://www.youtube.com/watch?v=5v6zdfkImms
+	 - https://www.youtube.com/watch?v=5v6zdfkImms
 	 - basically try every possisbilities within the safe region
 	 - for each coordinate, we need to check the whole board to see if it is safe to place a queen
 
@@ -21,14 +21,18 @@ func solveNQueens(n int) [][]string {
 	var backtracking func(b *Board, col, n int)
 	backtracking = func(b *Board, col, n int) {
 		if col == n {
-			// fmt.Println(b.M)
+			// if the col reaches to n, it means we've just found a result
 			result = append(result, b.Clone())
 			return
 		}
+		// try every row in the next column
 		for i := 0; i < n; i++ {
 			if b.IsSafe(i, col) {
+				// place a queen
 				b.Place(i, col)
+				// try next column
 				backtracking(b, col+1, n)
+				// remove a queen
 				b.Remove(i, col)
 			}
 		}
@@ -57,12 +61,12 @@ func BoardConstructor(n int) Board {
 }
 
 func (b *Board) Place(row, col int) {
-	// b.M[row][col] = "Q"
+	// it means b.M[row][col] = "Q"
 	b.M[row] = b.M[row][:col] + "Q" + b.M[row][col+1:]
 }
 
 func (b *Board) Remove(row, col int) {
-	// b.M[row][col] = "."
+	// it means b.M[row][col] = "."
 	b.M[row] = b.M[row][:col] + "." + b.M[row][col+1:]
 }
 

@@ -4,9 +4,10 @@ import "fmt"
 
 /*
 	 1st approach: backtracking
-	 - - https://www.youtube.com/watch?v=5v6zdfkImms
+	 - https://www.youtube.com/watch?v=5v6zdfkImms
 	 - basically try every possisbilities within the safe region
 	 - for each coordinate, we need to check the whole board to see if it is safe to place a queen
+	 - we use a hashset to deduplicate the result
 
    Time    O(n^4) for each coordinate, we need to check if safe
    Space   O(n^2)
@@ -15,20 +16,24 @@ import "fmt"
 func totalNQueens(n int) int {
 	// init board
 	board := BoardConstructor(n)
-	// result
+	// use a hashset to deduplicate the resut
 	result := make(map[string]bool)
 
 	var backtracking func(b *Board, col, n int)
 	backtracking = func(b *Board, col, n int) {
 		if col == n {
-			// fmt.Println(b.M)
+			// if the col reaches to n, it means we've just found a result
 			result[b.Stringify()] = true
 			return
 		}
+		// try every row in the next column
 		for i := 0; i < n; i++ {
 			if b.IsSafe(i, col) {
+				// place a queen
 				b.Place(i, col)
+				// try next col
 				backtracking(b, col+1, n)
+				// remove a queen
 				b.Remove(i, col)
 			}
 		}
