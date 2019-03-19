@@ -356,8 +356,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 171 | [K-th Symbol in Grammar](/leetcode/779-k-th-symbol-in-grammar) | hashtable | [leetcode 779](https://leetcode.com/problems/k-th-symbol-in-grammar/) | 1st LTE. 📌2nd tricky recursion. see ./idea.jpeg |
 | 171 | [3Sum](/leetcode/15-3sum) | hashtable, 2pointers | [leetcode 779](https://leetcode.com/problems/3sum/) | 📌1st hashtable O(n^2) beats 18%. 📌2nd hashtable+2pointers O(n^2) beats 27%, 📌3rd hashtable+2pointers O(n^2) beats 54% |
 | 171 | [Two Sum III - Data structure design](/leetcode/170-two-sum-iii-data-structure-design) | hashtable | [leetcode 170](https://leetcode.com/problems/two-sum-iii-data-structure-design/) | 📌1st hashtable O(n) beats 100% |
-| 171 | [4Sum](/leetcode/18-4sum) | hashtable | [leetcode 18](https://leetcode.com/problems/4sum/) | 📌1st hashtable O(n^3) 
-beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
+| 171 | [4Sum](/leetcode/18-4sum) | hashtable | [leetcode 18](https://leetcode.com/problems/4sum/) | 📌1st hashtable O(n^3) beats 15%, 2nd hashtable+2pointer O(n^3) beats 95% |
 | 171 | [4Sum II](/leetcode/454-4sum-ii) | hashtable | [leetcode 454](https://leetcode.com/problems/4sum-ii/) | 📌1st O(n^3), 2nd O(n^2) |
 | 172 | [Insert Delete GetRandom O(1)](/leetcode/380-insert-delete-getrandom-o1) | hashtable | [leetcode 380](https://leetcode.com/problems/insert-delete-getrandom-o1/) | 1st random O(n) beats 6%, 📌2nd random O(1) beats 100% |
 | 172 | [Insert Delete GetRandom O(1) - Duplicates allowed](/leetcode/381-insert-delete-getrandom-o1-duplicates-allowed) | hashtable | [leetcode 381](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/) | 1st random O(n) beats 6% |
