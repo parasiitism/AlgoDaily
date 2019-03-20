@@ -441,3 +441,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 196 | [Kth Smallest Element in a Sorted Matrix](/leetcode/378-kth-smallest-element-in-a-sorted-matrix) | heap, binary search | [leetcode 378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | ⭐️ 1st O(nlogn) sort, ⭐️2nd O(nlogn) max heap, 3rd O(logn*logn) binary search |
 | 197 | [Maximal Square](/leetcode/221-maximal-square/) | dynamic programming | [leetcode 221](https://leetcode.com/problems/maximal-square/) | 📌dynamic programming in linear time O(n) |
 | 197 | [Binary Search Variations](/miscellaneous/binary-searches/) | binary search | revision | 📌common, lower & upper bound in both iterative and recursive implementation |
+| 197 | [Factorial Trailing Zeroes](/leetcode/172-factorial-trailing-zeroes/) | math | [leetcode 172](https://leetcode.com/problems/factorial-trailing-zeroes) | ⭐ |
