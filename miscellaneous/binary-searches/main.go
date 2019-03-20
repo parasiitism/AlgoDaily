@@ -12,7 +12,7 @@ import (
 /*
 	common
  	12345, search for 4
- 	ans = index = 3
+ 	ans = index 3
 */
 func CommonBinarySearch(arr []int, target int) int {
 	min := 0
@@ -61,7 +61,7 @@ func recursion(arr []int, min int, max int, target int) int {
 
 	e.g. 2
 	1357, search for 4
-	ans = index = 1
+	ans = index 1
 */
 func CommonBinarySearchNoLargerThanTarget(arr []int, target int) int {
 	min := 0
@@ -88,7 +88,7 @@ func CommonBinarySearchNoLargerThanTarget(arr []int, target int) int {
 
 	e.g. 2
 	1357, search for 4
-	ans = index = 2
+	ans = index 2
 */
 func CommonBinarySearchNoSmallerThanTarget(arr []int, target int) int {
 	min := 0
@@ -112,11 +112,11 @@ func CommonBinarySearchNoSmallerThanTarget(arr []int, target int) int {
 /*
 	Starting Position Binary Search, also known as Lower Bound Binary Search
 	1233345, search for 3
-	ans = index = 2
+	ans = index 2
 */
 func StartingPositionBinarySearch(arr []int, target int) int {
 	min := 0
-	max := len(arr) - 1
+	max := len(arr)
 	for min < max {
 		mean := (min + max) / 2
 		if target <= arr[mean] {
@@ -125,22 +125,15 @@ func StartingPositionBinarySearch(arr []int, target int) int {
 			min = mean + 1
 		}
 	}
-	// we an either return min or max because they equal to each other after the forloop
-	if arr[min] == target {
-		return min
-	}
-	return -1
+	return min
 }
 
 // recursive Starting Position Binary Search
 func RecursiveStartingPositionBinarySearch(arr []int, target int) int {
 	min := 0
-	max := len(arr) - 1
+	max := len(arr)
 	res := startPosHelper(arr, target, min, max)
-	if arr[res] == target {
-		return res
-	}
-	return -1
+	return res
 }
 
 func startPosHelper(arr []int, target, min, max int) int {
@@ -157,7 +150,7 @@ func startPosHelper(arr []int, target, min, max int) int {
 /*
 	Ending Position Binary Search = upper bound binary search - 1
 	1233345, search for 3
-	ans = index = 4
+	ans = index 4
 */
 func EndingPositionBinarySearch(arr []int, target int) int {
 	min := 0
@@ -199,6 +192,43 @@ func endingPosHelper(arr []int, target, min, max int) int {
 	return endingPosHelper(arr, target, min, mean-1)
 }
 
+/*
+	Upper Bound Binary Search
+	1233345, search for 3
+	ans = index 5 where the value is 4
+*/
+func UpperBoundBinarySearch(arr []int, target int) int {
+	min := 0
+	max := len(arr)
+	for min < max {
+		mean := (min + max) / 2
+		if target >= arr[mean] {
+			min = mean + 1
+		} else {
+			max = mean
+		}
+	}
+	return max
+}
+
+func RecursiveUpperBoundBinarySearch(arr []int, target int) int {
+	min := 0
+	max := len(arr)
+	res := upperHelper(arr, target, min, max)
+	return res
+}
+
+func upperHelper(arr []int, target, min, max int) int {
+	if min >= max {
+		return min
+	}
+	mean := (min + max) / 2
+	if target >= arr[mean] {
+		return upperHelper(arr, target, mean+1, max)
+	}
+	return upperHelper(arr, target, min, mean)
+}
+
 func main() {
 
 	// common
@@ -234,6 +264,7 @@ func main() {
 	c := []int{1, 2, 3, 3, 3, 4, 6}
 	fmt.Println(StartingPositionBinarySearch(c, 3))
 	fmt.Println(StartingPositionBinarySearch(c, 1))
+	fmt.Println(StartingPositionBinarySearch(c, 5))
 	fmt.Println(StartingPositionBinarySearch(c, 6))
 	fmt.Println(StartingPositionBinarySearch(c, -2))
 	fmt.Println(StartingPositionBinarySearch(c, 7))
@@ -241,21 +272,40 @@ func main() {
 	fmt.Println("----recursive lower bound---")
 	fmt.Println(RecursiveStartingPositionBinarySearch(c, 3))
 	fmt.Println(RecursiveStartingPositionBinarySearch(c, 1))
+	fmt.Println(RecursiveStartingPositionBinarySearch(c, 5))
 	fmt.Println(RecursiveStartingPositionBinarySearch(c, 6))
 	fmt.Println(RecursiveStartingPositionBinarySearch(c, -2))
 	fmt.Println(RecursiveStartingPositionBinarySearch(c, 7))
 
-	fmt.Println("----upper bound -1 ---")
+	fmt.Println("----ending bound ---")
 	fmt.Println(EndingPositionBinarySearch(c, 3))
 	fmt.Println(EndingPositionBinarySearch(c, 1))
+	fmt.Println(EndingPositionBinarySearch(c, 5))
 	fmt.Println(EndingPositionBinarySearch(c, 6))
 	fmt.Println(EndingPositionBinarySearch(c, -2))
 	fmt.Println(EndingPositionBinarySearch(c, 7))
 
-	fmt.Println("----recursive upper bound -1 ---")
+	fmt.Println("----recursive ending bound -1 ---")
 	fmt.Println(RecursiveEndingPositionBinarySearch(c, 3))
 	fmt.Println(RecursiveEndingPositionBinarySearch(c, 1))
+	fmt.Println(RecursiveEndingPositionBinarySearch(c, 5))
 	fmt.Println(RecursiveEndingPositionBinarySearch(c, 6))
 	fmt.Println(RecursiveEndingPositionBinarySearch(c, -2))
 	fmt.Println(RecursiveEndingPositionBinarySearch(c, 7))
+
+	fmt.Println("----upper bound ---")
+	fmt.Println(UpperBoundBinarySearch(c, 3))
+	fmt.Println(UpperBoundBinarySearch(c, 1))
+	fmt.Println(UpperBoundBinarySearch(c, 5))
+	fmt.Println(UpperBoundBinarySearch(c, 6))
+	fmt.Println(UpperBoundBinarySearch(c, -2))
+	fmt.Println(UpperBoundBinarySearch(c, 7))
+
+	fmt.Println("----recursive upper bound ---")
+	fmt.Println(RecursiveUpperBoundBinarySearch(c, 3))
+	fmt.Println(RecursiveUpperBoundBinarySearch(c, 1))
+	fmt.Println(RecursiveUpperBoundBinarySearch(c, 5))
+	fmt.Println(RecursiveUpperBoundBinarySearch(c, 6))
+	fmt.Println(RecursiveUpperBoundBinarySearch(c, -2))
+	fmt.Println(RecursiveUpperBoundBinarySearch(c, 7))
 }
