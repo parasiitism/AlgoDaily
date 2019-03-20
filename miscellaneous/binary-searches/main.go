@@ -163,6 +163,11 @@ func main() {
 	fmt.Println(CommonBinarySearch(a, 4))
 	fmt.Println(RecursiveBinarySearch(a, 2))
 
+	fmt.Println("----normal duplicate----")
+	a = []int{1, 2, 2, 3, 3, 3, 4, 4, 5}
+	fmt.Println(CommonBinarySearch(a, 4))
+	fmt.Println(RecursiveBinarySearch(a, 2))
+
 	// smaller than or equal to
 	fmt.Println("----smaller than or equal to----")
 	b := []int{1, 3, 5, 7}
