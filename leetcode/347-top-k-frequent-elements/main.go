@@ -8,6 +8,7 @@ import (
 /*
 	Questions to ask:
 	- will there will element has the same frequency?
+	- does the order matter in the result?
 */
 
 /*
