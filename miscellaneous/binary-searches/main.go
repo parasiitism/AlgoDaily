@@ -7,6 +7,9 @@ import (
 /*
 	my related article
 	- https://medium.com/@CalvinChankf/how-to-deal-with-lower-upper-bound-binary-search-b9ce744673df
+
+	ref:
+	- https://github.com/python/cpython/blob/master/Lib/bisect.py
 */
 
 /*
