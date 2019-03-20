@@ -30,27 +30,18 @@ def optimalUtilization(maxTravelDist, forwardRouteList, returnRouteList):
     returnRouteList = sorted(returnRouteList)
     res = []
     best = 0
-    for foward in forwardRouteList:
-        returnIdx = bsearch(returnRouteList, maxTravelDist - foward[1])
+    for forward in forwardRouteList:
+        returnIdx = bsearch(returnRouteList, maxTravelDist - forward[1])
         if returnIdx < 0:
             continue
         backward = returnRouteList[returnIdx]
-        dist = foward[1] + backward[1]
-        if len(res) == 0:
+        dist = forward[1] + backward[1]
+        if dist > best:
+            # reset the intermediate result
             best = dist
-            res = [foward[0], backward[0]]
-        else:
-            if dist >= best:
-                if dist < maxTravelDist:
-                    # reset the intermediate result
-                    best = dist
-                    res = [[foward[0], backward[0]]]
-                elif dist == maxTravelDist:
-                    if best < dist:
-                        res.pop()  # clear the pair which < max
-                    # append the intermediate reuslt
-                    best = dist
-                    res.append([foward[0], backward[0]])
+            res = [[forward[0], backward[0]]]
+        elif dist == best:
+            res.append([forward[0], backward[0]])
     return res
 
 
@@ -58,7 +49,7 @@ def bsearch(routes, target):
     left = 0
     right = len(routes) - 1
     while left <= right:
-        mid = (left + right) / 2
+        mid = int((left + right) / 2)
         if routes[mid][1] < target:
             left = mid + 1
         elif routes[mid][1] > target:
@@ -82,3 +73,5 @@ print(
                        [[1, 5], [2, 10], [3, 14]]))
 
 print(optimalUtilization(20, [], [[1, 5], [2, 10], [3, 14]]))
+
+print(optimalUtilization(20, [[1, 21], [2, 22], [3, 23]], [[1, 24], [2, 25], [3, 26]]))
