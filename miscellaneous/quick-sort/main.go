@@ -63,6 +63,8 @@ func partition(nums []int, start int, end int) int {
 	pivot := nums[end]
 	pIdx := start
 	for i := start; i < end; i++ {
+		// < for ascending
+		// > for descending
 		if nums[i] < pivot {
 			nums[i], nums[pIdx] = nums[pIdx], nums[i]
 			pIdx++

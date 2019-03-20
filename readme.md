@@ -442,3 +442,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 197 | [Maximal Square](/leetcode/221-maximal-square/) | dynamic programming | [leetcode 221](https://leetcode.com/problems/maximal-square/) | 📌dynamic programming in linear time O(n) |
 | 197 | [Binary Search Variations](/miscellaneous/binary-searches/) | binary search | revision | 📌common, lower & upper bound in both iterative and recursive implementation |
 | 197 | [Factorial Trailing Zeroes](/leetcode/172-factorial-trailing-zeroes/) | math | [leetcode 172](https://leetcode.com/problems/factorial-trailing-zeroes) | ⭐ |
+| 198 | [Quick Select](/miscellaneous/quick-select) | sort | revision | wrote the quick select again in both go & python for better understanding |
