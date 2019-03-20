@@ -15,7 +15,7 @@ import (
 /*
 	1st approach
 	- dfs
-	Time	O(n)
+	Time	O(2^n)
 	TLE wtf
 */
 func minimumTotal(triangle [][]int) int {
@@ -106,7 +106,7 @@ func dfs(triangle [][]int, i, j int, ht [][][]int) []int {
 	- bottom up
 	- select the path with min cost from bottom to top, mutate the input array
 	Time	O(n)
-	Space	O(n)
+	Space	O(1)
 	4ms beats 100%
 */
 func minimumTotal2(triangle [][]int) int {
