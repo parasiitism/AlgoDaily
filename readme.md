@@ -446,3 +446,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 198 | [Sliding Puzzle](/leetcode/773-sliding-puzzle/) | graph | [leetcode 773](https://leetcode.com/problems/sliding-puzzle) | ⭐ with follow-up |
 | 198 | [Largest Rectangle in Histogram](/leetcode/84-largest-rectangle-in-histogram/) | array, stack | [leetcode 84](https://leetcode.com/problems/largest-rectangle-in-histogram) | 1st O(n^2) brute force, 📌 2nd O(2n) stack |
 | 198 | [Maximal Rectangle](/leetcode/85-maximal-rectangle/) | dynamic programming, stack | [leetcode 85](https://leetcode.com/problems/maximal-rectangle) | 📌 |
+| 198 | [Down to One](/interviews/amazon/down-to-one/) | dfs | glassdoor | ⭐️|
