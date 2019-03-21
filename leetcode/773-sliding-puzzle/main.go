@@ -36,7 +36,7 @@ func slidingPuzzle(board [][]int) int {
 		}
 		seen[key] = true
 
-		// enqueue variations if final state not reach
+		// enqueue the variations if final state not reach
 		if key == "123450" {
 			return steps
 		}

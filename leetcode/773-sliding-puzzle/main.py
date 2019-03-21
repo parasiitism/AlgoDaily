@@ -97,7 +97,7 @@ class Solution(object):
                 continue
             seen.add(key)
 
-            # enqueue variations if final state not reach
+            # enqueue the variations if final state not reach
             if key == "123456780":
                 return steps
             for i in range(len(board)):
