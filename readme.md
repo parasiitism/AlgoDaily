@@ -444,4 +444,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 197 | [Factorial Trailing Zeroes](/leetcode/172-factorial-trailing-zeroes/) | math | [leetcode 172](https://leetcode.com/problems/factorial-trailing-zeroes) | ⭐ |
 | 198 | [Quick Select](/miscellaneous/quick-select) | sort | revision | wrote the quick select again in both go & python for better understanding |
 | 198 | [Sliding Puzzle](/leetcode/773-sliding-puzzle/) | graph | [leetcode 773](https://leetcode.com/problems/sliding-puzzle) | ⭐ with follow-up |
-| 198 | [Largest Rectangle in Histogram](/leetcode/84-largest-rectangle-in-histogram/) | array, stack | [leetcode 84](https://leetcode.com/problems/largest-rectangle-in-histogram) | 1st O(n^2) brute force, 2nd O(2n) stack |
+| 198 | [Largest Rectangle in Histogram](/leetcode/84-largest-rectangle-in-histogram/) | array, stack | [leetcode 84](https://leetcode.com/problems/largest-rectangle-in-histogram) | 1st O(n^2) brute force, 📌 2nd O(2n) stack |
+| 198 | [Maximal Rectangle](/leetcode/85-maximal-rectangle/) | dynamic programming, stack | [leetcode 85](https://leetcode.com/problems/maximal-rectangle) | 📌 |
