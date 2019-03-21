@@ -23,7 +23,7 @@ class LRUCache(object):
         :type capacity: int
         """
         self.capacity = capacity
-        self.listLength = 0
+        self.listCount = 0
         self.map = {}
         self.listHead = ListNode(-1, -1)
         self.listTail = ListNode(-1, -1)
@@ -54,12 +54,13 @@ class LRUCache(object):
         else:
             node = ListNode(key, value)
             self._addToTail(node)
-            self.listLength += 1
+            self.listCount += 1
             self.map[key] = node
 
-        if self.listLength > self.capacity:
-            self._removeHead()
-            self.listLength -= 1
+        if self.listCount > self.capacity:
+            firstKey = self._removeHead()
+            del self.map[firstKey]
+            self.listCount -= 1
 
     def _addToTail(self, node):
         last = self.listTail.prev
@@ -74,10 +75,11 @@ class LRUCache(object):
         self._addToTail(node)
 
     def _removeHead(self):
+        # since we will check if self.listCount > self.capacity, we dont need to check if first would be listTail
         first = self.listHead.next
         self.listHead.next = first.next
         first.next.prev = self.listHead
-        del self.map[first.key]
+        return first.key
 
 
 c = LRUCache(2)
