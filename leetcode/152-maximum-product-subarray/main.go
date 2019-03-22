@@ -34,6 +34,7 @@ func maxProduct(nums []int) int {
 	- for each item, store the max&mix among itself, or extend the previous max&min with itself
 		e.g. dp[i] chooses between dp[i-1]+nums[i] and nums[i]
 	- the result is the largest dp[i]
+	- see ./idea.jpeg
 
 	Time	O(n)
 	Space	O(n)
@@ -53,7 +54,10 @@ func maxProduct1(nums []int) int {
 			dp_min = append(dp_min, temp1)
 			dp_max = append(dp_max, temp2)
 		} else {
+			// since (-a)*(-b) = ab
+			// to find the min, select from previous max
 			temp1 := findMin(dp_max[i-1]*nums[i], nums[i])
+			// to find the max, select from prevous min
 			temp2 := findMax(dp_min[i-1]*nums[i], nums[i])
 			dp_min = append(dp_min, temp1)
 			dp_max = append(dp_max, temp2)
