@@ -447,3 +447,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 198 | [Largest Rectangle in Histogram](/leetcode/84-largest-rectangle-in-histogram/) | array, stack | [leetcode 84](https://leetcode.com/problems/largest-rectangle-in-histogram) | 1st O(n^2) brute force, 📌 2nd O(2n) stack |
 | 198 | [Maximal Rectangle](/leetcode/85-maximal-rectangle/) | dynamic programming, stack | [leetcode 85](https://leetcode.com/problems/maximal-rectangle) | 📌 |
 | 198 | [Down to One](/interviews/amazon/down-to-one/) | dfs | glassdoor | ⭐️|
+| 199 | [Strobogrammatic Number](/leetcode/246-strobogrammatic-number) | 2pointers, hashtable | [leetcode 246](https://leetcode.com/problems/strobogrammatic-number/) | 1st O(n) 2pointers, 2nd O(n) hashtable+2pointers |
