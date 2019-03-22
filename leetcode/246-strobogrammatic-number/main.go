@@ -3,6 +3,12 @@ package main
 import "fmt"
 
 /*
+	questions to ask:
+	- negative?
+	- empty input?
+*/
+
+/*
 	1st approach: 2 pointers
 	- if start and end == 0,1,8, left++, right--
 	- if start == 6 and end == 9 or vice versa, left++, right--
