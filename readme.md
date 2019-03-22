@@ -100,8 +100,8 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 62 | [Serialize and Deserilize N-ary Tree](/leetcode/428-serialize-and-deserialize-n-ary-tree) | binary tree | [leetcode 428](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/)| My naive approach was to use json, it actaully beats 42.29%...not bad 😂 The suggested approach is astonishing 😳 |
 | 63 | [Encode N-ary Tree to Binary Tree](/leetcode/431-encode-n-ary-tree-to-binary-tree) | binary tree | [leetcode 431](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/)| encode ✅ decode 🤔 |
 | 64 | [Encode N-ary Tree to Binary Tree](/leetcode/431-encode-n-ary-tree-to-binary-tree) | binary tree | [leetcode 431](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/)| encode ✅ decode ✅ This question is pretty hard, it spent me 2 nights but it was worth doing. |
-| 65 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 208](https://leetcode.com/problems/implement-trie-prefix-tree/)| insert |
-| 66 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 208](https://leetcode.com/problems/implement-trie-prefix-tree/)| search, startwith |
+| 65 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 208](https://leetcode.com/problems/implement-trie-prefix-tree/)| 📌1st hashtable |
+| 66 | [Implement Trie (Prefix Tree)](/leetcode/208-implement-trie-prefix-tree) | trie | [leetcode 208](https://leetcode.com/problems/implement-trie-prefix-tree/)| 📌2nd array, it only works for a-z instead of all characters |
 | 67 | [Map Sum Pairs](/leetcode/677-map-sum-pairs) | trie | [leetcode 677](https://leetcode.com/problems/map-sum-pairs/)| i like this |
 | 68 | [Replace Words](/leetcode/648-replace-words) | string | [leetcode 648](https://leetcode.com/problems/replace-words/)| my 1st hasty solution got passed, but i think it is incorrect so i made another one |
 | 69 | [Add and Search Word Data Structure](/leetcode/211-add-and-search-word-data-structure-design) | string | [leetcode 211](https://leetcode.com/problems/add-and-search-word-data-structure-design/)| AddWord |
@@ -450,3 +450,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 199 | [Strobogrammatic Number](/leetcode/246-strobogrammatic-number) | 2pointers, hashtable | [leetcode 246](https://leetcode.com/problems/strobogrammatic-number/) | 1st O(n) 2pointers, 2nd O(n) hashtable+2pointers |
 | 199 | [Strobogrammatic Number II](/leetcode/247-strobogrammatic-number-ii) | recursion, hashtable | [leetcode 247](https://leetcode.com/problems/strobogrammatic-number-ii/) | recursion |
 | 199 | [Strobogrammatic Number III](/leetcode/248-strobogrammatic-number-iii) | recursion, hashtable | [leetcode 248](https://leetcode.com/problems/strobogrammatic-number-iii/) | recursion: reuse the approach in ii) |
+| 200 | [Maximum Sum Rectangle](/miscellaneous/maximum-sum-retangle) | dynamic programming | [youtube](https://www.youtube.com/watch?v=-FgseNO-6Gk) | O(rc^2)kadan's algo approach |
