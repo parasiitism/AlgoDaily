@@ -1,3 +1,9 @@
+"""
+    questions to ask:
+    - a-z only? yes for now
+"""
+
+
 class Node(object):
     def __init__(self, children, is_word):
         self.children = children
