@@ -55,4 +55,12 @@ func main() {
 	fmt.Println(findStrobogrammatic(2))
 	fmt.Println(findStrobogrammatic(3))
 	fmt.Println(findStrobogrammatic(4))
+
+	a := "123"
+	b := "234"
+	if a > b {
+		fmt.Println("ad")
+	} else {
+		fmt.Println("ads")
+	}
 }

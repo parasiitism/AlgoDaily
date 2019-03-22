@@ -448,4 +448,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 198 | [Maximal Rectangle](/leetcode/85-maximal-rectangle/) | dynamic programming, stack | [leetcode 85](https://leetcode.com/problems/maximal-rectangle) | 📌 |
 | 198 | [Down to One](/interviews/amazon/down-to-one/) | dfs | glassdoor | ⭐️|
 | 199 | [Strobogrammatic Number](/leetcode/246-strobogrammatic-number) | 2pointers, hashtable | [leetcode 246](https://leetcode.com/problems/strobogrammatic-number/) | 1st O(n) 2pointers, 2nd O(n) hashtable+2pointers |
-| 199 | [Strobogrammatic Number II](/leetcode/247-strobogrammatic-number-ii) | recursion, hashtable | [leetcode 247](https://leetcode.com/problems/strobogrammatic-number-ii/) | 1st recursion |
+| 199 | [Strobogrammatic Number II](/leetcode/247-strobogrammatic-number-ii) | recursion, hashtable | [leetcode 247](https://leetcode.com/problems/strobogrammatic-number-ii/) | recursion |
+| 199 | [Strobogrammatic Number III](/leetcode/248-strobogrammatic-number-iii) | recursion, hashtable | [leetcode 248](https://leetcode.com/problems/strobogrammatic-number-iii/) | recursion: reuse the approach in ii) |
