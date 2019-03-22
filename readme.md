@@ -388,8 +388,8 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 180 | [Multiply Strings](/leetcode/43-multiply-strings) | array | [leetcode 43](https://leetcode.com/problems/multiply-strings) | 📌|
 | 180 | [Add Strings](/leetcode/415-add-strings) | array | [leetcode 415](https://leetcode.com/problems/add-strings) | 📌|
 | 181 | [Valid Word Square](leetcode/422-valid-word-square) | array | [leetcode 422](https://leetcode.com/problems/valid-word-square) | |
-| 181 | [Maximum Subarray](/leetcode/53-maximum-subarray) | array | [leetcode 53](https://leetcode.com/problems/maximum-subarray) | 1st O(n^2) 📌📌📌2nd, 3rd O(n) Kadan's Algorithm. This problem can be applied to Minimum Subarray |
-| 181 | [Maximum Product Subarray](/leetcode/152-maximum-product-subarray) | array | [leetcode 152](https://leetcode.com/problems/maximum-product-subarray) | 1st O(n^2) 📌📌📌2nd O(n) Kadan's Algorithm. This problem can be applied to Minimum Product Subarray |
+| 181 | [Maximum Subarray](/leetcode/53-maximum-subarray) | array | [leetcode 53](https://leetcode.com/problems/maximum-subarray) | 1st O(n^2) 📌📌📌2nd, 3rd O(n) Kadan's Algorithm. followups: 1)print subarray 2) min subarray |
+| 181 | [Maximum Product Subarray](/leetcode/152-maximum-product-subarray) | array | [leetcode 152](https://leetcode.com/problems/maximum-product-subarray) | 1st O(n^2) 📌📌📌2nd O(n) Kadan's Algorithm. followups: 1)print subarray 2) min subarray |
 | 181 | [Subarray Product Less Than K](/leetcode/713-subarray-product-less-than-k) | array | [leetcode 713](https://leetcode.com/problems/subarray-product-less-than-k) | ⭐️sliding window |
 | 182 | [Word Ladder](/leetcode/127-word-ladder) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder) | 1st LTE, ⭐️2nd O(n^26*l) |
 | 182 | [Word Ladder II](/leetcode/126-word-ladder-ii) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder-ii) | LTE, revise later |

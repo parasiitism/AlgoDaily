@@ -92,16 +92,35 @@ func maxSubArray2(nums []int) int {
 }
 
 /*
-	another solution: divide and conquer: O(nlogn)
-	ref:
-	- https://leetcode.com/problems/maximum-subarray/discuss/20497/Python-O(n)-solution-and-divide-and-conquer-O(nlogn)-solution
-	- https://www.geeksforgeeks.org/maximum-subarray-sum-using-divide-and-conquer-algorithm/
+	follow-up: print the array
+
+	questions to ask: if there is 0 between?
 */
+func maxSubArray3(nums []int) (int, []int) {
+	dp := math.MinInt32
+	dpStart := -1
+	largest := math.MinInt32
+	res := []int{}
+	for i := 0; i < len(nums); i++ {
+		// dp = findMax(dp+nums[i], nums[i])
+		if dp+nums[i] > nums[i] {
+			dp = dp + nums[i]
+		} else {
+			dp = nums[i]
+			dpStart = i
+		}
+		// res = findMax(res, dp)
+		if dp > largest {
+			largest = dp
+			res = nums[dpStart : i+1]
+		}
+	}
+	return largest, res
+}
 
 func main() {
 	fmt.Println(maxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
-
 	fmt.Println(maxSubArray1([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
-
 	fmt.Println(maxSubArray2([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
+	fmt.Println(maxSubArray3([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
 }
