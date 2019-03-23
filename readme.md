@@ -456,3 +456,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 200 | [Invert Binary Tree](/leetcode/226-invert-binary-tree) | tree | [leetcode 226](https://leetcode.com/problems/invert-binary-tree/) | 📌️1st recursion, 2nd bfs |
 | 200 | [Binary Tree Level Order Traversal II](/leetcode/107-binary-tree-level-order-traversal) | binary tree | [leetcode 107](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)| similar to [leetcode 102](https://leetcode.com/problems/binary-tree-level-order-traversal) 1st bfs |
 | 200 | [Average of Levels in Binary Tree](/leetcode/637-average-of-levels-in-binary-tree) | binary tree | [leetcode 637](https://leetcode.com/problems/average-of-levels-in-binary-tree/)| bfs |
+| 200 | [Same Tree](/leetcode/100-same-tree) | binary tree | [leetcode 100](https://leetcode.com/problems/same-tree/)| 1st recursive dfs, 2nd iterative dfs |
