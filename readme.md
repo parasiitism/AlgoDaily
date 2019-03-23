@@ -81,7 +81,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 44 | [Binary Tree Postorder Traversal](/leetcode/145-binary-tree-postorder-traversal) | binary tree | [leetcode 145](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)| |
 | 45 | [Binary Tree Postorder Traversal](/leetcode/145-binary-tree-postorder-traversal) | binary tree | [leetcode 145](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)| to understand the trick of the iterative solution|
 | 46 | [N-ary Tree Postorder Traversal](/leetcode/590-n-ary-tree-postorder-traversal) | N-ary tree | [leetcode 590](https://leetcode.com/problems/n-ary-tree-postorder-traversal/description/)| |
-| 47 | [Binary Tree Level Order Traversal](/leetcode/102-binary-tree-level-order-traversal) | binary tree | [leetcode 102](https://leetcode.com/problems/binary-tree-level-order-traversal/)| |
+| 47 | [Binary Tree Level Order Traversal](/leetcode/102-binary-tree-level-order-traversal) | binary tree | [leetcode 102](https://leetcode.com/problems/binary-tree-level-order-traversal/)| 📌 bfs, followup: zig zag level order|
 | 48 | [N-ary Tree Level Order Traversal](/leetcode/429-n-ary-tree-level-order-traversal) | N-ary tree | [leetcode 429](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)| |
 | 49 | [Maximum Depth of Binary Tree](/leetcode/104-maximum-depth-of-binary-tree) | binary tree | [leetcode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| |
 | 50 | [Maximum Depth of N-ary Tree](/leetcode/559-maximum-depth-of-n-ary-tree) | N-ary tree | [leetcode 559](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/)| |
@@ -454,3 +454,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 200 | [Roman to Integer](/leetcode/13-roman-to-integer) | hashtable | [leetcode 13](https://leetcode.com/problems/roman-to-integer/) | ⭐️|
 | 200 | [Integer to Roman](/leetcode/12-integer-to-roman) | hashtable | [leetcode 12](https://leetcode.com/problems/integer-to-roman/) | ⭐️|
 | 200 | [Invert Binary Tree](/leetcode/226-invert-binary-tree) | tree | [leetcode 226](https://leetcode.com/problems/invert-binary-tree/) | 📌️1st recursion, 2nd bfs |
+| 200 | [Binary Tree Level Order Traversal II](/leetcode/107-binary-tree-level-order-traversal) | binary tree | [leetcode 107](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)| similar to [leetcode 102](https://leetcode.com/problems/binary-tree-level-order-traversal) 1st bfs |
