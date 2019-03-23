@@ -451,3 +451,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 199 | [Strobogrammatic Number II](/leetcode/247-strobogrammatic-number-ii) | recursion, hashtable | [leetcode 247](https://leetcode.com/problems/strobogrammatic-number-ii/) | recursion |
 | 199 | [Strobogrammatic Number III](/leetcode/248-strobogrammatic-number-iii) | recursion, hashtable | [leetcode 248](https://leetcode.com/problems/strobogrammatic-number-iii/) | recursion: reuse the approach in ii) |
 | 200 | [Maximum Sum Rectangle/Submatrix](/miscellaneous/maximum-sum-retangle) | dynamic programming | [youtube](https://www.youtube.com/watch?v=-FgseNO-6Gk) | O(rc^2)kadan's algo approach |
+| 200 | [Roman to Integer](/leetcode/13-roman-to-integer) | hashtable | [leetcode 13](https://leetcode.com/problems/roman-to-integer/) | ⭐️|
