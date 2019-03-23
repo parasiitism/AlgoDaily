@@ -453,3 +453,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 200 | [Maximum Sum Rectangle/Submatrix](/miscellaneous/maximum-sum-retangle) | dynamic programming | [youtube](https://www.youtube.com/watch?v=-FgseNO-6Gk) | O(rc^2)kadan's algo approach |
 | 200 | [Roman to Integer](/leetcode/13-roman-to-integer) | hashtable | [leetcode 13](https://leetcode.com/problems/roman-to-integer/) | ⭐️|
 | 200 | [Integer to Roman](/leetcode/12-integer-to-roman) | hashtable | [leetcode 12](https://leetcode.com/problems/integer-to-roman/) | ⭐️|
+| 200 | [Invert Binary Tree](/leetcode/226-invert-binary-tree) | tree | [leetcode 226](https://leetcode.com/problems/invert-binary-tree/) | 📌️1st recursion, 2nd bfs |
