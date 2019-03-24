@@ -460,3 +460,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 200 | [Smallest String Starting From Leaf](/leetcode/988-smallest-string-starting-from-leaf) | binary tree | [leetcode 988](https://leetcode.com/problems/smallest-string-starting-from-leaf/)| 1st recursive dfs, 2nd iterative dfs |
 | 201 | [Trim a Binary Search Tree](/leetcode/669-trim-a-binary-search-tree) | binary tree, recursion | [leetcode 669](https://leetcode.com/problems/trim-a-binary-search-tree/)| 1st recursion, 2nd better recursion |
 | 201 | [Shortest Word Distance](/leetcode/243-shortest-word-distance) | 2pointers, binary search | [leetcode 243](https://leetcode.com/problems/shortest-word-distance/)| ⭐️O(n), O(nlogn) |
+| 201 | [Shortest Word Distance II](/leetcode/244-shortest-word-distance-ii) | 2pointers | [leetcode 244](https://leetcode.com/problems/shortest-word-distance-ii/)| ⭐️O(n) |
