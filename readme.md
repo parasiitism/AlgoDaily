@@ -459,3 +459,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 200 | [Same Tree](/leetcode/100-same-tree) | binary tree | [leetcode 100](https://leetcode.com/problems/same-tree/)| 1st recursive dfs, 2nd iterative dfs |
 | 200 | [Smallest String Starting From Leaf](/leetcode/988-smallest-string-starting-from-leaf) | binary tree | [leetcode 988](https://leetcode.com/problems/smallest-string-starting-from-leaf/)| 1st recursive dfs, 2nd iterative dfs |
 | 201 | [Trim a Binary Search Tree](/leetcode/669-trim-a-binary-search-tree) | binary tree, recursion | [leetcode 669](https://leetcode.com/problems/trim-a-binary-search-tree/)| 1st recursion, 2nd better recursion |
+| 201 | [Shortest Word Distance](/leetcode/243-shortest-word-distance) | 2pointers | [leetcode 243](https://leetcode.com/problems/shortest-word-distance/)| 📌O(n) |

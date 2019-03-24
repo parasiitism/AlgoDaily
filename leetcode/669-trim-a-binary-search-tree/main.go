@@ -115,7 +115,7 @@ func main() {
 		},
 		&TreeNode{4, nil, nil},
 	}
-	ans := trimBST1(root, 1, 3)
+	ans := trimBST(root, 1, 3)
 	fmt.Println(levelOrder(ans))
 
 	// 			  3
@@ -128,6 +128,6 @@ func main() {
 		},
 		&TreeNode{4, nil, nil},
 	}
-	ans = trimBST1(root, 2, 12)
+	ans = trimBST(root, 2, 12)
 	fmt.Println(levelOrder(ans))
 }
