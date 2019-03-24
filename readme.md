@@ -462,3 +462,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 201 | [Shortest Word Distance](/leetcode/243-shortest-word-distance) | 2pointers, binary search | [leetcode 243](https://leetcode.com/problems/shortest-word-distance/)| ⭐️O(n), O(nlogn) |
 | 201 | [Shortest Word Distance II](/leetcode/244-shortest-word-distance-ii) | 2pointers | [leetcode 244](https://leetcode.com/problems/shortest-word-distance-ii/)| ⭐️O(n) |
 | 201 | [Shortest Word Distance III](/leetcode/245-shortest-word-distance-iii) | 2pointers, binary search | [leetcode 245](https://leetcode.com/problems/shortest-word-distance-iii/)| ⭐️O(n), O(nlogn) |
+| 201 | [Next Greater Element I](/leetcode/496-next-greater-element-i) | array | [leetcode 496](https://leetcode.com/problems/next-greater-element-i/)| 1st O(n^2) |
