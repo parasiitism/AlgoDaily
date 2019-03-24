@@ -461,3 +461,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 201 | [Trim a Binary Search Tree](/leetcode/669-trim-a-binary-search-tree) | binary tree, recursion | [leetcode 669](https://leetcode.com/problems/trim-a-binary-search-tree/)| 1st recursion, 2nd better recursion |
 | 201 | [Shortest Word Distance](/leetcode/243-shortest-word-distance) | 2pointers, binary search | [leetcode 243](https://leetcode.com/problems/shortest-word-distance/)| ⭐️O(n), O(nlogn) |
 | 201 | [Shortest Word Distance II](/leetcode/244-shortest-word-distance-ii) | 2pointers | [leetcode 244](https://leetcode.com/problems/shortest-word-distance-ii/)| ⭐️O(n) |
+| 201 | [Shortest Word Distance III](/leetcode/245-shortest-word-distance-iii) | 2pointers, binary search | [leetcode 245](https://leetcode.com/problems/shortest-word-distance-iii/)| ⭐️O(n), O(nlogn) |
