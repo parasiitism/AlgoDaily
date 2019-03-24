@@ -1,5 +1,13 @@
 package main
 
+/*
+	1st approach: O(n)
+	reuse the O(n) way in 1) leetcode243
+
+	Time		O(n) for unseen search
+	Space		O(n)
+	980 ms, faster than 20.00%
+*/
 type WordDistance struct {
 	Words []string
 	M     map[string]int
