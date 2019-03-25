@@ -94,6 +94,9 @@ func PostorderRecursive(root *TreeNode) {
 	fmt.Print(root.Val)
 }
 
+/*
+	iterative post order is actually the reversed version of preorder
+*/
 func PostorderIterative(root *TreeNode) {
 	stack := []*TreeNode{}
 	stack = append(stack, root)
