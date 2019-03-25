@@ -468,3 +468,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 202 | [Binary Tree Paths](/leetcode/257-binary-tree-paths) | tree | [leetcode 257](https://leetcode.com/problems/binary-tree-paths/)| 1st recursive dfs O(n), 2nd iterative dfs O(n) |
 | 202 | [Diameter of Binary Tree](/leetcode/543-diameter-of-binary-tree) | tree, recursion | [leetcode 543](https://leetcode.com/problems/diameter-of-binary-tree/)| O(n) recursive dfs |
 | 202 | [Construct Binary Tree from String](/leetcode/536-construct-binary-tree-from-string) | tree, recursion | [leetcode 536](https://leetcode.com/problems/construct-binary-tree-from-string/)| O(n) recursive dfs, follow-up of [leetcode 606](https://leetcode.com/problems/construct-string-from-binary-tree/) |
+| 202 | [Equal Tree Partition](/leetcode/663-equal-tree-partition) | tree, recursion | [leetcode 663](https://leetcode.com/problems/equal-tree-partition/)| ⭐️O(n) recursive dfs |
