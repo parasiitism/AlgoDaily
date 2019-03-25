@@ -466,3 +466,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 202 | [Next Greater Element II](/leetcode/503-next-greater-element-ii) | stack | [leetcode 503](https://leetcode.com/problems/next-greater-element-ii/)| 1st O(n) |
 | 202 | [Next Greater Element III](/leetcode/556-next-greater-element-iii) | stack | [leetcode 556](https://leetcode.com/problems/next-greater-element-iii/)| 📌[Next Lexicographical Permutation Algorithm](https://www.nayuki.io/page/next-lexicographical-permutation-algorithm) O(n) |
 | 202 | [Binary Tree Paths](/leetcode/257-binary-tree-paths) | tree | [leetcode 257](https://leetcode.com/problems/binary-tree-paths/)| 1st recursive dfs O(n), 2nd iterative dfs O(n) |
+| 202 | [Diameter of Binary Tree](/leetcode/543-diameter-of-binary-tree) | tree, recursion | [leetcode 543](https://leetcode.com/problems/diameter-of-binary-tree/)| O(n) recursive dfs |
