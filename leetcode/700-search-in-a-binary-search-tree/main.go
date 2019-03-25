@@ -10,6 +10,13 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+/*
+	1st approach: recursive bst dfs
+
+	Time	O(h)
+	Space	O(h)
+	36 ms, faster than 31.62%
+*/
 func searchBST(root *TreeNode, val int) *TreeNode {
 	if root == nil {
 		return nil
@@ -30,6 +37,30 @@ func searchBST(root *TreeNode, val int) *TreeNode {
 	return nil
 }
 
+/*
+	2nd approach: iterative bst dfs
+
+	Time	O(h)
+	Space	O(1)
+	24 ms, faster than 100.00%
+*/
+func searchBST1(root *TreeNode, val int) *TreeNode {
+	if root == nil {
+		return nil
+	}
+	cur := root
+	for cur != nil {
+		if val > cur.Val {
+			cur = cur.Right
+		} else if val < cur.Val {
+			cur = cur.Left
+		} else {
+			return cur
+		}
+	}
+	return nil
+}
+
 func main() {
 	// 		5
 	//	2		8
@@ -44,6 +75,6 @@ func main() {
 			&TreeNode{9, nil, nil},
 		},
 	}
-	ans := searchBST(root, 5)
+	ans := searchBST1(root, 8)
 	fmt.Println(ans)
 }
