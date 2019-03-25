@@ -463,4 +463,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 201 | [Shortest Word Distance II](/leetcode/244-shortest-word-distance-ii) | 2pointers | [leetcode 244](https://leetcode.com/problems/shortest-word-distance-ii/)| ⭐️O(n) |
 | 201 | [Shortest Word Distance III](/leetcode/245-shortest-word-distance-iii) | 2pointers, binary search | [leetcode 245](https://leetcode.com/problems/shortest-word-distance-iii/)| ⭐️O(n), O(nlogn) |
 | 201 | [Next Greater Element I](/leetcode/496-next-greater-element-i) | array | [leetcode 496](https://leetcode.com/problems/next-greater-element-i/)| 1st O(n^2) |
-| 202 | [Next Greater Element II](/leetcode/503-next-greater-element-ii) | array | [leetcode 503](https://leetcode.com/problems/next-greater-element-ii/)| 1st O(n) |
+| 202 | [Next Greater Element II](/leetcode/503-next-greater-element-ii) | stack | [leetcode 503](https://leetcode.com/problems/next-greater-element-ii/)| 1st O(n) |
+| 202 | [Next Greater Element III](/leetcode/556-next-greater-element-iii) | stack | [leetcode 556](https://leetcode.com/problems/next-greater-element-iii/)| 📌[Next Lexicographical Permutation Algorithm](https://www.nayuki.io/page/next-lexicographical-permutation-algorithm) O(n) |
