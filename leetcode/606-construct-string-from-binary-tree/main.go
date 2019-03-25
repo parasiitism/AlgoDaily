@@ -11,6 +11,10 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+/*
+	followup: leetcode 606
+*/
+
 func tree2str(t *TreeNode) string {
 	if t == nil {
 		return ""

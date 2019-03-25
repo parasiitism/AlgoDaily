@@ -11,6 +11,8 @@ class TreeNode(object):
     - negative numbers? yes e.g. "51(-232)(434)"
     - every number is single-digited? no, there might be "51(232)(434)"
     - will the number within 2^32? yes
+
+    this is a followup of leetcode 536)
 """
 
 
