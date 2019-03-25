@@ -38,23 +38,23 @@ func insertIntoBST1(root *TreeNode, val int) *TreeNode {
 	if root == nil {
 		return &TreeNode{val, nil, nil}
 	}
-	var recursive func(curr *TreeNode)
-	recursive = func(curr *TreeNode) {
+	var recursion func(curr *TreeNode)
+	recursion = func(curr *TreeNode) {
 		if val > curr.Val {
 			if curr.Right != nil {
-				recursive(curr.Right)
+				recursion(curr.Right)
 			} else {
 				curr.Right = &TreeNode{val, nil, nil}
 			}
 		} else {
 			if curr.Left != nil {
-				recursive(curr.Left)
+				recursion(curr.Left)
 			} else {
 				curr.Left = &TreeNode{val, nil, nil}
 			}
 		}
 	}
-	recursive(root)
+	recursion(root)
 	return root
 }
 
