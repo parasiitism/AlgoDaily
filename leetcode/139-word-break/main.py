@@ -35,11 +35,12 @@ class Solution(object):
             return m[s]
         ifAnyTrue = False
         for i in range(1, maxLength+1):
-            if i <= len(s):
-                w = s[:i]
-                if w in wordSet:
-                    temp = self.find(s[i:], wordSet, maxLength, m)
-                    ifAnyTrue = ifAnyTrue or temp
+            if i > len(s):
+                break
+            w = s[:i]
+            if w in wordSet:
+                temp = self.find(s[i:], wordSet, maxLength, m)
+                ifAnyTrue = ifAnyTrue or temp
         # memorize the result for s, then we can use it to avoid redundant computation if we meet s again
         m[s] = ifAnyTrue
         return ifAnyTrue
