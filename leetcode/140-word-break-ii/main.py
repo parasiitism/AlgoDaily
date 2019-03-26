@@ -38,7 +38,6 @@ class Solution(object):
             w = s[:len(word)]
             if w == word:
                 tempList = self.find(s[len(word):], wordSet, m)
-                print(tempList, w)
                 for temp in tempList:
                     if len(temp) > 0:
                         res.append(w + " " + temp)
@@ -59,22 +58,22 @@ d = ["cat", "cats", "and", "sand", "dog"]
 print(Solution().wordBreak(s, d))
 print("---")
 
-# s = "pineapplepenapple"
-# d = ["apple", "pen", "applepen", "pine", "pineapple"]
-# print(Solution().wordBreak(s, d))
-# print("---")
+s = "pineapplepenapple"
+d = ["apple", "pen", "applepen", "pine", "pineapple"]
+print(Solution().wordBreak(s, d))
+print("---")
 
-# s = "pineapplepenapple"
-# d = ["apple", "pen", "applepen", "pine", "pineapple", "penapple"]
-# print(Solution().wordBreak(s, d))
-# print("---")
+s = "pineapplepenapple"
+d = ["apple", "pen", "applepen", "pine", "pineapple", "penapple"]
+print(Solution().wordBreak(s, d))
+print("---")
 
-# s = "catsandog"
-# d = ["cats", "dog", "sand", "and", "cat"]
-# print(Solution().wordBreak(s, d))
-# print("---")
+s = "catsandog"
+d = ["cats", "dog", "sand", "and", "cat"]
+print(Solution().wordBreak(s, d))
+print("---")
 
-# s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-# d = ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa",
-#      "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"]
-# print(Solution().wordBreak(s, d))
+s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+d = ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa",
+     "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"]
+print(Solution().wordBreak(s, d))
