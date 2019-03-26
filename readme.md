@@ -471,5 +471,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 202 | [Equal Tree Partition](/leetcode/663-equal-tree-partition) | tree, recursion, hashtable | [leetcode 663](https://leetcode.com/problems/equal-tree-partition/)| ⭐️1st O(2n) recursive dfs+hashtable. 2nd O(n) recursive dfs+hashset |
 | 203 | [Check Completeness of a Binary Tree](/leetcode/958-check-completeness-of-a-binary-tree) | tree, recursion | [leetcode 958](https://leetcode.com/problems/check-completeness-of-a-binary-tree/)| 1st tedious dfs O(2n), 📌 2nd bfs O(n) |
 | 203 | [Check Fullness of a Binary Tree](/miscellaneous/check-fullness-of-binary-tree) | tree | glassdoor | 1st dfs O(n) |
-| 203 | [Word Break](/leetcode/139-word-break) | dynamic programming | [leetcode 139](https://leetcode.com/problems/word-break/) | 📌1st recursion+hashtable O(n^2) |
-| 203 | [Word Break II](/leetcode/140-word-break-ii) | dynamic programming | [leetcode 140](https://leetcode.com/problems/word-break-ii/) | 📌1st recursion+hashtable O(n^3) |
+| 203 | [Word Break](/leetcode/139-word-break) | dynamic programming, recursion | [leetcode 139](https://leetcode.com/problems/word-break/) | 📌1st recursion+hashtable O(n^2) |
+| 203 | [Word Break II](/leetcode/140-word-break-ii) | dynamic programming, recursion | [leetcode 140](https://leetcode.com/problems/word-break-ii/) | 1st top-down TLE, 2nd bottom-up TLE, 📌3rd bottom-up+hashtable O(n^3) beats 47% |
