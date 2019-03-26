@@ -20,7 +20,7 @@ type TreeNode struct {
 	e.g.2
 				1
 			2		3
-		4 5	 	6
+		4 5	 	 6
 	the depths are [3,3,2,3], which is not a complets tree
 
 	Time	O(2n)
@@ -65,6 +65,45 @@ func isCompleteTree(root *TreeNode) bool {
 		prev = num
 	}
 	return true
+}
+
+/*
+	2nd approach:
+	1. bfs and the queue finally should have all the leafs including null
+	2. for a complete binary tree, there should not be any node after we met a null node in the final level
+
+	e.g.1
+				1
+			2		3
+		4 5	 6
+	queue = [null, null, null, null, null, null, null]
+	parent =	3			4			4			5			5			6			6
+	so it is complete
+
+	e.g.2
+				1
+			2		3
+		4 5	 		6
+	queue = [null, 6, null, null, null, null]
+	parent =	3		3		 4			4			5			5
+
+	Time	O(n)
+	Space	O(h)
+	0 ms, faster than 100.00%
+*/
+func isCompleteTree1(root *TreeNode) bool {
+	q := []*TreeNode{}
+	q = append(q, root)
+	for q[len(q)-1] != nil {
+		head := q[0]
+		q = q[1:]
+		q = append(q, head.Left)
+		q = append(q, head.Right)
+	}
+	for len(q) > 0 && q[len(q)-1] == nil {
+		q = q[1:]
+	}
+	return len(q) > 0
 }
 
 func main() {
