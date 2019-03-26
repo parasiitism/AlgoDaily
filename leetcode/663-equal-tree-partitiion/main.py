@@ -55,3 +55,46 @@ class Solution(object):
         curSum = left + node.val + right
         m[node] = curSum
         return curSum
+
+
+class Solution(object):
+    def checkEqualTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+
+        2nd approach: dfs + hashset, learned from others
+        - for each node, calculate its children sum
+        - calculate the total sum as well
+        - dfs again to check if total - cur == cur
+
+        compare to the 1st approach:
+        - actually we dont need to care if there are duplicate sum values,
+        because if there are, lets say 2 same values , it means that we can cut the tree in 2 ways
+
+        ref:
+        - https://leetcode.com/problems/equal-tree-partition/discuss/106727/javac-simple-solution-with-only-one-hashmap
+
+        corner cases:
+        - [0,null,0]
+        - [0,-1,1]
+
+        76 ms, faster than 45.64%
+        """
+        if root == None:
+            return False
+        m = set()
+        # we should not add total to the hashset
+        # otherwise we are not partitioning the tree
+        total = root.val + \
+            self.calSum(root.left, m) + self.calSum(root.right, m)
+        return total % 2 == 0 and total / 2 in m
+
+    def calSum(self, node, m):
+        if node == None:
+            return 0
+        left = self.calSum(node.left, m)
+        right = self.calSum(node.right, m)
+        curSum = left + node.val + right
+        m.add(curSum)
+        return curSum
