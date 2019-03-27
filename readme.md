@@ -473,3 +473,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 203 | [Check Fullness of a Binary Tree](/miscellaneous/check-fullness-of-binary-tree) | tree | glassdoor | 1st dfs O(n) |
 | 203 | [Word Break](/leetcode/139-word-break) | dynamic programming, recursion | [leetcode 139](https://leetcode.com/problems/word-break/) | 📌1st recursion+hashtable O(n^2) |
 | 203 | [Word Break II](/leetcode/140-word-break-ii) | dynamic programming, recursion | [leetcode 140](https://leetcode.com/problems/word-break-ii/) | 1st top-down TLE, 2nd bottom-up TLE, 📌3rd bottom-up+hashtable O(n^3) beats 47% |
+| 204 | [Exam Room](/leetcode/855-exam-room) | array | [leetcode 855](https://leetcode.com/problems/exam-room/) | 1st O(n) |
