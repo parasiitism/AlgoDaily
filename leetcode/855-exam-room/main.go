@@ -16,7 +16,7 @@ package main
 	- for every seat(), check the end, the middle, and the front to find out the left most "seatable" option
 
 	Time of seat    O(n)
-	Time of leave   O(logn)
+	Time of leave   O(logn) binary search
 	Space           O(n) worst case if all seats are occupied
 	12 ms, faster than 100.00%
 */
