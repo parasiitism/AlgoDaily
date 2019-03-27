@@ -15,9 +15,9 @@
     - for every seat(), check the end, the middle, and the front to find out the left most "seatable" option
 
     Time of seat    O(n)
-    Time of leave   O(n)
+    Time of leave   O(logn) binary search
     Space           O(n) worst case if all seats are occupied
-    436 ms, faster than 10.88%
+    424 ms, faster than 12.06%
 """
 
 
@@ -75,12 +75,22 @@ class ExamRoom(object):
         :type p: int
         :rtype: void
         """
-        i = 0
-        while i < len(self.arr):
-            if self.arr[i] == p:
-                self.arr = self.arr[:i] + self.arr[i+1:]
-                break
-            i += 1
+        i = self.bsearch(p)
+        self.arr = self.arr[:i] + self.arr[i+1:]
+
+    def bsearch(self, target):
+        arr = self.arr
+        left = 0
+        right = len(arr)-1
+        while left <= right:
+            mid = int((left + right)/2)
+            if arr[mid] == target:
+                return mid
+            elif arr[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return -1
 
 
 e = ExamRoom(10)
