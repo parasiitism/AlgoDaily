@@ -121,3 +121,54 @@ print(Solution().canFinish(
     6, [[4, 3], [1, 0], [5, 2], [5, 4], [5, 1], [2, 3]]))
 print(Solution().canFinish(
     6, [[4, 3], [1, 0], [5, 2], [5, 4], [5, 1], [2, 3], [3, 5]]))
+
+
+class Solution(object):
+    def canFinish(self, numCourses, prerequisites):
+        """
+        :type numCourses: int
+        :type prerequisites: List[List[int]]
+        :rtype: List[int]
+
+        3rd approach: topo sort with hashtable but not int array
+
+        Time    O(V+E)
+        Space   O(V)
+        216 ms, faster than 20.38%
+        28mar2019
+        """
+        connections = {}
+        indegrees = {}
+        for num in range(numCourses):
+            connections[num] = []
+            indegrees[num] = 0
+
+        for cur, prev in prerequisites:
+            indegrees[cur] += 1
+            connections[prev].append(cur)
+
+        q = []
+        for x in indegrees:
+            if indegrees[x] == 0:
+                q.append(x)
+
+        res = []
+        while len(q) > 0:
+            pop0 = q.pop(0)
+            res.append(pop0)
+            children = connections[pop0]
+            for child in children:
+                indegrees[child] -= 1
+                if indegrees[child] == 0:
+                    q.append(child)
+
+        return len(res) == numCourses
+
+
+print('-----')
+print(Solution().canFinish(2, [[1, 0]]))
+print(Solution().canFinish(2, [[0, 1], [1, 0]]))
+print(Solution().canFinish(
+    6, [[4, 3], [1, 0], [5, 2], [5, 4], [5, 1], [2, 3]]))
+print(Solution().canFinish(
+    6, [[4, 3], [1, 0], [5, 2], [5, 4], [5, 1], [2, 3], [3, 5]]))

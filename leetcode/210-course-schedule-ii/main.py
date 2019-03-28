@@ -67,6 +67,9 @@ print(Solution().findOrder(
     6, [[3, 4], [0, 1], [2, 5], [4, 5], [1, 5], [3, 2], [5, 3]]))
 
 
+print("---------------------------------------------")
+
+
 class Solution(object):
     def findOrder(self, numCourses, prerequisites):
         """
@@ -98,26 +101,19 @@ class Solution(object):
             connections.append([])
             indegrees.append(0)
         # iterate though the edges and put them into the corresponding node in the connections
-        for prereq in prerequisites:
-            prev, cur = prereq[1], prereq[0]
+        for cur, prev in prerequisites:
             connections[prev].append(cur)
             indegrees[cur] += 1
-
         # put the nodes which has no incoming edges
         queue = []
         for i in range(numCourses):
             if indegrees[i] == 0:
                 queue.append(i)
-
-        # a count to check if the graph has a cycle
-        # if there is a cycle, there will be a node's indegree never becomes 0
-        # it means it will not be push to the queue therefore the the cnt will be inconsistent with the numCourses
-        cnt = 0
+        # 0 indegree nodes are the result
         res = []
         while len(queue) > 0:
             head = queue.pop(0)
             res.append(head)
-            cnt += 1
             children = connections[head]
             for child in children:
                 # subtract 1 for all destinations which the current node points(prereq) to
@@ -126,9 +122,9 @@ class Solution(object):
                 if indegrees[child] == 0:
                     queue.append(child)
 
-        if cnt == numCourses:
-            return res
-        return []
+        if len(res) != numCourses:
+            return []
+        return res
 
 
 print(Solution().findOrder(
@@ -136,3 +132,60 @@ print(Solution().findOrder(
 
 print(Solution().findOrder(
     6, [[3, 4], [0, 1], [2, 5], [4, 5], [1, 5], [3, 2], [5, 3]]))
+
+print("---------------------------------------------")
+
+
+class Solution(object):
+    def findOrder(self, numCourses, prerequisites):
+        """
+        :type numCourses: int
+        :type prerequisites: List[List[int]]
+        :rtype: List[int]
+
+        3rd approach: topo sort with hashtable but not int array
+
+        Time    O(V+E)
+        Space   O(V)
+        196 ms, faster than 19.02%
+        28mar2019
+        """
+
+        connections = {}
+        indegrees = {}
+        for num in range(numCourses):
+            connections[num] = []
+            indegrees[num] = 0
+
+        for cur, prev in prerequisites:
+            indegrees[cur] += 1
+            connections[prev].append(cur)
+
+        q = []
+        for x in indegrees:
+            if indegrees[x] == 0:
+                q.append(x)
+
+        res = []
+        while len(q) > 0:
+            pop0 = q.pop(0)
+            res.append(pop0)
+            children = connections[pop0]
+            for child in children:
+                indegrees[child] -= 1
+                if indegrees[child] == 0:
+                    q.append(child)
+
+        if len(res) != numCourses:
+            return []
+        return res
+
+
+print(Solution().findOrder(
+    6, [[3, 4], [0, 1], [2, 5], [4, 5], [1, 5], [3, 2]]))
+
+print(Solution().findOrder(
+    6, [[3, 4], [0, 1], [2, 5], [4, 5], [1, 5], [3, 2], [5, 3]]))
+
+print(Solution().findOrder(
+    1, []))

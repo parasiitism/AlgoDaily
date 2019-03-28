@@ -24,6 +24,7 @@ def warehouseMinCost(edges):
     c = UnionFind(wareHouses)
 
     res = []
+    # or we can use heap
     edges = sorted(edges, key=lambda x: x[2])
     for edge in edges:
         c1 = c.find(edge[0])
@@ -31,6 +32,7 @@ def warehouseMinCost(edges):
         if c1 != c2:
             c.union(edge[0], edge[1])
             res.append(edge)
+    # if number of clusters > 1, it means we cannot connect all the nodes no matter how
     if c.getCount() > 1:
         return []
     return res
