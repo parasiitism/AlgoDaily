@@ -22,12 +22,11 @@ class UnionFind(object):
     def union(self, p, q):
         if p not in self.ids or q not in self.ids:
             return
-
         pId = self.find(p)
         qId = self.find(q)
         if pId == qId:
             return
-
+        # attach to the larger tree
         if self.caps[pId] < self.caps[qId]:
             self.ids[pId] = qId
             self.caps[qId] += self.caps[pId]
