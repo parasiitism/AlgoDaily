@@ -478,3 +478,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 205 | [Heap](/miscellaneous/heap/) | heap | revise | 📌rectify implementation in python and js. operations: push, push, heapify, shift up & down. |
 | 206 | [Heaters](/leetcode/475-heaters) | binary search | [leetcode 475](https://leetcode.com/problems/heaters/) | 1st binary search beats 100% |
 | 206 | [Binary Search Nearest](/miscellaneous/binary-searches) | binary search | study | 📌 binary search the index of nearest item  |
+| 206 | [House Robber](/leetcode/198-house-robber ) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | 📌 1st O(n) space. 2nd O(1) space |
