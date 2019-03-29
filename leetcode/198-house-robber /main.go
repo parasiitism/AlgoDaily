@@ -103,9 +103,7 @@ func rob2(nums []int) int {
 	prev := 0
 	for i := 0; i < len(nums); i++ {
 		cur := nums[i]
-		// put the max we can rob into the cache
 		temp := max(prevprev+cur, prev)
-		// dp = append(dp, temp)
 		prevprev = prev
 		prev = temp
 	}
