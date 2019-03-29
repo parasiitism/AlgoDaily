@@ -476,4 +476,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 204 | [Exam Room](/leetcode/855-exam-room) | array, heap | [leetcode 855](https://leetcode.com/problems/exam-room/) | 1st O(n), 2nd O(logn) |
 | 205 | [Evaluate Division](/leetcode/399-evaluate-division) | graph | [leetcode 399](https://leetcode.com/problems/evaluate-division/) | 📌1st O(ENlogN) unionfind beats 70% |
 | 205 | [Heap](/miscellaneous/heap/) | heap | revise | 📌rectify implementation in python and js. operations: push, push, heapify, shift up & down. |
-| 207 | [Heaters](/leetcode/475-heaters) | binary search | [leetcode 475](https://leetcode.com/problems/heaters/) | 1st binary search beats 100% |
+| 206 | [Heaters](/leetcode/475-heaters) | binary search | [leetcode 475](https://leetcode.com/problems/heaters/) | 1st binary search beats 100% |
+| 206 | [Binary Search Nearest](/miscellaneous/binary-searches) | binary search | study | 📌 binary search the index of nearest item  |
