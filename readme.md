@@ -479,4 +479,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 206 | [Heaters](/leetcode/475-heaters) | binary search | [leetcode 475](https://leetcode.com/problems/heaters/) | 1st binary search beats 100% |
 | 206 | [Binary Search Nearest](/miscellaneous/binary-searches) | binary search | study | 📌 binary search the index of nearest item  |
 | 206 | [Paint House](/leetcode/256-paint-house ) | dynamic programming | [leetcode 256](https://leetcode.com/problems/paint-house/) | 1st O(2^n) TLE.📌2nd O(n) |
-| 206 | [House Robber](/leetcode/198-house-robber ) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | 📌 1st O(n) space. 2nd O(1) space |
+| 206 | [House Robber](/leetcode/198-house-robber ) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | 📌 1st O(n) space. 2nd O(1) space. 3rd concise. 4rd follow-up: print path |
