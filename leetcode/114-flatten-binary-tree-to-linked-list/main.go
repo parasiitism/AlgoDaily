@@ -41,6 +41,37 @@ func flatten(root *TreeNode) {
 	}
 }
 
+/*
+	2nd approach: recursion
+	- basically we save the item in an post-order sequence
+	- and then append the prev item to the right child and set left child as null
+	- recursively
+	- see idea.jpeg
+
+	learned from others:
+	- https://www.youtube.com/watch?v=NHdrzNpt1ZI
+	- https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/36977/My-short-post-order-traversal-Java-solution-for-share
+
+	Time    O(n)
+	Space   O(n)
+	4 ms, faster than 100.00%
+*/
+func flatten1(root *TreeNode) {
+	var prev *TreeNode
+	var helper func(node *TreeNode)
+	helper = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		helper(node.Right)
+		helper(node.Left)
+		node.Right = prev
+		node.Left = nil
+		prev = node
+	}
+	helper(root)
+}
+
 func main() {
 
 }
