@@ -486,3 +486,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 207 | [Random Pick Index](/leetcode/398-random-pick-index) | binary search | [leetcode 398](https://leetcode.com/problems/random-pick-index/) | ⭐️lower bound binary search |
 | 207 | [Random Pick with Weight](/leetcode/528-random-pick-with-weight) | binary search | [leetcode 528](https://leetcode.com/problems/random-pick-with-weight/) | ⭐️equal or smaller than binary search |
 | 207 | [Search Insert Position](/leetcode/35-search-insert-position) | binary search | [leetcode 35](https://leetcode.com/problems/search-insert-position/) | ⭐️lower bound binary search |
+| 207 | [Linked List Random Node](/leetcode/382-linked-list-random-node) | linked list | [leetcode 382](https://leetcode.com/problems/linked-list-random-node/) | 1st naive O(n) |
