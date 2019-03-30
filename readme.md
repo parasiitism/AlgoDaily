@@ -483,4 +483,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 206 | [House Robber](/leetcode/198-house-robber ) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | 📌 1st O(n) space. 2nd O(1) space. 3rd concise. 4rd follow-up: print path |
 | 206 | [House Robber II](/leetcode/213-house-robber ) | dynamic programming | [leetcode 213](https://leetcode.com/problems/house-robber-ii/) | 📌 follow-up of I) |
 | 207 | [House Robber III](/leetcode/337-house-robber-iii ) | recusion | [leetcode 337](https://leetcode.com/problems/house-robber-iii/) | 📌traversal: tree, recursion, concept: dynamic programming |
-| 207 | [Random Pick Index](/leetcode/398-random-pick-index) | binary search | [leetcode 398](https://leetcode.com/problems/random-pick-index/) | ⭐️|
+| 207 | [Random Pick Index](/leetcode/398-random-pick-index) | binary search | [leetcode 398](https://leetcode.com/problems/random-pick-index/) | ⭐️lower bound binary search |
+| 207 | [Random Pick with Weight](/leetcode/528-random-pick-with-weight) | binary search | [leetcode 528](https://leetcode.com/problems/random-pick-with-weight/) | ⭐️equal or smaller than binary search |
