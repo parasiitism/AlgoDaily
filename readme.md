@@ -482,3 +482,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 206 | [Paint House II](/leetcode/265-paint-house-ii ) | dynamic programming | [leetcode 265](https://leetcode.com/problems/paint-house-ii/) | 📌2nd O(n) follow-up of I), very similar |
 | 206 | [House Robber](/leetcode/198-house-robber ) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | 📌 1st O(n) space. 2nd O(1) space. 3rd concise. 4rd follow-up: print path |
 | 206 | [House Robber II](/leetcode/213-house-robber ) | dynamic programming | [leetcode 213](https://leetcode.com/problems/house-robber-ii/) | 📌 follow-up of I) |
+| 207 | [House Robber III](/leetcode/337-house-robber-iii ) | recusion | [leetcode 337](https://leetcode.com/problems/house-robber-iii/) | 📌traversal: tree, recursion, concept: dynamic programming |
