@@ -7,14 +7,13 @@ import sys
 print("------------ start try bisect ------------")
 
 a = [3, 5, 7, 7, 7, 9, 11]
-print(bisect.bisect_left(a, 7))
-print(bisect.bisect_right(a, 7))
+print(bisect.bisect_left(a, 7))  # 2
+print(bisect.bisect_left(a, 6))  # 2
+print(bisect.bisect_left(a, 8))  # 5
+print(bisect.bisect_left(a, 2))  # 0
+print(bisect.bisect_left(a, 12))  # 7
 
-a = [10, 20, 30, 40]
-print(bisect.bisect_left(a, 30))
-print(bisect.bisect_right(a, 30))
-
-print(bisect.bisect(a, 18))
+# print(bisect.bisect_right(a, 7))
 
 print("------------ end try bisect ------------")
 
