@@ -487,3 +487,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 207 | [Random Pick with Weight](/leetcode/528-random-pick-with-weight) | binary search | [leetcode 528](https://leetcode.com/problems/random-pick-with-weight/) | ⭐️equal or smaller than binary search |
 | 207 | [Search Insert Position](/leetcode/35-search-insert-position) | binary search | [leetcode 35](https://leetcode.com/problems/search-insert-position/) | ⭐️lower bound binary search |
 | 207 | [Linked List Random Node](/leetcode/382-linked-list-random-node) | linked list | [leetcode 382](https://leetcode.com/problems/linked-list-random-node/) | 1st naive O(n)O(1), 2nd O(1)O(n), 📌 3rd reservoir sampling O(1)O(n) |
+| 207 | [Partition List](/leetcode/86-partition-list) | linked list | [leetcode 86](https://leetcode.com/problems/partition-list/) | 1st O(n)O(n) ⭐ 2nd O(n)O(n) be careful of the next pointer |
