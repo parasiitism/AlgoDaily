@@ -490,3 +490,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 207 | [Partition List](/leetcode/86-partition-list) | linked list | [leetcode 86](https://leetcode.com/problems/partition-list/) | 1st O(n)O(n) ⭐ 2nd O(n)O(n) be careful of the next pointer |
 | 207 | [Flatten Binary Tree to Linked List](/leetcode/114-flatten-binary-tree-to-linked-list) | tree, recursion | [leetcode 114](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | 1st O(2n), 📌2nd O(n) mind-blowing suggested solution |
 | 208 | [Sum of Left Leaves](/leetcode/404-sum-of-left-leaves) | tree, recursion | [leetcode 404](https://leetcode.com/problems/sum-of-left-leaves/) | 1st recursive dfs, 2nd iterative dfs, both O(n) |
+| 208 | [Binary Tree Zigzag Level Order Traversal](/leetcode/103-binary-tree-zigzag-level-order-traversal) | tree | [leetcode 103](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | 1st bfs O(n) |
