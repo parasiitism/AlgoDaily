@@ -491,3 +491,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 207 | [Flatten Binary Tree to Linked List](/leetcode/114-flatten-binary-tree-to-linked-list) | tree, recursion | [leetcode 114](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | 1st O(2n), 📌2nd O(n) mind-blowing suggested solution |
 | 208 | [Sum of Left Leaves](/leetcode/404-sum-of-left-leaves) | tree, recursion | [leetcode 404](https://leetcode.com/problems/sum-of-left-leaves/) | 1st recursive dfs, 2nd iterative dfs, both O(n) |
 | 208 | [Binary Tree Zigzag Level Order Traversal](/leetcode/103-binary-tree-zigzag-level-order-traversal) | tree | [leetcode 103](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | 1st bfs O(n) |
+| 208 | [3Sum Closest](/leetcode/16-3sum-closest) | binary search, 2pointers | [leetcode 16](https://leetcode.com/problems/3sum-closest/) | 1st binary search O(n^2). 2nd 2pointers O(n^2) |
