@@ -80,6 +80,7 @@ func findAbs(a int) int {
 	pair=0,3, sum = 12, diff=+2, right--
 	pair=0,2, sum = 8, diff=-2, left++
 	pair=1,2, sum = 9, diff=-1, cannot move any pointers
+	...
 
 	Time		O(n^2)
 	Space		O(1)
