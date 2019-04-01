@@ -76,14 +76,15 @@ class Solution(object):
 
             # find position where outgoing element should be removed from
             if i >= k:
-                # O(n) remove
+                # O(k) remove
                 # window.remove(nums[i-k])
 
-                # O(logn) remove with binary search
+                # O(logk) remove with binary search
                 idx = bisect.bisect_left(window, nums[i - k])
                 window.pop(idx)
 
             # maintain the sorted invariant while inserting incoming element with binary search
+            # O(logk)
             bisect.insort(window, nums[i])
 
             # find the medians
