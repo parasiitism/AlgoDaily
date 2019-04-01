@@ -6,9 +6,11 @@ package main
 - Please do not use the built-in HashSet library.
 */
 
-// naive approach 1:
-// just based on the size give by the requirement LOL
-// and it works tho it just beats 6.9%
+/*
+ naive approach 1:
+ just based on the size give by the requirement LOL
+ and it works tho it just beats 6.9%
+*/
 type MyHashSet struct {
 	Arr [1000000]bool
 }
@@ -31,10 +33,12 @@ func (this *MyHashSet) Contains(key int) bool {
 	return this.Arr[key]
 }
 
-// naive approach 2:
-// i saw this on Discussion
-// actually it makes no sense cox it just transforms the 1D array to a 2D array
-// beats 51.72%
+/*
+	approach 2:
+	i saw this on Discussion
+	actually it makes no sense cox it just transforms the 1D array to a 2D array
+ 	beats 51.72%
+*/
 type MyHashSet1 struct {
 	Arr [1000][1000]bool
 }
