@@ -58,7 +58,7 @@ class Solution(object):
             idxToRemove = bisect.bisect_left(window, targetToRemove)
             window.remove(idxToRemove)
             # O(logk) to add the current item to a correct place in the window
-            idxToAdd = bisect.bisect_right(window, nums[i])
+            idxToAdd = bisect.bisect_left(window, nums[i])
             window.insert(idxToAdd, nums[i])
             # last item in the window is the max
             res.append(window[-1])
