@@ -85,6 +85,7 @@ class Solution(object):
 
             # maintain the sorted invariant while inserting incoming element with binary search
             # O(logk)
+            # or x = bisect.bisect_right(window, nums[i]) and window.insert(x, nums[i])
             bisect.insort(window, nums[i])
 
             # find the medians
