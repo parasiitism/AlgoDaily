@@ -5,12 +5,12 @@
 
     however, there is a limition of total number of items inserted into the hashtable
 
-     624 ms beats 17.74%
+    828 ms beats 13.40%
     1apr2019
 """
 
 
-class MyHashSet(object):
+class MyHashMap(object):
 
     def __init__(self):
         """
@@ -20,22 +20,32 @@ class MyHashSet(object):
         # each bucket has 1000 slots
         self.buckets = []
         for i in range(1000):
-            self.buckets.append(1000*[False])
+            self.buckets.append(1000*[-1])
 
     def _getBucket(self, num):
-        return num/1000
+        return num / 1000
 
     def _getSlot(self, num):
         return num % 1000
 
-    def add(self, key):
+    def put(self, key, value):
         """
         :type key: int
         :rtype: None
         """
         b = self._getBucket(key)
         s = self._getSlot(key)
-        self.buckets[b][s] = True
+        self.buckets[b][s] = value
+
+    def get(self, key):
+        """
+        Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key
+        :type key: int
+        :rtype: int
+        """
+        b = self._getBucket(key)
+        s = self._getSlot(key)
+        return self.buckets[b][s]
 
     def remove(self, key):
         """
@@ -44,17 +54,7 @@ class MyHashSet(object):
         """
         b = self._getBucket(key)
         s = self._getSlot(key)
-        self.buckets[b][s] = False
-
-    def contains(self, key):
-        """
-        Returns true if this set contains the specified element
-        :type key: int
-        :rtype: bool
-        """
-        b = self._getBucket(key)
-        s = self._getSlot(key)
-        return self.buckets[b][s]
+        self.buckets[b][s] = -1
 
 
 """
@@ -69,20 +69,21 @@ class MyHashSet(object):
 
 class ListNode(object):
 
-    def __init__(self, key):
+    def __init__(self, key, val):
         self.key = key
+        self.val = val
         self.next = None
 
 
-class MyHashSet(object):
+class MyHashMap(object):
 
     def __init__(self):
-        self.buckets = 1000*[ListNode(-1)]
+        self.buckets = 1000*[ListNode(-1, None)]
 
     def _getBucket(self, num):
         return self.buckets[int(num/1000)]
 
-    def add(self, key):
+    def put(self, key, value):
         """
         :type key: int
         :rtype: None
@@ -92,10 +93,24 @@ class MyHashSet(object):
         cur = prev.next
         while cur != None:
             if cur.key == key:
+                cur.val = value
                 return
             prev = cur
             cur = cur.next
-        prev.next = ListNode(key)
+        prev.next = ListNode(key, value)
+
+    def get(self, key):
+        """
+        Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key
+        :type key: int
+        :rtype: int
+        """
+        head = self._getBucket(key)
+        cur = head.next
+        while cur != None:
+            if cur.key == key:
+                return cur.val
+            cur = cur.next
 
     def remove(self, key):
         """
@@ -111,28 +126,15 @@ class MyHashSet(object):
             prev = cur
             cur = cur.next
 
-    def contains(self, key):
-        """
-        Returns true if this set contains the specified element
-        :type key: int
-        :rtype: bool
-        """
-        head = self._getBucket(key)
-        cur = head.next
-        while cur != None:
-            if cur.key == key:
-                return True
-            cur = cur.next
-        return False
 
-
-hs = MyHashSet()
-hs.add(1)
-hs.add(2)
-hs.add(3)
-print(hs.contains(1))
-print(hs.contains(2))
-print(hs.contains(3))
-hs.add(2)
+hs = MyHashMap()
+hs.put(1, 1)
+hs.put(2, 2)
+hs.put(3, 3)
+print(hs.get(1))
+print(hs.get(2))
+print(hs.get(3))
+hs.put(2, 20)
+print(hs.get(2))
 hs.remove(2)
-print(hs.contains(2))
+print(hs.get(2))
