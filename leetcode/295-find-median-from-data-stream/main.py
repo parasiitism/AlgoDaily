@@ -176,11 +176,10 @@ class MedianFinder(object):
 # obj.addNum(6)
 # print(obj.findMedian())
 
-
 """
     3rd approach: 2 heaps
-    - minheap for right half
     - maxheap for left half
+    - minheap for right half
     - therefore the mean will always be the max of maxheap and the min of minheap
     - https://leetcode.com/articles/find-median-from-data-stream/
 
@@ -191,32 +190,31 @@ class MedianFinder(object):
 class MedianFinder(object):
 
     def __init__(self):
-        # for right half
-        self.maxheap = []
         # for left half
+        self.maxheap = []
+        # for right half
         self.minheap = []
 
     def addNum(self, num):
         """
-        O(5*logn)
+        O(3*logn)
         """
-        # first add to minheap
-        heapq.heappush(self.minheap, num)
-        # pop the right half and add the min to the left half
-        m = heapq.heappop(self.minheap)
-        heapq.heappush(self.maxheap, -m)
-        # if left half length is larger, put the max item back to right half
-        if len(self.minheap) < len(self.maxheap):
-            n = heapq.heappop(self.maxheap)
-            heapq.heappush(self.minheap, -n)
+        if len(self.maxheap) == len(self.minheap):
+            heapq.heappush(self.maxheap, -num)
+            largest = heapq.heappop(self.maxheap)
+            heapq.heappush(self.minheap, -largest)
+        else:
+            heapq.heappush(self.minheap, num)
+            least = heapq.heappop(self.minheap)
+            heapq.heappush(self.maxheap, -least)
 
     def findMedian(self):
         """
         O(1)
         """
-        if len(self.minheap) != len(self.maxheap):
+        if len(self.maxheap) != len(self.minheap):
             return self.minheap[0]
-        return (self.minheap[0] - self.maxheap[0])/2.0
+        return (-self.maxheap[0] + self.minheap[0])/2.0
 
 
 obj = MedianFinder()
@@ -257,3 +255,6 @@ obj.addNum(6)
 print(obj.maxheap)
 print(obj.minheap)
 print(obj.findMedian())
+
+
+print("========================================")
