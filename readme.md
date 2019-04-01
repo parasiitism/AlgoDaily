@@ -204,7 +204,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 134 | [Rectangle Area](/leetcode/223-rectangle-area) | math | [leetode 223](https://leetcode.com/problems/rectangle-area/) | i hate this kind of questions |
 | 134 | [Minimum Absolute Difference in BST](/leetcode/530-minimum-absolute-difference-in-bst) | BST | [leetode 530](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | |
 | 134 | [Find Bottom Left Tree Value](/leetcode/513-find-bottom-left-tree-value) | tree | [leetode 513](https://leetcode.com/problems/find-bottom-left-tree-value/) | both bfs & dfs run 12ms and beat 100% |
-| 134 | [Path Sum III](/leetcode/437-path-sum-iii) | tree | [leetode 437](https://leetcode.com/problems/find-bottom-left-tree-value/) | 1st LTE. 2nd 24ms beats 28.57% |
+| 134 | [Path Sum III](/leetcode/437-path-sum-iii) | tree | [leetode 437](https://leetcode.com/problems/find-bottom-left-tree-value/) | 1st LTE. 2nd recursive dfs. 3rd iterative dfs |
 | 135 | [Find Pivot Index](/leetcode/724-find-pivot-index) | array, math | [leetode 724](https://leetcode.com/problems/find-pivot-index/) | i failed to come up with a correct approach, learned from others |
 | 135 | [Largest Number At Least Twice of Others](/leetcode/747-largest-number-at-least-twice-of-others) | array, sort | [leetode 747](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | 1st O(nlogn), 2nd O(n) |
 | 135 | [Plus One](/leetcode/66-plus-one) | array | [leetode 66](https://leetcode.com/problems/plus-one/) | should be just one solution |
