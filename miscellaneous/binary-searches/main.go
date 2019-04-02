@@ -199,6 +199,9 @@ func endingPosHelper(arr []int, target, min, max int) int {
 	Upper Bound Binary Search
 	1233345, search for 3
 	ans = index 5 where the value is 4
+
+	when the target is larger or equal to nums[i],
+	left = mean + 1 because we are looking for the value that larger than target
 */
 func UpperBoundBinarySearch(arr []int, target int) int {
 	min := 0
