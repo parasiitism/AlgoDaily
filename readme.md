@@ -499,3 +499,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 210 | [Surrounded Regions](/leetcode/130-surrounded-regions) | graph | [leetcode 130](https://leetcode.com/problems/surrounded-regions/) | 1st O(2n) |
 | 210 | [Island Perimeter](/leetcode/463-island-perimeter) | graph | [leetcode 463](https://leetcode.com/problems/island-perimeter/) | 1st dfs. 2nd bfs. 2 followups |
 | 210 | [Vertical Order Traversal of a Binary Tree](/leetcode/987-vertical-order-traversal-of-a-binary-tree) | tree, hashtable | [leetcode 463](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | 1st bfs, 2nd bfs. takeaway: python sorted(nums,cmp=f), go sort.Slice |
+| 210 | [Reorganize String](/leetcode/767-reorganize-string) | heap, hashtable | [leetcode 767](https://leetcode.com/problems/reorganize-string/) | 1st hashtable + heap |
