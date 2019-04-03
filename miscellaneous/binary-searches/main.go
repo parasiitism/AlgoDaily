@@ -116,6 +116,10 @@ func CommonBinarySearchNoSmallerThanTarget(arr []int, target int) int {
 	Starting Position Binary Search, also known as Lower Bound Binary Search
 	1233345, search for 3
 	ans = index 2
+
+	when the target is <= nums[i],
+	right = mean because we are looking for the value that equal or less than the target
+	therefore we must maintain the our target values within our search
 */
 func StartingPositionBinarySearch(arr []int, target int) int {
 	min := 0
@@ -154,6 +158,10 @@ func startPosHelper(arr []int, target, min, max int) int {
 	Ending Position Binary Search = upper bound binary search - 1
 	1233345, search for 3
 	ans = index 4
+
+	when the target is >= nums[i],
+	left = mean because we are looking for the value that equal or larger than the target
+	therefore we must maintain our target values within our search
 */
 func EndingPositionBinarySearch(arr []int, target int) int {
 	min := 0
@@ -200,8 +208,9 @@ func endingPosHelper(arr []int, target, min, max int) int {
 	1233345, search for 3
 	ans = index 5 where the value is 4
 
-	when the target is larger or equal to nums[i],
-	left = mean + 1 because we are looking for the value that larger than target
+	when the target is >= nums[i],
+	left = mean + 1 because we are looking for the value that larger than the target,
+	we dont need to maintain the target values within our search
 */
 func UpperBoundBinarySearch(arr []int, target int) int {
 	min := 0
