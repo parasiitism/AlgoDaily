@@ -23,6 +23,7 @@ func reorderList(head *ListNode) {
 	if head == nil {
 		return
 	}
+	// copy the nodes to a stack
 	total := 0
 	cur := head
 	stack := []*ListNode{}
@@ -31,6 +32,7 @@ func reorderList(head *ListNode) {
 		cur = cur.Next
 		total++
 	}
+	// insert the pop item from stack between the current node and the next node
 	count := 1
 	cur = head
 	for count+1 < total {
@@ -41,6 +43,7 @@ func reorderList(head *ListNode) {
 		cur = temp
 		count += 2
 	}
+	// set the cur.next to nil
 	if count == total {
 		cur.Next = nil
 	} else if cur.Next != nil {
