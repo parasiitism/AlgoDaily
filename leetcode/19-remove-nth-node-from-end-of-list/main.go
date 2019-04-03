@@ -57,7 +57,7 @@ func removeNthFromEnd1(head *ListNode, n int) *ListNode {
 // 2 pointers: the gap is the n such that when fast reaches to the end, slow.next is the target
 // time		O(n+target)
 // space 	O(1)
-// baets 19.39% i dont get it LOL
+// beats 19.39% i dont get it LOL
 func removeNthFromEnd2(head *ListNode, n int) *ListNode {
 	dump := &ListNode{0, head}
 	fast := dump

@@ -5,6 +5,15 @@ class ListNode(object):
         self.next = None
 
 
+"""
+    2 pointers: the gap is the n such that when fast reaches to the end, slow.next is the target
+
+    Time		O(n+target)
+    Space       O(1)
+    24 ms, faster than 72.46%
+"""
+
+
 class Solution(object):
     def removeNthFromEnd(self, head, n):
         """
