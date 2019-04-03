@@ -99,6 +99,7 @@ func addTwoNumbers1(l1 *ListNode, l2 *ListNode) *ListNode {
 	cur := dump
 	// append left and right if both are not null
 	for cur1 != nil || cur2 != nil {
+		// extract numbers
 		val1 := 0
 		if cur1 != nil {
 			val1 = cur1.Val
@@ -107,10 +108,12 @@ func addTwoNumbers1(l1 *ListNode, l2 *ListNode) *ListNode {
 		if cur2 != nil {
 			val2 = cur2.Val
 		}
+		// add numbers
 		sum := val1 + val2 + carry
 		newNode := &ListNode{sum % 10, nil}
 		carry = sum / 10
 		cur.Next = newNode
+		// to the next
 		cur = cur.Next
 		if cur1 != nil {
 			cur1 = cur1.Next
