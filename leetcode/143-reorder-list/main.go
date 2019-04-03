@@ -51,6 +51,72 @@ func reorderList(head *ListNode) {
 	}
 }
 
+/*
+	1st approach: stack
+	1. find the half point
+	2. reverse the 2nd half
+	3. merge 2 lists
+
+	Time	O(3n)
+	Space	O(1)
+	8 ms, faster than 100.00%
+*/
+func reorderList1(head *ListNode) {
+	if head == nil {
+		return
+	}
+	// find the half point
+	var parent *ListNode
+	a := head
+	b := head
+	for b != nil && b.Next != nil {
+		parent = a
+		a = a.Next
+		b = b.Next.Next
+	}
+	if parent == nil {
+		return
+	}
+	parent.Next = nil
+	// reverse the 2nd half
+	reversed2nd := reverseList(a)
+	// merge 2 lists
+	merge2nd(head, reversed2nd)
+}
+
+func reverseList(head *ListNode) *ListNode {
+	if head == nil {
+		return nil
+	}
+	cur := head
+	for head.Next != nil { // since we are replacing the head.next, the loop should end when there is no next
+		temp := head.Next          // the middle node
+		head.Next = head.Next.Next // or head.Next.Next
+		temp.Next = cur            // put the middle node in front of cur
+		cur = temp                 // assign cur as head
+	}
+	return cur
+}
+
+func merge2nd(a *ListNode, b *ListNode) {
+	curA := a
+	curB := b
+	for curA != nil {
+		nextA := curA.Next
+		nextB := curB.Next
+
+		curA.Next = curB
+		// since len(a) <= len(b)
+		if nextA == nil {
+			break
+		}
+		curB.Next = nextA
+
+		curA = nextA
+		curB = nextB
+	}
+}
+
 // helpers
 func arr2list(arr []int) *ListNode {
 	dump := &ListNode{0, nil}
@@ -90,5 +156,27 @@ func main() {
 
 	a = arr2list([]int{1, 2, 3})
 	reorderList(a)
+	printList(a)
+
+	fmt.Println("----------------------------------------")
+
+	a = arr2list([]int{1, 2, 3, 4, 5})
+	reorderList1(a)
+	printList(a)
+
+	a = arr2list([]int{1, 2, 3, 4, 5, 6})
+	reorderList1(a)
+	printList(a)
+
+	a = arr2list([]int{1})
+	reorderList1(a)
+	printList(a)
+
+	a = arr2list([]int{1, 2})
+	reorderList1(a)
+	printList(a)
+
+	a = arr2list([]int{1, 2, 3})
+	reorderList1(a)
 	printList(a)
 }

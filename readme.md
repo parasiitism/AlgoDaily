@@ -503,4 +503,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 211 | [Mean Stack](/miscellaneous/mean-stack) | binary search, linked list | glassdoor | 📌O(logn) |
 | 211 | [Middle Stack](/miscellaneous/middle-stack) | linked list | glassdoor | 📌O(1) for all push, pop, top, peekMiddle, popMiddle |
 | 211 | [Gas Station](/leetcode/134-gas-station) | greedy | [leetcode 134](https://leetcode.com/problems/gas-station/) | 1st O(n^2). ⭐️2nd O(n) |
-| 211 | [Reorder List](/leetcode/143-reorder-list) | stack, linked list | [leetcode 143](https://leetcode.com/problems/reorder-list/) | 1st stack O(2n) |
+| 211 | [Reorder List](/leetcode/143-reorder-list) | stack, linked list | [leetcode 143](https://leetcode.com/problems/reorder-list/) | 1st stack O(2n) ⭐️ 2nd linked list reversal |
