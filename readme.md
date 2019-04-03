@@ -500,3 +500,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 210 | [Vertical Order Traversal of a Binary Tree](/leetcode/987-vertical-order-traversal-of-a-binary-tree) | tree, hashtable | [leetcode 463](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | 1st bfs, 2nd bfs. takeaway: python sorted(nums,cmp=f), go sort.Slice |
 | 210 | [Reorganize String](/leetcode/767-reorganize-string) | heap, hashtable | [leetcode 767](https://leetcode.com/problems/reorganize-string/) | 1st hashtable + heap |
 | 210 | [Max Stack](/leetcode/716-max-stack) | binary search, linked list | [leetcode 716](https://leetcode.com/problems/max-stack/) | 1st O(n) 📌2nd O(logn) |
+| 211 | [Gas Station](/leetcode/134-gas-station) | greedy | [leetcode 134](https://leetcode.com/problems/gas-station/) | 1st O(n^2) |
