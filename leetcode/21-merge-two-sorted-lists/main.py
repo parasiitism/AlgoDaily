@@ -1,6 +1,10 @@
 """
-  Merge two sorted linked lists and return it as a new list. 
-  The new list should be made by splicing together the nodes of the first two lists.
+    Merge two sorted linked lists and return it as a new list. 
+    The new list should be made by splicing together the nodes of the first two lists.
+
+    Time    O(A+B)
+    Space   O(A+B)
+    28 ms, faster than 64.53%
 """
 
 
@@ -28,12 +32,8 @@ class Solution(object):
             cur = cur.next
         if l1 != None:
             cur.next = l1
-            l1 = l1.next
-            cur = cur.next
         if l2 != None:
             cur.next = l2
-            l2 = l2.next
-            cur = cur.next
         return dumphead.next
 
 
