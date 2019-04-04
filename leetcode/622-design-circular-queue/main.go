@@ -26,6 +26,8 @@ func (this *MyCircularQueue) EnQueue(value int) bool {
 	if this.IsFull() {
 		return false
 	}
+	// very important
+	// when we create a new entity, move our to 0
 	if this.IsEmpty() {
 		this.Head = 0
 	}
