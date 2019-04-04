@@ -507,3 +507,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 211 | [Plus One Linked List](/leetcode/369-plus-one-linked-list) | stack, linked list | [leetcode 143](https://leetcode.com/problems/plus-one-linked-list/) | 1st stack O(2n) ⭐️ 2nd O(3n) linked list reversal |
 | 212 | [Robot Room Cleaner](/leetcode/489-robot-room-cleaner) | graph | [leetcode 489](https://leetcode.com/problems/robot-room-cleaner/) | ⭐️dfs |
 | 212 | [Fruit Into Baskets](/leetcode/904-fruit-into-baskets) | 2pointers | [leetcode 489](https://leetcode.com/problems/robot-room-cleaner/) | ⭐️ sliding window |
+| 212 | [Backspace String Compare](/leetcode/844-backspace-string-compare) | stack | [leetcode 489](https://leetcode.com/problems/backspace-string-compare/) |  |
