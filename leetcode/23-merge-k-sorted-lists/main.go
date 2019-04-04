@@ -50,7 +50,7 @@ func mergeKLists0(lists []*ListNode) *ListNode {
 	- idea like merge sort
 	Time	O(N)
 	Space	O(N)
-	200ms beats 25%
+	96 ms, faster than 36.89%
 */
 func mergeKLists(lists []*ListNode) *ListNode {
 	res := &ListNode{0, nil}
@@ -70,20 +70,55 @@ func mergeKLists(lists []*ListNode) *ListNode {
 			}
 			cur = cur.Next
 		}
-		for curA != nil {
+		if curA != nil {
 			cur.Next = curA
-			curA = curA.Next
-			cur = cur.Next
 		}
-		for curB != nil {
+		if curB != nil {
 			cur.Next = curB
-			curB = curB.Next
-			cur = cur.Next
 		}
 		// append intermediate result to result
 		res.Next = dump.Next
 	}
 	return res.Next
+}
+
+/*
+	2nd approach: reuse the sorted 2 lists
+
+	100 ms, faster than 35.66%
+*/
+func mergeKLists1(lists []*ListNode) *ListNode {
+	dump := &ListNode{0, nil}
+	for i := 0; i < len(lists); i++ {
+		temp := mergeTwoLists(dump.Next, lists[i])
+		dump.Next = temp
+	}
+	return dump.Next
+}
+
+func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+	curA := l1
+	curB := l2
+	dump := &ListNode{0, nil}
+	cur := dump
+	for curA != nil && curB != nil {
+		if curA.Val < curB.Val {
+			cur.Next = curA
+			curA = curA.Next
+		} else {
+			cur.Next = curB
+			curB = curB.Next
+		}
+		cur = cur.Next
+	}
+	if curA != nil {
+		cur.Next = curA
+	}
+	if curB != nil {
+		cur.Next = curB
+	}
+	// append intermediate result to result
+	return dump.Next
 }
 
 func printList(node *ListNode) {
