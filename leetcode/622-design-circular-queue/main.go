@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+/*
+	the point is to use a fixed length array
+*/
+
 type MyCircularQueue struct {
 	Head  int
 	Tail  int
