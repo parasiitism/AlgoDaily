@@ -508,3 +508,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 212 | [Robot Room Cleaner](/leetcode/489-robot-room-cleaner) | graph | [leetcode 489](https://leetcode.com/problems/robot-room-cleaner/) | ⭐️dfs |
 | 212 | [Fruit Into Baskets](/leetcode/904-fruit-into-baskets) | 2pointers | [leetcode 489](https://leetcode.com/problems/robot-room-cleaner/) | ⭐️ sliding window |
 | 212 | [Backspace String Compare](/leetcode/844-backspace-string-compare) | stack | [leetcode 489](https://leetcode.com/problems/backspace-string-compare/) |  |
+| 212 | [Design Circular Deque](/leetcode/641-design-circular-deque) | queue, linked list | [leetcode 641](https://leetcode.com/problems/design-circular-deque/)| 1st array. 2nd linked list |
