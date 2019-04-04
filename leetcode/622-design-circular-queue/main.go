@@ -13,7 +13,8 @@ type MyCircularQueue struct {
 
 /** Initialize your data structure here. Set the size of the queue to be k. */
 func Constructor(k int) MyCircularQueue {
-	return MyCircularQueue{-1, -1, k, []int{}}
+	fixedNums := make([]int, k)
+	return MyCircularQueue{-1, -1, k, fixedNums}
 }
 
 /** Insert an element into the circular queue. Return true if the operation is successful. */
@@ -25,11 +26,7 @@ func (this *MyCircularQueue) EnQueue(value int) bool {
 		this.Head = 0
 	}
 	this.Tail = (this.Tail + 1) % this.Size
-	if this.Tail == len(this.Queue) {
-		this.Queue = append(this.Queue, value)
-	} else {
-		this.Queue[this.Tail] = value
-	}
+	this.Queue[this.Tail] = value
 	return true
 }
 
@@ -38,11 +35,16 @@ func (this *MyCircularQueue) DeQueue() bool {
 	if this.IsEmpty() {
 		return false
 	}
+	// for DeQueue, we dont need to care about the value on nums[i] after we i++,
+	// becos we will override it later
+
+	// it means there is only one value in the queue
 	if this.Head == this.Tail {
 		this.Head = -1
 		this.Tail = -1
 		return true
 	}
+	// move forward our head
 	this.Head = (this.Head + 1) % this.Size
 	return true
 }
