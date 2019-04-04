@@ -32,31 +32,33 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 	- replace thr nums1 from backward with larger values iteratively
 	Time	O(m+n)
 	Space	O(1)
-	0ms, no beats
+	0 ms, faster than 100.00%
 */
 func merge1(nums1 []int, m int, nums2 []int, n int) {
-	m = m - 1
-	n = n - 1
-	i := len(nums1) - 1
-	for m >= 0 && n >= 0 {
-		if nums1[m] > nums2[n] {
-			nums1[i] = nums1[m]
-			i--
-			m--
+	p1 := m - 1
+	p2 := n - 1
+	cur := len(nums1) - 1
+	for p1 >= 0 && p2 >= 0 {
+		if nums1[p1] > nums2[p2] {
+			nums1[cur] = nums1[p1]
+			cur--
+			p1--
 		} else {
-			nums1[i] = nums2[n]
-			i--
-			n--
+			nums1[cur] = nums2[p2]
+			cur--
+			p2--
 		}
 	}
 	// be careful:
 	// it is possible that m is negative but there are still elements in the nums2
 	// we should put all the items from the rest of the nums into nums1
-	for n >= 0 {
-		nums1[i] = nums2[n]
-		i--
-		n--
+	for p2 >= 0 {
+		nums1[cur] = nums2[p2]
+		cur--
+		p2--
 	}
+	// if p2 == -1, it means that we have merged all the nums2 into nums2,
+	// so we dont really need to check if p1 >= 0
 }
 
 func main() {
