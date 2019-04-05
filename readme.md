@@ -510,3 +510,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 212 | [Backspace String Compare](/leetcode/844-backspace-string-compare) | stack | [leetcode 489](https://leetcode.com/problems/backspace-string-compare/) |  |
 | 212 | [Design Circular Deque](/leetcode/641-design-circular-deque) | queue, linked list | [leetcode 641](https://leetcode.com/problems/design-circular-deque/)| 1st array. 2nd linked list. 📌3rd classic 2 pointers approach using a fixed length array |
 | 213 | [Keys and Rooms](/leetcode/841-keys-and-rooms) | graph | [leetcode 841](https://leetcode.com/problems/keys-and-rooms/)| 1st iterative dfs. 2nd recursive dfs |
+| 213 | [Flatten 2D Vector](/leetcode/251-flatten-2d-vector) | 2pointers | [leetcode 251](https://leetcode.com/problems/flatten-2d-vector/)| 1st unfolding. 2nd 2pointers |
