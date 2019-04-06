@@ -516,3 +516,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 214 | [Foregone Solution](/gcj/2019/qualification/a.py) | math | codejam | qualification round Q1 |
 | 214 | [Your Can Go Your Own Way](/gcj/2019/qualification/b.py) | graph | codejam | qualification round Q2 |
 | 214 | [Crytopangrams](/gcj/2019/qualification/c.py) | math | codejam | qualification round Q3. only works on sample testcases...😢 |
+| 215 | [Crytopangrams](/gcj/2019/qualification/c.py) | math, bsearch, hash | codejam | qualification round Q3. I finally made it works ✌🏻 |

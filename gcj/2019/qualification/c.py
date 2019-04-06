@@ -41,48 +41,36 @@ def bsearch(nums, target):
     return -1
 
 
+def findGcd(a, b):
+    if b == 0:
+        return a
+    return findGcd(b, a % b)
+
+
 def cryptopangram(n, nums):
     primes = getPrimes(n+1)
     alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    # find the first and second numbers
-    if len(nums) == 0:
-        return ""
-    first = nums[0]
-    i = 0
-    buffero = 0
-    while i < len(primes):
-        buffero = float(first/float(primes[i]))
-        if buffero != int(buffero):
-            i += 1
-        else:
-            buffero = int(buffero)
-            break
+    candidates = (len(nums)+1)*[0]
+    for i in range(1, len(nums)):
+        if nums[i] == nums[i-1]:
+            continue
+        candidates[i] = findGcd(nums[i], nums[i-1])
+        j = i-1
+        while j >= 0 and candidates[j] == 0:
+            candidates[j] = nums[j]/candidates[j+1]
+            j -= 1
+        j = i+1
+        while j <= len(nums) and candidates[j] == 0:
+            candidates[j] = nums[j-1]/candidates[j-1]
+            j += 1
+
+    # print(candidates)
 
     indeces = []
-    # ps = []
-    firstNum = primes[i]
-
-    # get the index of first number in prime numbers
-    firstIdx = bsearch(primes, firstNum)
-    if firstIdx > -1:
-        indeces.append(firstIdx)
-        # ps.append(firstNum)
-
-    # get the index of second number in prime numbers
-    bufferIdx = bsearch(primes, buffero)
-    if bufferIdx > -1:
-        indeces.append(bufferIdx)
-        # ps.append(buffero)
-
-    # start to find the upcoming prime numbers
-    for i in range(1, len(nums)):
-        num = nums[i]
-        buffero = int(num/buffero)
-        # ps.append(buffero)
-        bufferIdx = bsearch(primes, buffero)
-        if bufferIdx > -1:
-            indeces.append(bufferIdx)
+    for can in candidates:
+        pIdx = bsearch(primes, can)
+        indeces.append(pIdx)
 
     # sort the seen prime numbers
     clone = indeces[:]
@@ -108,3 +96,22 @@ for i in range(1, t + 1):
         print("Case #{}: {}".format(i, c))
     except:
         print("Case #{}: {}".format(i, ""))
+
+"""
+corner cases:
+6 10 15
+3,2 2,5 5,3
+BACB
+
+6 6 9
+3,2 2,3 3,3
+BABB
+
+6 6 6 9
+2,3 3,2 2,3 3,3
+BABB
+
+35 35 49 217
+7,5 5,7 7,7 7,31
+BABBC
+"""
