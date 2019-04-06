@@ -29,6 +29,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 - [project euler](https://projecteuler.net)
 - glassdoor
 - interviews
+- google code jam
 - ...
 
 #### Started on September 1st 2018
@@ -512,3 +513,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 213 | [Keys and Rooms](/leetcode/841-keys-and-rooms) | graph | [leetcode 841](https://leetcode.com/problems/keys-and-rooms/)| 1st iterative dfs. 2nd recursive dfs |
 | 213 | [Flatten 2D Vector](/leetcode/251-flatten-2d-vector) | 2pointers | [leetcode 251](https://leetcode.com/problems/flatten-2d-vector/)| 1st unfolding. 2nd 2pointers |
 | 213 | [Flatten Nested List Iterator](/leetcode/341-flatten-nested-list-iterator) | recursion | [leetcode 251](https://leetcode.com/problems/flatten-nested-list-iterator/)| 1st recursion |
+| 214 | [Foregone Solution](/gcj/a.py) | math | codejam | qualification round Q1 |
