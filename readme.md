@@ -513,5 +513,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 213 | [Keys and Rooms](/leetcode/841-keys-and-rooms) | graph | [leetcode 841](https://leetcode.com/problems/keys-and-rooms/)| 1st iterative dfs. 2nd recursive dfs |
 | 213 | [Flatten 2D Vector](/leetcode/251-flatten-2d-vector) | 2pointers | [leetcode 251](https://leetcode.com/problems/flatten-2d-vector/)| 1st unfolding. 2nd 2pointers |
 | 213 | [Flatten Nested List Iterator](/leetcode/341-flatten-nested-list-iterator) | recursion | [leetcode 251](https://leetcode.com/problems/flatten-nested-list-iterator/)| 1st recursion |
-| 214 | [Foregone Solution](/gcj/2019/a.py) | math | codejam | qualification round Q1 |
-| 214 | [Your Can Go Your Own Way](/gcj/2019/b.py) | graph | codejam | qualification round Q2 |
+| 214 | [Foregone Solution](/gcj/2019/qualification/a.py) | math | codejam | qualification round Q1 |
+| 214 | [Your Can Go Your Own Way](/gcj/2019/qualification/b.py) | graph | codejam | qualification round Q2 |
+| 214 | [Crytopangrams](/gcj/2019/qualification/c.py) | math | codejam | qualification round Q3. only works on sample testcases...😢 |
