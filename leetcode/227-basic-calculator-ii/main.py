@@ -2,6 +2,8 @@
     questions to ask:
     - any malformed expression? no
     - any other characters? only digit and +-*/ and space
+    - no negative numbers? yes
+    - all numbers are single digited? no, u might be given 12+34+5/6
 """
 
 """
@@ -105,14 +107,24 @@ print("-----")
 
 """
     2nd approach:
-    - use 1 stack
-    - 1 buffer for number(cos it might have more than one digit)
-    - 1 buffer for operator
-    - if th current character is an operator
+
+    The basic idea is to use a stack.
+    when we encounter, we do operation with the last item in the stack with the last operator and the current number
+    e.g. + 1 + 2 * 3 + ...
+    lastOp = *
+    cur = 3
+    stack = [1, 2]
+    when it reaches to the last +, we pop the 2, multipy with the current number and put it back to the stack => [1, 6]
+
+
+    1. use 1 stack
+    2. 1 buffer for number(cos it might have more than one digit)
+    3. 1 buffer for operator
+    4. if the current character is an operator
         1. operate the current number with the previous operator
         2. and put the result into the stack
         3. set the current character as the next operator
-    - sum up all the numbers in the stack to get the result
+    5. sum up all the numbers in the stack to get the result
 
     Time    O(2n)
     Space   O(n) the stack

@@ -2,7 +2,7 @@
     1st approach: recursion
     - the logic is similar to lc227 but we also do recursion when we see an open parenthesis
 
-    Time    O(n^2) because we have to find the correspondign closing parenthesis for recursion
+    Time    O(n^2) because we have to find the corresponding closing parenthesis for recursion
     Space   O(n)
     204 ms, faster than 7.41%
 """
@@ -92,6 +92,8 @@ class Solution(object):
         stack = []
         sign = '+'
         num = 0
+        # instead of iterating the string
+        # we dequeue the string because we want our to become smaller and smaller for the recursion
         while len(s) > 0:
             c = s.pop(0)
             if c.isdigit():
