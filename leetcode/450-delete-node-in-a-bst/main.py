@@ -12,7 +12,7 @@ class Solution(object):
         suggested solution 1: recursion
         case 1: 0 child: remove the current node from its parent
         case 2: 1 child: replace the current node with its child
-        case 3: 2 children: replace the current node with its in-order successor child, left most child in its right subtree
+        case 3: 2 children: replace the current node with its in-order successor child, min value child in its right subtree
 
         ref: https://www.youtube.com/watch?v=tT9-aCWD1Ag
 
@@ -53,7 +53,7 @@ class Solution(object):
         suggested solution 2: recursion
         case 1: 0 child: remove the current node from its parent
         case 2: 1 child: replace the current node with its child
-        case 3: 2 children: replace the current node with its in-order pedecessor child, right most child in its left subtree
+        case 3: 2 children: replace the current node with its in-order pedecessor child, max value child in its left subtree
 
         ref: https://www.youtube.com/watch?v=tT9-aCWD1Ag
 
