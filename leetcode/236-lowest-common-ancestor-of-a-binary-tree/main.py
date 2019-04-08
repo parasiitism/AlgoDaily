@@ -90,3 +90,21 @@ d.left = f
 print("ada")
 ans = Solution1().lowestCommonAncestor(a, d, e)
 print("ans=", ans.val)
+
+
+"""
+    followup: if u r given the values instead of nodes reference?
+"""
+
+
+class Solution2(object):
+    def lowestCommonAncestor(self, root, p, q):
+        if root == None or root.val == p or root.val == q:
+            return root
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+        if left == None:
+            return right
+        if right == None:
+            return left
+        return root
