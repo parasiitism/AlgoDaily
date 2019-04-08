@@ -7,12 +7,14 @@ import (
 	"strings"
 )
 
-// 1st attempt: hashtable
-// 1 pass for iterating the words and put the words into corresponding hashtable
-// 1 pass for grouping the values from hashtable into the result
-// Time O(n*klogk) n:number of words, k:length of charactors, klogk is due to the sorting
-// Space O(k*n)
-// beats 96.55%
+/*
+1st attempt: hashtable + sort
+1 pass for iterating the words and put the words into corresponding hashtable
+1 pass for grouping the values from hashtable into the result
+Time 		O(n*klogk) n:number of words, k:length of charactors, klogk is due to the sorting
+Space 	O(nk)
+beats 96.55%
+*/
 func groupAnagrams(strs []string) [][]string {
 	hash := make(map[string][]string)
 	for i := 0; i < len(strs); i++ {
