@@ -518,3 +518,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 214 | [Crytopangrams](/gcj/2019/qualification/c.py) | math | codejam | qualification round Q3. only works on sample testcases...😢 |
 | 215 | [Crytopangrams](/gcj/2019/qualification/c.py) | math, bsearch, hash | codejam | qualification round Q3. I finally made it works ✌🏻 |
 | 216 | [Nested List Weight Sum](/leetcode/339-nested-list-weight-sum) | graph | [leetcode 339](https://leetcode.com/problems/nested-list-weight-sum/) | 1st recursive dfs, 2nd iterative dfs |
+| 216 | [Calculate Maximum Call Stack's Size](/miscellaneous/max-callstack-size) | recursion | study | |
