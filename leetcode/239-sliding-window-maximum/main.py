@@ -44,22 +44,28 @@ class Solution(object):
 
         Time  O(nlogk)
         Space O(k)
-        TLE
+        180 ms, faster than 42.16%
         """
         if len(nums) < k or len(nums) == 0 or k <= 0:
             return []
         res = []
-        window = sorted(nums[:k])
-        res.pop(window[-1])
+        window = []
 
-        for i in range(k, len(nums)):
-            # O(logk) to remove the left most item with binary search
-            targetToRemove = nums[i-k]
-            idxToRemove = bisect.bisect_left(window, targetToRemove)
-            window.remove(idxToRemove)
+        for i in range(len(nums)):
+
+            # remove left most item starting from k+1 th
+            if i >= k:
+                # O(logk) to remove the left most item with binary search
+                targetToRemove = nums[i-k]
+                idxToRemove = bisect.bisect_left(window, targetToRemove)
+                window.pop(idxToRemove)
+
             # O(logk) to add the current item to a correct place in the window
             idxToAdd = bisect.bisect_left(window, nums[i])
             window.insert(idxToAdd, nums[i])
-            # last item in the window is the max
-            res.append(window[-1])
+
+            # append result starting from k th
+            if i+1 >= k:
+                # last item in the window is the max
+                res.append(window[-1])
         return res
