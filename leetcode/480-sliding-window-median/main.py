@@ -88,8 +88,8 @@ class Solution(object):
             # or x = bisect.bisect_right(window, nums[i]) and window.insert(x, nums[i])
             bisect.insort(window, nums[i])
 
-            # find the medians
-            if i >= k - 1:
+            # find the medians starting from kth item
+            if i+1 >= k:
                 half = k/2
                 temp = 0.0
                 if k % 2 == 0:
