@@ -520,3 +520,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 216 | [Nested List Weight Sum](/leetcode/339-nested-list-weight-sum) | graph | [leetcode 339](https://leetcode.com/problems/nested-list-weight-sum/) | 1st recursive dfs, 2nd iterative dfs |
 | 216 | [Calculate Maximum Call Stack's Size](/miscellaneous/max-callstack-size) | recursion | study | |
 | 217 | [Most Frequent Subtree Sum](/leetcode/508-most-frequent-subtree-sum) | tree, hashtable | [leetcode 508](https://leetcode.com/problems/most-frequent-subtree-sum/) | 1st bottom up recursive dfs + hashtable O(n) |
+| 217 | [Employee Importance](/leetcode/690-employee-importance) | graph, hashtable | [leetcode 690](https://leetcode.com/problems/employee-importance/) | 1st bottom up recursive dfs + hashtable O(n) |
