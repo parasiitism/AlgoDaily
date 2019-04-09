@@ -2,6 +2,9 @@
     questions to ask:
     - it is sure that i can find out the endWord in wordList? no
     - will there be duplicate in wordList? might be
+    - will the beginWord == endWord? yes
+    - are the words in dict having the same length with beginWord and endWord? yes
+    - only lowercase? yes
 """
 
 
@@ -85,7 +88,7 @@ class Solution(object):
         Space   O(n)
         412 ms, faster than 67.72%
         """
-        wordList = set(wordList) # avoid duplicate words
+        wordSet = set(wordList) # avoid duplicate words
         # BFS
         q = []
         q.append((beginWord, 1))
@@ -100,7 +103,7 @@ class Solution(object):
             for i in range(len(word)):
                 for c in alphabets:
                     newWord = word[:i] + c + word[i+1:]
-                    if newWord in wordList and newWord not in seen:
+                    if newWord in wordSet and newWord not in seen:
                         q.append((newWord, level + 1))
                         seen.add(newWord)
         return 0

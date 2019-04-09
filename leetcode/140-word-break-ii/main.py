@@ -2,6 +2,8 @@
     questions to ask:
     - will the words in wordDict contain each other? e.g. wordDict = [abc, ab] ? yes
     - will there be no duplicate words in wordDict? yes
+    - lowercase letters only? yes
+    - do we need to deal with punctuation? no
 """
 
 
@@ -75,8 +77,8 @@ class Solution(object):
         2nd approach is to modify the top-down approach to a bottum-up approach
         - when we reach to an empty string, it means the path it went through is one of the result
 
-        Time    O(n^n)
-        Space   O(n^n)
+        Time    O(n^2*k)
+        Space   O(n^2*k)
         TLE
         """
         wordSet = set()
@@ -87,12 +89,11 @@ class Solution(object):
         return ans
 
     def find(self, s, wordSet, m):
-        res = []
         if len(s) == 0:
             """
-            it reaches to a result
+            when len(s) == 0, it reaches to a result
             but since the function also returns [] if it doesn't find any result
-            we want the function return something such that the parent function can distinguish which recursive calls reach to a result
+            we want the function return something such that the parent recursive function can distinguish which recursive calls reach to a result
             e.g.1
                 'apple', return [''] so that its parent can append 'apple' and return
             e.g.2
@@ -101,6 +102,7 @@ class Solution(object):
             see ./idea.png
             """
             return [""]
+        res = []
         for word in wordSet:
             w = s[:len(word)]
             if w == word:
@@ -151,8 +153,8 @@ class Solution(object):
         ref:
         - https://leetcode.com/problems/word-break-ii/discuss/44167/My-concise-JAVA-solution-based-on-memorized-DFS
 
-        Time    O(n^3)
-        Space   O(n^3)
+        Time    O(n^2*k)
+        Space   O(n^2*k)
         44 ms, faster than 47.57%
         """
         wordSet = set()
