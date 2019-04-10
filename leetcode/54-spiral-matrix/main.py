@@ -1,38 +1,87 @@
 class Solution:
-    """
-    By Dale
-    """
-
     def spiralOrder(self, matrix):
         """
         :type matrix: List[List[int]]
         :rtype: List[int]
         """
-        rows = len(matrix)
-        if rows == 0:
+        if len(matrix) == 0 or len(matrix[0]) == 0:
             return []
-        cols = len(matrix[0])
-        output = []
-        for edge in range(0, min((cols+1) // 2, (rows+1) // 2)):
-            # top-left -> top-right
-            for x in range(edge, cols-edge):
-                output.append(matrix[edge][x])
+        minRow = 0
+        maxCol = len(matrix[0])-1
+        maxRow = len(matrix)-1
+        minCol = 0
 
-            # top-right w/o corner -> bottom-right
-            for y in range(edge+1, rows-edge):
-                output.append(matrix[y][cols-edge-1])
+        res = []
 
-            # bottom-right w/o corner -> bottom-left
-            if edge < rows-edge-1:
-                for x in range(cols-edge-2, edge-1, -1):
-                    output.append(matrix[rows-edge-1][x])
+        while minRow <= maxRow and minCol <= maxCol:
+            # go left
+            for i in range(minCol, maxCol+1):
+                res.append(matrix[minRow][i])
+            minRow += 1
+            # go down
+            for i in range(minRow, maxRow+1):
+                res.append(matrix[i][maxCol])
+            maxCol -= 1
+            # go right
+            # minRow has been +1 previously, so maxRow must be >= new minRow in order to traverse correctly
+            if minRow <= maxRow:
+                for i in range(maxCol, minCol-1, -1):
+                    res.append(matrix[maxRow][i])
+                maxRow -= 1
+            # go up
+            # minCol has been +1 previously, so maxCol must be >= new minRow in order to traverse correctly
+            if minCol <= maxCol:
+                for i in range(maxRow, minRow-1, -1):
+                    res.append(matrix[i][minCol])
+                minCol += 1
+        return res
 
-            # bottom-left w/o corner -> top-left w/o corner
-            if edge < cols-edge-1:
-                for y in range(rows-edge-2, edge, -1):
-                    output.append(matrix[y][edge])
-        return output
 
+a = [
+    [1, 2, 3]
+]
+print(Solution().spiralOrder(a))
 
-s = Solution().spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-print(s)
+a = [
+    [1, 2, 3],
+    [4, 5, 6],
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1],
+    [2],
+    [3],
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2],
+    [3, 4],
+    [5, 6],
+    [7, 8],
+    [9, 10]
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16],
+]
+print(Solution().spiralOrder(a))
