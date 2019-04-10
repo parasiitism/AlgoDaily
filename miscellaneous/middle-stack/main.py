@@ -5,12 +5,9 @@ class DLLNode(object):
         self.prev = None
 
 
-class MaxStack(object):
+class MiddleStack(object):
 
     def __init__(self):
-        """
-        initialize your data structure here.
-        """
         self.head = DLLNode(0)
         self.tail = DLLNode(0)
         self.head.next = self.tail
@@ -19,12 +16,6 @@ class MaxStack(object):
         self.count = 0
 
     def push(self, x):
-        """
-        :type x: int
-        :rtype: None
-
-        Time    O(1)
-        """
         last = self.tail.prev
         node = DLLNode(x)
         last.next = node
@@ -38,11 +29,6 @@ class MaxStack(object):
             self.middle = self.middle.next
 
     def pop(self):
-        """
-        :rtype: int
-
-        Time    O(1)
-        """
         last = self.tail.prev
         last.prev.next = last.next
         last.next.prev = last.prev
@@ -54,27 +40,12 @@ class MaxStack(object):
         return last.val
 
     def top(self):
-        """
-        :rtype: int
-
-        Time    O(1)
-        """
         return self.tail.prev.val
 
     def peekMiddle(self):
-        """
-        :rtype: int
-
-        Time    O(1)
-        """
         return self.middle.val
 
     def popMiddle(self):
-        """
-        :rtype: int
-
-        Time    O(1)
-        """
         m = self.middle.val
         self.middle.prev.next = self.middle.next
         self.middle.next.prev = self.middle.prev
