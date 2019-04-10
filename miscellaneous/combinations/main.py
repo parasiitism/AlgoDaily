@@ -65,3 +65,37 @@ r = Solution1().combine(4, 3)
 print(r)
 r = Solution1().combine(5, 4)
 print(r)
+
+
+"""
+    followup: find all combinations of a string
+"""
+
+
+class Solution(object):
+    """
+    Implementation similar to permutations
+    Time    O(nCk)
+    Space   O(nCk) due to the recrusion
+    beats   13.88%
+    """
+
+    def __init__(self):
+        self.result = []
+
+    def combine(self, s, k):
+        if k < 1 or k > len(s):
+            return []
+        # dfs
+        self.dfs(s, "", k)
+        return self.result
+
+    def dfs(self, remain, chosen, k):
+        if len(chosen) == k:
+            self.result.append(chosen)
+        else:
+            for i in range(len(remain)):
+                self.dfs(remain[i+1:], chosen + remain[i], k)
+
+
+print(Solution().combine("ABCD", 2))
