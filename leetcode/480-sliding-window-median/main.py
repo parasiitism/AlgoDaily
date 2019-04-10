@@ -71,23 +71,16 @@ class Solution(object):
         if len(nums) == 0 or k <= 0 or k > len(nums):
             return 0
         medians, window = [], []
-
         for i in range(len(nums)):
-
             # find position where outgoing element should be removed from
             if i >= k:
-                # O(k) remove
-                # window.remove(nums[i-k])
-
                 # O(logk) remove with binary search
                 idx = bisect.bisect_left(window, nums[i - k])
                 window.pop(idx)
-
             # maintain the sorted invariant while inserting incoming element with binary search
             # O(logk)
             # or x = bisect.bisect_right(window, nums[i]) and window.insert(x, nums[i])
             bisect.insort(window, nums[i])
-
             # find the medians starting from kth item
             if i+1 >= k:
                 half = k/2
@@ -97,7 +90,6 @@ class Solution(object):
                 else:
                     temp = float(window[half])
                 medians.append(temp)
-
         return medians
 
 

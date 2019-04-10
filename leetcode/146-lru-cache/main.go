@@ -8,7 +8,9 @@ package main
 	1. use a hashtable to store the key & value to achieve put & get Time = O(1)
 	2. however, we want to prioritize the items by its **recency**
 			1. we need a sorted array(sorted by recency), i.e. arr = arr[i]+arr[i+1]+target
-			2. but how to find the key value in the sorted array? what if we store the key & index such that we can loop up from the arr easier. the look up(from arr) complexity is O(1)
+			2. but how to find the key value in the sorted array?
+			what if we store the key & index such that we can loop up from the arr easier.
+			the look up(from arr) complexity is O(1)
 	3. but wait, if we remove any item from the array, we need to update the hashtable, the set time complexity will be O(n)
 	4. what if we store a key & the pointer of the arr in the hashtable? such that it can remove itself from the arr?
 	5. but then we will take O(n) to iterate the array and remove the target item...

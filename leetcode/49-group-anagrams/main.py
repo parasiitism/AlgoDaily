@@ -46,8 +46,13 @@ Space O(nk)
 class Solution(object):
     def groupAnagrams(self, strs):
         """
-        :type strs: List[str]
-        :rtype: List[List[str]]
+2nd attempt: hashtable but base on charactor count
+although it doesnt sort(nlogn), it runs slower than
+ the 1st due to the string manipulation
+Time O(nk) n:number of words, k:length of charactors
+Space O(nk)
+
+136 ms, faster than 46.18%
         """
         ht = {}
         for s in strs:
