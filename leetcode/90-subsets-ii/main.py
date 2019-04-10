@@ -4,7 +4,7 @@ class Solution(object):
     Method similar to what I did for Permutation II
     Time    O(2^n) worst
     Space   O(2^n) recursion
-    beats   41.22%
+    24 ms, faster than 100.00%
     """
 
     def __init__(self):

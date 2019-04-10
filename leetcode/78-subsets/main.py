@@ -23,7 +23,8 @@ class Solution(object):
             self.dfs(nums[i+1:], path+[nums[i]])
 
 
-print(len(Solution().subsets([1, 2, 3, 4, 5])))
+print(Solution().subsets([1, 2, 3]))
+print(len(Solution().subsets([1, 2, 3, 4])))
 
 
 class Solution1(object):
@@ -51,7 +52,7 @@ class Solution1(object):
         return result
 
 
-print(Solution1().subsets([1, 2, 3]))
+# print(Solution1().subsets([1, 2, 3]))
 
 
 class Solution2(object):
@@ -77,4 +78,4 @@ class Solution2(object):
         return res
 
 
-print(Solution2().subsets([1, 2, 3]))
+# print(Solution2().subsets([1, 2, 3]))

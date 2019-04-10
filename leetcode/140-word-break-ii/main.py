@@ -140,23 +140,24 @@ d = ["cats", "dog", "sand", "and", "cat"]
 print(Solution().wordBreak(s, d))
 print("----------------------------------------------------------------")
 
+"""
+    :type s: str
+    :type wordDict: List[str]
+    :rtype: List[str]
+
+    3rd approach: optimize the 2nd approach with memorization
+
+    ref:
+    - https://leetcode.com/problems/word-break-ii/discuss/44167/My-concise-JAVA-solution-based-on-memorized-DFS
+
+    Time    O(n^2*k)
+    Space   O(n^2*k)
+    44 ms, faster than 47.57%
+"""
+
 
 class Solution(object):
     def wordBreak(self, s, wordDict):
-        """
-        :type s: str
-        :type wordDict: List[str]
-        :rtype: List[str]
-
-        3rd approach: optimize the 2nd approach with memorization
-
-        ref:
-        - https://leetcode.com/problems/word-break-ii/discuss/44167/My-concise-JAVA-solution-based-on-memorized-DFS
-
-        Time    O(n^2*k)
-        Space   O(n^2*k)
-        44 ms, faster than 47.57%
-        """
         wordSet = set()
         for w in wordDict:
             wordSet.add(w)
@@ -178,7 +179,8 @@ class Solution(object):
                         res.append(w + " " + temp)
                     else:
                         res.append(w)
-        # memorize the result for s, then we can use it to avoid redundant computation if we meet s again
+        # memorize the result for s,
+        # then we can use it to avoid redundant computation if we meet s again
         m[s] = res  # <- the only diff compared to 2nd approach
         return res
 

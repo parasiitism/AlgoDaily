@@ -12,9 +12,11 @@ class Solution(object):
     def combine(self, n, k):
         if k < 1 or k > n:
             return []
+        # construct the arrary from 1 to n
         nums = []
         for i in range(n):
             nums.append(i+1)
+        # dfs
         self.dfs(nums, [], k)
         return self.result
 
