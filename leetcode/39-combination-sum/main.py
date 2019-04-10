@@ -1,3 +1,10 @@
+"""
+    questions to ask:
+    - will there be zero? no
+    - will there to duplicate numbers? no
+"""
+
+
 class Solution(object):
     """
     1st attempt:
@@ -53,6 +60,7 @@ class Solution(object):
 print(Solution().combinationSum([2, 3, 5], 8))
 print(Solution().combinationSum([2, 3, 6, 7], 7))
 print(Solution().combinationSum([1, 2, 3, 4], 15))
+print("------------------------------")
 
 
 class Solution1(object):
@@ -88,3 +96,39 @@ class Solution1(object):
 print(Solution1().combinationSum([2, 3, 5], 8))
 print(Solution1().combinationSum([2, 3, 6, 7], 7))
 print(Solution1().combinationSum([1, 2, 3, 4], 15))
+print("------------------------------")
+
+
+class Solution(object):
+    """
+    2nd approach: recursive dfs, avoid duplicate by considering the candidates which are >= num
+    144 ms, faster than 14.76%
+    """
+
+    def __init__(self):
+        self.result = []
+
+    def combinationSum(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        candidates.sort()
+        self.dfs(candidates, target, [], 0)
+        return self.result
+
+    def dfs(self, candidates, target, path, total):
+        if total == target:
+            self.result.append(path)
+        elif total < target:
+            for i in range(len(candidates)):
+                can = candidates[i]
+                if len(path) == 0 or path[-1] <= can:
+                    self.dfs(candidates, target, path+[can], total+can)
+
+
+print(Solution().combinationSum([2, 3, 5], 8))
+print(Solution().combinationSum([2, 3, 6, 7], 7))
+print(Solution().combinationSum([1, 2, 3, 4], 15))
+print("------------------------------")
