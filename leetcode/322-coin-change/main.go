@@ -12,38 +12,36 @@ type Queue struct {
 
 // 1st attempt:
 // bfs(from top to bottom) + hashtable(avoid redundant calculation)
-// beats 13.75%
+// 188 ms, faster than 15.89%
 func coinChange(coins []int, amount int) int {
 	var q []Queue
 	hash := make(map[int]bool)
-	hash[amount] = true
 	q = append(q, Queue{amount, 0})
-	min := math.MaxUint32
 	for len(q) > 0 {
 		n := len(q)
 		for i := 0; i < n; i++ {
 			head := q[0]
 			q = q[1:]
+
+			if _, x := hash[head.amount]; x {
+				continue
+			}
+			hash[head.amount] = true
+
 			if head.amount == 0 {
 				// since we are doing bfs, from top to bottom,
 				// once we reach to 0, it means this is the shortest path
 				return head.steps
-			}
-			for j := 0; j < len(coins); j++ {
-				coin := coins[j]
-				next := head.amount - coin
-				_, x := hash[next]
-				if next >= 0 && !x {
+			} else if head.amount > 0 {
+				for j := 0; j < len(coins); j++ {
+					coin := coins[j]
+					next := head.amount - coin
 					q = append(q, Queue{next, head.steps + 1})
-					hash[next] = true
 				}
 			}
 		}
 	}
-	if min == math.MaxUint32 {
-		return -1
-	}
-	return min
+	return -1
 }
 
 // 2nd attempt
@@ -117,17 +115,22 @@ func coinChange2(coins []int, amount int) int {
 
 func main() {
 	fmt.Println(coinChange([]int{5}, 5))
-	fmt.Println(coinChange([]int{1, 2, 5}, 7))
+	fmt.Println(coinChange([]int{1, 2, 5}, 11))
 	fmt.Println(coinChange([]int{2}, 3))
 	fmt.Println(coinChange([]int{1, 7, 11, 13, 17}, 152))
+	fmt.Println(coinChange([]int{70, 177, 394, 428, 427, 437, 176, 145, 83, 370}, 7582))
+	fmt.Println("-----")
 
 	fmt.Println(coinChange1([]int{5}, 5))
-	fmt.Println(coinChange1([]int{1, 2, 5}, 7))
+	fmt.Println(coinChange1([]int{1, 2, 5}, 11))
 	fmt.Println(coinChange1([]int{2}, 3))
 	fmt.Println(coinChange1([]int{1, 7, 11, 13, 17}, 152))
+	fmt.Println(coinChange([]int{70, 177, 394, 428, 427, 437, 176, 145, 83, 370}, 7582))
+	fmt.Println("-----")
 
 	fmt.Println(coinChange2([]int{5}, 5))
-	fmt.Println(coinChange2([]int{1, 2, 5}, 7))
+	fmt.Println(coinChange2([]int{1, 2, 5}, 11))
 	fmt.Println(coinChange2([]int{2}, 3))
 	fmt.Println(coinChange2([]int{1, 7, 11, 13, 17}, 152))
+	fmt.Println(coinChange([]int{70, 177, 394, 428, 427, 437, 176, 145, 83, 370}, 7582))
 }

@@ -4,6 +4,7 @@ class Solution(object):
 
     it is hard to determind the Time Complexity, it depends on the input
     1012 ms, faster than 5.07%
+    10apr2019
     """
 
     def __init__(self):
