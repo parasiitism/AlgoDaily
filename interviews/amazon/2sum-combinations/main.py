@@ -1,11 +1,11 @@
 """
-    Find out the total numbers of 2 numbers that add up a value which <= target
+    Find out the total number of 2 numbers that can sum up to a value which is less than or equal to the target
 
-    questions to ask:
-    - will there be an empty arr? yes
-    - will there be an single item arr? yes
-    - all positive? no
-    - any duplicate? not for now
+    Note:
+    - will there be an empty array? yes
+    - will there be a single item array? yes
+    - all numbers are positive? yes
+    - any duplicate? no
 
     e.g.1 [1,3,5,7,9], target=10
 
