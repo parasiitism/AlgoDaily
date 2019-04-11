@@ -32,3 +32,13 @@ class Solution(object):
             else:
                 return mid
         return -1
+
+
+a = [1]
+b = a
+print(a)
+print(b)
+
+a.append(2)
+print(a)
+print(b)
