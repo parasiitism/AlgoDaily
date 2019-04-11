@@ -80,6 +80,9 @@ print(twoSumCombo(a, 10))
 
 """
     follow-up: what if we want to find out all combinations?
+
+    Time    O(n!)
+    Space   O(n)
 """
 
 
