@@ -524,3 +524,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 218 | [Sum of Root To Leaf Binary Numbers](/leetcode/1022-sum-of-root-to-leaf-binary-numbers) | tree | [leetcode 1022](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/) | 1st recursive dfs, 2nd iterative dfs |
 | 218 | [First Bad Version](/leetcode/278-first-bad-version) | binary search | [leetcode 278](https://leetcode.com/problems/first-bad-version/) | ⭐️|
 | 219 | [2Sum combinations](/amazon/2sum-combinations) | binary search, recursion | interview | ⭐️ the followup is hard |
+| 220 | [Palindrome Permutation](/leetcode/266-palindrome-permutation) | hashtable | [leetcode 266](https://leetcode.com/problems/palindrome-permutation/) | |

@@ -1,6 +1,12 @@
 class Solution(object):
     """
     Implementation similar to permutations
+
+    select k from n number, it is a combination problem
+    therefore, the time complexity is nCk
+
+    nCk = n!/(n-k)!k!
+
     Time    O(nCk)
     Space   O(nCk) due to the recrusion
     beats   13.88%

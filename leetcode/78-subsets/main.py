@@ -1,6 +1,20 @@
 class Solution(object):
     """
     Recursive DFS
+
+    e.g. [1,2,3,4]
+
+                                            ()
+                    (1)                     (2)                 (3)           (4)
+    (1,2)               (1,3) (1,4)         (2,3) (2,4)         (3,4)
+    (1,2,3) (1,2,4)     (1,3,4)             (2,3,4)
+    (1,2,3,4)
+
+    total = 16
+
+    explanation:
+    in the recursion tree, for each number, we can either include or exclude it the result, therefore we have 2^n options in total
+
     Time    O(2^n)
     Space   O(2^n) recursion
     beats   35.29%

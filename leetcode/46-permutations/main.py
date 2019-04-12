@@ -1,10 +1,17 @@
-# recursive dfs
-# e.g. [1,2,3]
-#    1          2         3
-# 2,3 3,2   1,3  3,1    1,2 2,1
-#
-# therefore, the crux is dfs(nums[:i]+arr[i+1:], prefix+[nums[i]])
-# beats 32.64%
+"""
+recursive dfs
+e.g. [1,2,3]
+   1          2         3
+2,3 3,2   1,3  3,1    1,2 2,1
+
+select k from n number, it is a permutation problem
+therefore, the time complexity is nPk
+
+nPk = n!/(n-k)!
+
+therefore, the crux is dfs(nums[:i]+arr[i+1:], prefix+[nums[i]])
+beats 32.64%
+"""
 
 
 class Solution(object):
