@@ -41,6 +41,13 @@ print(Solution().generateParenthesis(1))
 print(Solution().generateParenthesis(2))
 print(Solution().generateParenthesis(3))
 
+"""
+    2nd approach: compare the number of open and close for recursion
+
+    Time    < O(2^2n) the total number of nodes in the recursion tree
+    Space   < O(2^2n)
+"""
+
 
 class Solution(object):
 
