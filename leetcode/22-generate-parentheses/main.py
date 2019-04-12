@@ -42,7 +42,10 @@ print(Solution().generateParenthesis(2))
 print(Solution().generateParenthesis(3))
 
 """
-    2nd approach: compare the number of open and close for recursion
+    2nd approach:
+    - there are total 2^2n permutation we when appedn ( and ) from top to down
+    - however, some resulting parentheses strings are not balenced
+    - to make it balence, we should set a constraint that no. of close <= no. of open
 
     Time    < O(2^2n) the total number of nodes in the recursion tree
     Space   < O(2^2n)
