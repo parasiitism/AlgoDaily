@@ -42,6 +42,12 @@ print(Solution().longestValidParentheses(a))
 a = ")()())"
 print(Solution().longestValidParentheses(a))
 
+a = ")(()())"
+print(Solution().longestValidParentheses(a))
+
+a = ")(()()))"
+print(Solution().longestValidParentheses(a))
+
 a = ")(()()))))(()()())"
 print(Solution().longestValidParentheses(a))
 
@@ -51,27 +57,46 @@ print(Solution().longestValidParentheses(a))
 print("---------------")
 
 
+"""
+    2nd approach: stack
+    1. when we see an open parenthesis, we put the index of it onto the stack
+    2. when we see a close parenthesis, we check if the last item on the stack is a open parenthesis
+        if yes, we pop the stack and the diff = i-stack[-1] is the length of a valid balenced parentheses string
+        if no, we push the curent index onto the stack
+    3. we can get the global max by comparing with the diff when we pop the stack
+
+    ref:
+    https://www.youtube.com/watch?v=r0-zx5ejdq0
+
+    Time    O(n)
+    Space   O(n)
+    44 ms, faster than 58.92%
+"""
+
+
 class Solution(object):
     def longestValidParentheses(self, s):
         """
         :type s: str
         :rtype: int
         """
-        cur = 0
         res = 0
-        openCount = 0
-
+        stack = [-1]
         for i in range(len(s)):
             c = s[i]
             if c == '(':
-                openCount += 1
-            else:
-                if openCount == 0:
-                    cur = 0
+                stack.append(i)
+            elif c == ')':
+                if stack[-1] != -1:
+                    idx = stack[-1]
+                    if s[idx] == '(':
+                        pop = stack.pop()
+                        diff = i - stack[-1]
+                        res = max(res, diff)
+                    else:
+                        stack.append(i)
                 else:
-                    openCount -= 1
-                    cur += 2
-                    res = max(res, cur)
+                    stack.append(i)
         return res
 
 
@@ -79,6 +104,12 @@ a = "(()"
 print(Solution().longestValidParentheses(a))
 
 a = ")()())"
+print(Solution().longestValidParentheses(a))
+
+a = ")(()())"
+print(Solution().longestValidParentheses(a))
+
+a = ")(()()))"
 print(Solution().longestValidParentheses(a))
 
 a = ")(()()))))(()()())"
