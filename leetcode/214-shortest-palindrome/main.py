@@ -52,6 +52,53 @@ print(Solution().shortestPalindrome(a))
 a = "abcd"
 print(Solution().shortestPalindrome(a))
 
+a = "ccab"
+print(Solution().shortestPalindrome(a))
+
+a = "a"
+print(Solution().shortestPalindrome(a))
+
+a = ""
+print(Solution().shortestPalindrome(a))
+
+print("---------------------")
+
+"""
+    learned from others:
+
+    e.g. for "dedcba"
+    s          dedcba
+    r[0:]      abcded    Nope...
+    r[1:]   (a)bcded     Nope...
+    r[2:]  (ab)cded      Nope...
+    r[3:] (abc)ded       Yes! the string starts with "ded", so the result is abc + dedcba
+
+    ref:
+    - https://leetcode.com/problems/shortest-palindrome/discuss/60099/AC-in-288-ms-simple-brute-force
+
+    Time    O(n^2)
+    Space   O(n)
+    
+"""
+
+
+class Solution(object):
+    def shortestPalindrome(self, s):
+        r = s[::-1]
+        for i in range(len(s) + 1):
+            if s.startswith(r[i:]):
+                return r[:i] + s
+
+
+a = "aacecaaa"
+print(Solution().shortestPalindrome(a))
+
+a = "abcd"
+print(Solution().shortestPalindrome(a))
+
+a = "ccab"
+print(Solution().shortestPalindrome(a))
+
 a = "a"
 print(Solution().shortestPalindrome(a))
 

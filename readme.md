@@ -529,5 +529,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 221 | [Pylons](/gcj/2019/1a/a.py) | recursion | codejam | round 1A q1 |
 | 221 | [Longest Valid Parentheses](/leetcode/32-longest-valid-parentheses) | dynamic programming | [leetcode 32](https://leetcode.com/problems/longest-valid-parentheses/) | 1st O(n^3) LTE 📌2nd O(n) |
 | 221 | [Remove Invalid Parentheses](/leetcode/301-remove-invalid-parentheses) | recursion | [leetcode 301](https://leetcode.com/problems/remove-invalid-parentheses/) | 1st O(2^n) LTE 📌2nd < O(2^n) |
-| 222 | [Shortest Palindrome](/leetcode/214-shortest-palindrome) | string | [leetcode 214](https://leetcode.com/problems/shortest-palindrome/) | 1st O(n^2) python LTE, golang beats 5%. |
+| 222 | [Shortest Palindrome](/leetcode/214-shortest-palindrome) | string | [leetcode 214](https://leetcode.com/problems/shortest-palindrome/) | 1st O(n^2) python LTE, golang beats 5% 📌2nd learned from others O(n^2) but less heavy string operation |
 | 222 | [Longest Palindrome](/leetcode/409-longest-palindrome) | hashtable | [leetcode 409](https://leetcode.com/problems/longest-palindrome/) | 1st O(n) |
