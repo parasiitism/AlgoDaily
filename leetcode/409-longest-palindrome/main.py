@@ -3,7 +3,7 @@
     1. count the occurence of each character
     2. make sure the all characters occurr "evenly" by declementing the odd ocurrence characters
     3. if no of odd ocurrence characters > 0, 
-        it means that we have to place any one of them in the center to form the biggest palindrome
+        wit means that we have to place any one of them in the center to form the biggest palindrome
 
     Time    O(n)
     Space   O(n)

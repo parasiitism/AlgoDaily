@@ -274,7 +274,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 149 | [Find Anagram Mappings](/leetcode/760-find-anagram-mappings/) | array | [leetcode 760](https://leetcode.com/problems/find-anagram-mappings/) | ️|
 | 149 | [Uncommon Words from Two Sentences](/leetcode/884-uncommon-words-from-two-sentences/) | hashtable | [leetcode 884](https://leetcode.com/problems/uncommon-words-from-two-sentences/) | ️|
 | 149 | [Rotate String](/leetcode/796-rotate-string/) | string | [leetcode 796](https://leetcode.com/problems/rotate-string/) | ️|
-| 150 | [Find Leaves of Binary Tree](/leetcode/336-find-leaves-of-binary-tree/) | tree | [leetcode 336](https://leetcode.com/problems/find-leaves-of-binary-tree/) | ️1st O(h*n) beats 100% |
+| 150 | [Find Leaves of Binary Tree](/leetcode/366-find-leaves-of-binary-tree/) | tree | [leetcode 366](https://leetcode.com/problems/find-leaves-of-binary-tree/) | ️1st O(h*n) beats 100% |
 | 150 | [Second Minimum Node In a Binary Tree](/leetcode/671-second-minimum-node-in-a-binary-tree/) | tree | [leetcode 671](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/) | ️1st, 2nd O(n) beats 100% |
 | 150 | [Two Sum IV - Input is a BST](/leetcode/653-two-sum-iv-input-is-a-bst/) | tree | [leetcode 653](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) | ️1st, 2nd O(n) beats 50% only 🤔 |
 | 150 | [Increasing Order Search Tree](/leetcode/897-increasing-order-search-tree/) | tree | [leetcode 897](https://leetcode.com/problems/increasing-order-search-tree/) | ️1st O(n) beats 100% |
@@ -531,3 +531,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 221 | [Remove Invalid Parentheses](/leetcode/301-remove-invalid-parentheses) | recursion | [leetcode 301](https://leetcode.com/problems/remove-invalid-parentheses/) | 1st O(2^n) LTE 📌2nd < O(2^n) |
 | 222 | [Shortest Palindrome](/leetcode/214-shortest-palindrome) | string | [leetcode 214](https://leetcode.com/problems/shortest-palindrome/) | 1st O(n^2) python LTE, golang beats 5% 📌2nd learned from others O(n^2) but less heavy string operation |
 | 222 | [Longest Palindrome](/leetcode/409-longest-palindrome) | hashtable | [leetcode 409](https://leetcode.com/problems/longest-palindrome/) | 1st O(n) |
+| 223 | [Palindrome Pairs](/leetcode/336-palindrome-pairs) | hashtable | [leetcode 336](https://leetcode.com/problems/palindrome-pairs/) | 1st O(k * n^2) LTE. 📌2nd O(n * k^2) learned from others |
