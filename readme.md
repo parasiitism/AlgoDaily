@@ -532,3 +532,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 222 | [Shortest Palindrome](/leetcode/214-shortest-palindrome) | string | [leetcode 214](https://leetcode.com/problems/shortest-palindrome/) | 1st O(n^2) python LTE, golang beats 5% 📌2nd learned from others O(n^2) but less heavy string operation |
 | 222 | [Longest Palindrome](/leetcode/409-longest-palindrome) | hashtable | [leetcode 409](https://leetcode.com/problems/longest-palindrome/) | 1st O(n) |
 | 223 | [Palindrome Pairs](/leetcode/336-palindrome-pairs) | hashtable | [leetcode 336](https://leetcode.com/problems/palindrome-pairs/) | 1st O(k * n^2) LTE. 📌2nd O(n * k^2) learned from others |
+| 223 | [Binary Tree Maximum Path Sum](/leetcode/124-binary-tree-maximum-path-sum) | recursion | [leetcode 124](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | 1st O(n) |
