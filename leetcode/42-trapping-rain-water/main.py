@@ -39,3 +39,46 @@ class Solution(object):
 
 
 print(Solution().trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
+
+print("--------------------")
+
+
+"""
+    2nd approach: optimize the 1st approach
+    - calculate max from the front
+    - calculate max from the end
+    - the min(forward[i], backward[i]) - height[i] is the volumn of the trapping water on that cell
+
+    ref:
+    - https://www.youtube.com/watch?v=2LjNzbK2cmA
+
+    Time    O(n)
+    Space   O(1)
+    40 ms, faster than 43.69%
+"""
+
+
+class Solution(object):
+    def trap(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+        res = 0
+        left = 0
+        right = len(height) - 1
+        leftMax = 0
+        rightMax = 0
+        while left < right:
+            if height[left] < height[right]:
+                leftMax = max(leftMax, height[left])
+                res += leftMax - height[left]
+                left += 1
+            else:
+                rightMax = max(rightMax, height[right])
+                res += rightMax - height[right]
+                right -= 1
+        return res
+
+
+print(Solution().trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
