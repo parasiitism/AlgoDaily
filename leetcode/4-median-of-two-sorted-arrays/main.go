@@ -7,10 +7,14 @@ package main
 // Space	O(m+n)
 // i am not gonna implement it
 
-// better
-// use 2 pointers to merge the arrays and return merged[k-1] (classic question: merge 2 sorted arrays )
-// Time		O(m+n)
-// Space 	O(m+n)
+/*
+	2nd approach: 2 pointers to merge the arrays like merge sort
+	- use 2 pointers to merge the arrays and return merged[half] or (merged[half-1]+merged[half])/2
+
+	Time		O(m+n)
+	Space 	O(m+n)
+	24 ms, faster than 54.03%
+*/
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	if len(nums1) == 0 && len(nums2) == 0 {
 		return 0.0
