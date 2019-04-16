@@ -28,11 +28,11 @@ class Solution(object):
         """
         if len(matrix) == 0 or len(matrix[0]) == 0:
             return 0
-        retangle = None
+        retangle = []
         res = 0
         for arr in matrix:
-            if retangle == None:
-                # leetcode is bad at presenting the question ["1","0","1","0","0"] <- WTF
+            if len(retangle) == 0:
+                # leetcode is bad at presenting the question, ["1","0","1","0","0"] <- WTF
                 retangle = [int(x) for x in arr]
             else:
                 for j in range(len(arr)):
@@ -57,29 +57,33 @@ class Solution(object):
         - https://www.youtube.com/watch?v=ZmnqCZp9bBs
 
         Time	O(n)
-        Space	O(1)
-        168 ms, faster than 5.14% <= the code is similar to the one beats 100% so i am not sure why so slow
+        Space	O(n)
+        100 ms, faster than 31.99% 
         """
         res = 0
-        if len(heights) == 0:
-            return 0
-        stack = [-1, 0]
-        # iterate  through the list
-        for i in range(1, len(heights)):
+        # begining with -1, such that we can calculate the range, i - stack[-1][0] - 1, easier
+        # (index, height)
+        stack = [(-1, 0)]
+        for i in range(len(heights)):
             cur = heights[i]
-            if cur >= heights[stack[-1]]:
-                stack.append(i)
+            if cur > stack[-1][1]:
+                # if current height is taller, append to the stack
+                stack.append((i, cur))
             else:
-                while len(stack) > 1 and cur < heights[stack[-1]]:
-                    idx = stack.pop()
-                    # i-stack.peek()-1 is the width
-                    temp = heights[idx] * (i-stack[-1]-1)
-                    res = max(res, temp)
-                stack.append(i)
+                # pop the stack if the items which is > cur height
+                while stack[-1][1] > cur:
+                    popIdx, popH = stack.pop()
+                    width = i - stack[-1][0] - 1
+                    area = popH * width
+                    res = max(res, area)
+                # put the current item to the array
+                stack.append((i, cur))
+        # if the stack is not empty, pop the items
         while len(stack) > 1:
-            idx = stack.pop()
-            temp = heights[idx] * (len(heights)-stack[-1]-1)
-            res = max(res, temp)
+            popIdx, popH = stack.pop()
+            width = len(heights) - stack[-1][0] - 1
+            area = popH * width
+            res = max(res, area)
         return res
 
 
