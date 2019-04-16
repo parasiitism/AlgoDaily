@@ -534,3 +534,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 223 | [Palindrome Pairs](/leetcode/336-palindrome-pairs) | hashtable | [leetcode 336](https://leetcode.com/problems/palindrome-pairs/) | 1st O(k * n^2) LTE. 📌2nd O(n * k^2) learned from others |
 | 223 | [Binary Tree Maximum Path Sum](/leetcode/124-binary-tree-maximum-path-sum) | recursion | [leetcode 124](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | 1st O(n) |
 | 224 | [Maximum Difference Between Node and Ancestor](/leetcode/1026-maximum-difference-between-node-and-ancestor) | recursion | [leetcode 1026](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/) | 1st O(n) |
+| 224 | [Maximum Difference Between Node and Ancestor](/leetcode/332-reconstruct-itinerary) | recursion | [leetcode 1026](https://leetcode.com/problems/332-reconstruct-itinerary/) | 1st O(n^2) LTE. 📌 2nd O(nlogn) learned from others |
