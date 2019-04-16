@@ -24,6 +24,7 @@ class Solution(object):
                 if i == 0 or j == 0:
                     dp[i][j] = int(matrix[i][j])
                 elif matrix[i][j] == '1':
+                    # the current grid = 1min among upperleft, left, up + 1
                     dp[i][j] = min(
                         dp[i-1][j-1],
                         min(dp[i-1][j], dp[i][j-1])) + 1
