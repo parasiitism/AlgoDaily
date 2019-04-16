@@ -15,20 +15,36 @@ class Solution(object):
             return 0
         # create a dp array for caching the submatrices sizes
         dp = []
-        for i in range(len(matrix)):
-            temp = []
-            for j in range(len(matrix[0])):
-                temp.append(0)
-            dp.append(temp)
+        for arr in matrix:
+            dp.append(len(matrix[0]) * [0])
         result = 0
         # for each cell, check if itself can complete a larger square
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
+        for i in range(1, len(matrix)):
+            for j in range(1, len(matrix[0])):
                 if i == 0 or j == 0:
                     dp[i][j] = int(matrix[i][j])
                 elif matrix[i][j] == '1':
                     dp[i][j] = min(
-                        dp[i-1][j-1], min(dp[i-1][j], dp[i][j-1])) + 1
+                        dp[i-1][j-1],
+                        min(dp[i-1][j], dp[i][j-1])) + 1
                 result = max(result, dp[i][j])
         # area of a square
         return result*result
+
+
+a = [
+    ["1", "0", "1", "0", "0"],
+    ["1", "0", "1", "1", "1"],
+    ["1", "1", "1", "1", "1"],
+    ["1", "0", "0", "1", "0"],
+]
+print(Solution().maximalSquare(a))
+
+a = [
+    ["1", "0", "1", "0", "0"],
+    ["1", "0", "1", "1", "1"],
+    ["1", "1", "1", "1", "1"],
+    ["1", "0", "1", "1", "1"],
+    ["1", "1", "1", "0", "0"],
+]
+print(Solution().maximalSquare(a))
