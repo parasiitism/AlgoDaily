@@ -1,3 +1,9 @@
+"""
+    1st: hashtable
+	  136ms beats 57.31%
+"""
+
+
 class Solution(object):
     def firstUniqChar(self, s):
         """

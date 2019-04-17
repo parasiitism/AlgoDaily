@@ -2,9 +2,11 @@ package main
 
 import "fmt"
 
-// naive solution
-// hashtable
-// beats 10%
+/*
+	naive solution
+	hashtable
+	beats 10%
+*/
 func firstUniqChar(s string) int {
 	hash := make(map[byte]int)
 	for i := 0; i < len(s); i++ {
