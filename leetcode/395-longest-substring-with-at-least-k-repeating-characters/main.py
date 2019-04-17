@@ -41,8 +41,8 @@ class Solution(object):
                     if len(temp) > res:
                         res = len(temp)
                         resStr = temp
-        # return (res, resStr)
-        return res
+        return (res, resStr)  # for debug
+        # return res
 
 
 a = "aaabb"
@@ -51,6 +51,105 @@ print(Solution().longestSubstring(a, b))
 
 a = "ababbc"
 b = 2
+print(Solution().longestSubstring(a, b))
+
+a = "cababb"
+b = 2
+print(Solution().longestSubstring(a, b))
+
+a = "cababbc"
+b = 2
+print(Solution().longestSubstring(a, b))
+
+a = "ababcabbabacdddfgh"
+b = 3
+print(Solution().longestSubstring(a, b))
+
+a = "aaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkllllmmmmnnnnooooppppqqqqrrrrsssstttt"
+b = 5
+print(Solution().longestSubstring(a, b))
+
+print("--------------------")
+
+
+"""
+    2nd approach: divide and conquer, learned for others
+    - split the string by using characters which appear less than k times
+    - if all characters in the substring appear >=k times, override the result in needed
+    - if a character appears < k times, do 1) and 2)
+
+    e.g. "ababcabbabacdddfgh", k=3
+
+    - for the input, since c appears twice only, we split c
+    ['abab', 'abbaba', 'dddfgh']
+
+    - for abab, since a and b both appear less than k times, we split a and then b
+    ['', 'b', 'b']
+    ['', '']
+
+    return 0
+
+    - for abbaba, all numbers appear 3 times, return 6
+
+    - for dddfgh, f appears 1 time, we split and get
+    ['ddd', 'gh'] <- we recursively split gh and get 0 from the recursion
+
+    - but since d appears 3 times 'ddd' is one of the result
+
+    - but len('ddd') < len('abbaba'), so result is still 'abbaba'
+
+
+    ref:
+    - https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/87768/4-lines-Python
+
+    Time    O(nlogn)
+    Space   O(h)
+    28 ms, faster than 55.92%
+"""
+
+
+class Solution(object):
+
+    def longestSubstring(self, s, k):
+        # count the characters
+        ht = {}
+        for c in s:
+            if c not in ht:
+                ht[c] = 1
+            else:
+                ht[c] += 1
+        # for each character: if count < k, we dump the character and explore the occurences in the remaining strings
+        for c in ht:
+            if ht[c] < k:
+                maxCnt = 0
+                splits = s.split(c)
+                for t in splits:
+                    temp = self.longestSubstring(t, k)
+                    maxCnt = max(maxCnt, temp)
+                return maxCnt
+        # if empty string or all characters appear >= k
+        # return its length to parent for comparison
+        return len(s)
+
+
+a = "aaabb"
+b = 3
+print(Solution().longestSubstring(a, b))
+
+a = "ababbc"
+b = 2
+print(Solution().longestSubstring(a, b))
+
+a = "cababb"
+b = 2
+print(Solution().longestSubstring(a, b))
+
+a = "cababbc"
+b = 2
+print(Solution().longestSubstring(a, b))
+
+a = "ababcabbabacdddfgh"
+b = 3
 print(Solution().longestSubstring(a, b))
 
 a = "aaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkllllmmmmnnnnooooppppqqqqrrrrsssstttt"
