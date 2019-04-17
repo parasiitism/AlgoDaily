@@ -50,3 +50,125 @@ print(Solution().findMedianSortedArrays(a, b))
 a = []
 b = [1]
 print(Solution().findMedianSortedArrays(a, b))
+
+a = [4, 6, 7, 8]
+b = [1, 2, 3, 5]
+print(Solution().findMedianSortedArrays(a, b))
+
+print("---------------")
+
+"""
+    3rd approach: binary search
+
+    e.g.
+    a = [1, 3, 4]
+    b = [2, 5, 6, 9]
+
+    we split the 1st array into half and then use the remain to calculate the right position in 2nd array
+    1 |3 4
+       ^
+    2 5 6 |9
+           ^
+    
+    since 6 > 3, we need to move forward the pointer on the 1st array
+    1 3 |4
+         ^
+    2 5 |6 9
+         ^
+
+    since 5 > 4, we need to move forward the pointer on the 1st array
+    1 3 4 |
+           ^
+    2 |5 6 9
+       ^
+    
+    we are on the right position, since the total count = 7, 
+    the median must be either the left on 1st array or the left on 2nd array
+
+    left = max(4, 2) = 4, this is the result
+
+
+	Time		O(m+n)
+	Space 	O(m+n)
+	84 ms, faster than 41.34%
+    17apr2019
+"""
+
+
+class Solution(object):
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+
+        # get the lengths
+        m, n = len(nums1), len(nums2)
+
+        # make sure that m <= n
+        if m > n:
+            nums1, nums2 = nums2, nums1
+            m, n = n, m
+
+        # if the larger array is empty, just return empty
+        if n == 0:
+            return 0.0
+
+        # binary search
+        iMin = 0
+        iMax = m
+        # the number of sum of nums1[left1] and nums2[left] must be the half of the total count
+        halfLen = (m + n + 1) / 2
+        while iMin <= iMax:
+            i = (iMin + iMax) / 2
+            j = halfLen - i
+            if i < m and nums2[j-1] > nums1[i]:
+                # i is too small, increase it
+                iMin = i + 1
+            elif i > 0 and nums1[i-1] > nums2[j]:
+                # i is too big, decrease it
+                iMax = i - 1
+            else:
+                # i is perfect
+
+                # find the left
+                maxLeft = 0
+                if i == 0:
+                    maxLeft = nums2[j-1]
+                elif j == 0:
+                    maxLeft = nums1[i-1]
+                else:
+                    maxLeft = max(nums1[i-1], nums2[j-1])
+
+                if (m + n) % 2 == 1:
+                    return maxLeft * 1.0
+
+                # find the right
+                minRight = 0
+                if i == m:
+                    minRight = nums2[j]
+                elif j == n:
+                    minRight = nums1[i]
+                else:
+                    minRight = min(nums1[i], nums2[j])
+
+                return (maxLeft + minRight) / 2.0
+
+
+a = [1, 3]
+b = [2]
+print(Solution().findMedianSortedArrays(a, b))
+
+a = [1, 3]
+b = [2, 4]
+print(Solution().findMedianSortedArrays(a, b))
+
+
+a = []
+b = [1]
+print(Solution().findMedianSortedArrays(a, b))
+
+a = [4, 6, 7, 8]
+b = [1, 2, 3, 5]
+print(Solution().findMedianSortedArrays(a, b))
