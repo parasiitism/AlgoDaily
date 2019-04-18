@@ -6,7 +6,7 @@
 
     Time    O(n)
     Space   O(1)
-    120ms beats 19.81%
+    84 ms, faster than 33.44%
     18apr2019
 """
 

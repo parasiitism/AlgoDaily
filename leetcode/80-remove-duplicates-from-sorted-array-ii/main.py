@@ -4,31 +4,31 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
 
-        1st approach:
-        - use a hashtable
-        - just pop the duplicate items which occurence > 2
-        - return the length
+        2nd approach: 2 pointers
+        - slow pointer points to the right most distinct number
+        - fast pointer is for iteration
+        - if fast pointer meets a different value, slow pointer move forward and modify the numer as the fast pointer points to
+
         Time    O(n)
-        Space   O(n)
-        120ms beats 9.74%
-        21jan2019
+        Space   O(1)
+        44 ms, faster than 49.13%
+        18apr2019
         """
         if len(nums) == 0:
             return 0
-        ht = {nums[0]: 1}
-        i = 1
-        while i < len(nums):
+        if len(nums) <= 2:
+            return len(nums)
+        slow = 1
+        for i in range(2, len(nums)):
             num = nums[i]
-            if num in ht:
-                if ht[num] < 2:
-                    ht[num] += 1
-                    i += 1
-                else:
-                    nums.pop(i)
+            if nums[slow] == num:
+                if nums[slow-1] != num:
+                    slow += 1
+                    nums[slow] = num
             else:
-                ht[num] = 1
-                i += 1
-        return len(nums)
+                slow += 1
+                nums[slow] = num
+        return slow + 1
 
 
 a = [1, 1, 1, 2, 2, 3]
