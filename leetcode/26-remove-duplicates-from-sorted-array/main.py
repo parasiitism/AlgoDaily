@@ -1,28 +1,31 @@
+"""
+    2nd approach: 2 pointers
+    - slow pointer points to the right most distinct number
+    - fast pointer is for iteration
+    - if fast pointer meets a different value, slow pointer move forward and modify the numer as the fast pointer points to
+
+    Time    O(n)
+    Space   O(1)
+    120ms beats 19.81%
+    18apr2019
+"""
+
+
 class Solution(object):
     def removeDuplicates(self, nums):
         """
         :type nums: List[int]
         :rtype: int
-
-        1st approach:
-        - just pop the duplicate items
-        - return the length
-        Time    O(n)
-        Space   O(1)
-        120ms beats 19.81%
-        21jan2019
         """
         if len(nums) == 0:
             return 0
-        i = 1
-        cur = nums[0]
-        while i < len(nums):
-            if nums[i] == cur:
-                nums.pop(i)  # python pop() is in-place
-            else:
-                cur = nums[i]
-                i += 1
-        return len(nums)
+        slow = 0
+        for i in range(1, len(nums)):
+            num = nums[i]
+            if nums[slow] != num:
+                slow += 1
+                nums[slow] = num
+        return slow + 1
 
 
 a = []
