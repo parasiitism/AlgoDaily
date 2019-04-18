@@ -540,3 +540,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 225 | [Longest Substring with At Least K Repeating Characters](/leetcode/395-longest-substring-with-at-least-k-repeating-characters) | tree | [leetcode 395](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/) | 1st O(n^2), 2nd O(nlogn) |
 | 225 | [Single Number II](/leetcode/137-single-number-ii) | bit op | [leetcode 137](https://leetcode.com/problems/single-number-ii/) | 1st Time O(n) Space O(n). 📌2nd Time O(32n) Space O(1) |
 | 225 | [Single Number III](/leetcode/260-single-number-iii) | bit op | [leetcode 137](https://leetcode.com/problems/single-number-iii/) | 1st Time O(n) Space O(n). 📌2nd Time O(n) Space O(1) |
+| 226 | [Hamming Distance](/leetcode/461-hamming-distance) | bit op | [leetcode 461](https://leetcode.com/problems/hamming-distance/) | 📌 |
