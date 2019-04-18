@@ -21,7 +21,7 @@ func findDuplicate(nums []int) int {
 	return -1
 }
 
-// binary search
+// sort
 // time: O(nlongn)
 // space: O(1)
 // look for the duplicate adjacent items
