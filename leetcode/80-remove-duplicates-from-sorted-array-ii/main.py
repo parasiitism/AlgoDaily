@@ -21,11 +21,17 @@ class Solution(object):
         slow = 1
         for i in range(2, len(nums)):
             num = nums[i]
+            # 1st case: if last == cur but last last != cur
+            # [1,1,2,2,....
+            #      s ^
             if nums[slow] == num:
                 if nums[slow-1] != num:
                     slow += 1
                     nums[slow] = num
             else:
+                # 2 case: if last != cur
+                # [1,1,2
+                #    s ^
                 slow += 1
                 nums[slow] = num
         return slow + 1
