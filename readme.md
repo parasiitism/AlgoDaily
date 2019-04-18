@@ -543,4 +543,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 226 | [Hamming Distance](/leetcode/461-hamming-distance) | bit op | [leetcode 461](https://leetcode.com/problems/hamming-distance/) | 📌 |
 | 226 | [Total Hamming Distance](/leetcode/477-total-hamming-distance) | bit op | [leetcode 477](https://leetcode.com/problems/total-hamming-distance/) | 1st O(n^2logm) LTE. 📌2nd O(nlogm) |
 | 226 | [Binary Number with Alternating Bits](/leetcode/693-binary-number-with-alternating-bits) | bit op | [leetcode 477](https://leetcode.com/problems/binary-number-with-alternating-bits/) | 1st O(logn) |
-| 226 | [Integer Replacement](/leetcode/397-integer-replacement) | dyanmic programming, bit op | [leetcode 397](https://leetcode.com/problems/integer-replacement/) | 1st O(n) |
+| 226 | [Integer Replacement](/leetcode/397-integer-replacement) | dyanmic programming, bit op | [leetcode 397](https://leetcode.com/problems/integer-replacement/) | ⭐️1st O(n), 2nd bit op O(nlogm) |
