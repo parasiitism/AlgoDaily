@@ -26,9 +26,12 @@ class Solution(object):
             # temp = hold
             # because if we sell and buy a stock on the same day, your total gain must be less than just hold
             # due to the transaction fee
-            hold = max(hold, cash-price)
-            cash = max(cash, hold+price-fee)
-        return cash
+
+            # remain the hold OR to buy: we need to spend cash to purchase the current stock and transaction fee
+            hold = max(hold, cash-price-fee)
+            # remain the cash OR to sell: cash out the hold + cur price = all the cash we have
+            cash = max(cash, hold+price)
+        return cash, hold
 
 
 a = [1, 3, 2, 8, 4, 9]
