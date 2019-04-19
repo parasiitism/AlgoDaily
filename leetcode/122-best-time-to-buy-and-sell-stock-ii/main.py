@@ -38,7 +38,7 @@ print(Solution().maxProfit([1]))
 print("-----------------------------------")
 
 """
-    1st approach: increasing sequence
+    2nd approach: maintain the minVal
     - keep track of the minVal
     - if current value > minVal, add up the diff = prices[i] - minVal to the result, then reset the minVal
 
