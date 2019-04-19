@@ -546,3 +546,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 226 | [Integer Replacement](/leetcode/397-integer-replacement) | dyanmic programming, bit op | [leetcode 397](https://leetcode.com/problems/integer-replacement/) | ⭐️1st O(n), 2nd bit op O(nlogm) |
 | 226 | [Image Smoother](/leetcode/661-image-smoother) | array | [leetcode 661](https://leetcode.com/problems/image-smoother/) | 1st O(n) |
 | 227 | [Partition Array Into Three Parts With Equal Sum](/leetcode/1013-partition-array-into-three-parts-with-equal-sum) | array | [leetcode 1013](https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/) | 1st O(n) |
+| 227 | [Non-decreasing Array](/leetcode/665-non-decreasing-array) | array | [leetcode 665](https://leetcode.com/problems/non-decreasing-array/) | 1st O(4n) |
+| 227 | [Monotonic Array](/leetcode/896-monotonic-array) | array | [leetcode 665](https://leetcode.com/problems/monotonic-array/) | 1st O(n) |
