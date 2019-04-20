@@ -3,7 +3,7 @@ package main
 /*
 	questions to ask:
 	- are the cost of add, delete, remove the same? yes
-	- wil; there be empty strings? yes
+	- will there be empty strings? yes
 
 	classic dynamic programming approach
 	- https://www.youtube.com/watch?v=We3YDTzNXEk
@@ -11,7 +11,7 @@ package main
 	- https://www.youtube.com/watch?v=ocZMDMZwhCY&t=9s
 
 	Time    O(word1 * word2)
-	Time    O(()word1+1) * (word2+1))
+	Space    O((word1+1) * (word2+1))
 	8 ms, faster than 87.31%
 */
 func minDistance(word1 string, word2 string) int {

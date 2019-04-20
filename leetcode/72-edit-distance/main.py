@@ -1,7 +1,7 @@
 """
     questions to ask:
     - are the cost of add, delete, remove the same? yes
-    - wil; there be empty strings? yes
+    - will there be empty strings? yes
 
     classic dynamic programming approach
     - https://www.youtube.com/watch?v=We3YDTzNXEk
@@ -9,7 +9,7 @@
     - https://www.youtube.com/watch?v=ocZMDMZwhCY&t=9s
 
     Time    O(word1 * word2)
-    Time    O(()word1+1) * (word2+1))
+    Space    O((word1+1) * (word2+1))
     196 ms, faster than 22.57%
 """
 
@@ -17,9 +17,12 @@
 class Solution(object):
     def minDistance(self, word1, word2):
         """
-        :type word1: str
-        :type word2: str
-        :rtype: int
+        construct a 2D array
+
+        for empty word1[:0], empty string, we have to do len(word2) operations to form word2
+        for empty word2[:0], empty string, we have to do len(word1) operations to form word1
+
+        for other cells, put 0 for now
         """
         dp = []
         l1 = len(word1)
@@ -35,6 +38,11 @@ class Solution(object):
                     temp.append(0)
             dp.append(temp)
 
+        """
+            for each cell,
+            - if word1 == word2, use the upperleft value
+            - if word1 != word2, get the min value from upperleft, left, above and +1
+        """
         for i in range(l1):
             for j in range(l2):
                 if word1[i] == word2[j]:
