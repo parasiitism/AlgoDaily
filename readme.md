@@ -553,3 +553,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 228 | [Array Nesting](/leetcode/565-array-nesting) | hashtable | [leetcode 565](https://leetcode.com/problems/array-nesting/) | 1st O(n^2) 📌2nd O(n) |
 | 228 | [Nested List Weight Sum II](/leetcode/364-nested-list-weight-sum-ii) | recursion, hashtable | [leetcode 364](https://leetcode.com/problems/nested-list-weight-sum-ii/) | 1st O(3n), 2nd O(2n) |
 | 228 | [Maximum Length of Repeated Subarray](/leetcode/718-maximum-length-of-repeated-subarray) | dynamic programming | [leetcode 364](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) | 📌longest common substring |
+| 228 | [Interval List Intersections](/leetcode/986-interval-list-intersections) | greedy | [leetcode 986](https://leetcode.com/problems/interval-list-intersections/) | 📌 similar to merge intervals |
