@@ -44,7 +44,8 @@ func isOneEditDistance(s string, t string) bool {
 }
 
 /*
-	2nd approach: 1 pass
+	2nd approach: check substrings
+	- when we encounter different characters at the same index, compare the remaining substrings
 
 	There're 3 possibilities to satisfy the question:
 	1) Replace 1 char:
