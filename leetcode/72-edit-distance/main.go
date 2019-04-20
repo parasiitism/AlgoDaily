@@ -8,7 +8,7 @@ package main
 	classic dynamic programming approach
 	- https://www.youtube.com/watch?v=We3YDTzNXEk
 	- https://www.youtube.com/watch?v=MiqoA-yF-0M
-	- https://www.youtube.com/watch?v=ocZMDMZwhCY&t=9s
+	- https://www.youtube.com/watch?v=ocZMDMZwhCY
 
 	Time    O(word1 * word2)
 	Space    O((word1+1) * (word2+1))

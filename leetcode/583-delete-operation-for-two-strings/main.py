@@ -6,7 +6,17 @@
     classic dynamic programming approach
     - https://www.youtube.com/watch?v=We3YDTzNXEk
     - https://www.youtube.com/watch?v=MiqoA-yF-0M
-    - https://www.youtube.com/watch?v=ocZMDMZwhCY&t=9s
+    - https://www.youtube.com/watch?v=ocZMDMZwhCY
+
+    dp meaning:
+
+    edit    |   insert
+    -------------------
+    delete  |   newstring
+
+    insert means: insert one chracter to the horizontal string to form the vertical string
+    delete means: delete one chracter from the horizontal string to form the vertical string
+    edit means  : edit one chracter on the horizontal string to form the vertical string
 
     Time    O(word1 * word2)
     Space    O((word1+1) * (word2+1))
