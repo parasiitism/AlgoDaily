@@ -549,6 +549,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 227 | [Non-decreasing Array](/leetcode/665-non-decreasing-array) | array | [leetcode 665](https://leetcode.com/problems/non-decreasing-array/) | 1st O(4n) |
 | 227 | [Monotonic Array](/leetcode/896-monotonic-array) | array | [leetcode 665](https://leetcode.com/problems/monotonic-array/) | 1st O(n), 2nd O(n) more concise |
 | 227 | [Best Time to Buy and Sell Stock with Transaction Fee](/leetcode/714-best-time-to-buy-and-sell-stock-with-transaction-fee) | dynamic programming | [leetcode 714](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/) | 📌1st O(n) |
-| 227 | [Best Time to Buy and Sell Stock with Cooldown](/leetcode/309-best-time-to-buy-and-sell-stock-with-cooldown) | dynamic 
-programming | [leetcode 309](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 📌1st O(n) |
+| 227 | [Best Time to Buy and Sell Stock with Cooldown](/leetcode/309-best-time-to-buy-and-sell-stock-with-cooldown) | dynamic programming | [leetcode 309](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 📌1st O(n) |
 | 228 | [Array Nesting](/leetcode/565-array-nesting) | hashtable | [leetcode 565](https://leetcode.com/problems/array-nesting/) | 1st O(n^2) 📌2nd O(n) |
