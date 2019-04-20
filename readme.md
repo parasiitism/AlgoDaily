@@ -394,7 +394,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 182 | [Word Ladder](/leetcode/127-word-ladder) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder) | 1st LTE, ⭐️2nd O(n^26*l) |
 | 182 | [Word Ladder II](/leetcode/126-word-ladder-ii) | bfs, hashtable | [leetcode 127](https://leetcode.com/problems/word-ladder-ii) | LTE, revise later |
 | 182 | [Minimum Genetic Mutation](/leetcode/433-minimum-genetic-mutation) | bfs, hashtable | [leetcode 433](https://leetcode.com/problems/minimum-genetic-mutation) | 1st O(MN) |
-| 183 | [Bold Words in String](/leetcode/758-bold-words-in-string/) | hashtable, sort | [leetcode 433](https://leetcode.com/problems/bold-words-in-string/) | ️️⭐️1st O(nlogn): interval problem |
+| 183 | [Bold Words in String](/leetcode/758-bold-words-in-string/) | hashtable, sort | [leetcode 758](https://leetcode.com/problems/bold-words-in-string/) | ️️⭐️1st O(nlogn): interval problem |
 | 183 | [Add Bold Tag in String](/leetcode/616-add-bold-tag-in-string/) | hashtable, sort | [leetcode 616](https://leetcode.com/problems/add-bold-tag-in-string/) | ⭐️1st O(nlogn): interval problem |
 | 183 | [Number of Segments in a String](/leetcode/434-number-of-segments-in-a-string/) | string | [leetcode 616](https://leetcode.com/problems/number-of-segments-in-a-string/) | takeaway`strings.Fields(s)`|
 | 183 | [Sort Colors](/leetcode/75-sort-colors/) | bucket | [leetcode 75](https://leetcode.com/problems/sort-colors/) | 0th merge sort O(nlogn), 1st bucket sort O(2n), 📌2nd moving zeros swap O(2n), 📌3rd partitioning swap O(n) |
@@ -552,3 +552,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 227 | [Best Time to Buy and Sell Stock with Cooldown](/leetcode/309-best-time-to-buy-and-sell-stock-with-cooldown) | dynamic programming | [leetcode 309](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 📌1st O(n) |
 | 228 | [Array Nesting](/leetcode/565-array-nesting) | hashtable | [leetcode 565](https://leetcode.com/problems/array-nesting/) | 1st O(n^2) 📌2nd O(n) |
 | 228 | [Nested List Weight Sum II](/leetcode/364-nested-list-weight-sum-ii) | recursion, hashtable | [leetcode 364](https://leetcode.com/problems/nested-list-weight-sum-ii/) | 1st O(3n), 2nd O(2n) |
+| 228 | [Maximum Length of Repeated Subarray](/leetcode/718-maximum-length-of-repeated-subarray) | dynamic programming | [leetcode 364](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) | 📌longest common substring |

@@ -1,3 +1,16 @@
+"""
+    1st approach: merge intervals
+    1. find the positions for the bold tags, [start, end)
+	2. sort the intervals, O(nlogn)
+	3. merge the intervals
+	4. construct result by dequeuing the merged intervels from the front
+
+    Time    O(nlogn)
+    Space   O(n)
+    36 ms, faster than 89.92%
+"""
+
+
 class Solution(object):
     def boldWords(self, words, S):
         """
@@ -8,6 +21,7 @@ class Solution(object):
         for word in set(words):
             t = S.find(word)
             while t > -1:
+                # include left, exclude right => [start, end)
                 intervals.append([t, t+len(word)])
                 t = S.find(word, t+1)
         # sort the intervals, O(nlogn)
@@ -21,25 +35,19 @@ class Solution(object):
                 merged[-1][1] = max(merged[-1][1], interval[1])
             else:
                 merged.append(interval)
-        # put the intervals into sets
-        opens = set()
-        closes = set()
-        for m in merged:
-            opens.add(m[0])
-            closes.add(m[1])
-        # construct result
+        # construct result by dequeuing the merged intervels from the front
         res = ""
-        stack = 0
-        for i in range(len(S)):
-            if i in opens:
-                res += "<b>"
-                stack += 1
-            if i in closes:
-                res += "</b>"
-                stack -= 1
-            res += S[i]
-        if stack > 0:
-            res += "</b>"
+        cur = merged.pop(0)
+        for i in range(len(S)+1):
+            if i == cur[0]:
+                res += '<b>'
+            if i == cur[1]:
+                res += '</b>'
+                if len(merged) > 0:
+                    cur = merged.pop(0)
+            if i < len(S):
+                res += S[i]
+
         return res
 
 
