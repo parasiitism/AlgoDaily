@@ -556,3 +556,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 228 | [Interval List Intersections](/leetcode/986-interval-list-intersections) | greedy | [leetcode 986](https://leetcode.com/problems/interval-list-intersections/) | 📌 similar to merge intervals |
 | 228 | [Employee Free Time](/leetcode/759-employee-free-time) | heap, greedy | [leetcode 759](https://leetcode.com/problems/employee-free-time/) | 1st O(nlogn) |
 | 228 | [Insert Interval](/leetcode/57-insert-interval) | binary search | [leetcode 57](https://leetcode.com/problems/insert-interval/) | 📌1st O(n) |
+| 228 | [Delete Operation for Two Strings](/leetcode/583-delete-operation-for-two-strings) | dynamic programming | [leetcode 583](https://leetcode.com/problems/delete-operation-for-two-strings/) | 📌1st O(n^2) similar to [leetcode 72](https://leetcode.com/problems/edit-distance/) |
