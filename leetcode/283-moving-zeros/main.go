@@ -2,8 +2,12 @@ package main
 
 /*
 	1st approach:
-	- 2 index pointers: 1 for first non-zero number, 1 for last zeo
+	- 2 index pointers: slow pointer points to the first zero, fast pointer is for iteration
 	- swap the non-zero number with the zero
+
+	Time		O(n)
+	Space		O(1)
+	64 ms, faster than 89.29%
 */
 func moveZeroes(nums []int) {
 	idx0 := -1
