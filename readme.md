@@ -560,3 +560,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 228 | [Delete Operation for Two Strings](/leetcode/583-delete-operation-for-two-strings) | dynamic programming | [leetcode 583](https://leetcode.com/problems/delete-operation-for-two-strings/) | 📌1st O(n^2) similar to [leetcode 72](https://leetcode.com/problems/edit-distance/) |
 | 229 | [Building Palindromes](https://github.com/calvinchankf/googlekickstart/blob/master/2019/roundB/a.py) | hashtable | kickstart | round B q1: passed small dataset only |
 | 229 | [Diverse Subarray](https://github.com/calvinchankf/googlekickstart/blob/master/2019/roundB/c.py) | hashtable | kickstart | round B q3: passed small dataset only |
+| 229 | [Find Common Characters](/leetcode/1002-find-common-characters) | hashtable | [leetcode 1002](https://leetcode.com/problems/find-common-characters/) | 1st O(MNM). 2nd O(MN) |
