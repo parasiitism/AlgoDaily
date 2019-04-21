@@ -25,11 +25,12 @@ I believe that practising algorithms every day is a long-term investment in my l
 - and more...
 
 #### Questions from
-- [leetcode](https://leetcode.com)
-- [project euler](https://projecteuler.net)
-- glassdoor
-- interviews
-- google code jam
+- [Leetcode](https://leetcode.com)
+- [Project Euler](https://projecteuler.net)
+- [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam)
+- [Google Kick Start](https://codingcompetitions.withgoogle.com/kickstart/)
+- Glassdoor
+- Interviews
 - ...
 
 #### Started on September 1st 2018
@@ -513,10 +514,10 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 213 | [Keys and Rooms](/leetcode/841-keys-and-rooms) | graph | [leetcode 841](https://leetcode.com/problems/keys-and-rooms/)| 1st iterative dfs. 2nd recursive dfs |
 | 213 | [Flatten 2D Vector](/leetcode/251-flatten-2d-vector) | 2pointers | [leetcode 251](https://leetcode.com/problems/flatten-2d-vector/)| 1st unfolding. 2nd 2pointers |
 | 213 | [Flatten Nested List Iterator](/leetcode/341-flatten-nested-list-iterator) | recursion | [leetcode 251](https://leetcode.com/problems/flatten-nested-list-iterator/)| 1st recursion |
-| 214 | [Foregone Solution](/gcj/2019/qualification/a.py) | math | codejam | qualification round Q1 |
-| 214 | [Your Can Go Your Own Way](/gcj/2019/qualification/b.py) | graph | codejam | qualification round Q2 |
-| 214 | [Crytopangrams](/gcj/2019/qualification/c.py) | math | codejam | qualification round Q3. only works on sample testcases...😢 |
-| 215 | [Crytopangrams](/gcj/2019/qualification/c.py) | math, bsearch, hash | codejam | qualification round Q3. I finally made it works ✌🏻 |
+| 214 | [Foregone Solution](https://github.com/calvinchankf/googlecodejam/blob/master/2019/qualification/a.py) | math | codejam | qualification round Q1 |
+| 214 | [Your Can Go Your Own Way](https://github.com/calvinchankf/googlecodejam/blob/master/2019/qualification/b.py) | graph | codejam | qualification round Q2 |
+| 214 | [Crytopangrams](https://github.com/calvinchankf/googlecodejam/blob/master/2019/qualification/c.py) | math | codejam | qualification round Q3. only works on sample testcases...😢 |
+| 215 | [Crytopangrams](https://github.com/calvinchankf/googlecodejam/blob/master/2019/qualification/c.py) | math, bsearch, hash | codejam | qualification round Q3. I finally made it works ✌🏻 |
 | 216 | [Nested List Weight Sum](/leetcode/339-nested-list-weight-sum) | graph | [leetcode 339](https://leetcode.com/problems/nested-list-weight-sum/) | 1st recursive dfs, 2nd iterative dfs |
 | 216 | [Calculate Maximum Call Stack's Size](/miscellaneous/max-callstack-size) | recursion | study | |
 | 217 | [Most Frequent Subtree Sum](/leetcode/508-most-frequent-subtree-sum) | tree, hashtable | [leetcode 508](https://leetcode.com/problems/most-frequent-subtree-sum/) | 1st bottom up recursive dfs + hashtable O(n) |
@@ -526,7 +527,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 219 | [2Sum combinations](/amazon/2sum-combinations) | binary search, recursion | interview | ⭐️ the followup is hard |
 | 220 | [Palindrome Permutation](/leetcode/266-palindrome-permutation) | hashtable | [leetcode 266](https://leetcode.com/problems/palindrome-permutation/) | |
 | 220 | [Palindrome Permutation II](/leetcode/267-palindrome-permutation-ii) | hashtable, recursion | [leetcode 267](https://leetcode.com/problems/palindrome-permutation-ii/) | ⭐️|
-| 221 | [Pylons](/gcj/2019/1a/a.py) | recursion | codejam | round 1A q1 |
+| 221 | [Pylons](https://github.com/calvinchankf/googlecodejam/blob/master/2019/1a/a.py) | recursion | codejam | round 1A q1 |
 | 221 | [Longest Valid Parentheses](/leetcode/32-longest-valid-parentheses) | dynamic programming | [leetcode 32](https://leetcode.com/problems/longest-valid-parentheses/) | 1st O(n^3) LTE 📌2nd O(n) |
 | 221 | [Remove Invalid Parentheses](/leetcode/301-remove-invalid-parentheses) | recursion | [leetcode 301](https://leetcode.com/problems/remove-invalid-parentheses/) | 1st O(2^n) LTE 📌2nd < O(2^n) |
 | 222 | [Shortest Palindrome](/leetcode/214-shortest-palindrome) | string | [leetcode 214](https://leetcode.com/problems/shortest-palindrome/) | 1st O(n^2) python LTE, golang beats 5% 📌2nd learned from others O(n^2) but less heavy string operation |
@@ -557,3 +558,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 228 | [Employee Free Time](/leetcode/759-employee-free-time) | heap, greedy | [leetcode 759](https://leetcode.com/problems/employee-free-time/) | 1st O(nlogn) |
 | 228 | [Insert Interval](/leetcode/57-insert-interval) | binary search | [leetcode 57](https://leetcode.com/problems/insert-interval/) | 📌1st O(n) |
 | 228 | [Delete Operation for Two Strings](/leetcode/583-delete-operation-for-two-strings) | dynamic programming | [leetcode 583](https://leetcode.com/problems/delete-operation-for-two-strings/) | 📌1st O(n^2) similar to [leetcode 72](https://leetcode.com/problems/edit-distance/) |
+| 229 | [Building Palindromes](https://github.com/calvinchankf/googlekickstart/blob/master/2019/roundB/a.py) | hashtable | kickstart | round B q1: passed small dataset only |
+| 229 | [Diverse Subarray](https://github.com/calvinchankf/googlekickstart/blob/master/2019/roundB/c.py) | hashtable | kickstart | round B q3: passed small dataset only |
