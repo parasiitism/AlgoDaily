@@ -567,3 +567,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 229 | [Find Common Characters](/leetcode/1002-find-common-characters) | hashtable | [leetcode 1002](https://leetcode.com/problems/find-common-characters/) | 1st O(MNM). 2nd O(MN) |
 | 230 | [Min Queue](https://github.com/calvinchankf/FrontEndConcepts/tree/master/implementation/min-queue) | binary search, linked list | glassdoor | O(logn) |
 | 230 | [XOR Between Range](/miscellaneous/xor-between-range) | bit op | glassdoor | 📌O(1) |
+| 230 | [XOR Between Range](/leetcode/895-maximum-frequency-stack) | hashtable | [leetcode 895](https://leetcode.com/problems/maximum-frequency-stack/) | 📌O(1) |
