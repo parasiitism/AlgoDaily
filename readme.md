@@ -565,3 +565,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 229 | [Building Palindromes](https://github.com/calvinchankf/GoogleKickStart/blob/master/2019/roundB/a.py) | hashtable | kickstart | round B q1: passed small dataset only |
 | 229 | [Diverse Subarray](https://github.com/calvinchankf/GoogleKickStart/blob/master/2019/roundB/c.py) | hashtable | kickstart | round B q3: passed small dataset only |
 | 229 | [Find Common Characters](/leetcode/1002-find-common-characters) | hashtable | [leetcode 1002](https://leetcode.com/problems/find-common-characters/) | 1st O(MNM). 2nd O(MN) |
+| 230 | [Min Queue](https://github.com/calvinchankf/FrontEndConcepts/tree/master/implementation/min-queue) | binary search, linked list | glassdoor | O(logn) |
