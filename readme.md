@@ -569,4 +569,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 230 | [XOR Between Range](/miscellaneous/xor-between-range) | bit op | glassdoor | 📌O(1) |
 | 230 | [Maximum Frequency Stack](/leetcode/895-maximum-frequency-stack) | hashtable | [leetcode 895](https://leetcode.com/problems/maximum-frequency-stack/) | 📌O(1) |
 | 230 | [Split Linked List in Parts](/leetcode/725-split-linked-list-in-parts]) | math, linked list | [leetcode 725](https://leetcode.com/problems/split-linked-list-in-parts/) | O(2n) |
-| 231 | [Shuffle an Array](/leetcode/384-shuffle-an-array]) | array | [leetcode 384](https://leetcode.com/problems/shuffle-an-array/) | 1st bultin `random.shuffle()`. 📌2nd O(n) Fisher-Yates Algorithm |
+| 231 | [Shuffle an Array](/leetcode/384-shuffle-an-array) | array | [leetcode 384](https://leetcode.com/problems/shuffle-an-array/) | 1st bultin `random.shuffle()`. 📌2nd O(n) Fisher-Yates Algorithm |
+| 231 | [Flip Equivalent Binary Trees](/leetcode/951-flip-equivalent-binary-trees) | recursion | [leetcode 951](https://leetcode.com/problems/flip-equivalent-binary-trees/) | ⭐️1st O(n) |

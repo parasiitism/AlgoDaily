@@ -12,7 +12,7 @@
 
     Time    O(n^2)
     Space   O(n)
-    LTE 119/120
+    LTE 119/120 (python only)
 """
 
 
@@ -22,19 +22,21 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        rStr = self.reverseStr(s)
+        rStr = s[::-1]
         for i in range(len(s)):
             temp = rStr[:i] + s
             if self.isPalindrome(temp):
                 return temp
         return ""
 
-    def reverseStr(self, s):
-        res = ""
-        for c in s:
-            res = c + res
-        return res
+    """
+    # it takes completely O(n), it's too slow
+    def isPalindrome(self, s):
+        r = s[::-1]
+        return r == s
+    """
 
+    # it takes less than O(n) because we dont necessarily need to iterate the whole array
     def isPalindrome(self, s):
         left = 0
         right = len(s)-1
@@ -66,12 +68,13 @@ print("---------------------")
 """
     learned from others:
 
-    e.g. for "dedcba"
-    s          dedcba
-    r[0:]      abcded    Nope...
-    r[1:]   (a)bcded     Nope...
-    r[2:]  (ab)cded      Nope...
-    r[3:] (abc)ded       Yes! the string starts with "ded", so the result is abc + dedcba
+    e.g. "abacde"
+    s          abacde
+    --------------------------
+    r[0:]      edcaba    Nope
+    r[1:]    e|dcaba     Nope
+    r[2:]   ed|caba      Nope
+    r[3:]  edc|aba       Yes! the string starts with "aba", so the result is edc + abacde
 
     ref:
     - https://leetcode.com/problems/shortest-palindrome/discuss/60099/AC-in-288-ms-simple-brute-force
