@@ -42,6 +42,11 @@ class Solution(object):
 
             # if they are seen and they are not in the same set
             # multiply all the values in A and values[i] so that set A and set B will be with a same ratio
+            # e.g. a/b=2, c/d=4, b/c=3
+            # a     b   c   d
+            # 2     1   4   1
+            # ---------------- then we see b/c=3, mutliply a, b with values[i]*ht[b] = 3 * 4 = 12
+            # 24    12  4   1
             rootA = uf.find(a)
             rootB = uf.find(b)
             if a in ht and b in ht and rootA != rootB:
