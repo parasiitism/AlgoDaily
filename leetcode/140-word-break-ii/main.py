@@ -6,65 +6,14 @@
     - do we need to deal with punctuation? no
 """
 
+"""
+    2nd approach is to modify the top-down approach to a bottum-up approach
+    - when we reach to an empty string, it means the path it went through is one of the result
 
-class Solution(object):
-    def wordBreak(self, s, wordDict):
-        """
-        :type s: str
-        :type wordDict: List[str]
-        :rtype: List[str]
-
-        1st approach: top-down dfs
-        - generate all possibilites by appending a valid "word" to its prefix
-        - since we cant do memorization if we construct the result by top-down
-        - it got TLE
-
-        Time    O(n^n)
-        Space   O(n^n)
-        TLE
-        """
-        wordSet = set()
-        for w in wordDict:
-            wordSet.add(w)
-        ans = self.find(s, wordSet, "")
-        return ans
-
-    def find(self, s, wordSet, path):
-        res = []
-        if len(s) == 0:
-            return [path[1:]]
-        for word in wordSet:
-            w = s[:len(word)]
-            if w == word:
-                tempList = self.find(s[len(word):], wordSet, path+" "+w)
-                res += tempList
-        return res
-
-
-s = "catsandog"
-d = ["cats", "dog", "sand", "and", "cat"]
-print(Solution().wordBreak(s, d))
-print("---")
-
-s = "catsanddog"
-d = ["cat", "cats", "and", "sand", "dog"]
-print(Solution().wordBreak(s, d))
-print("---")
-
-s = "pineapplepenapple"
-d = ["apple", "pen", "applepen", "pine", "pineapple"]
-print(Solution().wordBreak(s, d))
-print("---")
-
-s = "pineapplepenapple"
-d = ["apple", "pen", "applepen", "pine", "pineapple", "penapple"]
-print(Solution().wordBreak(s, d))
-print("---")
-
-s = "catsandog"
-d = ["cats", "dog", "sand", "and", "cat"]
-print(Solution().wordBreak(s, d))
-print("----------------------------------------------------------------")
+    Time    O(n^2*k)
+    Space   O(n^2*k)
+    TLE
+"""
 
 
 class Solution(object):
@@ -73,13 +22,6 @@ class Solution(object):
         :type s: str
         :type wordDict: List[str]
         :rtype: List[str]
-
-        2nd approach is to modify the top-down approach to a bottum-up approach
-        - when we reach to an empty string, it means the path it went through is one of the result
-
-        Time    O(n^2*k)
-        Space   O(n^2*k)
-        TLE
         """
         wordSet = set()
         for w in wordDict:
@@ -106,10 +48,10 @@ class Solution(object):
         for word in wordSet:
             w = s[:len(word)]
             if w == word:
-                tempList = self.find(s[len(word):], wordSet, m)
-                for temp in tempList:
-                    if len(temp) > 0:
-                        res.append(w + " " + temp)
+                sentences = self.find(s[len(word):], wordSet, m)
+                for sentence in sentences:
+                    if len(sentence) > 0:
+                        res.append(w + " " + sentence)
                     else:
                         res.append(w)
         return res
@@ -173,10 +115,10 @@ class Solution(object):
         for word in wordSet:
             w = s[:len(word)]
             if w == word:
-                tempList = self.find(s[len(word):], wordSet, m)
-                for temp in tempList:
-                    if len(temp) > 0:
-                        res.append(w + " " + temp)
+                sentences = self.find(s[len(word):], wordSet, m)
+                for sentence in sentences:
+                    if len(sentence) > 0:
+                        res.append(w + " " + sentence)
                     else:
                         res.append(w)
         # memorize the result for s,
