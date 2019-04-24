@@ -119,27 +119,25 @@ if ans != None:
 
 
 class Solution(object):
-    def __init__(self):
-        self.res = None
-        self.next = False
-
     def inorderSuccessor(self, root, p):
         """
-        3rd, decent iterative approach:
+        3rd: very similar to upper bound binary search BUT
+        - here is BSTsearch, only record the sucessor when we go left
+        - then the sucessor is either your parent OR your left most leaf in right subtree
 
         Time    O(logn)
         Space   O(h)
-        64 ms, faster than 85.19% 
-        21feb2019
+        68 ms, faster than 61.86%
+        24apr2019
         """
         node = root
         suc = None
         while node != None:
-            if p.val < node.val:
+            if p.val >= node.val:
+                node = node.right
+            else:
                 suc = node
                 node = node.left
-            else:
-                node = node.right
         return suc
 
 
