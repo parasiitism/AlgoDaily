@@ -8,11 +8,14 @@
 """
     2nd approach
 	- actually we dont need to go though all the nodes
-	- we can just search for the node which the left and right have different height
+	- we can just search for the node which the left and right have different heights
+        - if no diff, the subtree has 2^n-1 nodes
+        - if has diff, go into its children and count d
 
     Time    O(logn * logn) because it is almost balenced
     Space   O(h)
     80 ms, faster than 80.30%
+    24apr2019
 """
 
 
