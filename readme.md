@@ -571,3 +571,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 230 | [Split Linked List in Parts](/leetcode/725-split-linked-list-in-parts]) | math, linked list | [leetcode 725](https://leetcode.com/problems/split-linked-list-in-parts/) | O(2n) |
 | 231 | [Shuffle an Array](/leetcode/384-shuffle-an-array) | array | [leetcode 384](https://leetcode.com/problems/shuffle-an-array/) | 1st bultin `random.shuffle()`. 📌2nd O(n) Fisher-Yates Algorithm |
 | 231 | [Flip Equivalent Binary Trees](/leetcode/951-flip-equivalent-binary-trees) | recursion | [leetcode 951](https://leetcode.com/problems/flip-equivalent-binary-trees/) | ⭐️1st O(n) |
+| 232 | [Toeplitz Matrix](/leetcode/766-toeplitz-matrix) | array | [leetcode 766](https://leetcode.com/problems/toeplitz-matrix/) | 1st O(rc)Q(r). 2nd O(rc)Q(1) |
