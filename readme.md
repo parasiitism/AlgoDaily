@@ -53,7 +53,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 10 | [Closest Binary Search Tree Value](/leetcode/270-closest-binary-search-tree-value) | binary search, tree | [leetcode 270](https://leetcode.com/problems/closest-binary-search-tree-value) | revise day9 problems with legit recursive & iterative dfs |
 | 11 | [Breadth First Search](/miscellaneous/breadth-first-search) | tree | | basics: revise breadth first search |
 | 12 | [Search in a Sorted Array of Unknown Size](/leetcode/702-search-in-a-sorted-array-of-unknown-size) | binary search | [leetcode 702](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size) | golang unsupported on leetcode, do it in python instead |
-| 13 | [Pow(x, n)](/leetcode/50-powx-n) | binary search | [leetcode 50](https://leetcode.com/problems/powx-n) | i failed to come up with the solution myself, the solution is mind blowing |
+| 13 | [Pow(x, n)](/leetcode/50-powx-n) | recursion, dynamic programming | [leetcode 50](https://leetcode.com/problems/powx-n) | 📌2nd dynamic programming. 3rd optimized |
 | 14 | [Valid Perfect Square](/leetcode/367-valid-perfect-square) | binary search | [leetcode 50](https://leetcode.com/problems/valid-perfect-square) ||
 | 15 | [Find Smallest Letter Greater Than Target](/leetcode/744-find-smallest-letter-greater-than-target) | binary search | [leetcode 50](https://leetcode.com/problems/find-smallest-letter-greater-than-target) | |
 | 16 | [Lower & Upper Bound Binary Searches](/miscellaneous/binary-searches) | binary search | | [my medium article](https://medium.com/@CalvinChankf/how-to-deal-with-lower-upper-bound-binary-search-b9ce744673df) |
