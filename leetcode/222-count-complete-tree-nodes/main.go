@@ -47,8 +47,11 @@ func countNodes1(root *TreeNode) int {
 	left := 1 + getLeftHeight(root)
 	right := 1 + getRightHeight(root)
 	if left == right {
+		// if left == right, it means that this subtree is a perfect tree
+		// therefore the number of nodes = 2^n-1
 		return int(math.Pow(2, float64(left))) - 1
 	} else {
+		// if unfortunately left != right, we need traverse down its children and count
 		return 1 + countNodes1(root.Left) + countNodes1(root.Right)
 	}
 }
