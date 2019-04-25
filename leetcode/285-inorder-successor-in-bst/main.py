@@ -125,6 +125,8 @@ class Solution(object):
         - here is BSTsearch, only record the sucessor when we go left
         - then the sucessor is either your parent OR your left most leaf in right subtree
 
+        see ./idea.jpeg
+
         Time    O(logn)
         Space   O(h)
         68 ms, faster than 61.86%
