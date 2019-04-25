@@ -106,6 +106,20 @@ func transformTime(time string) int {
 }
 
 func main() {
+	/*
+		19:39
+		22:22
+		15:11
+		13:10
+		21:01
+		00:00
+		00:10
+		00:00
+		08:00
+		09:00
+		11:11
+		11:21
+	*/
 	fmt.Println(nextClosestTime("19:34")) // 19:39
 	fmt.Println(nextClosestTime("23:59")) // 22:22
 	fmt.Println(nextClosestTime("13:59")) // 15:11

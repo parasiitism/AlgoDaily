@@ -93,7 +93,7 @@ class Solution(object):
         sign = '+'
         num = 0
         # instead of iterating the string
-        # we dequeue the string because we want our to become smaller and smaller for the recursion
+        # we dequeue the string because we want our string becomes smaller and smaller for the recursion
         while len(s) > 0:
             c = s.pop(0)
             if c.isdigit():
