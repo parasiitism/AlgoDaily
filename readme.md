@@ -574,3 +574,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 232 | [Toeplitz Matrix](/leetcode/766-toeplitz-matrix) | array | [leetcode 766](https://leetcode.com/problems/toeplitz-matrix/) | 1st O(rc)Q(r). 2nd O(rc)Q(1) |
 | 232 | [Concatenated Words](/leetcode/472-concatenated-words) | dynamic programming | [leetcode 472](https://leetcode.com/problems/concatenated-words/) | 📌1st time hard dp without extra help |
 | 233 | [Longest Word in Dictionary](/leetcode/720-longest-word-in-dictionary) | array | [leetcode 720](https://leetcode.com/problems/longest-word-in-dictionary/) | 1st O(kn) |
+| 233 | [Closest Leaf in a Binary Tree](/leetcode/742-closest-leaf-in-a-binary-tree) | tree, graph | [leetcode 742](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/) | ⭐️1st O(N+E) |
