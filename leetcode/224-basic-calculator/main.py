@@ -5,7 +5,7 @@
 	- when we see (, put the intermediate result into a stack, and new calculation start from the (
 	- when we see ), pop the add/minus the result with the last item in the stack
 
-	Time	O(2n) the nested loop actually just runs one time time
+	Time	O(2n) the nested loop actually just runs one time
 	Space O(n)
     136 ms, faster than 67.45%
 """
@@ -68,3 +68,45 @@ class Solution(object):
 print(Solution().calculate("1 + 1"))
 print(Solution().calculate(" 2-1 + 2 "))
 print(Solution().calculate("(1+(4+5+2)-3)+(6+8)"))
+
+"""
+    3rd approach: stack + recursion
+    - its actually the simplied version of lc772, just without * and /
+
+    Time	O(n*h)
+	Space   O(n + h) the recursion tree
+    4496 ms, faster than 5.01%
+"""
+
+
+class Solution(object):
+    def calculate(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        arr = []
+        for c in s:
+            arr.append(c)
+        return self.helper(arr)
+
+    def helper(self, arr):
+        stack = []
+        sign = '+'
+        num = 0
+        while len(arr) > 0:
+            c = arr.pop(0)
+            if c.isdigit():
+                num = num*10 + int(c)
+            if c == '(':
+                num = self.helper(arr)
+            if c == '+' or c == '-' or c == ')' or len(arr) == 0:
+                if sign == '+':
+                    stack.append(num)
+                elif sign == '-':
+                    stack.append(-num)
+                sign = c
+                num = 0
+                if c == ')':
+                    break
+        return sum(stack)
