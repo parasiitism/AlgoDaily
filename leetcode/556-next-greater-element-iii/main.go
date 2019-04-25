@@ -8,12 +8,15 @@ import (
 /*
 	classic approach: Next lexicographical permutation algorithm(use a stack)
 	e.g. 43143221
-	- from the end, stack up the item if num[i] > num[i+1]
+	- find the non-increasing suffix, e.g. 431<43221>
 	- once it encounters a smaller number from the end, this is the target we want
 		e.g. 43 <1> 43221
 	- i need to swap the target with the value in the stack which is just larger then it
-		e.g. 43 <1> 43221 => 43 <2> 43211
-	- reverse the left half and put it back to the number
+		e.g. 43 <1> 43221
+                       ^
+         => 43 <2> 43211
+                      ^
+	- reverse the right half and put it back to the number
 		e.g. 43 <2> 43211 => 43 <2> 11234
 	- combine them together and form the result
 		e.g. 43 <2> 11234 => 43211234
