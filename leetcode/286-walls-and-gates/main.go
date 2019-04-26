@@ -5,6 +5,12 @@ import (
 	"math"
 )
 
+/*
+	1st approach: dfs
+
+	Time	O(N)
+	Space	O(h)
+*/
 func wallsAndGates(rooms [][]int) {
 	for i := 0; i < len(rooms); i++ {
 		for j := 0; j < len(rooms[0]); j++ {
