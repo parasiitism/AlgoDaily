@@ -7,7 +7,7 @@
 
     Time    O(m*n + k*log(m*n))
     Space   O(m*n) union find
-    704 ms, faster than 28.79%
+    656 ms, faster than 29.19%
 """
 
 
