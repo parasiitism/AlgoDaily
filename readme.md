@@ -427,7 +427,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 189 | [Max Consecutive Ones](/leetcode/485-max-consecutive-ones) | array | [leetcode 485](https://leetcode.com/problems/max-consecutive-ones/) | O(n) |
 | 189 | [Max Consecutive Ones II](/leetcode/487-max-consecutive-ones-ii) | array | [leetcode 487](https://leetcode.com/problems/max-consecutive-ones-ii/) | O(2n) |
 | 189 | [Max Consecutive Ones III](/leetcode/1004-max-consecutive-ones-iii) | array | [leetcode 1004](https://leetcode.com/problems/max-consecutive-ones-iii/) | 1st O(n^2), 2nd O(2n) |
-| 189 | [Pacific Atlantic Water Flow](/leetcode/417-pacific-atlantic-water-flow) | graph | [leetcode 417](https://leetcode.com/problems/pacific-atlantic-water-flow/) | 1st O(n^2) |
+| 189 | [Pacific Atlantic Water Flow](/leetcode/417-pacific-atlantic-water-flow) | graph | [leetcode 417](https://leetcode.com/problems/pacific-atlantic-water-flow/) | 1st O(4^mn) LTE. 📌2nd O(5mn) |
 | 190 | [Design Compressed String Iterator](/leetcode/604-design-compressed-string-iterator) | string, queue | [leetcode 604](https://leetcode.com/problems/design-compressed-string-iterator/) | 1st O(n) `unicode.IsDigit()` |
 | 190 | [Basic Calculator II](/leetcode/227-basic-calculator-ii) | string, stack | [leetcode 227](https://leetcode.com/problems/basic-calculator-ii/) | 1st O(2n), takeaway: `isdigit()` in python, `unicode.IsDigit()` in golang, and `isinstance(a, int)` in python for type checking, 📌2nd O(2n) too but more concise but be careful of float division |
 | 191 | [Array Partition by Occurence](/interviews/amazon/array-partition-by-occurence/) | hashtable | interview | ⭐️ O(n^2) |
