@@ -332,7 +332,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 162 | [Find K Pairs with Smallest Sums](/leetcode/373-find-k-pairs-with-smallest-sums) | array | [leetcode 373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | 1st 2nd O(nlogn) |
 | 163 | [Number of Distinct Islands](/leetcode/694-number-of-distinct-islands) | array | [leetcode 694](https://leetcode.com/problems/number-of-distinct-islands/) | 1st O(nk) |
 | 163 | [Kth Largest Element in an Array](/leetcode/215-kth-largest-element-in-an-array) | array, heap | [leetcode 215](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 1st, 2nd O(nlogn) |
-| 163 | [Number of Islands II](/leetcode/305-number-of-islands-ii) | array | [leetcode 305](https://leetcode.com/problems/number-of-islands-ii/) | 1st O(n^2) beats 6% LOL |
+| 163 | [Number of Islands II](/leetcode/305-number-of-islands-ii) | array | [leetcode 305](https://leetcode.com/problems/number-of-islands-ii/) | 1st O(k * m^2 * n^2) beats 6% LOL. 📌 2nd O(mn + k * log(mn)) beats 28% |
 | 163 | [Redundant Connection](/leetcode/684-redundant-connection) | union find | [leetcode 684](https://leetcode.com/problems/redundant-connection/) | O(nlogn) |
 | 164 | [Friends Circles](/leetcode/547-friend-circles) | union find, graph | [leetcode 547](https://leetcode.com/problems/friend-circles/) | 1st union find O(n^2logn -> n^3). 2nd hashtable + bfs O(n^2) |
 | 164 | [Sentence Similarity II](/leetcode/737-sentence-similarity-ii) | union find | [leetcode 737](https://leetcode.com/problems/sentence-similarity-ii/) | O(nlogn) |
