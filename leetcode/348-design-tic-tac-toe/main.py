@@ -23,8 +23,11 @@ class TicTacToe(object):
         self.cols[col] += toAdd
         if row == col:
             self.diag += toAdd
-        if self.n-row-1 == col:
+        if row + col == self.n-1:
             self.antiDiag += toAdd
-        if abs(self.rows[row]) == self.n or abs(self.cols[col]) == self.n or abs(self.diag) == self.n or abs(self.antiDiag) == self.n:
+        if abs(self.rows[row]) == self.n \
+                or abs(self.cols[col]) == self.n \
+                or abs(self.diag) == self.n \
+                or abs(self.antiDiag) == self.n:
             return player
         return 0
