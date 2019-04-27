@@ -373,7 +373,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 174 | [Remove duplicates from a string in O(1) space](/interviews/dbs/remove-duplicates-from-string) | hashtable, bucket | [geeksforgeeks](https://www.geeksforgeeks.org/remove-duplicates-from-a-string-in-o1-extra-space/) | ⭐ 1st O(n) space, 2nd O(1) space |
 | 175 | [Design Hit Counter](/leetcode/362-design-hit-counter) | hashtable, array | [leetcode 362](https://leetcode.com/problems/design-hit-counter) | ⭐ 1st python OrderedDict O(1) for all operations beats 100%, 2nd hashtable+array beats 100% |
 | 175 | [Design Tic-Tac-Toe](/leetcode/348-design-tic-tac-toe) | array | [leetcode 348](https://leetcode.com/problems/design-tic-tac-toe/) | 1st O(n^2), 😱2nd O(1) |
-| 175 | [Valid Tic-Tac-Toe State](/leetcode/794-valid-tic-tac-toe-state/) | array | [leetcode 794](https://leetcode.com/problems/tic-tac-toe-state/) | my thought is so stupid |
+| 175 | [Valid Tic-Tac-Toe State](/leetcode/794-valid-tic-tac-toe-state/) | array | [leetcode 794](https://leetcode.com/problems/tic-tac-toe-state/) | 1st stupid. 2nd decent |
 | 176 | [Repeated Substring Pattern](/leetcode/459-repeated-substring-pattern/) | array | [leetcode 459](https://leetcode.com/problems/repeated-substring-pattern/) | 1st O(n^2), 2nd O(n) |
 | 176 | [Repeated String Match](/leetcode/686-repeated-string-match/) | array | [leetcode 686](https://leetcode.com/problems/repeated-string-match/) | 1st O(kn) |
 | 176 | [License Key Formatting](/leetcode/482-license-key-formatting/) | array, stack | [leetcode 482](https://leetcode.com/problems/license-key-formatting/) | 1st O(n) |
