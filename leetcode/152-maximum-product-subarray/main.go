@@ -85,10 +85,49 @@ func findMax(a, b int) int {
 	return b
 }
 
+/*
+	3rd approach: Kadan's algorithm
+	- idea similar to leetcode 53:maximum subarray
+	- for each item, store the max&mix among itself, or extend the previous max&min with itself
+		e.g. dp[i] chooses between dp[i-1]+nums[i] and nums[i]
+	- the result is the largest dp[i]
+	- see ./idea.jpeg
+
+	Time	O(n)
+	Space	O(n)
+	4 ms, faster than 86.87%
+*/
+func maxProduct2(nums []int) int {
+	minP := math.MaxInt32
+	maxP := math.MinInt32
+	res := math.MinInt32
+	for i := 0; i < len(nums); i++ {
+		num := nums[i]
+		if num > 0 {
+			minP = findMin(minP*num, num)
+			maxP = findMax(maxP*num, num)
+		} else {
+			temp := minP
+			minP = findMin(maxP*num, num)
+			maxP = findMax(temp*num, num)
+		}
+		res = findMax(res, maxP)
+	}
+	return res
+}
+
 func main() {
 	fmt.Println(maxProduct1([]int{2, 3, -2, 4}))
 	fmt.Println(maxProduct1([]int{2, 3, -2, -4}))
 	fmt.Println(maxProduct1([]int{-2, 0, -1}))
 	fmt.Println(maxProduct1([]int{-2}))
 	fmt.Println(maxProduct1([]int{1}))
+
+	fmt.Println("-----")
+
+	fmt.Println(maxProduct2([]int{2, 3, -2, 4}))
+	fmt.Println(maxProduct2([]int{2, 3, -2, -4}))
+	fmt.Println(maxProduct2([]int{-2, 0, -1}))
+	fmt.Println(maxProduct2([]int{-2}))
+	fmt.Println(maxProduct2([]int{1}))
 }
