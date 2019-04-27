@@ -577,3 +577,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 233 | [Closest Leaf in a Binary Tree](/leetcode/742-closest-leaf-in-a-binary-tree) | tree, graph | [leetcode 742](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/) | ⭐️1st O(N+E) |
 | 234 | [Word Squares](/leetcode/425-word-squares) | trie, recursion | [leetcode 425](https://leetcode.com/problems/word-squares/) | 📌|
 | 234 | [Degree of an Array](/leetcode/697-degree-of-an-array) | hashtable | [leetcode 697](https://leetcode.com/problems/degree-of-an-array/) | |
+| 235 | [Lonely Pixel II](/leetcode/533-lonely-pixel-ii) | hashtable | [leetcode 533](https://leetcode.com/problems/lonely-pixel-ii/) | tricky question ⭐️ O(2n) |
