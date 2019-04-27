@@ -52,7 +52,7 @@ func calColCache(picture [][]byte, col int, cache map[int]int) {
 }
 
 /*
-	1st approach: hashtable
+	2nd approach: calculate 'B's on each row and each col
 	1. for row, if there are 'B', calculate the number of 'B' for those columns
 	2. if that row only has 1 'B', check if there is only one 'B' on that column
 	3. be careful of 'one column checking'
