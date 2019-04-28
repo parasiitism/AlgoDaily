@@ -581,3 +581,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 235 | [Group Isomorphic Strings](/miscellaneous/isomorphic-strings) | hashtable | glassdoor | O(n^3) but cant figure out an optimal solution |
 | 235 | [Longest Increasing Subsequence](/leetcode/300-longest-increasing-subsequence) | dynamic programming | [leetcode 300](https://leetcode.com/problems/longest-increasing-subsequence/) | 📌1st O(n^2) dp |
 | 235 | [Number of Longest Increasing Subsequence](/leetcode/673-number-of-longest-increasing-subsequence) | dynamic programming | [leetcode 673](https://leetcode.com/problems/number-of-longest-increasing-subsequence/) | 📌1st O(n^2) dp |
+| 236 | [My Calendar I](/leetcode/729-my-calendar-i) | binary search | [leetcode 729](https://leetcode.com/problems/my-calendar-i/) | ⭐️ |
