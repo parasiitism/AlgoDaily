@@ -585,3 +585,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 237 | [Manhattan Crepe Cart](https://github.com/calvinchankf/GoogleCodeJam/blob/master/2019/1b/a.py) | arrary | code jam |  |
 | 237 | [Design Log Storage System](/leetcode/635-design-log-storage-system) | design | [leetcode 635](https://leetcode.com/problems/design-log-storage-system/) | ⭐️design |
 | 237 | [Time Based Key-Value Store](/leetcode/981-time-based-key-value-store) | hashtbale, binary search | [leetcode 981](https://leetcode.com/problems/time-based-key-value-store/) | ⭐️design |
+| 237 | [Transpose Matrix](/leetcode/867-transpose-matrix) | array | [leetcode 867](https://leetcode.com/problems/transpose-matrix/) | |
