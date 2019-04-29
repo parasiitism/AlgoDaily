@@ -59,7 +59,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 16 | [Lower & Upper Bound Binary Searches](/miscellaneous/binary-searches) | binary search | | [my medium article](https://medium.com/@CalvinChankf/how-to-deal-with-lower-upper-bound-binary-search-b9ce744673df) |
 | 17 | [Intersection of Two Arrays](/leetcode/349-intersection-of-two-arrays) | binary search, hashtable | [leetcode 349](https://leetcode.com/problems/intersection-of-two-arrays) | |
 | 18 | [Intersection of Two Arrays II](/leetcode/349-intersection-of-two-arrays-ii) | binary search, hashtable | [leetcode 350](https://leetcode.com/problems/intersection-of-two-arrays-ii) | |
-| 19 | [Two Sum II](/leetcode/167-two-sum-ii-input-array-is-sorted) | binary search, hashtable | [leetcode 167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | |
+| 19 | [Two Sum II](/leetcode/167-two-sum-ii-input-array-is-sorted) | binary search, hashtable | [leetcode 167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | 1st O(n)Q(n). 2nd O(n)Q(1)|
 | 20 | [Find the Duplicate Number](/leetcode/287-find-the-duplicate-number) | sort, hashtable, 2 pointers | [leetcode 287](https://leetcode.com/problems/find-the-duplicate-number/description/) | 📌for the 2 pointers approach |
 | 21 | [Find Minimum in Rotated Sorted Array II](/leetcode/154-find-minimum-in-rotated-sorted-array-ii) | binary search | [leetcode 154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | 📌 very hard classic question |
 | 22 | [Validate Binary Search Tree](/leetcode/98-validate-binary-search-tree) | binary tree | [leetcode 98](https://leetcode.com/problems/validate-binary-search-tree/description/) | 📌 1st 25sep2018 2nd 18mar2019 |

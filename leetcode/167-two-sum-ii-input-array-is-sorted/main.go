@@ -5,6 +5,12 @@ import (
 	"strconv"
 )
 
+/*
+	1st approach: hashtable
+
+	Time	O(n)
+	Space	O(n)
+*/
 func twoSum(numbers []int, target int) []int {
 	var hashtable = make(map[int]string)
 	for i := 0; i < len(numbers); i++ {
