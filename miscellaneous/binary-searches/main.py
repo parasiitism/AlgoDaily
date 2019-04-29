@@ -9,10 +9,10 @@ def bsearch(nums, target):
             left = mid + 1
         else:
             return mid
-    # to find number that no larger than target
+    # to find number that <= target
     # return right
 
-    # to find number that no smaller than target
+    # to find number that no >= target
     # return left
 
     return -1
