@@ -153,7 +153,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 108 | [First Unique Character in a String](/leetcode/387-first-unique-character-in-a-string/) | hashtable | [leetcode 387](https://leetcode.com/problems/first-unique-character-in-a-string/) | 1st beats 10.32%, 2nd beats 100% |
 | 109 | [Contains Duplicate II](/leetcode/219-contains-duplicate-ii/) | hashtable | [leetcode 219](https://leetcode.com/problems/contains-duplicate-ii/) | 1st beats 87.34% |
 | 109 | [Amicable numbers](/euler/21/) | array | [euler 21](https://projecteuler.net/problem=21) | 2nd question today |
-| 110 | [Logger Rate Limiter](/leetcode/359-logger-rate-limiter/) | hashtable | [leetcode 359](https://leetcode.com/problems/logger-rate-limiter/) | i think there is only one common solution |
+| 110 | [Logger Rate Limiter](/leetcode/359-logger-rate-limiter/) | design, hashtable | [leetcode 359](https://leetcode.com/problems/logger-rate-limiter/) | i think there is only one common solution |
 | 110 | [Group Anagrams](/leetcode/49-group-anagrams/) | hashtable | [leetcode 49](https://leetcode.com/problems/group-anagrams/) | 1st beats 96.55%, 2nd beats 89.66% |
 | 111 | [Coin Change](/leetcode/322-coin-change/) | hashtable, dynamic programming | [leetcode 322](https://leetcode.com/problems/coin-change/) | ⭐️ 2 years ago, I gave up. today i nailed it 💪🏻 1st beats 13.75%, 2nd beats 25.32%, 3rd beats 96.2% |
 | 112 | [Combination Sum IV](/leetcode/377-combination-sum-iv/) | hashtable, tree, dynamic programming | [leetcode 377](https://projecteuler.net/problem=31) | ⭐️ classic DP, classic solution |
@@ -583,3 +583,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 235 | [Number of Longest Increasing Subsequence](/leetcode/673-number-of-longest-increasing-subsequence) | dynamic programming | [leetcode 673](https://leetcode.com/problems/number-of-longest-increasing-subsequence/) | 📌1st O(n^2) dp |
 | 236 | [My Calendar I](/leetcode/729-my-calendar-i) | binary search | [leetcode 729](https://leetcode.com/problems/my-calendar-i/) | ⭐️ |
 | 237 | [Manhattan Crepe Cart](https://github.com/calvinchankf/GoogleCodeJam/blob/master/2019/1b/a.py) | arrary | code jam |  |
+| 237 | [Design Log Storage System](/leetcode/635-design-log-storage-system) | design | [leetcode 635](https://leetcode.com/problems/design-log-storage-system/) | ⭐️ |
