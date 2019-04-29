@@ -3,7 +3,13 @@
     - this question is fucking similar to leetcode 325
     - the basic idea is to store the previous sum in a hashtable
         e.g. key: previous sum, value: number of occurence of a previous sum
-    - if currentSum - target in the hastable, the result+1
+    - if currentSum - target in the hastable, the result += occurence
+
+    e.g. [1, -1, 5, -2, 1, 2], 3
+    when it comes to 2, remain = 6 - 3 = 3 and 3 is in the hashtable what does it mean?
+
+    consider that a = [1,-1,5,-2] = 3,  b = [1, -1, 5, -2, 1, 2] = 6, 
+    6-3 means the remain from a - b, which is [1,2], is = target k
     
     Time	O(n)
     Space O(n)
@@ -29,8 +35,9 @@ class Solution(object):
             if acc == k:
                 res += 1
             # if acc-k == k, it is one of the target subarray
-            if acc-k in ht:
-                res += ht[acc-k]
+            remain = acc-k
+            if remain in ht:
+                res += ht[remain]
             # put the acc into the hashtable
             if acc not in ht:
                 ht[acc] = 1
@@ -44,6 +51,7 @@ print(Solution().subarraySum([1, 1, 1], 2))  # 3
 print(Solution().subarraySum([1, 1, 1], 3))  # 1
 print(Solution().subarraySum([1, 1, 1, 1], 3))  # 2
 print(Solution().subarraySum([1, -1, 5, -2, 3], 3))  # 3
+print(Solution().subarraySum([1, -1, 5, -2, 1, 2], 3))  # 3
 print(Solution().subarraySum([-2, -1, 2, 1], 1))  # 2
 print(Solution().subarraySum([-2, -1, 2, 1, 100], 100))  # 2
 print(Solution().subarraySum([-2, -1, 2, 100, 1], 100))  # 2
