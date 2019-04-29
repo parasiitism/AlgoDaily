@@ -1,0 +1,110 @@
+"""
+    2nd approach: 2 pointers + hashtable
+	1. sort the numbers to make sure that the key will be unique
+	2. for each num[i], use 2 pointers, from the front and from the end, to find the pairs which nums[i]+nums[j]+nums[k] sum up to 0
+	3. use a set to deduplicate
+
+	Time	O(n^2)
+	Space	O(n)
+	1880 ms, faster than 16.17%
+"""
+
+
+class Solution(object):
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        nums = sorted(nums)
+        resSet = set()
+        for i in range(len(nums)):
+            num = nums[i]
+            target = -num
+            left = i+1
+            right = len(nums) - 1
+            while left < right:
+                cur = nums[left] + nums[right]
+                if cur == target:
+                    resSet.add((num, nums[left], nums[right]))
+                if cur > target:
+                    right -= 1
+                else:
+                    left += 1
+        return [list(x) for x in resSet]
+
+
+a = [-1, 0, 1, 2, -1, -4]
+print(Solution().threeSum(a))
+
+a = [-2, 0, 1, 1, 2]
+print(Solution().threeSum(a))
+
+a = [-13, 5, 13, 12, -2, -11, -1, 12, -3, 0, -3, -7, -7, -5, -3, -15, -2, 14, 14, 13, 6, -11, -11, 5, -15, -14, 5, -5, -2, 0, 3, -8, -10, -7, 11, -5, -10, -5, -7, -6, 2, 5, 3, 2, 7, 7, 3, -10, -2, 2, -12, -11, -1,
+     14, 10, -9, -15, -8, -7, -9, 7, 3, -2, 5, 11, -13, -15, 8, -3, -7, -12, 7, 5, -2, -6, -3, -10, 4, 2, -5, 14, -3, -1, -10, -3, -14, -4, -3, -7, -4, 3, 8, 14, 9, -2, 10, 11, -10, -4, -15, -9, -1, -1, 3, 4, 1, 8, 1]
+print(Solution().threeSum(a))
+
+print("-----")
+
+
+"""
+    3rd approach: 2 pointers without hashtable
+    
+    who to dedup:
+    1. skip if nums[i] == nums[i-1]
+    2. when we move the pointers
+        - imagine [1,1,2,3,4,4], target 5
+	    - we need to skip the 1(index 1) and 4(index 4) and check if 2+3 = 5
+	
+    ref:
+    - - https://leetcode.com/problems/3sum/discuss/7380/Concise-O(N2)-Java-solution
+
+	Time	O(n^2)
+	Space	O(n)
+	652 ms, faster than 76.36%
+"""
+
+
+class Solution(object):
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        nums = sorted(nums)
+        res = []
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            num = nums[i]
+            target = -num
+            left = i+1
+            right = len(nums) - 1
+            while left < right:
+                cur = nums[left] + nums[right]
+                if cur == target:
+                    res.append([num, nums[left], nums[right]])
+                    # skip if the next number which equals to this num when we right--
+                    while left < right and nums[right-1] == nums[right]:
+                        right -= 1
+                    right -= 1
+                    # skip if the next number which equals to this num when we left++
+                    while left < right and nums[left] == nums[left+1]:
+                        left += 1
+                    left += 1
+                if cur > target:
+                    right -= 1
+                elif cur < target:
+                    left += 1
+        return res
+
+
+a = [-1, 0, 1, 2, -1, -4]
+print(Solution().threeSum(a))
+
+a = [-2, 0, 1, 1, 2]
+print(Solution().threeSum(a))
+
+a = [-13, 5, 13, 12, -2, -11, -1, 12, -3, 0, -3, -7, -7, -5, -3, -15, -2, 14, 14, 13, 6, -11, -11, 5, -15, -14, 5, -5, -2, 0, 3, -8, -10, -7, 11, -5, -10, -5, -7, -6, 2, 5, 3, 2, 7, 7, 3, -10, -2, 2, -12, -11, -1,
+     14, 10, -9, -15, -8, -7, -9, 7, 3, -2, 5, 11, -13, -15, 8, -3, -7, -12, 7, 5, -2, -6, -3, -10, 4, 2, -5, 14, -3, -1, -10, -3, -14, -4, -3, -7, -4, 3, 8, 14, 9, -2, 10, 11, -10, -4, -15, -9, -1, -1, 3, 4, 1, 8, 1]
+print(Solution().threeSum(a))
