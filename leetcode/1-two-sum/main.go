@@ -2,9 +2,11 @@ package main
 
 import "fmt"
 
-// classical solution
-// O(n)
-// beats 100%
+/*
+	classical solution
+	O(n)
+	beats 100%
+*/
 func twoSum(nums []int, target int) []int {
 	hash := make(map[int]int)
 	for i := 0; i < len(nums); i++ {
