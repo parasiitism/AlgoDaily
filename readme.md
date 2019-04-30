@@ -328,7 +328,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 161 | [Dijkstra's Algorithm on an Undirected Graph](/miscellaneous/dijkstra) | graph | study | 📌 |
 | 161 | [Find All Anagrams in a String](/leetcode/438-find-all-anagrams-in-a-string) | string | [leetcode 438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | 1st, 2nd O(kn) |
 | 162 | [Optimal Flights](/interviews/amazon/closest-2-sum) | binary search | interview | 📌1st O(n^2), 2nd O(nlogn) |
-| 162 | [Max Area of Island](/leetcode/695-max-area-of-island) | array | [leetcode 695](https://leetcode.com/problems/max-area-of-island/) | 1st O(n) |
+| 162 | [Max Area of Island](/leetcode/695-max-area-of-island) | array | [leetcode 695](https://leetcode.com/problems/max-area-of-island/) | 1st dfs O(n). 2nd bfs(n) |
 | 162 | [Find K Pairs with Smallest Sums](/leetcode/373-find-k-pairs-with-smallest-sums) | array | [leetcode 373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | 1st 2nd O(nlogn) |
 | 163 | [Number of Distinct Islands](/leetcode/694-number-of-distinct-islands) | array | [leetcode 694](https://leetcode.com/problems/number-of-distinct-islands/) | 1st O(nk) |
 | 163 | [Kth Largest Element in an Array](/leetcode/215-kth-largest-element-in-an-array) | array, heap | [leetcode 215](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 1st, 2nd O(nlogn) |
