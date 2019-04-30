@@ -1,7 +1,7 @@
 """
     1st approach: dynamic programming
 
-    ref:
+    ref: Longest Increasing Subsequence
     - https://www.youtube.com/watch?v=CE2b_-XfVDk
 
     Time    O(n^2)
