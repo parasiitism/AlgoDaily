@@ -65,8 +65,116 @@ a = [
 ]
 print(Solution().islandPerimeter(a))
 
+a = [
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+]
+print(Solution().islandPerimeter(a))
+
 print("--------------------")
 
+
+"""
+    2nd approach: iterative bfs
+    - we increment the area in 2 cases:
+        1. the current cell reaches to the boundaries
+        2. the current cell reaches to a zero
+
+    Time    O(n)
+    Space   O(n)
+    696 ms, faster than 17.83%
+"""
+
+
+class Solution(object):
+    def islandPerimeter(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        if len(grid) == 0 or len(grid[0]) == 0:
+            return 0
+        seen = []
+        res = 0
+        for i in range(len(grid)):
+            seen.append(len(grid[0])*[False])
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == 1 and seen[i][j] == False:
+                    res = self.bfs(grid, i, j, seen)
+        return res
+
+    def bfs(self, grid, x, y, seen):
+        edgesCount = 0
+        q = []
+        q.append((x, y))
+        while len(q) > 0:
+            i, j = q.pop(0)
+
+            if grid[i][j] == 0:
+                edgesCount += 1
+            else:
+                # if this cell of 1 is visited, skip
+                if seen[i][j] == True:
+                    continue
+                seen[i][j] = True
+
+                if i - 1 >= 0:
+                    q.append((i-1, j))
+                else:
+                    edgesCount += 1
+
+                if i + 1 < len(grid):
+                    q.append((i+1, j))
+                else:
+                    edgesCount += 1
+
+                if j - 1 >= 0:
+                    q.append((i, j-1))
+                else:
+                    edgesCount += 1
+
+                if j + 1 < len(grid[0]):
+                    q.append((i, j+1))
+                else:
+                    edgesCount += 1
+        return edgesCount
+
+
+a = []
+print(Solution().islandPerimeter(a))
+
+a = [[]]
+print(Solution().islandPerimeter(a))
+
+a = [[1]]
+print(Solution().islandPerimeter(a))
+
+a = [
+    [0, 1, 0, 0],
+    [1, 1, 1, 0],
+    [0, 1, 0, 0],
+    [1, 1, 0, 0],
+]
+print(Solution().islandPerimeter(a))
+
+a = [
+    [0, 1, 0, 0],
+    [1, 1, 1, 0],
+    [0, 1, 1, 0],
+    [1, 1, 0, 0],
+]
+print(Solution().islandPerimeter(a))
+
+a = [
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+]
+print(Solution().islandPerimeter(a))
+
+print("--------------------")
 
 """
     follow-up 1: no more than 1 island
