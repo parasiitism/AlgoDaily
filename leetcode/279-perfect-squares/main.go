@@ -37,4 +37,5 @@ func numSquares(n int) int {
 
 func main() {
 	fmt.Println(numSquares(12))
+	fmt.Println(numSquares(7691))
 }

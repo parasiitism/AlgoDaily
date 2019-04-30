@@ -1,3 +1,12 @@
+"""
+    1st approach: brute force
+
+    Time    O(nnk)
+    Space   O(n)
+    LTE
+"""
+
+
 class Solution(object):
     def palindromePairs(self, words):
         """
