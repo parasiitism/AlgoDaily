@@ -60,7 +60,7 @@ func canAttendMeetings(intervals []Interval) bool {
 	- create an array of meeting rooms
 	- each interval, search for vacancies in the meeting rooms just by comparing the last interval endTime
 	- if there is no collision, put the meeting in that room, else create a new meeting room for the interval
-	Time		O(nlogn) nlogn: sort; n^2:
+	Time		O(nlogn) nlogn: sort
 	Space 	O(n)	result array
 	112ms beats 0%
 */
