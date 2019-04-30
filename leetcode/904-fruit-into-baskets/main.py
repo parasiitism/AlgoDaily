@@ -1,4 +1,9 @@
 """
+    1st approach: 2 pointers
+    - maintain the sliding window to have 2 unique keys
+
+    Time    O(n)
+    Space   O(n)
     768 ms, faster than 20.82%
 """
 
@@ -10,7 +15,7 @@ class Solution(object):
         :rtype: int
         """
         res = 0
-        left = 0
+        slow = 0
         ht = {}
         for i in range(len(tree)):
             fruit = tree[i]
@@ -18,12 +23,12 @@ class Solution(object):
                 ht[fruit] = 1
             else:
                 ht[fruit] += 1
+            # maintain the sliding window to have 2 unique keys
             while len(ht) > 2:
-                last = left
-                left += 1
-                leftMostFruit = tree[last]
-                ht[leftMostFruit] -= 1
-                if ht[leftMostFruit] == 0:
-                    del ht[leftMostFruit]
-            res = max(res, i-left+1)
+                last = tree[slow]
+                ht[last] -= 1
+                slow += 1  # move slow forward
+                if ht[last] == 0:
+                    del ht[last]
+            res = max(res, i-slow+1)
         return res
