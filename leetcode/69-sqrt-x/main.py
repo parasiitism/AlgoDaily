@@ -15,6 +15,7 @@
 
     1 2 3 4 5 6 7 8
         ^
+    3^2 = 9 is larger than 8, therefore answer should be 3-1=2
 
     Time    O(logn)
     Space   O(1)

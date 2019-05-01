@@ -1,3 +1,5 @@
+import heapq
+
 """
     2nd approach: math % and /
 
