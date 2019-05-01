@@ -71,3 +71,27 @@ class Solution(object):
                 stack.append(StackItem(pop.node.right,
                                        pop.node.val, pop.right))
         return True
+
+
+"""
+    followup: find out the incorrect node
+"""
+
+
+class Solution(object):
+    def isValidBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        return self.helper(root, -sys.maxsize, sys.maxsize)
+
+    def helper(self, node, left, right):
+        if node == None:
+            return None
+        if node.val <= left or node.val >= right:
+            return node
+        a = self.helper(node.left, left, node.val)
+        b = self.helper(node.right, node.val, right)
+        # we should return a node if there is one
+        return a or b
