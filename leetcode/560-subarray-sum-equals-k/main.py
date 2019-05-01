@@ -1,6 +1,6 @@
 """
-    1st approach
-    - this question is fucking similar to leetcode 325
+    1st approach: zero sum subarray
+    - this question is fucking similar to leetcode 325, 525
     - the basic idea is to store the previous sum in a hashtable
         e.g. key: previous sum, value: number of occurence of a previous sum
     - if currentSum - target in the hastable, the result += occurence
@@ -11,6 +11,9 @@
     consider that a = [1,-1,5,-2] = 3,  b = [1, -1, 5, -2, 1, 2] = 6, 
     6-3 means the remain from a - b, which is [1,2], is = target k
     
+    ref:
+    - https://www.youtube.com/watch?v=hLcYp67wCcM
+
     Time	O(n)
     Space O(n)
     36ms beats 96.05%
@@ -34,7 +37,7 @@ class Solution(object):
             # if acc == k, it is one of the target subarray
             if acc == k:
                 res += 1
-            # if acc-k == k, it is one of the target subarray
+            # if acc-k in hashtable, it is one of the target subarray
             remain = acc-k
             if remain in ht:
                 res += ht[remain]
@@ -60,7 +63,7 @@ print(Solution().subarraySum([-2, -1, 2, 1000], 99))  # 0
 print("-----")
 
 """
-    1st approach
+    2nd approach
     - this question is fucking similar to leetcode 325
     - the basic idea is to store the previous sum in a hashtable
         e.g. key: previous sum, value: number of occurence of a previous sum
@@ -87,7 +90,7 @@ class Solution(object):
         ht[0] = 1  # if acc == k remain = 0, it is one of the target subarray
         for i in range(len(nums)):
             acc += nums[i]
-            # if acc-k == k, it is one of the target subarray
+            # if acc-k in hashtable, it is one of the target subarray
             if acc-k in ht:
                 res += ht[acc-k]
             # put the acc into the hashtable

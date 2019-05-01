@@ -13,7 +13,7 @@ class Solution(object):
         https://www.youtube.com/watch?v=hLcYp67wCcM
 
         generic approach
-        - this question is fucking similar to leetcode 325, 560
+        - this question is fucking similar to leetcode 325, 560, 525
         - find loops <==============================================================
         - the basic idea is to store the previous sum in a hashtable
             e.g. key: previous sum, value: number of occurence of a previous sum
@@ -90,7 +90,7 @@ class Solution(object):
             # if acc == k, it is one of the target subarray
             if acc == k:
                 res.append(nums[:i+1])
-            # if acc-k == k, it is one of the target subarray
+            # if acc-k in hashtable, it is one of the target subarray
             if acc-k in ht:
                 for j in range(len(ht[acc-k])):
                     idx = ht[acc-k][j]
