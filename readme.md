@@ -598,3 +598,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 239 | [Most Stones Removed with Same Row or Column](/leetcode/947-most-stones-removed-with-same-row-or-column) | union find | [leetcode 947](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/) | 1st O(n^2logn) |
 | 239 | [Reverse Vowels of a String](/leetcode/345-reverse-vowels-of-a-string) | 2pointers | [leetcode 345](https://leetcode.com/problems/reverse-vowels-of-a-string/) | 1st O(n) |
 | 239 | [Contiguous Array](/leetcode/525-contiguous-array) | hashtable | [leetcode 525](https://leetcode.com/problems/contiguous-array/) | ⭐️1st O(n) zero sum subarray |
+| 239 | [Binary Tree Longest Consecutive Sequence](/leetcode/298-binary-tree-longest-consecutive-sequence) | tree | [leetcode 525](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/) | ⭐️1st O(n) |
