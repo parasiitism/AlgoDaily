@@ -86,7 +86,6 @@ class Solution(object):
         res = 0
         m = {}
         for i in range(len(grid)):
-            pairs = []
             for j in range(len(grid[0])):
                 if grid[i][j] == 1:
                     for k in range(j+1, len(grid[0])):

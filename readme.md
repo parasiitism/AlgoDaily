@@ -589,3 +589,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 238 | [Minesweeper](/leetcode/529-minesweeper) | graph, hashtable | [leetcode 529](https://leetcode.com/problems/minesweeper/) | ⭐️ looks difficult but its easy. 1st bfs and 2nd dfs O(rc) |
 | 238 | [Number Of Corner Rectangles](/leetcode/750-number-of-corner-rectangles) | hashtable | [leetcode 750](https://leetcode.com/problems/number-of-corner-rectangles/) | 📌tricky dp questions + 1 followup |
 | 239 | [Ugly Number II](/leetcode/264-ugly-number-ii) | recursion, hashtable | [leetcode 264](https://leetcode.com/problems/ugly-number-ii/) | ⭐️i guess its a dynamic programming question |
+| 239 | [Minimum Area Rectangle](/leetcode/939-minimum-area-rectangle) | hashtable | [leetcode 939](https://leetcode.com/problems/minimum-area-rectangle/) | 📌1st O(RCC) similar to lc750 but LTE. 2nd and 3rd OrderedDict+set O(RRCC) beat 24.04% and 79.11%|
