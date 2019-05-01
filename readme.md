@@ -2,6 +2,9 @@ AlgoDaily
 ===
 I believe that practising algorithms every day is a long-term investment in my life.
 
+[![leetcode badge](https://leetcode-badge.chyroc.cn/?name=calvinchankf&leetcode_badge_style=Leetcode%20|%20solved/total-{{.solved_question}}/{{.all_question}}-{{if%20le%20.solved_question_rate_float%200.3}}red.svg{{else%20if%20le%20.solved_question_rate_float%200.5}}yellow.svg{{else}}green.svg{{end}}&refresh=true)](https://github.com/Chyroc/leetcode-badge)
+[![leetcode badge](https://leetcode-badge.chyroc.cn/?name=calvinchankf&leetcode_badge_style=Leetcode%20|%20submission-{{.accepted_submission_rate}}-{{%20if%20le%20.accepted_submission_rate_float%200.3}}red{{%20else%20if%20le%20.solved_question_rate_float%200.6}}green{{%20else%20}}yellow{{%20end%20}}.svg&refresh=true)]()
+
 #### Languages
 - golang, python, js
 
