@@ -45,21 +45,12 @@ class Solution(object):
 
         2nd approach: recursive search the direction we are going to go down and insert the target into the right position
 
-        104 ms, faster than 63.72%
+        104 ms, faster than 71.97%
         """
         if root == None:
             return TreeNode(val)
-        self.recursion(root, val)
-        return root
-
-    def recursion(self, cur, val):
-        if cur.val < val:
-            if cur.right != None:
-                self.recursion(cur.right, val)
-            else:
-                cur.right = TreeNode(val)
-            return
-        if cur.left != None:
-            self.recursion(cur.left, val)
+        if val < root.val:
+            root.left = self.insertIntoBST(root.left, val)
         else:
-            cur.left = TreeNode(val)
+            root.right = self.insertIntoBST(root.right, val)
+        return root
