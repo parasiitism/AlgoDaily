@@ -68,3 +68,30 @@ class Solution(object):
                 j += 1
 
         return True
+
+
+"""
+    3rd:
+    - for each cell, compare with the diagonal cell
+
+    Time    O(n)
+    Space   O(1)
+    88 ms, faster than 25.72%
+"""
+
+
+class Solution(object):
+    def isToeplitzMatrix(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: bool
+        """
+        if len(matrix) == 0 or len(matrix[0]) == 0:
+            return True
+
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                if i > 0 and j > 0 and matrix[i][j] != matrix[i-1][j-1]:
+                    return False
+
+        return True

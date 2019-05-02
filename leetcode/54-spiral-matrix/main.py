@@ -14,7 +14,7 @@ class Solution:
         res = []
 
         while minRow <= maxRow and minCol <= maxCol:
-            # go left
+            # go right
             for i in range(minCol, maxCol+1):
                 res.append(matrix[minRow][i])
             minRow += 1
@@ -22,7 +22,7 @@ class Solution:
             for i in range(minRow, maxRow+1):
                 res.append(matrix[i][maxCol])
             maxCol -= 1
-            # go right
+            # go left
             # minRow has been +1 previously, so maxRow must be >= new minRow in order to traverse correctly
             if minRow <= maxRow:
                 for i in range(maxCol, minCol-1, -1):
