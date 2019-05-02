@@ -9,9 +9,95 @@ class TreeNode(object):
         self.right = None
 
 
-# my 1st approach
-# bfs, iterative
-# it is what leetcode does, e.g. [1,2,3,null,null,4,5]
+"""
+    easy approach: similar to lc536, 572, 606
+    e.g. (1(2(3)())4()())
+
+    Time    O(n)
+    Space   O(h)
+    476 ms, faster than 5.11% <= string will be very long due to the redundant empty nodes '()' 
+"""
+
+
+class Codec:
+
+    def serialize(self, node):
+        """Encodes a tree to a single string.
+
+        :type root: TreeNode
+        :rtype: str
+        """
+        if node == None:
+            return '()'
+        left = self.serialize(node.left)
+        right = self.serialize(node.right)
+        return '('+str(node.val) + left + right + ')'
+
+    def deserialize(self, s):
+        """Decodes your encoded data to tree.
+
+        :type data: str
+        :rtype: TreeNode
+        """
+        if len(s) == 0:
+            return None
+        arr = []
+        # execpt the open and end parentheses
+        for i in range(1, len(s)-1):
+            arr.append(s[i])
+        return self.deserializeHelper(arr)
+
+    def deserializeHelper(self, arr):
+        if len(arr) == 0:
+            return None
+
+        # negative
+        isNegative = False
+        if arr[0] == "-":
+            arr.pop(0)
+            isNegative = True
+
+        # multiple digits
+        num = ""
+        node = None
+        while len(arr) > 0 and arr[0] != "(" and arr[0] != ")":
+            num += arr.pop(0)
+
+        # put negative
+        if isNegative:
+            if len(num) != 0:
+                node = TreeNode(-int(num))
+        else:
+            if len(num) != 0:
+                node = TreeNode(int(num))
+
+        # left child
+        if len(arr) > 0 and arr[0] == "(":
+            arr.pop(0)
+            node.left = self.deserializeHelper(arr)
+
+        # right child
+        if len(arr) > 0 and arr[0] == "(":
+            arr.pop(0)
+            node.right = self.deserializeHelper(arr)
+
+        # end this scope
+        if len(arr) > 0 and arr[0] == ")":
+            arr.pop(0)
+        return node
+
+
+"""
+    my 1st approach
+    bfs, iterative
+    it is what leetcode does, e.g. [1,2,3,null,null,4,5]
+
+    Time    O(n)
+    Space   O(h)
+    132 ms beats 48%
+"""
+
+
 class Codec:
 
     def serialize(self, root):
@@ -76,8 +162,12 @@ class Codec:
         return root
 
 
-# suggested approach
-# dfs, recursive, e.g. 1,2,null,null,3,4,null,null,5,null,null,
+"""
+    suggested approach
+    dfs, recursive, e.g. 1,2,null,null,3,4,null,null,5,null,null,
+"""
+
+
 class Codec1:
 
     def serialize(self, root):
