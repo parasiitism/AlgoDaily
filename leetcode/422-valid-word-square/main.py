@@ -37,6 +37,8 @@ print(Solution().validWordSquare(a))
 a = ["ball", "asee", "let", "let"]
 print(Solution().validWordSquare(a))
 
+print("----")
+
 """
     2nd approach: use error
 
@@ -56,9 +58,11 @@ class Solution(object):
             for j in range(len(words[i])):
                 if j >= len(words):
                     # longer
+                    print("longer")
                     return False
                 elif i >= len(words[j]):
                     # shorter
+                    print("shorter",)
                     return False
                 elif words[i][j] != words[j][i]:
                     # not equal
@@ -75,17 +79,38 @@ a = [
 print(Solution().validWordSquare(a))
 
 # shorter: if i >= len(words[j]):
-a = ["ball", "asee", "lett", "le"]
+a = [
+    "ball",
+    "asee",
+    "lett",
+    "le",
+]
 print(Solution().validWordSquare(a))
 
 # shorter: if i >= len(words[j]):
-a = ["ball", "asee", "let", "let"]
-print(Solution().validWordSquare(a))
-
-# longer: if i >= len(words[j]):
-a = ["ball", "asee", "letta", "lett"]
+a = [
+    "ball",
+    "asee",
+    "let",
+    "let",
+]
 print(Solution().validWordSquare(a))
 
 # shorter: if j >= len(words):
-a = ["ball", "asee", "lett", "lett", "a"]
+a = [
+    "ball",
+    "asee",
+    "lett",
+    "lett",
+    "a",
+]
+print(Solution().validWordSquare(a))
+
+# longer: if i >= len(words[j]):
+a = [
+    "ball",
+    "asee",
+    "letta",
+    "lett",
+]
 print(Solution().validWordSquare(a))
