@@ -35,7 +35,7 @@ class Solution(object):
         class approach: iterative bfs
 
         Time  O(n)
-        Space O(1)
+        Space O(n)
         20 ms, faster than 69.85%
         """
         if root == None:
