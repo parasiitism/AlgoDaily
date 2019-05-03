@@ -410,7 +410,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 183 | [Move Zeroes](/leetcode/283-move-zeroes/) | array | [leetcode 75](https://leetcode.com/problems/move-zeroes/) | ⭐️swap |
 | 183 | [Missing Number](/leetcode/268-missing-number/) | bucket, math | [leetcode 268](https://leetcode.com/problems/missing-number/) | 1st math O(n), 2nd bucket O(2n) |
 | 184 | [Swap Nodes in Pairs](/leetcode/24-swap-nodes-in-pairs/) | linked list | [leetcode 24](https://leetcode.com/problems/swap-nodes-in-pairs/) | 📌 |
-| 184 | [Reverse Nodes in k-Group](/leetcode/25-reverse-nodes-in-k-group/) | linked list | [leetcode 25](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 📌|
+| 184 | [Reverse Nodes in k-Group](/leetcode/25-reverse-nodes-in-k-group/) | linked list | [leetcode 25](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 📌1st O(n) but wordy. 2nd O(n) concise |
 | 184 | [Sort List](/leetcode/148-sort-list/) | linked list, sort | [leetcode 148](https://leetcode.com/problems/sort-list/) | 📌merge sort |
 | 184 | [Peeking Iterator](/leetcode/284-peeking-iterator/) | design | [leetcode 284](https://leetcode.com/problems/peeking-iterator/) | leetcode doesnt support golang |
 | 184 | [One Edit Distance](/leetcode/161-one-edit-distance/) | array | [leetcode 161](https://leetcode.com/problems/one-edit-distance/) | 1st O(3n), 2nd O(n) |
