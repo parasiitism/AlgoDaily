@@ -161,3 +161,42 @@ print(Solution().firstMissingPositive(a))
 # 4
 a = [1, 3, 2, 3, 5, -1, -10]
 print(Solution().firstMissingPositive(a))
+
+print("==========")
+
+"""
+    variation: first missing non-negative
+"""
+
+
+class Solution(object):
+    def firstMissingPositive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        for i in range(len(nums)):
+            # check if the number is at correct
+            while i != nums[i]:
+                targetIdx = nums[i]
+                # nums[targetIdx] != nums[i] is to avoid infinit loop
+                # e.g. if doesnt check....
+                # [0, 0, 0, 1, 2]
+                #  | \
+                # 0 > 0
+                # the first 2 zeros swap infinitely
+                # ...
+                if targetIdx >= 0 and targetIdx < len(nums) and nums[targetIdx] != nums[i]:
+                    nums[i], nums[targetIdx] = nums[targetIdx], nums[i]
+                else:
+                    break
+        # iterate the nums again to check if value, i+1, is at index i
+        for i in range(len(nums)):
+            if i != nums[i]:
+                return i
+        # if all at correct position, return the next number
+        return len(nums)
+
+
+a = [0, 0, 0, 1, 2]
+print(Solution().firstMissingPositive(a))
