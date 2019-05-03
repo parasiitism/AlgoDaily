@@ -69,3 +69,57 @@ class Solution(object):
         # - left branch sum + current node val
         # - right branch sum + current node val
         return onlyBranches
+
+
+"""
+    1b st approach: recursion. same as above but more readable
+
+    on each node, 
+
+    the max value should be amongst
+    - current node val
+    - left branch sum + current node val
+    - right branch sum + current node val
+    - left branch sum + current node val + right branch sum
+
+    since we only count branches' sum but not the total nodes' sum from each sub tree
+    , we should just return the max amongst
+    - current node val
+    - left branch sum + current node val
+    - right branch sum + current node val
+
+    Time    O(n)
+    Space   O(h)
+    92 ms, faster than 47.52%
+"""
+
+
+class Solution(object):
+
+    def __init__(self):
+        self.res = -sys.maxsize
+
+    def maxPathSum(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        self.dfs(root)
+        return self.res
+
+    def dfs(self, node):
+        if node == None:
+            return 0
+
+        left = self.dfs(node.left)
+        right = self.dfs(node.right)
+
+        mid = node.val
+        midLeft = left + mid
+        midRight = mid + right
+        midLeftRight = left + mid + right
+
+        largest = max(mid, midLeft, midRight, midLeftRight)
+        self.res = max(self.res, largest)
+
+        return max(mid, midLeft, midRight)
