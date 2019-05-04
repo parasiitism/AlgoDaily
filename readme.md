@@ -604,3 +604,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 240 | [Second Largest Number In an Array](/miscellaneous/second-largest-number-in-array) | array | interview | ⭐️|
 | 241 | [Wiggle Sort](/leetcode/280-wiggle-sort) | sort, swap | [leetcode 280](https://leetcode.com/problems/wiggle-sort/) | ⭐️1st O(nlogn) 2nd O(n) |
 | 241 | [Wiggle Sort II](/leetcode/324-wiggle-sort-ii) | sort | [leetcode 324](https://leetcode.com/problems/wiggle-sort-ii/) | 1st O(nlogn) |
+| 242 | [Palindromic Substrings](/leetcode/647-palindromic-substrings) | 2pointers | [leetcode 647](https://leetcode.com/problems/palindromic-substrings/) | 📌very similar to [leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/) |
