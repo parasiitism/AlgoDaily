@@ -601,8 +601,9 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 239 | [Binary Tree Longest Consecutive Sequence](/leetcode/298-binary-tree-longest-consecutive-sequence) | tree | [leetcode 525](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/) | ⭐️1st O(n) |
 | 239 | [Excel Sheet Column Number](/leetcode/171-excel-sheet-column-number) | math | [leetcode 171](https://leetcode.com/problems/excel-sheet-column-number/) | |
 | 239 | [Excel Sheet Column Title](/leetcode/168-excel-sheet-column-title) | math | [leetcode 168](https://leetcode.com/problems/excel-sheet-column-title/) | |
-| 240 | [Second Largest Number In an Array](/miscellaneous/second-largest-number-in-array) | array | interview | ⭐️|
+| 240 | [Second Maximum Number](/miscellaneous/second-maximum-number) | array | interview | 📌 O(n)|
 | 241 | [Wiggle Sort](/leetcode/280-wiggle-sort) | sort, swap | [leetcode 280](https://leetcode.com/problems/wiggle-sort/) | ⭐️1st O(nlogn) 2nd O(n) |
 | 241 | [Wiggle Sort II](/leetcode/324-wiggle-sort-ii) | sort | [leetcode 324](https://leetcode.com/problems/wiggle-sort-ii/) | 1st O(nlogn) |
 | 242 | [Palindromic Substrings](/leetcode/647-palindromic-substrings) | 2pointers | [leetcode 647](https://leetcode.com/problems/palindromic-substrings/) | 📌very similar to [leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/) |
 | 242 | [Find Duplicate File in System](/leetcode/609-find-duplicate-file-in-system) | hashtable | [leetcode 609](https://leetcode.com/problems/find-duplicate-file-in-system/) | 1st O(nk) |
+| 242 | [Third Maximum Number](/leetcode/414-third-maximum-number) | array | [leetcode 414](https://leetcode.com/problems/third-maximum-number/) | 📌 O(n) |
