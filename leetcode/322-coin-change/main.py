@@ -57,14 +57,15 @@ f(7) = min(f(6)+f(5)+f(2)) + 1
 
 class Solution(object):
     def coinChange(self, coins, amount):
-        dp = (amount+1)*[sys.maxsize]
-        dp[0] = 0
+        dp = (amount+1)*[0]
         for i in range(1, amount+1):
+            temp = sys.maxsize
             for coin in coins:
                 remain = i-coin
-                if remain >= 0 and dp[remain] != sys.maxsize:
-                    dp[i] = min(dp[i], dp[remain] + 1)
-        if dp[amount] == sys.maxsize:
+                if remain >= 0:
+                    temp = min(temp, dp[remain])
+            dp[i] = temp + 1
+        if dp[amount] >= sys.maxsize:
             return -1
         return dp[amount]
 
