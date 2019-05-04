@@ -35,6 +35,8 @@ class Solution(object):
             return 0
         if s[left] != s[right]:
             return 0
+        # if it passes all checking, it means that this substring itself is already a palindrome
+        # e.g. a <- odd length, aa <- even length
         count = 1
         while left-1 >= 0 and right+1 < len(s) and s[left-1] == s[right+1]:
             left -= 1
