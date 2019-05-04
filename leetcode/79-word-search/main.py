@@ -4,6 +4,29 @@
     - will the board be empty? yes 
 """
 
+"""
+    1st approach: backstracking
+
+    why backtracking works but bfs doesn't work?
+    consider this test case
+    m = [
+        ["A", "B", "C", "E"],
+        ["S", "F", "E", "S"],
+        ["A", "D", "E", "E"],
+    ]
+    word = ABCESEEEFS
+
+    1. If we do bfs, we marked the S,F,E on the second row as seen 
+        before we are going to explore it from the bottom-right E.
+
+    2. backtracking is actually a dfs, if a recursion exits, 
+        it 'unseen' the explored coordinates such that we can explore all possibilities.
+
+    Time    O(4^L) L: length of target word
+    Space   O(M*N + L)
+    364 ms, faster than 33.86%
+"""
+
 
 class Solution(object):
     def exist(self, board, word):
@@ -11,12 +34,6 @@ class Solution(object):
         :type board: List[List[str]]
         :type word: str
         :rtype: bool
-
-        1st approach: backstracking
-
-        Time    O(4^L) L: length of target word
-        Space   O(M*N + L)
-        364 ms, faster than 33.86%
         """
         if len(word) == 0 or len(board) == 0 or len(board[0]) == 0:
             return True
@@ -51,8 +68,8 @@ class Solution(object):
     def exist(self, board, word):
         if not board:
             return False
-        for i in xrange(len(board)):
-            for j in xrange(len(board[0])):
+        for i in range(len(board)):
+            for j in range(len(board[0])):
                 if self.dfs(board, i, j, word):
                     return True
         return False
@@ -63,8 +80,10 @@ class Solution(object):
             return True
         if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]) or word[0] != board[i][j]:
             return False
-        tmp = board[i][j]  # first character is found, check the remaining part
-        board[i][j] = "#"  # avoid visit agian
+        # first character is found, check the remaining part
+        tmp = board[i][j]
+        # avoid visit agian
+        board[i][j] = "#"
         # check whether can find "word" along one direction
         res = self.dfs(board, i+1, j, word[1:])\
             or self.dfs(board, i-1, j, word[1:])\
@@ -82,3 +101,11 @@ a = [
 print(Solution().exist(a, "ABCCED"))
 print(Solution().exist(a, "SEE"))
 print(Solution().exist(a, "ABAB"))
+
+
+a = [
+    ["A", "B", "C", "E"],
+    ["S", "F", "E", "S"],
+    ["A", "D", "E", "E"],
+]
+print(Solution().exist(a, "ABCESEEEFS"))
