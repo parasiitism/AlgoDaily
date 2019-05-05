@@ -607,3 +607,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 242 | [Palindromic Substrings](/leetcode/647-palindromic-substrings) | 2pointers | [leetcode 647](https://leetcode.com/problems/palindromic-substrings/) | 📌very similar to [leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/) |
 | 242 | [Find Duplicate File in System](/leetcode/609-find-duplicate-file-in-system) | hashtable | [leetcode 609](https://leetcode.com/problems/find-duplicate-file-in-system/) | 1st O(nk) |
 | 242 | [Third Maximum Number](/leetcode/414-third-maximum-number) | array | [leetcode 414](https://leetcode.com/problems/third-maximum-number/) | 📌 O(n) |
+| 243 | [Count Numbers with Unique Digits](/leetcode/357-count-numbers-with-unique-digits) | math | [leetcode 357](https://leetcode.com/problems/count-numbers-with-unique-digits/) | ⭐️ O(n) |
