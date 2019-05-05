@@ -97,3 +97,46 @@ class FreqStack(object):
 # obj = FreqStack()
 # obj.push(x)
 # param_2 = obj.pop()
+
+"""
+    2nd approach: optimize the 1st approach to use an array for frequency
+
+    Time    O(1)
+    Space   O(n)
+    356 ms, faster than 50.80%
+"""
+
+
+class FreqStack(object):
+
+    def __init__(self):
+        self.counter = {}
+        self.map = []
+
+    def push(self, x):
+        """
+        :type x: int
+        :rtype: None
+        """
+        if x not in self.counter:
+            self.counter[x] = 1
+        else:
+            self.counter[x] += 1
+        idx = self.counter[x] - 1
+        if idx == len(self.map):
+            self.map.append([x])
+        else:
+            self.map[idx].append(x)
+
+    def pop(self):
+        """
+        :rtype: int
+        """
+        freqArr = self.map[-1]
+        x = freqArr.pop()
+        self.counter[x] -= 1
+        if len(freqArr) == 0:
+            self.map.pop()
+        if self.counter[x] == 0:
+            del self.counter[x]
+        return x
