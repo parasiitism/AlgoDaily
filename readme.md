@@ -346,7 +346,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 166 | [Generate Parentheses](/leetcode/22-generate-parentheses) | backtracking | study | 📌1st O(2^2n) beats 5% |
 | 166 | [Count Univalue Subtrees](/leetcode/250-count-univalue-subtrees) | tree | [leetcode 250](https://leetcode.com/problems/count-univalue-subtrees/) | 📌1st O(n) 100% |
 | 167 | [Decode Ways](/leetcode/91-decode-ways) | dynamic programing | [leetcode 91](https://leetcode.com/problems/decode-ways/) | ⭐️1st brute force TLE, 2nd memorized brute force O(n) beats 100%  |
-| 167 | [Unique Paths](/leetcode/62-unique-paths) | dynamic programing | [leetcode 62](https://leetcode.com/problems/unique-paths/) | 📌classic DP, bottom up recursion with memorization, O(mn) beats 100%  |
+| 167 | [Unique Paths](/leetcode/62-unique-paths) | dynamic programing | [leetcode 62](https://leetcode.com/problems/unique-paths/) | 📌 dp recursion O(mn)  📌 dp matrix O(mn) |
 | 167 | [Merge Intervals](/leetcode/56-merge-intervals) | sort, greedy | [leetcode 56](https://leetcode.com/problems/merge-intervals/) | ⭐️interval |
 | 168 | [Non-overlapping Intervals](/leetcode/435-non-overlapping-intervals) | sort, greedy | [leetcode 435](https://leetcode.com/problems/non-overlapping-intervals/) | ⭐️interval |
 | 168 | [Minimum Number of Arrows to Burst Balloons](/leetcode/452-minimum-number-of-arrows-to-burst-balloons) | sort, greedy | [leetcode 452](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | ⭐️interval |
@@ -609,3 +609,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 242 | [Third Maximum Number](/leetcode/414-third-maximum-number) | array | [leetcode 414](https://leetcode.com/problems/third-maximum-number/) | 📌 O(n) |
 | 243 | [Count Numbers with Unique Digits](/leetcode/357-count-numbers-with-unique-digits) | math | [leetcode 357](https://leetcode.com/problems/count-numbers-with-unique-digits/) | ⭐️ O(n) |
 | 243 | [Prison Cells After N Days](/leetcode/957-prison-cells-after-n-days) | array | [leetcode 957](https://leetcode.com/problems/prison-cells-after-n-days/) | ⭐️|
+| 244 | [The Maze](/leetcode/490-the-maze) | graph | [leetcode 490](https://leetcode.com/problems/the-maze/) | 📌 1st BFS O(RC) 2nd DFS O(RC) |

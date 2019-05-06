@@ -34,3 +34,31 @@ print(Solution().uniquePaths(3, 2))
 print(Solution().uniquePaths(7, 3))
 print(Solution().uniquePaths(29, 45))
 print(Solution().uniquePaths(100, 100))
+
+print("-----")
+
+
+class Solution(object):
+    def uniquePaths(self, m, n):
+        """
+        :type m: int
+        :type n: int
+        :rtype: int
+        """
+        if m < 1 or n < 1:
+            return 0
+        dp = []
+        for _ in range(m):
+            dp.append(n*[1])
+        for i in range(1, m):
+            for j in range(1, n):
+                dp[i][j] = dp[i-1][j] + dp[i][j-1]
+        return dp[-1][-1]
+
+
+print(Solution().uniquePaths(-1, 1))
+print(Solution().uniquePaths(0, 0))
+print(Solution().uniquePaths(3, 2))
+print(Solution().uniquePaths(7, 3))
+print(Solution().uniquePaths(29, 45))
+print(Solution().uniquePaths(100, 100))
