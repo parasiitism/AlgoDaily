@@ -611,3 +611,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 243 | [Prison Cells After N Days](/leetcode/957-prison-cells-after-n-days) | array | [leetcode 957](https://leetcode.com/problems/prison-cells-after-n-days/) | ⭐️|
 | 244 | [The Maze](/leetcode/490-the-maze) | graph | [leetcode 490](https://leetcode.com/problems/the-maze/) | 📌 1st BFS O(RC) 2nd DFS O(RC) |
 | 244 | [The Maze II](/leetcode/505-the-maze-ii) | graph | [leetcode 505](https://leetcode.com/problems/the-maze-ii/) | 📌 1st BFS O(RC) 2nd DFS TLE WTF!?! |
+| 244 | [Asteroid Collision](/leetcode/735-asteroid-collision) | stack | [leetcode 735](https://leetcode.com/problems/asteroid-collision/) | 📌1st O(n) |
+| 244 | [Minimum Cost For Tickets](/leetcode/983-minimum-cost-for-tickets) | stack | [leetcode 983](https://leetcode.com/problems/minimum-cost-for-tickets/) | 📌1st O(n), 2nd O(n) |
