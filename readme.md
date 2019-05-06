@@ -610,3 +610,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 243 | [Count Numbers with Unique Digits](/leetcode/357-count-numbers-with-unique-digits) | math | [leetcode 357](https://leetcode.com/problems/count-numbers-with-unique-digits/) | ⭐️ O(n) |
 | 243 | [Prison Cells After N Days](/leetcode/957-prison-cells-after-n-days) | array | [leetcode 957](https://leetcode.com/problems/prison-cells-after-n-days/) | ⭐️|
 | 244 | [The Maze](/leetcode/490-the-maze) | graph | [leetcode 490](https://leetcode.com/problems/the-maze/) | 📌 1st BFS O(RC) 2nd DFS O(RC) |
+| 244 | [The Maze II](/leetcode/505-the-maze-ii) | graph | [leetcode 505](https://leetcode.com/problems/the-maze-ii/) | 📌 1st BFS O(RC) 2nd DFS TLE WTF!?! |

@@ -33,19 +33,17 @@ class Solution(object):
 
             for di, dj in dirs:
                 # roll the ball until it hits a wall
-                row = i + di
-                col = j + dj
-                while 0 <= row < len(maze) and 0 <= col < len(maze[0]) and maze[row][col] == 0:
+                row = i
+                col = j
+                while 0 <= row+di < len(maze) and 0 <= col+dj < len(maze[0]) and maze[row+di][col+dj] == 0:
                     row += di
                     col += dj
-                # i and j locate at the wall when exiting the above while loop, so we need to backtrack 1 position
-                newI = row - di
-                newJ = col - dj
                 # check if the new starting position has been visited
-                key = str(newI) + "," + str(newJ)
-                if key not in visited:
-                    q.append((newI, newJ))
-                    visited[key] = True
+                key = str(row) + "," + str(col)
+                if key in visited:
+                    continue
+                visited[key] = True
+                q.append((row, col))
         return False
 
 
@@ -114,20 +112,17 @@ class Solution(object):
                 return True
             for di, dj in dirs:
                 # roll the ball until it hits a wall
-                row = i + di
-                col = j + dj
-                while 0 <= row < len(maze) and 0 <= col < len(maze[0]) and maze[row][col] == 0:
+                row = i
+                col = j
+                while 0 <= row+di < len(maze) and 0 <= col+dj < len(maze[0]) and maze[row+di][col+dj] == 0:
                     row += di
                     col += dj
-                # i and j locate at the wall when exiting the above while loop, so we need to backtrack 1 position
-                newI = row - di
-                newJ = col - dj
                 # check if the new starting position has been visited
-                key = str(newI) + "," + str(newJ)
+                key = str(row) + "," + str(col)
                 if key in visited:
                     continue
                 visited[key] = True
-                if dfs(newI, newJ):
+                if dfs(row, col):
                     return True
             return False
 
