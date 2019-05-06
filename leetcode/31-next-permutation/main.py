@@ -1,3 +1,19 @@
+"""
+    1st attempt
+
+    similar to lc556
+
+    1. find the pivot point
+    2. find the FURTHEST number which is a bit larger than the pivot in 2nd half
+    3. swap the pivot and the number
+    4. sort the 2nd half
+    see idea.png
+    time 	O(n+n)
+    space 	O(1)
+    beats 100%
+"""
+
+
 class Solution(object):
     def nextPermutation(self, nums):
         """

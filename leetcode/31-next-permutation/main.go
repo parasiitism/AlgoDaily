@@ -10,15 +10,20 @@ import (
 // Space	O(n) the array to store the numbers of permutations
 // not gonna implement
 
-// 1st attempt
-// 1. find the pivot point
-// 2. find the FURTHEST number which is a bit larger than the pivot in 2nd half
-// 3. swap the pivot and the number
-// 4. sort the 2nd half
-// see idea.png
-// time 	O(n+n)
-// space 	O(1)
-// beats 100%
+/*
+	1st attempt
+
+	similar to lc556
+
+	1. find the pivot point
+	2. find the FURTHEST number which is a bit larger than the pivot in 2nd half
+	3. swap the pivot and the number
+	4. sort the 2nd half
+	see idea.png
+	time 	O(n+n)
+	space 	O(1)
+	beats 100%
+*/
 func nextPermutation(nums []int) {
 	// find the pivot
 	pivot := -1
@@ -62,12 +67,14 @@ func reverseFromTo(nums []int, from int, to int) {
 	}
 }
 
-// suggested solution
-// actually it does the same thing but it is more concise
-// AND it searches for the target from the end such that it saves time to find the furthest
-// time 	O(n+n)
-// space 	O(1)
-// ofcos it beats 100%
+/*
+	suggested solution
+	actually it does the same thing but it is more concise
+	AND it searches for the target from the end such that it saves time to find the furthest
+	time 	O(n+n)
+	space 	O(1)
+	ofcos it beats 100%
+*/
 func nextPermutation1(nums []int) {
 	// find pivot
 	pivot := len(nums) - 2

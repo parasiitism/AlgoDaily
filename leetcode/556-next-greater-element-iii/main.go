@@ -7,6 +7,9 @@ import (
 
 /*
 	classic approach: Next lexicographical permutation algorithm(use a stack)
+
+	similar to lc31
+
 	e.g. 43143221
 	- find the non-increasing suffix, e.g. 431<43221>
 	- once it encounters a smaller number from the end, this is the target we want

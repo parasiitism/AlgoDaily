@@ -1,5 +1,8 @@
 """
     classic approach: Next lexicographical permutation algorithm(use a stack)
+
+    similar to lc31
+
 	e.g. 43143221
 	- find the non-increasing suffix, e.g. 431<43221>
 	- once it encounters a smaller number from the end, this is the target we want
@@ -29,34 +32,48 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        if n < 0:
+            return -1
         numStr = str(n)
         nums = []
         for c in numStr:
             nums.append(int(c))
 
-        arr = []
-        idx = -1
-        for i in range(len(nums)-1, 0, -1):
-            arr.append(nums[i])
-            if nums[i-1] < nums[i]:
-                idx = i
+        # find the pivot from the increasing sequence from the right
+        pivot = -1
+        for i in range(len(nums)-2, -1, -1):
+            if nums[i] < nums[i+1]:
+                pivot = i
                 break
-        if idx == -1:
+        # if no pivot, return fail to get the next one
+        if pivot == -1:
             return -1
-        pivot = nums[idx-1]
-        for i in range(len(arr)):
-            if arr[i] > pivot:
-                temp = nums[idx-1]
-                nums[idx-1] = arr[i]
-                arr[i] = temp
+        # find the number to swap
+        target = -1
+        for i in range(len(nums)-1, -1, -1):
+            if nums[i] > nums[pivot]:
+                target = i
                 break
-        clone = nums[:idx] + arr
+        # swap
+        nums[pivot], nums[target] = nums[target], nums[pivot]
+        # reverse the increasing sequence from the right
+        self.reverse(nums, pivot+1, len(nums)-1)
+        # transform back to an integer
         res = 0
-        for i in range(len(clone)):
-            res = res*10 + clone[i]
+        for num in nums:
+            res = res*10 + num
+        # check range
         if res > 2**31-1:
             return -1
         return res
+
+    def reverse(self, nums, start, end):
+        left = start
+        right = end
+        while left < right:
+            nums[left], nums[right] = nums[right], nums[left]
+            left += 1
+            right -= 1
 
 
 print(Solution().nextGreaterElement(12))
