@@ -1,5 +1,8 @@
 package main
 
+/*
+	1st approach: lower bound binary search
+*/
 func searchInsert(nums []int, target int) int {
 	min := 0
 	max := len(nums)
