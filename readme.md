@@ -614,3 +614,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 244 | [Asteroid Collision](/leetcode/735-asteroid-collision) | stack | [leetcode 735](https://leetcode.com/problems/asteroid-collision/) | 📌1st O(n) |
 | 244 | [Minimum Cost For Tickets](/leetcode/983-minimum-cost-for-tickets) | stack | [leetcode 983](https://leetcode.com/problems/minimum-cost-for-tickets/) | 📌1st O(n), 2nd O(n) |
 | 245 | [Snakes and Ladders](/leetcode/909-snakes-and-ladders) | graph, hashtable | [leetcode 909](https://leetcode.com/problems/snakes-and-ladders/) | ⭐️1st O(mnlogn), 2nd O(mn) |
+| 245 | [Cousins in Binary Tree](/leetcode/993-cousins-in-binary-tree) | tree, hashtable | [leetcode 993](https://leetcode.com/problems/cousins-in-binary-tree/) | 1st O(n) |
