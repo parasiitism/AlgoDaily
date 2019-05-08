@@ -18,22 +18,21 @@ class Solution(object):
         :rtype: int
         """
         ht = {}
-        left = 0
+        slow = 0
         res = 0
         for i in range(len(s)):
             c = s[i]
             if c not in ht:
                 ht[c] = 1
-                res = max(res, i-left+1)
+                res = max(res, i-slow+1)
             else:
                 ht[c] += 1
-
-            while ht[c] > 1:
-                last = s[left]
-                ht[last] -= 1
-                if ht[last] == 0:
-                    del ht[last]
-                left += 1
+                while ht[c] > 1:
+                    last = s[slow]
+                    ht[last] -= 1
+                    if ht[last] == 0:
+                        del ht[last]
+                    slow += 1
         return res
 
 
