@@ -1,7 +1,9 @@
+import sys
+
 def secondLargest(nums):
-    largest = max(nums[0], nums[1])
-    seclargest = min(nums[0], nums[1])
-    for i in range(1, len(nums)):
+    largest = -sys.maxsize
+    seclargest = -sys.maxsize
+    for i in range(len(nums)):
         idx = cmptr(nums, i-1, i)
         if nums[idx] > largest:
             seclargest = largest
