@@ -616,3 +616,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 245 | [Snakes and Ladders](/leetcode/909-snakes-and-ladders) | graph, hashtable | [leetcode 909](https://leetcode.com/problems/snakes-and-ladders/) | ⭐️1st O(mnlogn), 2nd O(mn) |
 | 245 | [Cousins in Binary Tree](/leetcode/993-cousins-in-binary-tree) | tree, hashtable | [leetcode 993](https://leetcode.com/problems/cousins-in-binary-tree/) | 1st O(n) |
 | 245 | [Permutation Sequence](/leetcode/60-permutation-sequence) | permutation | [leetcode 60](https://leetcode.com/problems/permutation-sequence/) | 📌1st O((n-1)!) |
+| 246 | [Can Place Flowers](/leetcode/605-can-place-flowers) | array | [leetcode 605](https://leetcode.com/problems/can-place-flowers/) | 1st, 2nd O(n) |
+| 246 | [All Nodes Distance K in Binary Tree](/leetcode/863-all-nodes-distance-k-in-binary-tree) | tree, graph, hashtable | [leetcode 863](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/) | 1st O(n) |
