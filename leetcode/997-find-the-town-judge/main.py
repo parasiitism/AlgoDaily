@@ -40,12 +40,12 @@ class Solution(object):
         return judge
 
 """
-    2nd approach: array, hashset
-    - create a trusted people set for each person
-    - find the potential judge
-    - check if the potential judge is trusted by everyone
+    2nd approach: array
+    - for each person, establish a table of followings
+    - for each person, establish a table of followers
+    - if there is a person that he has N-1 followers and he trusts no one, he is the result
 
-    Time    O(T + n^2)
+    Time    O(T+2n)
     Space   O(n)
     708 ms, faster than 23.56%
 """
@@ -56,24 +56,17 @@ class Solution(object):
         :type trust: List[List[int]]
         :rtype: int
         """
-        hs = [None]
-        for i in range(1, N+1):
-            hs.append(set())
+        trustIn = (N+1)*[0]
+        trustBy = (N+1)*[0]
         
         for x, y in trust:
-            hs[x].add(y)
-        
-        judge = -1
+            trustIn[x] += 1
+            trustBy[y] += 1
+
         for i in range(1, N+1):
-            if len(hs[i]) == 0:
-                judge = i
-                break
-        if judge == -1:
-            return -1
-        
-        for i in range(1, len(hs)):
-            if i != judge:
-                s = hs[i]
-                if judge not in s:
+            if trustBy[i] == N-1:
+                if trustIn[i] == 0:
+                    return i
+                else:
                     return -1
-        return judge
+        return -1
