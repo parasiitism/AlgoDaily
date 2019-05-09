@@ -76,3 +76,33 @@ print(Solution().maxProfit([1, 3]))
 print(Solution().maxProfit([3, 1]))
 print(Solution().maxProfit([1]))
 print(Solution().maxProfit([1]))
+
+print("-----------------------------------")
+
+"""
+    3rd approach:
+    - actually eery time when we see nums[i] > nums[i-1], we can just add the diff into the result
+
+    Time    O(n)
+    Space   O(1)
+    48 ms, faster than 47.05%
+"""
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        res = 0
+        for i in range(1, len(prices)):
+            if prices[i] > prices[i-1]:
+                res += prices[i] - prices[i-1]
+        return res
+
+print(Solution().maxProfit([7, 1, 5, 3, 6, 4]))
+print(Solution().maxProfit([1, 2, 3, 4, 5]))
+print(Solution().maxProfit([7, 6, 5, 4, 3]))
+print(Solution().maxProfit([1, 3]))
+print(Solution().maxProfit([3, 1]))
+print(Solution().maxProfit([1]))
+print(Solution().maxProfit([1]))
