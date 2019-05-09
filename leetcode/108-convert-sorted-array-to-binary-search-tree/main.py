@@ -33,7 +33,7 @@ class Solution(object):
         return node
 
 """
-    revision:
+    revision: using slice, but keep in mind that slicing takes O(n)
     0. to create a balence tree, u must sort the array first
     1. sort the array
     2. build the tree recursively in the way of binary search
