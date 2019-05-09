@@ -619,3 +619,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 246 | [Can Place Flowers](/leetcode/605-can-place-flowers) | array | [leetcode 605](https://leetcode.com/problems/can-place-flowers/) | 1st, 2nd O(n) |
 | 246 | [All Nodes Distance K in Binary Tree](/leetcode/863-all-nodes-distance-k-in-binary-tree) | tree, graph, hashtable | [leetcode 863](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/) | 1st O(n) |
 | 247 | [Find the Town Judge](/leetcode/997-find-the-town-judge) | graph, hashtable | [leetcode 997](https://leetcode.com/problems/find-the-town-judge/) | 1st O(T+N^2), 2nd O(T+2n) |
+| 247 | [Restore IP Addresses](/leetcode/93-restore-ip-addresses) | graph, hashtable | [leetcode 997](https://leetcode.com/problems/restore-ip-addresses/) | 📌O(3^n) worst |
