@@ -1,0 +1,57 @@
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+"""
+    1st approach:
+    0. to create a balence tree, u must sort the array first
+    1. sort the array
+    2. build the tree recursively in the way of binary search
+
+    1st approach: divide and conquer
+	- the mid of a sorted array is the parent of a sub tree
+	1, 2, 3, 4, 5, 6, 7
+			 4
+		2			6
+	1	  3		5		7
+
+    Time    O(2n)
+    Space   O(n)
+    108 ms, faster than 99.82%
+"""
+class Solution(object):
+    def sortedListToBST(self, head):
+        """
+        :type head: ListNode
+        :rtype: TreeNode
+        """
+        nums = []
+        cur = head
+        while cur != None:
+            nums.append(cur.val)
+            cur = cur.next
+        return self.sortedArrayToBST(nums)
+    
+    def sortedArrayToBST(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: TreeNode
+        """
+        if len(nums) == 0:
+            return None
+        mid = (len(nums)-1)//2
+        left = nums[:mid]
+        right = nums[mid+1:]
+        node = TreeNode(nums[mid])
+        node.left = self.sortedArrayToBST(left)
+        node.right = self.sortedArrayToBST(right)
+        return node

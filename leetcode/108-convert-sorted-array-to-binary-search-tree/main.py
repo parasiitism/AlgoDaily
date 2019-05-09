@@ -37,6 +37,16 @@ class Solution(object):
     0. to create a balence tree, u must sort the array first
     1. sort the array
     2. build the tree recursively in the way of binary search
+
+    1st approach: divide and conquer
+	- the mid of a sorted array is the parent of a sub tree
+	1, 2, 3, 4, 5, 6, 7
+			 4
+		2			6
+	1	  3		5		7
+
+	Time	O(n)
+	Space	O(n)
 """
 class Solution(object):
     def sortedArrayToBST(self, nums):
