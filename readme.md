@@ -621,3 +621,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 247 | [Find the Town Judge](/leetcode/997-find-the-town-judge) | graph, hashtable | [leetcode 997](https://leetcode.com/problems/find-the-town-judge/) | 1st O(T+N^2), 2nd O(T+2n) |
 | 247 | [Restore IP Addresses](/leetcode/93-restore-ip-addresses) | graph, hashtable | [leetcode 997](https://leetcode.com/problems/restore-ip-addresses/) | 📌O(3^n) worst |
 | 247 | [Convert Sorted List to Binary Search Tree](/leetcode/109-convert-sorted-list-to-binary-search-tree) | linked list, BST | [leetcode 109](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | 📌O(2n) |
+| 248 | [Rotting Oranges](/leetcode/994-rotting-oranges) | graph, hashtable | [leetcode 994](https://leetcode.com/problems/rotting-oranges/) | 📌O(kRC) |
