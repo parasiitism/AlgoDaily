@@ -1,21 +1,21 @@
 import heapq
 import collections
 
+"""
+    1st approach
+    - count num: freq into a hashtable
+    - put the hashtable key&value into a priority queue
+    - the first k elements are the top k elements in the priority queue
 
+    36ms beats 82.56%
+    1feb2019
+"""
 class Solution(object):
     def topKFrequent(self, nums, k):
         """
         :type nums: List[int]
         :type k: int
         :rtype: List[int]
-
-        1st approach
-        - count num: freq into a hashtable
-        - put the hashtable key&value into a priority queue
-        - the first k elements are the top k elements in the priority queue
-
-        36ms beats 82.56%
-        1feb2019
         """
         if k > len(nums):
             return []
@@ -51,20 +51,20 @@ print(Solution().topKFrequent([1, 1, 1, 2, 2, 3], 2))
 print(Solution().topKFrequent(
     [1, 1, 1, 2, 2, 3, 4, 1, 2, 1, 3, 3, 4, 3], 2))
 
+"""
+    2nd approach
+    - count num: freq into a hashtable
+    - use quick select the arrange the k-1 smallest elements present before kth elements
 
+    48ms beats 34.16%
+    21mar2019
+"""
 class Solution(object):
     def topKFrequent(self, nums, k):
         """
         :type nums: List[int]
         :type k: int
         :rtype: List[int]
-
-        2nd approach
-        - count num: freq into a hashtable
-        - use quick select the arrange the k-1 smallest elements present before kth elements
-
-        48ms beats 34.16%
-        21mar2019
         """
         if k > len(nums):
             return []
@@ -103,3 +103,57 @@ class Solution(object):
 
 
 print(Solution().topKFrequent([1, 1, 1, 2, 2, 3, 4, 1, 2, 1, 3, 3, 4, 3], 2))
+
+print("-----")
+
+"""
+    3rd approach: bucket sort
+    - count occurence of a num and put it into a hashtable, {num: freq} 
+    - create buckets with maxfreq
+    - pop the first k num with the maxfreq
+
+    Time    O(n)
+    Space   O(n)
+    96 ms, faster than 43.13%
+    10may2019
+"""
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        
+        # count occurence of each num
+        maxFreq = 0
+        ht = {}
+        for num in nums:
+            if num not in ht:
+                ht[num] = 1
+            else:
+                ht[num] += 1
+            # getting the maxFreq
+            maxFreq = max(maxFreq, ht[num])
+        # create buckets
+        occurArr = []
+        for _ in range(maxFreq+1):
+            occurArr.append([])
+        # index of occurArr is the occurence
+        for key in ht:
+            occurence = ht[key]
+            occurArr[occurence].append(key)
+        # construct result
+        res = []
+        count = 0
+        # start from num with max freq
+        for i in range(len(occurArr)-1, -1, -1):
+            if count >= k:
+                break
+            arr = occurArr[i]
+            for num in arr:
+                res.append(num)
+                count += 1
+                if count == k:
+                    break
+        return res
