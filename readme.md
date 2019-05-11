@@ -623,3 +623,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 247 | [Convert Sorted List to Binary Search Tree](/leetcode/109-convert-sorted-list-to-binary-search-tree) | linked list, BST | [leetcode 109](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | 📌O(2n) |
 | 248 | [Rotting Oranges](/leetcode/994-rotting-oranges) | graph, hashtable | [leetcode 994](https://leetcode.com/problems/rotting-oranges/) | ⭐️O(kRC) |
 | 248 | [Valid Parenthesis String](/leetcode/678-valid-parenthesis-string) | dynamic programming | [leetcode 678](https://leetcode.com/problems/valid-parenthesis-string/) | ⭐️1st O(3^n) brute force. 2nd O(n)|
+| 249 | [Validate IP Address](/leetcode/468-validate-ip-address) | string | [leetcode 468](https://leetcode.com/problems/validate-ip-address/) | bad question description |
