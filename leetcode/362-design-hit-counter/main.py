@@ -96,6 +96,7 @@ class HitCounter(object):
         """
         res = 0
         n = len(self.nums)
+        j = -1
         for i in range(n-1, -1, -1):
             key = self.nums[i]
             cnt = self.m[key]
@@ -103,5 +104,7 @@ class HitCounter(object):
                 res += cnt
             else:
                 del self.m[key]
-                self.nums = self.nums[:i] + self.nums[i+1:]
+                if j == -1:
+                    j = i
+        self.nums = self.nums[j+1:]
         return res
