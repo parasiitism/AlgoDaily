@@ -625,3 +625,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 248 | [Valid Parenthesis String](/leetcode/678-valid-parenthesis-string) | dynamic programming | [leetcode 678](https://leetcode.com/problems/valid-parenthesis-string/) | ⭐️1st O(3^n) brute force. 2nd O(n)|
 | 249 | [Validate IP Address](/leetcode/468-validate-ip-address) | string | [leetcode 468](https://leetcode.com/problems/validate-ip-address/) | bad question description |
 | 249 | [Design Snake Game](/leetcode/353-design-snake-game) | hashtbale, linked list | [leetcode 353](https://leetcode.com/problems/design-snake-game/) | ⭐️|
+| 249 | [Car Fleet](/leetcode/853-car-fleet) | sort, math | [leetcode 853](https://leetcode.com/problems/car-fleet/) | O(nlogn) learned from others |
