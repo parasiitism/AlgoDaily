@@ -181,7 +181,7 @@ print("============================")
     Time of seat    O(3logn) 1 pop + 2 heap push
     Time of leave   O(n) heapify
     Space           O(n) worst case if all seats are occupied
-    96 ms, faster than 73.82%
+    72 ms, faster than 89.52%
 """
 
 
@@ -197,13 +197,14 @@ class ExamRoom(object):
 
     # a helper for us to calculate the distance btw x and y
     def _calDist(self, x, y):   # length of the interval (x, y)
-        if x == -1:  # note here we negate the value to make it maxheap
-            return -y
+        if x == -1:
+            # e.g. -1 to 7, there are 7 seats in between
+            return y
         elif y == self.n:
             # e.g. 10-4-1=5, there are 5 seats btw 4 and the end
-            return -(self.n - x - 1)
+            return self.n - x - 1
         else:
-            return -int((y-x)/2)
+            return (y-x)//2
 
     def seat(self):
         """
@@ -212,7 +213,7 @@ class ExamRoom(object):
         O(logn) 1 heap pop + 2 heap push
         """
         # pop the intervals which has the max interval
-        diff, left, right = heapq.heappop(self.pq)
+        dist, left, right = heapq.heappop(self.pq)
         # calculate the seat position
         seat = None
         if left == -1:
@@ -220,10 +221,15 @@ class ExamRoom(object):
         elif right == self.n:
             seat = self.n-1
         else:
-            seat = int((right + left)/2)
-        # split the interval into 2 intervals and add back to the max heap
-        heapq.heappush(self.pq, (self._calDist(left, seat), left, seat))
-        heapq.heappush(self.pq, (self._calDist(seat, right), seat, right))
+            seat = (right + left)//2
+
+        # calculate the distances for the next midpoint to the left and to the right
+        # negate the values because we are using maxheap
+        dist1 = - self._calDist(left, seat)
+        dist2 = - self._calDist(seat, right)
+
+        heapq.heappush(self.pq, (dist1, left, seat))
+        heapq.heappush(self.pq, (dist2, seat, right))
         return seat
 
     def leave(self, p):
@@ -241,14 +247,15 @@ class ExamRoom(object):
                 itemRight = interval
             if interval[2] == p:
                 itemLeft = interval
+            # we found them
             if itemLeft != None and itemRight != None:
                 break
-        # remove the items
+        # remove the items from the maxheap
         self.pq.remove(itemLeft)
         self.pq.remove(itemRight)
         # merge the items since we remove the middle one and add back one interval
-        dis = self._calDist(itemLeft[1], itemRight[2])
-        self.pq.append((dis, itemLeft[1], itemRight[2]))
+        dist = - self._calDist(itemLeft[1], itemRight[2])
+        self.pq.append((dist, itemLeft[1], itemRight[2]))
         # and re-heapify the intervals again O(n)
         heapq.heapify(self.pq)
 
