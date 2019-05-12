@@ -5,7 +5,7 @@
 
     Time  O(n)
     Space O(n)
-    48 ms, faster than 28.37%
+    24 ms, faster than 99.62%
 """
 
 
@@ -16,18 +16,19 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        ht_f = {}
-        ht_b = {}
+        forward = {}
+        backward = {}
         for i in range(len(a)):
             c1 = a[i]
             c2 = b[i]
-            if c1 in ht_f:
-                if ht_f[c1] != c2:
-                    return False
-            if c2 in ht_b:
-                if ht_b[c2] != c1:
-                    return False
+            if c1 not in forward:
+                forward[c1] = c2
             else:
-                ht_f[c1] = c2
-                ht_b[c2] = c1
+                if forward[c1] != c2:
+                    return False
+            if c2 not in backward:
+                backward[c2] = c1
+            else:
+                if backward[c2] != c1:
+                    return False
         return True
