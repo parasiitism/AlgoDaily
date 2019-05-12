@@ -160,3 +160,94 @@ class MyCircularQueue(object):
         :rtype: bool
         """
         return self.count == self.cap
+
+
+"""
+    3rd approach: create a fixed-sized queue
+    - 2 pointers
+
+    Time    O(1)
+    Space   O(1)
+    84 ms, faster than 25.83%
+"""
+
+
+class MyCircularQueue(object):
+
+    def __init__(self, k):
+        """
+        Initialize your data structure here. Set the size of the queue to be k.
+        :type k: int
+        """
+        self.nums = k * [-1]
+        self.start = -1
+        self.end = -1
+
+    def enQueue(self, value):
+        """
+        Insert an element into the circular queue. Return true if the operation is successful.
+        :type value: int
+        :rtype: bool
+        """
+        if self.isFull():
+            return False
+        if self.start == -1:
+            self.start = 0
+        idx = self._calNext(self.end)
+        self.nums[idx] = value
+        self.end = idx
+        return True
+
+    def deQueue(self):
+        """
+        Delete an element from the circular queue. Return true if the operation is successful.
+        :rtype: bool
+        """
+        if self.isEmpty():
+            return False
+        self.nums[self.start] = -1
+        idx = self._calNext(self.start)
+        temp = self.nums[idx]
+        if self.start == self.end:
+            self.start = -1
+            self.end = -1
+        else:
+            self.start = idx
+        # return temp # if question asks to return the val
+        return True
+
+    def Front(self):
+        """
+        Get the front item from the queue.
+        :rtype: int
+        """
+        if self.isEmpty():
+            return -1
+        return self.nums[self.start]
+
+    def Rear(self):
+        """
+        Get the last item from the queue.
+        :rtype: int
+        """
+        if self.isEmpty():
+            return -1
+        return self.nums[self.end]
+
+    def isEmpty(self):
+        """
+        Checks whether the circular queue is empty or not.
+        :rtype: bool
+        """
+        return self.start == -1
+
+    def isFull(self):
+        """
+        Checks whether the circular queue is full or not.
+        :rtype: bool
+        """
+        return self.start == self._calNext(self.end)
+
+    def _calNext(self, n):
+        k = len(self.nums)
+        return (n + 1) % k
