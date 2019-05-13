@@ -173,7 +173,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 117 | [Remove Nth Node From End of List](/leetcode/19-remove-nth-node-from-end-of-list/) | linked list | [leetcode 19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 📌 classic question, 1 classic + 2 other approaches |
 | 117 | [Remove Linked List Elements](/leetcode/203-remove-linked-list-elements/) | linked list | [leetcode 19](https://leetcode.com/problems/remove-linked-list-elements/) | 1st naive approach 📌 2nd classic approach |
 | 118 | [Odd Even Linked List](/leetcode/328-odd-even-linked-list/) | linked list | [leetcode 118](https://leetcode.com/problems/odd-even-linked-list/) | both naive and classic approach still beats 100% LOL |
-| 118 | [Palindrome Linked List](/leetcode/234-palindrome-linked-list/) | linked list | [leetcode 234](https://leetcode.com/problems/palindrome-linked-list/) | naive beats 100% LOL |
+| 118 | [Palindrome Linked List](/leetcode/234-palindrome-linked-list/) | linked list | [leetcode 234](https://leetcode.com/problems/palindrome-linked-list/) | ⭐️1st naive O(n)Q(n). 2nd O(2n)Q(1) |
 | 118 | [Valid Sudoku](/leetcode/36-valid-sodoku/) | hashtable | [leetcode 36](https://leetcode.com/problems/valid-sodoku/) | very straight forward O(3n) solution beats 31.25%. But the 2 one-pass solutions also beats 31.25% 🤔 |
 | 118 | [Permutations](/miscellaneous/permutations) | backtracking, recursion | | 📌 basic |
 | 118 | [Permutations](/leetcode/46-permutations) | backtracking, recursion | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 recursive beats 77.21%, iterative beats 77.14% |

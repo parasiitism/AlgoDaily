@@ -7,11 +7,13 @@ type ListNode struct {
 	Next *ListNode
 }
 
-// naive solution
-// just put the items into an array and check
-// time		O(2n)
-// space	O(n)
-// beats 100%
+/*
+	naive solution
+	just put the items into an array and check
+	time		O(2n)
+	space	O(n)
+	beats 100%
+*/
 func isPalindrome(head *ListNode) bool {
 	if head == nil {
 		return false
