@@ -628,3 +628,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 250 | [Car Fleet](/leetcode/853-car-fleet) | sort, math | [leetcode 853](https://leetcode.com/problems/car-fleet/) | O(nlogn) learned from others |
 | 250 | [Longest Word in Dictionary through Deleting](/leetcode/524-longest-word-in-dictionary-through-deleting) | string, array | [leetcode 524](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) | 1st O(nk) |
 | 251 | [Word Pattern](/leetcode/290-word-pattern) | hashtable | [leetcode 290](https://leetcode.com/problems/word-pattern/) | 📌1st, 2nd O(n) |
+| 251 | [Longest Repeating Character Replacement](/leetcode/424-longest-repeating-character-replacement) | hashtable, 2pointers | [leetcode 424](https://leetcode.com/problems/longest-repeating-character-replacement/) | 📌1st O(n), 2nd O(nk) |
