@@ -472,7 +472,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 201 | [Shortest Word Distance II](/leetcode/244-shortest-word-distance-ii) | 2pointers | [leetcode 244](https://leetcode.com/problems/shortest-word-distance-ii/)| ⭐️O(n) |
 | 201 | [Shortest Word Distance III](/leetcode/245-shortest-word-distance-iii) | 2pointers, binary search | [leetcode 245](https://leetcode.com/problems/shortest-word-distance-iii/)| ⭐️O(n), O(nlogn) |
 | 201 | [Next Greater Element I](/leetcode/496-next-greater-element-i) | array | [leetcode 496](https://leetcode.com/problems/next-greater-element-i/)| 1st O(n^2) |
-| 202 | [Next Greater Element II](/leetcode/503-next-greater-element-ii) | stack | [leetcode 503](https://leetcode.com/problems/next-greater-element-ii/)| 1st O(n) |
+| 202 | [Next Greater Element II](/leetcode/503-next-greater-element-ii) | stack | [leetcode 503](https://leetcode.com/problems/next-greater-element-ii/)| 1st O(2n), 2nd O(n) |
 | 202 | [Next Greater Element III](/leetcode/556-next-greater-element-iii) | stack | [leetcode 556](https://leetcode.com/problems/next-greater-element-iii/)| 📌[Next Lexicographical Permutation Algorithm](https://www.nayuki.io/page/next-lexicographical-permutation-algorithm) O(n). Similar to [leetcode 31](https://leetcode.com/problems/next-permutation/)|
 | 202 | [Binary Tree Paths](/leetcode/257-binary-tree-paths) | tree | [leetcode 257](https://leetcode.com/problems/binary-tree-paths/)| 1st recursive dfs O(n), 2nd iterative dfs O(n) |
 | 202 | [Diameter of Binary Tree](/leetcode/543-diameter-of-binary-tree) | tree, recursion | [leetcode 543](https://leetcode.com/problems/diameter-of-binary-tree/)| O(n) recursive dfs |
@@ -629,3 +629,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 250 | [Longest Word in Dictionary through Deleting](/leetcode/524-longest-word-in-dictionary-through-deleting) | string, array | [leetcode 524](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) | 1st O(nk) |
 | 251 | [Word Pattern](/leetcode/290-word-pattern) | hashtable | [leetcode 290](https://leetcode.com/problems/word-pattern/) | 📌1st, 2nd O(n) |
 | 251 | [Longest Repeating Character Replacement](/leetcode/424-longest-repeating-character-replacement) | hashtable, 2pointers | [leetcode 424](https://leetcode.com/problems/longest-repeating-character-replacement/) | 📌1st O(n), 2nd O(nk) |
+| 251 | [Next Greater Element II](/leetcode/1019-next-greater-node-in-linked-list/submissions) | linked list, stack | [leetcode 1019](https://leetcode.com/problems/next-greater-node-in-linked-list/submissions/) | 📌1st O(4n), 2nd O(2n) |
