@@ -1,5 +1,13 @@
 package main
 
+/*
+	1st approach: naive approach
+	- reuse the concept from lc79
+
+	Time	O(k4^N)
+	Space	O(4^N)
+	640ms beats 23.75%
+*/
 func findWords(board [][]byte, words []string) []string {
 	hashtable := make(map[string]bool)
 	for i := 0; i < len(words); i++ {

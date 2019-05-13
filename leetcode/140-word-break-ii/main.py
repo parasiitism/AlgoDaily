@@ -10,7 +10,7 @@
     2nd approach is to modify the top-down approach to a bottum-up approach
     - when we reach to an empty string, it means the path it went through is one of the result
 
-    Time    O(n^2*k)
+    Time    O(n^2*k) Size of recursion tree can go up to n^2. The creation of list takes k time.
     Space   O(n^2*k)
     TLE
 """
@@ -92,7 +92,7 @@ print("----------------------------------------------------------------")
     ref:
     - https://leetcode.com/problems/word-break-ii/discuss/44167/My-concise-JAVA-solution-based-on-memorized-DFS
 
-    Time    O(n^2*k)
+    Time    O(n^2*k) Size of recursion tree can go up to n^2. The creation of list takes k time.
     Space   O(n^2*k)
     44 ms, faster than 47.57%
 """
@@ -112,17 +112,15 @@ class Solution(object):
         res = []
         if len(s) == 0:
             return [""]
+        # check if the begining contains any words in wordSet
         for word in wordSet:
             w = s[:len(word)]
             if w == word:
                 sentences = self.find(s[len(word):], wordSet, m)
                 for sentence in sentences:
-                    if len(sentence) > 0:
-                        res.append(w + " " + sentence)
-                    else:
-                        res.append(w)
-        # memorize the result for s,
-        # then we can use it to avoid redundant computation if we meet s again
+                    sentence = w + ' ' + temp
+                    res.append(sentence.strip())
+        # memorize the result for s to avoid redundant computation if we meet s again
         m[s] = res  # <- the only diff compared to 2nd approach
         return res
 
