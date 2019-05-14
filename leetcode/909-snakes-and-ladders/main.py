@@ -126,7 +126,7 @@ print("-----")
 
     Time    O(mn)
     Space   O(n) the seen + lookup
-    152 ms, faster than 29.68%
+    140 ms, faster than 39.56%
 """
 
 
@@ -137,36 +137,35 @@ class Solution(object):
         :rtype: int
         """
         lookup = self.generateBoardIndeces(board)
-        # seen
-        seen = []
-        for _ in range(len(board)):
-            seen.append(len(board[0]) * [False])
+        # set to avoid redundancy
+        seen = set()
         # bfs
         q = []
-        # [(steps, symbol),...]
-        q.append((0, 1))
+        # [(symbol, steps),...]
+        q.append((1, 0))
         while len(q) > 0:
             n = len(q)
             # dequeue
-            steps, symbol = q.pop(0)
-            i, j = lookup[symbol]
+            symbol, steps = q.pop(0)
             # skip seen
-            if seen[i][j]:
+            if symbol in seen:
                 continue
-            seen[i][j] = True
+            seen.add(symbol)
             # destination
             if symbol == len(board)*len(board):
                 return steps
+            # snake, ladder or nothing
             # dice x+1, x+2..., x+6
-            for k in range(1, 7):
-                if symbol+k in lookup:
-                    nxt = symbol+k
-                    x, y = lookup[nxt]
-                    # if we see a snake or ladder, use the short cut
+            for delta in range(1, 7):
+                if symbol+delta in lookup:
+                    nextSymbol = symbol+delta
+                    x, y = lookup[nextSymbol]
+                    # snake or ladder
                     if board[x][y] != -1:
-                        nxt = board[x][y]
-                    # enqueue
-                    q.append((steps+1, nxt))
+                        q.append((board[x][y], steps+1))
+                    else:
+                        q.append((nextSymbol, steps+1))
+
         return -1
 
     def generateBoardIndeces(self, board):
