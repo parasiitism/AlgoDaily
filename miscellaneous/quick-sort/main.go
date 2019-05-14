@@ -44,8 +44,12 @@ func findHalf(nums []int, target int, isMore bool) []int {
 /*
 	in-place version
 	ref:
-	-	https://gist.github.com/imwally/58d6bb9bf9da098064054f73a19cdca1
+	- https://gist.github.com/imwally/58d6bb9bf9da098064054f73a19cdca1
 	- https://www.youtube.com/watch?v=COk73cpQbFQ
+
+	Worst Time		O(n^2): findHalf might need to iterate the rest of the array for each item
+	Average	Time	O(nlogn)
+	Space 				O(h)
 */
 func quickSortInPlace(nums []int) {
 	quick(nums, 0, len(nums)-1)
@@ -61,6 +65,7 @@ func quick(nums []int, start int, end int) {
 
 func partition(nums []int, start int, end int) int {
 	pivot := nums[end]
+	// partition idx is the index to the first item that larger than pivot
 	pIdx := start
 	for i := start; i < end; i++ {
 		// < for ascending
@@ -70,12 +75,24 @@ func partition(nums []int, start int, end int) int {
 			pIdx++
 		}
 	}
+	/*
+		e.g.
+		2,4,3,5,1,6,3
+		^			^
+		pidx		pivot
+
+		after the swap, we will have
+		2,3,1,4,5,6,3
+			  ^		^
+			pidx	pivot
+		we have to swap the partition idx with the pivot so make sure that pivot will be in the middle
+	*/
 	nums[pIdx], nums[end] = nums[end], nums[pIdx]
 	return pIdx
 }
 
 func main() {
-	a := []int{64, 25, 12, 22, 11, 38, 54, 90}
+	a := []int{64, 25, 12, 22, 11, 38, 38, 54, 90}
 	// fmt.Println(quickSort(a))
 	quickSortInPlace(a)
 	fmt.Println(a)
