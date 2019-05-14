@@ -8,53 +8,58 @@ class TreeNode(object):
         self.right = None
 
 
-class Solution(object):
+"""
+    1nd approach: iterative bst dfs
 
-    # notion: common anestor of 2 nodes must inclusively lies between left and right
-    # left <= anestor <= right
-    # e.g. 3 < 4 < 5
+    idea: common anestor of 2 nodes must inclusively lies between left and right
+    left <= anestor <= right
+    e.g. 3 < 4 < 5
+
+    Time    O(logn)
+    Time    O(logn) height of the bst
+    68 ms, faster than 99.7%
+"""
+
+
+class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
         """
         :type root: TreeNode
         :type p: TreeNode
         :type q: TreeNode
         :rtype: TreeNode
-
-        1nd approach: iterative bst dfs
-
-        Time    O(logn)
-        Time    O(logn) height of the bst
-        68 ms, faster than 99.7%
         """
-        parent = root
-        while True:
-            if p.val < parent.val and q.val < parent.val:
-                parent = parent.left
-            elif p.val > parent.val and q.val > parent.val:
-                parent = parent.right
+        cur = root
+        while cur != None:
+            if p.val < cur.val and q.val < cur.val:
+                cur = cur.left
+            elif p.val > cur.val and q.val > cur.val:
+                cur = cur.right
             else:
-                return parent
+                return cur
+        return cur
 
-# checkout main_test
+
+"""
+    2nd approach: recursive bst dfs
+
+    idea: common anestor of 2 nodes must inclusively lies between left and right
+    left <= anestor <= right
+    e.g. 3 < 4 < 5
+
+    Time    O(logn)
+    Time    O(logn) height of the bst
+    72 ms, faster than 68.62%
+"""
 
 
 class Solution(object):
-
-    # notion: common anestor of 2 nodes must inclusively lies between left and right
-    # left <= anestor <= right
-    # e.g. 3 < 4 < 5
     def lowestCommonAncestor(self, root, p, q):
         """
         :type root: TreeNode
         :type p: TreeNode
         :type q: TreeNode
         :rtype: TreeNode
-
-        2nd approach: recursive bst dfs
-
-        Time    O(logn)
-        Time    O(logn) height of the bst
-        72 ms, faster than 68.62%
         """
         if root == None or root == p or root == q:
             return root
