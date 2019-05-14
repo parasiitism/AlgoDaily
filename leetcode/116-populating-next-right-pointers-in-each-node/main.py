@@ -6,14 +6,23 @@ class TreeLinkNode:
         self.right = None
         self.next = None
 
+
+"""
+    1st approach: bfs
+
+    Time    O(n)
+    Space   O(2w)
+    56 ms, faster than 82.66%
+"""
+
+
 class Solution:
     # @param root, a tree link node
-    # @return nothing
+    # @return TreeLinkNode
     def connect(self, root):
         if root == None:
             return
-        queue = []
-        queue.append(root)
+        queue = [root]
         while len(queue) > 0:
             cnt = len(queue)
             prev = None
@@ -27,21 +36,13 @@ class Solution:
                     queue.append(head.right)
                 if head.left != None:
                     queue.append(head.left)
-        print(root)
-        self.dfs(root)
-    
-    # for test
-    def dfs(self, root):
-        if root == None:
-            return
-        print(str(root.val) + ' -> ' + (str(root.next.val) if root.next else 'nil'))
-        self.dfs(root.left)
-        self.dfs(root.right)
+    return root
+
 
 #     5
 #   3   6
 # 2  4
-#1
+# 1
 a = TreeLinkNode(5)
 b = TreeLinkNode(3)
 c = TreeLinkNode(6)
