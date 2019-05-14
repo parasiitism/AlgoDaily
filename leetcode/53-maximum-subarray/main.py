@@ -33,6 +33,9 @@ class Solution(object):
 a = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 print(Solution().maxSubArray(a))
 
+a = [4, 1, -5, 6, -3, 2]
+print(Solution().maxSubArray(a))
+
 """
     follow up: print the subarray with the max sum
 """
@@ -50,6 +53,7 @@ class Solution(object):
         prevSumArr = []
         for num in nums:
             # update current sum and array
+            # we use >= instead of > because we want to include the head if the prevsum == 0
             if prevSum+num >= num:
                 prevSum += num
                 prevSumArr.append(num)
@@ -57,6 +61,7 @@ class Solution(object):
                 prevSum = num
                 prevSumArr = [num]
             # update global result and result array
+            # we use >= instead of > because we want to include the head if the prevsum == 0
             if prevSum >= res:
                 res = prevSum
                 resArr = prevSumArr[:]
@@ -64,4 +69,7 @@ class Solution(object):
 
 
 a = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+print(Solution().maxSubArray(a))
+
+a = [4, 1, -5, 6, -3, 2]
 print(Solution().maxSubArray(a))
