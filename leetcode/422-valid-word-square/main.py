@@ -62,7 +62,7 @@ class Solution(object):
                     return False
                 elif i >= len(words[j]):
                     # shorter: no such col
-                    print("shorter",)
+                    print("shorter")
                     return False
                 elif words[i][j] != words[j][i]:
                     # not equal
