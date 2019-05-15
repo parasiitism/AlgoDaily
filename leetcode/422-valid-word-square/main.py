@@ -57,11 +57,11 @@ class Solution(object):
         for i in range(len(words)):
             for j in range(len(words[i])):
                 if j >= len(words):
-                    # longer
+                    # longer: no such row
                     print("longer")
                     return False
                 elif i >= len(words[j]):
-                    # shorter
+                    # shorter: no such col
                     print("shorter",)
                     return False
                 elif words[i][j] != words[j][i]:

@@ -23,11 +23,11 @@ class Solution(object):
         self.dfs(nums, [])
         return self.result
 
-    def dfs(self, nums, prefix):
-        if len(nums) == 0:
-            self.result.append(prefix)
-        for i in range(len(nums)):
-            self.dfs(nums[:i] + nums[i+1:], prefix + [nums[i]])
+    def dfs(self, cands, chosen):
+        if len(cands) == 0:
+            self.result.append(chosen)
+        for i in range(len(cands)):
+            self.dfs(cands[:i] + cands[i+1:], chosen + [nums[i]])
 
 
 # s = Solution()

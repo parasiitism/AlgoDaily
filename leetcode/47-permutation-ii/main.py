@@ -26,15 +26,15 @@ class Solution(object):
         self.dfs(nums, [])
         return self.result
 
-    def dfs(self, nums, prefix):
-        if len(nums) == 0:
-            self.result.append(prefix)
+    def dfs(self, cands, chosen):
+        if len(cands) == 0:
+            self.result.append(chosen)
         visited = {}
-        for i in range(len(nums)):
-            if nums[i] in visited:
+        for i in range(len(cands)):
+            if cands[i] in visited:
                 continue
-            visited[nums[i]] = True
-            self.dfs(nums[:i] + nums[i+1:], prefix + [nums[i]])
+            visited[cands[i]] = True
+            self.dfs(cands[:i] + cands[i+1:], chosen + [cands[i]])
 
 
 """
@@ -51,7 +51,7 @@ class Solution(object):
 
     time      O(n!) worst case
     space	    O(n!)
-    44 ms, faster than 96.93%
+    40 ms, faster than 98.27%
 """
 
 
@@ -65,12 +65,12 @@ class Solution(object):
         self.dfs(nums, [])
         return self.result
 
-    def dfs(self, nums, prefix):
-        if len(nums) == 0:
-            self.result.append(prefix)
-        for i in range(len(nums)):
-            if i == 0 or (i > 0 and nums[i-1] != nums[i]):
-                self.dfs(nums[:i] + nums[i+1:], prefix + [nums[i]])
+    def dfs(self, cands, chosen):
+        if len(cands) == 0:
+            self.result.append(chosen)
+        for i in range(len(cands)):
+            if i == 0 or (i > 0 and cands[i-1] != cands[i]):
+                self.dfs(cands[:i] + cands[i+1:], chosen + [cands[i]])
 
 
 # print(Solution().permuteUnique([1, 1, 2]))

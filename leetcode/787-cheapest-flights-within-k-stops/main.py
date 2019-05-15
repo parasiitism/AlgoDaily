@@ -22,7 +22,7 @@ class Solution(object):
             if key in flightsMap:
                 flightsMap[key].append(flight)
             else:
-                flightsMap[key] = [flight]
+                flightsMap[key] = [flight] 
 
         # dijkstra's
         heap = [(0, (src, 0))]

@@ -25,9 +25,7 @@ class Solution(object):
                     dp[i][j] = int(matrix[i][j])
                 elif matrix[i][j] == '1':
                     # the current grid = 1min among upperleft, left, up + 1
-                    dp[i][j] = min(
-                        dp[i-1][j-1],
-                        min(dp[i-1][j], dp[i][j-1])) + 1
+                    dp[i][j] = min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1]) + 1
                 result = max(result, dp[i][j])
         # area of a square
         return result*result

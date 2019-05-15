@@ -132,8 +132,10 @@ class Solution(object):
                 if len(s) == len(t):
                     return s[i+1:] == t[i+1:]
                 elif len(s) < len(t):
+                    # remove one character from t
                     return s[i:] == t[i+1:]
                 else:
+                    # remove one character from s
                     return s[i+1:] == t[i:]
         # after we have done all the above
         # if the s is just one digit away from t, return true

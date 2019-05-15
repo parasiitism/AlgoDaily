@@ -21,26 +21,26 @@ class Heap(object):
         self.nums = arr
         n = len(arr)
         for i in range(n//2, -1, -1):
-            self._shiftup(i)
+            self._shiftDown(i)
 
-    # shift down the current min if the new value is small : O(logN)
+    # shift up the new value is smaller than parent : O(logN)
     def heapPush(self, target):
         self.nums.append(target)
         curIdx = len(self.nums) - 1
-        self._shiftDown(curIdx)
+        self._shiftUp(curIdx)
 
-    # shift up with min value if any:  O(logN)
+    # shift down the parent :  O(logN)
     def heapPop(self):
         pop = self.nums[0]
         p = self.nums.pop()
         if len(self.nums) == 0:
             return pop
         self.nums[0] = p
-        self._shiftup(0)
+        self._shiftDown(0)
         return pop
 
     # used by heapify, pop
-    def _shiftup(self, fromIdx):
+    def _shiftDown(self, fromIdx):
         cur = fromIdx
         while cur < len(self.nums):
             left = 2*cur+1
@@ -66,7 +66,7 @@ class Heap(object):
                 break
 
     # used by push
-    def _shiftDown(self, fromIdx):
+    def _shiftUp(self, fromIdx):
         curIdx = fromIdx
         while curIdx > 0:
             parentIdx = (curIdx - 1) / 2

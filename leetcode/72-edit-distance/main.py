@@ -37,6 +37,8 @@ class Solution(object):
         dp = []
         l1 = len(word1)
         l2 = len(word2)
+        # since we from empty strings from word1 and word2
+        # , we want to have a dp array of size l1+1 and l2+1
         for i in range(l1+1):
             temp = []
             for j in range(l2+1):

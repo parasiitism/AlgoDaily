@@ -37,8 +37,7 @@ class Solution(object):
             if fromLoc in timesMap:
                 candidates = timesMap[fromLoc]
                 for can in candidates:
-                    if can[1] not in seen:
-                        heapq.heappush(heap, (weight+can[2], can[1]))
+                    heapq.heappush(heap, (weight+can[2], can[1]))
 
         # the max travel time is the result
         maximum = 0
