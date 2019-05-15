@@ -13,31 +13,30 @@ class Solution(object):
         - Time  O(NlogN) logN due to the heap
         - Space O(N) result dict
         116ms beats 61.11%
-        27jan2019
+        15may2019
         """
-        # put times into a hashtable for lookup, time = (from, to, weight)
-        timesMap = {}
-        for time in times:
-            key = time[0]
-            if key in timesMap:
-                timesMap[key].append(time)
+        # put times into a hashtable for lookup, time { from : [(to, weight)],... }
+        connections = {}
+        for u, v, w in times:
+            if u in connections:
+                connections[u].append((v, w))
             else:
-                timesMap[key] = [time]
+                connections[u] = [(v, w)]
 
         # dijkstra's
         heap = [(0, K)]
         seen = {}
         while len(heap) > 0:
-            weight, fromLoc = heapq.heappop(heap)
+            weight, node = heapq.heappop(heap)
 
-            if fromLoc in seen:
+            if node in seen and weight >= seen[node]:
                 continue
-            seen[fromLoc] = weight
+            seen[node] = weight
 
-            if fromLoc in timesMap:
-                candidates = timesMap[fromLoc]
-                for can in candidates:
-                    heapq.heappush(heap, (weight+can[2], can[1]))
+            if node in connections:
+                cands = connections[node]
+                for cand in cands:
+                    heapq.heappush(heap, (weight+cand[1], cand[0]))
 
         # the max travel time is the result
         maximum = 0
