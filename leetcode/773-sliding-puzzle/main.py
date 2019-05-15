@@ -8,7 +8,7 @@ class Solution(object):
 
         Time    O(n!) the total number of permutation of the board states
         Space   O(n!)
-        92 ms, faster than 28.41%
+        68 ms, faster than 35.54%
         """
         # to avoid vistied states
         seen = set()
@@ -56,13 +56,7 @@ class Solution(object):
         return s
 
     def cloneBoard(self, board):
-        temp = []
-        for i in range(len(board)):
-            arr = []
-            for j in range(len(board[i])):
-                arr.append(board[i][j])
-            temp.append(arr)
-        return temp
+        return [row[:] for row in board]
 
 
 print(Solution().slidingPuzzle([[1, 2, 3], [4, 0, 5]]))
@@ -129,13 +123,7 @@ class Solution(object):
         return s
 
     def cloneBoard(self, board):
-        temp = []
-        for i in range(len(board)):
-            arr = []
-            for j in range(len(board[i])):
-                arr.append(board[i][j])
-            temp.append(arr)
-        return temp
+        return [row[:] for row in board]
 
 
 print(Solution().slidingPuzzle([[0, 1, 2], [3, 4, 5], [6, 7, 8]]))
