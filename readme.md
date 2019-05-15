@@ -632,3 +632,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 251 | [Next Greater Element II](/leetcode/1019-next-greater-node-in-linked-list) | linked list, stack | [leetcode 1019](https://leetcode.com/problems/next-greater-node-in-linked-list/submissions/) | 📌1st O(4n), 2nd O(2n) |
 | 252 | [Convert Binary Search Tree to Sorted Doubly Linked List](/leetcode/246-convert-binary-search-tree-to-sorted-doubly-linked-list) | BST, linked list | [leetcode 426](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) | 1st O(2n) |
 | 252 | [Sorted an Array](/leetcode/912-sort-an-array) | sort | [leetcode 912](https://leetcode.com/problems/sort-an-array/) | merge sort, quick sort |
+| 253 | [Add One Row to Tree](/leetcode/623-add-one-row-to-tree) | recursion | [leetcode 623](https://leetcode.com/problems/add-one-row-to-tree/) | ⭐️recursive dfs O(n) |
