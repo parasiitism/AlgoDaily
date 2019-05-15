@@ -20,28 +20,29 @@ def dijkstra(edges, p, q):
     nodes = list(nodeSet)
     # adjacent list
     connections = {}
-    # edge with cost (from, to, cost)
+    # edge with cost { from: (to, cost), ... }
     for src, dest, cost in edges:
         if src in connections:
-            connections[src].append((src, dest, cost))
+            connections[src].append((dest, cost))
         else:
-            connections[src] = [(src, dest, cost)]
+            connections[src] = [(dest, cost)]
     # dijkstra's
     # put (cost, node, visitedpath) into the heap
     heap = [(0, p, [])]
     best = {}
     while len(heap) > 0:
         # pop the edge with min cost
-        cost, fromLoc, visited = heapq.heappop(heap)
+        cost, node, path = heapq.heappop(heap)
         # if the cost < calculated cost of the node, update the node
-        if fromLoc in best and cost >= best[fromLoc][0]:
+        if node in best and cost >= best[node][0]:
             continue
-        best[fromLoc] = (cost, visited)
+        newPath = path + [node]
+        best[node] = (cost, newPath)
         # add the adjacent nodes to the pq for processing
-        if fromLoc in connections:
-            candidates = connections[fromLoc]
+        if node in connections:
+            candidates = connections[node]
             for can in candidates:
-                heapq.heappush(heap, (cost+can[2], can[1], visited+[can[0]]))
+                heapq.heappush(heap, (cost+can[1], can[0], newPath))
 
     return best[q][1]
 
@@ -58,4 +59,5 @@ r = [
     ['C', 'E', 5],
     ['D', 'E', 1],
 ]
+# ['A', 'C', 'B', 'E']
 print(dijkstra(r, 'A', 'E'))
