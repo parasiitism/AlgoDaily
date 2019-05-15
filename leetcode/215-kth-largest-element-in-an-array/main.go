@@ -23,7 +23,7 @@ func findKthLargest(nums []int, k int) int {
 	2nd approach
 	- heap
 
-	Time		O(nlogn)
+	Time		O(nklogk)
 	Space		O(n)
 	12 ms, faster than 62.59%
 */

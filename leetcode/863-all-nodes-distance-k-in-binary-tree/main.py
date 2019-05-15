@@ -13,6 +13,7 @@
     24 ms, faster than 97.55%
 """
 
+
 class Solution(object):
     def distanceK(self, root, target, K):
         """
@@ -33,7 +34,7 @@ class Solution(object):
         res = []
         seen = set()
         # bfs
-        q = [(target.val, 0)]
+        q = [(target.val, 0)]  # (node, steps)
         while len(q) > 0:
             head, steps = q.pop(0)
             # avoid revisting
@@ -50,7 +51,7 @@ class Solution(object):
                     for child in children:
                         q.append((child, steps+1))
         return res
-        
+
     def dfs(self, node, parent, m):
         """
         dfs through the tree to construct a adjacent list for each node
