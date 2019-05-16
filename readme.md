@@ -637,3 +637,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 254 | [Rotate Array](/leetcode/189-rotate-array) | array | [leetcode 189](https://leetcode.com/problems/rotate-array/) | 1st O(2n)Q(n) 📌 2nd O(3n)Q(1) |
 | 254 | [Valid Anagram](/leetcode/242-valid-anagram) | hashtable | [leetcode 242](https://leetcode.com/problems/valid-anagram/) | 1st O(S+T) |
 | 254 | [Kth Smallest Element in a BST](/leetcode/230-kth-smallest-element-in-a-bst) | tree | [leetcode 230](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | 1st O(n) |
+| 254 | [Kill Process](/leetcode/582-kill-process) | graph | [leetcode 582](https://leetcode.com/problems/kill-process/) | 1st bfs O(n) 2nd dfs O(n) |
