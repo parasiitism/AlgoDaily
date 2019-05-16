@@ -116,6 +116,9 @@ print("-----")
     azjskfzs
           LR
 
+    ref:
+    - https://www.youtube.com/watch?v=eS6PZLjoaq8
+
     Time    O(128n) 128 ascii-characters
     Space   O(n)
     1516 ms, faster than 5.06%
