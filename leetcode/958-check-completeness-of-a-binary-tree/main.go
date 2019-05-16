@@ -77,7 +77,7 @@ func isCompleteTree(root *TreeNode) bool {
 			2		3
 		4 5	 6
 	queue = [null, null, null, null, null, null, null]
-	parent =	3			4			4			5			5			6			6
+	parent = 3		4	 4		5	 5		6	 6
 	so it is complete
 
 	e.g.2
@@ -85,7 +85,7 @@ func isCompleteTree(root *TreeNode) bool {
 			2		3
 		4 5	 		6
 	queue = [null, 6, null, null, null, null]
-	parent =	3		3		 4			4			5			5
+	parent = 3	   3	4	4	   5	5
 
 	Time	O(n)
 	Space	O(h)
@@ -94,13 +94,13 @@ func isCompleteTree(root *TreeNode) bool {
 func isCompleteTree1(root *TreeNode) bool {
 	q := []*TreeNode{}
 	q = append(q, root)
-	for q[len(q)-1] != nil {
+	for q[0] != nil {
 		head := q[0]
 		q = q[1:]
 		q = append(q, head.Left)
 		q = append(q, head.Right)
 	}
-	for len(q) > 0 && q[len(q)-1] == nil {
+	for len(q) > 0 && q[0] == nil {
 		q = q[1:]
 	}
 	return len(q) > 0
