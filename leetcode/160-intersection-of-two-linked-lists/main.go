@@ -15,22 +15,24 @@ type ListNode struct {
 // it is similar to "Find Duplicate" O(m+n) but O(m) space
 // my goal here is to study linked list so im not gonna implement
 
-// best approach: linked list traversal
-// O(m+n), space O(1)
-// beats 94.74%
-// the crux is the ending condition
-//
-// for arrays without intersection, there are 2 condition
-//
-// same length [1,2,3], [4,5,6]:
-// both end the for loop becox nil == nil, and the result is p1 = nil
-// p1 order 1,2,3,nil
-// p2 order 4,5,6,nil
-//
-// different length [1,2,3], [4,5,6,7]:
-// both end the for loop becox nil == nil, BUT they(p1,p2) travelled both linkedlists
-// p1 order 1,2,3,nil,4,5,6,7,nil
-// p2 order 4,5,6,7,nil,1,2,3,nil
+/*
+	best approach: linked list traversal
+	O(m+n), space O(1)
+	beats 94.74%
+	the crux is the ending condition
+
+	for arrays without intersection, there are 2 condition
+
+	same length [1,2,3], [4,5,6]:
+	both end the for loop becox nil == nil, and the result is p1 = nil
+	p1 order 1,2,3,nil
+	p2 order 4,5,6,nil
+
+	different length [1,2,3], [4,5,6,7]:
+	both end the for loop becox nil == nil, BUT they(p1,p2) travelled both linkedlists
+	p1 order 1,2,3,nil,4,5,6,7,nil
+	p2 order 4,5,6,7,nil,1,2,3,nil
+*/
 
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	if headA == nil || headB == nil {
