@@ -635,3 +635,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 253 | [Add One Row to Tree](/leetcode/623-add-one-row-to-tree) | recursion | [leetcode 623](https://leetcode.com/problems/add-one-row-to-tree/) | ⭐️recursive dfs O(n) |
 | 253 | [Boundary of Binary Tree](/leetcode/545-boundary-of-binary-tree) | tree | [leetcode 545](https://leetcode.com/problems/boundary-of-binary-tree/) | 📌preorder + inorder + postorder |
 | 254 | [Rotate Array](/leetcode/189-rotate-array) | array | [leetcode 189](https://leetcode.com/problems/rotate-array/) | 1st O(2n)Q(n) 📌 2nd O(3n)Q(1) |
+| 254 | [Valid Anagram](/leetcode/242-valid-anagram) | hashtable | [leetcode 242](https://leetcode.com/problems/valid-anagram/) | 1st O(S+T) |
