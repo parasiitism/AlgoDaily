@@ -1,6 +1,7 @@
 """
     questions to ask:
     - duplicate words? maybe
+    - lower case == upper case? no
     - if a word cannot be splited, is it a compound word? no, it is not so dont put it into the result
 """
 
