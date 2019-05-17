@@ -24,15 +24,15 @@ class Solution(object):
         self.backtracking(b, 0, n)
         return self.result
 
-    def backtracking(self, b, col, n):
-        if col == n:
+    def backtracking(self, b, row, n):
+        if row == n:
             self.result.append(b.clone())
             return
         for i in range(n):
-            if b.isSafe(i, col):
-                b.place(i, col)
-                self.backtracking(b, col+1, n)
-                b.remove(i, col)
+            if b.isSafe(row, i):
+                b.place(row, i)
+                x = self.backtracking(b, row+1, n)
+                b.remove(row, i)
 
 
 class Board(object):

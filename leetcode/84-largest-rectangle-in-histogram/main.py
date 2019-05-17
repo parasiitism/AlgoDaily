@@ -16,10 +16,10 @@ class Solution(object):
         """
         res = 0
         for i in range(len(heights)):
-            maxheight = sys.maxsize
+            minheight = sys.maxsize
             for j in range(i, -1, -1):
-                maxheight = min(maxheight, heights[j])
-                temp = maxheight * (i-j+1)
+                minheight = min(minheight, heights[j])
+                temp = minheight * (i-j+1)
                 res = max(res, temp)
         return res
 
@@ -27,6 +27,7 @@ class Solution(object):
 print(Solution().largestRectangleArea([]))
 print(Solution().largestRectangleArea([2]))
 print(Solution().largestRectangleArea([2, 1]))
+print(Solution().largestRectangleArea([2, 3, 2, 3, 1]))
 print(Solution().largestRectangleArea([2, 1, 5, 6, 2, 3]))
 print(Solution().largestRectangleArea([12, 23, 12, 25, 3, 16]))
 
@@ -78,6 +79,7 @@ class Solution(object):
 print(Solution().largestRectangleArea([]))
 print(Solution().largestRectangleArea([2]))
 print(Solution().largestRectangleArea([2, 1]))
+print(Solution().largestRectangleArea([2, 3, 2, 3, 1]))
 print(Solution().largestRectangleArea([2, 1, 5, 6, 2, 3]))
 print(Solution().largestRectangleArea([12, 23, 12, 25, 3, 16]))
 

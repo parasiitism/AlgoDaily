@@ -14,9 +14,11 @@ func isBalanced(root *TreeNode) bool {
 	return treeHeight(root) != -1
 }
 
-// a tree is balanced if 2 of its subtreees are balanced
-// for every subtree
-// if treeHeight() == -1, then this is unbalanced
+/*
+	a tree is balanced if 2 of its subtreees are balanced
+	for every subtree
+	if treeHeight() == -1, then this is unbalanced
+*/
 func treeHeight(node *TreeNode) int {
 	if node == nil {
 		return 0
