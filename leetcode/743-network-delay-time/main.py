@@ -56,3 +56,32 @@ print(Solution().networkDelayTime(a, 4, 2))  # 4
 
 a = [[1, 2, 3], [3, 4, 5]]
 print(Solution().networkDelayTime(a, 4, 1))  # -1
+
+"""
+    here is the MST prim approach, it doesnt work because we can only calculate the min total cost to connect all the points
+    BUT what we want is the min cost amongst the paths that from the start point
+"""
+
+
+class Solution(object):
+    def networkDelayTime(self, times, N, K):
+        visited = (N+1)*[False]
+        pq = []
+        res = 0
+        for u, v, w in times:
+            if u == K:
+                heapq.heappush(pq, (w, u, v))
+        visited[K] = True
+
+        while len(pq) > 0:
+            weight, start, end = heapq.heappop(pq)
+            if visited[start] and visited[end]:
+                continue
+            else:
+                visited[end] = True
+                res += weight
+                for u, v, w in times:
+                    if u == end:
+                        heapq.heappush(pq, (w, u, v))
+        print(visited)
+        return res
