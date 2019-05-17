@@ -59,7 +59,7 @@ print(Solution().networkDelayTime(a, 4, 1))  # -1
 
 """
     here is the MST prim approach, it doesnt work because we can only calculate the min total cost to connect all the points
-    BUT what we want is the min cost amongst the paths that from the start point
+    BUT what we want is the max cost amongst the paths that from the start point(one path doesnt necessarily goes through all the points)
 """
 
 
