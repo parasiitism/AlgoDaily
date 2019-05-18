@@ -642,3 +642,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 256 | [Squares Between Two Numbers](/interviews/grab/squares-between-2numbers) | math | glassdoor | ⭐️|
 | 256 | [Longest Prefix Containing the Same Number of X and Y](/interviews/grab/longest-prefix-xy) | array | glassdoor | ⭐️|
 | 256 | [Number to Currency](/interviews/grab/number-to-currency) | array | glassdoor | ⭐️|
+| 256 | [Binary Tree Top Side View](/interviews/grab/binary-tree-top-side-view) | tree | glassdoor | ⭐️|
