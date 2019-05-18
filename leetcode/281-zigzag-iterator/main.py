@@ -1,3 +1,13 @@
+"""
+    1st approach: 2 pointers
+    
+    Time    O(k) number of input arraies, in this case is 2
+    Space   O(n)
+    48ms beats 61.11%
+    2feb2019
+"""
+
+
 class ZigzagIterator(object):
 
     def __init__(self, v1, v2):
@@ -5,12 +15,6 @@ class ZigzagIterator(object):
         Initialize your data structure here.
         :type v1: List[int]
         :type v2: List[int]
-
-        leetcode doesn't support golang submission for this question, i did it in python
-        Time    O(k) number of input arraies, in this case is 2
-        Space   O(n)
-        48ms beats 61.11%
-        2feb2019
         """
         self.cnt = len(v1)+len(v2)
         self.combo = [v1, v2]
@@ -37,6 +41,46 @@ class ZigzagIterator(object):
         return self.numberOfPop < self.cnt
 
 
-# Your ZigzagIterator object will be instantiated and called as such:
-# i, v = ZigzagIterator(v1, v2), []
-# while i.hasNext(): v.append(i.next())
+"""
+    2nd approach: pop and rotate
+    - this is much easier to solve the followup question: v1, v2, v3, v4...,vn
+
+    Time    O(k)
+    Space   O(n)
+    52 ms, faster than 44.48%
+    18may2019
+"""
+
+
+class ZigzagIterator(object):
+
+    def __init__(self, v1, v2):
+        """
+        Initialize your data structure here.
+        :type v1: List[int]
+        :type v2: List[int]
+        """
+        self.vectors = []
+        if len(v1) > 0:
+            self.vectors.append(v1)
+        if len(v2) > 0:
+            self.vectors.append(v2)
+
+    def next(self):
+        """
+        :rtype: int
+        """
+        if self.hasNext() == False:
+            return -1
+        topVector = self.vectors.pop(0)
+        p = topVector.pop(0)
+        # after pop, put the popped items back but to the end
+        if len(topVector) > 0:
+            self.vectors.append(topVector)
+        return p
+
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        return len(self.vectors) > 0 and len(self.vectors[0]) > 0
