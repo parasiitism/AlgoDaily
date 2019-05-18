@@ -641,3 +641,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 255 | [Online Election](/leetcode/911-online-election) | hashtable + binary | [leetcode 911](https://leetcode.com/problems/online-election/) | 1st hashtable + binary O(N+QlogN) |
 | 256 | [Squares Between Two Numbers](/interviews/grab/squares-between-2numbers) | math | glassdoor | ⭐️|
 | 256 | [Longest Prefix Containing the Same Number of X and Y](/interviews/grab/longest-prefix-xy) | array | glassdoor | ⭐️|
+| 256 | [Number to Currency](/interviews/grab/number-to-currency) | array | glassdoor | ⭐️|
