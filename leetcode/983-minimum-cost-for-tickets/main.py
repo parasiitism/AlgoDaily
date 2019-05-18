@@ -5,7 +5,7 @@ import sys
     - actually it is similar to coin change, we can do it with a bottom up approach
     - be careful that:
         1. for non-present days, extand the previous day cost
-        2. since 7days, 30 days passes might cheaper than the 1day and 7days, we need to consider the cost if i-1/7/30 < 0
+        2. ticket(s) might be more expensive than 1/7 day(s) ticket e.g. days = [1, 4, 6, 7, 8, 20], costs = [7, 2, 15]
 
     e.g. days = [1, 4, 6, 7, 8, 20], costs = [2, 7, 15]
     cost
@@ -46,19 +46,21 @@ class Solution(object):
 
             temp = sys.maxsize
             # day - 1 or just buy ticket[0]
-            if i - 1 >= 0:
-                temp = min(temp, dp[i-1]+costs[0])
-            else:
-                temp = min(temp, costs[0])
+            # keep in mind that i starts from 1, i-1 < 0 would never be reached
+            temp = min(temp, dp[i-1]+costs[0])
             # day - 7 or just buy ticket[1]
             if i - 7 >= 0:
                 temp = min(temp, dp[i-7]+costs[1])
             else:
+                # corner case: [1, 4, 6, 7, 8, 20], costs = [7, 2, 15]
+                # on day 1, buying 7 days ticket is cheaper than buying 1 day
                 temp = min(temp, costs[1])
             # day - 30 or just buy ticket[2]
             if i - 30 >= 0:
                 temp = min(temp, dp[i-30]+costs[2])
             else:
+                # corner case: [1, 4, 6, 7, 8, 20], costs = [7, 2, 1]
+                # on day 1, buying 30 days ticket is cheaper than buying 1 day and 7 days
                 temp = min(temp, costs[2])
             # update dp[i]
             dp[i] = temp

@@ -29,11 +29,13 @@ class Solution(object):
         """
         if n == 0:
             return 0
+        # get the floor of the root
         root = int(math.sqrt(n))
+        # candidates: 1, 4, 9, 16....root^2
         cands = []
         for i in range(1, root+1):
             cands.append(i*i)
-
+        # dp
         dp = (n+1)*[0]
         for i in range(1, n+1):
             minSteps = sys.maxsize
