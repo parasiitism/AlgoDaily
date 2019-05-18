@@ -639,3 +639,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 254 | [Kth Smallest Element in a BST](/leetcode/230-kth-smallest-element-in-a-bst) | tree | [leetcode 230](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | 1st O(n) |
 | 254 | [Kill Process](/leetcode/582-kill-process) | graph | [leetcode 582](https://leetcode.com/problems/kill-process/) | 1st bfs O(n) 2nd dfs O(n) |
 | 255 | [Online Election](/leetcode/911-online-election) | hashtable + binary | [leetcode 911](https://leetcode.com/problems/online-election/) | 1st hashtable + binary O(N+QlogN) |
+| 256 | [Squares Between Two Numbers](/interviews/grab/squares-between-2numbers) | math | glassdoor | ⭐️|
