@@ -125,12 +125,6 @@ class NestedIterator(object):
     ]
 
     stack = [
-        [[1,2],3],          <- top
-        4,
-        [5,6]
-    ]
-
-    stack = [
         [1,2],              <- top
         3,
         4,
@@ -146,6 +140,7 @@ class NestedIterator(object):
     ]
 
     Time    O(n)
+    Space   O(n)
 """
 
 
@@ -156,27 +151,29 @@ class NestedIterator(object):
         Initialize your data structure here.
         :type nestedList: List[NestedInteger]
         """
-        self.stack = [nestedList]
+        self.queue = [nestedList]
 
     def next(self):
         """
         :rtype: int
         """
         self.hasNext()
-        return self.stack.pop()
+        return self.queue.pop(0)
 
     def hasNext(self):
         """
         :rtype: bool
         """
-        while len(self.stack) > 0:
-            top = self.stack[-1]
-            if isinstance(top, int):
+        while len(self.queue) > 0:
+            head = self.queue[0]
+            if isinstance(head, int):
                 return True
             else:
-                pop = self.stack.pop()
-                for i in range(len(pop)-1, -1, -1):
-                    self.stack.append(pop[i])
+                pop = self.queue.pop(0)
+                temp = []
+                for i in range(len(pop)):
+                    temp.append(pop[i])
+                self.queue = temp + self.queue
         return False
 
 

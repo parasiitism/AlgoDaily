@@ -29,13 +29,38 @@ class Vector2D(object):
 
 
 """
-    1st approach: 2pointers
-    - row starts from 0
-    - col starts from -1
+    1st approach: stack
+    
+    e.g. a = [[[1,2],3],4,[5,6]]
 
-    Time  O(n)
-    Space O(n)
-    80 ms, faster than 34.20%
+    in the beginning
+    stack = [a]
+
+    when we do hasnext(), we unfold the top item until we get to an integer
+    stack = [
+        [5,6],
+        4,
+        [[1,2],3],          <- top
+    ]
+
+    stack = [
+        [5,6],
+        4,
+        3,
+        [1,2],              <- top
+    ]
+
+    stack = [
+        [5,6],
+        4,
+        3,
+        2,
+        1,                  <- top, done unfolding
+    ]
+
+    Time    O(n)
+    Space   O(n)
+    80 ms, faster than 50.56%
 """
 
 
@@ -45,50 +70,93 @@ class Vector2D(object):
         """
         :type v: List[List[int]]
         """
-        self.v = v
-        self.row = 0
-        # very important
-        self.col = -1
+        self.stack = [v]
 
     def next(self):
         """
         :rtype: int
         """
-        nextRow = self.row + 1
-        nextCol = self.col + 1
-        if self.row < len(self.v):
-            if nextCol < len(self.v[self.row]):
-                self.col = nextCol
-                return self.v[self.row][nextCol]
-            else:
-                while nextRow < len(self.v):
-                    if len(self.v[nextRow]) > 0:
-                        self.row = nextRow
-                        self.col = 0
-                        return self.v[nextRow][0]
-                    nextRow += 1
-                return -1
-        return -1
+        self.hasNext()
+        return self.stack.pop()
 
     def hasNext(self):
         """
         :rtype: bool
         """
-        nextRow = self.row + 1
-        nextCol = self.col + 1
-        if self.row < len(self.v):
-            if nextCol < len(self.v[self.row]):
+        while len(self.stack) > 0:
+            top = self.stack[-1]
+            if isinstance(top, int):
                 return True
             else:
-                while nextRow < len(self.v):
-                    if len(self.v[nextRow]) > 0:
-                        return True
-                    nextRow += 1
-                return False
+                pop = self.stack.pop()
+                for i in range(len(pop)-1, -1, -1):
+                    self.stack.append(pop[i])
         return False
 
 
-# Your Vector2D object will be instantiated and called as such:
-# obj = Vector2D(v)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()
+"""
+    2nd approach: queue <- similar to the stack one
+    
+    e.g. a = [[[1,2],3],4,[5,6]]
+
+    in the beginning
+    stack = [a]
+
+    when we do hasnext(), we unfold the top item until we get to an integer
+    queue = [
+        [[1,2],3],          <- head
+        4,
+        [5,6]
+    ]
+
+    queue = [
+        [1,2],              <- head
+        3,
+        4,
+        [5,6]
+    ]
+
+    queue = [
+        1,                  <- head, done unfolding
+        2,
+        3,
+        4,
+        [5,6],
+    ]
+
+    Time    O(n)
+    Space   O(n)
+    84 ms, faster than 39.28%
+"""
+
+
+class Vector2D(object):
+
+    def __init__(self, v):
+        """
+        :type v: List[List[int]]
+        """
+        self.queue = [v]
+
+    def next(self):
+        """
+        :rtype: int
+        """
+        self.hasNext()
+        return self.queue.pop(0)
+
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        while len(self.queue) > 0:
+            head = self.queue[0]
+            if isinstance(head, int):
+                return True
+            else:
+                pop = self.queue.pop(0)
+                temp = []
+                for i in range(len(pop)):
+                    temp.append(pop[i])
+                self.queue = temp + self.queue
+        return False
