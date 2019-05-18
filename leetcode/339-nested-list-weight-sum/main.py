@@ -3,29 +3,27 @@
 
     Time  O(n)
     Space O(h)
-    20 ms, faster than 83.54%
+    12 ms, faster than 99.88%
 """
 
 
 class Solution(object):
-
-    def __init__(self):
-        self.result = 0
 
     def depthSum(self, nestedList):
         """
         :type nestedList: List[NestedInteger]
         :rtype: int
         """
-        self.dfs(nestedList, 1)
-        return self.result
+        return self.dfs(nestedList, 1)
 
     def dfs(self, arr, depth):
+        res = 0
         for x in arr:
             if x.isInteger():
-                self.result += depth * x.getInteger()
+                res += depth * x.getInteger()
             else:
-                self.dfs(x.getList(), depth + 1)
+                res += self.dfs(x.getList(), depth+1)
+        return res
 
 
 """

@@ -108,34 +108,27 @@ class Solution(object):
 class Solution(object):
 
     def __init__(self):
-        self.maxIdx = 0
+        self.m = {}
+        self.maxDepth = 0
 
     def depthSumInverse(self, nestedList):
         """
         :type nestedList: List[NestedInteger]
         :rtype: int
         """
-        ht = {}
-        # recursion
-        self.helper(nestedList, 0, ht)
-        # depth is max index + 1
-        depth = self.maxIdx + 1
+        self.dfs(nestedList, 1)
         res = 0
-        # iterate the hashtable
-        for key in ht:
-            res += (depth - key) * ht[key]
+        for key in self.m:
+            res += self.m[key] * (self.maxDepth - key + 1)
         return res
 
-    def helper(self, arr, level, ht):
-        # find out the max index that we can reach
-        self.maxIdx = max(self.maxIdx, level)
-
-        for item in arr:
-            if item.isInteger():
-                x = item.getInteger()
-                if level not in ht:
-                    ht[level] = x
+    def dfs(self, arr, depth):
+        self.maxDepth = max(self.maxDepth, depth)
+        for x in arr:
+            if x.isInteger():
+                if depth not in self.m:
+                    self.m[depth] = x.getInteger()
                 else:
-                    ht[level] += x
+                    self.m[depth] += x.getInteger()
             else:
-                self.helper(item.getList(), level + 1, ht)
+                self.dfs(x.getList(), depth+1)
