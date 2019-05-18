@@ -643,3 +643,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 256 | [Longest Prefix Containing the Same Number of X and Y](/interviews/grab/longest-prefix-xy) | array | glassdoor | ⭐️|
 | 256 | [Number to Currency](/interviews/grab/number-to-currency) | array | glassdoor | ⭐️|
 | 256 | [Binary Tree Top Side View](/interviews/grab/binary-tree-top-side-view) | tree | glassdoor | ⭐️|
+| 256 | [Maximum Distance in Arrays](/leetcode/624-maximum-distance-in-arrays) | array | [leetcode 624](https://leetcode.com/problems/maximum-distance-in-arrays/) | ⭐️|
