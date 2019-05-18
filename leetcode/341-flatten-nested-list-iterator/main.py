@@ -64,6 +64,126 @@ class NestedIterator(object):
         return len(self.nums) > 0
 
 
-# Your NestedIterator object will be instantiated and called as such:
-# i, v = NestedIterator(nestedList), []
-# while i.hasNext(): v.append(i.next())
+print("-----")
+
+"""
+    2nd approach: stack
+
+    Time    O(n)
+    Space   O(h)
+    64 ms, faster than 98.75%
+"""
+
+
+class NestedIterator(object):
+
+    def __init__(self, nestedList):
+        """
+        Initialize your data structure here.
+        :type nestedList: List[NestedInteger]
+        """
+        self.stack = []
+        for i in range(len(nestedList)-1, -1, -1):
+            item = nestedList[i]
+            self.stack.append(item)
+
+    def next(self):
+        """
+        :rtype: int
+        """
+        return self.stack.pop().getInteger()
+
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        while len(self.stack) > 0:
+            top = self.stack[-1]
+            if top.isInteger():
+                return True
+            else:
+                pop = self.stack.pop()
+                for i in range(len(pop.getList())-1, -1, -1):
+                    item = pop.getList()[i]
+                    self.stack.append(item)
+        return False
+
+
+"""
+    but actually, in a real interview, u will be given an array of int or arr, instead of leetcode's NestedInteger
+
+    e.g. a = [[[1,2],3],4,[5,6]]
+
+    in the beginning
+    stack = [a]
+
+    when we do hasnext(), we unfold the top item until we get to an integer
+    stack = [
+        [[1,2],3],          <- top
+        4,
+        [5,6]
+    ]
+
+    stack = [
+        [[1,2],3],          <- top
+        4,
+        [5,6]
+    ]
+
+    stack = [
+        [1,2],              <- top
+        3,
+        4,
+        [5,6]
+    ]
+
+    stack = [
+        1,                  <- top, done unfolding
+        2,
+        3,
+        4,
+        [5,6],
+    ]
+
+    Time    O(n)
+"""
+
+
+class NestedIterator(object):
+
+    def __init__(self, nestedList):
+        """
+        Initialize your data structure here.
+        :type nestedList: List[NestedInteger]
+        """
+        self.stack = [nestedList]
+
+    def next(self):
+        """
+        :rtype: int
+        """
+        self.hasNext()
+        return self.stack.pop()
+
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        while len(self.stack) > 0:
+            top = self.stack[-1]
+            if isinstance(top, int):
+                return True
+            else:
+                pop = self.stack.pop()
+                for i in range(len(pop)-1, -1, -1):
+                    self.stack.append(pop[i])
+        return False
+
+
+ni = NestedIterator([[[1, 2], 3], 4, [5, 6]])
+print(ni.next())
+print(ni.next())
+print(ni.next())
+print(ni.next())
+print(ni.next())
+print(ni.next())
