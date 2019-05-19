@@ -55,8 +55,8 @@ class HitCounter(object):
 """
     2nd approach:
     - dont use OrderedDict, use a hashtable + array to do the same thing
-    - hit() => put the keys in the orderdict, increment the count for existing keys
-    - getHits() => count the result by iterating through the OrderedDict from back until the key <= timestamp - 300
+    - hit() => put the keys in the hashtable, increment the count for existing keys
+    - getHits() => count the result by iterating through the hashtable from back until the key <= timestamp - 300
 
     Time: hit()       O(1)
     Time: getHits()   O(1) cos it just counts 300 keys at maximum
@@ -95,15 +95,15 @@ class HitCounter(object):
         :rtype: int
         """
         res = 0
-        n = len(self.nums)
         j = -1
-        for i in range(n-1, -1, -1):
+        for i in range(len(self.nums)-1, -1, -1):
             key = self.nums[i]
             cnt = self.m[key]
             if key > timestamp - 300:
                 res += cnt
             else:
                 del self.m[key]
+                # set the index for removing
                 if j == -1:
                     j = i
         self.nums = self.nums[j+1:]
