@@ -6,7 +6,16 @@ class ListNode(object):
 
 
 """
-    2 pointers: the gap is the n such that when fast reaches to the end, slow.next is the target
+    1st approach: 2 pointers + dump
+    - the gap is the n such that when fast reaches to the end, slow.next is the target
+
+    e.g. 
+    
+    list = 1 -> 2 -> 3 -> 4 -> 5, target = 4
+    
+    1 -> 2 -> 3 -> 4 -> 5
+              ^         ^
+            slow        fast
 
     Time		O(n+target)
     Space       O(1)
@@ -40,3 +49,37 @@ class Solution(object):
             fast = fast.next
         slow.next = slow.next.next
         return dump.next
+
+
+"""
+    2nd approach: 2 pointers without using dump
+    - the gap is the n such that when fast reaches to the end, slow.next is the target
+
+    Time		O(n+target)
+    Space       O(1)
+    20 ms, faster than 96.68%
+"""
+
+
+class Solution(object):
+    def removeNthFromEnd(self, head, n):
+        """
+        :type head: ListNode
+        :type n: int
+        :rtype: ListNode
+        """
+        if n <= 0:
+            return head
+        slow = head
+        fast = head
+        for _ in range(n):
+            fast = fast.next
+        # it means the nth points to the head
+        if fast == None:
+            return head.next
+        # traverse
+        while fast.next != None:
+            slow = slow.next
+            fast = fast.next
+        slow.next = slow.next.next
+        return head

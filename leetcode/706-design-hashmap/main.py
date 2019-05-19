@@ -123,6 +123,7 @@ class MyHashMap(object):
         while cur != None:
             if cur.key == key:
                 prev.next = cur.next
+                return
             prev = cur
             cur = cur.next
 
@@ -135,6 +136,14 @@ print(hs.get(1))
 print(hs.get(2))
 print(hs.get(3))
 hs.put(2, 20)
+print(hs.get(1))
 print(hs.get(2))
+print(hs.get(3))
 hs.remove(2)
+print(hs.get(1))
 print(hs.get(2))
+print(hs.get(3))
+hs.put(3, 30)
+print(hs.get(1))
+print(hs.get(2))
+print(hs.get(3))
