@@ -75,7 +75,7 @@ class Solution(object):
         for i in range(len(s)):
             idx = ord(s[i]) - ord('A')
             seen[idx] += 1
-            if i-left+1-max(seen) > k:
+            while i-left+1-max(seen) > k:
                 key = ord(s[left]) - ord('A')
                 seen[key] -= 1
                 left += 1
