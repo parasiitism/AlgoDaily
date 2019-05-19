@@ -65,14 +65,6 @@ class Heap(object):
 
     # used by push
     def _shiftUp(self, fromIdx):
-        # curIdx = fromIdx
-        # while curIdx > 0:
-        #     parentIdx = (curIdx - 1) / 2
-        #     if self.nums[parentIdx] > self.nums[curIdx]:
-        #         self.nums[parentIdx], self.nums[curIdx] = self.nums[curIdx], self.nums[parentIdx]
-        #         curIdx = parentIdx
-        #     else:
-        #         break
         curIdx = fromIdx
         parentIdx = (curIdx - 1) / 2
         while curIdx > 0 and self.nums[parentIdx] > self.nums[curIdx]:
