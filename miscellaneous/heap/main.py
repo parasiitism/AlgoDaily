@@ -31,13 +31,10 @@ class Heap(object):
 
     # shift down the parent :  O(logN)
     def heapPop(self):
-        pop = self.nums[0]
+        self.nums[0], self.nums[-1] = self.nums[-1], self.nums[0]
         p = self.nums.pop()
-        if len(self.nums) == 0:
-            return pop
-        self.nums[0] = p
         self._shiftDown(0)
-        return pop
+        return p
 
     # used by heapify, pop
     def _shiftDown(self, fromIdx):
@@ -60,6 +57,7 @@ class Heap(object):
                 if self.nums[left] < self.nums[cur]:
                     self.nums[cur], self.nums[left] = self.nums[left], self.nums[cur]
                     cur = left
+                # if 1 child, we reach to the end
                 break
             # if no child, do nothing
             else:
@@ -67,14 +65,20 @@ class Heap(object):
 
     # used by push
     def _shiftUp(self, fromIdx):
+        # curIdx = fromIdx
+        # while curIdx > 0:
+        #     parentIdx = (curIdx - 1) / 2
+        #     if self.nums[parentIdx] > self.nums[curIdx]:
+        #         self.nums[parentIdx], self.nums[curIdx] = self.nums[curIdx], self.nums[parentIdx]
+        #         curIdx = parentIdx
+        #     else:
+        #         break
         curIdx = fromIdx
-        while curIdx > 0:
+        parentIdx = (curIdx - 1) / 2
+        while curIdx > 0 and self.nums[parentIdx] > self.nums[curIdx]:
+            self.nums[parentIdx], self.nums[curIdx] = self.nums[curIdx], self.nums[parentIdx]
+            curIdx = parentIdx
             parentIdx = (curIdx - 1) / 2
-            if self.nums[parentIdx] > self.nums[curIdx]:
-                self.nums[parentIdx], self.nums[curIdx] = self.nums[curIdx], self.nums[parentIdx]
-                curIdx = parentIdx
-            else:
-                break
 
 
 h = Heap()

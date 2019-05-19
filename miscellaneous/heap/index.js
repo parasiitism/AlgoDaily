@@ -17,29 +17,27 @@ class Heap {
     this.arr = values
     const n = values.length
     for (let i = Math.floor(n / 2); i >= 0; i--) {
-      this._shitUp(i)
+      this._shiftDown(i)
     }
   }
 
   heapPush(value) {
     this.arr.push(value)
     let curIdx = this.arr.length - 1
-    this._shiftDown(curIdx)
+    this._shiftUp(curIdx)
   }
 
   heapPop() {
-    const res = this.arr[0]
-    const last = this.arr.pop()
-    if (this.arr.length == 0) {
-      return res
-    }
-    this.arr[0] = last
-    this._shitUp(0)
-    return res
+    const temp = this.arr[0]
+    this.arr[0] = this.arr[this.arr.length - 1]
+    this.arr[this.arr.length - 1] = temp
+    const p = this.arr.pop()
+    this._shiftDown(0)
+    return p
   }
 
   // used by heapify, pop
-  _shitUp(fromIdx) {
+  _shiftDown(fromIdx) {
     let cur = fromIdx
     while (cur < this.arr.length) {
       const left = cur * 2 + 1
@@ -73,7 +71,7 @@ class Heap {
   }
 
   // used by push
-  _shiftDown(fromIdx) {
+  _shiftUp(fromIdx) {
     let curIdx = fromIdx
     while (curIdx > 0) {
       const parentIdx = Math.floor((curIdx - 1) / 2)
