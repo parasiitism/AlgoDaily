@@ -646,3 +646,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 256 | [Maximum Distance in Arrays](/leetcode/624-maximum-distance-in-arrays) | array | [leetcode 624](https://leetcode.com/problems/maximum-distance-in-arrays/) | ⭐️|
 | 257 | [Bitwise AND of Numbers Range](/leetcode/201-bitwise-and-of-numbers-range) | bit op | [leetcode 201](https://leetcode.com/problems/bitwise-and-of-numbers-range/) | 📌|
 | 257 | [Palindrome Partitioning](/leetcode/131-palindrome-partitioning) | recursion | [leetcode 131](https://leetcode.com/problems/palindrome-partitioning/) | 📌|
+| 257 | [Is Subsequence](/leetcode/392-is-subsequence) | 2pointers | [leetcode 392](https://leetcode.com/problems/is-subsequence/) ||
