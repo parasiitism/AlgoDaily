@@ -53,21 +53,17 @@ class Solution(object):
                 if rooms[i][j] == 0:
                     self.bfs(rooms, i, j, 0)
 
-    def bfs(self, rooms, i, j, steps):
-        if i < 0 or i >= len(rooms) or j < 0 or j >= len(rooms[0]):
-            return
-        q = [(i, j, 0)]
+    def bfs(self, rooms, x, y, steps):
+        q = [(x, y, 0)]
         while len(q) > 0:
-            x, y, steps = q.pop(0)
-            if rooms[x][y] == -1:
+            i, j, steps = q.pop(0)
+            if i < 0 or i >= len(rooms) or j < 0 or j >= len(rooms[0]):
                 continue
-            if steps <= rooms[x][y]:
-                rooms[x][y] = steps
-                if x-1 >= 0:
-                    q.append((x-1, y, steps+1))
-                if x+1 < len(rooms):
-                    q.append((x+1, y, steps+1))
-                if y-1 >= 0:
-                    q.append((x, y-1, steps+1))
-                if y+1 < len(rooms[0]):
-                    q.append((x, y+1, steps+1))
+            if rooms[i][j] == -1:
+                continue
+            if steps <= rooms[i][j]:
+                rooms[i][j] = steps
+                q.append((i-1, j, steps+1))
+                q.append((i+1, j, steps+1))
+                q.append((i, j-1, steps+1))
+                q.append((i, j+1, steps+1))

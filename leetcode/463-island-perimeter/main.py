@@ -15,10 +15,12 @@ class Solution(object):
         """
         if len(grid) == 0 or len(grid[0]) == 0:
             return 0
+        # visited
         seen = []
-        res = 0
         for i in range(len(grid)):
             seen.append(len(grid[0])*[False])
+        # iteration
+        res = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j] == 1 and seen[i][j] == False:
@@ -26,18 +28,21 @@ class Solution(object):
         return res
 
     def dfs(self, grid, i, j, seen):
-        if i < 0 or i > len(grid) - 1 or j < 0 or j > len(grid[0]) - 1:
+        # if boundary, return 1 and stop exploring
+        if i < 0 or i+1 > len(grid) or j < 0 or j+1 > len(grid[0]):
             return 1
+        # if 0, return 1 and stop exploring
         if grid[i][j] == 0:
             return 1
-        elif grid[i][j] == 1 and seen[i][j] == False:
-            seen[i][j] = True
-            up = self.dfs(grid, i-1, j, seen)
-            down = self.dfs(grid, i+1, j, seen)
-            left = self.dfs(grid, i, j-1, seen)
-            right = self.dfs(grid, i, j+1, seen)
-            return up + down + left + right
-        return 0
+        # if visited, stop exploring
+        if seen[i][j] == True:
+            return 0
+        seen[i][j] = True
+        up = self.dfs(grid, i-1, j, seen)
+        down = self.dfs(grid, i+1, j, seen)
+        left = self.dfs(grid, i, j-1, seen)
+        right = self.dfs(grid, i, j+1, seen)
+        return up + down + left + right
 
 
 a = []
