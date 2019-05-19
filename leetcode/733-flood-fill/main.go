@@ -1,7 +1,10 @@
 package main
 
-// approach 1
-// dfs: just replace the target territory with the new color
+/*
+	1st approach: recursive dfs + hashtable
+	- just replace the target territory with the new color
+	- hastable to avoid redundant visit
+*/
 func floodFill(image [][]int, sr int, sc int, newColor int) [][]int {
 	visited := make([][]bool, len(image))
 	for i := range visited {
@@ -33,8 +36,11 @@ func dfs(grid [][]int, i int, j int, origColor int, newColor int, visited [][]bo
 	}
 }
 
-// approach 2
-// queue
+/*
+	2nd approach: bfs + hashtable
+	- just replace the target territory with the new color
+	- hastable to avoid redundant visit
+*/
 func floodFill1(image [][]int, sr int, sc int, newColor int) [][]int {
 	visited := make([][]bool, len(image))
 	for i := range visited {
@@ -79,6 +85,50 @@ func bfs(grid [][]int, i int, j int, origColor int, newColor int, visited [][]bo
 			if col+1 < len(grid[0]) {
 				queue = append(queue, Queue{row, col + 1})
 			}
+		}
+	}
+}
+
+/*
+	3rd approach: bfs
+	- just replace the target territory with the new color
+	- actually we dont need a hashtable, we can just check if the start point is newColor
+
+	Time	O(RC)
+	Space	O(RC)
+	8 ms, faster than 98.88%
+*/
+func floodFill2(image [][]int, sr int, sc int, newColor int) [][]int {
+	for i := 0; i < len(image); i++ {
+		for j := 0; j < len(image[0]); j++ {
+			if i == sr && j == sc && image[i][j] != newColor {
+				bfs2(image, i, j, newColor)
+			}
+		}
+	}
+	return image
+}
+
+func bfs2(grid [][]int, x int, y int, newColor int) {
+	origColor := grid[x][y]
+	var queue []Queue
+	queue = append(queue, Queue{x, y})
+	for len(queue) > 0 {
+		head := queue[0]
+		row := head.Row
+		col := head.Col
+		queue = queue[1:]
+
+		if row < 0 || row+1 > len(grid) || col < 0 || col+1 > len(grid[0]) {
+			continue
+		}
+
+		if grid[row][col] == origColor {
+			grid[row][col] = newColor
+			queue = append(queue, Queue{row - 1, col})
+			queue = append(queue, Queue{row + 1, col})
+			queue = append(queue, Queue{row, col - 1})
+			queue = append(queue, Queue{row, col + 1})
 		}
 	}
 }
