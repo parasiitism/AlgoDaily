@@ -9,7 +9,7 @@ import (
 	1st approach:
 	1. separate the numbers by 3 didgits, 123456789 -> 123, 456, 789
 	2. for each 3 digits, translate to english
-	3. for append Thousand, Million and Billion for each iteration of division
+	3. append Thousand, Million and Billion for each iteration of division
 
 	Time		O(n)
 	Space		O(n)
