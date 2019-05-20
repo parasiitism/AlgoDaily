@@ -649,3 +649,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 257 | [Is Subsequence](/leetcode/392-is-subsequence) | 2pointers | [leetcode 392](https://leetcode.com/problems/is-subsequence/) ||
 | 258 | [Power of Two](/leetcode/231-power-of-two) | bit op | [leetcode 231](https://leetcode.com/problems/power-of-two/) | ⭐️|
 | 258 | [Power of Three](/leetcode/326-power-of-three) | math | [leetcode 326](https://leetcode.com/problems/power-of-three/) | ️⭐️|
+| 258 | [Power of Four](/leetcode/342-power-of-four) | math | [leetcode 342](https://leetcode.com/problems/power-of-four/) | ️⭐️|
