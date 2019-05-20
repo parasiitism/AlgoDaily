@@ -111,6 +111,7 @@ class MyHashMap(object):
             if cur.key == key:
                 return cur.val
             cur = cur.next
+        return -1
 
     def remove(self, key):
         """

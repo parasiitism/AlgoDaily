@@ -1,5 +1,7 @@
 """
-    1st approach: Longest Common Substring
+    classic approach: Longest Common Substring
+
+    followup: print the substring as well 
 
     Time    O(AB)
     Space   O(AB)
@@ -35,6 +37,6 @@ class Solution(object):
         return res
 
 
-a = [1, 2, 3, 2, 1]
-b = [3, 2, 1, 4, 7]
+a = "ABCBA"
+b = "CBADG"
 print(Solution().findLength(a, b))
