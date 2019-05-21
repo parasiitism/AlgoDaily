@@ -40,7 +40,7 @@ print(Solution().validWordSquare(a))
 print("----")
 
 """
-    2nd approach: use error
+    2nd approach: checking boundaries of i and j
 
     Time    O(n)
     Space   O(1)

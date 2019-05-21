@@ -650,3 +650,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 258 | [Power of Two](/leetcode/231-power-of-two) | bit op | [leetcode 231](https://leetcode.com/problems/power-of-two/) | ⭐️|
 | 258 | [Power of Three](/leetcode/326-power-of-three) | math | [leetcode 326](https://leetcode.com/problems/power-of-three/) | ️⭐️|
 | 258 | [Power of Four](/leetcode/342-power-of-four) | math | [leetcode 342](https://leetcode.com/problems/power-of-four/) | ️⭐️|
+| 259 | [Factor Combinations](/leetcode/254-factor-combinations) | recursion | [leetcode 254](https://leetcode.com/problems/factor-combinations/) | ️📌1st LTE, 2nd beats 97%|

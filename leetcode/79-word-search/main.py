@@ -40,9 +40,14 @@ class Solution(object):
 
     # check whether can find word, start at (i,j) position
     def dfs(self, board, i, j, word):
-        if len(word) == 0:  # all the characters are checked
+        # if all the characters are checked
+        if len(word) == 0:
             return True
-        if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]) or word[0] != board[i][j]:
+        # check boundaries
+        if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]):
+            return False
+        # check if the first character equals to the bound[i][j]
+        if word[0] != board[i][j]:
             return False
         # first character is found, check the remaining part
         tmp = board[i][j]

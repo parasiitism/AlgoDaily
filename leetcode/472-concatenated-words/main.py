@@ -30,7 +30,6 @@ class Solution(object):
             count = self.dfs(word, wordSet, seen)
             if count > 1:
                 res.append(word)
-        print(seen)
         return res
 
     def dfs(self, s, wordSet, seen):

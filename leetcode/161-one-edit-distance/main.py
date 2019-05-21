@@ -109,14 +109,14 @@ print("------------------")
 
 	There're 3 possibilities to satisfy the question:
 	1) Replace 1 char:
- 	  s: a B c
- 	  t: a D c
-  2) Delete 1 char from s:
-	  s: a D  b c
-	  t: a    b c
-  3) Delete 1 char from t
-	  s: a   b c
-	  t: a D b c
+ 	  s: a X b c
+ 	  t: a Y b c
+    2) Delete 1 char from s:
+        s: a X  b c
+        t: a    b c
+    3) Delete 1 char from t
+        s: a   b c
+        t: a X b c
 
 	Time		O(min(S,T))
 	Space		O(1)
