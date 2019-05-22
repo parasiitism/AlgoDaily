@@ -653,4 +653,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 259 | [Factor Combinations](/leetcode/254-factor-combinations) | recursion | [leetcode 254](https://leetcode.com/problems/factor-combinations/) | ️📌1st LTE, 2nd beats 97%|
 | 259 | [Reordered Power of 2](/leetcode/869-reordered-power-of-2) | bit op, hashtable | [leetcode 869](https://leetcode.com/problems/reordered-power-of-2/) | ️📌|
 | 259 | [Construct Quad Tree](/leetcode/427-construct-quad-tree) | recursion | [leetcode 427](https://leetcode.com/problems/construct-quad-tree/) | ️⭐️so special |
-| 260 | [Range Sum Query - Mutable](/leetcode/307-range-sum-query-mutable) | tree | [leetcode 307](https://leetcode.com/problems/range-sum-query-mutable/) | ️📌1st O(logn) Segment Tree, 2nd O(logn) Binary Indexed Tree |
+| 260 | [Range Sum Query - Mutable](/leetcode/307-range-sum-query-mutable) | tree | [leetcode 307](https://leetcode.com/problems/range-sum-query-mutable/) | ️📌1st O(logn) Segment Tree 📌2nd O(logn) Binary Indexed Tree |
+| 260 | [Powerful Integers](/leetcode/970-powerful-integers) | array, hashtable | [leetcode 970](https://leetcode.com/problems/powerful-integers/) | |
