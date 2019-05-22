@@ -111,7 +111,61 @@ class NumArray(object):
         return self._query(self.root, i, j)
 
 
-# Your NumArray object will be instantiated and called as such:
-# obj = NumArray(nums)
-# obj.update(i,val)
-# param_2 = obj.sumRange(i,j)
+"""
+    2nd approach: Binary Indexed Tree(Fenwick Tree)
+
+    ref:
+    - https://www.youtube.com/playlist?list=PLDV1Zeh2NRsCvoyP-bztk6uXAYoyZg_U9
+    - https://leetcode.com/problems/range-sum-query-mutable/discuss/75753/Java-using-Binary-Indexed-Tree-with-clear-explanation
+
+    Time of build   O(n)
+    Time of update  O(logn)
+    Time of query   O(logn)
+    Space           O(n)
+    224ms beats 40.96%
+"""
+
+
+class NumArray(object):
+
+    def __init__(self, nums):
+        """
+        :type nums: List[int]
+        """
+        self.nums = nums
+        self.fenwickTree = (len(nums)+1) * [0]
+
+        for i in range(len(nums)):
+            self._buildTree(i, nums[i])
+
+    def _buildTree(self, i, val):
+        k = i + 1
+        while k < len(self.fenwickTree):
+            self.fenwickTree[k] += val
+            # new k = k + least_significant_bit(k)
+            k = k + (k & -k)
+
+    def _getSum(self, i):
+        s = 0
+        k = i + 1
+        while k > 0:
+            s += self.fenwickTree[k]
+            k = k - (k & -k)
+        return s
+
+    def update(self, i, val):
+        """
+        :type i: int
+        :type val: int
+        :rtype: None
+        """
+        self._buildTree(i, val - self.nums[i])
+        self.nums[i] = val
+
+    def sumRange(self, i, j):
+        """
+        :type i: int
+        :type j: int
+        :rtype: int
+        """
+        return self._getSum(j) - self._getSum(i-1)
