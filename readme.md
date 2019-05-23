@@ -658,3 +658,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 261 | [Convert to Base -2](/leetcode/1017-convert-to-base-2) | math | [leetcode 1017](https://leetcode.com/problems/convert-to-base-2/) | 📌📌📌 first time ever see this kind of question. 2 followups |
 | 261 | [Find Pair Which is Double in Size](/miscellaneous/find-pair-with-double-size) | hashtable | glassdoor | |
 | 261 | [String Without AAA or BBB](/leetcode/984-string-without-aaa-or-bbb) | greedy | [leetcode 984](https://leetcode.com/problems/string-without-aaa-or-bbb/) | ⭐️|
+| 261 | [Bit Stream Number Divisible By 3](/miscellaneous/bit-stream-divisible-by-3) | bit op | glassdoor | ⭐️|
