@@ -6,6 +6,18 @@ class TreeNode(object):
         self.right = None
 
 
+"""
+    1st approach
+    1. find the width of the binary tree by dfs
+    2. bfs the tree with a corresponding 'diff'
+    3. put the node.val into a right subarray of result corresponding to the 'diff'
+
+    Time    O(n)
+    Space   O(h+n) the height of tree(recursion) + the result
+    24ms beats 100%
+"""
+
+
 class Solution(object):
 
     def __init__(self):
@@ -16,15 +28,6 @@ class Solution(object):
         """
         :type root: TreeNode
         :rtype: List[List[int]]
-
-        1st approach
-        1. find the width of the binary tree by dfs
-        2. bfs the tree with a corresponding 'diff'
-        3. put the node.val into a right subarray of result corresponding to the 'diff'
-
-        Time    O(n)
-        Space   O(h+n) the height of tree(recursion) + the result
-        24ms beats 100%
         """
         if root == None:
             return []
@@ -76,3 +79,47 @@ f.right = h
 print(Solution().verticalOrder(a))
 
 print(Solution().verticalOrder(None))
+
+"""
+    2nd approach: dfs + hashtable
+    - dfs through the tree with incrementing row and incrementing/decrementing col
+    - put the node to the corresponding col in a hashtable
+    - iterating the hastable to get the nodes in vertical traversal order
+    - and sort the nodes by row count
+
+    Time    O(N + C RlogR) N: number of nodes, R: row, C: column
+    Space   O(h+n) the height of tree(recursion) + the result
+    24ms beats 100%
+"""
+
+
+class Solution(object):
+    def __init__(self):
+        self.minCol = 0
+        self.maxCol = 0
+        self.m = defaultdict(list)
+
+    def verticalOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        if root == None:
+            return []
+        self.dfs(root, 0, 0)
+        res = []
+        for i in range(self.minCol, self.maxCol+1):
+            temp = self.m[i]
+            temp = sorted(temp, key=lambda x: x[1])
+            arr = [x[0] for x in temp]
+            res.append(arr)
+        return res
+
+    def dfs(self, node, row, col):
+        if node == None:
+            return
+        self.minCol = min(self.minCol, col)
+        self.maxCol = max(self.maxCol, col)
+        self.m[col].append((node.val, row))
+        self.dfs(node.left, row+1, col-1)
+        self.dfs(node.right, row+1, col+1)
