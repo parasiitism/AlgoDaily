@@ -660,3 +660,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 261 | [String Without AAA or BBB](/leetcode/984-string-without-aaa-or-bbb) | greedy | [leetcode 984](https://leetcode.com/problems/string-without-aaa-or-bbb/) | ⭐️|
 | 261 | [Bit Stream Number Divisible By 3](/miscellaneous/bit-stream-divisible-by-3) | bit op | glassdoor | ⭐️|
 | 261 | [Verify Preorder Sequence in Binary Search Tree](/leetcode/255-verify-preorder-sequence-in-binary-search-tree) | tree | [leetcode 255](https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/) | 📌preorder traversal is not that easy |
+| 262 | [Frog Jump](/leetcode/403-frog-jump) | graph, hashtable | [leetcode 403](https://leetcode.com/problems/frog-jump/) | 📌 1st dfs + hashtable |
