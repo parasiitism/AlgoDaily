@@ -33,6 +33,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 - [Project Euler](https://projecteuler.net)
 - [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam)
 - [Google Kick Start](https://codingcompetitions.withgoogle.com/kickstart/)
+- [Codility](https://app.codility.com/programmers/lessons/)
 - Glassdoor
 - Interviews
 - ...
@@ -661,3 +662,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 261 | [Bit Stream Number Divisible By 3](/miscellaneous/bit-stream-divisible-by-3) | bit op | glassdoor | ⭐️|
 | 261 | [Verify Preorder Sequence in Binary Search Tree](/leetcode/255-verify-preorder-sequence-in-binary-search-tree) | tree | [leetcode 255](https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/) | 📌preorder traversal is not that easy |
 | 262 | [Frog Jump](/leetcode/403-frog-jump) | graph, hashtable | [leetcode 403](https://leetcode.com/problems/frog-jump/) | 📌 1st dfs + hashtable |
+| 262 | [FibFrog](/codility/13-fib-frog) | dynamic programming | [codility 13b](https://app.codility.com/programmers/lessons/13-fibonacci_numbers/fib_frog/) | 📌 1st bfs + hashtable |
