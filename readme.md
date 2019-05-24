@@ -664,4 +664,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 262 | [Frog Jump](/leetcode/403-frog-jump) | graph, hashtable | [leetcode 403](https://leetcode.com/problems/frog-jump/) | 📌 1st dfs + hashtable |
 | 262 | [FibFrog](/codility/13-fib-frog) | dynamic programming | [codility 13b](https://app.codility.com/programmers/lessons/13-fibonacci_numbers/fib_frog/) | 📌 1st bfs + hashtable |
 | 262 | [Custom Sort String](/leetcode/791-custom-sort-string) | hashtable | [leetcode 791](https://leetcode.com/problems/custom-sort-string/) | 📌 1st hashtable O(m+n) + followup |
-| 262 | [Binary Gap](/codility/1-binary-gap) | bit op | [codility 1](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) | |
+| 262 | [Binary Gap](/leetcode/868-binary-gap) | bit op | [leetcode 868](https://leetcode.com/problems/binary-gap/) | ⭐️|
+| 262 | [Binary Gap](/codility/1-binary-gap) | bit op | [codility 1](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) | ️simlar as above |
+| 262 | [Length of a Linked List in Array Representation](/interviews/grab/length-of-array-linked-list) | linked list | glassdoor | |

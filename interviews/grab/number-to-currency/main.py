@@ -1,4 +1,6 @@
 """
+    Format a string of numbers to display a currency - example" "1234.678" to "1,234.68"
+
     1st approach: 
     - for float, get the 2 most significant digit
     - for int, divide the number 1000 repeatedly until 0

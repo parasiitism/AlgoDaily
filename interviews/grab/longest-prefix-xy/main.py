@@ -1,3 +1,11 @@
+"""
+    Given an array of N integers, 
+    find the longest leading fragment of array which contains equal no. of X and Y. 
+    
+    Expected time complexity is O(n)
+"""
+
+
 def longestPrefix(nums, X, Y):
     xcount = 0
     ycount = 0

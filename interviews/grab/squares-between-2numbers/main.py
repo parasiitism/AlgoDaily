@@ -1,5 +1,9 @@
 import math
 
+"""
+    Find the count of all perfect squares between two numbers a and b
+"""
+
 
 def squareBtw(a, b):
     if a < 0:
