@@ -7,8 +7,7 @@
     Time    O(nlogn)
     Space   O(n)
 
-    Result: 91/100
-    - https://app.codility.com/demo/results/trainingZ8KDVP-JND/
+    Result: 91/100 https://app.codility.com/demo/results/trainingZ8KDVP-JND/
 """
 
 
