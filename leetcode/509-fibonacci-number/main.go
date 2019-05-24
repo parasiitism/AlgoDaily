@@ -2,11 +2,13 @@ package main
 
 import "fmt"
 
-// top-down recursive
-// use a hashtable to avoid redundant calculation
-// Time O(n)		duplicates are avoided so only the unseen numbers go through the calculations
-// Space O(2n)	n for hashtable, n for recursive callstack
-// 0ms beats 100%
+/*
+	top-down recursive
+	use a hashtable to avoid redundant calculation
+	Time O(n)		duplicates are avoided so only the unseen numbers go through the calculations
+	Space O(2n)	n for hashtable, n for recursive callstack
+	0ms beats 100%
+*/
 func fib(N int) int {
 	cache := make(map[int]int)
 	cache[0] = 0
@@ -23,10 +25,12 @@ func fib(N int) int {
 	return f(N)
 }
 
-// bottom-up iterative
-// Time 	O(n) iterate from 1 to N
-// Space	O(n) for the array
-// 0ms beats 100%
+/*
+	bottom-up iterative
+	Time 	O(n) iterate from 1 to N
+	Space	O(n) for the array
+	0ms beats 100%
+*/
 func fib1(N int) int {
 	arr := []int{}
 	arr = append(arr, 0)
