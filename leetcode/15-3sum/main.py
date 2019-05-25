@@ -1,4 +1,62 @@
 """
+    1st approach: hashtable, wrap 2sum with one more loop
+	1. sort the numbers to make sure that the key will be unique
+	2. put the numbers in a hashtable, num:index as key:value
+	3. for each nums[i] + nums[j], find out the num from the hashtable that they sum up to zero
+	4. use a set to deduplicate
+
+	Time	O(nlogn+n^2+n) => O(n^2)
+	Space	O(n)
+	780 ms, faster than 49.08%
+"""
+
+
+class Solution(object):
+    def twoSum(self, nums, start, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        ht = {}
+        res = []
+        for i in range(start, len(nums)):
+            num = nums[i]
+            remain = target - num
+            if remain in ht:
+                res.append([ht[remain], i])
+            ht[num] = i
+        return res
+
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        nums = sorted(nums)
+        resSet = set()
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            arr = self.twoSum(nums, i+1, -nums[i])
+            for x in arr:
+                resSet.add((nums[i], nums[x[0]], nums[x[1]]))
+        return [list(x) for x in resSet]
+
+
+a = [-1, 0, 1, 2, -1, -4]
+print(Solution().threeSum(a))
+
+a = [-2, 0, 1, 1, 2]
+print(Solution().threeSum(a))
+
+a = [-13, 5, 13, 12, -2, -11, -1, 12, -3, 0, -3, -7, -7, -5, -3, -15, -2, 14, 14, 13, 6, -11, -11, 5, -15, -14, 5, -5, -2, 0, 3, -8, -10, -7, 11, -5, -10, -5, -7, -6, 2, 5, 3, 2, 7, 7, 3, -10, -2, 2, -12, -11, -1,
+     14, 10, -9, -15, -8, -7, -9, 7, 3, -2, 5, 11, -13, -15, 8, -3, -7, -12, 7, 5, -2, -6, -3, -10, 4, 2, -5, 14, -3, -1, -10, -3, -14, -4, -3, -7, -4, 3, 8, 14, 9, -2, 10, 11, -10, -4, -15, -9, -1, -1, 3, 4, 1, 8, 1]
+print(Solution().threeSum(a))
+
+print("-----")
+
+"""
     2nd approach: 2 pointers + hashtable
 	1. sort the numbers to make sure that the key will be unique
 	2. for each num[i], use 2 pointers, from the front and from the end, to find the pairs which nums[i]+nums[j]+nums[k] sum up to 0
