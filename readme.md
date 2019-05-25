@@ -671,3 +671,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 263 | [Goat Latin](/leetcode/824-goat-latin) | string | [leetcode 824](https://leetcode.com/problems/goat-latin/) | ⭐️ |
 | 263 | [Nim Game](/leetcode/292-nim-game) | math | [leetcode 292](https://leetcode.com/problems/nim-game/) |  |
 | 263 | [Rabbits in Forest](/leetcode/781-rabbits-in-forest) | hashtable + math | [leetcode 781](https://leetcode.com/problems/rabbits-in-forest/) | 1st math 🤔O(n) |
+| 263 | [Distance Between Two Nodes In a Tree](/interviews/grab/distance-between-nodes) | tree, graph | glassdoor | 📌1st transform to graph and bfs. 2nd find common ancestor and bfs |
