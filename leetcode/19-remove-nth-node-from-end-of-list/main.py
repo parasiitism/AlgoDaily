@@ -40,8 +40,9 @@ class Solution(object):
             fast = fast.next
             count += 1
 
-        if fast == None:
-            return head
+        # in case if n > length of linked list, we just remove the head
+        if fast == None or fast.next == None:
+            return head.next
 
         slow = dump
         while fast.next != None:
