@@ -668,3 +668,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 262 | [Binary Gap](/codility/1-binary-gap) | bit op | [codility 1](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) | ️simlar as above |
 | 262 | [Length of a Linked List in Array Representation](/interviews/grab/length-of-array-linked-list) | linked list | glassdoor | |
 | 262 | [Encode and Decode Strings](/leetcode/271-encode-and-decode-strings) | string | [leetcode 271](https://leetcode.com/problems/encode-and-decode-strings/) | ⭐️using `[count]` as a delimiter |
+| 263 | [Goat Latin](/leetcode/824-goat-latin) | string | [leetcode 824](https://leetcode.com/problems/goat-latin/) | ⭐️ |
+| 262 | [Nim Game](/leetcode/292-nim-game) | math | [leetcode 292](https://leetcode.com/problems/nim-game/) |  |
