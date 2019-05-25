@@ -669,4 +669,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 262 | [Length of a Linked List in Array Representation](/interviews/grab/length-of-array-linked-list) | linked list | glassdoor | |
 | 262 | [Encode and Decode Strings](/leetcode/271-encode-and-decode-strings) | string | [leetcode 271](https://leetcode.com/problems/encode-and-decode-strings/) | ⭐️using `[count]` as a delimiter |
 | 263 | [Goat Latin](/leetcode/824-goat-latin) | string | [leetcode 824](https://leetcode.com/problems/goat-latin/) | ⭐️ |
-| 262 | [Nim Game](/leetcode/292-nim-game) | math | [leetcode 292](https://leetcode.com/problems/nim-game/) |  |
+| 263 | [Nim Game](/leetcode/292-nim-game) | math | [leetcode 292](https://leetcode.com/problems/nim-game/) |  |
+| 263 | [Rabbits in Forest](/leetcode/781-rabbits-in-forest) | hashtable + math | [leetcode 781](https://leetcode.com/problems/rabbits-in-forest/) | 1st math 🤔O(n) |
