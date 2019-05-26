@@ -39,12 +39,15 @@ def Solution(A):
     q = [(-1, 0)]
     while len(q) > 0:
         loc, steps = q.pop(0)
+        # avoid redundant calculation
         if loc in seen:
             continue
         seen.add(loc)
         if loc == end:
+            # yeah
             return steps
         elif loc < end:
+            # look for the options to move next
             for fib in fibs:
                 nextLoc = loc + fib
                 if nextLoc > end:
