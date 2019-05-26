@@ -38,7 +38,7 @@ class Solution(object):
 """
     followup:
 
-    Given a list of vocabs, return a list of group of isomorphic strings
+    Given a list of vocabs, return a list of groups of isomorphic strings
 
     e.g.
     [aab, xxy, xyz, abc, def, xyx]
@@ -48,41 +48,10 @@ class Solution(object):
         [xyx]
     ]
 
-    Time    O(n^3)
-    Space   O(n)
-"""
-
-
-def groupIsomorphic(strs):
-    structures = {}
-    structures[strs[0]] = [strs[0]]
-    for i in range(1, len(strs)):
-        s = strs[i]
-        found = False
-        for key in structures:
-            if isIsomorphic(s, key):
-                structures[key].append(s)
-                found = True
-                break
-        if found == False:
-            structures[s] = [s]
-
-    res = []
-    for key in structures:
-        res.append(structures[key])
-    return res
-
-
-a = ['aab', 'xxy', 'xyz', 'abc', 'def', 'xyx']
-print(groupIsomorphic(a))
-
-a = ['aab', 'xxy', 'xyz', 'abc', 'def', 'xyx', 'bbacyba', 'xxyzwxy']
-print(groupIsomorphic(a))
-
-print("-----")
-
-"""
-    2nd: better approach
+    Brute force Time    O(n^3)
+    
+    better approach
+    ---------------
 
     - Compute a word's "signature"
 
