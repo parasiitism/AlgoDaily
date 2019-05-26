@@ -672,3 +672,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 263 | [Rabbits in Forest](/leetcode/781-rabbits-in-forest) | hashtable + math | [leetcode 781](https://leetcode.com/problems/rabbits-in-forest/) | 1st math 🤔O(n) |
 | 263 | [Distance Between Two Nodes In a Tree](/interviews/grab/distance-between-nodes) | tree, graph | glassdoor | 📌1st transform to graph and bfs. 2nd find common ancestor and bfs |
 | 264 | [Largest Range](/miscellaneous/largest-range) | array | glassdoor | naive O(nlogn), 📌hashtable O(n) |
+| 264 | [Odd Occurrences In Array](/codility/2-odd_occurrences_in_array) | bit op | [codility 2](https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/) | same as [leetcode 136](https://leetcode.com/problems/single-number/) |
