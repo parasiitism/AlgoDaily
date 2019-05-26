@@ -1,5 +1,9 @@
 """
     same as lc20
+
+    Time    O(n)
+    Space   O(n)
+    Result  100/100 https://app.codility.com/demo/results/training68UH55-79D/
 """
 
 
