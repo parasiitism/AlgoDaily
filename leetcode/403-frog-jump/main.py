@@ -37,3 +37,38 @@ class Solution(object):
                     if loc + i in stoneSet:
                         stack.append((loc+i, i))
         return False
+
+
+"""
+    2nd approach: BFS + hashtable
+
+    Time    O(n^2)
+    Space   O(n)
+    76 ms, faster than 93.81%
+"""
+
+
+class Solution(object):
+    def canCross(self, stones):
+        """
+        :type stones: List[int]
+        :rtype: bool
+        """
+        seen = set()
+        stoneSet = set(stones)
+        end = stones[-1]
+        queue = [(0, 0)]
+        while len(queue) > 0:
+            loc, steps = queue.pop(0)
+            if (loc, steps) in seen:
+                continue
+            seen.add((loc, steps))
+            if loc == end:
+                return True
+            elif loc < end:
+                for i in range(steps-1, steps+2):
+                    if i <= 0:
+                        continue
+                    if loc + i in stoneSet:
+                        queue.append((loc+i, i))
+        return False
