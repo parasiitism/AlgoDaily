@@ -664,7 +664,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 262 | [FibFrog](/codility/13-fib-frog) | dynamic programming | [codility 13b](https://app.codility.com/programmers/lessons/13-fibonacci_numbers/fib_frog/) | 📌 1st bfs + hashtable |
 | 262 | [Custom Sort String](/leetcode/791-custom-sort-string) | hashtable | [leetcode 791](https://leetcode.com/problems/custom-sort-string/) | 📌 1st hashtable O(m+n) + followup |
 | 262 | [Binary Gap](/leetcode/868-binary-gap) | bit op | [leetcode 868](https://leetcode.com/problems/binary-gap/) | ⭐️|
-| 262 | [Binary Gap](/codility/1-binary-gap) | bit op | [codility 1](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) | ️simlar as above |
+| 262 | [Binary Gap](/codility/1-binary_gap) | bit op | [codility 1](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) | ️simlar as above |
 | 262 | [Length of a Linked List in Array Representation](/interviews/grab/length-of-array-linked-list) | linked list | glassdoor | |
 | 262 | [Encode and Decode Strings](/leetcode/271-encode-and-decode-strings) | string | [leetcode 271](https://leetcode.com/problems/encode-and-decode-strings/) | ⭐️using `[count]` as a delimiter |
 | 263 | [Goat Latin](/leetcode/824-goat-latin) | string | [leetcode 824](https://leetcode.com/problems/goat-latin/) | ⭐️ |
@@ -673,3 +673,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 263 | [Distance Between Two Nodes In a Tree](/interviews/grab/distance-between-nodes) | tree, graph | glassdoor | 📌1st transform to graph and bfs. 2nd find common ancestor and bfs |
 | 264 | [Largest Range](/miscellaneous/largest-range) | array | glassdoor | naive O(nlogn), 📌hashtable O(n) |
 | 264 | [Odd Occurrences In Array](/codility/2-odd_occurrences_in_array) | bit op | [codility 2](https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/) | same as [leetcode 136](https://leetcode.com/problems/single-number/) |
+| 264 | [Cyclic Rotation](/codility/2-cyclic_rotation) | array | [codility 2](https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/) | ⭐️ |
