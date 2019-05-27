@@ -676,3 +676,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 264 | [Cyclic Rotation](/codility/2-cyclic_rotation) | array | [codility 2](https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/) | ⭐️ |
 | 264 | [Brackets](/codility/7-stacks_and_queues) | stack | [codility 7](https://app.codility.com/programmers/lessons/7-stacks_and_queues/brackets/) | ⭐️ |
 | 264 | [Ladder](/codility/13-ladder) | dynamic programming | [codility 13](https://app.codility.com/programmers/lessons/13-fibonacci_numbers/ladder/) | ⭐️ |
+| 265 | [Reconstruct Arrays](/interview/grab/reconstruct-arrays) | array | interview | 📌|
+| 265 | [Array Partition](/interview/grab/array-partition) | array | interview | 📌|
+| 265 | [Partition Array into Disjoint Intervals](/leetcode/915-partition-array-into-disjoint-intervals) | array | same as above, Array Partition | 📌|
