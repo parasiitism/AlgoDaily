@@ -7,7 +7,7 @@
     Time    O(nlogn)
     Space   O(n)
 
-    Result: 91/100 https://app.codility.com/demo/results/trainingZ8KDVP-JND/
+    Result: 100/100 https://app.codility.com/demo/results/trainingKBRXBC-UG9/
 """
 
 
@@ -21,11 +21,13 @@ def getFibUpTo(n):
         dp.append(temp)
         i += 1
     # remove the first 2 because fibinacci starts with [0,1,1,2,3,5,8....]
-    return dp[2:]
+    x = dp[2:]
+    return x[::-1]
 
 
 # print(getFibUpTo(100))
 # print(getFibUpTo(5000))
+print(getFibUpTo(100000))
 
 
 def Solution(A):
@@ -39,21 +41,20 @@ def Solution(A):
     q = [(-1, 0)]
     while len(q) > 0:
         loc, steps = q.pop(0)
-        # avoid redundant calculation
-        if loc in seen:
-            continue
-        seen.add(loc)
-        if loc == end:
-            # yeah
-            return steps
-        elif loc < end:
-            # look for the options to move next
-            for fib in fibs:
-                nextLoc = loc + fib
-                if nextLoc > end:
+        # look for the options to move next
+        for fib in fibs:
+            nextLoc = loc + fib
+            if nextLoc > end:
+                continue
+            elif nextLoc == end:
+                # yeah
+                return steps + 1
+            elif nextLoc < len(A) and A[nextLoc] == 1:
+                # avoid redundant calculation
+                if nextLoc in seen:
                     continue
-                elif nextLoc < len(A) and A[nextLoc] == 1:
-                    q.append((nextLoc, steps+1))
+                seen.add(nextLoc)
+                q.append((nextLoc, steps+1))
     return -1
 
 
@@ -61,4 +62,13 @@ A = [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0]
 print(Solution(A))
 
 A = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+print(Solution(A))
+
+A = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+print(Solution(A))
+
+A = 100000 * [0]
+print(Solution(A))
+
+A = 100000 * [1]
 print(Solution(A))
