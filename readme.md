@@ -681,3 +681,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 265 | [Partition Array into Disjoint Intervals](/leetcode/915-partition-array-into-disjoint-intervals) | array | same as above, Array Partition | 📌|
 | 265 | [Base 7](/leetcode/504-base-7) | math | [leetcode 504](https://leetcode.com/problems/base-7/) | |
 | 265 | [Linked List Components](/leetcode/817-linked-list-components) | hastable, linked list | [leetcode 817](https://leetcode.com/problems/linked-list-components/) | 1st hastable O(n) |
+| 265 | [Battleships in a Board](/leetcode/419-battleships-in-a-board) | graph, hastable | [leetcode 419](https://leetcode.com/problems/battleships-in-a-board/) | 1st bfs+hashtable O(n)Q(n), ⭐️2nd bfs O(n)Q(1), 3rd dfs O(n)Q(1) |
