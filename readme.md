@@ -679,3 +679,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 265 | [Reconstruct Arrays](/interview/grab/reconstruct-arrays) | array | interview | 📌|
 | 265 | [Array Partition](/interview/grab/array-partition) | array | interview | 📌|
 | 265 | [Partition Array into Disjoint Intervals](/leetcode/915-partition-array-into-disjoint-intervals) | array | same as above, Array Partition | 📌|
+| 265 | [Base 7](/leetcode/504-base-7) | math | [leetcode 504](https://leetcode.com/problems/base-7/) | |
