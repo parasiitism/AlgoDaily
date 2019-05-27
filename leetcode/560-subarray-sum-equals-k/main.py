@@ -1,6 +1,6 @@
 """
     1st approach: zero sum subarray
-    - this question is fucking similar to leetcode 325, 525
+    - this question is fucking similar to leetcode 325, 525, 930
     - the basic idea is to store the previous sum in a hashtable
         e.g. key: previous sum, value: number of occurence of a previous sum
     - if currentSum - target in the hastable, the result += occurence
@@ -50,11 +50,11 @@ class Solution(object):
 
 
 print(Solution().subarraySum([1, 1, 1], 1))  # 3
-print(Solution().subarraySum([1, 1, 1], 2))  # 3
+print(Solution().subarraySum([1, 1, 1], 2))  # 2
 print(Solution().subarraySum([1, 1, 1], 3))  # 1
 print(Solution().subarraySum([1, 1, 1, 1], 3))  # 2
 print(Solution().subarraySum([1, -1, 5, -2, 3], 3))  # 3
-print(Solution().subarraySum([1, -1, 5, -2, 1, 2], 3))  # 3
+print(Solution().subarraySum([1, -1, 5, -2, 1, 2], 3))  # 4
 print(Solution().subarraySum([-2, -1, 2, 1], 1))  # 2
 print(Solution().subarraySum([-2, -1, 2, 1, 100], 100))  # 2
 print(Solution().subarraySum([-2, -1, 2, 100, 1], 100))  # 2
@@ -102,10 +102,11 @@ class Solution(object):
 
 
 print(Solution().subarraySum([1, 1, 1], 1))  # 3
-print(Solution().subarraySum([1, 1, 1], 2))  # 3
+print(Solution().subarraySum([1, 1, 1], 2))  # 2
 print(Solution().subarraySum([1, 1, 1], 3))  # 1
 print(Solution().subarraySum([1, 1, 1, 1], 3))  # 2
 print(Solution().subarraySum([1, -1, 5, -2, 3], 3))  # 3
+print(Solution().subarraySum([1, -1, 5, -2, 1, 2], 3))  # 4
 print(Solution().subarraySum([-2, -1, 2, 1], 1))  # 2
 print(Solution().subarraySum([-2, -1, 2, 1, 100], 100))  # 2
 print(Solution().subarraySum([-2, -1, 2, 100, 1], 100))  # 2

@@ -13,7 +13,7 @@ class Solution(object):
         https://www.youtube.com/watch?v=hLcYp67wCcM
 
         generic approach
-        - this question is fucking similar to leetcode 325, 560, 525
+        - this question is fucking similar to leetcode 325, 525, 560, 930
         - find loops <==============================================================
         - the basic idea is to store the previous sum in a hashtable
             e.g. key: previous sum, value: number of occurence of a previous sum
@@ -103,11 +103,23 @@ class Solution(object):
         return res
 
 
-# [[-1, 5, -2]]
-print(Solution().subarraySum([1, -1, 5, -2, 3], 2))
+# [[1], [1], [1]]
+print(Solution().subarraySum([1, 1, 1], 1))
+# [[1, 1], [1, 1]]
+print(Solution().subarraySum([1, 1, 1], 2))
+# [[1, 1, 1]]
+print(Solution().subarraySum([1, 1, 1], 3))
+# [[1, 1, 1], [1, 1, 1]]
+print(Solution().subarraySum([1, 1, 1, 1], 3))
 # [[1, -1, 5, -2], [5, -2], [3]]
 print(Solution().subarraySum([1, -1, 5, -2, 3], 3))
-# [[-1, 5]]
-print(Solution().subarraySum([1, -1, 5, -2, 3], 4))
-# [[99]]
-print(Solution().subarraySum([1, -1, 5, -2, 99], 99))
+# [[1, -1, 5, -2], [5, -2], [-1, 5, -2, 1], [1, 2]]
+print(Solution().subarraySum([1, -1, 5, -2, 1, 2], 3))
+# [[-1, 2], [1]]
+print(Solution().subarraySum([-2, -1, 2, 1], 1))
+# [[-2, -1, 2, 1, 100], [100]]
+print(Solution().subarraySum([-2, -1, 2, 1, 100], 100))
+# [[100], [-2, -1, 2, 100, 1]]
+print(Solution().subarraySum([-2, -1, 2, 100, 1], 100))
+# []
+print(Solution().subarraySum([-2, -1, 2, 1000], 99))
