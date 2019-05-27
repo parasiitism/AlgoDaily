@@ -682,4 +682,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 265 | [Base 7](/leetcode/504-base-7) | math | [leetcode 504](https://leetcode.com/problems/base-7/) | |
 | 265 | [Linked List Components](/leetcode/817-linked-list-components) | hastable, linked list | [leetcode 817](https://leetcode.com/problems/linked-list-components/) | 1st hastable O(n) |
 | 265 | [Battleships in a Board](/leetcode/419-battleships-in-a-board) | graph, hastable | [leetcode 419](https://leetcode.com/problems/battleships-in-a-board/) | 1st bfs+hashtable O(n)Q(n), ⭐️2nd bfs O(n)Q(1), 3rd dfs O(n)Q(1) |
-| 265 | [Binary Subarrays With Sum](/leetcode/930-binary-subarrays-with-sum) | hastable | [leetcode 930](https://leetcode.com/problems/binary-subarrays-with-sum/) | subarray sum = k problem, the same as leetcode 325, 525, 560 |
+| 265 | [Binary Subarrays With Sum](/leetcode/930-binary-subarrays-with-sum) | hastable | [leetcode 930](https://leetcode.com/problems/binary-subarrays-with-sum/) | 📌subarray sum = k problem, the same as leetcode 325, 525, 560 |
+| 265 | [Frog Jump](/codility/3-frog-jump) | math | [codility 3](https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/) | |
