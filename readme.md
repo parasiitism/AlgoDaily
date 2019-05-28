@@ -689,3 +689,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 266 | [Expressive Words](/leetcode/809-expressive-words) | hashtable, string | [leetcode 809](https://leetcode.com/problems/expressive-words/) | 1st O(n) tuples, 2nd O(n) OOD |
 | 266 | [Find And Replace in String](/leetcode/833-find-and-replace-in-string) | hashtable, string | [leetcode 833](https://leetcode.com/problems/find-and-replace-in-string/) | |
 | 266 | [Flip Game](/leetcode/293-flip-game) | string | [leetcode 293](https://leetcode.com/problems/flip-game/) | |
+| 266 | [Flip Game II](/leetcode/294-flip-game-ii) | recursion, hashtable | [leetcode 294](https://leetcode.com/problems/flip-game-ii/) | 📌|
