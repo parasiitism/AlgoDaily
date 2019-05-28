@@ -685,3 +685,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 265 | [Binary Subarrays With Sum](/leetcode/930-binary-subarrays-with-sum) | hastable | [leetcode 930](https://leetcode.com/problems/binary-subarrays-with-sum/) | 📌subarray sum = k problem, the same as leetcode 325, 525, 560 |
 | 265 | [Frog Jump](/codility/3-frog-jump) | math | [codility 3](https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/) | |
 | 265 | [Reverse String II](/leetcode/541-reverse-string-ii) | string | [leetcode 541](https://leetcode.com/problems/reverse-string-ii/) | 1st O(n) |
+| 266 | [Unique Morse Code Words](/leetcode/804-unique-morse-code-words) | hashtable | [leetcode 804](https://leetcode.com/problems/unique-morse-code-words/) | 1st O(n) |
