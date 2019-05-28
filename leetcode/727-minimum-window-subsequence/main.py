@@ -1,3 +1,5 @@
+import sys
+
 """
     1st approach: brute force
 
@@ -34,10 +36,41 @@ class Solution(object):
 
 """
     2nd approach: dp
+    - similar to longest common subsequence
+    
+    e.g. S = 'abcdebdde' and T = 'bde'
 
-    Time    O(mn)
-    Space   O(n)
-    LTE wtf?
+    * means sys.maxsize
+
+        _   a   b   c   d   e   b   d   d   e
+    -   *   *   *   *   *   *   *   *   *   *
+    b   *   *   1   2   3   4   1   2   3   3
+    d   *   *   *   *   3   4   5   2   3   4
+    e   *   *   *   *   *   4   5   6   7   4
+                            ^               ^
+    
+    on 2nd row,
+    - when S[i] == T[i], the first b, the min length of target subsequence = 1
+    - when we have S = 'bc' and T = 'b', the min length of target subsequence = 2
+    - when we have S = 'bcd' and T = 'b', the min length of target subsequence = 3
+    - when we have S = 'bcde' and T = 'b', the min length of target subsequence = 4
+    - when we have S = 'bcdeb' and T = 'b', the min length of target subsequence = 1 because we can just use the last 'b'
+
+    on 3rd row,
+    - when S[i] == T[i], the first d, we have S = 'bcd' and T = 'bd', 
+        the m in length of target subsequence = 2 + 1 = 3 because we can use the result of S = 'bc' and T = 'b' from the previous calculation
+    - same logic for the 2nd 'd', S = 'bcdebd' and T = 'bd'
+    - and so on...
+
+    so it means
+    - if they match, we can use dp[i][j] = dp[i-1][j-1]+1
+    - else, dp[i][j] = dp[i][j-1]+1
+
+    We can just get the result by finding the minLength on the last row, and use slicing, S[i-minSubstringLength:i], the get the result
+
+    Time    O(ST)
+    Space   O(ST)
+    2456 ms, faster than 20.68%
 """
 
 
@@ -48,35 +81,34 @@ class Solution(object):
         :type T: str
         :rtype: str
         """
-        m = len(T)
-        n = len(S)
+        s = len(S)
+        t = len(T)
+
         dp = []
-        for i in range(m+1):
-            temp = []
-            for j in range(n+1):
-                if i == 0:
-                    temp.append(j+1)
+        for _ in range(t+1):
+            dp.append((s+1)*[sys.maxsize])
+
+        for i in range(1, t+1):
+            for j in range(1, s+1):
+                if S[j-1] == T[i-1]:
+                    if i == 1:
+                        # it means this is the first character
+                        dp[i][j] = 1
+                    else:
+                        # extend the length from previous result(which is without the current character)
+                        dp[i][j] = dp[i-1][j-1]+1
                 else:
-                    temp.append(0)
-            dp.append(temp)
-        # print(dp)
-        for i in range(1, m+1):
-            for j in range(1, n+1):
-                if T[i-1] == S[j-1]:
-                    dp[i][j] = dp[i-1][j-1]
-                else:
-                    dp[i][j] = dp[i][j-1]
-        # print(dp)
-        start = 0
-        l = n + 1
-        for j in range(1, n+1):
-            if dp[m][j] != 0:
-                if j - dp[m][j] + 1 < l:
-                    start = dp[m][j] - 1
-                    l = j - dp[m][j] + 1
-        if l == n + 1:
-            return ""
-        return S[start: start + l]
+                    # shortest substring if we include this character
+                    dp[i][j] = dp[i][j-1]+1
+
+        # find the min length of subsequence
+        minSubstringLength = min(dp[-1])
+        if minSubstringLength == sys.maxsize:
+            return ''
+        # get the substring by slicing
+        for i in range(1, s+1):
+            if dp[-1][i] == minSubstringLength:
+                return S[i-minSubstringLength:i]
 
 
 a = "abcdebdde"
