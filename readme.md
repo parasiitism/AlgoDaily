@@ -694,3 +694,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 267 | [Addition Without Using Plus](/miscellaneous/addition-without-using-plus) | bit op | glassdoor | 📌📌📌classic question in hk interviews|
 | 267 | [Subtraction Without Using Minus](/miscellaneous/subtraction-without-using-minus) | bit op | glassdoor | 📌📌📌classic question in hk interviews|
 | 267 | [Longest Continuous Increasing Subsequence](/leetcode/674-longest-continuous-increasing-subsequence) | array | [leetcode 674](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) | |
+| 267 | [Is Graph Bipartite?](/leetcode/785-is-graph-bipartite) | graph | [leetcode 785](https://leetcode.com/problems/is-graph-bipartite/) | ⭐️1st BFS, 2nd recursive DFS O(V+E) |
