@@ -691,4 +691,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 266 | [Flip Game](/leetcode/293-flip-game) | string | [leetcode 293](https://leetcode.com/problems/flip-game/) | |
 | 266 | [Flip Game II](/leetcode/294-flip-game-ii) | recursion, hashtable | [leetcode 294](https://leetcode.com/problems/flip-game-ii/) | 📌|
 | 266 | [Minimum Window Subsequence](/leetcode/727-minimum-window-subsequence) | dynamic programming | [leetcode 727](https://leetcode.com/problems/minimum-window-subsequence/) | 1st O(S^2T) LTE 📌📌📌dp O(ST) similar to longest common substring |
-| 267 | [Addition Without Using Plus](/miscellaneous/add-two-numbers-without-plus) | bit op | glassdoor | 📌classic question in hk interviews|
+| 267 | [Addition Without Using Plus](/miscellaneous/addition-without-using-plus) | bit op | glassdoor | 📌📌📌classic question in hk interviews|
+| 267 | [Subtraction Without Using Minus](/miscellaneous/subtraction-without-using-minus) | bit op | glassdoor | 📌📌📌classic question in hk interviews|
