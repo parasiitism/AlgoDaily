@@ -6,25 +6,33 @@
 
     Time    O(V+E)
     Space   O(V+E)
-    156 ms, faster than 62.09%
+    780 ms, faster than 28.52%
 """
 
 
 class Solution(object):
-    def isBipartite(self, graph):
+    def possibleBipartition(self, N, dislikes):
         """
-        :type graph: List[List[int]]
+        :type N: int
+        :type dislikes: List[List[int]]
         :rtype: bool
         """
+        connections = []
+        for _ in range(N+1):
+            connections.append([])
+
+        for a, b in dislikes:
+            connections[a].append(b)
+            connections[b].append(a)
+
         seen = {}
-        # we need to check every node because it is possible that graph[0] doesn't have any vertices connected
-        for i in range(len(graph)):
+        for i in range(len(connections)):
             if i not in seen:
-                if self.check(graph, i, seen) == False:
+                if self.check(connections, i, seen) == False:
                     return False
         return True
 
-    def check(self, graph, start, seen):
+    def check(self, connections, start, seen):
         q = [(start, 1)]
         while len(q) > 0:
             pop, color = q.pop(0)
@@ -33,7 +41,7 @@ class Solution(object):
                     return False
                 continue
             seen[pop] = color
-            vertices = graph[pop]
+            vertices = connections[pop]
             for v in vertices:
                 q.append((v, -color))
         return True
@@ -47,32 +55,40 @@ class Solution(object):
 
     Time    O(V+E)
     Space   O(V+E)
-    164 ms, faster than 40.67%
+    660 ms, faster than 53.79%
 """
 
 
 class Solution(object):
-    def isBipartite(self, graph):
+    def possibleBipartition(self, N, dislikes):
         """
-        :type graph: List[List[int]]
+        :type N: int
+        :type dislikes: List[List[int]]
         :rtype: bool
         """
+        connections = []
+        for _ in range(N+1):
+            connections.append([])
+
+        for a, b in dislikes:
+            connections[a].append(b)
+            connections[b].append(a)
+
         seen = {}
-        # we need to check every node because it is possible that graph[0] doesn't have any vertices connected
-        for i in range(len(graph)):
+        for i in range(len(connections)):
             if i not in seen:
-                if self.check(graph, i, 1, seen) == False:
+                if self.check(connections, i, 1, seen) == False:
                     return False
         return True
 
-    def check(self, graph, node, color, seen):
+    def check(self, connections, node, color, seen):
         if node in seen:
             if seen[node] != color:
                 return False
             return True
         seen[node] = color
-        vertices = graph[node]
+        vertices = connections[node]
         for v in vertices:
-            if self.check(graph, v, -color, seen) == False:
+            if self.check(connections, v, -color, seen) == False:
                 return False
         return True

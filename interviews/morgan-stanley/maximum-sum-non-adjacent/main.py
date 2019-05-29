@@ -8,8 +8,7 @@
 
     ref:
     - https://www.youtube.com/watch?v=UtGtF6nc35g
-
-    O(n)
+    - https://leetcode.com/problems/house-robber/
 """
 
 
