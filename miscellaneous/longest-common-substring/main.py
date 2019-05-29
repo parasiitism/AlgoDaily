@@ -40,3 +40,7 @@ class Solution(object):
 a = "ABCBA"
 b = "CBADG"
 print(Solution().findLength(a, b))
+
+a = "cdabxyzccznmotuv"
+b = "aabzdazccznmvvtcdabx"
+print(Solution().findLength(a, b))

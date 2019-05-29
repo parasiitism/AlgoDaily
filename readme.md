@@ -698,3 +698,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 267 | [Possible Bipartition](/leetcode/886-possible-bipartition) | graph | [leetcode 886](https://leetcode.com/problems/possible-bipartition/) | ⭐️1st BFS, 2nd recursive DFS O(V+E) |
 | 267 | [Lily's Happiness](/interviews/morgan-stanley/lily-happiness) | graph, heap | glassdoor | 📌BFS + heap + hashset|
 | 267 | [Pairs Having a Common Language](/interviews/morgan-stanley/pairs-having-common-language) | hashtable | glassdoor | ⭐️ |
+| 267 | [Common Substring Length of K](/interviews/morgan-stanley/common-substring-length-k) | dynamic programming | glassdoor | 📌longest commone substring variation |
