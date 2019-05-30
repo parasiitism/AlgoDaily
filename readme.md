@@ -702,3 +702,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 268 | [Integer to String with Commas](/interviews/clover-health/int-2-string) | string, math | glassdoor | |
 | 268 | [Count Binary Substrings](/leetcode/696-count-binary-substrings) | array | [leetcode 696](https://leetcode.com/problems/count-binary-substrings/) | ⭐️ |
 | 268 | [Number of Matching Subsequences](/leetcode/792-number-of-matching-subsequences) | hashtable, binary search | [leetcode 696](https://leetcode.com/problems/number-of-matching-subsequences/) | 1st brute force O(SWK) 📌 2nd binary search O(SWlogK) |
+| 268 | [Top 2 Frequent Words](/morgan-stanley/top-2-frequent-words) | hashtable | glassdoor | ⭐️ |
