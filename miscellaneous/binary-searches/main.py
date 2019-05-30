@@ -52,6 +52,11 @@ def lowerBsearch(nums, target):
     return left
 
 
+print("--lowerBsearch--")
+print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 4))
+print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 5))
+
+
 def upperBsearch(nums, target):
     left = 0
     right = len(nums)
@@ -62,3 +67,8 @@ def upperBsearch(nums, target):
         else:
             right = mid
     return right
+
+
+print("--upperBsearch--")
+print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 5))
+print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 6))
