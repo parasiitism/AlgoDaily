@@ -706,3 +706,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 268 | [Maximum Width Ramp](/leetcode/962-maximum-width-ramp) | sort | [leetcode 962](https://leetcode.com/problems/maximum-width-ramp/) | ⭐️ |
 | 268 | [TapeEquilibrium](/codility/3-tape_equilibrium) | prefix sum | [codility 3](https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/) | ⭐️ |
 | 269 | [Shortest Completing Word](/leetcode/748-shortest-completing-word) | hashtable | [leetcode 748](https://leetcode.com/problems/shortest-completing-word/) | O(L+WK) |
+| 269 | [Longest Harmonious Subsequence](/leetcode/594-longest-harmonious-subsequence) | hashtable | [leetcode 594](https://leetcode.com/problems/longest-harmonious-subsequence/) | 📌1st O(2N) 2nd O(N) |
