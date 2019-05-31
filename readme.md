@@ -707,3 +707,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 268 | [TapeEquilibrium](/codility/3-tape_equilibrium) | prefix sum | [codility 3](https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/) | ⭐️ |
 | 269 | [Shortest Completing Word](/leetcode/748-shortest-completing-word) | hashtable | [leetcode 748](https://leetcode.com/problems/shortest-completing-word/) | O(L+WK) |
 | 269 | [Longest Harmonious Subsequence](/leetcode/594-longest-harmonious-subsequence) | hashtable | [leetcode 594](https://leetcode.com/problems/longest-harmonious-subsequence/) | 📌1st O(2N) 2nd O(N) |
+| 269 | [Range Addition II](/leetcode/598-range-addition-ii) | array | [leetcode 598](https://leetcode.com/problems/range-addition-ii/) | 📌1st O(OR+OC) 2nd O(O) |
