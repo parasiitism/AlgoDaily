@@ -54,7 +54,7 @@ print(Solution().findAnagrams("abab", "ab"))
 
     Time    O(n*m)
     Space   O(m)
-    224 ms, faster than 28.99%
+    204 ms, faster than 32.10%
 """
 
 
@@ -66,27 +66,25 @@ class Solution(object):
         :rtype: List[int]
         """
         p_structure = 26 * [0]
+        cur_structure = 26 * [0]
         for c in p:
             p_structure[ord(c) - ord('a')] += 1
-
-        cur_structure = 26 * [0]
-        for c in s[:len(p)]:
-            cur_structure[ord(c) - ord('a')] += 1
-
+        # iterate
         res = []
-        if self.samehashtable(p_structure, cur_structure):
-            res.append(0)
-
-        for i in range(len(p), len(s)):
-            earliest = s[i - len(p)]
-            cur_structure[ord(earliest) - ord('a')] -= 1
+        for i in range(len(s)):
+            # substract last character from window after i == len(p)
+            if i >= len(p):
+                earliest = s[i - len(p)]
+                cur_structure[ord(earliest) - ord('a')] -= 1
+            # add character to the window
             cur_structure[ord(s[i]) - ord('a')] += 1
-
-            if self.samehashtable(p_structure, cur_structure) == True:
+            # check structure
+            if self.sameStructure(p_structure, cur_structure) == True:
+                # append index of the earlierest character in this string
                 res.append(i - len(p) + 1)
         return res
 
-    def samehashtable(self, a, b):
+    def sameStructure(self, a, b):
         for i in range(len(a)):
             if a[i] != b[i]:
                 return False
