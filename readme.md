@@ -705,3 +705,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 268 | [Top 2 Frequent Words](/morgan-stanley/top-2-frequent-words) | hashtable | glassdoor | ⭐️ |
 | 268 | [Maximum Width Ramp](/leetcode/962-maximum-width-ramp) | sort | [leetcode 962](https://leetcode.com/problems/maximum-width-ramp/) | ⭐️ |
 | 268 | [TapeEquilibrium](/codility/3-tape_equilibrium) | prefix sum | [codility 3](https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/) | ⭐️ |
+| 269 | [Shortest Completing Word](/leetcode/748-shortest-completing-word) | hashtable | [leetcode 748](https://leetcode.com/problems/shortest-completing-word/) | O(L+WK) |
