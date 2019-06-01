@@ -509,7 +509,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 210 | [Surrounded Regions](/leetcode/130-surrounded-regions) | graph | [leetcode 130](https://leetcode.com/problems/surrounded-regions/) | 1st O(2n) |
 | 210 | [Island Perimeter](/leetcode/463-island-perimeter) | graph | [leetcode 463](https://leetcode.com/problems/island-perimeter/) | 1st dfs. 2nd bfs. 2 followups |
 | 210 | [Vertical Order Traversal of a Binary Tree](/leetcode/987-vertical-order-traversal-of-a-binary-tree) | tree, hashtable | [leetcode 463](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | 1st bfs, 2nd bfs. takeaway: python sorted(nums,cmp=f), go sort.Slice |
-| 210 | [Reorganize String](/leetcode/767-reorganize-string) | heap, hashtable | [leetcode 767](https://leetcode.com/problems/reorganize-string/) | 1st hashtable + heap |
+| 210 | [Reorganize String](/leetcode/767-reorganize-string) | heap, hashtable | [leetcode 767](https://leetcode.com/problems/reorganize-string/) | 📌O(nlogn) 1st hashtable + heap. similar to [leetcode 1054](https://leetcode.com/problems/distant-barcodes/) |
 | 210 | [Max Stack](/leetcode/716-max-stack) | binary search, linked list | [leetcode 716](https://leetcode.com/problems/max-stack/) | 1st O(n) 📌2nd O(logn) |
 | 211 | [Middle Stack](/miscellaneous/middle-stack) | linked list | glassdoor | 📌O(1) for all push, pop, top, peekMiddle, popMiddle |
 | 211 | [Gas Station](/leetcode/134-gas-station) | greedy | [leetcode 134](https://leetcode.com/problems/gas-station/) | 1st O(n^2). ⭐️2nd O(n) |
@@ -712,3 +712,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 270 | [Set Mismatch](/leetcode/645-set-mismatch) | hashtable, math | [leetcode 370](https://leetcode.com/problems/set-mismatch/) | 📌1st O(O)Q(n) 2nd O(n)Q(1) |
 | 270 | [Shortest Distance to a Character](/leetcode/821-shortest-distance-to-a-character) | binary search, array | [leetcode 821](https://leetcode.com/problems/shortest-distance-to-a-character/) | 1st binary searchO(Ologn), 📌2nd O(n) back and forth cache technique |
 | 270 | [Remove All Adjacent Duplicates In String](/leetcode/1047-remove-all-adjacent-duplicates-in-string) | stack | [leetcode 1047](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | ⭐️1st O(n) similar to parentheses problem |
+| 270 | [Distant Barcodes](/leetcode/1054-distant-barcodes) | heap, hashtable | [leetcode 1054](https://leetcode.com/problems/distant-barcodes/) | ⭐️1st O(nlogn) similar to [leetcode 767](https://leetcode.com/problems/reorganize-string/) |

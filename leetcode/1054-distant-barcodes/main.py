@@ -1,8 +1,8 @@
 import heapq
 
 """
-    1st approach: pq + hashtable 
-    - similar to lc1054
+    1st approach: heap + hashtable
+    - similar to lc767
 
     1. count the occurence of characters
     2. put the characters into the maxheap
@@ -13,22 +13,21 @@ import heapq
     7. if there is an item in the buffer, it means that we cannot constuct the reuslt
     8. else we just return the result
 
-    Time    O(nlogn) becos heap for O(logn)
+    Time    O(nlogn)
     Space   O(n)
-    28 ms, faster than 41.51%
+    592 ms, faster than 25.00%
 """
 
 
 class Solution(object):
-    def reorganizeString(self, S):
+    def rearrangeBarcodes(self, barcodes):
         """
-        :type S: str
-        :rtype: str
+        :type barcodes: List[int]
+        :rtype: List[int]
         """
-        # counter
         pq = []
         ht = {}
-        for c in S:
+        for c in barcodes:
             if c not in ht:
                 ht[c] = 1
             else:
@@ -36,20 +35,20 @@ class Solution(object):
         for key in ht:
             heapq.heappush(pq, (-ht[key], key))
         # construct result
-        res = ""
+        res = []
         buffer = None
         while len(pq) > 0:
             ocur, pop = heapq.heappop(pq)
             if len(res) == 0:
-                res += pop
+                res.append(pop)
                 # we put back the character if occurence > 1
-                if ocur < -1:
+                if abs(ocur) > 1:
                     heapq.heappush(pq, (ocur+1, pop))
             else:
                 if res[-1] != pop:
-                    res += pop
+                    res.append(pop)
                     # we put back the character if occurence > 1
-                    if ocur < -1:
+                    if abs(ocur) > 1:
                         heapq.heappush(pq, (ocur+1, pop))
                     # remember to put the buffer back to the result
                     if buffer != None:
@@ -59,21 +58,12 @@ class Solution(object):
                     buffer = (ocur, pop)
         # if there is something in the buffer, we fail to reorganise the string
         if buffer != None:
-            return ""
+            return []
         return res
 
 
-print(Solution().reorganizeString("aab"))
-print(Solution().reorganizeString("aaab"))
-
-print(Solution().reorganizeString("aabc"))
-print(Solution().reorganizeString("aaabc"))
-
-print(Solution().reorganizeString("aabcc"))
-print(Solution().reorganizeString("aaaabc"))
-
-a = "zrhmhyevkojpsegvwolkpystdnkyhcjrdvqtyhucxdcwm"
-print(Solution().reorganizeString(a))
-
-a = "zrhmhyevkojpsegvwolkpystdnkyhcjrdvqtyhucxdcwmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
-print(Solution().reorganizeString(a))
+print(Solution().rearrangeBarcodes([1, 3, 3, 3, 4, 5]))
+# print(Solution().rearrangeBarcodes([1, 1, 1, 2, 2]))
+# print(Solution().rearrangeBarcodes([1, 1, 2, 2, 2]))
+# print(Solution().rearrangeBarcodes([1, 1, 1, 2, 2, 2]))
+# print(Solution().rearrangeBarcodes([1, 2, 2, 3, 3, 3, 4, 5]))
