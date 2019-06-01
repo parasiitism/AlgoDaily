@@ -710,3 +710,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 269 | [Range Addition II](/leetcode/598-range-addition-ii) | array | [leetcode 598](https://leetcode.com/problems/range-addition-ii/) | 📌1st O(OR+OC) 2nd O(O) |
 | 269 | [Range Addition](/leetcode/370-range-addition) | prefix sum | [leetcode 370](https://leetcode.com/problems/range-addition/) | 📌1st O(O) |
 | 270 | [Set Mismatch](/leetcode/645-set-mismatch) | hashtable, math | [leetcode 370](https://leetcode.com/problems/set-mismatch/) | 📌1st O(O)Q(n) 2nd O(n)Q(1) |
+| 270 | [Shortest Distance to a Character](/leetcode/821-shortest-distance-to-a-character) | binary search, array | [leetcode 821](https://leetcode.com/problems/shortest-distance-to-a-character/) | 1st binary search O(Ologn), 📌2nd O(n) back and forth cache technique |
