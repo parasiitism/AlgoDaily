@@ -715,3 +715,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 270 | [Distant Barcodes](/leetcode/1054-distant-barcodes) | heap, hashtable | [leetcode 1054](https://leetcode.com/problems/distant-barcodes/) | ⭐️1st, 2nd O(nlogn) similar to [leetcode 767](https://leetcode.com/problems/reorganize-string/) |
 | 270 | [PermCheck](/codility/4-counting_elements) | hashtable | [codility 4](https://app.codility.com/programmers/lessons/4-counting_elements/perm_check/) |  |
 | 270 | [FrogRiverOne](/codility/4-frog_river_one) | hashtable | [codility 4](https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/) |  |
+| 270 | [MaxCounters](/codility/4-max_counters) | minmax | [codility 4](https://app.codility.com/programmers/lessons/4-max_counters/frog_river_one/) | 📌1st O(MN) 2nd O(M+N) learned from others |
