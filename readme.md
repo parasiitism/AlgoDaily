@@ -709,3 +709,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 269 | [Longest Harmonious Subsequence](/leetcode/594-longest-harmonious-subsequence) | hashtable | [leetcode 594](https://leetcode.com/problems/longest-harmonious-subsequence/) | 📌1st O(2N) 2nd O(N) |
 | 269 | [Range Addition II](/leetcode/598-range-addition-ii) | array | [leetcode 598](https://leetcode.com/problems/range-addition-ii/) | 📌1st O(OR+OC) 2nd O(O) |
 | 269 | [Range Addition](/leetcode/370-range-addition) | prefix sum | [leetcode 370](https://leetcode.com/problems/range-addition/) | 📌1st O(O) |
+| 270 | [Set Mismatch](/leetcode/645-set-mismatch) | hashtable, math | [leetcode 370](https://leetcode.com/problems/set-mismatch/) | 📌1st O(O)Q(n) 2nd O(n)Q(1) |

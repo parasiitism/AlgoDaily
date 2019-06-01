@@ -101,20 +101,22 @@ func findMistyped(nums []int) int {
 	return -1
 }
 
-// approach 4
-// i figured it out just because i took the GRE recently
-// math
-// O(n)
-// space O(1)
-// originally, 	abcdef=720
-// now, 				abcdcf=540
-// and 					a+b+c+d+e+f=21
-// now 					a+b+c+d+c+f=20
-// so...
-// e/c=720/540=4/3
-// e-c=1
-// solve the equation
-// c=3, e=4
+/*
+	approach 4
+	i figured it out just because i took the GRE recently
+	math
+	O(n)
+	space O(1)
+	originally, 	abcdef=720
+	now, 				abcdcf=540
+	and 					a+b+c+d+e+f=21
+	now 					a+b+c+d+c+f=20
+	so...
+	e/c=720/540=4/3
+	e-c=1
+	solve the equation
+	c=3, e=4
+*/
 func findMistyped_math(nums []int) int {
 	p1 := 1
 	p2 := 1
@@ -136,18 +138,20 @@ func findMistyped_math(nums []int) int {
 	return int(math.Round(result))
 }
 
-// approach 5
-// however,
-// the above solution has a problem for a large number set e.g. N=10000000, x! will stackoverflow the int64
-// therefore we should not use 'mutiply'
-// lets say for [1, 2, 3, 3, 5, 6] what if we...
-// a^2 + b^2 + c^2 + d^2 + e^2 + f^2 = 91
-// 					minus both sides
-// a^2 + b^2 + c^2 + c^2 + d^2 + f^2 = 84
-// there will be an equation, e^2 - c^2 = 91-75 = 7
-// e - c = 1
-// e + c = 7
-// c=3, e=4
+/*
+	approach 5
+	however,
+	the above solution has a problem for a large number set e.g. N=10000000, x! will stackoverflow the int64
+	therefore we should not use 'mutiply'
+	lets say for [1, 2, 3, 3, 5, 6] what if we...
+	a^2 + b^2 + c^2 + d^2 + e^2 + f^2 = 91
+						minus both sides
+	a^2 + b^2 + c^2 + c^2 + d^2 + f^2 = 84
+	there will be an equation, e^2 - c^2 = 91-75 = 7
+	e - c = 1
+	e + c = 7
+	c=3, e=4
+*/
 func findMistyped_math_advanced(nums []int) int {
 	p1 := 0
 	p2 := 0
