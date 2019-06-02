@@ -716,3 +716,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 270 | [PermCheck](/codility/4-counting_elements) | hashtable | [codility 4](https://app.codility.com/programmers/lessons/4-counting_elements/perm_check/) |  |
 | 270 | [FrogRiverOne](/codility/4-frog_river_one) | hashtable | [codility 4](https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/) |  |
 | 270 | [MaxCounters](/codility/4-max_counters) | minmax | [codility 4](https://app.codility.com/programmers/lessons/4-max_counters/frog_river_one/) | 📌1st O(MN) 2nd O(M+N) learned from others |
+| 271 | [Find Right Interval](/leetcode/436-find-right-interval) | binary search | [leetcode 436](https://leetcode.com/problems/find-right-interval/) | 📌1st O(NlogN) |
