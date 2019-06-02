@@ -3,7 +3,7 @@
 
     Time    O(n+n+o) n: nums, n: unique chracters, o: averge freq of characters
     Space   O(n)
-    208 ms, faster than 43.62% 
+    212 ms, faster than 62.66%
 """
 
 
@@ -24,6 +24,7 @@ class Solution(object):
             else:
                 m[num].append(i)
         # get the max freq as well as its corresponding arrays
+        # becos it is possible that there are no than 1 num having the maxFreq
         maxFreq = 0
         maxArrs = []
         for key in m:
