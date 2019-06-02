@@ -19,6 +19,8 @@ import (
 
 	hence, for each iteration, res += i - slow + 1
 
+	Time    O(n)
+    Space   O(1)
 	124 ms, faster than 100.00%
 */
 func numSubarrayProductLessThanK(nums []int, k int) int {
