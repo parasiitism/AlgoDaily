@@ -580,7 +580,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 233 | [Longest Word in Dictionary](/leetcode/720-longest-word-in-dictionary) | array | [leetcode 720](https://leetcode.com/problems/longest-word-in-dictionary/) | 1st O(kn) |
 | 233 | [Closest Leaf in a Binary Tree](/leetcode/742-closest-leaf-in-a-binary-tree) | tree, graph | [leetcode 742](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/) | ⭐️1st O(N+E) |
 | 234 | [Word Squares](/leetcode/425-word-squares) | trie, recursion | [leetcode 425](https://leetcode.com/problems/word-squares/) | 📌|
-| 234 | [Degree of an Array](/leetcode/697-degree-of-an-array) | hashtable | [leetcode 697](https://leetcode.com/problems/degree-of-an-array/) | |
+| 234 | [Degree of an Array](/leetcode/697-degree-of-an-array) | hashtable | [leetcode 697](https://leetcode.com/problems/degree-of-an-array/) | 📌1st O(3n) 2nd O(2n) |
 | 235 | [Lonely Pixel II](/leetcode/533-lonely-pixel-ii) | hashtable | [leetcode 533](https://leetcode.com/problems/lonely-pixel-ii/) | tricky question ⭐️ O(2n) |
 | 235 | [Group Isomorphic Strings](/miscellaneous/isomorphic-strings) | hashtable | glassdoor | 📌1st O(n^3). 2nd O(nk) |
 | 235 | [Longest Increasing Subsequence](/leetcode/300-longest-increasing-subsequence) | dynamic programming | [leetcode 300](https://leetcode.com/problems/longest-increasing-subsequence/) | 📌1st O(n^2) dp |
