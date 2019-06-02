@@ -717,3 +717,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 270 | [FrogRiverOne](/codility/4-frog_river_one) | hashtable | [codility 4](https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/) |  |
 | 270 | [MaxCounters](/codility/4-max_counters) | minmax | [codility 4](https://app.codility.com/programmers/lessons/4-max_counters/frog_river_one/) | 📌1st O(MN) 2nd O(M+N) learned from others |
 | 271 | [Find Right Interval](/leetcode/436-find-right-interval) | binary search | [leetcode 436](https://leetcode.com/problems/find-right-interval/) | 📌1st O(NlogN) |
+| 271 | [Adding Two Negabinary Numbers](/leetcode/1073-adding-two-negabinary-numbers) | binary search | [leetcode 1073](https://leetcode.com/problems/adding-two-negabinary-numbers/) | 📌1st from wiki O(n) |
