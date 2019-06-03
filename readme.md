@@ -720,4 +720,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 271 | [Adding Two Negabinary Numbers](/leetcode/1073-adding-two-negabinary-numbers) | binary search | [leetcode 1073](https://leetcode.com/problems/adding-two-negabinary-numbers/) | 📌1st from wiki O(n) |
 | 272 | [The Shortest Binarian](/interviews/rakuten) | bit op | glassdoor |  |
 | 272 | [Flip Columns For Maximum Number of Equal Rows](/leetcode/1072-flip-columns-for-maximum-number-of-equal-rows) | array | [leetcode 1072](https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/) | ⭐️finding the pattern is not that easy |
-| 272 | [Greatest Common Divisor of Strings](/leetcode/1071-greatest-common-divisor-of-strings) | string | [leetcode 1072](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | 1st O(ABB) |
+| 272 | [Greatest Common Divisor of Strings](/leetcode/1071-greatest-common-divisor-of-strings) | string | [leetcode 1072](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | 1st O(ABB), 2nd O(AB) |

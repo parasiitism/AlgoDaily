@@ -52,3 +52,65 @@ class Solution(object):
             if len(A) == 0 and len(B) == 0:
                 gcm = sub
         return gcm
+
+
+print(Solution().gcd("ABCABC", "ABC"))
+print(Solution().gcd("ABABAB", "ABAB"))
+print(Solution().gcd("ABABAB", "ABABAB"))
+print(Solution().gcd("ABCABC", "AB"))
+print(Solution().gcd("leetcode", "code"))
+
+print("-----")
+
+"""
+    2nd approach: string slicing with GCD of integers concept
+    
+    - this is the concept of GCD between integers
+    def gcd(a, b):
+        if b == 0:
+            return a
+        return gcd(b, a % b)
+    
+    lets say a = 20, b = 8
+    step1. 20%8 = 4
+    step2. 8%4 = 0 
+    therefore 4 is the CGD of 20 and 8
+
+    - same thing happens when integers -> strings
+
+    Time    O(AB)
+    Space   O(min(A, B)) depth of recursion tree
+    8 ms, faster than 99.58%
+"""
+
+
+class Solution(object):
+    def gcdOfStrings(self, str1, str2):
+        """
+        :type str1: str
+        :type str2: str
+        :rtype: str
+        """
+        if len(str1) < len(str2):
+            str1, str2 = str2, str1
+        return self.gcd(str1, str2)
+
+    def gcd(self, a, b):
+        if len(b) == 0:
+            return a
+        # if the first character of a and b are diff, cant slice further
+        if a[0] != b[0]:
+            return ""
+        n = len(b)
+        # imitate using divion of integers to get remainder
+        reminder = a
+        while len(reminder) > 0 and reminder[:n] == b:
+            reminder = reminder[n:]
+        return self.gcd(b, reminder)
+
+
+print(Solution().gcd("ABCABC", "ABC"))
+print(Solution().gcd("ABABAB", "ABAB"))
+print(Solution().gcd("ABABAB", "ABABAB"))
+print(Solution().gcd("ABCABC", "AB"))
+print(Solution().gcd("leetcode", "code"))
