@@ -721,3 +721,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 272 | [The Shortest Binarian](/interviews/rakuten) | bit op | glassdoor |  |
 | 272 | [Flip Columns For Maximum Number of Equal Rows](/leetcode/1072-flip-columns-for-maximum-number-of-equal-rows) | array | [leetcode 1072](https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/) | ⭐️finding the pattern is not that easy |
 | 272 | [Greatest Common Divisor of Strings](/leetcode/1071-greatest-common-divisor-of-strings) | string | [leetcode 1072](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | 1st O(ABB), 2nd O(AB) |
+| 272 | [Rotated Digits](/leetcode/788-rotated-digits) | array | [leetcode 788](https://leetcode.com/problems/rotated-digits/) | 1st O(nlogn) |
