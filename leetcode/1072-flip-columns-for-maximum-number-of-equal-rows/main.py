@@ -22,7 +22,7 @@
     row1 = 11000
     row4 = 00111
 
-    so we can just flip the rows count the pattern occurrence instead of brainlessly flipping the columns
+    so we can just flip the rows count the pattern occurrence instead of flipping the columns brainlessly
 
     ref:
     - https://www.youtube.com/watch?v=kvmnQKaZHXA

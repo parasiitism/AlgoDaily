@@ -723,3 +723,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 272 | [Greatest Common Divisor of Strings](/leetcode/1071-greatest-common-divisor-of-strings) | string | [leetcode 1072](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | 1st O(ABB), 2nd O(AB) |
 | 272 | [Rotated Digits](/leetcode/788-rotated-digits) | array | [leetcode 788](https://leetcode.com/problems/rotated-digits/) | 1st O(nlogn) |
 | 272 | [String Compression](/leetcode/443-string-compression) | array | [leetcode 443](https://leetcode.com/problems/string-compression/) | 1st O(n)Q(n) |
+| 272 | [Magic Squares In Grid](/leetcode/840-magic-squares-in-grid) | array | [leetcode 840](https://leetcode.com/problems/magic-squares-in-grid/) | 1st O(10n) |
