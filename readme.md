@@ -718,3 +718,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 270 | [MaxCounters](/codility/4-max_counters) | minmax | [codility 4](https://app.codility.com/programmers/lessons/4-max_counters/frog_river_one/) | 📌1st O(MN) 2nd O(M+N) learned from others |
 | 271 | [Find Right Interval](/leetcode/436-find-right-interval) | binary search | [leetcode 436](https://leetcode.com/problems/find-right-interval/) | 📌1st O(NlogN) |
 | 271 | [Adding Two Negabinary Numbers](/leetcode/1073-adding-two-negabinary-numbers) | binary search | [leetcode 1073](https://leetcode.com/problems/adding-two-negabinary-numbers/) | 📌1st from wiki O(n) |
+| 272 | [The Shortest Binarian](/interviews/rakuten) | bit op | glassdoor |  |
+| 272 | [Flip Columns For Maximum Number of Equal Rows](/leetcode/1072-flip-columns-for-maximum-number-of-equal-rows) | array | [leetcode 1072](https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/) | ⭐️finding the pattern is not that easy |

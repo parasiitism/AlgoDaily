@@ -31,3 +31,22 @@ def decimal2binary(num):
 
 
 print(decimal2binary(13))
+
+
+def decimal2binaryArray(n):
+    if n == 0:
+        return [0]
+    res = []
+    while n > 0:
+        res.append(n % 2)
+        n /= 2
+    return res[::-1]
+
+
+print(decimal2binaryArray(0))
+print(decimal2binaryArray(1))
+print(decimal2binaryArray(2))
+print(decimal2binaryArray(3))
+print(decimal2binaryArray(13))
+print(decimal2binaryArray(15))
+print(decimal2binaryArray(16))
