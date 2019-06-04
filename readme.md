@@ -724,4 +724,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 272 | [Rotated Digits](/leetcode/788-rotated-digits) | array | [leetcode 788](https://leetcode.com/problems/rotated-digits/) | 1st O(nlogn) |
 | 272 | [String Compression](/leetcode/443-string-compression) | array | [leetcode 443](https://leetcode.com/problems/string-compression/) | 1st O(n)Q(n) |
 | 272 | [Magic Squares In Grid](/leetcode/840-magic-squares-in-grid) | array | [leetcode 840](https://leetcode.com/problems/magic-squares-in-grid/) | 1st O(10n) |
-| 272 | [Student Attendance Record I](/leetcode/551-student-attendance-record-i) | string | [leetcode 551](https://leetcode.com/problems/student-attendance-record-i/) | 1st O(n) |
+| 273 | [Student Attendance Record I](/leetcode/551-student-attendance-record-i) | string | [leetcode 551](https://leetcode.com/problems/student-attendance-record-i/) | 1st O(n) |
+| 273 | [Number String Permutation](/interviews/rakuten/number-string-permutation) | permutation | glassdoor | O(n!) |
