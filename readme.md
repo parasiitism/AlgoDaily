@@ -246,7 +246,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 141 | [Remove Duplicates from Sorted Array II](/leetcode/80-remove-duplicates-from-sorted-array-ii) | array, string | [leetode 80](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | 1st, 2nd 8ms beats 100% |
 | 142 | [Spiral Matrix II](/leetcode/59-spiral-matrix-ii) | array, string | [leetode 59](https://leetcode.com/problems/spiral-matrix-ii/) | 1st 0ms beats 100% |
 | 142 | [Merge Two Binary Trees](/leetcode/617-merge-two-binary-trees) | tree | [leetode 617](https://leetcode.com/problems/merge-two-binary-trees/) | 1st 40ms beats 59.15%, 2nd 36ms beats 100% |
-| 143 | [Reverse String](/leetcode/344-reverse-string) | string | [leetode 344](https://leetcode.com/problems/reverse-string/) | |
+| 143 | [Reverse String](/leetcode/344-reverse-string) | string | [leetode 344](https://leetcode.com/problems/reverse-string/) | 1st iterative O(n), 2nd recursive O(n) |
 | 143 | [Array Partition I](/leetcode/561-array-partition-i) | array | [leetode 561](https://leetcode.com/problems/array-partition-i/) | 1st beats 5.48%, 2nd 128ms beats 12.33% |
 | 143 | [Remove Element](/leetcode/27-remove-element) | array | [leetode 27](https://leetcode.com/problems/remove-element/) | 1st beats 100%. i also implement it in JS with 2 ways |
 | 143 | [Minimum Size Subarray Sum](/leetcode/209-minimum-size-subarray-sum) | array | [leetode 209](https://leetcode.com/problems/minimum-size-subarray-sum/) | ️⭐️ 1st beats 5.8%, 2nd beats 20%, 3rd learned from others |

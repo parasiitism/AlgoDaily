@@ -54,11 +54,12 @@ class Solution(object):
         return gcm
 
 
-print(Solution().gcd("ABCABC", "ABC"))
-print(Solution().gcd("ABABAB", "ABAB"))
-print(Solution().gcd("ABABAB", "ABABAB"))
-print(Solution().gcd("ABCABC", "AB"))
-print(Solution().gcd("leetcode", "code"))
+print(Solution().gcdOfStrings("ABCABC", "ABC"))
+print(Solution().gcdOfStrings("ABCABC", "AAC"))
+print(Solution().gcdOfStrings("ABABAB", "ABAB"))
+print(Solution().gcdOfStrings("ABABAB", "ABABAB"))
+print(Solution().gcdOfStrings("ABCABC", "AB"))
+print(Solution().gcdOfStrings("leetcode", "code"))
 
 print("-----")
 
@@ -98,18 +99,19 @@ class Solution(object):
     def gcd(self, a, b):
         if len(b) == 0:
             return a
-        # if the first character of a and b are diff, cant slice further
-        if a[0] != b[0]:
-            return ""
         n = len(b)
         # imitate using divion of integers to get remainder
         reminder = a
-        while len(reminder) > 0 and reminder[:n] == b:
-            reminder = reminder[n:]
+        while len(reminder) >= len(b):
+            if reminder[:n] == b:
+                reminder = reminder[n:]
+            else:
+                return ""
         return self.gcd(b, reminder)
 
 
 print(Solution().gcd("ABCABC", "ABC"))
+print(Solution().gcd("ABCABC", "AAC"))
 print(Solution().gcd("ABABAB", "ABAB"))
 print(Solution().gcd("ABABAB", "ABABAB"))
 print(Solution().gcd("ABCABC", "AB"))
