@@ -1,6 +1,14 @@
 """
     1st appraoch: bottom-up iterative
 
+    dp[0] = 1
+    dp[1] = 1
+    dp[2] = 0 + 1 = 2
+    dp[3] = 1 + 2 = 3
+    dp[4] = 2 + 3 = 5
+    dp[5] = 3 + 5 = 8
+    dp[6] = 5 + 8 = 13
+
 	Time 	O(n) iterate from 1 to N
 	Space	O(n) for the array
 	12ms beats 98.53%

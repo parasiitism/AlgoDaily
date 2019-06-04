@@ -34,10 +34,11 @@ func minCostClimbingStairs(cost []int) int {
 	2nd approach: bottom-up DP, learned from others https://zhuanlan.zhihu.com/p/32980698
 	e.g. [10,15,20,30]
 	dp[0] = 10
-	dp[1] = 15
+	dp[1] = 15 to get here, we must step on this stair, therefore it is not min(10, 15) = 10
 	dp[2] = 20 + min(dp[0], dp[1]) = 20 + 10 = 30
 	dp[3] = 30 + min(dp[1], dp[2]) = 20 + 15 = 35
 	dp[4] = 0  + min(dp[2], dp[3]) = 0  + 30 = 30
+
 	Time 	O(n)
 	Space	O(n) the dp array
 	4ms beats 100%
