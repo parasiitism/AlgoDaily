@@ -726,3 +726,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 272 | [Magic Squares In Grid](/leetcode/840-magic-squares-in-grid) | array | [leetcode 840](https://leetcode.com/problems/magic-squares-in-grid/) | 1st O(10n) |
 | 273 | [Student Attendance Record I](/leetcode/551-student-attendance-record-i) | string | [leetcode 551](https://leetcode.com/problems/student-attendance-record-i/) | 1st O(n) |
 | 273 | [Number String Permutation](/interviews/rakuten/number-string-permutation) | permutation | glassdoor | O(n!) |
+| 273 | [Convert BST to Greater Tree](/leetcode/538-convert-bst-to-greater-tree) | tree | [leetcode 538](https://leetcode.com/problems/convert-bst-to-greater-tree/) | ⭐️1st O(3n) |
