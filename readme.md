@@ -729,3 +729,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 273 | [Convert BST to Greater Tree](/leetcode/538-convert-bst-to-greater-tree) | tree | [leetcode 538](https://leetcode.com/problems/convert-bst-to-greater-tree/) | ⭐️1st O(3n) |
 | 273 | [Reverse Sentences](/interviews/clover-health/reverse-sentences) | string | interview | |
 | 274 | [DI String Match](/leetcode/942-di-string-match) | string, math | [leetcode 942](https://leetcode.com/problems/di-string-match/) | very interesting question 📌1st O(2N), 2nd O(N) |
+| 274 | [Find Permutation](/leetcode/484-find-permutation) | stack | [leetcode 484](https://leetcode.com/problems/find-permutation/) | very interesting question 📌1st O(N), 2nd O(N) |
