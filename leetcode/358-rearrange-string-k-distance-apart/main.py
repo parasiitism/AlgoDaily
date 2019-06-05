@@ -10,14 +10,10 @@ from collections import *
         - put the tasks back to the queue with decremented count
     3. remove trailing '-'(idle)
 
-    Time    O(nlogn)
+    Time    O(nlog26) -> O(n)
     Space   O(n)
     1296 ms, faster than 13.14%
 """
-
-
-import heapq
-from collections import *
 
 
 class Solution(object):
@@ -58,3 +54,9 @@ class Solution(object):
             return ""
         # res is the list of tasks
         return res
+
+
+print(Solution().rearrangeString("aabbcc", 3))
+print(Solution().rearrangeString("aaabc", 3))
+print(Solution().rearrangeString("aaadbbcc", 2))
+print(Solution().rearrangeString("aaadbbcc", 3))
