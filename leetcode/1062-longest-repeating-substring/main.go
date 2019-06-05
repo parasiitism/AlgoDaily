@@ -12,7 +12,7 @@ package main
 func longestRepeatingSubstring(S string) int {
 	ht := make(map[string]int)
 	for i := 0; i < len(S); i++ {
-		for j := i; j < len(S); i++ {
+		for j := i; j < len(S); j++ {
 			sub := S[i : j+1]
 			if _, x := ht[sub]; x {
 				ht[sub] += 1
