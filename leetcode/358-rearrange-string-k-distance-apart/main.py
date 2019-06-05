@@ -2,8 +2,8 @@ import heapq
 from collections import *
 
 """
-    1st approach: maxheap
-    - similar to lc358
+    1st approach: heap
+    - similar to lc621
     1. count occurence for each task
     2. in each iteration
         - pop the tasks from maxheap n+1 times
@@ -12,48 +12,49 @@ from collections import *
 
     Time    O(nlogn)
     Space   O(n)
-    744 ms, faster than 26.51%
+    1296 ms, faster than 13.14%
 """
 
 
+import heapq
+from collections import *
+
+
 class Solution(object):
-    def leastInterval(self, tasks, n):
+    def rearrangeString(self, s, k):
         """
-        :type tasks: List[str]
-        :type n: int
-        :rtype: int
+        :type s: str
+        :type k: int
+        :rtype: str
         """
+        if k <= 1:
+            return s
         # count occurence for each task
-        counter = Counter(tasks)
+        counter = Counter(s)
         pq = []
         for key in counter:
             heapq.heappush(pq, (-counter[key], key))
-        res = []
+        res = ""
         while len(pq) > 0:
             arr = []
             # pop the tasks from maxheap
-            for i in range(n+1):
+            for i in range(k):
                 if len(pq) > 0:
                     pop = heapq.heappop(pq)
-                    res.append(pop[1])
+                    res += pop[1]
                     arr.append(pop)
                 else:
-                    res.append("-")
+                    res += "-"
             # put the tasks back to the queue with decremented count
             for count, key in arr:
                 if abs(count) > 1:
                     heapq.heappush(pq, (count+1, key))
-        # remove trailing '-'(idle)
         while len(res) > 0:
             if res[-1] == '-':
-                res.pop()
+                res = res[:-1]
             else:
                 break
+        if res.find("-") > -1:
+            return ""
         # res is the list of tasks
-        return len(res)
-
-
-print(Solution().leastInterval(["A", "A", "A", "B", "B", "B"], 2))
-print(Solution().leastInterval(["A", "A", "A", "B", "B", "B", "C", "C"], 2))
-print(Solution().leastInterval(
-    ["A", "A", "A", "A", "A", "B", "B", "B", "C", "C", "C", "D", "D"], 2))
+        return res
