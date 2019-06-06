@@ -736,3 +736,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 275 | [Maximal Number of Nails at Same Height by Hammering K Nails](/interviews/rakuten/max_no_of_nails) | hashtable, minmax | glassdoor | ⭐️ |
 | 275 | [K-diff Pairs in an Array](/leetcode/532-k-diff-pairs-in-an-array) | hashtable | [leetcode 532](https://leetcode.com/problems/k-diff-pairs-in-an-array/) | ⭐️ |
 | 275 | [Line Reflection](/leetcode/356-line-reflection) | hashtable | [leetcode 356](https://leetcode.com/problems/line-reflection/) | ⭐️ |
+| 275 | [Overlapping Area between Circles](/interviews/rakuten/overlapping-area-between-circles) | math | glassdoor | ⭐️ |
