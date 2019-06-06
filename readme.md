@@ -733,3 +733,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 274 | [Longest Repeating Substring](/leetcode/1062-longest-repeating-substring) | stack | [leetcode 1062](https://leetcode.com/problems/longest-repeating-substring/) | 📌1st O(n^2) beats 100% in golang but LTE in python |
 | 274 | [Task Scheduler](/leetcode/621-task-scheduler) | heap | [leetcode 621](https://leetcode.com/problems/task-scheduler/) | 1st O(nlog26) |
 | 274 | [Rearrange String k Distance Apart](/leetcode/358-rearrange-string-k-distance-apart) | heap | [leetcode 358](https://leetcode.com/problems/rearrange-string-k-distance-apart/) | 1st O(nlog26) similar to [leetcode 621](https://leetcode.com/problems/task-scheduler/) |
+| 275 | [Maximal Number of Nails at Same Height by Hammering K Nails](/interviews/rakuten/max_no_of_nails) | hashtable, minmax | glassdoor | ⭐️ |
