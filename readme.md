@@ -741,3 +741,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 276 | [Circular Array Loop](/leetcode/457-circlar-array-loop) | 2pointers | [leetcode 457](https://leetcode.com/problems/circlar-array-loop/) | 1st O(n^2) 📌similar to [leetcode 141](https://leetcode.com/problems/linked-list-cycle/) |
 | 276 | [Maximal Indices Diff Between Adajent Values](/interviews/rakuten/max-diff-between-numbers) | sort | glassdoor | 1st O(nlogn) |
 | 276 | [PassingCars](/codility/5-prefix_sums) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/) | 1st O(n)Q(n) |
+| 276 | [GenomicRangeQuery](/codility/5-genomic_range_query) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/) | 1st O(n)Q(n) |
