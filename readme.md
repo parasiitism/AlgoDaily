@@ -737,3 +737,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 275 | [K-diff Pairs in an Array](/leetcode/532-k-diff-pairs-in-an-array) | hashtable | [leetcode 532](https://leetcode.com/problems/k-diff-pairs-in-an-array/) | ⭐️ |
 | 275 | [Line Reflection](/leetcode/356-line-reflection) | hashtable | [leetcode 356](https://leetcode.com/problems/line-reflection/) | ⭐️ |
 | 275 | [Overlapping Area between Circles](/interviews/rakuten/overlapping-area-between-circles) | math | glassdoor | ⭐️ |
+| 276 | [Number of Boomerangs](/leetcode/447-number-of-boomerangs) | hashtable, math | [leetcode 447](https://leetcode.com/problems/number-of-boomerangs/) | ⭐️ |
