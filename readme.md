@@ -738,3 +738,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 275 | [Line Reflection](/leetcode/356-line-reflection) | hashtable | [leetcode 356](https://leetcode.com/problems/line-reflection/) | ⭐️ |
 | 275 | [Overlapping Area between Circles](/interviews/rakuten/overlapping-area-between-circles) | math | glassdoor | ⭐️ |
 | 276 | [Number of Boomerangs](/leetcode/447-number-of-boomerangs) | hashtable, math | [leetcode 447](https://leetcode.com/problems/number-of-boomerangs/) | ⭐️ |
+| 276 | [Circular Array Loop](/leetcode/457-circlar-array-loop) | 2pointers | [leetcode 457](https://leetcode.com/problems/circlar-array-loop/) | 1st O(n^2) 📌similar to [leetcode 141](https://leetcode.com/problems/linked-list-cycle/) |
