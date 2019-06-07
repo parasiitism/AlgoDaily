@@ -1,5 +1,6 @@
 """
     1st approach: stack
+    - similar to lc402
     - if positive, just put into stack
     - if negative:
       1. - pop the stack if abs(num) is larger than the top item in the stack
@@ -50,6 +51,7 @@ print("-----")
 
 """
     2nd approach: stack same idea as 1st approach
+    - similar to lc402
     - if positive, just put into stack
     - if negative:
       1. pop the stack if abs(num) is larger than the top positive item in the stack

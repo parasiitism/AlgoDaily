@@ -743,3 +743,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 276 | [PassingCars](/codility/5-prefix_sums) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/) | 1st O(n)Q(n) |
 | 276 | [GenomicRangeQuery](/codility/5-genomic_range_query) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/) | 1st O(n)Q(n) |
 | 276 | [Fish](/codility/5-fish) | stack | [codility 7](https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/) | 1st O(n)Q(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
+| 276 | [Remove K Digits](/leetcode/402-remove-k-digits) | stack | [leetcode 402](https://leetcode.com/problems/remove-k-digits/) | 1st O(n)Q(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
