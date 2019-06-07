@@ -1,3 +1,4 @@
+import sys
 import heapq
 
 """
@@ -9,6 +10,8 @@ import heapq
     Space   O(1)
     20 ms, faster than 100.00%
 """
+
+
 class Solution(object):
     def maxProfit(self, prices):
         if len(prices) < 2:
@@ -28,6 +31,10 @@ print(Solution().maxProfit([7, 6, 4, 3, 1]))
 print(Solution().maxProfit([2, 4]))
 print(Solution().maxProfit([2, 4, 1]))
 print(Solution().maxProfit([2, 4, 1, 4]))
+print(Solution().maxProfit([2, 3, 10, 6, 4, 8, 1]))
+print(Solution().maxProfit([7, 9, 5, 6, 3, 2]))
+print(Solution().maxProfit([1, 2, 90, 10, 110]))
+print(Solution().maxProfit([80, 2, 6, 3, 100]))
 
 print("-----")
 
@@ -40,6 +47,8 @@ print("-----")
     Space   O(1)
     52 ms, faster than 48.09%
 """
+
+
 class Solution(object):
     def maxProfit(self, prices):
         res = 0
@@ -49,11 +58,16 @@ class Solution(object):
             res = max(res, price-dip)
         return res
 
+
 print(Solution().maxProfit([7, 1, 5, 3, 6, 4]))
 print(Solution().maxProfit([7, 6, 4, 3, 1]))
 print(Solution().maxProfit([2, 4]))
 print(Solution().maxProfit([2, 4, 1]))
 print(Solution().maxProfit([2, 4, 1, 4]))
+print(Solution().maxProfit([2, 3, 10, 6, 4, 8, 1]))
+print(Solution().maxProfit([7, 9, 5, 6, 3, 2]))
+print(Solution().maxProfit([1, 2, 90, 10, 110]))
+print(Solution().maxProfit([80, 2, 6, 3, 100]))
 
 print("-----")
 
@@ -66,6 +80,8 @@ print("-----")
     Space   O(n) heap
     44 ms, faster than 16.01%
 """
+
+
 class Solution(object):
     def maxProfit(self, prices):
         if len(prices) < 2:
@@ -84,3 +100,7 @@ print(Solution().maxProfit([7, 6, 4, 3, 1]))
 print(Solution().maxProfit([2, 4]))
 print(Solution().maxProfit([2, 4, 1]))
 print(Solution().maxProfit([2, 4, 1, 4]))
+print(Solution().maxProfit([2, 3, 10, 6, 4, 8, 1]))
+print(Solution().maxProfit([7, 9, 5, 6, 3, 2]))
+print(Solution().maxProfit([1, 2, 90, 10, 110]))
+print(Solution().maxProfit([80, 2, 6, 3, 100]))
