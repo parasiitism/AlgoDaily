@@ -1,5 +1,6 @@
 """
     1st approach: BFS
+    - similar to lc505, 562
     - if the ball hits the wall, try to roll in 4 directions until the explorations hit the wall
     - only cache the pivot points where we turned(in front of the wall)
 
@@ -84,6 +85,7 @@ print("----------")
 
 """
     2nd approach: DFS
+    - similar to lc505, 562
     - if the ball hits the wall, try to roll in 4 directions until the explorations hit the wall
     - only cache the pivot points where we turned(in front of the wall)
 

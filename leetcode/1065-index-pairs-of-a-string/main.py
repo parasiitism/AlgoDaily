@@ -41,7 +41,7 @@ print(Solution().indexPairs(a, b))
 print("-----")
 
 """
-    1st approach: substring
+    2nd approach: substring
     - for each word, iterate through the text to find if there is a substring which matches the word 
 
     Time    O(WTk)

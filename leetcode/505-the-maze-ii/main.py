@@ -1,6 +1,7 @@
 import sys
 """
     1st approach: BFS
+    - similar to lc490, 562
     - we need a 2D array to cache the min distance on each cell !!!!
     - if the ball hits the wall, try to roll in 4 directions until the explorations hit the wall
     - only cache the pivot points where we turned(in front of the wall)
@@ -104,6 +105,7 @@ print("-----")
 
 """
     2nd approach: DFS
+    - similar to lc490, 562
     - we need a 2D array to cache the min distance on each cell !!!!
     - if the ball hits the wall, try to roll in 4 directions until the explorations hit the wall
     - only cache the pivot points where we turned(in front of the wall)
