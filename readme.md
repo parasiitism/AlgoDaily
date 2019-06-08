@@ -570,7 +570,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 229 | [Diverse Subarray](https://github.com/calvinchankf/GoogleKickStart/blob/master/2019/roundB/c.py) | hashtable | kickstart | round B q3: passed small dataset only |
 | 229 | [Find Common Characters](/leetcode/1002-find-common-characters) | hashtable | [leetcode 1002](https://leetcode.com/problems/find-common-characters/) | 1st O(MNM). 2nd O(MN) |
 | 230 | [Min Queue](https://github.com/calvinchankf/FrontEndConcepts/tree/master/implementation/min-queue) | binary search, linked list | glassdoor | O(logn) |
-| 230 | [XOR Between Range](/miscellaneous/xor-between-range) | bit op | glassdoor | 📌O(1) |
+| 230 | [XOR Between Numbers](/interviews/rakuten/xor-between-numbers) | bit op | glassdoor | 📌O(1) |
 | 230 | [Maximum Frequency Stack](/leetcode/895-maximum-frequency-stack) | hashtable | [leetcode 895](https://leetcode.com/problems/maximum-frequency-stack/) | 📌1st, 2nd O(1) |
 | 230 | [Split Linked List in Parts](/leetcode/725-split-linked-list-in-parts]) | math, linked list | [leetcode 725](https://leetcode.com/problems/split-linked-list-in-parts/) | O(2n) |
 | 231 | [Shuffle an Array](/leetcode/384-shuffle-an-array) | array | [leetcode 384](https://leetcode.com/problems/shuffle-an-array/) | 1st bultin `random.shuffle()`. 📌2nd O(n) Fisher-Yates Algorithm |
