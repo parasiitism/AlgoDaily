@@ -746,3 +746,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 276 | [Remove K Digits](/leetcode/402-remove-k-digits) | stack | [leetcode 402](https://leetcode.com/problems/remove-k-digits/) | 1st O(n)Q(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
 | 277 | [Index Pairs of a String](/leetcode/1065-index-pairs-of-a-string) | string | [leetcode 1065](https://leetcode.com/problems/index-pairs-of-a-string/) | 1st O(W+N^2) beats 6%, 2nd O(WTk) beats 98% |
 | 277 | [Longest Line of Consecutive One in Matrix](/leetcode/562-longest-line-of-consecutive-one-in-matrix) | graph, hashtable | [leetcode 1065](https://leetcode.com/problems/longest-line-of-consecutive-one-in-matrix/) | 1st dfs O(RC * max(R,C)) |
+| 277 | [Implement Rand10() Using Rand7()](/leetcode/470-implement-rand10-using-rand7) | math | [leetcode 470](https://leetcode.com/problems/implement-rand10-using-rand7/) | 📌Rejection Sampling WTF |
