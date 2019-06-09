@@ -755,3 +755,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 278 | [Standard Deviation Of An Array](/interviews/rakuten/standard-deviation-of-an-array) | math | glassdoor | ⭐️ |
 | 278 | [Largest Perimeter Triangle](/leetcode/976-largest-perimeter-triangle) | sort, math | [leetcode 976](https://leetcode.com/problems/largest-perimeter-triangle/) | ⭐️ |
 | 278 | [Largest Triangle Area](/leetcode/812-largest-triangle-area) | math | [leetcode 812](https://leetcode.com/problems/largest-triangle-area/) | ⭐️ |
+| 278 | [Minimum Moves to Equal Array Elements](/leetcode/453-minimum-moves-to-equal-array-elements) | math | [leetcode 453](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | ⭐️ |
