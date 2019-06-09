@@ -37,12 +37,12 @@ class Solution(object):
 
 
 """
-    2nd approach
-	- max heap
+    2nd approach: min heap
+    - maintain a min heap of size k, the top item in the minheap at the end is the kth largest item
 
-	Time		O(nlogn + klogk)
+	Time		O(nlogk)
 	Space		O(n)
-	84 ms, faster than 44.00%
+	80 ms, faster than 48.50%
 """
 
 
@@ -57,10 +57,7 @@ class Solution(object):
             return -1
         pq = []
         for num in nums:
-            heapq.heappush(pq, (-num))
-        i = 0
-        res = -1
-        while len(pq) > 0 and i < k:
-            res = -heapq.heappop(pq)
-            i += 1
-        return res
+            heapq.heappush(pq, num)
+            if len(pq) > k:
+                heapq.heappop(pq)
+        return heapq.heappop(pq)
