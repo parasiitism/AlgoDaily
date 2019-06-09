@@ -756,3 +756,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 278 | [Largest Perimeter Triangle](/leetcode/976-largest-perimeter-triangle) | sort, math | [leetcode 976](https://leetcode.com/problems/largest-perimeter-triangle/) | ⭐️ |
 | 278 | [Largest Triangle Area](/leetcode/812-largest-triangle-area) | math | [leetcode 812](https://leetcode.com/problems/largest-triangle-area/) | ⭐️ |
 | 278 | [Minimum Moves to Equal Array Elements](/leetcode/453-minimum-moves-to-equal-array-elements) | math | [leetcode 453](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | ⭐️ |
+| 278 | [Minimum Moves to Equal Array Elements II](/leetcode/462-minimum-moves-to-equal-array-elements-ii) | math | [leetcode 462](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | ⭐️ |
