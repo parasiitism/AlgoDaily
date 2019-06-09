@@ -752,3 +752,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 278 | [Binary Search Tree to Greater Sum Tree](/leetcode/1038-binary-search-tree-to-greater-sum-tree) | tree | [leetcode 1038](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | ⭐️1st recursive inorder O(n), iterative inorder O(n) |
 | 278 | [Generalized Abbreviation](/leetcode/320-generalized-abbreviation) | recursion, hashtable | [leetcode 320](https://leetcode.com/problems/generalized-abbreviation/) | 📌both 1st, 2nd O(N2^N) but different approach to construct numbers |
 | 278 | [Pair Sum Even Count](/codility/0-pair_sum_even_count) | math | glassdoor | ⭐️ |
+| 278 | [Standard Deviation Of An Array](/interviews/rakuten/standard-deviation-of-an-array) | math | glassdoor | ⭐️ |
