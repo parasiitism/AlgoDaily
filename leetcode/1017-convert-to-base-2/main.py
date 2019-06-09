@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """
     classic approach: negabinary conversion
 
@@ -153,10 +156,21 @@ print("-----")
 print(Solution().neg2Addition(
     [1, 0, 1, 0, 1, 0, 1], [1, 1, 1, 0, 1, 0, 0]))
 print(Solution().neg2Addition([1, 0, 1, 1], [0, 1, 1, 0]))
-
 print("-----")
 
 # test neg2Addition(present from the end)
 print(Solution().neg2AdditionFromEnd(
     [1, 0, 1, 0, 1, 0, 1], [0, 0, 1, 0, 1, 1, 1]))
 print(Solution().neg2AdditionFromEnd([1, 1, 0, 1], [0, 1, 1, 0]))
+print("-----")
+
+# test negabinary / 2
+x = Solution().baseNeg2ToNum("101001") // 2
+y = Solution().baseNeg2(x)
+print(x, y)
+print("-----")
+
+x = Solution().baseNeg2ToNum("111001") // 2
+y = Solution().baseNeg2(-6)
+print(x, y)
+print("-----")

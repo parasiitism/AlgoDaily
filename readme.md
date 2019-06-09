@@ -749,3 +749,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 277 | [Hand of Straights](/leetcode/846-hand-of-straights) | heap | [leetcode 846](https://leetcode.com/problems/hand-of-straight/) |📌1st O(N logN K) |
 | 277 | [Implement Rand10() Using Rand7()](/leetcode/470-implement-rand10-using-rand7) | math | [leetcode 470](https://leetcode.com/problems/implement-rand10-using-rand7/) | 📌Rejection Sampling WTF |
 | 277 | [Split 2 Strings To a Palindrome](/miscellaneous/split-strings-to-form-palindrome) | string | [leetcode discuss](https://leetcode.com/discuss/interview-question/306859/google-phone-screen-split-strings-to-form-a-palindrome) | ⭐️brute force for now |
+| 278 | [Binary Search Tree to Greater Sum Tree](/leetcode/1038-binary-search-tree-to-greater-sum-tree) | tree | [leetcode 1038](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | ⭐️1st recursive inorder O(n), iterative inorder O(n) |
