@@ -764,3 +764,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 279 | [Leaf-Similar Trees](/leetcode/872-leaf-similar-trees) | tree, recursion | [leetcode 872](https://leetcode.com/problems/leaf-similar-trees/) | 1st recurisve dfs O(n). 2nd iterative dfs O(n) |
 | 279 | [Monotone Increasing Digits](/leetcode/738-monotone-increasing-digits) | math | [leetcode 738](https://leetcode.com/problems/monotone-increasing-digits/) | 📌learned from others |
 | 279 | [Increasing Subsequences](/leetcode/491-increasing-subsequences) | recursion | [leetcode 491](https://leetcode.com/problems/increasing-subsequences/) | 📌similar to [leetcode 78](https://leetcode.com/problems/subsets/) |
+| 279 | [Increasing Triplet Subsequence](/leetcode/334-increasing-triplet-subsequence) | array | [leetcode 334](https://leetcode.com/problems/increasing-triplet-subsequence/) | 📌📌📌back and forth array technique |

@@ -7,7 +7,7 @@ import math
     similar to lc322: coin change
     e.g. coins = [1,2,5], amount = 7
     f(0) = 0  so if f(100-100), it output 0+1=1
-    f(1) = min(f(1)) + 1
+    f(1) = min(f0)) + 1
     f(2) = min(f(1)+f(0)) + 1
     f(3) = min(f(2)+f(1)) + 1
     f(4) = min(f(3)+f(2)) + 1
