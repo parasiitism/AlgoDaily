@@ -758,3 +758,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 278 | [Minimum Moves to Equal Array Elements](/leetcode/453-minimum-moves-to-equal-array-elements) | math | [leetcode 453](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | ⭐️ |
 | 278 | [Minimum Moves to Equal Array Elements II](/leetcode/462-minimum-moves-to-equal-array-elements-ii) | math | [leetcode 462](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | ⭐️ |
 | 279 | [Binary Watch](/leetcode/401-binary-watch) | recursion, bit op | [leetcode 401](https://leetcode.com/problems/binary-watch/) | ⭐️ |
+| 279 | [Construct the Rectangle](/leetcode/492-construct-the-rectangle) | math | [leetcode 492](https://leetcode.com/problems/construct-the-rectangle/) | ⭐️ |
