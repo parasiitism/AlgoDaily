@@ -761,3 +761,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 279 | [Construct the Rectangle](/leetcode/492-construct-the-rectangle) | math | [leetcode 492](https://leetcode.com/problems/construct-the-rectangle/) | ⭐️ |
 | 279 | [N-Repeated Element in Size 2N Array](/leetcode/961-n-repeated-element-in-size-2n-array) | hashtable, math | [leetcode 961](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/) | ⭐️1st O(n)Q(n). 2nd O(n)Q(1) |
 | 279 | [Binary Tree Tilt](/leetcode/563-binary-tree-tilt) | tree, recursion | [leetcode 563](https://leetcode.com/problems/binary-tree-tilt/) |  |
+| 279 | [Leaf-Similar Trees](/leetcode/872-leaf-similar-trees) | tree, recursion | [leetcode 872](https://leetcode.com/problems/leaf-similar-trees/) | 1st recurisve dfs O(n). 2nd iterative dfs O(n) |
