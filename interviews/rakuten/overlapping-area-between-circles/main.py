@@ -1,7 +1,6 @@
 import math
 
 """
-
     ref:
     - https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=525149
     - https://christianhill.co.uk/blog/overlapping-circles/
@@ -31,6 +30,7 @@ class Solution(object):
             # they dont overlap at all
             return 0
         elif dist <= abs(r1-r2):
+            # a circle inside another circle
             rMin = min(r1, r2)
             return math.pi * rMin ** 2
 
@@ -38,13 +38,15 @@ class Solution(object):
         r2Square = r2 ** 2
         distSquare = dist ** 2
 
-        # cosA = (b^2 + c^2 - a^2) / 2bc
+        # cos(A) = (b^2 + c^2 - a^2) / 2bc
         cos1 = (r1Square + distSquare - r2Square) / (2.0 * r1 * dist)
         cos2 = (r2Square + distSquare - r1Square) / (2.0 * r2 * dist)
 
+        # get the theta
         theta1 = math.acos(cos1)
         theta2 = math.acos(cos2)
 
+        # sum 2 areas of the circle's segment cut off by the chord intersection
         # area of one side = theta * b^2 - 0.5 * b^2 * sine(2 * theta)
         area1 = (theta2 * r2Square) - (0.5 * r2Square * math.sin(2.0*theta2))
         area2 = (theta1 * r1Square) - (0.5 * r1Square * math.sin(2.0*theta1))

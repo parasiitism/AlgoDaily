@@ -739,7 +739,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 275 | [Overlapping Area between Circles](/interviews/rakuten/overlapping-area-between-circles) | math | glassdoor | ⭐️ |
 | 276 | [Number of Boomerangs](/leetcode/447-number-of-boomerangs) | hashtable, math | [leetcode 447](https://leetcode.com/problems/number-of-boomerangs/) | ⭐️ |
 | 276 | [Circular Array Loop](/leetcode/457-circlar-array-loop) | 2pointers | [leetcode 457](https://leetcode.com/problems/circlar-array-loop/) | 1st O(n^2) 📌similar to [leetcode 141](https://leetcode.com/problems/linked-list-cycle/) |
-| 276 | [Maximal Indices Diff Between Adajent Values](/interviews/rakuten/max-diff-between-numbers) | sort | glassdoor | 1st O(nlogn) |
+| 276 | [Maximal Indices Diff of Adajent Pairs](/interviews/rakuten/max-indices-diff-of-adjacent-pairs) | sort | glassdoor | ⭐️1st O(nlogn) |
 | 276 | [PassingCars](/codility/5-prefix_sums) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/) | 1st O(n)Q(n) |
 | 276 | [GenomicRangeQuery](/codility/5-genomic_range_query) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/) | 1st O(n)Q(n) |
 | 276 | [Fish](/codility/5-fish) | stack | [codility 7](https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/) | 1st O(n)Q(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
