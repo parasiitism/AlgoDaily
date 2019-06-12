@@ -766,3 +766,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 279 | [Increasing Subsequences](/leetcode/491-increasing-subsequences) | recursion | [leetcode 491](https://leetcode.com/problems/increasing-subsequences/) | 📌similar to [leetcode 78](https://leetcode.com/problems/subsets/) |
 | 279 | [Increasing Triplet Subsequence](/leetcode/334-increasing-triplet-subsequence) | array | [leetcode 334](https://leetcode.com/problems/increasing-triplet-subsequence/) | 📌📌📌back and forth array technique |
 | 280 | [Sum of Square Numbers](/leetcode/633-sum-of-square-numbers) | math | [leetcode 633](https://leetcode.com/problems/sum-of-square-numbers/) | 📌📌📌1st O(sqrt(n)^2) LTE 2nd O(sqrt(n)) beats 78% |
+| 281 | [Sum of Even Numbers After Queries](/leetcode/985-sum-of-even-numbers-after-queries) | math, array | [leetcode 985](https://leetcode.com/problems/sum-of-even-numbers-after-queries/) | 1st O(n) |
