@@ -40,8 +40,10 @@ class Solution(object):
 print(Solution().subsets([1, 2, 3]))
 print(len(Solution().subsets([1, 2, 3, 4])))
 
+print("-----")
 
-class Solution1(object):
+
+class Solution(object):
     """
     Iterative DFS
     Time    O(2^n)
@@ -66,10 +68,51 @@ class Solution1(object):
         return result
 
 
-# print(Solution1().subsets([1, 2, 3]))
+print(Solution().subsets([1, 2, 3]))
+print(len(Solution().subsets([1, 2, 3, 4])))
+
+print("-----")
 
 
-class Solution2(object):
+class Solution(object):
+    """
+    Recursive DFS
+    - the way similar to lc416
+    - for each number, we can either include or exclude it the result, therefore we have 2^n options in total
+
+    Time    O(2^n)
+    Space   O(2^n) recursion tree
+    24 ms, faster than 79.31%
+    """
+
+    def __init__(self):
+        self.res = {}
+
+    def subsets(self, nums):
+        self.recur(nums, [], 0)
+        keys = []
+        for x in self.res:
+            keys.append(list(x))
+        return keys
+
+    def recur(self, nums, arr, curIdx):
+        # there might be duplicate combinations
+        key = tuple(arr)
+        self.res[key] = arr
+        if curIdx >= len(nums):
+            return
+        # choose or not choose
+        self.recur(nums, arr + [nums[curIdx]], curIdx+1)
+        self.recur(nums, arr[:], curIdx+1)
+
+
+print(Solution().subsets([1, 2, 3]))
+print(len(Solution().subsets([1, 2, 3, 4])))
+
+print("-----")
+
+
+class Solution(object):
     """
     Iteratively append the next item to calculated items
     e.g. [1,2,3]
@@ -92,4 +135,5 @@ class Solution2(object):
         return res
 
 
-# print(Solution2().subsets([1, 2, 3]))
+print(Solution().subsets([1, 2, 3]))
+print(len(Solution().subsets([1, 2, 3, 4])))
