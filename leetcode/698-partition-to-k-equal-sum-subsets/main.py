@@ -1,60 +1,68 @@
+"""
+    1st approach: backtracking
+    - the naive approach is to explore all the subsets, O(2^n), but for each item we can use once only
+    , so we need to cache the used item(by store the indices)
+    - so we need to do backtracking(similar to lc51, 52)
+        - try to include the next number
+        - and 'backtrack' the next number if it fails
+    - if we reach to the point where our curSum == target, we set k=k-1 and explore again from the begining of the input array 
+
+    ref:
+    - https://www.youtube.com/watch?v=qpgqhp_9d1s
+    - https://segmentfault.com/a/1190000017013991
+    - https://github.com/cherryljr/LeetCode/blob/master/Partition%20to%20K%20Equal%20Sum%20Subsets.java
+
+    Time    from O(2^n) to O(n!) i actually dont know to determind
+    Space   O(n) depth of recursion tree
+    432ms beats 34%
+"""
+
+
 class Solution(object):
     def canPartitionKSubsets(self, nums, k):
         """
-        :type nums: List[int]
-        :type k: int
-        :rtype: bool
+        432ms beats 34%
         """
-        agg = sum(nums)
-        target = agg / float(k)
-        if target.is_integer() == False:
+        total = sum(nums)
+        if k == 0 or total % k != 0:
             return False
-        target = int(target)
+        target = total//k
 
-        self.res = 0
-        used = set()
-        for i in range(len(nums)):
-            if i not in used:
-                # print('i', i)
-                num = nums[i]
-                used.add(i)
-                if self.dfs(nums, target, [num], num, used) == False:
-                    used.remove(i)
+        used = len(nums) * [False]
+        return self.dfs(nums, target, 0, k, 0, used)
 
-        return self.res == k
-
-    def dfs(self, cands, target, arr, agg, used):
-        if agg == target:
-            self.res += 1
-            print(arr)
+    def dfs(self, nums, target, curSum, k, start, used):
+        if k == 1:
             return True
-        elif agg > target:
-            return False
-        for i in range(len(cands)):
-            if i not in used:
-                cand = cands[i]
-                used.add(i)
-                if self.dfs(cands, target, arr+[cand], agg+cand, used):
+        if curSum == target:
+            return self.dfs(nums, target, 0, k-1, 0, used)
+        for i in range(start, len(nums)):
+            if used[i] == False:
+                used[i] = True
+                if self.dfs(nums, target, curSum+nums[i], k, i+1, used):
                     return True
-                used.remove(i)
+                used[i] = False
         return False
 
 
 s = Solution()
 
+# true
 a = [4, 3, 2, 3, 5, 2, 1]
 b = 4
 print(s.canPartitionKSubsets(a, 4))
 
+# false
 a = [2, 2, 2, 2, 3, 4, 5]
 b = 4
 print(s.canPartitionKSubsets(a, 4))
 
+# true
 a = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 b = 5
 print(s.canPartitionKSubsets(a, b))
 
-# very good test case
+# true, very good test case
 a = [10, 10, 10, 7, 7, 7, 7, 7, 7, 6, 6, 6]
 b = 3
 print(s.canPartitionKSubsets(a, b))
