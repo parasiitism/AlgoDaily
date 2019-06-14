@@ -772,3 +772,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 282 | [Partition to K Equal Sum Subsets](/leetcode/698-partition-to-k-equal-sum-subsets) | dynamic programming | [leetcode 698](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) | 📌📌📌classic beginning dp, "the 2nd easiest NP-hard problem" O(2^n) -> O(n!) |
 | 283 | [Split Array with Equal Sum](/leetcode/548-split-array-with-equal-sum) | prefix sum, hashtable | [leetcode 548](https://leetcode.com/problems/split-array-with-equal-sum/) | another equal sum problem O(n^2) |
 | 283 | [Compress Strings](/interviews/jpmorgan/compresse-numbers) | string | glassdoor | ⭐️ |
+| 283 | [Reverse And Add Integers](/interviews/jpmorgan/reverse-and-add) | string | glassdoor | ⭐️ |
