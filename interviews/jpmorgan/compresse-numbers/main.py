@@ -25,3 +25,11 @@ for i in range(1, t + 1):
     nums = ri.split()
     result = compressNumbers(nums)
     print(result)
+
+"""
+test
+
+2
+40 40 40 29 29 57 57 57 57 86
+7 11 1
+"""
