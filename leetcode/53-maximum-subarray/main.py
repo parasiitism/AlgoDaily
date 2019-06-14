@@ -1,7 +1,7 @@
 import sys
 """
     3rd approach: dynamic programming, kadan's algorithm
-    - for each item, store the max among itself, or extend the previous sum with itself
+    - for each item, store the max either itself or extend the previous sum with itself
       e.g. dp[i] chooses between dp[i-1]+nums[i] and nums[i]
     - the result is the largest dp[i]
     - optimize the 2nd approach by using store one variable for dp array cos for each item

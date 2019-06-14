@@ -33,4 +33,24 @@ class Solution(object):
             res += prev
         for i in range(len(res)):
             chars[i] = res[i]
-        return len(res)
+        return res
+
+
+s = Solution()
+
+a = ["a", "a", "b", "b", "c", "c", "c"]
+print(s.compress(a))
+
+a = ["a"]
+print(s.compress(a))
+
+a = ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"]
+print(s.compress(a))
+
+a = ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "c"]
+print(s.compress(a))
+
+a = ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "c", "c"]
+print(s.compress(a))
+
+print("-----")
