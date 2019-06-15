@@ -773,3 +773,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 283 | [Split Array with Equal Sum](/leetcode/548-split-array-with-equal-sum) | prefix sum, hashtable | [leetcode 548](https://leetcode.com/problems/split-array-with-equal-sum/) | another equal sum problem O(n^2) |
 | 283 | [Compress Strings](/interviews/jpmorgan/compresse-numbers) | string | glassdoor | ⭐️ |
 | 283 | [Reverse And Add Integers](/interviews/jpmorgan/reverse-and-add) | string | glassdoor | ⭐️ |
+| 284 | [Knapsack](/interviews/jpmorgan/knapsack) | dynamic programming | glassdoor | 📌📌📌1st recursion+hashtable O(NC). 2nd 2d array O(NC) |
