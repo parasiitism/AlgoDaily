@@ -775,3 +775,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 283 | [Reverse And Add Integers](/interviews/jpmorgan/reverse-and-add) | string | glassdoor | ⭐️ |
 | 284 | [Knapsack](/interviews/jpmorgan/knapsack) | dynamic programming | glassdoor | 📌📌📌1st recursion+hashtable O(NC). 2nd 2d array O(NC) |
 | 284 | [Max Diff In An Array](/interviews/jpmorgan/max-diff-in-array) | minmax | glassdoor | ⭐️ |
+| 284 | [Beautiful strings](/interviews/jpmorgan/beautiful-strings) | hashtable | glassdoor | ⭐️ |
