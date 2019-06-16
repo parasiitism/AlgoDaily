@@ -2,7 +2,7 @@
     1st approach: binary search
     - 
 
-    Time of addNum()            O(logn)
+    Time of addNum()            O(n) binary search O(logn) but array.insert() takes O(n)
     Time of getIntervals()      O(1)
     Space                       O(n)
     128 ms, faster than 97.01%
@@ -52,13 +52,18 @@ class SummaryRanges(object):
             self._extendPrevAndPopCur(idx)
         else:
             if val+1 == self.intvs[idx][0]:
+                # extend the current start
                 self.intvs[idx][0] = val
+                # if needed, extend forward and pop curIdx, e.g. [0,1] [2,3] => [0,3]
                 self._extendPrevAndPopCur(idx)
             elif idx-1 >= 0 and val-1 == self.intvs[idx-1][1]:
+                # if needed, extend prev end
                 self.intvs[idx-1][1] = val
             elif idx-1 >= 0 and val-1 > self.intvs[idx-1][1] and val+1 < self.intvs[idx][0]:
+                # if prev end < val-1 and val+1 < cur start, insert
                 self.intvs.insert(idx, [val, val])
             elif idx == 0 and val+1 < self.intvs[idx][0]:
+                # if cur == 0 and val+1 < cur start, insert
                 self.intvs.insert(idx, [val, val])
 
     def getIntervals(self):
