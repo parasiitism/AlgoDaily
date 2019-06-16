@@ -778,3 +778,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 284 | [Beautiful strings](/interviews/jpmorgan/beautiful-strings) | hashtable | glassdoor | ⭐️fb hackercup question |
 | 284 | [Balenced Smileys](/interviews/jpmorgan/smileys) | stack, minmax | glassdoor | ⭐️fb hackercup question |
 | 285 | [Nth Digit](/leetcode/400-nth-digit) | math | [leetcode 400](https://leetcode.com/problems/nth-digit/) | 📌📌📌very interesting question |
+| 285 | [Flatten a Multilevel Doubly Linked List](/leetcode/430-flatten-a-multilevel-doubly-linked-list) | linked list | [leetcode 430](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | ⭐️both 1st, 2nd O(n)Q(n) |
