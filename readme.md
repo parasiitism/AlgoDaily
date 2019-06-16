@@ -780,3 +780,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 285 | [Nth Digit](/leetcode/400-nth-digit) | math | [leetcode 400](https://leetcode.com/problems/nth-digit/) | 📌📌📌very interesting question |
 | 285 | [Flatten a Multilevel Doubly Linked List](/leetcode/430-flatten-a-multilevel-doubly-linked-list) | linked list | [leetcode 430](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | ⭐️both 1st, 2nd O(n)Q(n) |
 | 285 | [Data Stream as Disjoint Intervals](/leetcode/352-data-stream-as-disjoint-intervals) | binary search | [leetcode 352](https://leetcode.com/problems/data-stream-as-disjoint-intervals/) | ⭐️1st upperbound binary search O(logn) |
+| 285 | [Longest Increasing Path in a Matrix](/leetcode/329-longest-increasing-path-in-a-matrix) | graph, hashtable | [leetcode 329](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | ⭐️dfs+hashtable O(RC)Q(RC) |
