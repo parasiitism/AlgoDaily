@@ -777,3 +777,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 284 | [Max Diff In An Array](/interviews/jpmorgan/max-diff-in-array) | minmax | glassdoor | ⭐️ |
 | 284 | [Beautiful strings](/interviews/jpmorgan/beautiful-strings) | hashtable | glassdoor | ⭐️fb hackercup question |
 | 284 | [Balenced Smileys](/interviews/jpmorgan/smileys) | stack, minmax | glassdoor | ⭐️fb hackercup question |
+| 285 | [Nth Digit](/leetcode/400-nth-digit) | math | [leetcode 400](https://leetcode.com/problems/nth-digit/) | 📌📌📌very interesting question |
