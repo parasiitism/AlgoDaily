@@ -48,14 +48,14 @@ def twoSumCombo(nums, target):
     res = 0
     for i in range(len(nums)):
         num = nums[i]
-        idx = bsearch(nums, target-num)
-        if idx > -1 and idx > i:
+        idx = bsearch(nums, i+1, target-num)
+        if idx > -1:
             res += idx - i
     return res
 
 
-def bsearch(nums, target):
-    left = 0
+def bsearch(nums, start, target):
+    left = start
     right = len(nums)-1
     while left <= right:
         mid = (left + right)/2
@@ -76,6 +76,8 @@ print(twoSumCombo(a, 1))
 
 a = [1]
 print(twoSumCombo(a, 10))
+
+print("-----")
 
 
 """

@@ -150,7 +150,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 100 | [Single Number](/leetcode/136-single-number/) | hashtable, math, beat operation | [leetcode 136](https://leetcode.com/problems/single-number/)| ✌🏻🤓 day 100 with a 📌 classic question, 1st, 2nd beats 51%, 3rd beats 100% |
 | 101 | [Happy Number](/leetcode/202-happy-number/) | hashtable | [leetcode 202](https://leetcode.com/problems/happy-number/)| very interesting question |
 | 102 | [Ugly Number](/leetcode/263-ugly-number/) | math, recursion | [leetcode 263](https://leetcode.com/problems/ugly-number/)| 1st beats 5%, 2nd beats 5%, optimal beats 100% |
-| 103 | [Two Sum](/leetcode/1-two-sum/) | hashtable | [leetcode 1](https://leetcode.com/problems/two-sum/)| O(n) beats 100%, O(2n) beats 55%, O(n^2) beats 14%  |
+| 103 | [Two Sum](/leetcode/1-two-sum/) | binary search, hashtable | [leetcode 1](https://leetcode.com/problems/two-sum/)| 1st O(n) hashtable, 2nd O(nlogn) 2 pointers, 3rd O(nlogn) binary search. 2 followups: all paris, duplicate |
 | 104 | [Find the Unique Mistyped Item In an Unsorted Array](/miscellaneous/find-unique-mistyped/) | hashtable | | ⭐️ Basic but not easy. I was asked by a friend who works at a top startup |
 | 105 | [Isomorphic Strings](/leetcode/205-isomorphic-strings/) | hashtable | [leetcode 205](https://leetcode.com/problems/isomorphic-strings/) | 1st beats 1%, 2nd beats 5.88% |
 | 106 | [Minimum Index Sum of Two Lists](/leetcode/599-minimum-index-sum-of-two-lists/) | hashtable | [leetcode 599](https://leetcode.com/problems/minimum-index-sum-of-two-lists/) | 1st beats 93.33% |
