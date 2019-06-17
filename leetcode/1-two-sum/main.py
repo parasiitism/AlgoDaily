@@ -95,14 +95,14 @@ class Solution(object):
                 left = mid + 1
             else:
                 return mid
-        return - 1
+        return -1
 
 
 """
     followup:
     - what if here might be no solution or more than one solution
     - no duplicates, still
-    
+
     1st approach: hashtable
 
     e.g.
@@ -182,7 +182,7 @@ class Solution(object):
                 left = mid + 1
             else:
                 return mid
-        return - 1
+        return -1
 
 
 print(Solution().twoSum([5, 2, 3, 6, 7, 12, 4, 15, 8, 1], 8))
@@ -234,3 +234,61 @@ class Solution(object):
 print(Solution().twoSum([5, 2, 3, 6, 7, 2, 4, 5, 8, 6, 4, 4], 8))
 print(Solution().twoSum([5, 2, 3, 6, 7, 2, 4, 5, 8, 6], 100))
 print("-----")
+
+"""
+    followup3:
+    - 2 arrays instead of one array
+    - no duplicate on each array
+    - all pairs(indices)
+
+    e.g.
+    a = [5, 3, 9, 8, 7, 11]
+    b = [3, 6, 0, 1, 2, 12]
+    target = 9
+
+    result = [(nums1 index, nums2 index), ....]
+    = (1, 1), (2, 2), (3, 3), (4, 4)
+
+    Time    O(nlogn)
+    Space   O(n)
+"""
+
+
+class Solution(object):
+
+    def twoSum(self, nums1, nums2, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        arr = []
+        for i in range(len(nums2)):
+            arr.append([nums2[i], i])  # [num, index]
+        arr = sorted(arr, key=lambda x: x[0])
+
+        res = []
+        for i in range(len(nums1)):
+            remain = target - nums1[i]
+            idx = self.bsearch(arr, remain)
+            if idx > -1:
+                res.append([i, arr[idx][1]])
+        return res
+
+    def bsearch(self, nums, target):
+        left = 0
+        right = len(nums) - 1
+        while left <= right:
+            mid = (left + right)//2
+            if target < nums[mid][0]:
+                right = mid - 1
+            elif target > nums[mid][0]:
+                left = mid + 1
+            else:
+                return mid
+        return -1
+
+
+a = [5, 3, 9, 8, 7, 11]
+b = [3, 6, 0, 1, 2, 12]
+print(Solution().twoSum(a, b, 9))
