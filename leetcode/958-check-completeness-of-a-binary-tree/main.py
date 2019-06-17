@@ -38,3 +38,41 @@ class Solution(object):
         while len(q) > 0 and q[0] == None:
             q.pop(0)
         return len(q) == 0
+
+
+"""
+	2nd approach: level order traversal
+	- on a level, there are 2 possible reasons which make the binary tree not complete
+		1. there is a null on my left(given that i am a non-null node)
+		2. there is a null above my level(given that i am a non-null node)
+
+	Time	O(n)
+	Space	O(n)
+	32 ms, faster than 21.35%
+"""
+
+
+class Solution(object):
+    def isCompleteTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        q = [root]
+        isNullAbove = False
+        while len(q) > 0:
+            n = len(q)
+            isNull = False
+            for i in range(n):
+                pop = q.pop(0)
+                if pop != None:
+
+                    if isNull or isNullAbove:
+                        return False
+
+                    q.append(pop.left)
+                    q.append(pop.right)
+                else:
+                    isNull = True
+            isNullAbove = isNull
+        return True
