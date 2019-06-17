@@ -7,6 +7,8 @@
     Space   O(1)
     40 ms, faster than 47.10%
 """
+
+
 class Solution(object):
     def findMin(self, nums):
         """
@@ -16,18 +18,44 @@ class Solution(object):
         left = 0
         right = len(nums)-1
         while left <= right:
-            
+
             # if left most == right most and they equal to each other, left increment
             while left < right and nums[left] == nums[right]:
                 left += 1
-            
+
             # if no left most < right most, the minval is the left most number
             if nums[left] <= nums[right]:
                 return nums[left]
-            
+
             # binary search, always keep the mid
             mid = (left + right)//2
             if nums[left] > nums[mid]:
                 right = mid
             else:
                 left = mid + 1
+
+
+"""
+    same thing
+    36 ms, faster than 77.93%
+"""
+
+
+class Solution(object):
+    def findMin(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        left = 0
+        right = len(nums) - 1
+        while left <= right:
+            while left < right and nums[left] == nums[right]:
+                left += 1
+            if nums[left] <= nums[right]:
+                return nums[left]
+            mid = (left + right)/2
+            if nums[left] <= nums[mid]:
+                left = mid + 1
+            else:
+                right = mid
