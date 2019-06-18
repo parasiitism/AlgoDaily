@@ -789,3 +789,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 287 | [Aligned Subset](/codility/0-aligned_subset) | hashtable | glassdoor | mod `%` is interesting |
 | 287 | [Majority Element](/leetcode/169-majority-element) | hashtable | [leetcode 169](https://leetcode.com/problems/majority-element/) | ⭐️|
 | 287 | [Majority Element II](/leetcode/229-majority-element-ii) | hashtable | [leetcode 229](https://leetcode.com/problems/majority-element-ii/) | ⭐️|
+| 287 | [Count Increasing Subsequences](/codility/0-count_increasing_subsequences) | math | glassdoor | ⭐️|
