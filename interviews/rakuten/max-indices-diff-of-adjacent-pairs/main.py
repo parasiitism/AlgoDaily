@@ -49,6 +49,9 @@ class Solution(object):
 a = [0, 3, 3, 7, 5, 3, 11, 1]
 print(Solution().maxdiff(a))
 
+a = [6, 0, 5, 7, 1, 8]
+print(Solution().maxdiff(a))
+
 print("-----")
 
 """
