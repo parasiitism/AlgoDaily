@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 /*
 	1st approach
@@ -39,5 +42,7 @@ func divide(dividend int, divisor int) int {
 }
 
 func main() {
-
+	a := -2147483648
+	b := -1
+	fmt.Println(divide(a, b))
 }

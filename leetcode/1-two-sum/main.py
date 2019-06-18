@@ -1,4 +1,12 @@
 """
+    questions to ask:
+    - return the indices or the values? indices
+    - should i give u back one pair or all paris? one <- res = [] if yes
+    - will there be any duplicates? no <- save indices/count if yes
+    - use once? yes
+"""
+
+"""
     1st approach: hashtable
 
     Time  O(n)
@@ -51,6 +59,9 @@ class Solution(object):
             temp = arr[left][0] + arr[right][0]
             if temp == target:
                 return [arr[left][1], arr[right][1]]
+                # if all pairs and use once
+                # left += 1
+                # right -= 1
             elif temp < target:
                 left += 1
             else:
@@ -221,9 +232,11 @@ class Solution(object):
         count = 0
         for i in range(len(nums)):
             num = nums[i]
+            # cal the remain
             remain = target - num
             if remain in ht:
                 count += len(ht[remain])
+            # put into the hashtable
             if num not in ht:
                 ht[num] = [i]
             else:
@@ -234,6 +247,38 @@ class Solution(object):
 print(Solution().twoSum([5, 2, 3, 6, 7, 2, 4, 5, 8, 6, 4, 4], 8))
 print(Solution().twoSum([5, 2, 3, 6, 7, 2, 4, 5, 8, 6], 100))
 print("-----")
+
+"""
+    or store the count
+"""
+
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        ht = {}
+        count = 0
+        for i in range(len(nums)):
+            num = nums[i]
+            # cal the remain
+            remain = target - num
+            if remain in ht:
+                count += ht[remain]
+            # put into the hashtable
+            if num not in ht:
+                ht[num] = 1
+            else:
+                ht[num] += 1
+        return count
+
+
+print(Solution().twoSum([5, 2, 3, 6, 7, 2, 4, 5, 8, 6, 4, 4], 8))
+print(Solution().twoSum([5, 2, 3, 6, 7, 2, 4, 5, 8, 6], 100))
+print("--yo--")
 
 """
     followup3:
