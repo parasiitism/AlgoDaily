@@ -785,3 +785,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 286 | [Complete Binary Tree Inserter](/leetcode/919-complete-binary-tree-inserter) | bst | [leetcode 919](https://leetcode.com/problems/complete-binary-tree-inserter/) | ⭐️init O(n) insert O(1) |
 | 287 | [Subarray Sum Equals K](/interviews/clover-health/subarray-sum-equals-k) | array, hashtable | interview | 📌📌📌return any one of the subarray that sum up to L |
 | 287 | [Missing Ranges](/leetcode/163-missing-ranges) | array, math | [leetcode 163](https://leetcode.com/problems/missing-ranges/) | ⭐️O(n) |
+| 287 | [Summary Ranges](/leetcode/228-summary-ranges) | array | [leetcode 228](https://leetcode.com/problems/summary-ranges/) | ⭐️ interval problem O(2n)|
