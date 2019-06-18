@@ -786,3 +786,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 287 | [Subarray Sum Equals K](/interviews/clover-health/subarray-sum-equals-k) | array, hashtable | interview | 📌📌📌return any one of the subarray that sum up to L |
 | 287 | [Missing Ranges](/leetcode/163-missing-ranges) | array, math | [leetcode 163](https://leetcode.com/problems/missing-ranges/) | ⭐️O(n) |
 | 287 | [Summary Ranges](/leetcode/228-summary-ranges) | array | [leetcode 228](https://leetcode.com/problems/summary-ranges/) | ⭐️ interval problem O(2n)|
+| 287 | [Aligned Subset](/codility/0-aligned_subset) | hashtable | glassdoor | mod `%` is interesting |
