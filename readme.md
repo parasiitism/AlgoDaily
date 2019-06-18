@@ -783,3 +783,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 285 | [Longest Increasing Path in a Matrix](/leetcode/329-longest-increasing-path-in-a-matrix) | graph, hashtable | [leetcode 329](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | ⭐️dfs+hashtable O(RC)Q(RC) |
 | 286 | [Complement of Base 10 Integer](/leetcode/1009-complement-of-base-10-integer) | bit op | [leetcode 1009](https://leetcode.com/problems/complement-of-base-10-integer/) | O(logn) |
 | 286 | [Complete Binary Tree Inserter](/leetcode/919-complete-binary-tree-inserter) | bst | [leetcode 919](https://leetcode.com/problems/complete-binary-tree-inserter/) | ⭐️init O(n) insert O(1) |
+| 286 | [Subarray Sum Equals K](/interviews/clover-health/subarray-sum-equals-k) | array, hashtable | interview | 📌📌📌return any one of the subarray that sum up to L |
