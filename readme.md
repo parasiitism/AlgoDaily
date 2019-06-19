@@ -792,3 +792,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 287 | [Count Increasing Subsequences](/codility/0-count_increasing_subsequences) | math | glassdoor | ⭐️|
 | 288 | [Countries](/codility/0-countries) | graph | glassdoor | ⭐️similar to number of islands |
 | 288 | [Triangle Perimeter](/codility/0-triangle-perimeter) | math | glassdoor | ⭐️similar [leetcode 976](https://leetcode.com/problems/largest-perimeter-triangle/) |
+| 288 | [Min Abs Slice Sum](/codility/0-min_abs_slice_sum) | sort | glassdoor | ⭐️ i thought it was a dp question like MaxSubArray |
