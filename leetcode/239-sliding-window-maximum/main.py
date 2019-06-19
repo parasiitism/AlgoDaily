@@ -1,5 +1,13 @@
 import bisect
 
+"""
+    1st approach: brute force
+    
+    Time  O(n^2)
+    Space O(k)
+    TLE
+"""
+
 
 class Solution(object):
     def maxSlidingWindow(self, nums, k):
@@ -7,10 +15,6 @@ class Solution(object):
         :type nums: List[int]
         :type k: int
         :rtype: List[int]
-
-        Time  O(n^2)
-        Space O(k)
-        TLE
         """
         if len(nums) < k or len(nums) == 0 or k <= 0:
             return []
@@ -35,16 +39,23 @@ class Solution(object):
         return res
 
 
+"""
+    2nd approach: binary search
+    - use binary search to maintain a sorted list(window) all the array to the end
+    - each window maximum is the last item in each window 
+
+    Time  O(nlogk) -> O(nk)
+    Space O(k)
+    180 ms, faster than 42.16%
+"""
+
+
 class Solution(object):
     def maxSlidingWindow(self, nums, k):
         """
         :type nums: List[int]
         :type k: int
         :rtype: List[int]
-
-        Time  O(nlogk)
-        Space O(k)
-        180 ms, faster than 42.16%
         """
         if len(nums) < k or len(nums) == 0 or k <= 0:
             return []
