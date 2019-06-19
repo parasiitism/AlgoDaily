@@ -25,10 +25,11 @@ func dailyTemperatures_(T []int) []int {
 	return result
 }
 
-// better solution: stack
-//  it beats 80%
-// best complexity: O(n)
-// worst complexity: > O(n). e.g. if the array is with humps, pop() operation is time consuming
+/*
+	better solution: stack beats 80%
+	best complexity: O(n)
+	worst complexity: > O(n). e.g. if the array is with humps, pop() operation is time consuming
+*/
 type Stack struct {
 	value int
 	index int
