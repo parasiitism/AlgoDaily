@@ -123,3 +123,69 @@ print(Solution().subarraySum([-2, -1, 2, 1, 100], 100))
 print(Solution().subarraySum([-2, -1, 2, 100, 1], 100))
 # []
 print(Solution().subarraySum([-2, -1, 2, 1000], 99))
+
+print("-----")
+
+"""
+    variation: find the longest subarray
+"""
+
+
+class Solution(object):
+    def subarraySum(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int <- i made it generic that you to target any other numbers as well
+        :rtype: [[]]
+
+        https://www.youtube.com/watch?v=hLcYp67wCcM
+
+        generic approach
+        - this question is fucking similar to leetcode 325, 560
+        - the basic idea is to store the previous sum in a hashtable
+            e.g. key: previous sum, value: number of occurence of a previous sum
+            - if currentSum - target in the hastable, the result+1
+
+        Time	O(n)
+        Space   O(n)
+        7mar2019
+        """
+        res = ""
+        acc = 0
+        # { key: value }
+        # key: previous sum
+        # value: array of indeces which previous sum equals to k
+        ht = {}
+        for i in range(len(nums)):
+            acc += nums[i]
+            # if acc == k, it is one of the target subarray
+            if acc == k:
+                sub = nums[:i+1]
+                if len(sub) > len(res):
+                    res = sub
+            # if acc-k in hashtable, it is one of the target subarray
+            if acc-k in ht:
+                idx = ht[acc-k][0]
+                sub = nums[idx+1:i+1]
+                if len(sub) > len(res):
+                    res = sub
+            # put the acc into the hashtable
+            if acc not in ht:
+                ht[acc] = [i]
+            else:
+                ht[acc].append(i)
+        return res
+
+
+# [[1, -1, 5, -2], [5, -2], [3]]
+print(Solution().subarraySum([1, -1, 5, -2, 3], 3))
+# [[1, -1, 5, -2], [5, -2], [-1, 5, -2, 1], [1, 2]]
+print(Solution().subarraySum([1, -1, 5, -2, 1, 2], 3))
+# [[-1, 2], [1]]
+print(Solution().subarraySum([-2, -1, 2, 1], 1))
+# [[-2, -1, 2, 1, 100], [100]]
+print(Solution().subarraySum([-2, -1, 2, 1, 100], 100))
+# [[100], [-2, -1, 2, 100, 1]]
+print(Solution().subarraySum([-2, -1, 2, 100, 1], 100))
+# []
+print(Solution().subarraySum([-2, -1, 2, 1000], 99))
