@@ -795,3 +795,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 288 | [Min Abs Slice Sum](/codility/0-min_abs_slice_sum) | sort | glassdoor | ⭐️ i thought it was a dp question like MaxSubArray |
 | 288 | [Holiday Advicer](/codility/0-holiday_advicer) | hashtable | glassdoor | ⭐️ similar to [leetcode 904](https://leetcode.com/problems/fruit-into-baskets/) |
 | 288 | [Find All Numbers Disappeared in an Array](/leetcode/448-find-all-numbers-disappeared-in-an-array) | hashtable | [leetcode 448](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | |
+| 289 | [Best Sightseeing Pair](/leetcode/1014-best-sightseeing-pair) | dynamic programming | [leetcode 1014](https://leetcode.com/problems/1014-best-sightseeing-pair/) | 📌learned from others |
