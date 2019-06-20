@@ -4,22 +4,21 @@ class Solution(object):
         :type num: int
         :rtype: str
         """
+        if num == 0:
+            return "Zero"
         d = ["", "Thousand", "Million", "Billion"]
-        temp = ""
+        result = ""
         i = 0
         while True:
             remain = num % 1000
             num = num / 1000
             threeDigitWord = self.threeDigitsToWords(remain)
             if len(threeDigitWord) > 0:
-                temp = threeDigitWord + " " + d[i] + " " + temp
+                result = threeDigitWord + " " + d[i] + " " + result
             i += 1
             if num == 0:
                 break
-        temp = temp.strip()
-        if len(temp) == 0:
-            return "Zero"
-        return temp
+        return result.strip()
 
     def threeDigitsToWords(self, num):
         digits = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven",
