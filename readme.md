@@ -797,3 +797,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 288 | [Find All Numbers Disappeared in an Array](/leetcode/448-find-all-numbers-disappeared-in-an-array) | hashtable | [leetcode 448](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | |
 | 289 | [Best Sightseeing Pair](/leetcode/1014-best-sightseeing-pair) | dynamic programming | [leetcode 1014](https://leetcode.com/problems/1014-best-sightseeing-pair/) | 📌learned from others |
 | 289 | [Fraction to Recurring Decimal](/leetcode/166-fraction-to-recurring-decimal) | hashtable | [leetcode 166](https://leetcode.com/problems/166-fraction-to-recurring-decimal/) | ⭐️ interesting question |
+| 289 | [Convert a Number to Hexadecimal](/leetcode/405-convert-a-number-to-hexadecimal) | math | [leetcode 405](https://leetcode.com/problems/405-convert-a-number-to-hexadecimal/) | ⭐️ interesting question |
