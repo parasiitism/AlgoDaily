@@ -1,3 +1,16 @@
+"""
+    1st approach:
+	1. separate the numbers by 3 didgits, 123456789 -> 123, 456, 789
+	2. for each 3 digits, translate to english
+	3. append Thousand, Million and Billion for each iteration of division
+
+	Time		O(n)
+	Space		O(n)
+	0 ms, faster than 100.00%
+	26feb2019
+"""
+
+
 class Solution(object):
     def numberToWords(self, num):
         """
@@ -13,6 +26,7 @@ class Solution(object):
             remain = num % 1000
             num = num / 1000
             threeDigitWord = self.threeDigitsToWords(remain)
+            # imagine if we have 1,000,000, we should check if the '3digits' is empty before appending to the result
             if len(threeDigitWord) > 0:
                 result = threeDigitWord + " " + d[i] + " " + result
             i += 1

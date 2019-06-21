@@ -71,9 +71,9 @@ func dfs(coins []int, amount int, hash map[int]int) int {
 	min := math.MaxUint32
 	for i := 0; i < len(coins); i++ {
 		coin := coins[i]
-		temp := dfs(coins, amount-coin, hash)
-		if temp+1 < min {
-			min = temp + 1
+		count := dfs(coins, amount-coin, hash) + 1
+		if count < min {
+			min = count
 		}
 	}
 	hash[amount] = min

@@ -1,33 +1,36 @@
 import sys
 
+"""
+    1st approach: top-down dfs + hashtable
+
+    Time    O(CA) C: number of coins, A: amount
+    Space   O(A)
+    2264 ms, faster than 5.01%
+"""
+
 
 class Solution(object):
     def coinChange(self, coins, amount):
-        """
-        :type coins: List[int]
-        :type amount: int
-        :rtype: int
+        ht = {}
+        steps = self.dfs(coins, amount, ht)
+        if steps == sys.maxsize:
+            return -1
+        return steps
 
-        1st approach: top-down bfs + hashtable
-
-        LTE
-        """
-        hs = set()
-        queue = []
-        queue.append((amount, 0))
-        while len(queue) > 0:
-            n = len(queue)
-            for i in range(n):
-                remain, count = queue.pop(0)
-                if remain in hs:
-                    continue
-                hs.add(remain)
-                if remain == 0:
-                    return count
-                elif remain > 0:
-                    for coin in coins:
-                        queue.append((remain-coin, count+1))
-        return -1
+    def dfs(self, coins, amount, seen):
+        if amount == 0:
+            return 0
+        if amount < 0:
+            return sys.maxsize
+        if amount in seen:
+            return seen[amount]
+        minSteps = sys.maxsize
+        for i in range(len(coins)):
+            remain = amount - coins[i]
+            steps = self.dfs(coins, remain, seen) + 1
+            minSteps = min(minSteps, steps)
+        seen[amount] = minSteps
+        return minSteps
 
 
 print(Solution().coinChange([5], 5))
@@ -39,19 +42,19 @@ print(Solution().coinChange(
 print("--------------------")
 
 """
-3rd attempt
-learned from others: bottom-up
-e.g. coins = [1,2,5], amount = 7
-f(0) = 0  so if f(100-100), it output 0+1=1
-f(1) = min(f(0)) + 1
-f(2) = min(f(1)+f(0)) + 1
-f(3) = min(f(2)+f(1)) + 1
-f(4) = min(f(3)+f(2)) + 1
-f(5) = min(f(4)+f(3)+f(0)) + 1
-f(6) = min(f(5)+f(4)+f(1)) + 1
-f(7) = min(f(6)+f(5)+f(2)) + 1
-...
-1300 ms, faster than 31.42%
+    3rd attempt
+    learned from others: bottom-up
+    e.g. coins = [1,2,5], amount = 7
+    f(0) = 0  so if f(100-100), it output 0+1=1
+    f(1) = min(f(0)) + 1
+    f(2) = min(f(1)+f(0)) + 1
+    f(3) = min(f(2)+f(1)) + 1
+    f(4) = min(f(3)+f(2)) + 1
+    f(5) = min(f(4)+f(3)+f(0)) + 1
+    f(6) = min(f(5)+f(4)+f(1)) + 1
+    f(7) = min(f(6)+f(5)+f(2)) + 1
+    ...
+    1300 ms, faster than 31.42%
 """
 
 

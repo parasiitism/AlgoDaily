@@ -798,3 +798,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 289 | [Best Sightseeing Pair](/leetcode/1014-best-sightseeing-pair) | dynamic programming | [leetcode 1014](https://leetcode.com/problems/1014-best-sightseeing-pair/) | 📌learned from others |
 | 289 | [Fraction to Recurring Decimal](/leetcode/166-fraction-to-recurring-decimal) | hashtable | [leetcode 166](https://leetcode.com/problems/166-fraction-to-recurring-decimal/) | ⭐️ interesting question |
 | 289 | [Convert a Number to Hexadecimal](/leetcode/405-convert-a-number-to-hexadecimal) | math | [leetcode 405](https://leetcode.com/problems/405-convert-a-number-to-hexadecimal/) | ⭐️ interesting question |
+| 290 | [High Five](/leetcode/1086-high-five) | sort, heap | [leetcode 1086](https://leetcode.com/problems/high-five/) | |
+| 290 | [Counting Bits](/leetcode/338-counting-bits) | bit op | [leetcode 338](https://leetcode.com/problems/counting-bits/) | 1st O(NlogN) 📌 |
