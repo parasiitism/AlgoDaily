@@ -21,8 +21,9 @@
 
 
 def maxBeauty(s):
-    ht = {}
     s = s.lower()
+    # count occurence of each character
+    ht = {}
     for c in s:
         if c.isalpha() == False:
             continue
@@ -30,10 +31,13 @@ def maxBeauty(s):
             ht[c] = 1
         else:
             ht[c] += 1
+    # put the characters and its count into an array
+    # and sort them
     occurences = []
     for key in ht:
         occurences.append((ht[key], key))
     occurences = sorted(occurences, key=lambda x: -x[0])
+    # compute the result
     res = 0
     n = 26
     while len(occurences) > 0:

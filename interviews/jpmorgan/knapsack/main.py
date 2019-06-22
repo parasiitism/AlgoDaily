@@ -118,7 +118,7 @@ print("-----")
     2nd approach: dp with 2d array
     - 2d array structure: row * col = prices * capacity
     - on each cell, the value is the max profit up to we considering from prices[0] to prices[i] with capacity(j)
-    - dp[i][j] = max (dp[i-1][j], profit[i] + dp[i-1][j-weight[i]])
+    - dp[i][j] = max (dp[i-1][j], price[i] + dp[i-1][j-weight[i]])
 
     ref:
     - https://www.educative.io/collection/page/5668639101419520/5633779737559040/5666387129270272
@@ -151,7 +151,6 @@ class Solution():
                 profit2 = dp[i - 1][j]
                 # take maximum
                 dp[i][j] = max(profit1, profit2)
-
         return dp[-1][capacity]
 
 

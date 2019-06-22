@@ -1,15 +1,13 @@
 def compressNumbers(nums):
-    prev = nums[0]
     count = 1
     res = ""
     for i in range(1, len(nums)):
-        # we do necessarily need to parse numbers to int, just treat them as string
+        # we dont necessarily need to parse numbers to int, just treat them as string
         c = nums[i]
-        if c == prev:
+        if nums[i-1] == nums[i]:
             count += 1
         else:
             res += str(count) + ' ' + prev + ' '
-            prev = c
             count = 1
     res += str(count) + ' ' + prev
     return res

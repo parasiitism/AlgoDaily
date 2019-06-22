@@ -39,6 +39,11 @@ print(Solution().maxSubArray(a))
 a = [7, -3, -10, 4, 2, 8, -2, 4, -5, -6]
 print(Solution().maxSubArray(a))
 
+a = [-10, 2, 3, -2, 0, 5, -15]
+print(Solution().maxSubArray(a))
+
+print("-----")
+
 """
     follow up: print the subarray with the max sum
 """
@@ -78,4 +83,7 @@ a = [4, 1, -5, 6, -3, 2]
 print(Solution().maxSubArray(a))
 
 a = [7, -3, -10, 4, 2, 8, -2, 4, -5, -6]
+print(Solution().maxSubArray(a))
+
+a = [-10, 2, 3, -2, 0, 5, -15]
 print(Solution().maxSubArray(a))

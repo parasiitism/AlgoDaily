@@ -3,7 +3,7 @@ def mth2last(nums):
         return ''
     n = len(nums)
     m = int(nums[-1])
-    if 0 <= n-m-1 < len(nums):
+    if 0 <= n-m-1 and n-m-1 < len(nums):
         return nums[n-m-1]
     return ''
 

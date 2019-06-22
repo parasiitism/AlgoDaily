@@ -34,9 +34,12 @@ class Solution(object):
         :rtype: bool
         """
         seen = set()
+        i = 0
         while n > 1 and n not in seen:
             seen.add(n)
             n = self.cal(n)
+            print(i)
+            i += 1
         return n == 1
 
     def cal(self, n):
@@ -46,3 +49,11 @@ class Solution(object):
             res += x*x
             n /= 10
         return res
+
+
+s = Solution()
+print(s.isHappy(5))
+print(s.isHappy(6))
+print(s.isHappy(7))
+print(s.isHappy(8))
+print(s.isHappy(9))

@@ -13,7 +13,7 @@ A message has balanced parentheses if it consists of one of the following:
 Write a program that determines if there is a way to interpret his message while leaving the parentheses balanced.
 
 Input
-The first line of the input contains a number T (1 ≤ T ≤ 50), the number of test cases. 
+The first line of the input contains a number T (1 <= T <= 50), the number of test cases. 
 The following T lines each contain a message of length s that you got from John.
 
 Output
@@ -58,6 +58,31 @@ def check(s):
     return is_balanced(s)
 
 
+def isBalanced(s):
+    minOpen = 0
+    maxOpen = 0
+    for i in range(len(s)):
+        if s[i] == '(':
+            maxOpen += 1
+            if i == 0 or s[i-1] != ':':
+                minOpen += 1
+        elif s[i] == ')':
+            if minOpen > 0:
+                minOpen -= 1
+            if i == 0 or s[i-1] != ':':
+                maxOpen -= 1
+                if maxOpen < 0:
+                    return False
+    if maxOpen >= 0 and minOpen == 0:
+        return True
+    else:
+        return False
+
+
+def check(s):
+    return isBalanced(s)
+
+
 print(check('hacker cup: started :):)'))
 print(check('(:)'))
 print(check('i am sick today (:()'))
@@ -66,11 +91,11 @@ print(check(':(('))
 
 print('-----')
 
-n = int(input())
-for i in range(n):
-    s = input()  # raw_input() for python2.7
-    result = check(s)
-    print(result)
+# n = int(input())
+# for i in range(n):
+#     s = input()  # raw_input() for python2.7
+#     result = check(s)
+#     print(result)
 
 """
 5
