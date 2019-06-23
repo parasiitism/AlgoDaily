@@ -1,3 +1,5 @@
+import sys
+
 # The rand5() API is already defined for you.
 # def rand5():
 # @return a random integer in the range 1 to 5
@@ -7,11 +9,11 @@
 
     Rejection Sampling
         1   2   3   4   5   <- rand5()
-    1   0   1   2   3   4
-    2   5   6|  7   8   9
-    3   10  11  12  13| 14
-    4   15  16  17  18  19
-    5   20| 21  22  23  24
+    1   1   2   3   4   5
+    2   6   7|  8   9  10
+    3   11  12  13 14| 15
+    4   16  17  18  19 20
+    5   21| 22  23  24 25 
     ^
     rand5()
 
@@ -35,10 +37,12 @@ def rand5():
 
 class Solution(object):
     def rand7(self):
-        index = 100
-        while index > 20:
-            index = (rand5()-1) * 5 + (rand5() - 1)
-        return index % 7 + 1
+        num = sys.maxsize
+        while num > 21:
+            row = rand5()
+            col = rand5()
+            num = (row-1) * 5 + col
+        return num % 7 + 1
 
 
 print(Solution().rand7())

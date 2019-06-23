@@ -5,10 +5,12 @@ type ListNode struct {
 	Next *ListNode
 }
 
-// easy way: hashtable
-// time		O(n)
-// space 	O(n)
-// beats 44.44%
+/*
+	easy way: hashtable
+	time		O(n)
+	space 	O(n)
+	beats 44.44%
+*/
 func detectCycle(head *ListNode) *ListNode {
 	hash := make(map[*ListNode]bool)
 	cur := head
@@ -22,14 +24,16 @@ func detectCycle(head *ListNode) *ListNode {
 	return nil
 }
 
-// classic approach
-// 1. check if there is a cycle
-// 2. slow pointer => a+b+c+b= 2(a+b) <= fast pointer
-// 													a=c
-// see ./idea.jpeg
-// time 	O(n)
-// space	O(1)
-// beats 100%
+/*
+	classic approach
+	1. check if there is a cycle
+	2. slow pointer => a+b+c+b= 2(a+b) <= fast pointer
+														a=c
+	see ./idea.jpeg
+	time 	O(n)
+	space	O(1)
+	beats 100%
+*/
 func detectCycle1(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
@@ -56,14 +60,16 @@ func detectCycle1(head *ListNode) *ListNode {
 	return slow // fast
 }
 
-// easier to understand the classic approach
-// 1. check if there is a cycle
-// 2. slow pointer => a+b+c+b= 2(a+b) <= fast pointer
-// 													a=c
-// see ./idea.jpeg
-// time 	O(n)
-// space	O(1)
-// 8ms beats 100%
+/*
+	easier to understand the classic approach
+	1. check if there is a cycle
+	2. slow pointer => a+b+c+b= 2(a+b) <= fast pointer
+														a=c
+	see ./idea.jpeg
+	time 	O(n)
+	space	O(1)
+	8ms beats 100%
+*/
 func detectCycle2(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
