@@ -804,3 +804,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 292 | [Available Captures for Rook](/leetcode/999-available-captures-for-rook) | graph | [leetcode 999](https://leetcode.com/problems/available-captures-for-rook/) | O(RC+R+C) |
 | 292 | [Longest Consecutive Sequence](/leetcode/128-longest-consecutive-sequence) | sort, union find | [leetcode 128](https://leetcode.com/problems/longest-consecutive-sequence/) | 1st sorting O(nlogn). 📌2nd union find O(nlogn) |
 | 292 | [Combine Two Tables](/leetcode/175-combine-two-tables) | sql | [leetcode 175](https://leetcode.com/problems/combine-two-tables/) | `left join` |
+| 292 | [Second Highest Salary](/leetcode/176-second-highest-salary) | sql | [leetcode 176](https://leetcode.com/problems/second-highest-salary/) | `ifnull` and `limit x offset y` |
