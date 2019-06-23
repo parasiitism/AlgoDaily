@@ -7,9 +7,9 @@ def compressNumbers(nums):
         if nums[i-1] == nums[i]:
             count += 1
         else:
-            res += str(count) + ' ' + prev + ' '
+            res += str(count) + ' ' + nums[i-1] + ' '
             count = 1
-    res += str(count) + ' ' + prev
+    res += str(count) + ' ' + nums[-1]
     return res
 
 

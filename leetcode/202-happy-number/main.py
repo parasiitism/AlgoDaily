@@ -33,14 +33,13 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
+        arr = []
         seen = set()
-        i = 0
         while n > 1 and n not in seen:
+            arr.append(n)
             seen.add(n)
             n = self.cal(n)
-            print(i)
-            i += 1
-        return n == 1
+        return n == 1, arr
 
     def cal(self, n):
         res = 0
@@ -52,8 +51,29 @@ class Solution(object):
 
 
 s = Solution()
+print(s.isHappy(2))
+print(s.isHappy(3))
+print(s.isHappy(4))
+print(s.isHappy(5))
 print(s.isHappy(5))
 print(s.isHappy(6))
 print(s.isHappy(7))
 print(s.isHappy(8))
 print(s.isHappy(9))
+print(s.isHappy(10))
+print(s.isHappy(11))
+print(s.isHappy(12))
+print(s.isHappy(13))
+print(s.isHappy(14))
+print(s.isHappy(15))
+print(s.isHappy(15))
+print(s.isHappy(16))
+print(s.isHappy(17))
+print(s.isHappy(18))
+print(s.isHappy(19))
+print(s.isHappy(20))
+
+"""
+   If happy numbers are generally prime (19, 79, 239) should it always end in a 9?
+   Can u think of a happy number that doesn't end in 9? 
+"""
