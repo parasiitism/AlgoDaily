@@ -7,6 +7,9 @@ import "fmt"
 	Find		O(logn)
 	Union		O(N)
 	Overall	O(MlogN)
+
+	ref:
+    - https://algs4.cs.princeton.edu/15uf/
 */
 
 type UnionFind struct {

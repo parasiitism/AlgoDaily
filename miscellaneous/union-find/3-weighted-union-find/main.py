@@ -1,3 +1,9 @@
+"""
+    ref:
+    - https://algs4.cs.princeton.edu/15uf/
+"""
+
+
 class UnionFind(object):
     def __init__(self, vertices):
         self.count = len(vertices)
