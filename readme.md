@@ -801,3 +801,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 290 | [High Five](/leetcode/1086-high-five) | sort, heap | [leetcode 1086](https://leetcode.com/problems/high-five/) | |
 | 290 | [Counting Bits](/leetcode/338-counting-bits) | bit op | [leetcode 338](https://leetcode.com/problems/counting-bits/) | 1st O(NlogN) 📌 |
 | 291 | [Compare URLs](/interviews/jpmorgan/compare-urls) | string | interview | O(n) takeaway is `urllib` and `urlparse`|
+| 292 | [Available Captures for Rook](/leetcode/999-available-captures-for-rook) | graph | [leetcode 999](https://leetcode.com/problems/available-captures-for-rook/) | O(RC+R+C) |
