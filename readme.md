@@ -807,4 +807,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 292 | [Second Highest Salary](/leetcode/176-second-highest-salary) | sql | [leetcode 176](https://leetcode.com/problems/second-highest-salary/) | `ifnull` and `limit offset count` |
 | 292 | [Nth Highest Salary](/leetcode/177-nth-highest-salary) | sql | [leetcode 177](https://leetcode.com/problems/nth-highest-salary/) | `CREATE FUNCTION f(params) RETURNS type` and `DECLARE M INT; SET M=N-1;` |
 | 293 | [Regular Expression Matching](/leetcode/10-regular-expression-matching) | dynamic programming | [leetcode 10](https://leetcode.com/problems/regular-expression-matching/) | 📌📌📌learned from others |
-| 293 | [Shortest Path Visiting All Nodes](/leetcode/847-shortest-path-visiting-all-nodes) | graph, hashtable | [leetcode 847](https://leetcode.com/problems/shortest-path-visiting-all-nodes/) | 📌📌📌another hard question without seeking for help✌🏻 |
+| 293 | [Boats to Save People](/leetcode/881-boats-to-save-people) | sort | [leetcode 881](https://leetcode.com/problems/boats-to-save-people/) | |
+| 293 | [Shortest Path Visiting All Nodes](/leetcode/847-shortest-path-visiting-all-nodes) | graph, hashtable | [leetcode 847](https://leetcode.com/problems/shortest-path-visiting-all-nodes/) | 📌📌📌another hard question without seeking for help✌🏻|
