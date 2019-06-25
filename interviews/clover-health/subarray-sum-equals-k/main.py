@@ -45,6 +45,37 @@ def rangeSum2Target(nums, target):
         if pfs == target:
             return nums[:i+1]
         # find if the remain is in the hashtable
+        remain = pfs - target
+        if remain in m:
+            idx = m[remain]
+            return nums[idx+1:i+1]
+        m[pfs] = i
+    return []
+
+
+a = [1, 3, 5, 23, 2]
+b = 7
+print(rangeSum2Target(a, b))
+b = 8
+print(rangeSum2Target(a, b))
+b = 25
+print(rangeSum2Target(a, b))
+a = [1, 3, 5, 23, 2, 1, 3, 2]
+b = 6
+print(rangeSum2Target(a, b))
+
+print("-----")
+
+
+def rangeSum2Target(nums, target):
+    pfs = 0
+    m = {}
+    for i in range(len(nums)):
+        pfs += nums[i]
+        # from index 0
+        if pfs == target:
+            return nums[:i+1]
+        # find if the remain is in the hashtable
         if pfs - target in m:
             idx = m[pfs-target][0]
             return nums[idx+1:i+1]
@@ -62,9 +93,6 @@ b = 8
 print(rangeSum2Target(a, b))
 b = 25
 print(rangeSum2Target(a, b))
-
-print("-----")
-
 a = [1, 3, 5, 23, 2, 1, 3, 2]
 b = 6
 print(rangeSum2Target(a, b))

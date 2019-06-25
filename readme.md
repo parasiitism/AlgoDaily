@@ -809,3 +809,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 293 | [Regular Expression Matching](/leetcode/10-regular-expression-matching) | dynamic programming | [leetcode 10](https://leetcode.com/problems/regular-expression-matching/) | 📌📌📌learned from others |
 | 293 | [Boats to Save People](/leetcode/881-boats-to-save-people) | sort | [leetcode 881](https://leetcode.com/problems/boats-to-save-people/) | |
 | 293 | [Shortest Path Visiting All Nodes](/leetcode/847-shortest-path-visiting-all-nodes) | graph, hashtable | [leetcode 847](https://leetcode.com/problems/shortest-path-visiting-all-nodes/) | 📌📌📌another hard question without seeking for help✌🏻|
+| 294 | [Employee Bonus](/leetcode/577-employee-bonus) | sql | [leetcode 577](https://leetcode.com/problems/employee-bonus/) | `left join` |
+| 294 | [Self Dividing Numbers](/leetcode/728-self-dividing-numbers) | math | [leetcode 728](https://leetcode.com/problems/self-dividing-numbers/) | |
+| 294 | [Perfect Number](/leetcode/507-perfect-number) | math | [leetcode 507](https://leetcode.com/problems/perfect-number/) | 📌1st O(sqrt(n)) efficient ways to find out all the factors of a number. 2nd O(logn) math |
