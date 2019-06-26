@@ -39,7 +39,6 @@ class Solution(object):
         dp = (n+1)*[0]
         for i in range(1, n+1):
             minSteps = sys.maxsize
-            root = int(math.sqrt(n))
             for cand in cands:
                 remain = i - cand
                 if remain >= 0:

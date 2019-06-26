@@ -78,11 +78,11 @@ print(Solution().groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
 print("-----")
 
 """
-    3rd attempt: shorten the 2nd approach by just using string.join(list)
+    3rd attempt: shorten the 2nd approach by just using tuples as keys
 
     Time O(nk) n:number of words, k:length of charactors
     Space O(nk)
-    168 ms, faster than 18.21%
+    100 ms, faster than 54.16%
 """
 
 
@@ -98,7 +98,7 @@ class Solution(object):
             for c in s:
                 i = ord(c)-ord('a')
                 structure[i] += 1
-            key = ','.join([str(x) for x in structure])
+            key = tuple(structure)
             if key not in ht:
                 ht[key] = [s]
             else:

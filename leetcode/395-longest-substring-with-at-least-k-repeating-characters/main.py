@@ -73,7 +73,7 @@ print("--------------------")
 
 
 """
-    2nd approach: divide and conquer, learned for others
+    2nd approach: divide and conquer, learned from others
     - split the string by using characters which appear less than k times
     - if all characters in the substring appear >=k times, override the result in needed
     - if a character appears < k times, do 1) and 2)

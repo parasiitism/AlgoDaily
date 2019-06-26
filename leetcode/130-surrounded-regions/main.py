@@ -3,7 +3,7 @@
 
     Time    O(2n)
     Space   O(n) hashtable
-    416 ms, faster than 7.72%
+    268 ms, faster than 10.95%
 """
 
 

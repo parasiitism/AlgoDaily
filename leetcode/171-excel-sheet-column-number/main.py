@@ -1,5 +1,7 @@
 """
     1st approach: math 26th-cimal
+    - convert each character from A-Z to 1-26
+    - multiply the previous sum
 
     Time    O(n)
     Space   O(n)

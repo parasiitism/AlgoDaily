@@ -50,33 +50,31 @@ class Solution(object):
         :rtype: int
         """
         res = 0
-        seen = []
-        for i in range(len(grid)):
-            seen.append(len(grid[0])*[False])
+        seen = set()
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                if seen[i][j] == False and grid[i][j] == '1':
+                if (i, j) not in seen and grid[i][j] == '1':
                     self.bfs(grid, i, j, seen)
                     res += 1
         return res
 
-    def bfs(self, grid, i, j, seen):
+    def bfs(self, grid, x, y, seen):
         q = []
-        q.append((i, j))
+        q.append((x, y))
         while len(q) > 0:
-            x, y = q.pop(0)
-            if seen[x][y] == True:
+            i, j = q.pop(0)
+            if (i, j) in seen:
                 continue
-            seen[x][y] = True
-            if grid[x][y] == '1':
-                if x-1 >= 0:
-                    q.append((x-1, y))
-                if x+1 < len(grid):
-                    q.append((x+1, y))
-                if y-1 >= 0:
-                    q.append((x, y-1))
-                if y+1 < len(grid[0]):
-                    q.append((x, y+1))
+            seen.add((i, j))
+            if grid[i][j] == '1':
+                if i-1 >= 0:
+                    q.append((i-1, j))
+                if i+1 < len(grid):
+                    q.append((i+1, j))
+                if j-1 >= 0:
+                    q.append((i, j-1))
+                if j+1 < len(grid[0]):
+                    q.append((i, j+1))
 
 
 """

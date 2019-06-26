@@ -5,6 +5,13 @@
 #         self.left = None
 #         self.right = None
 
+"""
+    iterative dfs
+    
+    Time    O(n)
+    Space   O(h)
+"""
+
 
 class Solution(object):
     def maxDepth(self, root):
@@ -24,3 +31,28 @@ class Solution(object):
             if node.right != None:
                 q.append((node.right, steps + 1))
         return res
+
+
+"""
+    2nd approach: recursive dfs
+
+    Time    O(n)
+    Space   O(h)
+    24 ms, faster than 97.03%
+"""
+
+
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        return self.dfs(root)
+
+    def dfs(self, node):
+        if node == None:
+            return 0
+        left = self.dfs(node.left)
+        right = self.dfs(node.right)
+        return max(left, right)+1

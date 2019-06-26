@@ -58,13 +58,13 @@ class Solution(object):
         # divsion
         ht = {}  # {recurring number1: index1, recurring number2: index2, ...}
         arr = []
-        stopAt = -1
+        startRecurringAt = -1
         while numerator > 0:
             arr.append(numerator/denominator)
             # similate how we borrow zero to divide a number
             numerator = numerator % denominator*10
             if numerator in ht:
-                stopAt = ht[numerator]
+                startRecurringAt = ht[numerator]
                 break
             ht[numerator] = len(arr)
         # construct the result string
@@ -74,14 +74,14 @@ class Solution(object):
         for i in range(len(arr)):
             if i == 1:
                 res += '.'
-            if i == stopAt:
+            if i == startRecurringAt:
                 break
             res += str(arr[i])
         # if no recurring portion
-        if stopAt == -1:
+        if startRecurringAt == -1:
             return res
         # append recurring portion
-        recurringNums = arr[stopAt:]
+        recurringNums = arr[startRecurringAt:]
         recurringKeys = '('+''.join([str(x) for x in recurringNums])+')'
         res += recurringKeys
         return res

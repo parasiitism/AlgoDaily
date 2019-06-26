@@ -1,6 +1,6 @@
 import collections
 """ 
-    2nd approach: 2 hashtables
+    1st approach: 2 hashtables
     - 1st hashtable for str1[i] -> str2[i]
     - 2nd hashtable for str2[i] -> str1[i]
 
@@ -33,6 +33,47 @@ class Solution(object):
                 if backward[c2] != c1:
                     return False
         return True
+
+
+""" 
+    2nd approach: hashtables
+    
+    - Compute a word's "signature"
+
+    e.g.
+    bbacyba
+    0012301
+
+    xxyzwxy
+    0012301
+
+    Time  O(n)
+    Space O(n)
+    28 ms, faster than 87.21%
+"""
+
+
+class Solution(object):
+    def isIsomorphic(self, a, b):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        signA = self.getSignature(a)
+        signB = self.getSignature(b)
+        return signA == signB
+
+    def getSignature(sefl, word):
+        signature = ""
+        seen = {}
+        nth = 0
+        for c in word:
+            if c not in seen:
+                seen[c] = str(nth)
+                nth += 1
+            signature += seen[c] + '#'
+        return signature
 
 
 """

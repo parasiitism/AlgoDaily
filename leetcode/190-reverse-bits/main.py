@@ -15,7 +15,7 @@ class Solution:
     def reverseBits(self, n):
         mask = 32 * [0]
         i = 0
-        while n > 0:
+        while i < 32:
             if n & 1 == 1:
                 mask[i] = 1
             n >>= 1
@@ -25,3 +25,28 @@ class Solution:
             res += mask[i] * 2**(31-i)
             i += 1
         return res
+
+
+print(Solution().reverseBits(4294967295))
+print(Solution().reverseBits(4294967293))
+
+print("----")
+
+"""
+    3rd approach: dont shift the last digit
+"""
+
+
+class Solution:
+    def reverseBits(self, n):
+        result = 0
+        for i in range(32):
+            result += n & 1
+            n >>= 1
+            if i < 31:
+                result <<= 1
+        return result
+
+
+print(Solution().reverseBits(4294967295))
+print(Solution().reverseBits(4294967293))

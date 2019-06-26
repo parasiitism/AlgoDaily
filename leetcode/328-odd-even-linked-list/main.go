@@ -7,12 +7,14 @@ type ListNode struct {
 	Next *ListNode
 }
 
-// navie solution
-// put the items into even and odd arrays
-// concat them together
-// time		O(n)
-// space	O(n)
-// beats 100% (LOL the speed is the same with the classic approach)
+/*
+	navie solution
+	put the items into even and odd arrays
+	concat them together
+	time		O(n)
+	space	O(n)
+	beats 100% (LOL the speed is the same with the classic approach)
+*/
 func oddEvenList(head *ListNode) *ListNode {
 	odd := []*ListNode{}
 	even := []*ListNode{}

@@ -812,3 +812,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 294 | [Employee Bonus](/leetcode/577-employee-bonus) | sql | [leetcode 577](https://leetcode.com/problems/employee-bonus/) | `left join` |
 | 294 | [Self Dividing Numbers](/leetcode/728-self-dividing-numbers) | math | [leetcode 728](https://leetcode.com/problems/self-dividing-numbers/) | |
 | 294 | [Perfect Number](/leetcode/507-perfect-number) | math | [leetcode 507](https://leetcode.com/problems/perfect-number/) | 📌1st O(sqrt(n)) efficient ways to find out all the factors of a number. 2nd O(logn) math |
+| 294 | [Delete Node in a Linked List](/leetcode/237-delete-node-in-a-linked-list) | math | [leetcode 237](https://leetcode.com/problems/delete-node-in-a-linked-list/) | ⭐️the input has changed |
+| 294 | [Swap Items Without Temp](/miscellaneous/swap-items-without-temp) | arr, math | glassdoor | 📌fundamental concept |

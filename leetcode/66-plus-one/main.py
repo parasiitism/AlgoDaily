@@ -1,3 +1,11 @@
+"""
+    1st approach: carry
+    - like add numbers
+    
+    16 ms, faster than 93.52%
+"""
+
+
 class Solution(object):
     def plusOne(self, digits):
         """
@@ -7,12 +15,9 @@ class Solution(object):
         carry = 1
         for i in range(len(digits)-1, -1, -1):
             if carry > 0:
-                if digits[i] + carry == 10:
-                    digits[i] = 0
-                    carry = 1
-                else:
-                    digits[i] += carry
-                    carry = 0
+                temp = digits[i] + carry
+                digits[i] = temp % 10
+                carry = temp/10
         if carry > 0:
             digits.insert(0, 1)
         return digits

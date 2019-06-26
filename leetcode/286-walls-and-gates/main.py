@@ -61,6 +61,7 @@ class Solution(object):
                 continue
             if rooms[i][j] == -1:
                 continue
+            # use <= because the staring point == 0
             if steps <= rooms[i][j]:
                 rooms[i][j] = steps
                 q.append((i-1, j, steps+1))

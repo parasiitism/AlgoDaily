@@ -12,7 +12,7 @@ class Solution(object):
         Time	O(nlogn)
         Space O(n)
         """
-        self.quicksort(nums, 0, len(nums)-1)
+        self.mergesort(nums, 0, len(nums)-1)
         return nums
 
     def mergesort(self, nums):
@@ -21,6 +21,9 @@ class Solution(object):
         half = len(nums)/2
         left = self.mergesort(nums[:half])
         right = self.mergesort(nums[half:])
+        return self.merge(left, right)
+
+    def merge(self, left, right):
         res = []
         i, j = 0, 0
         while i < len(left) and j < len(right):

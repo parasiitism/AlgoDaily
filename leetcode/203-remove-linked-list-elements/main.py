@@ -42,12 +42,14 @@ class Solution(object):
         :type val: int
         :rtype: ListNode
         """
-        dump = ListNode(-1)
+        dump = ListNode(0)
         dump.next = head
-        cur = dump
-        while cur != None and cur.next != None:
-            if cur.next.val == val:
-                cur.next = cur.next.next
+        prev = dump
+        cur = head
+        while cur != None:
+            if cur.val == val:
+                prev.next = cur.next
             else:
-                cur = cur.next
+                prev = cur
+            cur = cur.next
         return dump.next

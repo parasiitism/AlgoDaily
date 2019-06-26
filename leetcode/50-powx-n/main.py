@@ -83,6 +83,7 @@ class Solution(object):
             return 1
         # e.g.1 n = 5, left = 2
         # e.g.2 n = 4, left = 2
+        # e.g.3 n = 1, left = 0
         left = n/2
         # e.g.1,2 temp = 2^2
         temp = self.helper(x, left)
@@ -90,6 +91,7 @@ class Solution(object):
             # since n is an even, return 2^2 * 2^2
             return temp * temp
         # since n is an odd, return 2^2 * 2^2 * 2
+        # base case when n = 1, return 1 * 1 * x
         return temp * temp * x
 
 

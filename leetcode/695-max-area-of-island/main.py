@@ -95,15 +95,14 @@ class Solution(object):
         """
         if len(grid) == 0 or len(grid[0]) == 0:
             return 0
-
-        visited = []
-        for line in grid:
-            visited.append(len(line)*[False])
-
+        # avoid redundant calculation
+        visited = set()
+        # for each cell
         res = 0
         for i in range(len(grid)):
             for j in range(len(grid[i])):
-                if grid[i][j] == 1:
+                if grid[i][j] == 1 and (i, j) not in visited:
+                    # explore
                     area = self.bfs(grid, i, j, visited)
                     res = max(res, area)
         return res
@@ -116,9 +115,11 @@ class Solution(object):
             i, j = q.pop(0)
             if i < 0 or i+1 > len(grid) or j < 0 or j+1 > len(grid[0]):
                 continue
-            if visited[i][j] == True:
+            # avoid redundant calculation
+            if (i, j) in visited:
                 continue
-            visited[i][j] = True
+            visited.add((i, j))
+            # explore
             if grid[i][j] == 1:
                 area += 1
                 q.append((i-1, j))

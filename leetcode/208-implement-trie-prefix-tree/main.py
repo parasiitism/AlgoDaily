@@ -123,9 +123,45 @@ class Trie(object):
             cur = cur.children[idx]
         return True
 
+    def startsWith(self, prefix):
+        """
+        followup: print all the words startwith prefix
+
+        Returns if there is any word in the trie that starts with the given prefix.
+        :type prefix: str
+        :rtype: []
+        """
+        cur = self.root
+        for w in prefix:
+            idx = ord(w)-ord('a')
+            if cur.children[idx] == None:
+                return []
+            cur = cur.children[idx]
+        res = []
+
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+        def dfs(node, path):
+            if node == None:
+                return
+            if node.is_word:
+                res.append(prefix+path)
+            for i in range(len(node.children)):
+                child = node.children[i]
+                dfs(child, path + alphabet[i])
+
+        dfs(cur, "")
+        return res
+
 
 obj = Trie()
 obj.insert('abc')
-print(obj.root.children)
+obj.insert('calvin')
+obj.insert('callon')
+obj.insert('car')
+obj.insert('ce')
+# print(obj.root.children)
 print(obj.search('abc'))
-print(obj.startsWith('a'))
+print(obj.startsWith('c'))
+print(obj.startsWith('ca'))
+print(obj.startsWith('cal'))
