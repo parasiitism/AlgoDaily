@@ -27,3 +27,20 @@ class Solution(object):
             if A[j] + j > A[i] + i:
                 i = j
         return res
+
+
+"""
+    2nd: dynamic programming, learned from others
+    - easier to understand
+
+    TIme    O(n)
+    Space   O(1)
+    424 ms, faster than 94.99%
+"""
+prevBest = 0
+  res = 0
+   for i in range(len(A)):
+        res = max(res, prevBest+A[i], A[i]*2)
+        # decrement the prevBest when we go forward
+        prevBest = max(prevBest, A[i]) - 1
+    return res

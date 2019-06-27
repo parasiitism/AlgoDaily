@@ -795,7 +795,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 288 | [Min Abs Slice Sum](/codility/0-min_abs_slice_sum) | sort | glassdoor | ⭐️ i thought it was a dp question like MaxSubArray |
 | 288 | [Holiday Advicer](/codility/0-holiday_advicer) | hashtable | glassdoor | ⭐️ similar to [leetcode 904](https://leetcode.com/problems/fruit-into-baskets/) |
 | 288 | [Find All Numbers Disappeared in an Array](/leetcode/448-find-all-numbers-disappeared-in-an-array) | hashtable | [leetcode 448](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | |
-| 289 | [Best Sightseeing Pair](/leetcode/1014-best-sightseeing-pair) | dynamic programming | [leetcode 1014](https://leetcode.com/problems/1014-best-sightseeing-pair/) | 📌learned from others |
+| 289 | [Best Sightseeing Pair](/leetcode/1014-best-sightseeing-pair) | dynamic programming | [leetcode 1014](https://leetcode.com/problems/1014-best-sightseeing-pair/) | 📌1st, 2nd O(n) learned from others |
 | 289 | [Fraction to Recurring Decimal](/leetcode/166-fraction-to-recurring-decimal) | hashtable | [leetcode 166](https://leetcode.com/problems/166-fraction-to-recurring-decimal/) | ⭐️ interesting question |
 | 289 | [Convert a Number to Hexadecimal](/leetcode/405-convert-a-number-to-hexadecimal) | math | [leetcode 405](https://leetcode.com/problems/405-convert-a-number-to-hexadecimal/) | ⭐️ interesting question |
 | 290 | [High Five](/leetcode/1086-high-five) | sort, heap | [leetcode 1086](https://leetcode.com/problems/high-five/) | |
