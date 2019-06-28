@@ -817,3 +817,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 295 | [Cities Attractiveness](/interviews/bizreach/cities-attractiveness) | dynamic programming | interview | 1st O(n^2) 📌2nd O(n) |
 | 295 | [Insufficient Nodes in Root to Leaf Paths](/leetcode/1080-insufficient-nodes-in-root-to-leaf-paths) | tree, recursion | [leetcode 1080](https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/) | 1st O(n) |
 | 295 | [All Possible Full Binary Trees](/leetcode/894-all-possible-full-binary-trees) | tree, recursion | [leetcode 894](https://leetcode.com/problems/all-possible-full-binary-trees/) | O(2^n) learned from others |
+| 296 | [Add to Array-Form of Integer](/leetcode/989-add-to-array-form-of-integer) | array | [leetcode 989](https://leetcode.com/problems/add-to-array-form-of-integer/) | O(n+m) |
+| 296 | [Shortest Distance from All Buildings](/leetcode/317-shortest-distance-from-all-buildings) | graph, hashtable | [leetcode 317](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | 📌so far the best BFS HARD question i have ever seen |
