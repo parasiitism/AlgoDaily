@@ -819,3 +819,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 295 | [All Possible Full Binary Trees](/leetcode/894-all-possible-full-binary-trees) | tree, recursion | [leetcode 894](https://leetcode.com/problems/all-possible-full-binary-trees/) | O(2^n) learned from others |
 | 296 | [Add to Array-Form of Integer](/leetcode/989-add-to-array-form-of-integer) | array | [leetcode 989](https://leetcode.com/problems/add-to-array-form-of-integer/) | O(n+m) |
 | 296 | [Shortest Distance from All Buildings](/leetcode/317-shortest-distance-from-all-buildings) | graph, hashtable | [leetcode 317](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | 📌so far the best BFS HARD question i have ever seen |
+| 296 | [Implement Magic Dictionary](/leetcode/676-implement-magic-dictionary) | trie, hashtable | [leetcode 676](https://leetcode.com/problems/implement-magic-dictionary/) | 📌1st hashtable O(26k), 2nd trie O(26kk) |
+| 296 | [Prefix and Suffix Search](/leetcode/745-prefix-and-suffix-search) | trie, hashtable | [leetcode 745](https://leetcode.com/problems/prefix-and-suffix-search/) | 1st trie LTE, 📌2nd hashtable beats 71% |
