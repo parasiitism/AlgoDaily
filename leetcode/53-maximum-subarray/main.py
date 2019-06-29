@@ -13,6 +13,10 @@ import sys
 
     ref:
     - https://www.youtube.com/watch?v=2MmGzdiKR9Y
+
+    followups:
+    - print the max sum subarray
+    - what if circular
 """
 
 
