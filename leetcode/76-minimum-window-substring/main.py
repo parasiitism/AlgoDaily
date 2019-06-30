@@ -132,6 +132,8 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
+        if len(s) < len(t):
+            return ""
         targetStructure = 128*[0]
         for c in t:
             idx = ord(c)
@@ -139,26 +141,27 @@ class Solution(object):
 
         curStructure = 128*[0]
         slow = 0
-        resLen = sys.maxsize
-        res = ""
+        res = s+'#'
         # move forward the fast pointer until the window contains "satisfies" the target
         for i in range(len(s)):
             c = s[i]
             idx = ord(c)
             curStructure[idx] += 1
             # if the window satisfies the target, keep moving the slow pointer to find the minimum window
-            while self.checkAHasB(targetStructure, curStructure):
-                if i-slow+1 < resLen:
-                    res = s[slow:i+1]
-                    resLen = i-slow+1
+            while self.checkAHasB(curStructure, targetStructure):
+                sub = s[slow:i+1]
+                if len(sub) < len(res):
+                    res = sub
                 slowIdx = ord(s[slow])
                 curStructure[slowIdx] -= 1
                 slow += 1
+        if res == s+'#':
+            return ''
         return res
 
     def checkAHasB(self, arrA, arrB):
-        for i in range(len(arrA)):
-            if arrA[i] > 0 and arrA[i] > arrB[i]:
+        for i in range(128):
+            if arrB[i] > arrA[i]:
                 return False
         return True
 

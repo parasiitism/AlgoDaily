@@ -15,7 +15,7 @@ import heapq
     - therefore the mean will always be the max of maxheap and the min of minheap
     - https://leetcode.com/articles/find-median-from-data-stream/
 
-    always maintain the maxheap <= minheap 
+    always maintain the maxheap <= minheap in size
 
     308 ms, faster than 55.77%
 """
@@ -99,7 +99,7 @@ print("========================================")
     - therefore the mean will always be the max of maxheap and the min of minheap
     - https://leetcode.com/articles/find-median-from-data-stream/
 
-    always maintain the maxheap >= minheap 
+    always maintain the maxheap >= minheap in size
 
     308 ms, faster than 55.77%
 """
