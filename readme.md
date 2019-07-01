@@ -826,3 +826,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 297 | [Maximum Sum Circular Subarray](/leetcode/918-maximum-sum-circular-subarray) | dynamic programming | [leetcode 918](https://leetcode.com/problems/maximum-sum-circular-subarray/) | 1st O(n^2) LTE. 📌2nd kadane's variant O(n) |
 | 298 | [All Paths from Source Lead to Destination](/leetcode/1059-all-paths-from-source-lead-to-destination) | graph, hashtable | [leetcode 1059](https://leetcode.com/problems/all-paths-from-source-lead-to-destination/) | 1st dfs+hashtable |
 | 299 | [Missing Element in Sorted Array](/leetcode/1060-missing-element-in-sorted-array) | binary search | [leetcode 1060](https://leetcode.com/problems/missing-element-in-sorted-array/) | 📌📌📌 mindblowing binary search approach |
+| 299 | [First Non-repeating Element in a Data Stream](/glassdoor/rakuten/non-repeating-char-in-a-stream) | hashtable, linked list | glassdoor | 📌 |

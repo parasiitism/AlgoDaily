@@ -23,7 +23,7 @@ class MyHashMap(object):
             self.buckets.append(1000*[-1])
 
     def _getBucket(self, num):
-        return num / 1000
+        return num // 1000
 
     def _getSlot(self, num):
         return num % 1000
@@ -81,7 +81,7 @@ class MyHashMap(object):
         self.buckets = 1000*[ListNode(-1, None)]
 
     def _getBucket(self, num):
-        return self.buckets[int(num/1000)]
+        return self.buckets[num//1000]
 
     def put(self, key, value):
         """

@@ -38,3 +38,29 @@ class Solution(object):
         if len(cur) > 0:
             res += cur
         return res
+
+
+"""
+    usually they ask this instead of the above version
+    s = abcdefgh, k = 3
+    return cbafedgh
+
+    explanation: cba|fed|gh
+"""
+
+
+class Solution(object):
+    def reverseStr(self, s, k):
+        res = ''
+        buf = ''
+        for i in range(len(s)):
+            if i % k == 0:
+                res += buf[::-1]
+                buf = ''
+            buf += s[i]
+        return res + buf
+
+
+a = "abcdefgh"
+b = 3
+print(Solution().reverseStr(a, b))

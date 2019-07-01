@@ -1,40 +1,35 @@
 """
-    1st approach:
+    1st approach: 2pointers
     - calculate max from the front
     - calculate max from the end
     - the min(forward[i], backward[i]) - height[i] is the volumn of the trapping water on that cell
 
     Time    O(3n)
     Space   O(3n)
-    76 ms, faster than 13.97%
+    48 ms, faster than 35.09%
 """
 
 
 class Solution(object):
-    def trap(self, height):
+    def trap(self, nums):
         """
-        :type height: List[int]
+        :type nums: List[int]
         :rtype: int
         """
-        maxH = 0
+        leftMax = 0
         forward = []
-        for h in height:
-            forward.append(maxH)
-            maxH = max(maxH, h)
-
-        maxH = 0
+        for i in range(len(nums)):
+            leftMax = max(leftMax, nums[i])
+            forward.append(leftMax)
         backward = []
-        for i in range(len(height)-1, -1, -1):
-            backward.insert(0, maxH)
-            maxH = max(maxH, height[i])
-
+        rightMax = 0
+        for i in range(len(nums)-1, -1, -1):
+            rightMax = max(rightMax, nums[i])
+            backward.append(rightMax)
+        backward = backward[::-1]
         res = 0
-        for i in range(len(forward)):
-            f = forward[i]
-            b = backward[i]
-            m = min(f, b)
-            if m > height[i]:
-                res += m - height[i]
+        for i in range(len(nums)):
+            res += min(forward[i], backward[i]) - nums[i]
         return res
 
 

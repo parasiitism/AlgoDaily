@@ -23,7 +23,7 @@ class MyHashSet(object):
             self.buckets.append(1000*[False])
 
     def _getBucket(self, num):
-        return num/1000
+        return num//1000
 
     def _getSlot(self, num):
         return num % 1000
@@ -59,7 +59,7 @@ class MyHashSet(object):
 
 """
     3rd approach:
-    - linked list chaining 
+    - linked list chaining
 
     advantage: no limitation of total number of key&value pairs
 
@@ -80,7 +80,7 @@ class MyHashSet(object):
         self.buckets = 1000*[ListNode(-1)]
 
     def _getBucket(self, num):
-        return self.buckets[int(num/1000)]
+        return self.buckets[num//1000]
 
     def add(self, key):
         """

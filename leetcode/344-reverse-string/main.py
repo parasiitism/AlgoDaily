@@ -36,15 +36,10 @@ class Solution(object):
         :type s: List[str]
         :rtype: None Do not return anything, modify s in-place instead.
         """
-        if len(s) < 2:
-            return s
-        temp = self.helper(s, 0, len(s)-1)
-        for i in range(len(s)):
-            s[i] = temp[i]
+        self.helper(s, 0, len(s)-1)
 
     def helper(self, s, i, j):
-        if i > j:
-            return ""
-        elif i == j:
-            return s[i]
-        return s[j] + self.helper(s, i+1, j-1) + s[i]
+        if i >= j:
+            return
+        s[i], s[j] = s[j], s[i]
+        self.helper(s, i+1, j-1)
