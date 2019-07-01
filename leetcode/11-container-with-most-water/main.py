@@ -50,15 +50,15 @@ class Solution(object):
         """
         res = 0
         left = 0
-        right = len(height) - 1
+        right = len(nums) - 1
         while left < right:
-            h = min(height[left], height[right])
+            h = min(nums[left], nums[right])
             w = right - left
             res = max(res, h*w)
-            if height[left] > height[right]:
-                right -= 1
-            else:
+            if nums[left] < nums[right]:
                 left += 1
+            else:
+                right -= 1
         return res
 
 
