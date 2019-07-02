@@ -187,7 +187,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 123 | [Subsets](/leetcode/78-subsets) | backtracking, recursion | [leetcode 78](https://leetcode.com/problems/subsets/) | 📌 both 1st, 2nd & 3rd beat 100 but python vers beat 35.29%, 3.67% and 35.29% only 🤔 |
 | 123 | [Subsets II](/leetcode/90-subsets-ii) | backtracking, recursion | [leetcode 90](https://leetcode.com/problems/subsets-ii/) | 📌 1st beats 100% but python ver beat 41.22% only 🤔 |
 | 124 | [Subsets II](/leetcode/90-subsets-ii) | backtracking, recursion | [leetcode 90](https://leetcode.com/problems/subsets-ii/) | 📌 spent more time to understand the iterative approach, although it eventaully beats merely 29.41% |
-| 125 | [Letter Combinations of a Phone Number](/interviews/facebook/letter-combinations-of-a-phone-number) | recursion | interview | asked by the facebook interviewer |
+| 125 | [Letter Combinations of a Phone Number](/glassdoor/facebook/letter-combinations-of-a-phone-number) | recursion | interview | asked by the facebook interviewer |
 | 126 | [Recursion](/miscellaneous/recursion) | recursion |  | 📌 a little intro of recursion of Standford CS106B |
 | 127 | [Combination Sum](/leetcode/39-combination-sum) | hashtable, dynamic programming, backtracking | [leetcode 39](https://leetcode.com/problems/combination-sum) | 📌 similar to [day113, Coin Change II](/leetcode/518-coin-change-2/). 1st beats 23.85%, 2nd beats 63.08% |
 | 127 | [Combination Sum II](/leetcode/40-combination-sum-ii) | recursion, backtracking | [leetcode 40](https://leetcode.com/problems/combination-sum-ii) | very similer to [day119, Permutations II](/euler/31/). 1st beats 38.89%, 2nd beats 100%. 📌 Be careful of the nuance between it and [Combination Sum](/leetcode/39-combination-sum) |
@@ -255,7 +255,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 143 | [Flipping an Image](/leetcode/832-flipping-an-image) | array | [leetode 832](https://leetcode.com/problems/flipping-an-image/) | |
 | 144 | [Most Common Word](/leetcode/819-most-common-word) | string | [leetode 819](https://leetcode.com/problems/most-common-word/) | takeaway: python=>`re.split(r'\W+', paragraph)`. go=>`regexp.MustCompile(`[!?',;. ]`)`. js=>`paragraph.split(/[!?',;. ]/)`|
 | 144 | [Subtree of Another Tree](/leetcode/572-subtree-of-another-tree) | tree | [leetode 572](https://leetcode.com/problems/subtree-of-another-tree/) | 1st O(n^2). 2d O(n) |
-| 144 | [Subtree with Maximum Average](/interviews/amazon/subtree-with-maximum-average) | tree | 1point3acres |  |
+| 144 | [Subtree with Maximum Average](/glassdoor/amazon/subtree-with-maximum-average) | tree | 1point3acres |  |
 | 144 | [Divide Two Integers](/leetcode/29-divide-two-integers) | math | [leetcode 29](https://leetcode.com/problems/divide-two-integers/) | 📌 classic question in hk interviews |
 | 144 | [Product of Array Except Self](/leetcode/238-product-of-array-except-self) | math | [leetcode 238](https://leetcode.com/problems/product-of-array-except-self/) | using / got beting 60%. naive got TLE, proper approach 2836ms beats 5.92% |
 | 145 | [K Closest Points to Origin](/leetcode/973-k-closest-points-to-origin) | sort, heap | [leetcode 973](https://leetcode.com/problems/k-closest-points-to-origin/) | 📌 1st beats 72.46%. 2nd beats 98.95% in python |
@@ -272,11 +272,11 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 148 | [Longest Palindromic Substring](/leetcode/5-longest-palindromic-substring) | string | [leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/) | ⭐️ |
 | 148 | [Maximum Size Subarray Sum Equals k](/leetcode/325-maximum-size-subarray-sum-equals-k) | array | [leetcode 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | 1st appraoach LTE, 2nd approach learned from others which beats 100%|
 | 148 | [Subarray Sum Equals K](/leetcode/560-subarray-sum-equals-k) | array | [leetcode 560](https://leetcode.com/problems/subarray-sum-equals-k/) | 1st appraoach refers to [leetcode 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/), therefore i came up with the idea immediately which beats 100% |
-| 149 | [Maze](/interviews/amazon/maze/) | array | glassdoor | ️⭐️ |
-| 149 | [2 Sum Closest](/interviews/amazon/closest-2-sum/) | array | glassdoor | ⭐️ |
-| 149 | [Reverse 2nd Half of a Linked List](/interviews/amazon/reverse-2nd-half-linked-list/) | linked list | glassdoor | 📌 |
+| 149 | [Maze](/glassdoor/amazon/maze/) | array | glassdoor | ️⭐️ |
+| 149 | [2 Sum Closest](/glassdoor/amazon/closest-2-sum/) | array | glassdoor | ⭐️ |
+| 149 | [Reverse 2nd Half of a Linked List](/glassdoor/amazon/reverse-2nd-half-linked-list/) | linked list | glassdoor | 📌 |
 | 149 | [Reverse Linked List II](/leetcode/92-reverse-linked-list-ii/) | linked list | [leetcode 92](https://leetcode.com/problems/reverse-linked-list-ii/) | ️📌 |
-| 149 | [Window Sum](/interviews/amazon/window-sum/) | array | glassdoor | ⭐️ |
+| 149 | [Window Sum](/glassdoor/amazon/window-sum/) | array | glassdoor | ⭐️ |
 | 149 | [To Lower Case](/leetcode/709-to-lower-case/) | array | [leetcode 709](https://leetcode.com/problems/to-lower-case/) | ️ |
 | 149 | [Sort Array By Parity](/leetcode/905-sort-array-by-parity/) | array | [leetcode 905](https://leetcode.com/problems/sort-array-by-parity/) | ️ |
 | 149 | [Sort Array By Parity II](/leetcode/922-sort-array-by-parity-ii/) | array | [leetcode 922](https://leetcode.com/problems/sort-array-by-parity-ii/) | ️ |
@@ -296,7 +296,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 151 | [Rotate Function](/leetcode/396-rotate-function/) | tree | [leetcode 396](https://leetcode.com/problems/rotate-function/) | ️1st O(n^2) beats 100%, 2nd O(n) beats 100% |
 | 151 | [Rotate List](/leetcode/61-rotate-list/) | linked list | [leetcode 61](https://leetcode.com/problems/rotate-list/) | ️1st O(n) beats 100% |
 | 151 | [Arithmetic Slices](/leetcode/413-arithmetic-slices/) | array | [leetcode 413](https://leetcode.com/problems/arithmetic-slices/) | ️1st O(n) beats 100% |
-| 152 | [Round Robin](/interviews/amazon/round-robin/) | queue | glassdoor | ️📌📌📌 |
+| 152 | [Round Robin](/glassdoor/amazon/round-robin/) | queue | glassdoor | ️📌📌📌 |
 | 152 | [Sliding Window Median](/leetcode/480-sliding-window-median/) | array, binary search | [leetcode 480](https://leetcode.com/problems/sliding-window-median/) | 1st TLE 📌2nd binary search O(n*2logk) |
 | 152 | [Permutation in String](/leetcode/567-permutation-in-string/) | hashtable, array, string | [leetcode 480](https://leetcode.com/problems/permutation-in-string/) | ⭐️ 1st O(n^2) hashtable beats  0%, 2nd O(n^2) `[26]int{}` beats 40% |
 | 152 | [Set Matrix Zeroes](/leetcode/73-set-matrix-zeroes/) | hashtable, array | [leetcode 73](https://leetcode.com/problems/set-matrix-zeroes/) | 1st O(n) beats 52% |
@@ -305,18 +305,18 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 153 | [Sort Characters By Frequency](/leetcode/451-sort-characters-by-frequency/) | hashtable, bucket sort | [leetcode 451](https://leetcode.com/problems/sort-characters-by-frequency/) | 1st O(n) beats 66% |
 | 153 | [Zigzag Iterator](/leetcode/281-zigzag-iterator/) | array | [leetcode 281](https://leetcode.com/problems/zigzag-iterator/) | 1st O(k) beats 61%. leetcode doesn't support golang, did it in python |
 | 153 | [Triangle](/leetcode/120-triangle/) | dfs, dynamic programming | [leetcode 120](https://leetcode.com/problems/triangle/) | 📌 1st TLE, 2nd MLE. 3rd dp in O(n) beats 100% |
-| 154 | [Products' Average Rating](/interviews/amazon/product-top5-average-rating/) | array | glassdoor | ⭐️ |
-| 154 | [Greatest Common Divisor](/interviews/amazon/gcd/) | math | glassdoor | ⭐️ takeaway: Euclidian Algorithm |
-| 154 | [Least Common Multiple](/interviews/amazon/lcm/) | math | glassdoor | ⭐️ takeaway: A * B = LCM * GCD |
-| 154 | [Cells Mutation](/interviews/amazon/cells-mutation/) | array | glassdoor | ⭐️ |
-| 154 | [Amplitude of a Tree](/interviews/amazon/amplitude-of-a-tree/) | tree | glassdoor | ⭐️ |
+| 154 | [Products' Average Rating](/glassdoor/amazon/product-top5-average-rating/) | array | glassdoor | ⭐️ |
+| 154 | [Greatest Common Divisor](/glassdoor/amazon/gcd/) | math | glassdoor | ⭐️ takeaway: Euclidian Algorithm |
+| 154 | [Least Common Multiple](/glassdoor/amazon/lcm/) | math | glassdoor | ⭐️ takeaway: A * B = LCM * GCD |
+| 154 | [Cells Mutation](/glassdoor/amazon/cells-mutation/) | array | glassdoor | ⭐️ |
+| 154 | [Amplitude of a Tree](/glassdoor/amazon/amplitude-of-a-tree/) | tree | glassdoor | ⭐️ |
 | 155 | [Union Find](/miscellaneous/union-find/) | graph, union find | [Study Union Find](https://algs4.cs.princeton.edu/15uf/) | 📌 Quick Find 👎🏻 -> Quick Union 🤔 -> Union Find 🎉 |
 | 155 | [Minimum Spanning Tree](/miscellaneous/minimum-spanning-tree/) | graph, union find | [Study MST](https://www.youtube.com/watch?v=5xosHRdxqHA) | 📌 heap + list of hashtables 🤔 -> Kruskal(Union Find) 🎉 or Prim(heap + hashtable) |
-| 156 | [Go Through all the Warehouses with Minimum Cost](/interviews/amazon/warehouse-min-cost/) | graph, union find | glassdoor | 📌 real life problem <- Kruskal, Prim |
+| 156 | [Go Through all the Warehouses with Minimum Cost](/glassdoor/amazon/warehouse-min-cost/) | graph, union find | glassdoor | 📌 real life problem <- Kruskal, Prim |
 | 156 | [Minimum Window Substring](/leetcode/76-minimum-window-substring/) | 2pointers, hashtable | [leetcode 76](https://leetcode.com/problems/minimum-window-substring/) | 1st O(n) beats 20% |
-| 157 | [LRU Cache Miss Count](/interviews/amazon/lru-cache-miss-count/) | linked list, hashtable | glassdoor | 1st O(n^2), 2nd O(n) |
-| 157 | [Four Integers](/interviews/amazon/4-integers/) | array | glassdoor | O(nlogn) |
-| 157 | [Rotate a Matrix](/interviews/amazon/rotate-matrix/) | array | glassdoor | 1st space O(n), 📌 i2nd space O(1) in-place |
+| 157 | [LRU Cache Miss Count](/glassdoor/amazon/lru-cache-miss-count/) | linked list, hashtable | glassdoor | 1st O(n^2), 2nd O(n) |
+| 157 | [Four Integers](/glassdoor/amazon/4-integers/) | array | glassdoor | O(nlogn) |
+| 157 | [Rotate a Matrix](/glassdoor/amazon/rotate-matrix/) | array | glassdoor | 1st space O(n), 📌 i2nd space O(1) in-place |
 | 157 | [Rotate Image](/leetcode/48-rotate-image/) | array | [leetcode 48](https://leetcode.com/problems/rotate-image/) | 📌 inplace |
 | 157 | [Copy List with Random Pointer](/leetcode/138-copy-list-with-random-pointer/) | linked list | [leetcode 138](https://leetcode.com/problems/copy-list-with-random-pointer/) | ⭐️ |
 | 158 | [Path Sum IV](/leetcode/666-path-sum-iv/) | linked list | [leetcode 138](https://leetcode.com/problems/path-sum-iv/) | 1st O(4n) |
@@ -324,15 +324,15 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 158 | [Course Schedule](/leetcode/207-course-schedule/) | graph | [leetcode 207](https://leetcode.com/problems/course-schedule/) | 1st LTE, 📌 2nd, 3rd Classic Approach: Topological Ordering |
 | 159 | [Topological Ordering](/miscellaneous/topological-sort/) | graph | study | 📌 1st: [Topological Ordering with DFS](https://www.youtube.com/watch?v=ddTC4Zovtbc) 📌 2nd: [Topological Ordering with BFS/Khan's](https://www.youtube.com/watch?v=_LuIvEi_kZk) |
 | 159 | [Course Schedule II](/leetcode/210-course-schedule-ii/) | graph | [leetcode 210](https://leetcode.com/problems/210-course-schedule-ii/) | 📌 DFS, BFS Topological Ordering |
-| 160 | [Order Dependency](/interviews/amazon/order-dependency/) | graph | glassdoor | 📌 DFS, BFS |
+| 160 | [Order Dependency](/glassdoor/amazon/order-dependency/) | graph | glassdoor | 📌 DFS, BFS |
 | 160 | [Graph Valid Tree](/leetcode/261-graph-valid-tree/) | graph, union find | [leetcode 261](https://leetcode.com/problems/graph-valid-tree/) | 📌 1st union find O(nlogn) beats 100% |
-| 160 | [Merge Strings](/interviews/amazon/merge-strings/) | array | glassdoor | ⭐️ very similar to ZigZag iterator |
-| 160 | [Find Distinct Substrings with Exactly K Distinct Characters](/interviews/amazon/distinct-substrings-k-distinct-characters) | array | | 📌1st O(n^3), 2nd O(n^2) |
+| 160 | [Merge Strings](/glassdoor/amazon/merge-strings/) | array | glassdoor | ⭐️ very similar to ZigZag iterator |
+| 160 | [Find Distinct Substrings with Exactly K Distinct Characters](/glassdoor/amazon/distinct-substrings-k-distinct-characters) | array | | 📌1st O(n^3), 2nd O(n^2) |
 | 161 | [Reorder Log Files](/leetcode/937-reorder-log-files) | array | [leetcode 937](https://leetcode.com/problems/reorder-log-files/) | 1st O(nlogn) |
 | 161 | [Dijkstra's Algorithm on a Directed Graph](/miscellaneous/dijkstra) | graph | study | 📌 |
 | 161 | [Dijkstra's Algorithm on an Undirected Graph](/miscellaneous/dijkstra) | graph | study | 📌 |
 | 161 | [Find All Anagrams in a String](/leetcode/438-find-all-anagrams-in-a-string) | string | [leetcode 438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | 1st, 2nd O(kn) |
-| 162 | [Optimal Flights](/interviews/amazon/closest-2-sum) | binary search | interview | 📌1st O(n^2), 2nd O(nlogn) |
+| 162 | [Optimal Flights](/glassdoor/amazon/closest-2-sum) | binary search | interview | 📌1st O(n^2), 2nd O(nlogn) |
 | 162 | [Max Area of Island](/leetcode/695-max-area-of-island) | array | [leetcode 695](https://leetcode.com/problems/max-area-of-island/) | 1st dfs O(n). 2nd bfs(n) |
 | 162 | [Find K Pairs with Smallest Sums](/leetcode/373-find-k-pairs-with-smallest-sums) | array | [leetcode 373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | 1st 2nd O(nlogn) |
 | 163 | [Number of Distinct Islands](/leetcode/694-number-of-distinct-islands) | array | [leetcode 694](https://leetcode.com/problems/number-of-distinct-islands/) | 1st O(nk) |
@@ -373,16 +373,16 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 173 | [Find Median from Data Stream](/leetcode/295-find-median-from-data-stream) | heap, bst | [leetcode 295](https://leetcode.com/problems/find-median-from-data-stream/) | 1st heap, 2nd BST both LTE, 📌3rd: 2 heaps |
 | 173 | [Lonely Pixel I](/leetcode/531-lonely-pixel-i) | hashtable | [leetcode 531](https://leetcode.com/problems/lonely-pixel-i/) | 1st, 2nd beats 100% |
 | 173 | [Minimum Add/Delete to Make Parentheses Valid](/leetcode/921-minimum-add-to-make-parentheses-valid) | stack | [leetcode 921](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | 1st O(n) beats 100% |
-| 173 | [Largest Permutation](/interviews/dbs/largest-permutation) | permutation | [geeksforgeeks](https://www.geeksforgeeks.org/dbs-hack2hire-interview-experience-tech-associate/) | |
+| 173 | [Largest Permutation](/glassdoor/dbs/largest-permutation) | permutation | [geeksforgeeks](https://www.geeksforgeeks.org/dbs-hack2hire-interview-experience-tech-associate/) | |
 | 174 | [Integer to English Words](/leetcode/273-integer-to-english-words) | array | [leetcode 273](https://leetcode.com/problems/integer-to-english-words) | ⭐️tedious but frequently asked |
-| 174 | [Remove duplicates from a string in O(1) space](/interviews/dbs/remove-duplicates-from-string) | hashtable, bucket | [geeksforgeeks](https://www.geeksforgeeks.org/remove-duplicates-from-a-string-in-o1-extra-space/) | ⭐ 1st O(n) space, 2nd O(1) space |
+| 174 | [Remove duplicates from a string in O(1) space](/glassdoor/dbs/remove-duplicates-from-string) | hashtable, bucket | [geeksforgeeks](https://www.geeksforgeeks.org/remove-duplicates-from-a-string-in-o1-extra-space/) | ⭐ 1st O(n) space, 2nd O(1) space |
 | 175 | [Design Hit Counter](/leetcode/362-design-hit-counter) | hashtable, array | [leetcode 362](https://leetcode.com/problems/design-hit-counter) | ⭐ 1st python OrderedDict O(1) for all operations beats 100%, 2nd hashtable+array beats 100% |
 | 175 | [Design Tic-Tac-Toe](/leetcode/348-design-tic-tac-toe) | array | [leetcode 348](https://leetcode.com/problems/design-tic-tac-toe/) | 1st O(n^2), 😱2nd O(1) |
 | 175 | [Valid Tic-Tac-Toe State](/leetcode/794-valid-tic-tac-toe-state/) | array | [leetcode 794](https://leetcode.com/problems/tic-tac-toe-state/) | 1st stupid. 2nd decent |
 | 176 | [Repeated Substring Pattern](/leetcode/459-repeated-substring-pattern/) | array | [leetcode 459](https://leetcode.com/problems/repeated-substring-pattern/) | 1st O(n^2), 2nd O(n) |
 | 176 | [Repeated String Match](/leetcode/686-repeated-string-match/) | array | [leetcode 686](https://leetcode.com/problems/repeated-string-match/) | 1st O(kn) |
 | 176 | [License Key Formatting](/leetcode/482-license-key-formatting/) | array, stack | [leetcode 482](https://leetcode.com/problems/license-key-formatting/) | 1st O(n) |
-| 176 | [Serialize and Deserialize array of string](/interviews/dbs/serialize-deserialize-array) | array | [geeksforgeeks](https://www.geeksforgeeks.org/serialize-deserialize-array-string/) | O(n) |
+| 176 | [Serialize and Deserialize array of string](/glassdoor/dbs/serialize-deserialize-array) | array | [geeksforgeeks](https://www.geeksforgeeks.org/serialize-deserialize-array-string/) | O(n) |
 | 177 | [Letter Case Permutation](/leetcode/784-letter-case-permutation) | permutation | [leetcode 784](https://leetcode.com/problems/letter-case-permutation/) | 1st permutation+hashset O(2^n), 2nd permutation O(2^n) |
 | 177 | [Best Time to Buy and Sell Stock](/leetcode/121-best-time-to-buy-and-sell-stock) | dynamic programming | [leetcode 121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 📌📌📌1st dp O(n), 2nd heap O(nlogn) |
 | 177 | [Best Time to Buy and Sell Stock II](/leetcode/122-best-time-to-buy-and-sell-stock-ii) | dynamic programming | [leetcode 122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | 📌📌📌1st, 2nd dp O(n) |
@@ -435,7 +435,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 189 | [Pacific Atlantic Water Flow](/leetcode/417-pacific-atlantic-water-flow) | graph | [leetcode 417](https://leetcode.com/problems/pacific-atlantic-water-flow/) | 1st O(4^mn) LTE. 📌2nd O(5mn) |
 | 190 | [Design Compressed String Iterator](/leetcode/604-design-compressed-string-iterator) | string, queue | [leetcode 604](https://leetcode.com/problems/design-compressed-string-iterator/) | 1st O(n) `unicode.IsDigit()` |
 | 190 | [Basic Calculator II](/leetcode/227-basic-calculator-ii) | string, stack | [leetcode 227](https://leetcode.com/problems/basic-calculator-ii/) | 1st O(2n), takeaway: `isdigit()` in python, `unicode.IsDigit()` in golang, and `isinstance(a, int)` in python for type checking, 📌2nd O(2n) too but more concise but be careful of float division |
-| 191 | [Array Partition by Occurence](/interviews/amazon/array-partition-by-occurence/) | hashtable | interview | ⭐️ O(n^2) |
+| 191 | [Array Partition by Occurence](/glassdoor/amazon/array-partition-by-occurence/) | hashtable | interview | ⭐️ O(n^2) |
 | 192 | [Partition Labels](/leetcode/763-partition-labels) | hashtable | [leetcode 763](https://leetcode.com/problems/partition-labels/) | ️️️⭐️WTF, I was asked about it yestarday during an interview. 1st O(n^2). 2nd O(n) |
 | 192 | [Basic Calculator](/leetcode/224-basic-calculator) | string, stack | [leetcode 224](https://leetcode.com/problems/basic-calculator/) | 1st O(2n) tedious operation beats 25%, 2nd concise O(2n) beats 90% |
 | 193 | [Basic Calculator III](/leetcode/772-basic-calculator) | string, stack, recursion | [leetcode 772](https://leetcode.com/problems/basic-calculator-iii/) | 1st O(n^2) recursion, 2nd O(n) recursion |
@@ -456,7 +456,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 198 | [Sliding Puzzle](/leetcode/773-sliding-puzzle/) | graph | [leetcode 773](https://leetcode.com/problems/sliding-puzzle) | ⭐ with follow-up |
 | 198 | [Largest Rectangle in Histogram](/leetcode/84-largest-rectangle-in-histogram/) | array, stack | [leetcode 84](https://leetcode.com/problems/largest-rectangle-in-histogram) | 1st O(n^2) brute force, 📌 2nd O(2n) stack |
 | 198 | [Maximal Rectangle](/leetcode/85-maximal-rectangle/) | dynamic programming, stack | [leetcode 85](https://leetcode.com/problems/maximal-rectangle) | 📌 |
-| 198 | [Down to One](/interviews/amazon/down-to-one/) | dfs | glassdoor | ⭐️|
+| 198 | [Down to One](/glassdoor/amazon/down-to-one/) | dfs | glassdoor | ⭐️|
 | 199 | [Strobogrammatic Number](/leetcode/246-strobogrammatic-number) | 2pointers, hashtable | [leetcode 246](https://leetcode.com/problems/strobogrammatic-number/) | 1st O(n) 2pointers, 2nd O(n) hashtable+2pointers |
 | 199 | [Strobogrammatic Number II](/leetcode/247-strobogrammatic-number-ii) | recursion, hashtable | [leetcode 247](https://leetcode.com/problems/strobogrammatic-number-ii/) | recursion |
 | 199 | [Strobogrammatic Number III](/leetcode/248-strobogrammatic-number-iii) | recursion, hashtable | [leetcode 248](https://leetcode.com/problems/strobogrammatic-number-iii/) | recursion: reuse the approach in ii) |
@@ -570,7 +570,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 229 | [Diverse Subarray](https://github.com/calvinchankf/GoogleKickStart/blob/master/2019/roundB/c.py) | hashtable | kickstart | round B q3: passed small dataset only |
 | 229 | [Find Common Characters](/leetcode/1002-find-common-characters) | hashtable | [leetcode 1002](https://leetcode.com/problems/find-common-characters/) | 1st O(MNM). 2nd O(MN) |
 | 230 | [Min Queue](https://github.com/calvinchankf/FrontEndConcepts/tree/master/implementation/min-queue) | binary search, linked list | glassdoor | O(logn) |
-| 230 | [XOR Between Numbers](/interviews/rakuten/xor-between-numbers) | bit op | glassdoor | 📌O(1) |
+| 230 | [XOR Between Numbers](/glassdoor/rakuten/xor-between-numbers) | bit op | glassdoor | 📌O(1) |
 | 230 | [Maximum Frequency Stack](/leetcode/895-maximum-frequency-stack) | hashtable | [leetcode 895](https://leetcode.com/problems/maximum-frequency-stack/) | 📌1st, 2nd O(1) |
 | 230 | [Split Linked List in Parts](/leetcode/725-split-linked-list-in-parts]) | math, linked list | [leetcode 725](https://leetcode.com/problems/split-linked-list-in-parts/) | O(2n) |
 | 231 | [Shuffle an Array](/leetcode/384-shuffle-an-array) | array | [leetcode 384](https://leetcode.com/problems/shuffle-an-array/) | 1st bultin `random.shuffle()`. 📌2nd O(n) Fisher-Yates Algorithm |
@@ -639,10 +639,10 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 254 | [Kth Smallest Element in a BST](/leetcode/230-kth-smallest-element-in-a-bst) | tree | [leetcode 230](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | 1st O(n) |
 | 254 | [Kill Process](/leetcode/582-kill-process) | graph | [leetcode 582](https://leetcode.com/problems/kill-process/) | 1st bfs O(n) 2nd dfs O(n) |
 | 255 | [Online Election](/leetcode/911-online-election) | hashtable + binary | [leetcode 911](https://leetcode.com/problems/online-election/) | 1st hashtable + binary O(N+QlogN) |
-| 256 | [Squares Between Two Numbers](/interviews/grab/squares-between-2numbers) | math | glassdoor | ⭐️|
-| 256 | [Longest Prefix Containing the Same Number of X and Y](/interviews/grab/longest-prefix-xy) | array | glassdoor | ⭐️|
-| 256 | [Number to Currency](/interviews/grab/number-to-currency) | array | glassdoor | ⭐️|
-| 256 | [Binary Tree Top Side View](/interviews/grab/binary-tree-top-side-view) | tree | glassdoor | ⭐️|
+| 256 | [Squares Between Two Numbers](/glassdoor/grab/squares-between-2numbers) | math | glassdoor | ⭐️|
+| 256 | [Longest Prefix Containing the Same Number of X and Y](/glassdoor/grab/longest-prefix-xy) | array | glassdoor | ⭐️|
+| 256 | [Number to Currency](/glassdoor/grab/number-to-currency) | array | glassdoor | ⭐️|
+| 256 | [Binary Tree Top Side View](/glassdoor/grab/binary-tree-top-side-view) | tree | glassdoor | ⭐️|
 | 256 | [Maximum Distance in Arrays](/leetcode/624-maximum-distance-in-arrays) | array | [leetcode 624](https://leetcode.com/problems/maximum-distance-in-arrays/) | ⭐️|
 | 257 | [Bitwise AND of Numbers Range](/leetcode/201-bitwise-and-of-numbers-range) | bit op | [leetcode 201](https://leetcode.com/problems/bitwise-and-of-numbers-range/) | 📌|
 | 257 | [Palindrome Partitioning](/leetcode/131-palindrome-partitioning) | recursion | [leetcode 131](https://leetcode.com/problems/palindrome-partitioning/) | 📌|
@@ -665,12 +665,12 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 262 | [Custom Sort String](/leetcode/791-custom-sort-string) | hashtable | [leetcode 791](https://leetcode.com/problems/custom-sort-string/) | 📌 1st hashtable O(m+n) + followup |
 | 262 | [Binary Gap](/leetcode/868-binary-gap) | bit op | [leetcode 868](https://leetcode.com/problems/binary-gap/) | ⭐️|
 | 262 | [Binary Gap](/codility/1-binary_gap) | bit op | [codility 1](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) | ️simlar as above |
-| 262 | [Length of a Linked List in Array Representation](/interviews/grab/length-of-array-linked-list) | linked list | glassdoor | |
+| 262 | [Length of a Linked List in Array Representation](/glassdoor/grab/length-of-array-linked-list) | linked list | glassdoor | |
 | 262 | [Encode and Decode Strings](/leetcode/271-encode-and-decode-strings) | string | [leetcode 271](https://leetcode.com/problems/encode-and-decode-strings/) | ⭐️using `[count]` as a delimiter |
 | 263 | [Goat Latin](/leetcode/824-goat-latin) | string | [leetcode 824](https://leetcode.com/problems/goat-latin/) | ⭐️ |
 | 263 | [Nim Game](/leetcode/292-nim-game) | math | [leetcode 292](https://leetcode.com/problems/nim-game/) |  |
 | 263 | [Rabbits in Forest](/leetcode/781-rabbits-in-forest) | hashtable + math | [leetcode 781](https://leetcode.com/problems/rabbits-in-forest/) | 1st math 🤔O(n) |
-| 263 | [Distance Between Two Nodes In a Tree](/interviews/grab/distance-between-nodes) | tree, graph | glassdoor | 📌1st transform to graph and bfs. 2nd find common ancestor and bfs |
+| 263 | [Distance Between Two Nodes In a Tree](/glassdoor/grab/distance-between-nodes) | tree, graph | glassdoor | 📌1st transform to graph and bfs. 2nd find common ancestor and bfs |
 | 264 | [Largest Range](/miscellaneous/largest-range) | array | glassdoor | naive O(nlogn), 📌hashtable O(n) |
 | 264 | [Odd Occurrences In Array](/codility/2-odd_occurrences_in_array) | bit op | [codility 2](https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/) | same as [leetcode 136](https://leetcode.com/problems/single-number/) |
 | 264 | [Cyclic Rotation](/codility/2-cyclic_rotation) | array | [codility 2](https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/) | ⭐️ |
@@ -696,10 +696,10 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 267 | [Longest Continuous Increasing Subsequence](/leetcode/674-longest-continuous-increasing-subsequence) | array | [leetcode 674](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) | |
 | 267 | [Is Graph Bipartite?](/leetcode/785-is-graph-bipartite) | graph | [leetcode 785](https://leetcode.com/problems/is-graph-bipartite/) | ⭐️1st BFS, 2nd recursive DFS O(V+E) |
 | 267 | [Possible Bipartition](/leetcode/886-possible-bipartition) | graph | [leetcode 886](https://leetcode.com/problems/possible-bipartition/) | ⭐️1st BFS, 2nd recursive DFS O(V+E) |
-| 267 | [Lily's Happiness](/interviews/morgan-stanley/lily-happiness) | graph, heap | glassdoor | 📌BFS + heap + hashset|
-| 267 | [Pairs Having a Common Language](/interviews/morgan-stanley/pairs-having-common-language) | hashtable | glassdoor | ⭐️ |
-| 267 | [Common Substring Length of K](/interviews/morgan-stanley/common-substring-length-k) | dynamic programming | glassdoor | 📌longest commone substring variation |
-| 268 | [Integer to String with Commas](/interviews/clover-health/int-2-string) | string, math | glassdoor | |
+| 267 | [Lily's Happiness](/glassdoor/morgan-stanley/lily-happiness) | graph, heap | glassdoor | 📌BFS + heap + hashset|
+| 267 | [Pairs Having a Common Language](/glassdoor/morgan-stanley/pairs-having-common-language) | hashtable | glassdoor | ⭐️ |
+| 267 | [Common Substring Length of K](/glassdoor/morgan-stanley/common-substring-length-k) | dynamic programming | glassdoor | 📌longest commone substring variation |
+| 268 | [Integer to String with Commas](/glassdoor/clover-health/int-2-string) | string, math | glassdoor | |
 | 268 | [Count Binary Substrings](/leetcode/696-count-binary-substrings) | array | [leetcode 696](https://leetcode.com/problems/count-binary-substrings/) | ⭐️ |
 | 268 | [Number of Matching Subsequences](/leetcode/792-number-of-matching-subsequences) | hashtable, binary search | [leetcode 696](https://leetcode.com/problems/number-of-matching-subsequences/) | 1st brute force O(SWK) 📌 2nd binary search O(SWlogK) |
 | 268 | [Top 2 Frequent Words](/morgan-stanley/top-2-frequent-words) | hashtable | glassdoor | ⭐️ |
@@ -718,28 +718,28 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 270 | [MaxCounters](/codility/4-max_counters) | minmax | [codility 4](https://app.codility.com/programmers/lessons/4-max_counters/frog_river_one/) | 📌1st O(MN) 2nd O(M+N) learned from others |
 | 271 | [Find Right Interval](/leetcode/436-find-right-interval) | binary search | [leetcode 436](https://leetcode.com/problems/find-right-interval/) | 📌1st O(NlogN) |
 | 271 | [Adding Two Negabinary Numbers](/leetcode/1073-adding-two-negabinary-numbers) | binary search | [leetcode 1073](https://leetcode.com/problems/adding-two-negabinary-numbers/) | 📌1st from wiki O(n) |
-| 272 | [The Shortest Binarian](/interviews/rakuten) | bit op | glassdoor |  |
+| 272 | [The Shortest Binarian](/glassdoor/rakuten) | bit op | glassdoor |  |
 | 272 | [Flip Columns For Maximum Number of Equal Rows](/leetcode/1072-flip-columns-for-maximum-number-of-equal-rows) | array | [leetcode 1072](https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/) | ⭐️finding the pattern is not that easy |
 | 272 | [Greatest Common Divisor of Strings](/leetcode/1071-greatest-common-divisor-of-strings) | string | [leetcode 1072](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | 1st O(ABB), 2nd O(AB) |
 | 272 | [Rotated Digits](/leetcode/788-rotated-digits) | array | [leetcode 788](https://leetcode.com/problems/rotated-digits/) | 1st O(nlogn) |
 | 272 | [String Compression](/leetcode/443-string-compression) | array | [leetcode 443](https://leetcode.com/problems/string-compression/) | 1st O(n)Q(n) |
 | 272 | [Magic Squares In Grid](/leetcode/840-magic-squares-in-grid) | array | [leetcode 840](https://leetcode.com/problems/magic-squares-in-grid/) | 1st O(10n) |
 | 273 | [Student Attendance Record I](/leetcode/551-student-attendance-record-i) | string | [leetcode 551](https://leetcode.com/problems/student-attendance-record-i/) | 1st O(n) |
-| 273 | [Number String Permutation](/interviews/rakuten/number-string-permutation) | permutation | glassdoor | O(n!) |
+| 273 | [Number String Permutation](/glassdoor/rakuten/number-string-permutation) | permutation | glassdoor | O(n!) |
 | 273 | [Convert BST to Greater Tree](/leetcode/538-convert-bst-to-greater-tree) | tree | [leetcode 538](https://leetcode.com/problems/convert-bst-to-greater-tree/) | ⭐️1st O(3n) |
-| 273 | [Reverse Sentences](/interviews/clover-health/reverse-sentences) | string | interview | |
+| 273 | [Reverse Sentences](/glassdoor/clover-health/reverse-sentences) | string | interview | |
 | 274 | [DI String Match](/leetcode/942-di-string-match) | string, math | [leetcode 942](https://leetcode.com/problems/di-string-match/) | very interesting question 📌1st O(2N), 2nd O(N) |
 | 274 | [Find Permutation](/leetcode/484-find-permutation) | stack | [leetcode 484](https://leetcode.com/problems/find-permutation/) | very interesting question 📌1st O(N), 2nd O(N) |
 | 274 | [Longest Repeating Substring](/leetcode/1062-longest-repeating-substring) | stack | [leetcode 1062](https://leetcode.com/problems/longest-repeating-substring/) | 📌1st O(n^2) beats 100% in golang but LTE in python |
 | 274 | [Task Scheduler](/leetcode/621-task-scheduler) | heap | [leetcode 621](https://leetcode.com/problems/task-scheduler/) | 1st O(nlog26) |
 | 274 | [Rearrange String k Distance Apart](/leetcode/358-rearrange-string-k-distance-apart) | heap | [leetcode 358](https://leetcode.com/problems/rearrange-string-k-distance-apart/) | 1st O(nlog26) similar to [leetcode 621](https://leetcode.com/problems/task-scheduler/) |
-| 275 | [Maximal Number of Nails at Same Height by Hammering K Nails](/interviews/rakuten/max_no_of_nails) | hashtable, minmax | glassdoor | ⭐️ |
+| 275 | [Maximal Number of Nails at Same Height by Hammering K Nails](/glassdoor/rakuten/max_no_of_nails) | hashtable, minmax | glassdoor | ⭐️ |
 | 275 | [K-diff Pairs in an Array](/leetcode/532-k-diff-pairs-in-an-array) | hashtable | [leetcode 532](https://leetcode.com/problems/k-diff-pairs-in-an-array/) | ⭐️ |
 | 275 | [Line Reflection](/leetcode/356-line-reflection) | hashtable | [leetcode 356](https://leetcode.com/problems/line-reflection/) | ⭐️ |
-| 275 | [Overlapping Area between Circles](/interviews/rakuten/overlapping-area-between-circles) | math | glassdoor | ⭐️ |
+| 275 | [Overlapping Area between Circles](/glassdoor/rakuten/overlapping-area-between-circles) | math | glassdoor | ⭐️ |
 | 276 | [Number of Boomerangs](/leetcode/447-number-of-boomerangs) | hashtable, math | [leetcode 447](https://leetcode.com/problems/number-of-boomerangs/) | ⭐️ |
 | 276 | [Circular Array Loop](/leetcode/457-circlar-array-loop) | 2pointers | [leetcode 457](https://leetcode.com/problems/circlar-array-loop/) | 1st O(n^2) 📌similar to [leetcode 141](https://leetcode.com/problems/linked-list-cycle/) |
-| 276 | [Maximal Indices Diff of Adajent Pairs](/interviews/rakuten/max-indices-diff-of-adjacent-pairs) | sort | glassdoor | ⭐️1st O(nlogn) |
+| 276 | [Maximal Indices Diff of Adajent Pairs](/glassdoor/rakuten/max-indices-diff-of-adjacent-pairs) | sort | glassdoor | ⭐️1st O(nlogn) |
 | 276 | [PassingCars](/codility/5-prefix_sums) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/) | 1st O(n)Q(n) |
 | 276 | [GenomicRangeQuery](/codility/5-genomic_range_query) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/) | 1st O(n)Q(n) |
 | 276 | [Fish](/codility/5-fish) | stack | [codility 7](https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/) | 1st O(n)Q(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
@@ -752,7 +752,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 278 | [Binary Search Tree to Greater Sum Tree](/leetcode/1038-binary-search-tree-to-greater-sum-tree) | tree | [leetcode 1038](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | ⭐️1st recursive inorder O(n), iterative inorder O(n) |
 | 278 | [Generalized Abbreviation](/leetcode/320-generalized-abbreviation) | recursion, hashtable | [leetcode 320](https://leetcode.com/problems/generalized-abbreviation/) | 📌both 1st, 2nd O(N2^N) but different approach to construct numbers |
 | 278 | [Pair Sum Even Count](/codility/0-pair_sum_even_count) | math | glassdoor | ⭐️ |
-| 278 | [Standard Deviation Of An Array](/interviews/rakuten/standard-deviation-of-an-array) | math | glassdoor | ⭐️ |
+| 278 | [Standard Deviation Of An Array](/glassdoor/rakuten/standard-deviation-of-an-array) | math | glassdoor | ⭐️ |
 | 278 | [Largest Perimeter Triangle](/leetcode/976-largest-perimeter-triangle) | sort, math | [leetcode 976](https://leetcode.com/problems/largest-perimeter-triangle/) | ⭐️ |
 | 278 | [Largest Triangle Area](/leetcode/812-largest-triangle-area) | math | [leetcode 812](https://leetcode.com/problems/largest-triangle-area/) | ⭐️ |
 | 278 | [Minimum Moves to Equal Array Elements](/leetcode/453-minimum-moves-to-equal-array-elements) | math | [leetcode 453](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | ⭐️ |
@@ -771,19 +771,19 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 282 | [Partition Equal Subset Sum](/leetcode/416-partition-equal-subset-sum) | dynamic programming | [leetcode 416](https://leetcode.com/problems/partition-equal-subset-sum/) | 📌📌📌classic beginning dp, "the easiest NP-hard problem" 1st, 2nd O(NS) top-down recursion + hashtable, 3rd O(NS) iterative |
 | 282 | [Partition to K Equal Sum Subsets](/leetcode/698-partition-to-k-equal-sum-subsets) | dynamic programming | [leetcode 698](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) | 📌📌📌classic beginning dp, "the 2nd easiest NP-hard problem" O(2^n) -> O(n!) |
 | 283 | [Split Array with Equal Sum](/leetcode/548-split-array-with-equal-sum) | prefix sum, hashtable | [leetcode 548](https://leetcode.com/problems/split-array-with-equal-sum/) | another equal sum problem O(n^2) |
-| 283 | [Compress Strings](/interviews/jpmorgan/compresse-numbers) | string | glassdoor | ⭐️ |
-| 283 | [Reverse And Add Integers](/interviews/jpmorgan/reverse-and-add) | string | glassdoor | ⭐️ |
-| 284 | [Knapsack](/interviews/jpmorgan/knapsack) | dynamic programming | glassdoor | 📌📌📌1st recursion+hashtable O(NC). 2nd 2d array O(NC) |
-| 284 | [Max Diff In An Array](/interviews/jpmorgan/max-diff-in-array) | minmax | glassdoor | ⭐️ |
-| 284 | [Beautiful strings](/interviews/jpmorgan/beautiful-strings) | hashtable | glassdoor | ⭐️fb hackercup question |
-| 284 | [Balenced Smileys](/interviews/jpmorgan/smileys) | stack, minmax | glassdoor | ⭐️fb hackercup question |
+| 283 | [Compress Strings](/glassdoor/jpmorgan/compresse-numbers) | string | glassdoor | ⭐️ |
+| 283 | [Reverse And Add Integers](/glassdoor/jpmorgan/reverse-and-add) | string | glassdoor | ⭐️ |
+| 284 | [Knapsack](/glassdoor/jpmorgan/knapsack) | dynamic programming | glassdoor | 📌📌📌1st recursion+hashtable O(NC). 2nd 2d array O(NC) |
+| 284 | [Max Diff In An Array](/glassdoor/jpmorgan/max-diff-in-array) | minmax | glassdoor | ⭐️ |
+| 284 | [Beautiful strings](/glassdoor/jpmorgan/beautiful-strings) | hashtable | glassdoor | ⭐️fb hackercup question |
+| 284 | [Balenced Smileys](/glassdoor/jpmorgan/smileys) | stack, minmax | glassdoor | ⭐️fb hackercup question |
 | 285 | [Nth Digit](/leetcode/400-nth-digit) | math | [leetcode 400](https://leetcode.com/problems/nth-digit/) | 📌📌📌very interesting question |
 | 285 | [Flatten a Multilevel Doubly Linked List](/leetcode/430-flatten-a-multilevel-doubly-linked-list) | linked list | [leetcode 430](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | ⭐️both 1st, 2nd O(n)Q(n) |
 | 285 | [Data Stream as Disjoint Intervals](/leetcode/352-data-stream-as-disjoint-intervals) | binary search | [leetcode 352](https://leetcode.com/problems/data-stream-as-disjoint-intervals/) | ⭐️1st upperbound binary search O(logn) |
 | 285 | [Longest Increasing Path in a Matrix](/leetcode/329-longest-increasing-path-in-a-matrix) | graph, hashtable | [leetcode 329](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | ⭐️dfs+hashtable O(RC)Q(RC) |
 | 286 | [Complement of Base 10 Integer](/leetcode/1009-complement-of-base-10-integer) | bit op | [leetcode 1009](https://leetcode.com/problems/complement-of-base-10-integer/) | O(logn) |
 | 286 | [Complete Binary Tree Inserter](/leetcode/919-complete-binary-tree-inserter) | bst | [leetcode 919](https://leetcode.com/problems/complete-binary-tree-inserter/) | ⭐️init O(n) insert O(1) |
-| 287 | [Subarray Sum Equals K](/interviews/clover-health/subarray-sum-equals-k) | array, hashtable | interview | 📌📌📌return any one of the subarray that sum up to L |
+| 287 | [Subarray Sum Equals K](/glassdoor/clover-health/subarray-sum-equals-k) | array, hashtable | interview | 📌📌📌return any one of the subarray that sum up to L |
 | 287 | [Missing Ranges](/leetcode/163-missing-ranges) | array, math | [leetcode 163](https://leetcode.com/problems/missing-ranges/) | ⭐️O(n) |
 | 287 | [Summary Ranges](/leetcode/228-summary-ranges) | array | [leetcode 228](https://leetcode.com/problems/summary-ranges/) | ⭐️ interval problem O(2n)|
 | 287 | [Aligned Subset](/codility/0-aligned_subset) | hashtable | glassdoor | mod `%` is interesting |
@@ -800,7 +800,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 289 | [Convert a Number to Hexadecimal](/leetcode/405-convert-a-number-to-hexadecimal) | math | [leetcode 405](https://leetcode.com/problems/405-convert-a-number-to-hexadecimal/) | ⭐️ interesting question |
 | 290 | [High Five](/leetcode/1086-high-five) | sort, heap | [leetcode 1086](https://leetcode.com/problems/high-five/) | |
 | 290 | [Counting Bits](/leetcode/338-counting-bits) | bit op | [leetcode 338](https://leetcode.com/problems/counting-bits/) | 1st O(NlogN) 📌 |
-| 291 | [Compare URLs](/interviews/jpmorgan/compare-urls) | string | interview | O(n) takeaway is `urllib` and `urlparse`|
+| 291 | [Compare URLs](/glassdoor/jpmorgan/compare-urls) | string | interview | O(n) takeaway is `urllib` and `urlparse`|
 | 292 | [Available Captures for Rook](/leetcode/999-available-captures-for-rook) | graph | [leetcode 999](https://leetcode.com/problems/available-captures-for-rook/) | O(RC+R+C) |
 | 292 | [Longest Consecutive Sequence](/leetcode/128-longest-consecutive-sequence) | sort, union find | [leetcode 128](https://leetcode.com/problems/longest-consecutive-sequence/) | 1st sorting O(nlogn). 📌2nd union find O(nlogn) |
 | 292 | [Combine Two Tables](/leetcode/175-combine-two-tables) | sql | [leetcode 175](https://leetcode.com/problems/combine-two-tables/) | `left join` |
@@ -814,7 +814,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 294 | [Perfect Number](/leetcode/507-perfect-number) | math | [leetcode 507](https://leetcode.com/problems/perfect-number/) | 📌1st O(sqrt(n)) efficient ways to find out all the factors of a number. 2nd O(logn) math |
 | 294 | [Delete Node in a Linked List](/leetcode/237-delete-node-in-a-linked-list) | math | [leetcode 237](https://leetcode.com/problems/delete-node-in-a-linked-list/) | ⭐️the input has changed |
 | 294 | [Swap Items Without Temp](/miscellaneous/swap-items-without-temp) | arr, math | glassdoor | 📌fundamental concept |
-| 295 | [Cities Attractiveness](/interviews/bizreach/cities-attractiveness) | dynamic programming | interview | 1st O(n^2) 📌2nd O(n) |
+| 295 | [Cities Attractiveness](/glassdoor/bizreach/cities-attractiveness) | dynamic programming | interview | 1st O(n^2) 📌2nd O(n) |
 | 295 | [Insufficient Nodes in Root to Leaf Paths](/leetcode/1080-insufficient-nodes-in-root-to-leaf-paths) | tree, recursion | [leetcode 1080](https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/) | 1st O(n) |
 | 295 | [All Possible Full Binary Trees](/leetcode/894-all-possible-full-binary-trees) | tree, recursion | [leetcode 894](https://leetcode.com/problems/all-possible-full-binary-trees/) | O(2^n) learned from others |
 | 296 | [Add to Array-Form of Integer](/leetcode/989-add-to-array-form-of-integer) | array | [leetcode 989](https://leetcode.com/problems/add-to-array-form-of-integer/) | O(n+m) |
