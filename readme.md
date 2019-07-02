@@ -710,7 +710,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 269 | [Range Addition II](/leetcode/598-range-addition-ii) | array | [leetcode 598](https://leetcode.com/problems/range-addition-ii/) | 📌1st O(OR+OC) 2nd O(O) |
 | 269 | [Range Addition](/leetcode/370-range-addition) | prefix sum | [leetcode 370](https://leetcode.com/problems/range-addition/) | 📌1st O(O) |
 | 270 | [Set Mismatch](/leetcode/645-set-mismatch) | hashtable, math | [leetcode 370](https://leetcode.com/problems/set-mismatch/) | 📌1st O(O)Q(n) 2nd O(n)Q(1) |
-| 270 | [Shortest Distance to a Character](/leetcode/821-shortest-distance-to-a-character) | binary search, array | [leetcode 821](https://leetcode.com/problems/shortest-distance-to-a-character/) | 1st binary searchO(Ologn), 📌2nd O(n) back and forth cache technique |
+| 270 | [Shortest Distance to a Character](/leetcode/821-shortest-distance-to-a-character) | binary search, array | [leetcode 821](https://leetcode.com/problems/shortest-distance-to-a-character/) | 1st binary searchO(Ologn), 📌2nd O(n) back&forth cache technique |
 | 270 | [Remove All Adjacent Duplicates In String](/leetcode/1047-remove-all-adjacent-duplicates-in-string) | stack | [leetcode 1047](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | ⭐️1st O(n) similar to parentheses problem |
 | 270 | [Distant Barcodes](/leetcode/1054-distant-barcodes) | heap, hashtable | [leetcode 1054](https://leetcode.com/problems/distant-barcodes/) | ⭐️1st, 2nd O(nlogn) similar to [leetcode 767](https://leetcode.com/problems/reorganize-string/) |
 | 270 | [PermCheck](/codility/4-counting_elements) | hashtable | [codility 4](https://app.codility.com/programmers/lessons/4-counting_elements/perm_check/) |  |
@@ -764,7 +764,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 279 | [Leaf-Similar Trees](/leetcode/872-leaf-similar-trees) | tree, recursion | [leetcode 872](https://leetcode.com/problems/leaf-similar-trees/) | 1st recurisve dfs O(n). 2nd iterative dfs O(n) |
 | 279 | [Monotone Increasing Digits](/leetcode/738-monotone-increasing-digits) | math | [leetcode 738](https://leetcode.com/problems/monotone-increasing-digits/) | 📌learned from others |
 | 279 | [Increasing Subsequences](/leetcode/491-increasing-subsequences) | recursion | [leetcode 491](https://leetcode.com/problems/increasing-subsequences/) | 📌similar to [leetcode 78](https://leetcode.com/problems/subsets/) |
-| 279 | [Increasing Triplet Subsequence](/leetcode/334-increasing-triplet-subsequence) | array | [leetcode 334](https://leetcode.com/problems/increasing-triplet-subsequence/) | 📌📌📌back and forth array technique |
+| 279 | [Increasing Triplet Subsequence](/leetcode/334-increasing-triplet-subsequence) | array | [leetcode 334](https://leetcode.com/problems/increasing-triplet-subsequence/) | 📌📌📌back&forth array technique |
 | 280 | [Sum of Square Numbers](/leetcode/633-sum-of-square-numbers) | math | [leetcode 633](https://leetcode.com/problems/sum-of-square-numbers/) | 📌📌📌1st O(sqrt(n)^2) LTE 2nd O(sqrt(n)) beats 78% |
 | 281 | [Sum of Even Numbers After Queries](/leetcode/985-sum-of-even-numbers-after-queries) | math, array | [leetcode 985](https://leetcode.com/problems/sum-of-even-numbers-after-queries/) | 1st O(n) |
 | 281 | [Pairs of Songs With Total Durations Divisible by 60](/leetcode/1010-pairs-of-songs-with-total-durations-divisible-by-60) | math, hashtable | [leetcode 1010](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) | 📌📌📌very good question O(n)Q(n) |
@@ -828,3 +828,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 299 | [Missing Element in Sorted Array](/leetcode/1060-missing-element-in-sorted-array) | binary search | [leetcode 1060](https://leetcode.com/problems/missing-element-in-sorted-array/) | 📌📌📌 mindblowing binary search approach |
 | 299 | [First Non-repeating Element in a Data Stream](/glassdoor/rakuten/non-repeating-char-in-a-stream) | hashtable, linked list | glassdoor | 📌 |
 | 300 | [Find K-Length Substrings With No Repeated Characters](/leetcode/1100-find-k-length-substrings-with-no-repeated-characters) | hashtable, linked list | [leetcode 1100](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/) | 📌 |
+| 300 | [EquiLeader](/codility/8-equi_leader) | array | [codility 8](https://app.codility.com/programmers/lessons/8-leader/equi_leader/) | 📌back&forth |
