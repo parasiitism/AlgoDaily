@@ -34,8 +34,8 @@ print(Solution().merge(a))
 print("-----")
 
 """
-    1st approach: sort
-    1. sort the intervals by start time
+    2nd approach: sort by comparator
+    1. sort the intervals by start time and order by end time
     2. iterate the intervals and compare the cur interval start time with the last interval end time
 
     Time    O(nlogn)
@@ -62,8 +62,8 @@ class Solution(object):
         res = [intervals[0]]
         for i in range(1, len(intervals)):
             cur = intervals[i]
-            if res[-1][1] < cur[0]:
-                res.append(cur)
+            if cur[0] <= res[-1][1]:
+                res[-1][1] = cur[1]
             else:
-                res[-1][1] = max(res[-1][1], cur[1])
+                res.append(cur)
         return res

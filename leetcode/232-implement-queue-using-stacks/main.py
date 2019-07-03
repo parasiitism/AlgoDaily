@@ -3,25 +3,17 @@
     
     Time    O(n)
     Space   O(n)
-    20 ms, faster than 61.17%
+    16 ms, faster than 81.57%
 """
 
 
 class MyQueue(object):
 
     def __init__(self):
-        """
-        Initialize your data structure here.
-        """
         self.mainS = []
         self.minorS = []
 
     def push(self, x):
-        """
-        Push element x to the back of queue.
-        :type x: int
-        :rtype: None
-        """
         while len(self.mainS) > 0:
             self.minorS.append(self.mainS.pop())
         self.mainS.append(x)
@@ -29,22 +21,39 @@ class MyQueue(object):
             self.mainS.append(self.minorS.pop())
 
     def pop(self):
-        """
-        Removes the element from in front of queue and returns that element.
-        :rtype: int
-        """
         return self.mainS.pop()
 
     def peek(self):
-        """
-        Get the front element.
-        :rtype: int
-        """
-        return self.mainS[-1]  # rmb: peek is to peek the top(last) element in the stack
+        temp = self.mainS.pop()
+        self.mainS.append(temp)
+        return temp  # rmb: peek is to peek the top(last) element in the stack
 
     def empty(self):
-        """
-        Returns whether the queue is empty.
-        :rtype: bool
-        """
         return len(self.mainS) == 0
+
+
+"""
+    actually why just do it with an array
+    
+    Time    O(n)
+    Space   O(n)
+    12 ms, faster than 93.00%
+"""
+
+
+class MyQueue(object):
+
+    def __init__(self):
+        self.arr = []
+
+    def push(self, x):
+        self.arr.append(x)
+
+    def pop(self):
+        return self.arr.pop(0)
+
+    def peek(self):
+        return self.arr[0]
+
+    def empty(self):
+        return len(self.arr) == 0

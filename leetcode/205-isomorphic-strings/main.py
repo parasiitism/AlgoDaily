@@ -49,7 +49,7 @@ class Solution(object):
 
     Time  O(n)
     Space O(n)
-    28 ms, faster than 87.21%
+    16 ms, faster than 99.75%
 """
 
 
@@ -67,11 +67,9 @@ class Solution(object):
     def getSignature(sefl, word):
         signature = ""
         seen = {}
-        nth = 0
         for c in word:
             if c not in seen:
-                seen[c] = str(nth)
-                nth += 1
+                seen[c] = str(len(seen))
             signature += seen[c] + '#'
         return signature
 
@@ -115,11 +113,9 @@ def groupIsomorphic(strs):
     def getSignature(word):
         signature = ""
         seen = {}
-        nth = 0
         for c in word:
             if c not in seen:
-                seen[c] = str(nth)
-                nth += 1
+                seen[c] = str(len(seen))
             signature += seen[c] + '#'
         return signature
 

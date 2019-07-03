@@ -799,7 +799,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 289 | [Fraction to Recurring Decimal](/leetcode/166-fraction-to-recurring-decimal) | hashtable | [leetcode 166](https://leetcode.com/problems/166-fraction-to-recurring-decimal/) | ⭐️ interesting question |
 | 289 | [Convert a Number to Hexadecimal](/leetcode/405-convert-a-number-to-hexadecimal) | math | [leetcode 405](https://leetcode.com/problems/405-convert-a-number-to-hexadecimal/) | ⭐️ interesting question |
 | 290 | [High Five](/leetcode/1086-high-five) | sort, heap | [leetcode 1086](https://leetcode.com/problems/high-five/) | |
-| 290 | [Counting Bits](/leetcode/338-counting-bits) | bit op | [leetcode 338](https://leetcode.com/problems/counting-bits/) | 1st O(NlogN) 📌 |
+| 290 | [Counting Bits](/leetcode/338-counting-bits) | bit op, dynamic programming | [leetcode 338](https://leetcode.com/problems/counting-bits/) | 1st O(NlogN) 📌📌📌dp O(n) |
 | 291 | [Compare URLs](/glassdoor/jpmorgan/compare-urls) | string | interview | O(n) takeaway is `urllib` and `urlparse`|
 | 292 | [Available Captures for Rook](/leetcode/999-available-captures-for-rook) | graph | [leetcode 999](https://leetcode.com/problems/available-captures-for-rook/) | O(RC+R+C) |
 | 292 | [Longest Consecutive Sequence](/leetcode/128-longest-consecutive-sequence) | sort, union find | [leetcode 128](https://leetcode.com/problems/longest-consecutive-sequence/) | 1st sorting O(nlogn). 📌2nd union find O(nlogn) |
@@ -829,3 +829,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 299 | [First Non-repeating Element in a Data Stream](/glassdoor/rakuten/non-repeating-char-in-a-stream) | hashtable, linked list | glassdoor | 📌 |
 | 300 | [Find K-Length Substrings With No Repeated Characters](/leetcode/1100-find-k-length-substrings-with-no-repeated-characters) | hashtable, linked list | [leetcode 1100](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/) | 📌 |
 | 300 | [EquiLeader](/codility/8-equi_leader) | array | [codility 8](https://app.codility.com/programmers/lessons/8-leader/equi_leader/) | 📌back&forth |
+| 301 | [Campus Bikes](/leetcode/1057-campus-bikes) | heap, sort, hashtable | [leetcode 1057](https://leetcode.com/problems/campus-bikes/) | 1st heap O(2nlogn) LTE 📌2nd sort O(nlogn) |

@@ -1,15 +1,18 @@
+"""
+    1st approach: classic dynamic programming approach
+    - https://www.youtube.com/watch?v=NYeVhmWsWec
+
+    Time  O(r*c)
+    Space O(r*c)
+    160 ms, faster than 93.75%
+"""
+
+
 class Solution(object):
     def maximalSquare(self, matrix):
         """
         :type matrix: List[List[str]]
         :rtype: int
-
-        1st approach: classic dynamic programming approach
-        - https://www.youtube.com/watch?v=NYeVhmWsWec
-
-        Time  O(r*c)
-        Space O(r*c)
-        104 ms, faster than 44.55% 
         """
         if len(matrix) == 0 or len(matrix[0]) == 0:
             return 0

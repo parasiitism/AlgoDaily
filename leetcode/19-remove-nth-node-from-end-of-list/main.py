@@ -71,14 +71,16 @@ class Solution(object):
         """
         if n <= 0:
             return head
-        slow = head
         fast = head
         for _ in range(n):
             fast = fast.next
+            if fast == None:
+                break
         # it means the nth points to the head
         if fast == None:
             return head.next
         # traverse
+        slow = head
         while fast.next != None:
             slow = slow.next
             fast = fast.next
