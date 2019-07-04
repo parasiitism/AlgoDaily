@@ -33,17 +33,9 @@ class Solution(object):
         return a * b / self.findGcd(a, b)
 
     def findGcd(self, a, b):
-        if a == 0 or b == 0:
-            return 0
-        dividend = max(a, b)
-        divisor = min(a, b)
-        while divisor != 0:
-            remainder = dividend % divisor
-            if remainder == 0:
-                break
-            dividend = divisor
-            divisor = remainder
-        return divisor
+        if b == 0:
+            return a
+        return findGcd(b, a % b)
 
 
 print(Solution().lcm([3, 2]))

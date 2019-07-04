@@ -18,6 +18,8 @@ class Solution(object):
         :type divisor: int
         :rtype: int
         """
+        if divisor == 0:
+            raise ValueError("divisor cannot be 0")
         sign = 1
         if (dividend < 0 and divisor > 0) or (dividend > 0 and divisor < 0):
             sign = -1
@@ -43,4 +45,8 @@ class Solution(object):
 
 a = -2147483648
 b = -1
+# print(Solution().divide(a, b))
+
+a = 91
+b = 0
 print(Solution().divide(a, b))

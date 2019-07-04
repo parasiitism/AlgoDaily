@@ -27,10 +27,10 @@ class Solution(object):
         :rtype: int
         """
         res = -sys.maxsize
-        prevSum = -sys.maxsize
+        curSum = -sys.maxsize
         for num in nums:
-            prevSum = max(prevSum+num, num)
-            res = max(res, prevSum)
+            curSum = max(curSum+num, num)
+            res = max(res, curSum)
         return res
 
 
@@ -61,22 +61,22 @@ class Solution(object):
         """
         res = -sys.maxsize
         resArr = []
-        prevSum = -sys.maxsize
-        prevSumArr = []
+        curSum = -sys.maxsize
+        curSumArr = []
         for num in nums:
             # update current sum and array
-            # we use >= instead of > because we want to include the head if the prevsum == 0
-            if prevSum+num >= num:
-                prevSum += num
-                prevSumArr.append(num)
+            # we use >= instead of > because we want to include the head if the curSum == 0
+            if curSum+num >= num:
+                curSum += num
+                curSumArr.append(num)
             else:
-                prevSum = num
-                prevSumArr = [num]
+                curSum = num
+                curSumArr = [num]
             # update global result and result array
-            # we use >= instead of > because we want to include the head if the prevsum == 0
-            if prevSum >= res:
-                res = prevSum
-                resArr = prevSumArr[:]
+            # we use >= instead of > because we want to include the head if the curSum == 0
+            if curSum >= res:
+                res = curSum
+                resArr = curSumArr[:]
         return res, resArr
 
 

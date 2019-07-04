@@ -79,6 +79,7 @@ class Solution(object):
                 while len(stack) > 0 and stack[-1] > 0 and abs(num) > stack[-1]:
                     stack.pop()
                 # same size asteroid collide
+                # e.g. [10,5,-5,-10,-3] dont put -10 onto the stack
                 if len(stack) > 0 and stack[-1] > 0 and abs(num) == stack[-1]:
                     stack.pop()
                     continue
