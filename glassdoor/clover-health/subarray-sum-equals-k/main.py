@@ -36,6 +36,30 @@ we see that 9-1 = 8, so nums[1:3] is the answer
 """
 
 
+def bruteforce(nums, target):
+    for i in range(len(nums)):
+        total = 0
+        for j in range(i, len(nums)):
+            total += nums[j]
+            if total == target:
+                return nums[i:j+1]
+    return []
+
+
+a = [1, 3, 5, 23, 2]
+b = 7
+print(bruteforce(a, b))
+b = 8
+print(bruteforce(a, b))
+b = 25
+print(bruteforce(a, b))
+a = [1, 3, 5, 23, 2, 1, 3, 2]
+b = 6
+print(bruteforce(a, b))
+
+print("-----")
+
+
 def rangeSum2Target(nums, target):
     pfs = 0
     m = {}
