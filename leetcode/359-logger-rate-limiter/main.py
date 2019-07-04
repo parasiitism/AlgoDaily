@@ -5,6 +5,8 @@
     Space   O(n)
     136 ms, faster than 51.26%
 """
+
+
 class Logger(object):
 
     def __init__(self):
@@ -12,7 +14,6 @@ class Logger(object):
         Initialize your data structure here.
         """
         self.ht = {}
-        
 
     def shouldPrintMessage(self, timestamp, message):
         """
@@ -27,12 +28,11 @@ class Logger(object):
             self.ht[message] = timestamp
             return True
         else:
-            if timestamp - 10 < self.ht[message]:
-                return False
-            else:
+            if self.ht[message] <= timestamp - 10:
                 self.ht[message] = timestamp
                 return True
-        
+            else:
+                return False
 
 
 # Your Logger object will be instantiated and called as such:
