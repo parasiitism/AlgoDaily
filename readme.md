@@ -830,3 +830,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 300 | [Find K-Length Substrings With No Repeated Characters](/leetcode/1100-find-k-length-substrings-with-no-repeated-characters) | hashtable, linked list | [leetcode 1100](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/) | 📌 |
 | 300 | [EquiLeader](/codility/8-equi_leader) | array | [codility 8](https://app.codility.com/programmers/lessons/8-leader/equi_leader/) | 📌back&forth |
 | 301 | [Campus Bikes](/leetcode/1057-campus-bikes) | heap, sort, hashtable | [leetcode 1057](https://leetcode.com/problems/campus-bikes/) | 1st heap O(2nlogn) LTE 📌2nd sort O(nlogn) |
+| 302 | [Height Checker](/leetcode/1051-height-checker) | sort | [leetcode 1051](https://leetcode.com/problems/height-checker/) | |
+| 302 | [Two Sum Less Than K](/leetcode/1099-two-sum-less-than-k) | sort, binary search | [leetcode 1099](https://leetcode.com/problems/two-sum-less-than-k/) | ⭐️1st O(nlogn), 2nd O(2nlogn) |
+| 303 | [Positions of Large Groups](/leetcode/830-positions-of-large-groups) | 2pointers | [leetcode 830](https://leetcode.com/problems/positions-of-large-groups/) |  |
+| 303 | [X of a Kind in a Deck of Cards](/leetcode/914-x-of-a-kind-in-a-deck-of-cards) | math | [leetcode 1099](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/) | gcd |

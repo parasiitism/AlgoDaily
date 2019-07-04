@@ -77,7 +77,7 @@ func InorderRecursive(root *TreeNode) []int {
 
 /*
 	2nd approach: inorder
-	- actually the inorder traversal of a BST is suppoed to be a sorted list of a valid
+	- actually the inorder traversal of a BST is supposed to be a sorted list of a valid
 	- so in the traversal, if the prev node >= current node, we found the swap nodes
 
 	learned from others

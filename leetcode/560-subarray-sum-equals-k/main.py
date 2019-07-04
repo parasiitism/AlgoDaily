@@ -29,23 +29,23 @@ class Solution(object):
         :rtype: int
         """
         res = 0
-        acc = 0
+        pfs = 0
         # key: previous sum, value: number of occurence of a previous sum
         ht = {}
         for i in range(len(nums)):
-            acc += nums[i]
-            # if acc == k, it is one of the target subarray
-            if acc == k:
+            pfs += nums[i]
+            # if pfs == k, it is one of the target subarray
+            if pfs == k:
                 res += 1
-            # if acc-k in hashtable, it is one of the target subarray
-            remain = acc-k
+            # if pfs-k in hashtable, it is one of the target subarray
+            remain = pfs-k
             if remain in ht:
                 res += ht[remain]
-            # put the acc into the hashtable
-            if acc not in ht:
-                ht[acc] = 1
+            # put the pfs into the hashtable
+            if pfs not in ht:
+                ht[pfs] = 1
             else:
-                ht[acc] += 1
+                ht[pfs] += 1
         return res
 
 
@@ -84,20 +84,20 @@ class Solution(object):
         :rtype: int
         """
         res = 0
-        acc = 0
+        pfs = 0
         # key: previous sum, value: number of occurence of a previous sum
         ht = {}
-        ht[0] = 1  # if acc == k remain = 0, it is one of the target subarray
+        ht[0] = 1  # if pfs == k remain = 0, it is one of the target subarray
         for i in range(len(nums)):
-            acc += nums[i]
-            # if acc-k in hashtable, it is one of the target subarray
-            if acc-k in ht:
-                res += ht[acc-k]
-            # put the acc into the hashtable
-            if acc not in ht:
-                ht[acc] = 1
+            pfs += nums[i]
+            # if pfs-k in hashtable, it is one of the target subarray
+            if pfs-k in ht:
+                res += ht[pfs-k]
+            # put the pfs into the hashtable
+            if pfs not in ht:
+                ht[pfs] = 1
             else:
-                ht[acc] += 1
+                ht[pfs] += 1
         return res
 
 

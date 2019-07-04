@@ -9,6 +9,7 @@ class TreeNode(object):
 """
     1st approach
     - compare the node.val with min & max in each recursion
+    
     Time 	O(n)
     Space	O(h)
     52ms beats 19.48%
@@ -37,18 +38,12 @@ class Solution(object):
 """
     2nd approach: stack based dfs
     - compare the node.val with min & max in each iteration
+
     Time 	O(n)
     Space	O(h)
     44 ms, faster than 30.58%
-    23apr2019
+    3july2019
 """
-
-
-class StackItem(object):
-    def __init__(self, node, left, right):
-        self.node = node
-        self.left = left
-        self.right = right
 
 
 class Solution(object):
@@ -60,16 +55,15 @@ class Solution(object):
         if root == None:
             return True
         stack = []
-        stack.append(StackItem(root, -sys.maxsize, sys.maxsize))
+        stack.append((root, -sys.maxsize, sys.maxsize))
         while len(stack) > 0:
-            pop = stack.pop()
-            if pop.node.val <= pop.left or pop.node.val >= pop.right:
+            node, left, right = stack.pop()
+            if node.val <= left or node.val >= right:
                 return False
-            if pop.node.left != None:
-                stack.append(StackItem(pop.node.left, pop.left, pop.node.val))
-            if pop.node.right != None:
-                stack.append(StackItem(pop.node.right,
-                                       pop.node.val, pop.right))
+            if node.left != None:
+                stack.append((node.left, left, node.val))
+            if node.right != None:
+                stack.append((node.right, node.val, right))
         return True
 
 

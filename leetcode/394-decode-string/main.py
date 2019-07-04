@@ -1,5 +1,5 @@
 """
-    2nd approach: 2 stacks
+    1st approach: 2 stacks
 
     - 1 stack for counts
     - 2 stack for substrings
@@ -65,4 +65,48 @@ class Solution(object):
 print(Solution().decodeString("3[a]2[bc]"))
 print(Solution().decodeString("3[a2[c]]"))
 print(Solution().decodeString("2[abc]3[cd]ef"))
-print(Solution().decodeString("21[abc]3[cd]ef"))
+print(Solution().decodeString("3[a12[c]]"))
+
+print("-----")
+
+"""
+    2nd approach: recursion
+
+    Time    O(n)
+    Space   O(n)
+    20 ms, faster than 65.98%
+"""
+
+
+class Solution(object):
+    def decodeString(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        chars = []
+        for c in s:
+            chars.append(c)
+        return self.dfs(chars)
+
+    def dfs(self, chars):
+        res = ''
+        num = 0
+        while len(chars) > 0:
+            pop = chars.pop(0)
+            if pop.isdigit():
+                num = num*10 + int(pop)
+            elif pop == '[':
+                res += num * self.dfs(chars)
+                num = 0
+            elif pop == ']':
+                return res
+            else:
+                res += pop
+        return res
+
+
+print(Solution().decodeString("3[a]2[bc]"))
+print(Solution().decodeString("3[a2[c]]"))
+print(Solution().decodeString("2[abc]3[cd]ef"))
+print(Solution().decodeString("3[a12[c]]"))

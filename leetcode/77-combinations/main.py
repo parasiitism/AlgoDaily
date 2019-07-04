@@ -29,7 +29,7 @@ class Solution(object):
     def dfs(self, nums, path, k):
         if len(path) == k:
             self.result.append(path)
-        else:
+        elif len(path) < k:
             for i in range(len(nums)):
                 self.dfs(nums[i+1:], path + [nums[i]], k)
 
@@ -62,7 +62,7 @@ class Solution1(object):
     def dfs(self, start, n, path, k):
         if len(path) == k:
             self.result.append(path)
-        else:
+        elif len(path) < k:
             for i in range(start, n+1):
                 self.dfs(i+1, n, path + [i], k)
 

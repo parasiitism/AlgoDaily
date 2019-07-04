@@ -23,10 +23,22 @@ class Solution(object):
                 return nums[left]
 
             # binary search, always keep the mid
+            # e.g.1
+            # 4, 5, 1, 2, 3
+            #       ^
+            # 4, 5, 1     <- next iteration
             mid = (left + right)//2
             if nums[left] > nums[mid]:
                 right = mid
             else:
+                # e.g.1
+                # 4, 5, 6, 7, 8, 1, 2
+                #          ^
+                #             8, 1, 2 <- next iteration
+                # e.g.2
+                # 4, 5, 6, 7, 1, 2
+                #          ^
+                #             1, 2 <- next iteration
                 left = mid + 1
 
 

@@ -12,7 +12,7 @@ package main
 */
 
 /*
-	1st approach: hashtable
+	1st approach: hashset
 	Time		O(len(J)+len(S))
 	Space		O(len(J))
 	17jan2019

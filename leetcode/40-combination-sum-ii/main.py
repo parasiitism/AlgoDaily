@@ -71,15 +71,13 @@ class Solution(object):
         return self.result
 
     def dfs(self, candidates, target, path, total):
+        if total == target:
             self.result.append(path)
         elif total < target:
             for i in range(len(candidates)):
-                if i > 0 and candidates[i-1] == candidates[i]:
-                    continue
                 can = candidates[i]
-                newPath = path + [can]
-                self.dfs(candidates[i+1:], target, newPath, total+can)
-        
+                if i == 0 or candidates[i-1] != candidates[i]:
+                    self.dfs(candidates[i+1:], target, path+[can], total+can)
 
 
 a = [10, 1, 2, 7, 6, 1, 5]

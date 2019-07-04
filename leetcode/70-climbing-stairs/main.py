@@ -27,6 +27,16 @@ class Solution(object):
         return dp[n]
 
 
+print(Solution().climbStairs(0))
+print(Solution().climbStairs(1))
+print(Solution().climbStairs(2))
+print(Solution().climbStairs(3))
+print(Solution().climbStairs(4))
+print(Solution().climbStairs(40))
+
+print("-----")
+
+
 """
     2nd approach: top-down recursive
     - use a hashtable to avoid redundant calculation
@@ -42,15 +52,26 @@ class Solution(object):
     def __init__(self):
         self.cache = {}
         self.cache[0] = 1
-        self.cache[1] = 1
 
     def climbStairs(self, n):
         """
         :type n: int
         :rtype: int
         """
+        if n == 0:
+            # when n == 0, we retuen 1 because it means this path be subtracted down to 0
+            return self.cache[0]
+        if n < 0:
+            return 0
         if n in self.cache:
             return self.cache[n]
-        temp = self.climbStairs(n-1) + self.climbStairs(n-2)
-        self.cache[n] = temp
-        return temp
+        self.cache[n] = self.climbStairs(n-1) + self.climbStairs(n-2)
+        return self.cache[n]
+
+
+print(Solution().climbStairs(0))
+print(Solution().climbStairs(1))
+print(Solution().climbStairs(2))
+print(Solution().climbStairs(3))
+print(Solution().climbStairs(4))
+print(Solution().climbStairs(40))

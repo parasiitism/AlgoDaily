@@ -7,9 +7,11 @@ import collections
     - put the hashtable key&value into a priority queue
     - the first k elements are the top k elements in the priority queue
 
-    36ms beats 82.56%
-    1feb2019
+    92 ms, faster than 78.84%
+    3july2019
 """
+
+
 class Solution(object):
     def topKFrequent(self, nums, k):
         """
@@ -19,7 +21,6 @@ class Solution(object):
         """
         if k > len(nums):
             return []
-        maxOccur = 0
         ht = {}
         pq = []
         # count the freq for each num
@@ -28,11 +29,9 @@ class Solution(object):
                 ht[num] += 1
             else:
                 ht[num] = 1
-            if ht[num] > maxOccur:
-                maxOccur = ht[num]
         # put the num: freq into a prioroity queue
         for key in ht:
-            heapq.heappush(pq, (maxOccur-ht[key], key))
+            heapq.heappush(pq, (-ht[key], key))
         # pop the first k element from the priority queue
         res = []
         for i in range(k):
@@ -59,6 +58,8 @@ print(Solution().topKFrequent(
     48ms beats 34.16%
     21mar2019
 """
+
+
 class Solution(object):
     def topKFrequent(self, nums, k):
         """
@@ -117,6 +118,8 @@ print("-----")
     96 ms, faster than 43.13%
     10may2019
 """
+
+
 class Solution(object):
     def topKFrequent(self, nums, k):
         """
@@ -124,7 +127,7 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-        
+
         # count occurence of each num
         maxFreq = 0
         ht = {}

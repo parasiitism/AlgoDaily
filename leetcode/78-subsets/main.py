@@ -31,10 +31,10 @@ class Solution(object):
         self.dfs(nums, [])
         return self.result
 
-    def dfs(self, nums, path):
-        self.result.append(path)
+    def dfs(self, nums, chosen):
+        self.result.append(chosen)
         for i in range(len(nums)):
-            self.dfs(nums[i+1:], path+[nums[i]])
+            self.dfs(nums[i+1:], chosen+[nums[i]])
 
 
 print(Solution().subsets([1, 2, 3]))
@@ -95,15 +95,15 @@ class Solution(object):
             keys.append(list(x))
         return keys
 
-    def recur(self, nums, arr, curIdx):
+    def recur(self, nums, chosen, curIdx):
         # there might be duplicate combinations
-        key = tuple(arr)
-        self.res[key] = arr
+        key = tuple(chosen)
+        self.res[key] = chosen
         if curIdx >= len(nums):
             return
         # choose or not choose
-        self.recur(nums, arr + [nums[curIdx]], curIdx+1)
-        self.recur(nums, arr[:], curIdx+1)
+        self.recur(nums, chosen + [nums[curIdx]], curIdx+1)
+        self.recur(nums, chosen[:], curIdx+1)
 
 
 print(Solution().subsets([1, 2, 3]))
