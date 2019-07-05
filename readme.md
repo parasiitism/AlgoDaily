@@ -835,3 +835,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 303 | [Positions of Large Groups](/leetcode/830-positions-of-large-groups) | 2pointers | [leetcode 830](https://leetcode.com/problems/positions-of-large-groups/) |  |
 | 303 | [X of a Kind in a Deck of Cards](/leetcode/914-x-of-a-kind-in-a-deck-of-cards) | math | [leetcode 1099](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/) | gcd |
 | 304 | [Lexicographical Numbers](/leetcode/386-lexicographical-numbers) | sort | [leetcode 386](https://leetcode.com/problems/lexicographical-numbers/) | |
+| 304 | [Brace Expansion](/leetcode/1087-brace-expansion) | recursion | [leetcode 1087](https://leetcode.com/problems/brace-expansion/) | 📌 |
