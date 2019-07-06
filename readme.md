@@ -837,3 +837,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 304 | [Lexicographical Numbers](/leetcode/386-lexicographical-numbers) | sort | [leetcode 386](https://leetcode.com/problems/lexicographical-numbers/) | |
 | 304 | [Brace Expansion](/leetcode/1087-brace-expansion) | recursion | [leetcode 1087](https://leetcode.com/problems/brace-expansion/) | 📌 |
 | 305 | [Maximum Product of Word Lengths](/leetcode/leetcode/318-maximum-product-of-word-lengths) | hashtable, bit op | [leetcode 318](https://leetcode.com/problems/leetcode/318-maximum-product-of-word-lengths/) | 1st O(26n^2) brute force 📌2nd O(n^2) bitop |
+| 305 | [Number of Atoms](/leetcode/leetcode/726-number-of-atoms) | hashtable, recursion | [leetcode 726](https://leetcode.com/problems/leetcode/726-number-of-atoms/) | 📌fresh attempt with intuitive recursion O(n^2) is good enough to beat 92.83% |
