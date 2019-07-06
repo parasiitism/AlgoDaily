@@ -836,5 +836,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 303 | [X of a Kind in a Deck of Cards](/leetcode/914-x-of-a-kind-in-a-deck-of-cards) | math | [leetcode 1099](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/) | gcd |
 | 304 | [Lexicographical Numbers](/leetcode/386-lexicographical-numbers) | sort | [leetcode 386](https://leetcode.com/problems/lexicographical-numbers/) | |
 | 304 | [Brace Expansion](/leetcode/1087-brace-expansion) | recursion | [leetcode 1087](https://leetcode.com/problems/brace-expansion/) | 📌 |
-| 305 | [Maximum Product of Word Lengths](/leetcode/leetcode/318-maximum-product-of-word-lengths) | hashtable, bit op | [leetcode 318](https://leetcode.com/problems/leetcode/318-maximum-product-of-word-lengths/) | 1st O(26n^2) brute force 📌2nd O(n^2) bitop |
-| 305 | [Number of Atoms](/leetcode/leetcode/726-number-of-atoms) | hashtable, recursion | [leetcode 726](https://leetcode.com/problems/leetcode/726-number-of-atoms/) | 📌fresh attempt with intuitive recursion O(n^2) is good enough to beat 92.83% |
+| 305 | [Maximum Product of Word Lengths](/leetcode/leetcode/318-maximum-product-of-word-lengths) | hashtable, bit op | [leetcode 318](https://leetcode.com/problems/leetcode/maximum-product-of-word-lengths/) | 1st O(26n^2) brute force 📌2nd O(n^2) bitop |
+| 305 | [Number of Atoms](/leetcode/leetcode/726-number-of-atoms) | hashtable, recursion | [leetcode 726](https://leetcode.com/problems/leetcode/number-of-atoms/) | 📌fresh attempt with intuitive recursion O(n^2) is good enough to beat 92.83% |
+| 306 | [Quad Tree Intersection](/leetcode/leetcode/558-quad-tree-intersection) | recursion | [leetcode 558](https://leetcode.com/problems/leetcode/quad-tree-intersection/) | ⭐️Quad Tree |
+| 306 | [Valid Word Abbreviation](/leetcode/leetcode/408-valid-word-abbreviation) | string | [leetcode 408](https://leetcode.com/problems/leetcode/valid-word-abbreviation/) |  |

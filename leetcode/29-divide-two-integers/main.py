@@ -137,3 +137,10 @@ print(Solution().divide(a, b))
 a = -2147483648
 b = -1
 print(Solution().divide(a, b))
+
+
+a = True
+b = False
+c = True
+d = True
+print(a + b + c + d)
