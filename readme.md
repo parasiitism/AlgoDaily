@@ -256,7 +256,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 144 | [Most Common Word](/leetcode/819-most-common-word) | string | [leetode 819](https://leetcode.com/problems/most-common-word/) | takeaway: python=>`re.split(r'\W+', paragraph)`. go=>`regexp.MustCompile(`[!?',;. ]`)`. js=>`paragraph.split(/[!?',;. ]/)`|
 | 144 | [Subtree of Another Tree](/leetcode/572-subtree-of-another-tree) | tree | [leetode 572](https://leetcode.com/problems/subtree-of-another-tree/) | 1st O(n^2). 2d O(n) |
 | 144 | [Subtree with Maximum Average](/glassdoor/amazon/subtree-with-maximum-average) | tree | 1point3acres |  |
-| 144 | [Divide Two Integers](/leetcode/29-divide-two-integers) | math | [leetcode 29](https://leetcode.com/problems/divide-two-integers/) | 📌 classic question in hk interviews |
+| 144 | [Divide Two Integers](/leetcode/29-divide-two-integers) | math | [leetcode 29](https://leetcode.com/problems/divide-two-integers/) | 📌classic question in hk interviews: 1st O(N), 2nd O(logN) |
 | 144 | [Product of Array Except Self](/leetcode/238-product-of-array-except-self) | math | [leetcode 238](https://leetcode.com/problems/product-of-array-except-self/) | using / got beting 60%. naive got TLE, proper approach 2836ms beats 5.92% |
 | 145 | [K Closest Points to Origin](/leetcode/973-k-closest-points-to-origin) | sort, heap | [leetcode 973](https://leetcode.com/problems/k-closest-points-to-origin/) | 📌 1st beats 72.46%. 2nd beats 98.95% in python |
 | 145 | [Gray Code](/leetcode/89-gray-code) | array, bit op | [leetcode 89](https://leetcode.com/problems/gray-code/) | 🤔 interesting |
