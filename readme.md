@@ -836,3 +836,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 303 | [X of a Kind in a Deck of Cards](/leetcode/914-x-of-a-kind-in-a-deck-of-cards) | math | [leetcode 1099](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/) | gcd |
 | 304 | [Lexicographical Numbers](/leetcode/386-lexicographical-numbers) | sort | [leetcode 386](https://leetcode.com/problems/lexicographical-numbers/) | |
 | 304 | [Brace Expansion](/leetcode/1087-brace-expansion) | recursion | [leetcode 1087](https://leetcode.com/problems/brace-expansion/) | 📌 |
+| 305 | [Maximum Product of Word Lengths](/leetcode/leetcode/318-maximum-product-of-word-lengths) | hashtable, bit op | [leetcode 318](https://leetcode.com/problems/leetcode/318-maximum-product-of-word-lengths/) | 1st O(26n^2) brute force 📌2nd O(n^2) bitop |
