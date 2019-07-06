@@ -19,7 +19,7 @@ class Solution(object):
         res = [[1]]
         for i in range(1, numRows):
             arr = (i+1) * [1]
-            for j in range(1, i):
+            for j in range(1, len(arr)-1):
                 arr[j] = res[i-1][j-1] + res[i-1][j]
             res.append(arr)
         return res
