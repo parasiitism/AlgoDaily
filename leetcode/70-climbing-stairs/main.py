@@ -32,6 +32,7 @@ print(Solution().climbStairs(1))
 print(Solution().climbStairs(2))
 print(Solution().climbStairs(3))
 print(Solution().climbStairs(4))
+print(Solution().climbStairs(13))
 print(Solution().climbStairs(40))
 
 print("-----")
@@ -51,7 +52,6 @@ class Solution(object):
 
     def __init__(self):
         self.cache = {}
-        self.cache[0] = 1
 
     def climbStairs(self, n):
         """
@@ -60,8 +60,8 @@ class Solution(object):
         """
         if n == 0:
             # when n == 0, we retuen 1 because it means this path be subtracted down to 0
-            return self.cache[0]
-        if n < 0:
+            return 1
+        elif n < 0:
             return 0
         if n in self.cache:
             return self.cache[n]
@@ -74,4 +74,5 @@ print(Solution().climbStairs(1))
 print(Solution().climbStairs(2))
 print(Solution().climbStairs(3))
 print(Solution().climbStairs(4))
+print(Solution().climbStairs(13))
 print(Solution().climbStairs(40))

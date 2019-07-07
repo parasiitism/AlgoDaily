@@ -1,3 +1,13 @@
+"""
+    2nd approach: 4 pointers
+    - narrow down the range by updating the poiners, minRow, maxRow, minCol, maxCol
+
+    Time    O(n)
+    Space   O(1)
+    8 ms, faster than 99.30%
+"""
+
+
 class Solution:
     def spiralOrder(self, matrix):
         """
@@ -33,6 +43,112 @@ class Solution:
             if minCol <= maxCol:
                 for i in range(maxRow, minRow-1, -1):
                     res.append(matrix[i][minCol])
+                minCol += 1
+        return res
+
+
+a = [
+    [1, 2, 3]
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2, 3],
+    [4, 5, 6],
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1],
+    [2],
+    [3],
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2],
+    [3, 4],
+    [5, 6],
+    [7, 8],
+    [9, 10]
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+]
+print(Solution().spiralOrder(a))
+
+a = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16],
+]
+print(Solution().spiralOrder(a))
+
+print("-----")
+
+"""
+    2nd approach: 4 pointers
+    - narrow down the range by updating the poiners, minRow, maxRow, minCol, maxCol
+
+    Time    O(n)
+    Space   O(1)
+    8 ms, faster than 99.30%
+"""
+
+
+class Solution(object):
+    def spiralOrder(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: List[int]
+        """
+        if len(matrix) == 0 or len(matrix[0]) == 0:
+            return []
+        minRow = 0
+        maxCol = len(matrix[0])-1
+        maxRow = len(matrix)-1
+        minCol = 0
+
+        res = []
+
+        while minRow <= maxRow and minCol <= maxCol:
+            # go right
+            j = minCol
+            while j <= maxCol:
+                res.append(matrix[minRow][j])
+                j += 1
+            minRow += 1
+            # go down
+            i = minRow
+            while i <= maxRow:
+                res.append(matrix[i][maxCol])
+                i += 1
+            maxCol -= 1
+            # go left
+            if minRow <= maxRow:
+                j = maxCol
+                while j >= minCol:
+                    res.append(matrix[maxRow][j])
+                    j -= 1
+                maxRow -= 1
+            # go up
+            if minCol <= maxCol:
+                i = maxRow
+                while i >= minRow:
+                    res.append(matrix[i][minCol])
+                    i -= 1
                 minCol += 1
         return res
 

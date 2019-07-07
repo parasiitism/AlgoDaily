@@ -17,14 +17,14 @@ class Solution(object):
             return 0
         included = [0] * len(nums)
         excluded = [0] * len(nums)
-        included[0] = nums[0]
-        for i in range(1, len(nums)):
+        for i in range(len(nums)):
             included[i] = max(
-                excluded[i-1]+nums[i],
+                excluded[i-1] + nums[i],
                 included[i-1]
             )
             excluded[i] = included[i-1]
         return included[-1]
+        # return max(included[-1], excluded[-1])
 
 
 """
@@ -48,7 +48,29 @@ class Solution(object):
         excluded = 0
         for i in range(1, len(nums)):
             temp = included
-            included = max(excluded+nums[i], included)
+            included = max(excluded + nums[i], included)
             excluded = temp
-        # return included
-        return max(included, excluded)
+        return included
+
+
+"""
+    followup: what if there are negative numbers? lets say the thieves might lose money by visiting a house
+"""
+
+
+class Solution(object):
+    def rob(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if len(nums) == 0:
+            return 0
+        included = nums[0]
+        excluded = 0
+        for i in range(1, len(nums)):
+            temp = included
+            # the crux is: the filth must be >= 0
+            included = max(excluded + max(nums[i], 0), included)
+            excluded = temp
+        return included

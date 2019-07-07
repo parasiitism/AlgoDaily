@@ -1,7 +1,6 @@
 class Solution():
     def __init__(self):
         self.m = {}
-        self.m[0] = 1
 
     def dfs(self, n):
         if n == 0:

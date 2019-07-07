@@ -13,8 +13,13 @@ import "fmt"
 */
 
 /*
-	learned from others: dynamic programming
-	- https://leetcode.com/problems/paint-house/discuss/230927/Beats-100-very-simple-solution
+	1st approach: dynamic programming, learned from others
+    - the basic idea is that when we pick a color, we should consider add up the cost from previous remaining colors
+    e.g. pick red, consider previous cost from green and blue
+
+    red = costs[i][0] + min(blue, green)
+
+	- https://www.youtube.com/watch?v=fZIsEPhSBgM&t=1s
 
 	Time	O(n)
 	Space	O(1)

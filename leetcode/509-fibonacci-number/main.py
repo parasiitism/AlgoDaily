@@ -29,6 +29,16 @@ class Solution(object):
         return temp
 
 
+print(Solution().fib(0))
+print(Solution().fib(1))
+print(Solution().fib(2))
+print(Solution().fib(3))
+print(Solution().fib(4))
+print(Solution().fib(13))
+print(Solution().fib(40))
+
+print("-----")
+
 """
     2nd: bottom-up iterative
 
@@ -49,3 +59,12 @@ class Solution(object):
         for i in range(2, N+1):
             dp.append(dp[i-1] + dp[i-2])
         return dp[N]
+
+
+print(Solution().fib(0))
+print(Solution().fib(1))
+print(Solution().fib(2))
+print(Solution().fib(3))
+print(Solution().fib(4))
+print(Solution().fib(13))
+print(Solution().fib(40))

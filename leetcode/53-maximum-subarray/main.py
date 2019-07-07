@@ -49,7 +49,7 @@ print(Solution().maxSubArray(a))
 print("-----")
 
 """
-    follow up: print the subarray with the max sum
+    follow up: print the longest subarray with the max sum
 """
 
 
@@ -90,4 +90,7 @@ a = [7, -3, -10, 4, 2, 8, -2, 4, -5, -6]
 print(Solution().maxSubArray(a))
 
 a = [-10, 2, 3, -2, 0, 5, -15]
+print(Solution().maxSubArray(a))
+
+a = [-2, 1, -3, 0, 0, 4, -1, 2, 1, 0, 0, -5, 4]
 print(Solution().maxSubArray(a))
