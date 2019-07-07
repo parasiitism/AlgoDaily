@@ -3,6 +3,12 @@
     - contruct a string from abbr
     - compare word with that string
 
+    e.g. s = internationalization, abbr = i12iz4n
+
+    s    => internationalization
+    abbr => i____________iz____n
+
+
     Time    O(n)
     Space   O(n)
     32 ms, faster than 12.99%
@@ -47,6 +53,90 @@ print(Solution().validWordAbbreviation(a, b))
 
 a = 'apple'
 b = 'a2e'
+print(Solution().validWordAbbreviation(a, b))
+
+a = 'a'
+b = '01'
+print(Solution().validWordAbbreviation(a, b))
+
+a = 'bignumberhahaha'
+b = '999999999'
+print(Solution().validWordAbbreviation(a, b))
+
+print("-----")
+
+"""
+    2nd approach: 2 pointers
+    - one pointer to iterate 'word'
+    - another pointer to iterate 'abbr'
+    - when we see a number in abbr, move the word pointer forward with that number
+    - return true if both pointers finally reach to the end
+
+    e.g. s = internationalization, abbr = i12iz4n
+
+    
+    internationalization, i12iz4n
+    ^                     ^
+    i=0                   j=0
+
+    internationalization, i12iz4n
+                 ^           ^
+            i=1+12=13       j=3
+    
+    internationalization, i12iz4n
+                  ^           ^
+            i=1+12=14       j=4
+    
+    internationalization, i12iz4n
+                       ^        ^
+                i=15+4=19       j=6
+    
+    internationalization, i12iz4n
+                        ^        ^
+                        end     end
+
+    Time    O(n)
+    Space   O(1)
+    32 ms, faster than 12.99%
+    20 ms, faster than 73.62% 
+"""
+
+
+class Solution(object):
+    def validWordAbbreviation(self, word, abbr):
+        """
+        :type word: str
+        :type abbr: str
+        :rtype: bool
+        """
+        i, j = 0, 0
+        while i < len(word) and j < len(abbr):
+            if word[i] == abbr[j]:
+                i += 1
+                j += 1
+            elif abbr[j].isdigit():
+                num = 0
+                while j < len(abbr) and abbr[j].isdigit():
+                    if num == 0 and int(abbr[j]) == 0:
+                        return False
+                    num = num*10 + int(abbr[j])
+                    j += 1
+                i += num
+            else:
+                break
+        return i == len(word) and j == len(abbr)
+
+
+a = 'internationalization'
+b = 'i12iz4n'
+print(Solution().validWordAbbreviation(a, b))
+
+a = 'apple'
+b = 'a2e'
+print(Solution().validWordAbbreviation(a, b))
+
+a = 'a'
+b = '01'
 print(Solution().validWordAbbreviation(a, b))
 
 a = 'bignumberhahaha'
