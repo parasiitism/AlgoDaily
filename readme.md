@@ -840,3 +840,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 305 | [Number of Atoms](/leetcode/leetcode/726-number-of-atoms) | hashtable, recursion | [leetcode 726](https://leetcode.com/problems/leetcode/number-of-atoms/) | 📌fresh attempt with intuitive recursion O(n^2) is good enough to beat 92.83% |
 | 306 | [Quad Tree Intersection](/leetcode/leetcode/558-quad-tree-intersection) | recursion | [leetcode 558](https://leetcode.com/problems/leetcode/quad-tree-intersection/) | ⭐️Quad Tree |
 | 306 | [Valid Word Abbreviation](/leetcode/leetcode/408-valid-word-abbreviation) | string | [leetcode 408](https://leetcode.com/problems/leetcode/valid-word-abbreviation/) | ⭐️ 1st O(n)Q(n). 2nd O(n)Q(1) |
+| 307 | [Remove Outermost Parentheses](/leetcode/leetcode/1021-remove-outermost-parentheses) | stack | [leetcode 1021](https://leetcode.com/problems/leetcode/remove-outermost-parentheses/) | |
