@@ -836,11 +836,12 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 303 | [X of a Kind in a Deck of Cards](/leetcode/914-x-of-a-kind-in-a-deck-of-cards) | math | [leetcode 1099](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/) | gcd |
 | 304 | [Lexicographical Numbers](/leetcode/386-lexicographical-numbers) | sort | [leetcode 386](https://leetcode.com/problems/lexicographical-numbers/) | |
 | 304 | [Brace Expansion](/leetcode/1087-brace-expansion) | recursion | [leetcode 1087](https://leetcode.com/problems/brace-expansion/) | 📌 |
-| 305 | [Maximum Product of Word Lengths](/leetcode/leetcode/318-maximum-product-of-word-lengths) | hashtable, bit op | [leetcode 318](https://leetcode.com/problems/leetcode/maximum-product-of-word-lengths/) | 1st O(26n^2) brute force 📌2nd O(n^2) bitop |
-| 305 | [Number of Atoms](/leetcode/leetcode/726-number-of-atoms) | hashtable, recursion | [leetcode 726](https://leetcode.com/problems/leetcode/number-of-atoms/) | 📌fresh attempt with intuitive recursion O(n^2) is good enough to beat 92.83% |
-| 306 | [Quad Tree Intersection](/leetcode/leetcode/558-quad-tree-intersection) | recursion | [leetcode 558](https://leetcode.com/problems/leetcode/quad-tree-intersection/) | ⭐️Quad Tree |
-| 306 | [Valid Word Abbreviation](/leetcode/leetcode/408-valid-word-abbreviation) | string | [leetcode 408](https://leetcode.com/problems/leetcode/valid-word-abbreviation/) | ⭐️ 1st O(n)Q(n). 2nd O(n)Q(1) |
-| 307 | [Remove Outermost Parentheses](/leetcode/leetcode/1021-remove-outermost-parentheses) | stack | [leetcode 1021](https://leetcode.com/problems/leetcode/remove-outermost-parentheses/) | |
+| 305 | [Maximum Product of Word Lengths](/leetcode/318-maximum-product-of-word-lengths) | hashtable, bit op | [leetcode 318](https://leetcode.com/problems/maximum-product-of-word-lengths/) | 1st O(26n^2) brute force 📌2nd O(n^2) bitop |
+| 305 | [Number of Atoms](/leetcode/726-number-of-atoms) | hashtable, recursion | [leetcode 726](https://leetcode.com/problems/number-of-atoms/) | 📌fresh attempt with intuitive recursion O(n^2) is good enough to beat 92.83% |
+| 306 | [Quad Tree Intersection](/leetcode/558-quad-tree-intersection) | recursion | [leetcode 558](https://leetcode.com/problems/quad-tree-intersection/) | ⭐️Quad Tree |
+| 306 | [Valid Word Abbreviation](/leetcode/408-valid-word-abbreviation) | string | [leetcode 408](https://leetcode.com/problems/valid-word-abbreviation/) | ⭐️ 1st O(n)Q(n). 2nd O(n)Q(1) |
+| 307 | [Remove Outermost Parentheses](/leetcode/1021-remove-outermost-parentheses) | stack | [leetcode 1021](https://leetcode.com/problems/remove-outermost-parentheses/) | |
 | 307 | [MaxProfit](/codility/9-max_profit) | dynamic programming | [codility 9](https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/) | |
 | 307 | [CountFactors](/codility/10-prime_and_composite_numbers) | math | [codility 9](https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/count_factors/) | 📌📌📌use square root to find facters |
 | 308 | [Shorten a Sentence](/glassdoor/shopee/shorten-sentence) | string | interview | |
+| 308 | [Score of Parentheses](/leetcode/856-score-of-parentheses) | stack | [leetcode 856](https://leetcode.com/problems/remove-outermost-parentheses/) | 📌stack problems sometimes are hard to come up with |
