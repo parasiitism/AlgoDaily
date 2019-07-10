@@ -843,3 +843,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 307 | [Remove Outermost Parentheses](/leetcode/leetcode/1021-remove-outermost-parentheses) | stack | [leetcode 1021](https://leetcode.com/problems/leetcode/remove-outermost-parentheses/) | |
 | 307 | [MaxProfit](/codility/9-max_profit) | dynamic programming | [codility 9](https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/) | |
 | 307 | [CountFactors](/codility/10-prime_and_composite_numbers) | math | [codility 9](https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/count_factors/) | 📌📌📌use square root to find facters |
+| 308 | [Shorten a Sentence](/glassdoor/shopee/shorten-sentence) | string | interview | |

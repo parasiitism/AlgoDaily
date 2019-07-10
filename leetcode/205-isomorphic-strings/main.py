@@ -69,8 +69,8 @@ class Solution(object):
         seen = {}
         for c in word:
             if c not in seen:
-                seen[c] = str(len(seen))
-            signature += seen[c] + '#'
+                seen[c] = len(seen)
+            signature += str(seen[c]) + '#'
         return signature
 
 
@@ -115,8 +115,8 @@ def groupIsomorphic(strs):
         seen = {}
         for c in word:
             if c not in seen:
-                seen[c] = str(len(seen))
-            signature += seen[c] + '#'
+                seen[c] = len(seen)
+            signature += str(seen[c]) + '#'
         return signature
 
     res = collections.defaultdict(list)

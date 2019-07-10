@@ -22,7 +22,7 @@ class Solution(object):
         d = ["", "Thousand", "Million", "Billion"]
         result = ""
         i = 0
-        while True:
+        while num > 0:
             remain = num % 1000
             num = num / 1000
             threeDigitWord = self.threeDigitsToWords(remain)
@@ -30,8 +30,6 @@ class Solution(object):
             if len(threeDigitWord) > 0:
                 result = threeDigitWord + " " + d[i] + " " + result
             i += 1
-            if num == 0:
-                break
         return result.strip()
 
     def threeDigitsToWords(self, num):
@@ -39,16 +37,16 @@ class Solution(object):
                   "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"]
         tens = ["", "", "Twenty", "Thirty", "Forty",
                 "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"]
-        a = num / 100
+        a = num // 100
         num = num % 100
         temp = ""
         if a > 0:
-            temp += digits[a] + " Hundred "
+            temp += digits[a] + " Hundred"
         if num < 20:
-            temp += digits[num]
+            temp += " " + digits[num]
         else:
-            b = num / 10
+            b = num // 10
             c = num % 10
-            temp += tens[b]
+            temp += " " + tens[b]
             temp += " " + digits[c]
         return temp.strip()

@@ -115,8 +115,8 @@ print("-----")
 
     Time    O(n)
     Space   O(n)
-    96 ms, faster than 43.13%
-    10may2019
+    88 ms, faster than 88.59%
+    9july2019
 """
 
 
@@ -127,7 +127,6 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-
         # count occurence of each num
         maxFreq = 0
         ht = {}
@@ -151,12 +150,12 @@ class Solution(object):
         count = 0
         # start from num with max freq
         for i in range(len(occurArr)-1, -1, -1):
-            if count >= k:
-                break
             arr = occurArr[i]
             for num in arr:
                 res.append(num)
                 count += 1
                 if count == k:
-                    break
+                    # if k <= number of unique nums
+                    return res
+        # if k > number of unique nums
         return res

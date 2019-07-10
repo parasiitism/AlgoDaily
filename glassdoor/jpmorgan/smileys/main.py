@@ -27,46 +27,17 @@ its also a fb hacker cup question
 """
 
 
-def is_balanced(s):
-    minOpen = 0
-    maxOpen = 0
-    for c in s:
-        if c == '(':
-            minOpen += 1
-            maxOpen += 1
-        elif c == ')':
-            # if the best we can do still cant satisfy the ), the total parentheses are not balanced
-            if maxOpen == 0:
-                return False
-            # we want to make sure that minOpen >= 0, so cant minOpen -= 1
-            minOpen = max(minOpen-1, 0)
-            maxOpen -= 1
-        elif c == '{':
-            # {} means, optionally, we regard :( as (, so maximize the maxOpenCnt by inrementing 1
-            maxOpen += 1
-        elif c == '}':
-            # } means, optionally, we regard :) as ), so minimize the minOpenCnt by decrementing 1
-            # we want to make sure that minOpen >= 0, so cant minOpen -= 1
-            minOpen = max(minOpen-1, 0)
-    # return minOpen <= 0 <= maxOpen
-    return minOpen == 0 and minOpen <= maxOpen
-
-
-def check(s):
-    s = s.replace(':)', '}')
-    s = s.replace(':(', '{')
-    return is_balanced(s)
-
-
 def isBalanced(s):
     minOpen = 0
     maxOpen = 0
     for i in range(len(s)):
+        # method 1
         if s[i] == '(':
             maxOpen += 1
             if i == 0 or s[i-1] != ':':
                 minOpen += 1
         elif s[i] == ')':
+            # method 1
             if minOpen > 0:
                 minOpen -= 1
             if i == 0 or s[i-1] != ':':
@@ -89,6 +60,69 @@ print(check('i am sick today (:()'))
 print(check(')('))
 print(check(':(('))
 
+# fb hacker cup format
+fRead = open("in.txt", "r")
+fWrite = open("out1.txt", "w")
+t = fRead.readline()
+# read N lines
+i = 1
+for s in fRead.readlines():
+    result = check(s)
+    fWrite.write('Case #{}: {}\n'.format(
+        i, 'YES' if result == True else 'NO'))
+    i += 1
+fWrite.close()
+
+print('-----')
+
+
+def isBalanced(s):
+    minOpen = 0
+    maxOpen = 0
+    for i in range(len(s)):
+        # method 2
+        if s[i] == '(':
+            minOpen += 1
+            maxOpen += 1
+            if i >= 0 and s[i-1] == ':':
+                minOpen -= 1
+        elif s[i] == ')':
+            # method 2
+            minOpen = max(minOpen-1, 0)
+            maxOpen -= 1
+            if i >= 0 and s[i-1] == ':':
+                maxOpen += 1
+            if maxOpen < 0:
+                return False
+    if maxOpen >= 0 and minOpen == 0:
+        return True
+    else:
+        return False
+
+
+def check(s):
+    return isBalanced(s)
+
+
+print(check('hacker cup: started :):)'))
+print(check('(:)'))
+print(check('i am sick today (:()'))
+print(check(')('))
+print(check(':(('))
+
+# fb hacker cup format
+fRead = open("in.txt", "r")
+fWrite = open("out2.txt", "w")
+t = fRead.readline()
+# read N lines
+i = 1
+for s in fRead.readlines():
+    result = check(s)
+    fWrite.write('Case #{}: {}\n'.format(
+        i, 'YES' if result == True else 'NO'))
+    i += 1
+fWrite.close()
+
 print('-----')
 
 # n = int(input())
@@ -104,19 +138,4 @@ hacker cup: started :):)
 i am sick today (:()
 )(
 :((
-"""
-
-"""
-# fb hacker cup format
-fRead = open("in.txt", "r")
-fWrite = open("out.txt", "w")
-t = fRead.readline()
-# read N lines
-i = 1
-for s in fRead.readlines():
-    result = check(s)
-    fWrite.write('Case #{}: {}\n'.format(
-        i, 'YES' if result == True else 'NO'))
-    i += 1
-fWrite.close()
 """

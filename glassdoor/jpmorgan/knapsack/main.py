@@ -177,25 +177,25 @@ print(s.knapsack(a, b, c))
 
 print("-----")
 
-# input() reads a string with a line of input, stripping the ' ' (newline) at the end.
-# This is all you need for most Code Jam problems.
-ri = input()
-nums = ri.split()
-L, N = int(nums[0]), int(nums[1])
-# read N lines
-prices, weights = [], []
-for i in range(N):
-    ri = input()  # raw_input() for python2.7
-    nums = ri.split()
-    P, W = int(nums[0]), int(nums[1])
-    prices.append(P)
-    weights.append(W)
-print(s.knapsack(prices, weights, L))
+# # input() reads a string with a line of input, stripping the ' ' (newline) at the end.
+# # This is all you need for most Code Jam problems.
+# ri = input()
+# nums = ri.split()
+# L, N = int(nums[0]), int(nums[1])
+# # read N lines
+# prices, weights = [], []
+# for i in range(N):
+#     ri = input()  # raw_input() for python2.7
+#     nums = ri.split()
+#     P, W = int(nums[0]), int(nums[1])
+#     prices.append(P)
+#     weights.append(W)
+# print(s.knapsack(prices, weights, L))
 
-"""
-10 4
-5 4
-3 2
-10 8
-4 8
-"""
+# """
+# 10 4
+# 5 4
+# 3 2
+# 10 8
+# 4 8
+# """
