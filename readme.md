@@ -846,3 +846,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 308 | [Shorten a Sentence](/glassdoor/shopee/shorten-sentence) | string | interview | |
 | 308 | [Score of Parentheses](/leetcode/856-score-of-parentheses) | stack | [leetcode 856](https://leetcode.com/problems/remove-outermost-parentheses/) | 📌stack problems sometimes are hard to come up with |
 | 309 | [Find Eventual Safe States](/leetcode/802-find-eventual-safe-states) | graph, hashtable | [leetcode 802](https://leetcode.com/problems/find-eventual-safe-states/) | 📌📌📌1st DFS O(E+V). 2nd BFS O(E+V) variant of Topological Ordering & Graph Cycle |
+| 309 | [Graph Cycle Detection](/miscellaneous/graph-cycle-detection) | graph, hashtable | [geekforgeeks](https://www.geeksforgeeks.org/detect-cycle-in-a-graph/) | 📌📌📌1st DFS O(E+V). 2nd BFS O(E+V) |

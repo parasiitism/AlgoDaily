@@ -43,6 +43,9 @@ class Solution(object):
         - if we can eventually reach to a terminal(no cycle), backtrack corresponding nodes in that path as safe
         - next time when we visit a visited node, just return if it is safe or unsafe
 
+    ref:
+    - https://blog.csdn.net/fuxuemingzhu/article/details/82749341
+
     Time    O(N+E)
     Space   O(N)
     648 ms, faster than 46.53%
@@ -90,6 +93,9 @@ print("-----")
     - we put all the zero-outdegreed nodes into result, imagine that we are peeling off the outer layer of the graph
     - use the fact that if node's outdegree never get down to zero, that node is within a cycle
 
+    ref:
+    - https://buptwc.com/2018/05/22/Leetcode-802-Find-Eventual-Safe-States/
+
     Time    O(N+E)
     Space   O(N)
     644 ms, faster than 50.15%
@@ -104,7 +110,6 @@ class Solution(object):
         """
         if len(graph) == 0:
             return []
-
         n = len(graph)
         # record all the parents of each node
         parents = {}
