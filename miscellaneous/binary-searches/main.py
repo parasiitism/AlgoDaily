@@ -55,6 +55,7 @@ def lowerBsearch(nums, target):
 print("--lowerBsearch--")
 print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 4))   # 2
 print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 5))   # 2
+# e.g. how many numbers < k
 
 
 def upperBsearch(nums, target):
@@ -72,3 +73,4 @@ def upperBsearch(nums, target):
 print("--upperBsearch--")
 print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 5))   # 5
 print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 6))   # 5
+# e.g. how many numbers <= k
