@@ -851,3 +851,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 310 | [Find K-th Smallest Pair Distance](/leetcode/719-find-k-th-smallest-pair-distance) | binary search | [leetcode 719](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) | 📌📌📌hardest binary search question i hv ever seen. need to learned from others |
 | 310 | [Online Stock Span](/leetcode/901-online-stock-span) | stack | [leetcode 901](https://leetcode.com/problems/online-stock-span/) | 📌📌📌another stack technique |
 | 310 | [Verify Preorder Serialization of a Binary Tree](/leetcode/331-verify-preorder-serialization-of-a-binary-tree) | stack | [leetcode 331](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/) | 📌📌📌stack technique |
+| 311 | [Word Subsets](/leetcode/916-word-subsets) | hashtable | [leetcode 916](https://leetcode.com/problems/word-subsets/) | ⭐️think twice |
