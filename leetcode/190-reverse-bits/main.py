@@ -21,9 +21,9 @@ class Solution:
             n >>= 1
             i += 1
         res = 0
-        for i in range(31, -1, -1):
-            res += mask[i] * 2**(31-i)
-            i += 1
+        mask = mask[::-1]
+        for i in range(32):
+            res += mask[i] * 2**i
         return res
 
 

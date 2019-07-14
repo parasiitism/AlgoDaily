@@ -16,7 +16,6 @@ class Solution(object):
         :rtype: int
         """
         res = 0
-        for i in range(len(s)):
-            c = s[i]
+        for c in s:
             res = res*26 + ord(c) - ord('A') + 1
         return res

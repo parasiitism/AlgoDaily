@@ -6,7 +6,7 @@
 
     Time    O(n^2)
     Space   O(1)
-    6256 ms, faster than 5.05%
+    6060 ms, faster than 5.12%
 """
 
 
@@ -17,7 +17,6 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        res = 0
         resStr = ""
         for i in range(len(s)):
             ht = {}
@@ -38,11 +37,9 @@ class Solution(object):
                 # over the result if needed
                 if qualifiedKeyCnt == len(ht):
                     temp = s[i:j+1]
-                    if len(temp) > res:
-                        res = len(temp)
+                    if len(temp) > len(resStr):
                         resStr = temp
-        return (res, resStr)  # for debug
-        # return res
+        return len(resStr)
 
 
 a = "aaabb"
