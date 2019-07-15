@@ -853,3 +853,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 310 | [Verify Preorder Serialization of a Binary Tree](/leetcode/331-verify-preorder-serialization-of-a-binary-tree) | stack | [leetcode 331](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/) | 📌📌📌stack technique |
 | 311 | [Word Subsets](/leetcode/916-word-subsets) | hashtable | [leetcode 916](https://leetcode.com/problems/word-subsets/) | ⭐️think twice |
 | 312 | [Largest Time for Given Digits](/leetcode/949-largest-time-for-given-digits) | recursion | [leetcode 949](https://leetcode.com/problems/largest-time-for-given-digits/) | permutation |
+| 313 | [Different Ways to Add Parentheses](/leetcode/241-different-ways-to-add-parentheses) | recursion | [leetcode 241](https://leetcode.com/problems/different-ways-to-add-parentheses/) | 📌📌📌need to revise again^3 |
