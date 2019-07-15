@@ -50,11 +50,10 @@ class Solution(object):
         for i in range(len(s)):
             cur = s[i]
             if cur == '+' or cur == '-' or cur == '*':
-                res1 = self.diffWaysToCompute(s[:i])
-                res2 = self.diffWaysToCompute(s[i+1:])
-                print(res1, res2)
-                for a in res1:
-                    for b in res2:
+                left = self.diffWaysToCompute(s[:i])
+                right = self.diffWaysToCompute(s[i+1:])
+                for a in left:
+                    for b in right:
                         if cur == '+':
                             result.append(a+b)
                         elif cur == '-':
