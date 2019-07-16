@@ -6,35 +6,7 @@
 #         self.right = None
 
 """
-    iterative dfs
-    
-    Time    O(n)
-    Space   O(h)
-"""
-
-
-class Solution(object):
-    def maxDepth(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        if root == None:
-            return 0
-        res = 0
-        q = [(root, 1)]
-        while len(q) > 0:
-            node, steps = q.pop(0)
-            res = max(res, steps)
-            if node.left != None:
-                q.append((node.left, steps + 1))
-            if node.right != None:
-                q.append((node.right, steps + 1))
-        return res
-
-
-"""
-    2nd approach: recursive dfs
+    1st approach: recursive dfs
 
     Time    O(n)
     Space   O(h)
@@ -56,3 +28,59 @@ class Solution(object):
         left = self.dfs(node.left)
         right = self.dfs(node.right)
         return max(left, right)+1
+
+
+"""
+    2nd approach: iterative dfs
+    
+    Time    O(n)
+    Space   O(h)
+"""
+
+
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if root == None:
+            return 0
+        res = 0
+        stack = [(root, 1)]
+        while len(stack) > 0:
+            node, steps = stack.pop(0)
+            res = max(res, steps)
+            if node.left != None:
+                stack.append((node.left, steps + 1))
+            if node.right != None:
+                stack.append((node.right, steps + 1))
+        return res
+
+
+"""
+    iterative bfs
+    
+    Time    O(n)
+    Space   O(h)
+"""
+
+
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if root == None:
+            return 0
+        res = 0
+        q = [(root, 1)]
+        while len(q) > 0:
+            pop, depth = q.pop(0)
+            res = max(res, depth)
+            if pop.left != None:
+                q.append((pop.left, depth + 1))
+            if pop.right != None:
+                q.append((pop.right, depth + 1))
+        return res

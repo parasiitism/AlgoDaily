@@ -5,10 +5,12 @@ import (
 	"strconv"
 )
 
-// very straight forward solution
-// time		O(3n)
-// space 	O(n)
-// beats 31.25%
+/*
+	1st: very straight forward solution
+	time		O(3n)
+	space 	O(n)
+	beats 31.25%
+*/
 func isValidSudoku(board [][]byte) bool {
 	for i := 0; i < 9; i++ {
 		hash := make(map[byte]bool)
@@ -54,14 +56,17 @@ func check3x3(board [][]byte, x int, y int) bool {
 	return true
 }
 
-// 2nd attempt
-// use 3 hashtables
-// "5" in row 1 => 1,5
-// "5" in row 1 => 1,5
-// "5" in box 1 => 1,5
-// time 	O(n)
-// space 	O(n)
-// beats 31.25%
+/*
+	2nd attempt
+	use 3 hashtables
+	"5" in row 1 => 1,5
+	"5" in row 1 => 1,5
+	"5" in box 1 => 1,5
+
+	time 	O(n)
+	space 	O(n)
+	beats 31.25%
+*/
 func isValidSudoku1(board [][]byte) bool {
 	rowHash := make(map[string]bool)
 	colHash := make(map[string]bool)
@@ -94,14 +99,16 @@ func isValidSudoku1(board [][]byte) bool {
 	return true
 }
 
-// 2nd attempt
-// the 2nd attempt can be optimied as using 1 hashtable
-// "5" in row 1 => 1row5
-// "5" in row 1 => 1col5
-// "5" in box 1 => 1box5
-// time 	O(n)
-// space 	O(n)
-// beats 31.25%
+/*
+	2nd attempt
+	the 2nd attempt can be optimied as using 1 hashtable
+	"5" in row 1 => 1row5
+	"5" in row 1 => 1col5
+	"5" in box 1 => 1box5
+	time 	O(n)
+	space 	O(n)
+	beats 31.25%
+*/
 func isValidSudoku2(board [][]byte) bool {
 	hash := make(map[string]bool)
 	for i := 0; i < 9; i++ {

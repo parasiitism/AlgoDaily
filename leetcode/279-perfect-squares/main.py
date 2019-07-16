@@ -41,8 +41,9 @@ class Solution(object):
             minSteps = sys.maxsize
             for cand in cands:
                 remain = i - cand
-                if remain >= 0:
-                    minSteps = min(minSteps, dp[remain])
+                if remain < 0:
+                    break
+                minSteps = min(minSteps, dp[remain])
             dp[i] = minSteps + 1
         return dp[n]
 
