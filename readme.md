@@ -855,3 +855,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 312 | [Largest Time for Given Digits](/leetcode/949-largest-time-for-given-digits) | recursion | [leetcode 949](https://leetcode.com/problems/largest-time-for-given-digits/) | permutation |
 | 313 | [Different Ways to Add Parentheses](/leetcode/241-different-ways-to-add-parentheses) | recursion | [leetcode 241](https://leetcode.com/problems/different-ways-to-add-parentheses/) | 📌📌📌need to revise again^3 |
 | 314 | [Print in Order](/leetcode/1114-print-in-order) | concurrency | [leetcode 1114](https://leetcode.com/problems/print-in-order/) | mutex vs semaphore |
+| 315 | [Maximum Average Subtree](/leetcode/1120-maximum-average-subtree) | tree, recursion | [leetcode 1120](https://leetcode.com/problems/maximum-average-subtree/) |  |
