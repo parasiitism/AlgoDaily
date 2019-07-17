@@ -28,6 +28,8 @@
     Space   O(n)
     108 ms, faster than 99.82%
 """
+
+
 class Solution(object):
     def sortedListToBST(self, head):
         """
@@ -39,19 +41,13 @@ class Solution(object):
         while cur != None:
             nums.append(cur.val)
             cur = cur.next
-        return self.sortedArrayToBST(nums)
-    
-    def sortedArrayToBST(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: TreeNode
-        """
+        return self.buildBST(nums)
+
+    def buildBST(self, nums):
         if len(nums) == 0:
             return None
-        mid = (len(nums)-1)//2
-        left = nums[:mid]
-        right = nums[mid+1:]
+        mid = len(nums) // 2
         node = TreeNode(nums[mid])
-        node.left = self.sortedArrayToBST(left)
-        node.right = self.sortedArrayToBST(right)
+        node.left = self.buildBST(nums[:mid])
+        node.right = self.buildBST(nums[mid+1:])
         return node

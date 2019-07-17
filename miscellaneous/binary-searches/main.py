@@ -18,6 +18,29 @@ def bsearch(nums, target):
     return -1
 
 
+print("--bsearch--")
+print(bsearch([1, 3, 5, 7, 9], 4))   # -1
+print(bsearch([1, 3, 5, 7, 9], 5))   # 2
+
+
+def recursiveBsearch(nums, target):
+    def f(nums, target, left, right):
+        if left > right:
+            return -1
+        mid = (left+right)//2
+        if target < nums[mid]:
+            return f(nums, left, mid-1, target)
+        elif target > nums[mid]:
+            return f(nums, mid+1, right, target)
+        return mid
+    return f(nums, target, 0, len(nums)-1)
+
+
+print("--recursiveBsearch--")
+print(recursiveBsearch([1, 3, 5, 7, 9], 4))   # -1
+print(recursiveBsearch([1, 3, 5, 7, 9], 5))   # 2
+
+
 def bSearchNearest(nums, target):
     left = 0
     right = len(nums)-1
@@ -38,6 +61,11 @@ def bSearchNearest(nums, target):
     if abs(target-nums[right]) < abs(target-nums[left]):
         return right
     return left
+
+
+print("--bSearchNearest--")
+print(bSearchNearest([1, 3, 7, 13, 20], 4))   # 1
+print(bSearchNearest([1, 3, 7, 13, 20], 5))   # 2
 
 
 def lowerBsearch(nums, target):

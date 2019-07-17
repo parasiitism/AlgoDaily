@@ -5,6 +5,13 @@
 #         self.left = None
 #         self.right = None
 
+"""
+    recursive dfs inorder
+
+    Time    O(n)
+    Space   O(h)
+"""
+
 
 class Solution(object):
     def inorderTraversal(self, root):
@@ -22,3 +29,31 @@ class Solution(object):
         self.inorder(node.left)
         self.res.append(node.val)
         self.inorder(node.right)
+
+
+"""
+    iterative dfs inorder
+
+    Time    O(n)
+    Space   O(h)
+    16 ms, faster than 81.24%
+"""
+
+
+class Solution(object):
+    def inorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        res = []
+        stack = []
+        cur = root
+        while cur != None or len(stack) > 0:
+            while cur != None:
+                stack.append(cur)
+                cur = cur.left
+            pop = stack.pop()
+            res.append(pop.val)
+            cur = pop.right
+        return res

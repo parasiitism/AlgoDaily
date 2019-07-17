@@ -18,12 +18,16 @@ class Solution(object):
 
         Time		O(h) height of tree
         Space		O(h) recursion
-        56 ms, faster than 99.87%
-        21feb2019 updated
+        48 ms, faster than 95.30%
+        17jul2019
         """
         if root == None:
             return None
-        if root.val == key:
+        if key < root.val:
+            root.left = self.deleteNode(root.left, key)
+        elif key > root.val:
+            root.right = self.deleteNode(root.right, key)
+        else:
             if root.left == None and root.right == None:
                 return None
             elif root.left == None:
@@ -34,10 +38,6 @@ class Solution(object):
             root.val = suc.val
             root.right = self.deleteNode(root.right, suc.val)
             return root
-        if key < root.val:
-            root.left = self.deleteNode(root.left, key)
-        else:
-            root.right = self.deleteNode(root.right, key)
         return root
 
     def findMinFromRight(self, node):

@@ -47,3 +47,30 @@ print(Solution().mySqrt(4))
 print(Solution().mySqrt(8))
 print(Solution().mySqrt(100))
 print(Solution().mySqrt(1587654567))
+
+"""
+    2nd approach: common binary search
+    - if mid*mid == target, return mid
+    - if no absolute value, the result must be the right(since right < left after iteration)
+"""
+
+
+class Solution(object):
+    def mySqrt(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        if x == x*x:
+            return x
+        left = 1
+        right = x
+        while left <= right:
+            mid = (left + right)//2
+            if x < mid*mid:
+                right = mid - 1
+            elif x > mid*mid:
+                left = mid + 1
+            else:
+                return mid
+        return right
