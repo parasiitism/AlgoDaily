@@ -861,3 +861,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 317 | [Delete Nodes And Return Forest](/leetcode/1110-delete-nodes-and-return-forest) | tree, recursion | [leetcode 1110](https://leetcode.com/problems/delete-nodes-and-return-forest/) | postorder traversal O(n) |
 | 318 | [Path In Zigzag Labelled Binary Tree](/leetcode/1104-path-in-zigzag-labelled-binary-tree) | math | [leetcode 1104](https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/) | ⭐️learned from others |
 | 319 | [MinPerimeterRectangle](/codility/10-min_perimeter_rectangle) | math | [codility 10](https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/min_perimeter_rectangle/) | |
+| 320 | [Flower Planting With No Adjacent](/leetcode/1042-flower-planting-with-no-adjacent) | math | [leetcode 1042](https://leetcode.com/problems/flower-planting-with-no-adjacent/) | coloring problem |
