@@ -862,3 +862,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 318 | [Path In Zigzag Labelled Binary Tree](/leetcode/1104-path-in-zigzag-labelled-binary-tree) | math | [leetcode 1104](https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/) | ⭐️learned from others |
 | 319 | [MinPerimeterRectangle](/codility/10-min_perimeter_rectangle) | math | [codility 10](https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/min_perimeter_rectangle/) | |
 | 320 | [Flower Planting With No Adjacent](/leetcode/1042-flower-planting-with-no-adjacent) | math | [leetcode 1042](https://leetcode.com/problems/flower-planting-with-no-adjacent/) | coloring problem |
+| 321 | [Distribute Coins in Binary Tree](/leetcode/979-distribute-coins-in-binary-tree) | recursion, math | [leetcode 979](https://leetcode.com/problems/distribute-coins-in-binary-tree/) | 📌📌📌gave up. learned from others |
