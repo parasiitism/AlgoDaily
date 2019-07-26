@@ -866,3 +866,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 322 | [Distribute Candies](/leetcode/575-distribute-candies) | math | [leetcode 575](https://leetcode.com/problems/distribute-candies/) | |
 | 323 | [Duplicate Zeros](/leetcode/1089-duplicate-zeros) | array | [leetcode 1089](https://leetcode.com/problems/duplicate-zeros/) | |
 | 323 | [Subarray Sums Divisible by K](/leetcode/974-subarray-sums-divisible-by-k) | array, hashtable | [leetcode 974](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | 📌📌📌 learned from others |
+| 324 | [Maximum Swap](/leetcode/670-maximum-swap) | array | [leetcode 670](https://leetcode.com/problems/maximum-swap/) | |
