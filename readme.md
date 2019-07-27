@@ -867,3 +867,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 323 | [Duplicate Zeros](/leetcode/1089-duplicate-zeros) | array | [leetcode 1089](https://leetcode.com/problems/duplicate-zeros/) | |
 | 323 | [Subarray Sums Divisible by K](/leetcode/974-subarray-sums-divisible-by-k) | array, hashtable | [leetcode 974](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | 📌📌📌 learned from others |
 | 324 | [Maximum Swap](/leetcode/670-maximum-swap) | array | [leetcode 670](https://leetcode.com/problems/maximum-swap/) | |
+| 325 | [Longest Duplicate Substring](/leetcode/1044-longest-duplicate-substring) | hashtable, binary search | [leetcode 1044](https://leetcode.com/problems/longest-duplicate-substring/) | 📌📌📌interesting way to binary search for duplicate substring 📌📌📌storage optimization using Rabin-Karp Rolling Hash |
