@@ -869,3 +869,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 324 | [Maximum Swap](/leetcode/670-maximum-swap) | array | [leetcode 670](https://leetcode.com/problems/maximum-swap/) | |
 | 325 | [Longest Duplicate Substring](/leetcode/1044-longest-duplicate-substring) | hashtable, binary search | [leetcode 1044](https://leetcode.com/problems/longest-duplicate-substring/) | 📌📌📌interesting way to binary search for duplicate substring 📌📌📌storage optimization using Rabin-Karp Rolling Hash |
 | 326 | [Remove Duplicate Letters](/leetcode/316-remove-duplicate-letters) | hashtable, stack | [leetcode 316](https://leetcode.com/problems/remove-duplicate-letters/) | 📌📌📌 stack technique |
+| 327 | [ZigZag Conversion](/leetcode/6-zigzag-conversion) | array, math | [leetcode 6](https://leetcode.com/problems/zigzag-conversion/) | |
