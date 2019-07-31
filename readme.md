@@ -872,3 +872,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 327 | [ZigZag Conversion](/leetcode/6-zigzag-conversion) | array, math | [leetcode 6](https://leetcode.com/problems/zigzag-conversion/) | |
 | 328 | [Long Pressed Name](/leetcode/925-long-pressed-name) | 2pointers | [leetcode 925](https://leetcode.com/problems/long-pressed-name/) | |
 | 328 | [Binary Tree Longest Consecutive Sequence II](/leetcode/549-binary-tree-longest-consecutive-sequence-ii) | recursion | [leetcode 549](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/) | 📌this is a followup of [leetcode 298](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/) But the approach is not similar & easy to come up with |
+| 329 | [Largest Unique Number](/leetcode/1133-largest-unique-number) | hashtable | [leetcode 1133](https://leetcode.com/problems/largest-unique-number/) | |
