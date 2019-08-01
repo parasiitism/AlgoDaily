@@ -875,3 +875,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 329 | [Largest Unique Number](/leetcode/1133-largest-unique-number) | hashtable | [leetcode 1133](https://leetcode.com/problems/largest-unique-number/) | |
 | 329 | [Univalued Binary Tree](/leetcode/965-univalued-binary-tree) | hashtable, tree | [leetcode 965](https://leetcode.com/problems/univalued-binary-tree/) | 1st recursive dfs, 2nd iterative dfs, 3rd bfs |
 | 329 | [Super Ugly Number](/leetcode/313-super-ugly-number) | dynamic programming | [leetcode 313](https://leetcode.com/problems/super-ugly-number/) | 📌📌📌 similar to [leetcode 204](https://leetcode.com/problems/count-primes/) |
+| 330 | [Remove Vowels from a String](/leetcode/1119-remove-vowels-from-a-string) | string | [leetcode 1119](https://leetcode.com/problems/remove-vowels-from-a-string/) |  |
+| 330 | [Camelcase Matching](/leetcode/1023-camelcase-matching) | string | [leetcode 1023](https://leetcode.com/problems/camelcase-matching/) | |
