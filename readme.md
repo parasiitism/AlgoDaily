@@ -880,3 +880,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 331 | [Ambiguous Coordinates](/leetcode/816-ambiguous-coordinates) | string | [leetcode 816](https://leetcode.com/problems/ambiguous-coordinates/) | i hate this question, too many cases |
 | 331 | [K Empty Slots](/leetcode/683-k-empty-slots) | binary search | [leetcode 683](https://leetcode.com/problems/k-empty-slots/) | ⭐️1st binary search |
 | 332 | [Alphabet Board Path](/leetcode/1138-alphabet-board-path) | graph | [leetcode 1138](https://leetcode.com/problems/alphabet-board-path/) | BFS |
+| 332 | [All O`one Data Structure](/leetcode/432-all-oone-data-structure) | hashtable, linked list | [leetcode 432](https://leetcode.com/problems/all-oone-data-structure/) | 📌1st hashtable+linked O(1)->O(n) |
