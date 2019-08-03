@@ -16,19 +16,18 @@ class Solution(object):
         :type S: int
         :rtype: int
         """
-        if len(nums) == 0:
-            return 0
         seen = {}
         return self.dfs(nums, 0, 0, S, seen)
 
     def dfs(self, nums, idx, total, S, seen):
-        if idx == len(nums) and total == S:
-            return 1
-        if idx < len(nums):
-            if (idx, total) in seen:
-                return seen[(idx, total)]
-            a = self.dfs(nums, idx+1, total+nums[idx], S, seen)
-            b = self.dfs(nums, idx+1, total-nums[idx], S, seen)
-            seen[(idx, total)] = a + b
-            return a + b
-        return 0
+        if idx == len(nums):
+            if total == S:
+                return 1
+            return 0
+        if (idx, total) in seen:
+            return seen[(idx, total)]
+        x = nums[idx]
+        a = self.dfs(nums, idx+1, total + x, S, seen)
+        b = self.dfs(nums, idx+1, total - x, S, seen)
+        seen[(idx, total)] = a + b
+        return a + b
