@@ -137,8 +137,8 @@ class Trie(object):
             if cur.children[idx] == None:
                 return []
             cur = cur.children[idx]
-        res = []
 
+        res = []
         alphabet = "abcdefghijklmnopqrstuvwxyz"
 
         def dfs(node, path):

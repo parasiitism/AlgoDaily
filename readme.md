@@ -884,3 +884,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 333 | [Fixed Point](/leetcode/1064-fixed-point) | binary search | [leetcode 1064](https://leetcode.com/problems/fixed-point/) | |
 | 333 | [Shifting Letters](/leetcode/848-shifting-letters) | math | [leetcode 848](https://leetcode.com/problems/shifting-letters/) | |
 | 333 | [Longest Univalue Path](/leetcode/687-longest-univalue-path) | recursion | [leetcode 687](https://leetcode.com/problems/longest-univalue-path/) | |
+| 334 | [1-bit and 2-bit Characters](/leetcode/717-1-bit-and-2-bit-characters) | queue, array | [leetcode 717](https://leetcode.com/problems/1-bit-and-2-bit-characters/) | 2 approaches |

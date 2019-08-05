@@ -42,7 +42,7 @@ print(Solution().coinChange(
 print("--------------------")
 
 """
-    3rd attempt
+    3rd atminStepst
     learned from others: bottom-up
     e.g. coins = [1,2,5], amount = 7
     f(0) = 0  so if f(100-100), it output 0+1=1
@@ -54,6 +54,9 @@ print("--------------------")
     f(6) = min(f(5)+f(4)+f(1)) + 1
     f(7) = min(f(6)+f(5)+f(2)) + 1
     ...
+
+    Time    O(CA) C: number of coins, A: amount
+    Space   O(A)
     1300 ms, faster than 31.42%
 """
 
@@ -62,12 +65,18 @@ class Solution(object):
     def coinChange(self, coins, amount):
         dp = (amount+1)*[0]
         for i in range(1, amount+1):
-            temp = sys.maxsize
+            minSteps = sys.maxsize
             for coin in coins:
                 remain = i-coin
+                """
+                    be careful, if we use
+                    if remain < 0:
+                        break
+                    we need to sort coins first
+                """
                 if remain >= 0:
-                    temp = min(temp, dp[remain])
-            dp[i] = temp + 1
+                    minSteps = min(minSteps, dp[remain])
+            dp[i] = minSteps + 1
         if dp[amount] >= sys.maxsize:
             return -1
         return dp[amount]

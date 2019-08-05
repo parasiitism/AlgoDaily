@@ -20,14 +20,11 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
-        return self.dfs(root)
-
-    def dfs(self, node):
-        if node == None:
+        if root == None:
             return 0
-        left = self.dfs(node.left)
-        right = self.dfs(node.right)
-        return max(left, right)+1
+        left = self.maxDepth(root.left)
+        right = self.maxDepth(root.right)
+        return max(left, right) + 1
 
 
 """

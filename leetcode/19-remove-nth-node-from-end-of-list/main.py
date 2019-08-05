@@ -34,14 +34,14 @@ class Solution(object):
             return head
         dump = ListNode(0)
         dump.next = head
-        count = 0
         fast = dump
-        while count < n and fast != None:
+        for _ in range(n):
             fast = fast.next
-            count += 1
+            if fast == None:
+                break
 
         # in case if n > length of linked list, we just remove the head
-        if fast == None or fast.next == None:
+        if fast == None:
             return head.next
 
         slow = dump
