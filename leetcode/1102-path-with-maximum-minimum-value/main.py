@@ -25,6 +25,8 @@ class Solution(object):
         q = [(-matrix[0][0], 0, 0)]
         seen = set()
         while len(q) > 0:
+            # we pop the top item from maxHeap
+            # so we can ensure that this path must have the maximum min value
             t, x, y = heapq.heappop(q)
             if x == rl - 1 and y == cl - 1:
                 return -t
