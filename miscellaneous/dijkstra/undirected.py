@@ -1,7 +1,7 @@
 import heapq
 
 """
-    dijkstra on a directed graph
+    dijkstra on a undirected graph
 """
 
 
