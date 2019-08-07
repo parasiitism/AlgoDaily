@@ -889,3 +889,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 335 | [Path With Maximum Minimum Value](/leetcode/1102-path-with-maximum-minimum-value) | graph | [leetcode 1102](https://leetcode.com/problems/path-with-maximum-minimum-value/) | 📌learned from others: Dijkstra |
 | 335 | [Reveal Cards In Increasing Order](/leetcode/950-reveal-cards-in-increasing-order) | sort | [leetcode 950](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | |
 | 336 | [Number of Recent Calls](/leetcode/933-number-of-recent-calls) | queue | [leetcode 933](https://leetcode.com/problems/number-of-recent-calls/) | |
+| 336 | [Shortest Path in Binary Matrix](/leetcode/1091-shortest-path-in-binary-matrix) | graph | [leetcode 1091](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS + hashtable |
