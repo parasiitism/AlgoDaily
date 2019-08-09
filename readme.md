@@ -891,4 +891,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 336 | [Number of Recent Calls](/leetcode/933-number-of-recent-calls) | queue | [leetcode 933](https://leetcode.com/problems/number-of-recent-calls/) | |
 | 336 | [Shortest Path in Binary Matrix](/leetcode/1091-shortest-path-in-binary-matrix) | graph | [leetcode 1091](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS + hashtable |
 | 336 | [Guess the Word](/leetcode/843-guess-the-word) | random | [leetcode 843](https://leetcode.com/problems/guess-the-word/) | ⭐️the first iterative question on leetcode |
-| 336 | [Number of Lines To Write String](/leetcode/806-number-of-lines-to-write-string) | math | [leetcode 806](https://leetcode.com/problems/number-of-lines-to-write-string/) | |
+| 337 | [Number of Lines To Write String](/leetcode/806-number-of-lines-to-write-string) | math | [leetcode 806](https://leetcode.com/problems/number-of-lines-to-write-string/) | |
+| 338 | [Delete Columns to Make Sorted](/leetcode/944-delete-columns-to-make-sorted) | array | [leetcode 944](https://leetcode.com/problems/delete-columns-to-make-sorted/) | |
