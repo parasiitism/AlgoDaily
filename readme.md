@@ -893,3 +893,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 336 | [Guess the Word](/leetcode/843-guess-the-word) | random | [leetcode 843](https://leetcode.com/problems/guess-the-word/) | ⭐️the first iterative question on leetcode |
 | 337 | [Number of Lines To Write String](/leetcode/806-number-of-lines-to-write-string) | math | [leetcode 806](https://leetcode.com/problems/number-of-lines-to-write-string/) | |
 | 338 | [Delete Columns to Make Sorted](/leetcode/944-delete-columns-to-make-sorted) | array | [leetcode 944](https://leetcode.com/problems/delete-columns-to-make-sorted/) | |
+| 339 | [Similar RGB Color](/leetcode/800-similar-rgb-color) | math | [leetcode 800](https://leetcode.com/problems/similar-rgb-color/) | 1 approach 2 implementations |
