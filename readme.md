@@ -895,3 +895,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 338 | [Delete Columns to Make Sorted](/leetcode/944-delete-columns-to-make-sorted) | array | [leetcode 944](https://leetcode.com/problems/delete-columns-to-make-sorted/) | |
 | 339 | [Similar RGB Color](/leetcode/800-similar-rgb-color) | math | [leetcode 800](https://leetcode.com/problems/similar-rgb-color/) | 1 approach 2 implementations |
 | 339 | [Longest Common Subsequence](/leetcode/1143-longest-common-subsequence) | dynamic programming | [leetcode 1143](https://leetcode.com/problems/longest-common-subsequence/) | 📌📌📌classic dynamic programming: similar to longest common substring |
+| 340 | [Reshape the Matrix](/leetcode/566-reshape-the-matrix) | array | [leetcode 566](https://leetcode.com/problems/reshape-the-matrix/) | ⭐️ array iterator |
