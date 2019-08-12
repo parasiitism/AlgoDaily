@@ -897,3 +897,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 339 | [Longest Common Subsequence](/leetcode/1143-longest-common-subsequence) | dynamic programming | [leetcode 1143](https://leetcode.com/problems/longest-common-subsequence/) | 📌📌📌classic dynamic programming: similar to longest common substring |
 | 340 | [Reshape the Matrix](/leetcode/566-reshape-the-matrix) | array | [leetcode 566](https://leetcode.com/problems/reshape-the-matrix/) | ⭐️ array iterator |
 | 340 | [Longest Mountain in Array](/leetcode/845-longest-mountain-in-array) | 2 pointers | [leetcode 845](https://leetcode.com/problems/longest-mountain-in-array/) | ⭐️|
+| 341 | [Longest Mountain in Array](/leetcode/859-buddy-strings) | hashtbale | [leetcode 859](https://leetcode.com/problems/buddy-strings/) | ️clummsy logic |
