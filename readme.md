@@ -898,3 +898,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 340 | [Reshape the Matrix](/leetcode/566-reshape-the-matrix) | array | [leetcode 566](https://leetcode.com/problems/reshape-the-matrix/) | ⭐️ array iterator |
 | 340 | [Longest Mountain in Array](/leetcode/845-longest-mountain-in-array) | 2 pointers | [leetcode 845](https://leetcode.com/problems/longest-mountain-in-array/) | ⭐️|
 | 341 | [Longest Mountain in Array](/leetcode/859-buddy-strings) | hashtbale | [leetcode 859](https://leetcode.com/problems/buddy-strings/) | ️clummsy logic |
+| 342 | [last-stone-weight](/leetcode/1046-last-stone-weight) | heap | [leetcode 1046](https://leetcode.com/problems/last-stone-weight/) |  |
