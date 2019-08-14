@@ -899,4 +899,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 340 | [Longest Mountain in Array](/leetcode/845-longest-mountain-in-array) | 2 pointers | [leetcode 845](https://leetcode.com/problems/longest-mountain-in-array/) | ⭐️|
 | 341 | [Longest Mountain in Array](/leetcode/859-buddy-strings) | hashtbale | [leetcode 859](https://leetcode.com/problems/buddy-strings/) | ️clummsy logic |
 | 342 | [Last Stone Weight](/leetcode/1046-last-stone-weight) | heap | [leetcode 1046](https://leetcode.com/problems/last-stone-weight/) |  |
-| 343 | [All Paths From Source to Target](/leetcode/797-all-paths-from-source-to-target) | graph | [leetcode 797](https://leetcode.com/problems/all-paths-from-source-to-target/) | a simple BFS is good enough |
+| 343 | [All Paths From Source to Target](/leetcode/797-all-paths-from-source-to-target) | graph | [leetcode 797](https://leetcode.com/problems/all-paths-from-source-to-target/) | 1st BFS, 2nd DFS |
