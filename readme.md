@@ -901,3 +901,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 342 | [Last Stone Weight](/leetcode/1046-last-stone-weight) | heap | [leetcode 1046](https://leetcode.com/problems/last-stone-weight/) |  |
 | 343 | [All Paths From Source to Target](/leetcode/797-all-paths-from-source-to-target) | graph | [leetcode 797](https://leetcode.com/problems/all-paths-from-source-to-target/) | 1st BFS, 2nd DFS |
 | 343 | [Longest Palindromic Subsequence](/leetcode/516-longest-palindromic-subsequence) | dynamic programming | [leetcode 516](https://leetcode.com/problems/longest-palindromic-subsequence/) | 📌📌📌a variation of Longest Common Subsequence |
+| 344 | [Binary String With Substrings Representing 1 To N](/leetcode/1016-binary-string-with-substrings-representing-1-to-n) | array | [leetcode 1016](https://leetcode.com/problems/binary-string-with-substrings-representing-1-to-n/) | 📌📌📌|
