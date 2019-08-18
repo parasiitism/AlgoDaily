@@ -1,6 +1,6 @@
 """
     1st approach: carry
-    - like add big numbers
+    - like adding 2 big numbers
     
     16 ms, faster than 93.52%
 """

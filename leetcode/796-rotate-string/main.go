@@ -8,6 +8,7 @@ import (
 /*
 	1st approach
 	- 2A must contain a rotated string
+
 	Time	O(n) indexOf
 	Space	O(n)
 	0ms beats 100%

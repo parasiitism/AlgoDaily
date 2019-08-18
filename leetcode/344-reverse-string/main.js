@@ -3,12 +3,10 @@
   208ms beats 2.54% 
 */
 var reverseString = function (s) {
-  var i = 0
-  var j = s.length - 1
+  let i = 0
+  let j = s.length - 1
   while (i < j) {
-    const temp = s[i]
-    s[i] = s[j]
-    s[j] = temp
+    [s[i], s[j]] = [s[j], s[i]]
     i++
     j--
   }

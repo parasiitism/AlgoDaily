@@ -904,3 +904,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 344 | [Binary String With Substrings Representing 1 To N](/leetcode/1016-binary-string-with-substrings-representing-1-to-n) | array | [leetcode 1016](https://leetcode.com/problems/binary-string-with-substrings-representing-1-to-n/) | 📌📌📌|
 | 345 | [Number of Dice Rolls With Target Sum](/leetcode/1155-number-of-dice-rolls-with-target-sum) | dynamic programming | [leetcode 1155](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/) | 📌📌📌1st recursion+hashtable |
 | 346 | [Largest Values From Labels](/leetcode/1090-largest-values-from-labels) | heap, hashtable | [leetcode 1090](https://leetcode.com/problems/largest-values-from-labels/) | poorly described question |
+| 347 | [Relative Sort Array](/leetcode/1122-relative-sort-array) | heap, hashtable | [leetcode 1122](https://leetcode.com/problems/relative-sort-array/) | |

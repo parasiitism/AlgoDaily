@@ -35,11 +35,18 @@ func reverseList(head *ListNode) *ListNode {
 
 /*
 	2nd approach: inplace replacement(learned from others)
-	https://leetcode.com/explore/learn/card/linked-list/219/classic-problems/1204/
-	1->2->3
-	2->1->3
-	tine		O(n)
-	space 	O(1) since in-place
+
+    idea:
+	1->2->3->4
+    2->1->3->4
+    3->2->1->4
+    4->3->2->1
+
+    ref:
+    - https://leetcode.com/explore/learn/card/linked-list/219/classic-problems/1204/
+
+	Time		O(n)
+    Space 	    O(1) since in-place
 	beats 100%
 */
 func reverseList1(head *ListNode) *ListNode {
