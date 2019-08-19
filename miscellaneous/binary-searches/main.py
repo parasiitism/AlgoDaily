@@ -81,8 +81,11 @@ def lowerBsearch(nums, target):
 
 
 print("--lowerBsearch--")
-print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 4))   # 2
-print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 5))   # 2
+print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 0))   # 0
+print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 1))   # 0
+print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 4))   # 2 <-
+print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 5))   # 2 <-
+print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 10))   # 7
 # e.g. how many numbers < k
 
 
@@ -99,6 +102,8 @@ def upperBsearch(nums, target):
 
 
 print("--upperBsearch--")
-print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 5))   # 5
-print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 6))   # 5
+print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 0))   # 0
+print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 5))   # 5 <-
+print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 6))   # 5 <-
+print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 10))   # 7
 # e.g. how many numbers <= k
