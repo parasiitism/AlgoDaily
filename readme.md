@@ -42,6 +42,9 @@ I believe that practising algorithms every day is a long-term investment in my l
 - [GoogleCodeJam](https://github.com/calvinchankf/GoogleCodeJam)
 - [GoogleKickStart](https://github.com/calvinchankf/GoogleKickStart)
 
+### My leetcode account
+- [calvinchankf](https://leetcode.com/calvinchankf/)
+
 #### Started since September 1st 2018
 
 | Day  | Task | Type | From | remarks |
@@ -907,3 +910,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 347 | [Relative Sort Array](/leetcode/1122-relative-sort-array) | heap, hashtable | [leetcode 1122](https://leetcode.com/problems/relative-sort-array/) | |
 | 348 | [Check If a Number Is Majority Element in a Sorted Array](/leetcode/1150-check-if-a-number-is-majority-element-in-a-sorted-array) | binary search | [leetcode 1150](https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/) | 1st O(logn) binary search, 2nd brute force |
 | 349 | [Number of Subarrays with Bounded Maximum](/leetcode/795-number-of-subarrays-with-bounded-maximum) | dynamic programming | [leetcode 795](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/) | 📌📌📌 |
+| 350 | [Longest Turbulent Subarray](/leetcode/978-longest-turbulent-subarray) | dynamic programming | [leetcode 978](https://leetcode.com/problems/longest-turbulent-subarray/) | ⭐️1st O(2n)Q(n). 2nd O(n)Q(1) |
