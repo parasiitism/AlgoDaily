@@ -913,3 +913,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 350 | [Longest Turbulent Subarray](/leetcode/978-longest-turbulent-subarray) | dynamic programming | [leetcode 978](https://leetcode.com/problems/longest-turbulent-subarray/) | ⭐️1st O(2n)Q(n). 2nd O(n)Q(1) |
 | 351 | [Find Words That Can Be Formed by Characters](/leetcode/1160-find-words-that-can-be-formed-by-characters) | hashtable | [leetcode 1160](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/) | |
 | 352 | [Defanging an IP Address](/leetcode/1108-defanging-an-ip-address) | string | [leetcode 1108](https://leetcode.com/problems/defanging-an-ip-address/) | whats the point of doing this? |
+| 352 | [Brick Wall](/leetcode/554-brick-wall) | hashtable | [leetcode 554](https://leetcode.com/problems/brick-wall/) | interesting question |
