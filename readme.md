@@ -914,3 +914,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 351 | [Find Words That Can Be Formed by Characters](/leetcode/1160-find-words-that-can-be-formed-by-characters) | hashtable | [leetcode 1160](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/) | |
 | 352 | [Defanging an IP Address](/leetcode/1108-defanging-an-ip-address) | string | [leetcode 1108](https://leetcode.com/problems/defanging-an-ip-address/) | whats the point of doing this? |
 | 352 | [Brick Wall](/leetcode/554-brick-wall) | hashtable | [leetcode 554](https://leetcode.com/problems/brick-wall/) | interesting question |
+| 353 | [Brick Wall](/leetcode/343-integer-break) | dynamic programming | [leetcode 343](https://leetcode.com/problems/integer-break/) | 1st combination sum LTE 📌 2nd bottom up DP O(N^2) beats 93.72% |
