@@ -915,3 +915,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 352 | [Defanging an IP Address](/leetcode/1108-defanging-an-ip-address) | string | [leetcode 1108](https://leetcode.com/problems/defanging-an-ip-address/) | whats the point of doing this? |
 | 352 | [Brick Wall](/leetcode/554-brick-wall) | hashtable | [leetcode 554](https://leetcode.com/problems/brick-wall/) | interesting question |
 | 353 | [Brick Wall](/leetcode/343-integer-break) | dynamic programming | [leetcode 343](https://leetcode.com/problems/integer-break/) | 1st combination sum LTE 📌 2nd bottom up DP O(N^2) beats 93.72% |
+| 354 | [Binary Tree Upside Down](/leetcode/156-binary-tree-upside-down) | tree | [leetcode 156](https://leetcode.com/problems/binary-tree-upside-down/) | ⭐️1st postorder DFS traversal, ⭐️2nd BFS |
