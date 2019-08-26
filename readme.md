@@ -916,3 +916,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 352 | [Brick Wall](/leetcode/554-brick-wall) | hashtable | [leetcode 554](https://leetcode.com/problems/brick-wall/) | interesting question |
 | 353 | [Brick Wall](/leetcode/343-integer-break) | dynamic programming | [leetcode 343](https://leetcode.com/problems/integer-break/) | 1st combination sum LTE 📌 2nd bottom up DP O(N^2) beats 93.72% |
 | 354 | [Binary Tree Upside Down](/leetcode/156-binary-tree-upside-down) | tree | [leetcode 156](https://leetcode.com/problems/binary-tree-upside-down/) | ⭐️1st postorder DFS traversal, ⭐️2nd BFS |
+| 355 | [N-th Tribonacci Number](/leetcode/1137-n-th-tribonacci-number) | dynamic programming | [leetcode 1137](https://leetcode.com/problems/n-th-tribonacci-number/) | ⭐️1st bottom-up caching, ⭐️2nd recursion + memoization |
