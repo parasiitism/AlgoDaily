@@ -918,3 +918,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 354 | [Binary Tree Upside Down](/leetcode/156-binary-tree-upside-down) | tree | [leetcode 156](https://leetcode.com/problems/binary-tree-upside-down/) | ⭐️1st postorder DFS traversal, ⭐️2nd BFS |
 | 355 | [N-th Tribonacci Number](/leetcode/1137-n-th-tribonacci-number) | dynamic programming | [leetcode 1137](https://leetcode.com/problems/n-th-tribonacci-number/) | ⭐️1st bottom-up caching, ⭐️2nd recursion + memoization |
 | 356 | [Maximum Binary Tree II](/leetcode/998-maximum-binary-tree-ii) | tree | [leetcode 998](https://leetcode.com/problems/maximum-binary-tree-ii/) | 1st O(N^2) ⭐️2nd O(N) |
+| 357 | [Sum of Digits in the Minimum Number](/leetcode/1085-sum-of-digits-in-the-minimum-number) | array | [leetcode 1085](https://leetcode.com/problems/sum-of-digits-in-the-minimum-number/) | |
