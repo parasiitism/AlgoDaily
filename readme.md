@@ -922,3 +922,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 358 | [Minimum Swaps to Group All 1's Together](/leetcode/1151-minimum-swaps-to-group-all-1s-together) | sliding window, hashtable | [leetcode 1151](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/) | 1st beats 7%, 2nd beats 31% |
 | 359 | [Mini Parser](/leetcode/385-mini-parser) | recursion, stack | [leetcode 385](https://leetcode.com/problems/mini-parser/) | 1st cheating using `eval` 📌📌📌 2nd, 3rd recursion. need to revise again |
 | 360 | [Minimum Height Trees](/leetcode/310-minimum-height-trees) | graph, topo | [leetcode 310](https://leetcode.com/problems/minimum-height-trees/) | 1st O(n^2) LTE. 📌2nd Topological Ordering O(n). need to revise again |
+| 361 | [Fair Candy Swap](/leetcode/888-fair-candy-swap) | hashtable | [leetcode 888](https://leetcode.com/problems/fair-candy-swap/) | |
