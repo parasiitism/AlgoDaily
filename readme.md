@@ -924,3 +924,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 360 | [Minimum Height Trees](/leetcode/310-minimum-height-trees) | graph, topo | [leetcode 310](https://leetcode.com/problems/minimum-height-trees/) | 1st O(n^2) LTE. 📌2nd Topological Ordering O(n). need to revise again |
 | 361 | [Fair Candy Swap](/leetcode/888-fair-candy-swap) | hashtable | [leetcode 888](https://leetcode.com/problems/fair-candy-swap/) | |
 | 362 | [Masking Personal Information](/leetcode/831-masking-personal-information) | array | [leetcode 831](https://leetcode.com/problems/masking-personal-information/) | |
+| 363 | [Binary Prefix Divisible By 5](/leetcode/1018-binary-prefix-divisible-by-5) | bit op | [leetcode 831](https://leetcode.com/problems/binary-prefix-divisible-by-5/) | |
