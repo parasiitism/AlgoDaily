@@ -925,3 +925,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 361 | [Fair Candy Swap](/leetcode/888-fair-candy-swap) | hashtable | [leetcode 888](https://leetcode.com/problems/fair-candy-swap/) | |
 | 362 | [Masking Personal Information](/leetcode/831-masking-personal-information) | array | [leetcode 831](https://leetcode.com/problems/masking-personal-information/) | |
 | 363 | [Binary Prefix Divisible By 5](/leetcode/1018-binary-prefix-divisible-by-5) | bit op | [leetcode 831](https://leetcode.com/problems/binary-prefix-divisible-by-5/) | |
+| 364 | [Advantage Shuffle](/leetcode/870-advantage-shuffle) | sorting | [leetcode 870](https://leetcode.com/problems/advantage-shuffle/) | |
