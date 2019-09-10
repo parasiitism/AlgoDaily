@@ -926,3 +926,9 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 362 | [Masking Personal Information](/leetcode/831-masking-personal-information) | array | [leetcode 831](https://leetcode.com/problems/masking-personal-information/) | |
 | 363 | [Binary Prefix Divisible By 5](/leetcode/1018-binary-prefix-divisible-by-5) | bit op | [leetcode 831](https://leetcode.com/problems/binary-prefix-divisible-by-5/) | |
 | 364 | [Advantage Shuffle](/leetcode/870-advantage-shuffle) | sorting | [leetcode 870](https://leetcode.com/problems/advantage-shuffle/) | |
+| 365 | [Snapshot Array](/leetcode/1146-snapshot-array) | hashtable | [leetcode 1146](https://leetcode.com/problems/snapshot-array/) | |
+| 366 | [Number of Equivalent Domino Pairs](/leetcode/1128-flip-string-to-monotone-increasing) | hashtable | [leetcode 1128](https://leetcode.com/problems/flip-string-to-monotone-increasing/) | |
+| 367 | [Teemo Attacking](/leetcode/870-teemo-attacking) | array | [leetcode 870](https://leetcode.com/problems/teemo-attacking/) | merge interval |
+| 368 | [Lexicographically Smallest Equivalent String](/leetcode/1061-lexicographically-smallest-equivalent-string) | sorting | [leetcode 1061](https://leetcode.com/problems/lexicographically-smallest-equivalent-string/) | |
+| 369 | [Flip String to Monotone Increasing](/leetcode/926-flip-string-to-monotone-increasing) | dynamic programming | [leetcode 926](https://leetcode.com/problems/flip-string-to-monotone-increasing/) | |
+| 370 | [Armstrong Number](/leetcode/1134-armstrong-number) | math | [leetcode 1134](https://leetcode.com/problems/armstrong-number/) | |
