@@ -932,3 +932,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 368 | [Lexicographically Smallest Equivalent String](/leetcode/1061-lexicographically-smallest-equivalent-string) | sorting | [leetcode 1061](https://leetcode.com/problems/lexicographically-smallest-equivalent-string/) | |
 | 369 | [Flip String to Monotone Increasing](/leetcode/926-flip-string-to-monotone-increasing) | dynamic programming | [leetcode 926](https://leetcode.com/problems/flip-string-to-monotone-increasing/) | |
 | 370 | [Armstrong Number](/leetcode/1134-armstrong-number) | math | [leetcode 1134](https://leetcode.com/problems/armstrong-number/) | |
+| 371 | [Number of Days in a Month](/leetcode/1118-number-of-days-in-a-month) | math | [leetcode 1118](https://leetcode.com/problems/number-of-days-in-a-month/) | ⭐️leap year is not just multiple of 4 |
