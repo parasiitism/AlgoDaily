@@ -935,3 +935,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 371 | [Number of Days in a Month](/leetcode/1118-number-of-days-in-a-month) | math | [leetcode 1118](https://leetcode.com/problems/number-of-days-in-a-month/) | ⭐️leap year is not just multiple of 4 |
 | 372 | [Day of the Year](/leetcode/1154-day-of-the-year) | math | [leetcode 1154](https://leetcode.com/problems/day-of-the-year/) | ⭐️leap year is not just multiple of 4 |
 | 373 | [Smallest Range I](/leetcode/908-smallest-range-i) | math | [leetcode 908](https://leetcode.com/problems/smallest-range-i/) | |
+| 374 | [Smallest Range II](/leetcode/910-smallest-range-ii) | sort, math | [leetcode 910](https://leetcode.com/problems/smallest-range-ii/) | 📌need to revise again |
