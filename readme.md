@@ -937,3 +937,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 373 | [Smallest Range I](/leetcode/908-smallest-range-i) | math | [leetcode 908](https://leetcode.com/problems/smallest-range-i/) | |
 | 374 | [Smallest Range II](/leetcode/910-smallest-range-ii) | sort, math | [leetcode 910](https://leetcode.com/problems/smallest-range-ii/) | 📌need to revise again |
 | 375 | [Statistics from a Large Sample](/leetcode/1093-statistics-from-a-large-sample) | math | [leetcode 1093](https://leetcode.com/problems/statistics-from-a-large-sample/) | 1st O(N) simple but tedious |
+| 376 | [Maximum Level Sum of a Binary Tree](/leetcode/1161-maximum-level-sum-of-a-binary-tree) | tree | [leetcode 1161](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/) | 1st BFS. 2nd DFS + hashtable |
