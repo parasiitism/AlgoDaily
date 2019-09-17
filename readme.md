@@ -939,3 +939,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 375 | [Statistics from a Large Sample](/leetcode/1093-statistics-from-a-large-sample) | math | [leetcode 1093](https://leetcode.com/problems/statistics-from-a-large-sample/) | 1st O(N) simple but tedious |
 | 376 | [Maximum Level Sum of a Binary Tree](/leetcode/1161-maximum-level-sum-of-a-binary-tree) | tree | [leetcode 1161](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/) | 1st BFS. 2nd DFS + hashtable |
 | 377 | [Minimum Factorization](/leetcode/625-minimum-factorization) | math | [leetcode 625](https://leetcode.com/problems/minimum-factorization/) | factorization + BFS |
+| 378 | [Minimum Factorization](/leetcode/1162-as-far-from-land-as-possible) | graph | [leetcode 1162](https://leetcode.com/problems/as-far-from-land-as-possible/) | BFS + hashtable beats 5% |
