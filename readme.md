@@ -941,3 +941,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 377 | [Minimum Factorization](/leetcode/625-minimum-factorization) | math | [leetcode 625](https://leetcode.com/problems/minimum-factorization/) | factorization + BFS |
 | 378 | [As Far From Land As Possible](/leetcode/1162-as-far-from-land-as-possible) | graph | [leetcode 1162](https://leetcode.com/problems/as-far-from-land-as-possible/) | BFS + hashtable beats 5% |
 | 379 | [Distribute Candies to People](/leetcode/1103-distribute-candies-to-people) | math | [leetcode 1103](https://leetcode.com/problems/distribute-candies-to-people/) | |
+| 380 | [Decoded String at Index](/leetcode/880-decoded-string-at-index) | math | [leetcode 880](https://leetcode.com/problems/decoded-string-at-index/) | 1st brute force MLE. 2nd learned from others. 📌need to revise again |
