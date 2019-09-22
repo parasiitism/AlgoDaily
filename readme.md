@@ -945,3 +945,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 381 | [Validate Stack Sequences](/leetcode/946-validate-stack-sequences) | stack | [leetcode 946](https://leetcode.com/problems/validate-stack-sequences/) | |
 | 382 | [Output Contest Matches](/leetcode/544-output-contest-matches) | math | [leetcode 544](https://leetcode.com/problems/output-contest-matches/) | 1st math + json serialization.  |
 | 383 | [132 Pattern](/leetcode/132-pattern) | stack | [leetcode 456](https://leetcode.com/problems/132-pattern/) | 1st O(n^2) LTE. 2nd stack, learned from others. 📌need to revise again |
+| 384 | [Connecting Cities With Minimum Cost](/leetcode/1135-connecting-cities-with-minimum-cost) | graph | [leetcode 1135](https://leetcode.com/problems/connecting-cities-with-minimum-cost/) | ⭐️minimum spanning tree: 1st kruskal, 2nd prim  |

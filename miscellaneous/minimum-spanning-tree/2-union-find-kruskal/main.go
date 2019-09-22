@@ -23,7 +23,7 @@ import (
 
 	Time		O(E log E) + O(V log V) <= sort the edges + union find
 	Space		O(V) edges in union find
-  E: number of edges, V: number of vertices
+  	E: number of edges, V: number of vertices
 
 	ref: https://www.youtube.com/watch?v=5xosHRdxqHA
 */

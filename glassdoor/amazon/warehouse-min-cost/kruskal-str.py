@@ -82,6 +82,17 @@ class UnionFind(object):
         return self.find(p) == self.find(q)
 
 
+a = [(1, 2, 4),
+     (1, 6, 2),
+     (2, 6, 5),
+     (2, 3, 6),
+     (3, 6, 1),
+     (4, 5, 2),
+     (5, 6, 4),
+     (3, 4, 3)]
+
+print(warehouseMinCost(a))
+
 a = [
     ('a', 'b', 4),
     ('a', 'f', 2),

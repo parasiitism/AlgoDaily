@@ -1,4 +1,5 @@
 import heapq
+from collections import defaultdict
 
 
 def warehouseMinCost(edges):
@@ -30,14 +31,19 @@ def warehouseMinCost(edges):
         visited[edge[1]] = False
     res = []
     pq = []
+    # establish connections table
+    connections = defaultdict(list)
+    for a, b, cost in edges:
+        connections[a].append((a, b, cost))
+        connections[b].append((b, a, cost))
     # pick the first vertex as a starting point
     start = edges[0][0]
     visited[start] = True
     for edge in edges:
         if edge[0] == start or edge[1] == start:
             heapq.heappush(pq, (edge[2], edge[0], edge[1]))
+    # always get the edge with smallest route from the min-heap
     while len(pq) > 0:
-        # get the edge with smallest route from the min-heap
         cost, a, b = heapq.heappop(pq)
         foundA = visited[a]
         foundB = visited[b]
@@ -47,15 +53,13 @@ def warehouseMinCost(edges):
         elif foundA:
             visited[b] = True
             res.append((a, b, cost))
-            for edge in edges:
-                if edge[0] == b or edge[1] == b:
-                    heapq.heappush(pq, (edge[2], edge[0], edge[1]))
+            for edge in connections[b]:
+                heapq.heappush(pq, (edge[2], edge[0], edge[1]))
         elif foundB:
             visited[a] = True
             res.append((a, b, cost))
-            for edge in edges:
-                if edge[0] == a or edge[1] == a:
-                    heapq.heappush(pq, (edge[2], edge[0], edge[1]))
+            for edge in connections[b]:
+                heapq.heappush(pq, (edge[2], edge[0], edge[1]))
 
     # if there is any unvisited node, it means there is no edge can reach to the node, therefore return []
     for key in visited:

@@ -52,6 +52,11 @@ class Solution(object):
             if cur == '+' or cur == '-' or cur == '*':
                 left = self.diffWaysToCompute(s[:i])
                 right = self.diffWaysToCompute(s[i+1:])
+                """
+                So imagine if both size have different possibilities
+                e.g. { a, b, c } * { d, e }
+                the final result wil be { ad, ae, bd, be, cd, ce }
+                """
                 for a in left:
                     for b in right:
                         if cur == '+':
