@@ -944,3 +944,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 380 | [Decoded String at Index](/leetcode/880-decoded-string-at-index) | math | [leetcode 880](https://leetcode.com/problems/decoded-string-at-index/) | 1st brute force MLE. 2nd learned from others. 📌need to revise again |
 | 381 | [Validate Stack Sequences](/leetcode/946-validate-stack-sequences) | stack | [leetcode 946](https://leetcode.com/problems/validate-stack-sequences/) | |
 | 382 | [Output Contest Matches](/leetcode/544-output-contest-matches) | math | [leetcode 544](https://leetcode.com/problems/output-contest-matches/) | 1st math + json serialization.  |
+| 383 | [132 Pattern](/leetcode/132-pattern) | stack | [leetcode 456](https://leetcode.com/problems/132-pattern/) | 1st O(n^2) LTE. 2nd stack, learned from others. 📌need to revise again |
