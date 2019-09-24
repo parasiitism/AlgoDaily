@@ -947,3 +947,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 383 | [132 Pattern](/leetcode/132-pattern) | stack | [leetcode 456](https://leetcode.com/problems/132-pattern/) | 1st O(n^2) LTE. 2nd stack, learned from others. 📌need to revise again |
 | 384 | [Connecting Cities With Minimum Cost](/leetcode/1135-connecting-cities-with-minimum-cost) | graph | [leetcode 1135](https://leetcode.com/problems/connecting-cities-with-minimum-cost/) | ⭐️minimum spanning tree: 1st kruskal, 2nd prim  |
 | 385 | [Minimum Cost to Connect Sticks](/leetcode/1167-minimum-cost-to-connect-sticks) | heap | [leetcode 1167](https://leetcode.com/problems/minimum-cost-to-connect-sticks/) | |
+| 386 | [Reverse Substrings Between Each Pair of Parentheses](/leetcode/1190-reverse-substrings-between-each-pair-of-parentheses) | recursion | [leetcode 1190](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/) | |
