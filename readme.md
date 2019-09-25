@@ -948,3 +948,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 384 | [Connecting Cities With Minimum Cost](/leetcode/1135-connecting-cities-with-minimum-cost) | graph | [leetcode 1135](https://leetcode.com/problems/connecting-cities-with-minimum-cost/) | ⭐️minimum spanning tree: 1st kruskal, 2nd prim  |
 | 385 | [Minimum Cost to Connect Sticks](/leetcode/1167-minimum-cost-to-connect-sticks) | heap | [leetcode 1167](https://leetcode.com/problems/minimum-cost-to-connect-sticks/) | |
 | 386 | [Reverse Substrings Between Each Pair of Parentheses](/leetcode/1190-reverse-substrings-between-each-pair-of-parentheses) | recursion | [leetcode 1190](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/) | |
+| 387 | [Single-Row Keyboard](/leetcode/1165-single-row-keyboard) | hashtable | [leetcode 1165](https://leetcode.com/problems/single-row-keyboard/) | |
