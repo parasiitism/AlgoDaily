@@ -951,3 +951,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 387 | [Single-Row Keyboard](/leetcode/1165-single-row-keyboard) | hashtable | [leetcode 1165](https://leetcode.com/problems/single-row-keyboard/) | |
 | 388 | [RLE Iterator](/leetcode/900-rle-iterator) | queue | [leetcode 900](https://leetcode.com/problems/rle-iterator/) | |
 | 389 | [How Many Apples Can You Put into the Basket](/leetcode/1196-how-many-apples-can-you-put-into-the-basket) | sort | [leetcode 1196](https://leetcode.com/problems/how-many-apples-can-you-put-into-the-basket/) | |
+| 390 | [Vowel Spellchecker](/leetcode/966-vowel-spellchecker) | hashtable | [leetcode 1196](https://leetcode.com/problems/vowel-spellchecker/) | 📌very common hashing technique for interviews |
