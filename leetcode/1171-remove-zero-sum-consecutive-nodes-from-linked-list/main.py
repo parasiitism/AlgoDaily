@@ -16,9 +16,9 @@
         e.g. key: previous sum, value: number of occurence of a previous sum
         - if currentSum - target in the hastable, the result+1
 
-    Time	O(n)
+    Time	O(5n)
     Space   O(n)
-    7mar2019
+    40 ms, faster than 52.22% 
 """
 
 
