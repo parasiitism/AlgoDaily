@@ -1,7 +1,7 @@
 """
     1st approach: zero sum subarray
 
-    - this question is fucking similar to leetcode 325, 560, 930
+    - this question is fucking similar to leetcode 325, 560, 930, 1171
     - the general idea is transform 0 to -1, do prefix sum
     - if 2 cases:
         1. current prefix sum == 0, nums[:i+1] is a zero sum subarray
