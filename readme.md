@@ -953,3 +953,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 389 | [How Many Apples Can You Put into the Basket](/leetcode/1196-how-many-apples-can-you-put-into-the-basket) | sort | [leetcode 1196](https://leetcode.com/problems/how-many-apples-can-you-put-into-the-basket/) | |
 | 390 | [Vowel Spellchecker](/leetcode/966-vowel-spellchecker) | hashtable | [leetcode 966](https://leetcode.com/problems/vowel-spellchecker/) | 📌very common hashing technique for interviews |
 | 391 | [Remove Zero Sum Consecutive Nodes from Linked List](/leetcode/1171-remove-zero-sum-consecutive-nodes-from-linked-list) | hashtable | [leetcode 1171](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/) | zero sum subarray |
+| 392 | [Max Increase to Keep City Skyline](/leetcode/807-max-increase-to-keep-city-skyline) | min max | [leetcode 807](https://leetcode.com/problems/max-increase-to-keep-city-skyline/) |  |
