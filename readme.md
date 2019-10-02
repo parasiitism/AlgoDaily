@@ -955,3 +955,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 391 | [Remove Zero Sum Consecutive Nodes from Linked List](/leetcode/1171-remove-zero-sum-consecutive-nodes-from-linked-list) | hashtable | [leetcode 1171](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/) | zero sum subarray |
 | 392 | [Max Increase to Keep City Skyline](/leetcode/807-max-increase-to-keep-city-skyline) | min max | [leetcode 807](https://leetcode.com/problems/max-increase-to-keep-city-skyline/) |  |
 | 393 | [Koko Eating Bananas](/leetcode/875-koko-eating-bananas) | binary search | [leetcode 875](https://leetcode.com/problems/koko-eating-bananas/) | O(nlogn)📌need to revise again |
+| 394 | [Accounts Merge](/leetcode/721-accounts-merge) | union find | [leetcode 721](https://leetcode.com/problems/accounts-merge/) | ⭐️O(nlogn) |
