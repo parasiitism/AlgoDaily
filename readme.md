@@ -958,3 +958,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 394 | [Accounts Merge](/leetcode/721-accounts-merge) | union find | [leetcode 721](https://leetcode.com/problems/accounts-merge/) | ⭐️O(nlogn) |
 | 395 | [Binary Tree Pruning](/leetcode/814-binary-tree-pruning) | tree | [leetcode 814](https://leetcode.com/problems/binary-tree-pruning/) | recursion O(n) |
 | 396 | [Valid Boomerang](/leetcode/1037-valid-boomerang) | math, hashtable | [leetcode 1037](https://leetcode.com/problems/valid-boomerang/) | |
+| 397 | [Longest Well-Performing Interval](/leetcode/1124-longest-well-performing-interval) | hashtable | [leetcode 1124](https://leetcode.com/problems/longest-well-performing-interval/) | 📌k/zero-sum subarray |
