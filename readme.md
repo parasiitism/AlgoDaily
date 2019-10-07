@@ -961,3 +961,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 397 | [Longest Well-Performing Interval](/leetcode/1124-longest-well-performing-interval) | hashtable | [leetcode 1124](https://leetcode.com/problems/longest-well-performing-interval/) | 📌k/zero-sum subarray |
 | 398 | [Minimum Absolute Difference](/leetcode/1200-minimum-absolute-difference) | sort | [leetcode 1200](https://leetcode.com/problems/minimum-absolute-difference/) | |
 | 399 | [Corporate Flight Bookings](/leetcode/1109-corporate-flight-bookings) | math | [leetcode 1109](https://leetcode.com/problems/corporate-flight-bookings/) | ⭐️typical technique to deal with values on a range |
+| 400 | [Remove All Adjacent Duplicates in String II](/leetcode/1209-remove-all-adjacent-duplicates-in-string-ii) | recursion | [leetcode 1209](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | |
