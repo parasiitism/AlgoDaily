@@ -960,3 +960,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 396 | [Valid Boomerang](/leetcode/1037-valid-boomerang) | math, hashtable | [leetcode 1037](https://leetcode.com/problems/valid-boomerang/) | |
 | 397 | [Longest Well-Performing Interval](/leetcode/1124-longest-well-performing-interval) | hashtable | [leetcode 1124](https://leetcode.com/problems/longest-well-performing-interval/) | 📌k/zero-sum subarray |
 | 398 | [Minimum Absolute Difference](/leetcode/1200-minimum-absolute-difference) | sort | [leetcode 1200](https://leetcode.com/problems/minimum-absolute-difference/) | |
+| 399 | [Corporate Flight Bookings](/leetcode/1109-corporate-flight-bookings) | math | [leetcode 1109](https://leetcode.com/problems/corporate-flight-bookings/) | ⭐️typical technique to deal with values on a range |
