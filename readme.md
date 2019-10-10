@@ -964,3 +964,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 400 | [Remove All Adjacent Duplicates in String II](/leetcode/1209-remove-all-adjacent-duplicates-in-string-ii) | recursion | [leetcode 1209](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | |
 | 401 | [Reach a Number](/leetcode/754-reach-a-number) | math | [leetcode 754](https://leetcode.com/problems/reach-a-number/) | 📌 not an easy question |
 | 402 | [Assign Cookies](/leetcode/455-assign-cookies) | sort | [leetcode 455](https://leetcode.com/problems/assign-cookies/) | |
+| 403 | [Day of the Week](/leetcode/1185-day-of-the-week) | math | [leetcode 1185](https://leetcode.com/problems/day-of-the-week/) | 1st built-in library |
