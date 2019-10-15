@@ -968,3 +968,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 404 | [Minimum Domino Rotations For Equal Row](/leetcode/1007-minimum-domino-rotations-for-equal-row) | math | [leetcode 1007](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/) | |
 | 405 | [Print Binary Tree](/leetcode/655-print-binary-tree) | tree | [leetcode 655](https://leetcode.com/problems/print-binary-tree/) | 1st recursive DFS. 2nd iterative DFS |
 | 406 | [Diet Plan Performance](/leetcode/1176-diet-plan-performance) | sliding window | [leetcode 1176](https://leetcode.com/problems/diet-plan-performance/) |  |
+| 407 | [Distance Between Bus Stops](/leetcode/1184-distance-between-bus-stops) | array | [leetcode 1184](https://leetcode.com/problems/distance-between-bus-stops/) |  |
