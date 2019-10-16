@@ -970,3 +970,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 406 | [Diet Plan Performance](/leetcode/1176-diet-plan-performance) | sliding window | [leetcode 1176](https://leetcode.com/problems/diet-plan-performance/) |  |
 | 407 | [Distance Between Bus Stops](/leetcode/1184-distance-between-bus-stops) | array | [leetcode 1184](https://leetcode.com/problems/distance-between-bus-stops/) |  |
 | 408 | [Binary Tree Coloring Game](/leetcode/1145-binary-tree-coloring-game) | tree, graph | [leetcode 1145](https://leetcode.com/problems/binary-tree-coloring-game/) | ⭐️transform tree into a graph |
+| 409 | [The Earliest Moment When Everyone Become Friends](/leetcode/1101-the-earliest-moment-when-everyone-become-friends) | graph, union find | [leetcode 1101](https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends/) | union find |
