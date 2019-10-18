@@ -27,7 +27,7 @@ class Solution(object):
         if len(cands) == 0:
             self.result.append(chosen)
         for i in range(len(cands)):
-            self.dfs(cands[:i] + cands[i+1:], chosen + [nums[i]])
+            self.dfs(cands[:i] + cands[i+1:], chosen + [cands[i]])
 
 
 # s = Solution()
