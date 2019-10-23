@@ -975,3 +975,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 411 | [Ternary Expression Parser](/leetcode/439-ternary-expression-parser) | stack | [leetcode 439](https://leetcode.com/problems/ternary-expression-parser/) | 📌📌📌the crux is we need to iterate the input in a reverse manner |
 | 412 | [Split a String in Balanced Strings](/leetcode/1221-split-a-string-in-balanced-strings) | stack | [leetcode 1221](https://leetcode.com/problems/split-a-string-in-balanced-strings/) | |
 | 413 | [Two Sum BSTs](/leetcode/1214-two-sum-bsts) | tree, hashtable | [leetcode 1214](https://leetcode.com/problems/two-sum-bsts/) | 1st recursion. 2nd iteration |
+| 414 | [Count Substrings with Only One Distinct Letter](/leetcode/1180-count-substrings-with-only-one-distinct-letter) | array, math | [leetcode 1180](https://leetcode.com/problems/count-substrings-with-only-one-distinct-letter/) | 1st brute force, 2nd math |
