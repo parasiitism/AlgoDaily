@@ -960,7 +960,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 396 | [Valid Boomerang](/leetcode/1037-valid-boomerang) | math, hashtable | [leetcode 1037](https://leetcode.com/problems/valid-boomerang/) | |
 | 397 | [Longest Well-Performing Interval](/leetcode/1124-longest-well-performing-interval) | hashtable | [leetcode 1124](https://leetcode.com/problems/longest-well-performing-interval/) | 📌k/zero-sum subarray |
 | 398 | [Minimum Absolute Difference](/leetcode/1200-minimum-absolute-difference) | sort | [leetcode 1200](https://leetcode.com/problems/minimum-absolute-difference/) | |
-| 399 | [Corporate Flight Bookings](/leetcode/1109-corporate-flight-bookings) | math | [leetcode 1109](https://leetcode.com/problems/corporate-flight-bookings/) | ⭐️typical technique to deal with values on a range |
+| 399 | [Corporate Flight Bookings](/leetcode/1109-corporate-flight-bookings) | array, math | [leetcode 1109](https://leetcode.com/problems/corporate-flight-bookings/) | ⭐️typical technique to deal with values on a range, similar to lc1094 |
 | 400 | [Remove All Adjacent Duplicates in String II](/leetcode/1209-remove-all-adjacent-duplicates-in-string-ii) | recursion | [leetcode 1209](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | |
 | 401 | [Reach a Number](/leetcode/754-reach-a-number) | math | [leetcode 754](https://leetcode.com/problems/reach-a-number/) | 📌 not an easy question |
 | 402 | [Assign Cookies](/leetcode/455-assign-cookies) | sort | [leetcode 455](https://leetcode.com/problems/assign-cookies/) | |
@@ -979,3 +979,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 415 | [Satisfiability of Equality Equations](/leetcode/990-satisfiability-of-equality-equations) | graph, union find | [leetcode 990](https://leetcode.com/problems/satisfiability-of-equality-equations/) | ⭐️interesting |
 | 416 | [Intersection of Three Sorted Arrays](/leetcode/1213-intersection-of-three-sorted-arrays) | binary search, hashtable | [leetcode 1213](https://leetcode.com/problems/intersection-of-three-sorted-arrays/) | 1st binary search O(AlogB + AlogC), 2nd O(A + B + C)|
 | 417 | [Swap For Longest Repeated Character Substring](/leetcode/1156-swap-for-longest-repeated-character-substring) | hashtable | [leetcode 1156](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/) | 1st messy O(n), 2nd readable O(n) |
+| 418 | [Car Pooling](/leetcode/1094-car-pooling) | array, math | [leetcode 1094](https://leetcode.com/problems/car-pooling/) | ⭐️typical technique to deal with values on a range, similar to lc1109 |

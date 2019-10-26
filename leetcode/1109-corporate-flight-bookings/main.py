@@ -7,6 +7,7 @@
 
 """
     1st: math
+    - similar to l094, typical technique to deal with values on a range
     - basically we can just use the prefix-sum concept to mark the start and the end of each interval
     - ./idea.jpeg
 
