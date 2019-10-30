@@ -981,3 +981,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 417 | [Swap For Longest Repeated Character Substring](/leetcode/1156-swap-for-longest-repeated-character-substring) | hashtable | [leetcode 1156](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/) | 1st messy O(n), 2nd readable O(n) |
 | 418 | [Car Pooling](/leetcode/1094-car-pooling) | array, math | [leetcode 1094](https://leetcode.com/problems/car-pooling/) | ⭐️typical technique to deal with values on a range, similar to lc1109 |
 | 419 | [Find Smallest Common Element in All Rows](/leetcode/1198-find-smallest-common-element-in-all-rows) | hashtable | [leetcode 1198](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | 1st O(RC) |
+| 420 | [Unique Number of Occurrences](/leetcode/1207-unique-number-of-occurrences) | hashtable | [leetcode 1207](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | |
