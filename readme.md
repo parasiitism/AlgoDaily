@@ -984,3 +984,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 420 | [Unique Number of Occurrences](/leetcode/1207-unique-number-of-occurrences) | hashtable | [leetcode 1207](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | |
 | 421 | [Design File System](/leetcode/1166-design-file-system) | hashtable | [leetcode 1166](https://leetcode.com/problems/design-file-system/) | |
 | 422 | [Shortest Distance to Target Color](/leetcode/1182-shortest-distance-to-target-color) | binary search | [leetcode 1182](https://leetcode.com/problems/shortest-distance-to-target-color/) | |
+| 423 | [Occurrences After Bigram](/leetcode/1078-occurrences-after-bigram) | array | [leetcode 1078](https://leetcode.com/problems/occurrences-after-bigram/) | |
