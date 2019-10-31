@@ -982,3 +982,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 418 | [Car Pooling](/leetcode/1094-car-pooling) | array, math | [leetcode 1094](https://leetcode.com/problems/car-pooling/) | ⭐️typical technique to deal with values on a range, similar to lc1109 |
 | 419 | [Find Smallest Common Element in All Rows](/leetcode/1198-find-smallest-common-element-in-all-rows) | hashtable | [leetcode 1198](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | 1st O(RC) |
 | 420 | [Unique Number of Occurrences](/leetcode/1207-unique-number-of-occurrences) | hashtable | [leetcode 1207](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | |
+| 421 | [Design File System](/leetcode/1166-design-file-system) | hashtable | [leetcode 1166](https://leetcode.com/problems/design-file-system/) | |
