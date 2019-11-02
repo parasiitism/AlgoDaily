@@ -986,3 +986,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 422 | [Shortest Distance to Target Color](/leetcode/1182-shortest-distance-to-target-color) | binary search | [leetcode 1182](https://leetcode.com/problems/shortest-distance-to-target-color/) | |
 | 423 | [Occurrences After Bigram](/leetcode/1078-occurrences-after-bigram) | array | [leetcode 1078](https://leetcode.com/problems/occurrences-after-bigram/) | |
 | 424 | [Shortest Bridge](/leetcode/934-shortest-bridge) | graph, hashtable | [leetcode 934](https://leetcode.com/problems/shortest-bridge/) | DFS + BFS |
+| 425 | [Walking Robot Simulation](/leetcode/874-walking-robot-simulation) | array | [leetcode 874](https://leetcode.com/problems/walking-robot-simulation/) | ⭐️ |
