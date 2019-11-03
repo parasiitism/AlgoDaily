@@ -988,3 +988,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 424 | [Shortest Bridge](/leetcode/934-shortest-bridge) | graph, hashtable | [leetcode 934](https://leetcode.com/problems/shortest-bridge/) | DFS + BFS |
 | 425 | [Walking Robot Simulation](/leetcode/874-walking-robot-simulation) | array | [leetcode 874](https://leetcode.com/problems/walking-robot-simulation/) | ⭐️ |
 | 426 | [A0Paper](/topcoder/A0Paper) | math | [topcoder A0Paper](https://arena.topcoder.com/#/u/practiceCode/17244/67923/15005/2/331608) | ⭐️1st question on topcoder. To be honest, the UX is very unfriendly. |
+| 427 | [Customers Who Never Order](/leetcode/183-customers-who-never-order) | sql | [leetcode 183](https://leetcode.com/problems/customers-who-never-order) | 1st: `not in`, 2nd: `left join + null` |
