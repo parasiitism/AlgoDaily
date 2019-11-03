@@ -987,3 +987,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 423 | [Occurrences After Bigram](/leetcode/1078-occurrences-after-bigram) | array | [leetcode 1078](https://leetcode.com/problems/occurrences-after-bigram/) | |
 | 424 | [Shortest Bridge](/leetcode/934-shortest-bridge) | graph, hashtable | [leetcode 934](https://leetcode.com/problems/shortest-bridge/) | DFS + BFS |
 | 425 | [Walking Robot Simulation](/leetcode/874-walking-robot-simulation) | array | [leetcode 874](https://leetcode.com/problems/walking-robot-simulation/) | ⭐️ |
+| 426 | [A0Paper](/topcoder/A0Paper) | math | [topcoder A0Paper](https://arena.topcoder.com/#/u/practiceCode/17244/67923/15005/2/331608) | ⭐️1st question on topcoder. To be honest, the UX is very unfriendly. |
