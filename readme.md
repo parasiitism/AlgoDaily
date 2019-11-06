@@ -991,3 +991,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 427 | [Customers Who Never Order](/leetcode/183-customers-who-never-order) | sql | [leetcode 183](https://leetcode.com/problems/customers-who-never-order) | 1st: `not in`, 2nd: `left join + null` |
 | 428 | [Queue Reconstruction by Height](/leetcode/406-queue-reconstruction-by-height) | sort, queue | [leetcode 406](https://leetcode.com/problems/queue-reconstruction-by-height/) | 📌sort+queue, need to revise again |
 | 429 | [Product Sales Analysis I](/leetcode/1068-product-sales-analysis-i) | sql | [leetcode 1068](https://leetcode.com/problems/product-sales-analysis-i/) | |
+| 430 | [Product Sales Analysis II](/leetcode/1069-product-sales-analysis-ii) | sql | [leetcode 1069](https://leetcode.com/problems/product-sales-analysis-ii/) | |
