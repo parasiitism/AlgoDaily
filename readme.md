@@ -993,3 +993,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 429 | [Product Sales Analysis I](/leetcode/1068-product-sales-analysis-i) | sql | [leetcode 1068](https://leetcode.com/problems/product-sales-analysis-i/) | |
 | 430 | [Product Sales Analysis II](/leetcode/1069-product-sales-analysis-ii) | sql | [leetcode 1069](https://leetcode.com/problems/product-sales-analysis-ii/) | |
 | 431 | [Coloring A Border](/leetcode/1034-coloring-a-border) | graph | [leetcode 1034](https://leetcode.com/problems/coloring-a-border/) | 1st: BFS + hashtable |
+| 432 | [Pyramid Transition Matrix](/leetcode/756-pyramid-transition-matrix) | graph | [leetcode 756](https://leetcode.com/problems/pyramid-transition-matrix/) | 1st BFS LTE, 2nd DFS beats 90% 📌 need to revise again |
