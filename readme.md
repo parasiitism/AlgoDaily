@@ -995,3 +995,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 431 | [Coloring A Border](/leetcode/1034-coloring-a-border) | graph | [leetcode 1034](https://leetcode.com/problems/coloring-a-border/) | 1st: BFS + hashtable |
 | 432 | [Pyramid Transition Matrix](/leetcode/756-pyramid-transition-matrix) | graph | [leetcode 756](https://leetcode.com/problems/pyramid-transition-matrix/) | 1st BFS LTE, 2nd DFS beats 90% 📌 need to revise again |
 | 433 | [Valid Triangle Number](/leetcode/611-valid-triangle-number) | binary search | [leetcode 611](https://leetcode.com/problems/valid-triangle-number/) | 1st binary search |
+| 434 | [Triangle Judgement](/leetcode/610-triangle-judgement) | sql | [leetcode 610](https://leetcode.com/problems/triangle-judgement/) | 1st ternary function in SQL. 2nd case when |
