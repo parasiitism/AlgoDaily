@@ -981,4 +981,19 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 417 | [Swap For Longest Repeated Character Substring](/leetcode/1156-swap-for-longest-repeated-character-substring) | hashtable | [leetcode 1156](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/) | 1st messy O(n), 2nd readable O(n) |
 | 418 | [Car Pooling](/leetcode/1094-car-pooling) | array, math | [leetcode 1094](https://leetcode.com/problems/car-pooling/) | ⭐️typical technique to deal with values on a range, similar to lc1109 |
 | 419 | [Find Smallest Common Element in All Rows](/leetcode/1198-find-smallest-common-element-in-all-rows) | hashtable | [leetcode 1198](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | 1st O(RC) |
-| 435 | [Unique Number of Occurrences](/leetcode/1207-unique-number-of-occurrences) | hashtable | [leetcode 1207](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | |
+| 420 | [Unique Number of Occurrences](/leetcode/1207-unique-number-of-occurrences) | hashtable | [leetcode 1207](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | |
+| 421 | [Design File System](/leetcode/1166-design-file-system) | hashtable | [leetcode 1166](https://leetcode.com/problems/design-file-system/) | |
+| 422 | [Shortest Distance to Target Color](/leetcode/1182-shortest-distance-to-target-color) | binary search | [leetcode 1182](https://leetcode.com/problems/shortest-distance-to-target-color/) | |
+| 423 | [Occurrences After Bigram](/leetcode/1078-occurrences-after-bigram) | array | [leetcode 1078](https://leetcode.com/problems/occurrences-after-bigram/) | |
+| 424 | [Shortest Bridge](/leetcode/934-shortest-bridge) | graph, hashtable | [leetcode 934](https://leetcode.com/problems/shortest-bridge/) | DFS + BFS |
+| 425 | [Walking Robot Simulation](/leetcode/874-walking-robot-simulation) | array | [leetcode 874](https://leetcode.com/problems/walking-robot-simulation/) | ⭐️ |
+| 426 | [A0Paper](/topcoder/A0Paper) | math | [topcoder A0Paper](https://arena.topcoder.com/#/u/practiceCode/17244/67923/15005/2/331608) | ⭐️1st question on topcoder. To be honest, the UX is very unfriendly. |
+| 427 | [Customers Who Never Order](/leetcode/183-customers-who-never-order) | sql | [leetcode 183](https://leetcode.com/problems/customers-who-never-order) | 1st: `not in`, 2nd: `left join + null` |
+| 428 | [Queue Reconstruction by Height](/leetcode/406-queue-reconstruction-by-height) | sort, queue | [leetcode 406](https://leetcode.com/problems/queue-reconstruction-by-height/) | 📌sort+queue, need to revise again |
+| 429 | [Product Sales Analysis I](/leetcode/1068-product-sales-analysis-i) | sql | [leetcode 1068](https://leetcode.com/problems/product-sales-analysis-i/) | |
+| 430 | [Product Sales Analysis II](/leetcode/1069-product-sales-analysis-ii) | sql | [leetcode 1069](https://leetcode.com/problems/product-sales-analysis-ii/) | |
+| 431 | [Coloring A Border](/leetcode/1034-coloring-a-border) | graph | [leetcode 1034](https://leetcode.com/problems/coloring-a-border/) | 1st: BFS + hashtable |
+| 432 | [Pyramid Transition Matrix](/leetcode/756-pyramid-transition-matrix) | graph | [leetcode 756](https://leetcode.com/problems/pyramid-transition-matrix/) | 1st BFS LTE, 2nd DFS beats 90% 📌 need to revise again |
+| 433 | [Valid Triangle Number](/leetcode/611-valid-triangle-number) | binary search | [leetcode 611](https://leetcode.com/problems/valid-triangle-number/) | 1st binary search |
+| 434 | [Triangle Judgement](/leetcode/610-triangle-judgement) | sql | [leetcode 610](https://leetcode.com/problems/triangle-judgement/) | 1st ternary function in SQL. 2nd case when |
+| 435 | [Elimination Game](/leetcode/390-elimination-game) | math, recursion | [leetcode 390](https://leetcode.com/problems/elimination-game/) | 1st LTE. 2nd recursion. 3rd elegant recursion |
