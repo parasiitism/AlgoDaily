@@ -997,3 +997,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 433 | [Valid Triangle Number](/leetcode/611-valid-triangle-number) | binary search | [leetcode 611](https://leetcode.com/problems/valid-triangle-number/) | 1st binary search |
 | 434 | [Triangle Judgement](/leetcode/610-triangle-judgement) | sql | [leetcode 610](https://leetcode.com/problems/triangle-judgement/) | 1st ternary function in SQL. 2nd case when |
 | 435 | [Elimination Game](/leetcode/390-elimination-game) | recursion, math | [leetcode 390](https://leetcode.com/problems/elimination-game/) | 1st LTE. 2nd recursion. 3rd elegant recursion 📌 need to revise again |
+| 436 | [Cells with Odd Values in a Matrix](/leetcode/1252-cells-with-odd-values-in-a-matrix) | array | [leetcode 1252](https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/) |  |
