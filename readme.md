@@ -996,5 +996,6 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 432 | [Pyramid Transition Matrix](/leetcode/756-pyramid-transition-matrix) | graph | [leetcode 756](https://leetcode.com/problems/pyramid-transition-matrix/) | 1st BFS LTE, 2nd DFS beats 90% 📌 need to revise again |
 | 433 | [Valid Triangle Number](/leetcode/611-valid-triangle-number) | binary search | [leetcode 611](https://leetcode.com/problems/valid-triangle-number/) | 1st binary search |
 | 434 | [Triangle Judgement](/leetcode/610-triangle-judgement) | sql | [leetcode 610](https://leetcode.com/problems/triangle-judgement/) | 1st ternary function in SQL. 2nd case when |
-| 435 | [Elimination Game](/leetcode/390-elimination-game) | math, recursion | [leetcode 390](https://leetcode.com/problems/elimination-game/) | 1st LTE. 2nd recursion. 3rd elegant recursion |
+| 435 | [Elimination Game](/leetcode/390-elimination-game) | recursion, math | [leetcode 390](https://leetcode.com/problems/elimination-game/) | 1st LTE. 2nd recursion. 3rd elegant recursion 📌 need to revise again |
+| 436 | [Cells with Odd Values in a Matrix](/leetcode/1252-cells-with-odd-values-in-a-matrix) | array | [leetcode 1252](https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/) |  |
 | 437 | [Grumpy Bookstore Owner](/leetcode/1052-grumpy-bookstore-owner) | sliding window | [leetcode 1052](https://leetcode.com/problems/grumpy-bookstore-owner/) | 1st sliding window O(n)Q(2n) |
