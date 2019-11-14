@@ -997,3 +997,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 433 | [Valid Triangle Number](/leetcode/611-valid-triangle-number) | binary search | [leetcode 611](https://leetcode.com/problems/valid-triangle-number/) | 1st binary search |
 | 434 | [Triangle Judgement](/leetcode/610-triangle-judgement) | sql | [leetcode 610](https://leetcode.com/problems/triangle-judgement/) | 1st ternary function in SQL. 2nd case when |
 | 435 | [Elimination Game](/leetcode/390-elimination-game) | math, recursion | [leetcode 390](https://leetcode.com/problems/elimination-game/) | 1st LTE. 2nd recursion. 3rd elegant recursion |
+| 437 | [Grumpy Bookstore Owner](/leetcode/1052-grumpy-bookstore-owner) | sliding window | [leetcode 1052](https://leetcode.com/problems/grumpy-bookstore-owner/) | 1st sliding window O(n)Q(2n) |
