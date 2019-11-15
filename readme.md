@@ -999,3 +999,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 435 | [Elimination Game](/leetcode/390-elimination-game) | recursion, math | [leetcode 390](https://leetcode.com/problems/elimination-game/) | 1st LTE. 2nd recursion. 3rd elegant recursion 📌 need to revise again |
 | 436 | [Cells with Odd Values in a Matrix](/leetcode/1252-cells-with-odd-values-in-a-matrix) | array | [leetcode 1252](https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/) |  |
 | 437 | [Grumpy Bookstore Owner](/leetcode/1052-grumpy-bookstore-owner) | sliding window | [leetcode 1052](https://leetcode.com/problems/grumpy-bookstore-owner/) | 1st sliding window O(n)Q(2n) |
+| 438 | [Queens That Can Attack the King](/leetcode/1222-queens-that-can-attack-the-king) | hashtable | [leetcode 1222](https://leetcode.com/problems/queens-that-can-attack-the-king/) | 1st O(Q + 64) |
