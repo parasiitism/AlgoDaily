@@ -1003,3 +1003,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 439 | [Analyze User Website Visit Pattern](/leetcode/1152-analyze-user-website-visit-pattern) | hashtable，recursion | [leetcode 1152](https://leetcode.com/problems/analyze-user-website-visit-pattern/) | 1st O(N * nCr) ⭐️interesting question |
 | 440 | [Valid Square](/leetcode/593-valid-square) | math | [leetcode 593](https://leetcode.com/problems/valid-square/) | 🤔i dont think its good for an interview |
 | 441 | [Friends Of Appropriate Ages](/leetcode/825-friends-of-appropriate-ages) | binary search, hashtable | [leetcode 825](https://leetcode.com/problems/friends-of-appropriate-ages/) | 1st O(NlogN). 2nd hashtable O(102^2) |
+| 442 | [Verifying an Alien Dictionary](/leetcode/953-verifying-an-alien-dictionary) | string | [leetcode 953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | 1st O(MN) |
