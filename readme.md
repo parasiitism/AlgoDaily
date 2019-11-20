@@ -1004,4 +1004,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 440 | [Valid Square](/leetcode/593-valid-square) | math | [leetcode 593](https://leetcode.com/problems/valid-square/) | 🤔i dont think its good for an interview |
 | 441 | [Friends Of Appropriate Ages](/leetcode/825-friends-of-appropriate-ages) | binary search, hashtable | [leetcode 825](https://leetcode.com/problems/friends-of-appropriate-ages/) | 1st O(NlogN). 2nd hashtable O(102^2) |
 | 442 | [Verifying an Alien Dictionary](/leetcode/953-verifying-an-alien-dictionary) | string | [leetcode 953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | 1st O(MN) |
-| 443 | [Find Elements in a Contaminated Binary Tree](/leetcode/1261-find-elements-in-a-contaminated-binary-tree) | tree, hashtable | [leetcode 1261](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/) | 1st DFS O(N)Q(N) |
+| 443 | [Find Elements in a Contaminated Binary Tree](/leetcode/1261-find-elements-in-a-contaminated-binary-tree) | tree, hashtable | [leetcode 1261](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/) | 1st DFS O(N)Q(N). 2nd BFS O(N)Q(N) |
