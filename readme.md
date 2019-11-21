@@ -1006,3 +1006,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 442 | [Verifying an Alien Dictionary](/leetcode/953-verifying-an-alien-dictionary) | string | [leetcode 953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | 1st O(MN) |
 | 443 | [Find Elements in a Contaminated Binary Tree](/leetcode/1261-find-elements-in-a-contaminated-binary-tree) | tree, hashtable | [leetcode 1261](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/) | 1st DFS O(N)Q(N). 2nd BFS O(N)Q(N) |
 | 444 | [Projection Area of 3D Shapes](/leetcode/883-projection-area-of-3d-shapes) | tree, hashtable | [leetcode 883](https://leetcode.com/problems/projection-area-of-3d-shapes/) | 1st O(RC) |
+| 445 | [Lemonade Change](/leetcode/860-lemonade-change) | array | [leetcode 860](https://leetcode.com/problems/lemonade-change/) | 1st O(n) |
