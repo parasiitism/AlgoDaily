@@ -67,7 +67,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 16 | [Lower & Upper Bound Binary Searches](/miscellaneous/binary-searches) | binary search | | [my medium article](https://medium.com/@CalvinChankf/how-to-deal-with-lower-upper-bound-binary-search-b9ce744673df) |
 | 17 | [Intersection of Two Arrays](/leetcode/349-intersection-of-two-arrays) | binary search, hashtable | [leetcode 349](https://leetcode.com/problems/intersection-of-two-arrays) | |
 | 18 | [Intersection of Two Arrays II](/leetcode/349-intersection-of-two-arrays-ii) | binary search, hashtable | [leetcode 350](https://leetcode.com/problems/intersection-of-two-arrays-ii) | |
-| 19 | [Two Sum II](/leetcode/167-two-sum-ii-input-array-is-sorted) | binary search, hashtable | [leetcode 167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | 1st O(n)Q(n). 2nd O(n)Q(1)|
+| 19 | [Two Sum II](/leetcode/167-two-sum-ii-input-array-is-sorted) | binary search, hashtable | [leetcode 167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | 1st O(n)S(n). 2nd O(n)S(1)|
 | 20 | [Find the Duplicate Number](/leetcode/287-find-the-duplicate-number) | sort, hashtable, 2 pointers | [leetcode 287](https://leetcode.com/problems/find-the-duplicate-number/description/) | 📌for the 2 pointers approach |
 | 21 | [Find Minimum in Rotated Sorted Array II](/leetcode/154-find-minimum-in-rotated-sorted-array-ii) | binary search | [leetcode 154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | 📌 very hard classic question |
 | 22 | [Validate Binary Search Tree](/leetcode/98-validate-binary-search-tree) | binary tree | [leetcode 98](https://leetcode.com/problems/validate-binary-search-tree/description/) | 📌 1st 25sep2018 2nd 18mar2019 |
@@ -177,7 +177,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 117 | [Remove Nth Node From End of List](/leetcode/19-remove-nth-node-from-end-of-list/) | linked list | [leetcode 19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 📌 classic question, 1 classic + 2 other approaches |
 | 117 | [Remove Linked List Elements](/leetcode/203-remove-linked-list-elements/) | linked list | [leetcode 19](https://leetcode.com/problems/remove-linked-list-elements/) | 1st naive approach 📌 2nd classic approach |
 | 118 | [Odd Even Linked List](/leetcode/328-odd-even-linked-list/) | linked list | [leetcode 118](https://leetcode.com/problems/odd-even-linked-list/) | both naive and classic approach still beats 100% LOL |
-| 118 | [Palindrome Linked List](/leetcode/234-palindrome-linked-list/) | linked list | [leetcode 234](https://leetcode.com/problems/palindrome-linked-list/) | ⭐️1st naive O(n)Q(n). 2nd O(2n)Q(1) |
+| 118 | [Palindrome Linked List](/leetcode/234-palindrome-linked-list/) | linked list | [leetcode 234](https://leetcode.com/problems/palindrome-linked-list/) | ⭐️1st naive O(n)S(n). 2nd O(2n)S(1) |
 | 118 | [Valid Sudoku](/leetcode/36-valid-sodoku/) | hashtable | [leetcode 36](https://leetcode.com/problems/valid-sodoku/) | very straight forward O(3n) solution beats 31.25%. But the 2 one-pass solutions also beats 31.25% 🤔 |
 | 118 | [Permutations](/miscellaneous/permutations) | backtracking, recursion | | 📌 basic |
 | 118 | [Permutations](/leetcode/46-permutations) | backtracking, recursion | [leetcode 46](https://leetcode.com/problems/permutations/) | 📌 recursive beats 77.21%, iterative beats 77.14% |
@@ -578,7 +578,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 230 | [Split Linked List in Parts](/leetcode/725-split-linked-list-in-parts]) | math, linked list | [leetcode 725](https://leetcode.com/problems/split-linked-list-in-parts/) | O(2n) |
 | 231 | [Shuffle an Array](/leetcode/384-shuffle-an-array) | array | [leetcode 384](https://leetcode.com/problems/shuffle-an-array/) | 1st bultin `random.shuffle()`. 📌2nd O(n) Fisher-Yates Algorithm |
 | 231 | [Flip Equivalent Binary Trees](/leetcode/951-flip-equivalent-binary-trees) | recursion | [leetcode 951](https://leetcode.com/problems/flip-equivalent-binary-trees/) | ⭐️1st O(n) |
-| 232 | [Toeplitz Matrix](/leetcode/766-toeplitz-matrix) | array | [leetcode 766](https://leetcode.com/problems/toeplitz-matrix/) | 1st O(rc)Q(r). 2nd O(rc)Q(1) |
+| 232 | [Toeplitz Matrix](/leetcode/766-toeplitz-matrix) | array | [leetcode 766](https://leetcode.com/problems/toeplitz-matrix/) | 1st O(rc)S(r). 2nd O(rc)S(1) |
 | 232 | [Concatenated Words](/leetcode/472-concatenated-words) | dynamic programming | [leetcode 472](https://leetcode.com/problems/concatenated-words/) | 📌1st time hard dp without extra help |
 | 233 | [Longest Word in Dictionary](/leetcode/720-longest-word-in-dictionary) | array | [leetcode 720](https://leetcode.com/problems/longest-word-in-dictionary/) | 1st O(kn) |
 | 233 | [Closest Leaf in a Binary Tree](/leetcode/742-closest-leaf-in-a-binary-tree) | tree, graph | [leetcode 742](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/) | ⭐️1st O(N+E) |
@@ -637,7 +637,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 252 | [Sorted an Array](/leetcode/912-sort-an-array) | sort | [leetcode 912](https://leetcode.com/problems/sort-an-array/) | merge sort, quick sort |
 | 253 | [Add One Row to Tree](/leetcode/623-add-one-row-to-tree) | recursion | [leetcode 623](https://leetcode.com/problems/add-one-row-to-tree/) | ⭐️recursive dfs O(n) |
 | 253 | [Boundary of Binary Tree](/leetcode/545-boundary-of-binary-tree) | tree | [leetcode 545](https://leetcode.com/problems/boundary-of-binary-tree/) | 📌preorder + inorder + postorder |
-| 254 | [Rotate Array](/leetcode/189-rotate-array) | array | [leetcode 189](https://leetcode.com/problems/rotate-array/) | 1st O(2n)Q(n) 📌 2nd O(3n)Q(1) |
+| 254 | [Rotate Array](/leetcode/189-rotate-array) | array | [leetcode 189](https://leetcode.com/problems/rotate-array/) | 1st O(2n)S(n) 📌 2nd O(3n)S(1) |
 | 254 | [Valid Anagram](/leetcode/242-valid-anagram) | hashtable | [leetcode 242](https://leetcode.com/problems/valid-anagram/) | 1st O(S+T) |
 | 254 | [Kth Smallest Element in a BST](/leetcode/230-kth-smallest-element-in-a-bst) | tree | [leetcode 230](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | 1st O(n) |
 | 254 | [Kill Process](/leetcode/582-kill-process) | graph | [leetcode 582](https://leetcode.com/problems/kill-process/) | 1st bfs O(n) 2nd dfs O(n) |
@@ -684,7 +684,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 265 | [Partition Array into Disjoint Intervals](/leetcode/915-partition-array-into-disjoint-intervals) | array | same as above, Array Partition | 📌|
 | 265 | [Base 7](/leetcode/504-base-7) | math | [leetcode 504](https://leetcode.com/problems/base-7/) | |
 | 265 | [Linked List Components](/leetcode/817-linked-list-components) | hastable, linked list | [leetcode 817](https://leetcode.com/problems/linked-list-components/) | 1st hastable O(n) |
-| 265 | [Battleships in a Board](/leetcode/419-battleships-in-a-board) | graph, hastable | [leetcode 419](https://leetcode.com/problems/battleships-in-a-board/) | 1st bfs+hashtable O(n)Q(n), ⭐️2nd bfs O(n)Q(1), 3rd dfs O(n)Q(1) |
+| 265 | [Battleships in a Board](/leetcode/419-battleships-in-a-board) | graph, hastable | [leetcode 419](https://leetcode.com/problems/battleships-in-a-board/) | 1st bfs+hashtable O(n)S(n), ⭐️2nd bfs O(n)S(1), 3rd dfs O(n)S(1) |
 | 265 | [Binary Subarrays With Sum](/leetcode/930-binary-subarrays-with-sum) | hastable | [leetcode 930](https://leetcode.com/problems/binary-subarrays-with-sum/) | 📌subarray sum = k problem, the same as leetcode 325, 525, 560 |
 | 265 | [Frog Jump](/codility/3-frog-jump) | math | [codility 3](https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/) | |
 | 265 | [Reverse String II](/leetcode/541-reverse-string-ii) | string | [leetcode 541](https://leetcode.com/problems/reverse-string-ii/) | 1st O(n) |
@@ -712,7 +712,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 269 | [Longest Harmonious Subsequence](/leetcode/594-longest-harmonious-subsequence) | hashtable | [leetcode 594](https://leetcode.com/problems/longest-harmonious-subsequence/) | 📌1st O(2N) 2nd O(N) |
 | 269 | [Range Addition II](/leetcode/598-range-addition-ii) | array | [leetcode 598](https://leetcode.com/problems/range-addition-ii/) | 📌1st O(OR+OC) 2nd O(O) |
 | 269 | [Range Addition](/leetcode/370-range-addition) | prefix sum | [leetcode 370](https://leetcode.com/problems/range-addition/) | 📌1st O(O) |
-| 270 | [Set Mismatch](/leetcode/645-set-mismatch) | hashtable, math | [leetcode 370](https://leetcode.com/problems/set-mismatch/) | 📌1st O(O)Q(n) 2nd O(n)Q(1) |
+| 270 | [Set Mismatch](/leetcode/645-set-mismatch) | hashtable, math | [leetcode 370](https://leetcode.com/problems/set-mismatch/) | 📌1st O(O)S(n) 2nd O(n)S(1) |
 | 270 | [Shortest Distance to a Character](/leetcode/821-shortest-distance-to-a-character) | binary search, array | [leetcode 821](https://leetcode.com/problems/shortest-distance-to-a-character/) | 1st binary searchO(Ologn), 📌2nd O(n) back&forth cache technique |
 | 270 | [Remove All Adjacent Duplicates In String](/leetcode/1047-remove-all-adjacent-duplicates-in-string) | stack | [leetcode 1047](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | ⭐️1st O(n) similar to parentheses problem |
 | 270 | [Distant Barcodes](/leetcode/1054-distant-barcodes) | heap, hashtable | [leetcode 1054](https://leetcode.com/problems/distant-barcodes/) | ⭐️1st, 2nd O(nlogn) similar to [leetcode 767](https://leetcode.com/problems/reorganize-string/) |
@@ -725,7 +725,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 272 | [Flip Columns For Maximum Number of Equal Rows](/leetcode/1072-flip-columns-for-maximum-number-of-equal-rows) | array | [leetcode 1072](https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/) | ⭐️finding the pattern is not that easy |
 | 272 | [Greatest Common Divisor of Strings](/leetcode/1071-greatest-common-divisor-of-strings) | string | [leetcode 1072](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | 1st O(ABB), 2nd O(AB) |
 | 272 | [Rotated Digits](/leetcode/788-rotated-digits) | array | [leetcode 788](https://leetcode.com/problems/rotated-digits/) | 1st O(nlogn) |
-| 272 | [String Compression](/leetcode/443-string-compression) | array | [leetcode 443](https://leetcode.com/problems/string-compression/) | 1st O(n)Q(n) |
+| 272 | [String Compression](/leetcode/443-string-compression) | array | [leetcode 443](https://leetcode.com/problems/string-compression/) | 1st O(n)S(n) |
 | 272 | [Magic Squares In Grid](/leetcode/840-magic-squares-in-grid) | array | [leetcode 840](https://leetcode.com/problems/magic-squares-in-grid/) | 1st O(10n) |
 | 273 | [Student Attendance Record I](/leetcode/551-student-attendance-record-i) | string | [leetcode 551](https://leetcode.com/problems/student-attendance-record-i/) | 1st O(n) |
 | 273 | [Number String Permutation](/glassdoor/rakuten/number-string-permutation) | permutation | glassdoor | O(n!) |
@@ -743,10 +743,10 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 276 | [Number of Boomerangs](/leetcode/447-number-of-boomerangs) | hashtable, math | [leetcode 447](https://leetcode.com/problems/number-of-boomerangs/) | ⭐️ |
 | 276 | [Circular Array Loop](/leetcode/457-circlar-array-loop) | 2pointers | [leetcode 457](https://leetcode.com/problems/circlar-array-loop/) | 1st O(n^2) 📌similar to [leetcode 141](https://leetcode.com/problems/linked-list-cycle/) |
 | 276 | [Maximal Indices Diff of Adajent Pairs](/glassdoor/rakuten/max-indices-diff-of-adjacent-pairs) | sort | glassdoor | ⭐️1st O(nlogn) |
-| 276 | [PassingCars](/codility/5-prefix_sums) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/) | 1st O(n)Q(n) |
-| 276 | [GenomicRangeQuery](/codility/5-genomic_range_query) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/) | 1st O(n)Q(n) |
-| 276 | [Fish](/codility/5-fish) | stack | [codility 7](https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/) | 1st O(n)Q(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
-| 276 | [Remove K Digits](/leetcode/402-remove-k-digits) | stack | [leetcode 402](https://leetcode.com/problems/remove-k-digits/) | 1st O(n)Q(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
+| 276 | [PassingCars](/codility/5-prefix_sums) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/) | 1st O(n)S(n) |
+| 276 | [GenomicRangeQuery](/codility/5-genomic_range_query) | prefix sum | [codility 5](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/) | 1st O(n)S(n) |
+| 276 | [Fish](/codility/5-fish) | stack | [codility 7](https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/) | 1st O(n)S(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
+| 276 | [Remove K Digits](/leetcode/402-remove-k-digits) | stack | [leetcode 402](https://leetcode.com/problems/remove-k-digits/) | 1st O(n)S(n) similar to [leetcode 735](https://leetcode.com/problems/asteroid-collision/) |
 | 277 | [Index Pairs of a String](/leetcode/1065-index-pairs-of-a-string) | string | [leetcode 1065](https://leetcode.com/problems/index-pairs-of-a-string/) | 1st O(W+N^2) beats 6%, 2nd O(WTk) beats 98% |
 | 277 | [Longest Line of Consecutive One in Matrix](/leetcode/562-longest-line-of-consecutive-one-in-matrix) | graph, hashtable | [leetcode 1065](https://leetcode.com/problems/longest-line-of-consecutive-one-in-matrix/) | 1st dfs O(RC * max(R,C)) |
 | 277 | [Hand of Straights](/leetcode/846-hand-of-straights) | heap | [leetcode 846](https://leetcode.com/problems/hand-of-straight/) |📌1st O(N logN K) |
@@ -762,7 +762,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 278 | [Minimum Moves to Equal Array Elements II](/leetcode/462-minimum-moves-to-equal-array-elements-ii) | math | [leetcode 462](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | ⭐️ |
 | 279 | [Binary Watch](/leetcode/401-binary-watch) | recursion, bit op | [leetcode 401](https://leetcode.com/problems/binary-watch/) | ⭐️ |
 | 279 | [Construct the Rectangle](/leetcode/492-construct-the-rectangle) | math | [leetcode 492](https://leetcode.com/problems/construct-the-rectangle/) | ⭐️ |
-| 279 | [N-Repeated Element in Size 2N Array](/leetcode/961-n-repeated-element-in-size-2n-array) | hashtable, math | [leetcode 961](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/) | ⭐️1st O(n)Q(n). 2nd O(n)Q(1) |
+| 279 | [N-Repeated Element in Size 2N Array](/leetcode/961-n-repeated-element-in-size-2n-array) | hashtable, math | [leetcode 961](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/) | ⭐️1st O(n)S(n). 2nd O(n)S(1) |
 | 279 | [Binary Tree Tilt](/leetcode/563-binary-tree-tilt) | tree, recursion | [leetcode 563](https://leetcode.com/problems/binary-tree-tilt/) |  |
 | 279 | [Leaf-Similar Trees](/leetcode/872-leaf-similar-trees) | tree, recursion | [leetcode 872](https://leetcode.com/problems/leaf-similar-trees/) | 1st recurisve dfs O(n). 2nd iterative dfs O(n) |
 | 279 | [Monotone Increasing Digits](/leetcode/738-monotone-increasing-digits) | math | [leetcode 738](https://leetcode.com/problems/monotone-increasing-digits/) | 📌learned from others |
@@ -770,7 +770,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 279 | [Increasing Triplet Subsequence](/leetcode/334-increasing-triplet-subsequence) | array | [leetcode 334](https://leetcode.com/problems/increasing-triplet-subsequence/) | 📌📌📌back&forth array technique |
 | 280 | [Sum of Square Numbers](/leetcode/633-sum-of-square-numbers) | math | [leetcode 633](https://leetcode.com/problems/sum-of-square-numbers/) | 📌📌📌1st O(sqrt(n)^2) LTE 2nd O(sqrt(n)) beats 78% |
 | 281 | [Sum of Even Numbers After Queries](/leetcode/985-sum-of-even-numbers-after-queries) | math, array | [leetcode 985](https://leetcode.com/problems/sum-of-even-numbers-after-queries/) | 1st O(n) |
-| 281 | [Pairs of Songs With Total Durations Divisible by 60](/leetcode/1010-pairs-of-songs-with-total-durations-divisible-by-60) | math, hashtable | [leetcode 1010](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) | 📌📌📌very good question O(n)Q(n) |
+| 281 | [Pairs of Songs With Total Durations Divisible by 60](/leetcode/1010-pairs-of-songs-with-total-durations-divisible-by-60) | math, hashtable | [leetcode 1010](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) | 📌📌📌very good question O(n)S(n) |
 | 282 | [Partition Equal Subset Sum](/leetcode/416-partition-equal-subset-sum) | dynamic programming | [leetcode 416](https://leetcode.com/problems/partition-equal-subset-sum/) | 📌📌📌classic beginning dp, "the easiest NP-hard problem" 1st, 2nd O(NS) top-down recursion + hashtable, 3rd O(NS) iterative |
 | 282 | [Partition to K Equal Sum Subsets](/leetcode/698-partition-to-k-equal-sum-subsets) | dynamic programming | [leetcode 698](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) | 📌📌📌classic beginning dp, "the 2nd easiest NP-hard problem" O(2^n) -> O(n!) |
 | 283 | [Split Array with Equal Sum](/leetcode/548-split-array-with-equal-sum) | prefix sum, hashtable | [leetcode 548](https://leetcode.com/problems/split-array-with-equal-sum/) | another equal sum problem O(n^2) |
@@ -781,9 +781,9 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 284 | [Beautiful strings](/glassdoor/jpmorgan/beautiful-strings) | hashtable | glassdoor | ⭐️fb hackercup question |
 | 284 | [Balenced Smileys](/glassdoor/jpmorgan/smileys) | stack, minmax | glassdoor | ⭐️fb hackercup question |
 | 285 | [Nth Digit](/leetcode/400-nth-digit) | math | [leetcode 400](https://leetcode.com/problems/nth-digit/) | 📌📌📌very interesting question |
-| 285 | [Flatten a Multilevel Doubly Linked List](/leetcode/430-flatten-a-multilevel-doubly-linked-list) | linked list | [leetcode 430](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | ⭐️both 1st, 2nd O(n)Q(n) |
+| 285 | [Flatten a Multilevel Doubly Linked List](/leetcode/430-flatten-a-multilevel-doubly-linked-list) | linked list | [leetcode 430](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | ⭐️both 1st, 2nd O(n)S(n) |
 | 285 | [Data Stream as Disjoint Intervals](/leetcode/352-data-stream-as-disjoint-intervals) | binary search | [leetcode 352](https://leetcode.com/problems/data-stream-as-disjoint-intervals/) | ⭐️1st upperbound binary search O(logn) |
-| 285 | [Longest Increasing Path in a Matrix](/leetcode/329-longest-increasing-path-in-a-matrix) | graph, hashtable | [leetcode 329](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | ⭐️dfs+hashtable O(RC)Q(RC) |
+| 285 | [Longest Increasing Path in a Matrix](/leetcode/329-longest-increasing-path-in-a-matrix) | graph, hashtable | [leetcode 329](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | ⭐️dfs+hashtable O(RC)S(RC) |
 | 286 | [Complement of Base 10 Integer](/leetcode/1009-complement-of-base-10-integer) | bit op | [leetcode 1009](https://leetcode.com/problems/complement-of-base-10-integer/) | O(logn) |
 | 286 | [Complete Binary Tree Inserter](/leetcode/919-complete-binary-tree-inserter) | bst | [leetcode 919](https://leetcode.com/problems/complete-binary-tree-inserter/) | ⭐️init O(n) insert O(1) |
 | 287 | [Subarray Sum Equals K](/glassdoor/clover-health/subarray-sum-equals-k) | array, hashtable | interview | 📌📌📌return any one of the subarray that sum up to L |
@@ -842,7 +842,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 305 | [Maximum Product of Word Lengths](/leetcode/318-maximum-product-of-word-lengths) | hashtable, bit op | [leetcode 318](https://leetcode.com/problems/maximum-product-of-word-lengths/) | 1st O(26n^2) brute force 📌2nd O(n^2) bitop |
 | 305 | [Number of Atoms](/leetcode/726-number-of-atoms) | hashtable, recursion | [leetcode 726](https://leetcode.com/problems/number-of-atoms/) | 📌fresh attempt with intuitive recursion O(n^2) is good enough to beat 92.83% |
 | 306 | [Quad Tree Intersection](/leetcode/558-quad-tree-intersection) | recursion | [leetcode 558](https://leetcode.com/problems/quad-tree-intersection/) | ⭐️Quad Tree |
-| 306 | [Valid Word Abbreviation](/leetcode/408-valid-word-abbreviation) | string | [leetcode 408](https://leetcode.com/problems/valid-word-abbreviation/) | ⭐️ 1st O(n)Q(n). 2nd O(n)Q(1) |
+| 306 | [Valid Word Abbreviation](/leetcode/408-valid-word-abbreviation) | string | [leetcode 408](https://leetcode.com/problems/valid-word-abbreviation/) | ⭐️ 1st O(n)S(n). 2nd O(n)S(1) |
 | 307 | [Remove Outermost Parentheses](/leetcode/1021-remove-outermost-parentheses) | stack | [leetcode 1021](https://leetcode.com/problems/remove-outermost-parentheses/) | |
 | 307 | [MaxProfit](/codility/9-max_profit) | dynamic programming | [codility 9](https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/) | |
 | 307 | [CountFactors](/codility/10-prime_and_composite_numbers) | math | [codility 9](https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/count_factors/) | 📌📌📌use square root to find facters |
@@ -910,7 +910,7 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 347 | [Relative Sort Array](/leetcode/1122-relative-sort-array) | heap, hashtable | [leetcode 1122](https://leetcode.com/problems/relative-sort-array/) | |
 | 348 | [Check If a Number Is Majority Element in a Sorted Array](/leetcode/1150-check-if-a-number-is-majority-element-in-a-sorted-array) | binary search | [leetcode 1150](https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/) | 1st O(logn) binary search, 2nd brute force |
 | 349 | [Number of Subarrays with Bounded Maximum](/leetcode/795-number-of-subarrays-with-bounded-maximum) | dynamic programming | [leetcode 795](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/) | 📌📌📌 |
-| 350 | [Longest Turbulent Subarray](/leetcode/978-longest-turbulent-subarray) | dynamic programming | [leetcode 978](https://leetcode.com/problems/longest-turbulent-subarray/) | ⭐️1st O(2n)Q(n). 2nd O(n)Q(1) |
+| 350 | [Longest Turbulent Subarray](/leetcode/978-longest-turbulent-subarray) | dynamic programming | [leetcode 978](https://leetcode.com/problems/longest-turbulent-subarray/) | ⭐️1st O(2n)S(n). 2nd O(n)S(1) |
 | 351 | [Find Words That Can Be Formed by Characters](/leetcode/1160-find-words-that-can-be-formed-by-characters) | hashtable | [leetcode 1160](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/) | |
 | 352 | [Defanging an IP Address](/leetcode/1108-defanging-an-ip-address) | string | [leetcode 1108](https://leetcode.com/problems/defanging-an-ip-address/) | whats the point of doing this? |
 | 352 | [Brick Wall](/leetcode/554-brick-wall) | hashtable | [leetcode 554](https://leetcode.com/problems/brick-wall/) | interesting question |
@@ -998,13 +998,13 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 434 | [Triangle Judgement](/leetcode/610-triangle-judgement) | sql | [leetcode 610](https://leetcode.com/problems/triangle-judgement/) | 1st ternary function in SQL. 2nd case when |
 | 435 | [Elimination Game](/leetcode/390-elimination-game) | recursion, math | [leetcode 390](https://leetcode.com/problems/elimination-game/) | 1st LTE. 2nd recursion. 3rd elegant recursion 📌 need to revise again |
 | 436 | [Cells with Odd Values in a Matrix](/leetcode/1252-cells-with-odd-values-in-a-matrix) | array | [leetcode 1252](https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/) |  |
-| 437 | [Grumpy Bookstore Owner](/leetcode/1052-grumpy-bookstore-owner) | sliding window | [leetcode 1052](https://leetcode.com/problems/grumpy-bookstore-owner/) | 1st sliding window O(n)Q(2n) |
+| 437 | [Grumpy Bookstore Owner](/leetcode/1052-grumpy-bookstore-owner) | sliding window | [leetcode 1052](https://leetcode.com/problems/grumpy-bookstore-owner/) | 1st sliding window O(n)S(2n) |
 | 438 | [Queens That Can Attack the King](/leetcode/1222-queens-that-can-attack-the-king) | hashtable | [leetcode 1222](https://leetcode.com/problems/queens-that-can-attack-the-king/) | 1st O(Q + 64) |
 | 439 | [Analyze User Website Visit Pattern](/leetcode/1152-analyze-user-website-visit-pattern) | hashtable，recursion | [leetcode 1152](https://leetcode.com/problems/analyze-user-website-visit-pattern/) | 1st O(N * nCr) ⭐️interesting question |
 | 440 | [Valid Square](/leetcode/593-valid-square) | math | [leetcode 593](https://leetcode.com/problems/valid-square/) | 🤔i dont think its good for an interview |
 | 441 | [Friends Of Appropriate Ages](/leetcode/825-friends-of-appropriate-ages) | binary search, hashtable | [leetcode 825](https://leetcode.com/problems/friends-of-appropriate-ages/) | 1st O(NlogN). 2nd hashtable O(102^2) |
 | 442 | [Verifying an Alien Dictionary](/leetcode/953-verifying-an-alien-dictionary) | string | [leetcode 953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | 1st O(MN) |
-| 443 | [Find Elements in a Contaminated Binary Tree](/leetcode/1261-find-elements-in-a-contaminated-binary-tree) | tree, hashtable | [leetcode 1261](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/) | 1st DFS O(N)Q(N). 2nd BFS O(N)Q(N) |
+| 443 | [Find Elements in a Contaminated Binary Tree](/leetcode/1261-find-elements-in-a-contaminated-binary-tree) | tree, hashtable | [leetcode 1261](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/) | 1st DFS O(N)S(N). 2nd BFS O(N)S(N) |
 | 444 | [Projection Area of 3D Shapes](/leetcode/883-projection-area-of-3d-shapes) | tree, hashtable | [leetcode 883](https://leetcode.com/problems/projection-area-of-3d-shapes/) | 1st O(RC) |
 | 445 | [Lemonade Change](/leetcode/860-lemonade-change) | array | [leetcode 860](https://leetcode.com/problems/lemonade-change/) | 1st O(n) |
-| 446 | [Web Crawler](/leetcode/1236-web-crawler) | graph, hashtable | [leetcode 1236](https://leetcode.com/problems/web-crawler/) | 1st O(n)Q(n) |
+| 446 | [Web Crawler](/leetcode/1236-web-crawler) | graph, hashtable | [leetcode 1236](https://leetcode.com/problems/web-crawler/) | 1st BFS O(n)S(n). 2nd DFS O(n)S(n) |

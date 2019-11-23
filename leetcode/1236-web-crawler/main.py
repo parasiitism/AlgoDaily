@@ -53,3 +53,49 @@ class Solution(object):
         hostname = 'http://' + temp[:i]
         path = temp[i:]
         return hostname, path
+
+
+"""
+    2nd: DFS + hashtable
+    - DFS to traverse all the urls
+    - use a hashtable to avoid redundant calculation
+
+    Time    O(n)
+    Space   O(n)
+    260 ms, faster than 5.88%
+"""
+
+
+class Solution(object):
+    def crawl(self, startUrl, htmlParser):
+        """
+        :type startUrl: str
+        :type htmlParser: HtmlParser
+        :rtype: List[str]
+        """
+        self.htmlParser = htmlParser
+        self.masterHostname, _ = self.getSplitUrl(startUrl)
+        self.hs = set()
+        self.dfs(startUrl)
+        return self.hs
+
+    def dfs(self, url):
+        hostname, _ = self.getSplitUrl(url)
+        if hostname != self.masterHostname:
+            return
+        if url in self.hs:
+            return
+        self.hs.add(url)
+        for child in self.htmlParser.getUrls(url):
+            self.dfs(child)
+
+    def getSplitUrl(self, s):
+        temp = s[7:]
+        i = 0
+        while i < len(temp):
+            if temp[i] == '/':
+                break
+            i += 1
+        hostname = 'http://' + temp[:i]
+        path = temp[i:]
+        return hostname, path
