@@ -1008,3 +1008,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 444 | [Projection Area of 3D Shapes](/leetcode/883-projection-area-of-3d-shapes) | tree, hashtable | [leetcode 883](https://leetcode.com/problems/projection-area-of-3d-shapes/) | 1st O(RC) |
 | 445 | [Lemonade Change](/leetcode/860-lemonade-change) | array | [leetcode 860](https://leetcode.com/problems/lemonade-change/) | 1st O(n) |
 | 446 | [Web Crawler](/leetcode/1236-web-crawler) | graph, hashtable | [leetcode 1236](https://leetcode.com/problems/web-crawler/) | 1st BFS O(n)S(n). 2nd DFS O(n)S(n) |
+| 447 | [Web Crawler Multithreaded](/leetcode/1242-web-crawler-multithreaded) | concurrency | [leetcode 1242](https://leetcode.com/problems/web-crawler-multithreaded/) | good and practical question, BFS 📌 need to revise again |
