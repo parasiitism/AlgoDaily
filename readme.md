@@ -1010,3 +1010,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 446 | [Web Crawler](/leetcode/1236-web-crawler) | graph, hashtable | [leetcode 1236](https://leetcode.com/problems/web-crawler/) | 1st BFS O(n)S(n). 2nd DFS O(n)S(n) |
 | 447 | [Web Crawler Multithreaded](/leetcode/1242-web-crawler-multithreaded) | concurrency | [leetcode 1242](https://leetcode.com/problems/web-crawler-multithreaded/) | good and practical question, BFS 📌 need to revise again |
 | 448 | Stupid Tetris | challenged by colleagues | [Stupid Tetris](https://github.com/calvinchankf/stupid-tetris) | 50% might be |
+| 449 | Stupid Tetris | challenged by colleagues | [Stupid Tetris](https://github.com/calvinchankf/stupid-tetris) | 100% all shapes added |
