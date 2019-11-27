@@ -1011,3 +1011,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 447 | [Web Crawler Multithreaded](/leetcode/1242-web-crawler-multithreaded) | concurrency | [leetcode 1242](https://leetcode.com/problems/web-crawler-multithreaded/) | good and practical question, BFS 📌 need to revise again |
 | 448 | Stupid Tetris | challenged by colleagues | [Stupid Tetris](https://github.com/calvinchankf/stupid-tetris) | 50% might be |
 | 449 | Stupid Tetris | challenged by colleagues | [Stupid Tetris](https://github.com/calvinchankf/stupid-tetris) | 100% all shapes added |
+| 450 | [Confusing Number](/leetcode/1056-confusing-number) | array | [leetcode 1056](https://leetcode.com/problems/confusing-number/) | |
