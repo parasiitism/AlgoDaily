@@ -1012,3 +1012,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 448 | Stupid Tetris | challenged by colleagues | [Stupid Tetris](https://github.com/calvinchankf/stupid-tetris) | 50% might be |
 | 449 | Stupid Tetris | challenged by colleagues | [Stupid Tetris](https://github.com/calvinchankf/stupid-tetris) | 100% all shapes added |
 | 450 | [Confusing Number](/leetcode/1056-confusing-number) | array | [leetcode 1056](https://leetcode.com/problems/confusing-number/) | |
+| 451 | [Play with Chips](/leetcode/1217-play-with-chips) | array | [leetcode 1217](https://leetcode.com/problems/play-with-chips/) | |
