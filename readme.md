@@ -1013,4 +1013,5 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 449 | Stupid Tetris | challenged by colleagues | [Stupid Tetris](https://github.com/calvinchankf/stupid-tetris) | 100% all shapes added |
 | 450 | [Confusing Number](/leetcode/1056-confusing-number) | array | [leetcode 1056](https://leetcode.com/problems/confusing-number/) | |
 | 451 | [Play with Chips](/leetcode/1217-play-with-chips) | array | [leetcode 1217](https://leetcode.com/problems/play-with-chips/) | |
-| 452 | [Print Zero Even Odd](/leetcode/1116-print-zero-even-odd) | concurrency | [leetcode 1116](https://leetcode.com/problems/print-zero-even-odd/) | good and practical question, BFS 📌 need to revise again |
+| 452 | [Print Zero Even Odd](/leetcode/1116-print-zero-even-odd) | concurrency | [leetcode 1116](https://leetcode.com/problems/print-zero-even-odd/) | good and practical question 📌 need to revise again |
+| 453 | [Print FooBar Alternately](/leetcode/1115-print-foobar-alternately) | concurrency | [leetcode 1115](https://leetcode.com/problems/print-foobar-alternately/) | good and practical question 📌 need to revise again |
