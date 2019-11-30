@@ -1015,3 +1015,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 451 | [Play with Chips](/leetcode/1217-play-with-chips) | array | [leetcode 1217](https://leetcode.com/problems/play-with-chips/) | |
 | 452 | [Print Zero Even Odd](/leetcode/1116-print-zero-even-odd) | concurrency | [leetcode 1116](https://leetcode.com/problems/print-zero-even-odd/) | good and practical question 📌 need to revise again |
 | 453 | [Print FooBar Alternately](/leetcode/1115-print-foobar-alternately) | concurrency | [leetcode 1115](https://leetcode.com/problems/print-foobar-alternately/) | good and practical question 📌 need to revise again |
+| 454 | [Fizz Buzz Multithreaded](/leetcode/1195-fizz-buzz-multithreaded) | concurrency | [leetcode 1195](https://leetcode.com/problems/fizz-buzz-multithreaded/) | good and practical question 📌 need to revise again |
