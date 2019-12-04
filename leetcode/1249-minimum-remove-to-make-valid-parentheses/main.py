@@ -10,17 +10,14 @@
 
 
 class Solution(object):
-    def minRemoveToMakeValid(self, S):
+    def minRemoveToMakeValid(self, s):
         """
         :type s: str
         :rtype: str
         """
-        if len(S) == 0:
-            return 0
-        opens = []
-        closes = []
-        for i in range(len(S)):
-            c = S[i]
+        opens, closes = [], []
+        for i in range(len(s)):
+            c = s[i]
             if c == '(':
                 opens.append(i)
             elif c == ')':
@@ -28,13 +25,9 @@ class Solution(object):
                     closes.append(i)
                 else:
                     opens.pop()
-        hs = set()
-        for x in opens:
-            hs.add(x)
-        for x in closes:
-            hs.add(x)
+        hs = set(opens+closes)
         res = ''
-        for i in range(len(S)):
+        for i in range(len(s)):
             if i not in hs:
-                res += S[i]
+                res += s[i]
         return res
