@@ -1018,4 +1018,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 454 | [Fizz Buzz Multithreaded](/leetcode/1195-fizz-buzz-multithreaded) | concurrency | [leetcode 1195](https://leetcode.com/problems/fizz-buzz-multithreaded/) | 📌1st mutex lock. 2nd semaphore beats 100% |
 | 455 | [Building H2O](/leetcode/1117-building-h2o) | concurrency | [leetcode 1117](https://leetcode.com/problems/building-h2o/) | cheated...made it single-thread LOL |
 | 456 | [Design Bounded Blocking Queue](/leetcode/1188-design-bounded-blocking-queue) | concurrency | [leetcode 1188](https://leetcode.com/problems/design-bounded-blocking-queue/) | 📌semaphore + deque |
-| 457 | [Minimum Remove to Make Valid Parentheses](/leetcode/1249-minimum-remove-to-make-valid-parentheses) | stack | [leetcode 1249](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | 1st stack+hashtable O(2n) |
+| 457 | [Minimum Remove to Make Valid Parentheses](/leetcode/1249-minimum-remove-to-make-valid-parentheses) | stack | [leetcode 1249](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | 1st, 2nd stack+hashtable O(2n). 3rd stack only |
