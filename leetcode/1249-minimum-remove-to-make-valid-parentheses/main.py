@@ -5,7 +5,7 @@
     
     Time    O(2N)
     Space   O(N)
-    1628 ms, faster than 22.84%
+    164 ms, faster than 79.33%
 """
 
 
@@ -26,11 +26,7 @@ class Solution(object):
                 else:
                     opens.pop()
         hs = set(opens+closes)
-        res = ''
-        for i in range(len(s)):
-            if i not in hs:
-                res += s[i]
-        return res
+        return ''.join(s[i] for i in range(len(s)) if i not in hs)
 
 
 """
@@ -41,7 +37,7 @@ class Solution(object):
 
     Time    O(2N)
     Space   O(N)
-    1616 ms, faster than 24.88%
+    188 ms, faster than 61.42%
 """
 
 
@@ -63,16 +59,12 @@ class Solution(object):
                 else:
                     opens.pop()
         redundant |= set(opens)
-        res = ''
-        for i in range(len(s)):
-            if i not in redundant:
-                res += s[i]
-        return res
+        return ''.join(s[i] for i in range(len(s)) if i not in redundant)
 
 
 """
     3rd: similar logic without using a hashtable
-    
+
     Time    O(3N)
     Space   O(N)
     244 ms, faster than 45.31%
