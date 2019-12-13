@@ -1028,3 +1028,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 464 | [Number of Distinct Islands II](/leetcode/711-number-of-distinct-islands-ii) | graph | [leetcode 1008](https://leetcode.com/problems/number-of-distinct-islands-ii/) | 1st BFS+hastbale. 2nd DFS+hashtable |
 | 465 | [Tree Diameter](/leetcode/1245-tree-diameter) | graph | [leetcode 1245](https://leetcode.com/problems/tree-diameter/) | recursion 📌 need to revise again |
 | 466 | [Traffic Light Controlled Intersection](/leetcode/1279-traffic-light-controlled-intersection) | concurrency | [leetcode 1279](https://leetcode.com/problems/traffic-light-controlled-intersection/) | the easiest way: make it single-thread |
+| 467 | [Subtract the Product and Sum of Digits of an Integer](/leetcode/1281-subtract-the-product-and-sum-of-digits-of-an-integer) | array | [leetcode 1281](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | |
