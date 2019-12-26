@@ -1042,4 +1042,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 478 | [Maximum Length of a Concatenated String with Unique Characters](/leetcode/1239-maximum-length-of-a-concatenated-string-with-unique-characters) | recursion | [leetcode 1239](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/) | 1st, 2nd O(2^N) at max |
 | 479 | [Remove Covered Intervals](/leetcode/1288-remove-covered-intervals) | sort | [leetcode 1288](https://leetcode.com/problems/remove-covered-intervals/) | 1st O(NlogN) |
 | 480 | [Find Winner on a Tic Tac Toe Game](/leetcode/1275-find-winner-on-a-tic-tac-toe-game) | array | [leetcode 1275](https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/) | |
-| 481 | [Delete Tree Nodes](/leetcode/1273-delete-tree-nodes) | recursion | [leetcode 1273](https://leetcode.com/problems/delete-tree-nodes/) | |
+| 481 | [Delete Tree Nodes](/leetcode/1273-delete-tree-nodes) | recursion | [leetcode 1273](https://leetcode.com/problems/delete-tree-nodes/) | 1st DFS+DFS O(3N). 2nd DFS+BFS O(3N) |
