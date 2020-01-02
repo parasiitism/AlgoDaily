@@ -1049,4 +1049,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 485 | [Prime Arrangements](/leetcode/1175-prime-arrangements) | dynamic programming | [leetcode 1175](https://leetcode.com/problems/prime-arrangements/) | 1st O(N^2) |
 | 486 | [Wildcard Matching](/leetcode/44-wildcard-matching) | dynamic programming | [leetcode 44](https://leetcode.com/problems/wildcard-matching/) | 1st O(2^min(S, P)) LTE, 2nd O(SP) 📌need to revise again |
 | 487 | [Iterator for Combination](/leetcode/1286-iterator-for-combination) | recursion | [leetcode 1286](https://leetcode.com/problems/iterator-for-combination/) | 1st O(nCk) |
-
+| 488 | [Synonymous Sentences](/leetcode/1258-synonymous-sentences) | recursion, union find | [leetcode 1258](https://leetcode.com/problems/synonymous-sentences/) | 1st union find + recursion O(2N + NlogN + k!) |
