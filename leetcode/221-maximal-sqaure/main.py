@@ -1,5 +1,8 @@
 """
     1st approach: classic dynamic programming approach
+    - similar to lc1277
+
+    ref:
     - https://www.youtube.com/watch?v=NYeVhmWsWec
 
     Time  O(r*c)
@@ -16,14 +19,12 @@ class Solution(object):
         """
         if len(matrix) == 0 or len(matrix[0]) == 0:
             return 0
-        # create a dp array for caching the submatrices sizes
-        dp = []
-        for arr in matrix:
-            dp.append(len(matrix[0]) * [0])
+        r, c = len(matrix), len(matrix[0])
+        dp = [c * [0] for _ in range(r)]
         result = 0
         # for each cell, check if itself can complete a larger square
-        for i in range(1, len(matrix)):
-            for j in range(1, len(matrix[0])):
+        for i in range(r):
+            for j in range(c):
                 if i == 0 or j == 0:
                     dp[i][j] = int(matrix[i][j])
                 elif matrix[i][j] == '1':
