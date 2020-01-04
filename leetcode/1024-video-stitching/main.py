@@ -18,6 +18,8 @@ import sys
     Space   O(T)
     28 ms, faster than 19.38%
 """
+
+
 class Solution(object):
     def videoStitching(self, clips, T):
         """
@@ -30,13 +32,17 @@ class Solution(object):
         for i in range(T + 1):
             for start, end in clips:
                 if start <= i <= end:
+                    # 1. dp[start] + 1 means we consider the current clip as an extra clip
+                    # 2. or we select the orignal dp[i]
                     dp[i] = min(dp[start] + 1, dp[i])
         if dp[T] == sys.maxsize:
             return -1
         return dp[T]
 
+
 s = Solution()
 
-a = [[0,1],[6,8],[0,2],[5,6],[0,4],[0,3],[6,7],[1,3],[4,7],[1,4],[2,5],[2,6],[3,4],[4,5],[5,7],[6,9]]
+a = [[0, 1], [6, 8], [0, 2], [5, 6], [0, 4], [0, 3], [6, 7], [1, 3],
+     [4, 7], [1, 4], [2, 5], [2, 6], [3, 4], [4, 5], [5, 7], [6, 9]]
 b = 9
 print(s.videoStitching(a, b))
