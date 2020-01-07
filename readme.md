@@ -1054,3 +1054,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 490 | [Find N Unique Integers Sum up to Zero](/leetcode/1304-find-n-unique-integers-sum-up-to-zero) | math | [leetcode 712](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/) | |
 | 491 | [Count Square Submatrices with All Ones](/leetcode/1277-count-square-submatrices-with-all-ones) | dynamic programming | [leetcode 1277](https://leetcode.com/problems/count-square-submatrices-with-all-ones/) | |
 | 492 | [Largest 1-Bordered Square](/leetcode/1139-largest-1-bordered-square) | dynamic programming | [leetcode 1139](https://leetcode.com/problems/largest-1-bordered-square/) | idea like using prefix sum 📌need to revise again |
+| 493 | [Minimum Falling Path Sum](/leetcode/931-minimum-falling-path-sum) | dynamic programming | [leetcode 931](https://leetcode.com/problems/minimum-falling-path-sum/) | 1st recursion + hashtable O(RC) |
