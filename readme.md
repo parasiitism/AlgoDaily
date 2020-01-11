@@ -1059,3 +1059,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 495 | [Smallest Common Region](/leetcode/1257-smallest-common-region) | graph | [leetcode 1257](https://leetcode.com/problems/smallest-common-region/) | lowest common ancestor |
 | 496 | [Largest Plus Sign](/leetcode/764-largest-plus-sign) | dynamic programming | [leetcode 764](https://leetcode.com/problems/largest-plus-sign/) | 1st O(N^2) + OOP LTE. 2nd O(N^2) no OOP ✅ |
 | 497 | [Find Positive Integer Solution for a Given Equation](/leetcode/1237-find-positive-integer-solution-for-a-given-equation) | binary search | [leetcode 1237](https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/) | |
+| 498 | [Distinct Subsequences](/leetcode/115-distinct-subsequences) | dynamic programming | [leetcode 115](https://leetcode.com/problems/distinct-subsequences/) | 📌2nd recursion+hashtable, 3rd 2d array ✅ |
