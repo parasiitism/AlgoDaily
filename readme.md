@@ -1064,3 +1064,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 500 | [Decompress Run-Length Encoded List](/leetcode/1313-decompress-run-length-encoded-list) | array | [leetcode 1313](https://leetcode.com/problems/decompress-run-length-encoded-list/) | very bad description |
 | 501 | [Element Appearing More Than 25% In Sorted Array](/leetcode/1287-element-appearing-more-than-25-in-sorted-array) | hashtable, binary search | [leetcode 1287](https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/) | |
 | 502 | [All Elements in Two Binary Search Trees](/leetcode/1305-all-elements-in-two-binary-search-trees) | tree | [leetcode 1305](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/) | |
+| 503 | [Deepest Leaves Sum](/leetcode/1302-deepest-leaves-sum) | tree, recursion | [leetcode 1302](https://leetcode.com/problems/deepest-leaves-sum/) | 1st BFS O(N), 2nd recursive DFS O(N) |
