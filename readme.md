@@ -1067,3 +1067,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 503 | [Deepest Leaves Sum](/leetcode/1302-deepest-leaves-sum) | tree, recursion | [leetcode 1302](https://leetcode.com/problems/deepest-leaves-sum/) | 1st BFS O(N), 2nd recursive DFS O(N) |
 | 504 | [Longest String Chain](/leetcode/1048-longest-string-chain) | dynamic programming | [leetcode 1048](https://leetcode.com/problems/longest-string-chain/) | 1st recursion+hashtable. 2nd bottom up interation |
 | 505 | [Find Numbers with Even Number of Digits](/leetcode/1295-find-numbers-with-even-number-of-digits) | array | [leetcode 1295](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | |
+| 506 | [Sum of Nodes with Even-Valued Grandparent](/leetcode/1315-sum-of-nodes-with-even-valued-grandparent) | tree | [leetcode 1315](https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/) | 1st recursive DFS. 2nd BFS |
