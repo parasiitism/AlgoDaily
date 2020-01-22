@@ -1069,3 +1069,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 505 | [Find Numbers with Even Number of Digits](/leetcode/1295-find-numbers-with-even-number-of-digits) | array | [leetcode 1295](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | |
 | 506 | [Sum of Nodes with Even-Valued Grandparent](/leetcode/1315-sum-of-nodes-with-even-valued-grandparent) | tree | [leetcode 1315](https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/) | 1st recursive DFS. 2nd BFS |
 | 507 | [Minimum Swaps to Make Sequences Increasing](/leetcode/801-minimum-swaps-to-make-sequences-increasing) | dynamic programming | [leetcode 801](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/) | 📌 |
+| 508 | [Maximum 69 Number](/leetcode/1323-maximum-69-number) | string | [leetcode 1323](https://leetcode.com/problems/maximum-69-number/) | |
