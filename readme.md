@@ -1073,3 +1073,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 509 | [Minimum Time Visiting All Points](/leetcode/1266-minimum-time-visiting-all-points) | math | [leetcode 1266](https://leetcode.com/problems/minimum-time-visiting-all-points/) | |
 | 510 | [Decrypt String from Alphabet to Integer Mapping](/leetcode/1309-decrypt-string-from-alphabet-to-integer-mapping) | array | [leetcode 1309](https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/) | |
 | 511 | [Replace Elements with Greatest Element on Right Side](/leetcode/1299-replace-elements-with-greatest-element-on-right-side) | array | [leetcode 1299](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | |
+| 512 | [Delete Leaves With a Given Value](/leetcode/1325-delete-leaves-with-a-given-value) | tree, recursion | [leetcode 1325](https://leetcode.com/problems/delete-leaves-with-a-given-value/) | |
