@@ -1072,3 +1072,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 508 | [Maximum 69 Number](/leetcode/1323-maximum-69-number) | string | [leetcode 1323](https://leetcode.com/problems/maximum-69-number/) | |
 | 509 | [Minimum Time Visiting All Points](/leetcode/1266-minimum-time-visiting-all-points) | math | [leetcode 1266](https://leetcode.com/problems/minimum-time-visiting-all-points/) | |
 | 510 | [Decrypt String from Alphabet to Integer Mapping](/leetcode/1309-decrypt-string-from-alphabet-to-integer-mapping) | array | [leetcode 1309](https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/) | |
+| 511 | [Replace Elements with Greatest Element on Right Side](/leetcode/1299-replace-elements-with-greatest-element-on-right-side) | array | [leetcode 1299](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | |
