@@ -1076,3 +1076,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 512 | [Delete Leaves With a Given Value](/leetcode/1325-delete-leaves-with-a-given-value) | tree, recursion | [leetcode 1325](https://leetcode.com/problems/delete-leaves-with-a-given-value/) | |
 | 513 | [Delete and Earn](/leetcode/740-delete-and-earn) | dynamic programming | [leetcode 740](https://leetcode.com/problems/delete-and-earn/) | ⭐️similar to [leetcode 198](https://leetcode.com/problems/house-robber/) |
 | 514 | [Minimum Swaps to Make Strings Equal](/leetcode/1247-minimum-swaps-to-make-strings-equal) | brain teaser | [leetcode 1247](https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/) | 📌brain teaser |
+| 515 | [Camelize Object](/miscellaneous/camelize-object) | recursion | study | |
