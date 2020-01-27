@@ -1077,3 +1077,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 513 | [Delete and Earn](/leetcode/740-delete-and-earn) | dynamic programming | [leetcode 740](https://leetcode.com/problems/delete-and-earn/) | ⭐️similar to [leetcode 198](https://leetcode.com/problems/house-robber/) |
 | 514 | [Minimum Swaps to Make Strings Equal](/leetcode/1247-minimum-swaps-to-make-strings-equal) | brain teaser | [leetcode 1247](https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/) | 📌brain teaser |
 | 515 | [Camelize Object](/miscellaneous/camelize-object) | recursion | study | |
+| 516 | [Length of Longest Fibonacci Subsequence](/leetcode/873-length-of-longest-fibonacci-subsequence) | dynamic programming | [leetcode 873](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/) | 1st O(N^2logN). 2nd O(N^2)|
