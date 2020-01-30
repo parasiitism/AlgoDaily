@@ -32,6 +32,7 @@ class Solution:
         if N == 1:
             return [str(num)]
 
+        # comment these 2 lines u will get: 64 ms, faster than 12.36%
         if (num, N) in self.ht:
             return self.ht[(num, N)]
 
