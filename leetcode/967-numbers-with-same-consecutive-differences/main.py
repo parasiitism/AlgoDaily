@@ -4,8 +4,8 @@
 - generate all the possibilities by recursion
 - cache the array of temporary result of number on each layer, ie. (num, N) to avoid redundant calculation
 
-Time    less than O(2^N)
-Space   less than O(2^N)
+Time    O(N^2) -> O(2^N)
+Space   O(N^2) -> O(2^N)
 40 ms, faster than 71.91%
 """
 
@@ -68,3 +68,39 @@ print(s.numsSameConsecDiff(a, b))
 a = 3
 b = 0
 print(s.numsSameConsecDiff(a, b))
+
+
+print("-----")
+
+"""
+    2nd: brute force iteration, learned from others
+
+    ref:
+    - https://leetcode.com/problems/numbers-with-same-consecutive-differences/discuss/211183/JavaC%2B%2BPython-Iterative-Solution
+
+    Time    O(10N)
+    Space   O(10N)
+    28 ms, faster than 100.00%
+"""
+
+
+class Solution:
+    def numsSameConsecDiff(self, N, K):
+        """
+        :type N: int
+        :type K: int
+        :rtype: List[int]
+        """
+        cur = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        for _ in range(2, N+1):
+            cur2 = []
+            for x in cur:
+                # get the last digit
+                y = x % 10
+                # add new digit by y-K, y+K
+                if x > 0 and y + K < 10:
+                    cur2.append(x * 10 + y + K)
+                if x > 0 and K > 0 and y - K >= 0:
+                    cur2.append(x * 10 + y - K)
+            cur = cur2
+        return cur
