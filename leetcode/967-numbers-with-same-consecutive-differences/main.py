@@ -78,8 +78,8 @@ print("-----")
     ref:
     - https://leetcode.com/problems/numbers-with-same-consecutive-differences/discuss/211183/JavaC%2B%2BPython-Iterative-Solution
 
-    Time    O(10N)
-    Space   O(10N)
+    Time    O(2^N)
+    Space   O(2^N)
     28 ms, faster than 100.00%
 """
 
