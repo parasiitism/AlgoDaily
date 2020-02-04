@@ -1082,4 +1082,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 518 | [Numbers With Same Consecutive Differences](/leetcode/967-numbers-with-same-consecutive-differences) | dynamic programming | [leetcode 967](https://leetcode.com/problems/numbers-with-same-consecutive-differences/) | 1st recursion + hashtable. 📌2nd iteration O(2^N) |
 | 519 | [Broken Calculator](/leetcode/991-broken-calculator) | math | [leetcode 991](https://leetcode.com/problems/broken-calculator/) |  1st BFS LTE. 📌2nd math |
 | 520 | [Maximum Gap](/leetcode/164-maximum-gap) | sort | [leetcode 164](https://leetcode.com/problems/maximum-gap/) |  |
-
+| 521 | [Filter Restaurants by Vegan-Friendly, Price and Distance](/leetcode/1333-filter-restaurants-by-vegan-friendly-price-and-distance) | sort | [leetcode 1333](https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/) |  |
