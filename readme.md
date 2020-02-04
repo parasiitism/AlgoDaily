@@ -1083,3 +1083,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 519 | [Broken Calculator](/leetcode/991-broken-calculator) | math | [leetcode 991](https://leetcode.com/problems/broken-calculator/) |  1st BFS LTE. 📌2nd math |
 | 520 | [Maximum Gap](/leetcode/164-maximum-gap) | sort | [leetcode 164](https://leetcode.com/problems/maximum-gap/) |  |
 | 521 | [Filter Restaurants by Vegan-Friendly, Price and Distance](/leetcode/1333-filter-restaurants-by-vegan-friendly-price-and-distance) | sort | [leetcode 1333](https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/) |  |
+| 522 | [Array of Doubled Pairs](/leetcode/954-array-of-doubled-pairs) | sort, hashtable | [leetcode 954](https://leetcode.com/problems/array-of-doubled-pairs/) | 1st, 2nd, 3rd sort+hashtable |
