@@ -42,3 +42,47 @@ class Solution(object):
                 i += 1
                 j += 1
         return mat
+
+
+"""
+    2nd: same logic as 1st but in one loop
+    - get the left + up boundaries
+    - iterate from each boundary diagonally and put the numbers into array
+    - sort the array and put that into a temporary array
+    - put the numbers back in
+
+    Time    O(NlogN)
+    Space   O(N)
+    72 ms, faster than 84.95%
+"""
+
+
+class Solution(object):
+    def diagonalSort(self, mat):
+        """
+        :type mat: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        r, c = len(mat), len(mat[0])
+        starts = []
+        for i in range(r-1, -1, -1):
+            starts.append((i, 0))
+        for i in range(1, c):
+            starts.append((0, i))
+
+        for x, y in starts:
+            # sort
+            arr = []
+            i, j = x, y
+            while i < r and j < c:
+                arr.append(mat[i][j])
+                i += 1
+                j += 1
+            arr.sort()
+            # put them back in
+            i, j = x, y
+            while i < r and j < c:
+                mat[i][j] = arr.pop(0)
+                i += 1
+                j += 1
+        return mat
