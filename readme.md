@@ -1085,3 +1085,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 521 | [Filter Restaurants by Vegan-Friendly, Price and Distance](/leetcode/1333-filter-restaurants-by-vegan-friendly-price-and-distance) | sort | [leetcode 1333](https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/) |  |
 | 522 | [Array of Doubled Pairs](/leetcode/954-array-of-doubled-pairs) | sort, hashtable | [leetcode 954](https://leetcode.com/problems/array-of-doubled-pairs/) | 1st, 2nd, 3rd sort+hashtable |
 | 523 | [Sort the Matrix Diagonally](/leetcode/1329-sort-the-matrix-diagonally) | sort, array | [leetcode 1329](https://leetcode.com/problems/sort-the-matrix-diagonally/) | 1st, 2nd O(NlogN) |
+| 524 | [Search Suggestions System](/leetcode/1268-search-suggestions-system) | trie | [leetcode 1268](https://leetcode.com/problems/search-suggestions-system/) | 1st memory consuming but fast O(NlogN) |
