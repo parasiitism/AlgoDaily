@@ -1087,3 +1087,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 523 | [Sort the Matrix Diagonally](/leetcode/1329-sort-the-matrix-diagonally) | sort, array | [leetcode 1329](https://leetcode.com/problems/sort-the-matrix-diagonally/) | 1st, 2nd O(NlogN) |
 | 524 | [Search Suggestions System](/leetcode/1268-search-suggestions-system) | trie | [leetcode 1268](https://leetcode.com/problems/search-suggestions-system/) | 1st memory consuming but fast O(NlogN) |
 | 525 | [Get Watched Videos by Your Friends](/leetcode/1311-get-watched-videos-by-your-friends) | graph | [leetcode 1311](https://leetcode.com/problems/get-watched-videos-by-your-friends/) | 1st BFS + hashtable |
+| 526 | [Rank Transform of an Array](/leetcode/1331-rank-transform-of-an-array) | sort, hashtable | [leetcode 1331](https://leetcode.com/problems/rank-transform-of-an-array/) | sort + hashtable |
