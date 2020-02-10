@@ -1089,3 +1089,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 525 | [Get Watched Videos by Your Friends](/leetcode/1311-get-watched-videos-by-your-friends) | graph | [leetcode 1311](https://leetcode.com/problems/get-watched-videos-by-your-friends/) | 1st BFS + hashtable |
 | 526 | [Rank Transform of an Array](/leetcode/1331-rank-transform-of-an-array) | sort, hashtable | [leetcode 1331](https://leetcode.com/problems/rank-transform-of-an-array/) | sort + hashtable |
 | 527 | [Greatest Sum Divisible by Three](/leetcode/1262-greatest-sum-divisible-by-three) | dynamic programming | [leetcode 1262](https://leetcode.com/problems/greatest-sum-divisible-by-three/) | 📌 |
+| 528 | [Sentence Screen Fitting](/leetcode/418-sentence-screen-fitting) | greedy | [leetcode 418](https://leetcode.com/problems/sentence-screen-fitting/) | 📌📌📌 |
