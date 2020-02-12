@@ -1091,3 +1091,4 @@ tree | [leetcode 889](https://leetcode.com/problems/serialize-and-deserialize-bi
 | 527 | [Greatest Sum Divisible by Three](/leetcode/1262-greatest-sum-divisible-by-three) | dynamic programming | [leetcode 1262](https://leetcode.com/problems/greatest-sum-divisible-by-three/) | 📌 |
 | 528 | [Sentence Screen Fitting](/leetcode/418-sentence-screen-fitting) | greedy | [leetcode 418](https://leetcode.com/problems/sentence-screen-fitting/) | 📌📌📌 |
 | 529 | [Print Words Vertically](/leetcode/1324-print-words-vertically) | array | [leetcode 1324](https://leetcode.com/problems/print-words-vertically/) | |
+| 530 | [Number of Steps to Reduce a Number to Zero](/leetcode/1342-number-of-steps-to-reduce-a-number-to-zero) | recursion, bit op | [leetcode 1342](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | 1st iteration. 2nd recursion. 3rd bit op |
