@@ -1,5 +1,6 @@
 """
-    Minimum Spanning Tree: find the edges which connect all the nodes with minimum cost
+    Minimum Spanning Tree:
+    - find out the minium cost/edges to connect all the nodes
 
 	This appraoch is a classic approach using Prim's Algorithm
 	- I did it with a heap and a hashtable
