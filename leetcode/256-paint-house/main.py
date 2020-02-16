@@ -51,3 +51,9 @@ class Solution:
             costs[i][1] = y + min(costs[i-1][0], costs[i-1][2])
             costs[i][2] = z + min(costs[i-1][0], costs[i-1][1])
         return min(costs[-1])
+
+
+"""
+    variation: min -> max if the question is something like
+    e.g. getting the max profit by painting the houses in non-adjacent colors
+"""
