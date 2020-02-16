@@ -39,7 +39,6 @@ class Solution:
             for j in range(c):
                 prevSum += mat[i][j]
                 prefSums[i][j] = prevSum
-        print(prefSums)
         res = [c * [0] for _ in range(r)]
         for i in range(r):
             for j in range(c):
