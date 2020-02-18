@@ -89,5 +89,6 @@ class Solution:
         for a in nums:
             for x in seen[:]:
                 cur = x + a
-                seen[cur % 3] = max(seen[cur % 3], cur)
+                mod = cur % 3
+                seen[mod] = max(seen[mod], cur)
         return seen[0]
