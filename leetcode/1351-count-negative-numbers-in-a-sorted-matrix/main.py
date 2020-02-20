@@ -1,7 +1,12 @@
 from typing import List
 
 """
-    1st: common upper bound binary search
+  0th: brute force
+"""
+
+
+"""
+    1st: reverse cols + common upper bound binary search
     Time    O(RC) <- reversing each row takes linear time O(N)
     Space   O(C)
     128 ms beats 66.06%
