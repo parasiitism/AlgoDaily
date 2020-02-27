@@ -58,3 +58,35 @@ print(s.removeSubfolders(a))
 
 a = ["/a/b", "/c/d/e", "/c/f", "/a", "/c/d", "/a/b/d", "/a/b/ca", "/a/b/c"]
 print(s.removeSubfolders(a))
+
+print("-----")
+
+
+"""
+    2nd: 
+    1. sort folder by length
+    2. check if the floder's parent fold in a hashset before adding it into the hashset
+
+    Time    O(NlogN + NM)
+    Space   O(N)
+    296 ms, faster than 54.50%
+"""
+
+
+class Solution(object):
+    def removeSubfolders(self, folders):
+        """
+        :type folder: List[str]
+        :rtype: List[str]
+        """
+        folders.sort(key=len)
+        seen = set()
+        for f in folders:
+            isRoot = True
+            for i in range(2, len(f)):
+                if f[i] == '/' and f[: i] in seen:
+                    isRoot = False
+                    break
+            if isRoot:
+                seen.add(f)
+        return list(seen)
