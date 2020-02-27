@@ -49,4 +49,4 @@ class Solution(object):
         :type arr: List[int]
         :rtype: List[int]
         """
-        return sorted(A, key=lambda a: [bin(a).count('1'), a])
+        return sorted(arr, key=lambda a: [bin(a).count('1'), a])
