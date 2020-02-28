@@ -83,7 +83,7 @@ class Solution(object):
         seen = set()
         for f in folders:
             isRoot = True
-            for i in range(2, len(f)):
+            for i in range(1, len(f)):
                 if f[i] == '/' and f[: i] in seen:
                     isRoot = False
                     break
