@@ -66,8 +66,10 @@ const zombieInMatrix = (N, S, T) => {
 	hits_str.forEach((symbol) => {
 		const [i, j] = symbolToCoor(symbol);
 		const key = i + "," + j;
-		const ship = coorMapToShip[key];
-		shipAreasFuture[ship] -= 1;
+		if (coorMapToShip[key] !== undefined) {
+			const ship = coorMapToShip[key];
+			shipAreasFuture[ship] -= 1;
+		}
 	});
 
 	console.log(shipAreasFuture);
