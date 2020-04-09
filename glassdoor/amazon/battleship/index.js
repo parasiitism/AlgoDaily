@@ -48,7 +48,7 @@ const zombieInMatrix = (N, S, T) => {
 				const key = i + "," + j;
 				coorMapToShip[key] = idx;
 				if (shipAreas[idx] === undefined) {
-					shipAreas[idx] += 1;
+					shipAreas[idx] = 1;
 				} else {
 					shipAreas[idx] += 1;
 				}
