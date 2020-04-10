@@ -24,6 +24,8 @@
     N = 3, S = "1A 1B,2C 2C" and T = "1B"
     ./eg2.png
     return (0, 1)
+
+    ref: https://leetcode.com/discuss/interview-question/538068/
 */
 
 // 10C -> [9, 2]

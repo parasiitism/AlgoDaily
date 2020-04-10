@@ -10,6 +10,8 @@
     Sample Output
     3
     2
+
+    ref: https://leetcode.com/discuss/interview-question/233724
 */
 
 /*

@@ -1,4 +1,8 @@
 /*
+    ref: https://leetcode.com/discuss/interview-question/396418/
+*/
+
+/*
     findGcd(100, 40)
     
     -> 40, 100%40

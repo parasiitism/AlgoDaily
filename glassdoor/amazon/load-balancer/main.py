@@ -30,6 +30,8 @@
 
     N is an integer within the range [5..100,000];
     each element of array A is an integer within the range [1..10,000].
+
+    ref: https://leetcode.com/discuss/interview-question/506287/
 """
 
 
