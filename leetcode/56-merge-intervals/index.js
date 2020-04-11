@@ -1,3 +1,14 @@
+/*
+    1st approach: sort
+    1. sort the intervals by start time
+    2. iterate the intervals and compare the cur interval start time with the last interval end time
+
+    Time    O(nlogn)
+    Space   O(n)
+    88 ms, faster than 24.16%
+    20apr2019
+*/
+
 /**
  * @param {number[][]} intervals
  * @return {number[][]}
