@@ -33,10 +33,10 @@ I believe that practising algorithms every day is a long-term investment in my l
 #### Questions from
 
 -   [Leetcode](https://leetcode.com)
--   [Project Euler](https://projecteuler.net)
 -   [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam)
 -   [Google Kick Start](https://codingcompetitions.withgoogle.com/kickstart/)
 -   [Codility](https://app.codility.com/programmers/lessons/)
+-   [Project Euler](https://projecteuler.net)
 -   Glassdoor
 -   Interviews
 -   ...
@@ -46,7 +46,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 -   [GoogleCodeJam](https://github.com/calvinchankf/GoogleCodeJam)
 -   [GoogleKickStart](https://github.com/calvinchankf/GoogleKickStart)
 
-### My leetcode account
+#### My leetcode account
 
 -   [calvinchankf](https://leetcode.com/calvinchankf/)
 
