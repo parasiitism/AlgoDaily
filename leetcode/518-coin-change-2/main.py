@@ -1,5 +1,7 @@
 """
     2nd attempt: DP, learned from others
+    - similar to lc377 but diff loop arrangement
+
 	the idea is to divide the problem into subproblems:
 	for each amount, calculate the number of different combinations using the result from smaller amount
 	
