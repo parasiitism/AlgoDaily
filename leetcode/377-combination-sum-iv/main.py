@@ -9,7 +9,7 @@
 
 
 class Solution:
-    def combinationSum4(self, coins: List[int], amount: int) -> int:
+    def combinationSum4(self, coins, amount):
         dp = (amount+1)*[0]
         dp[0] = 1
         for i in range(1, amount+1):
@@ -17,4 +17,12 @@ class Solution:
                 remain = i - coins[j]
                 if remain >= 0:
                     dp[i] += dp[remain]
+            print(dp)
         return dp[amount]
+
+
+s = Solution()
+
+a = [1, 2, 5]
+b = 5
+print(s.combinationSum4(a, b))
