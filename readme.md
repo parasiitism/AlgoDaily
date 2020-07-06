@@ -24,7 +24,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 -   Heap
 -   Linked list
 -   Bit Operation
--   Dynamic programming(Kadan's)
+-   Dynamic programming(Kadan's, Binary Lifting)
 -   Backtracking(Permutations & Combinations & Subsets...etc)
 -   Math
 -   and more...
@@ -140,3 +140,4 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 674 | [Minimum Number of Days to Make m Bouquets](/leetcode/1482-minimum-number-of-days-to-make-m-bouquets)                                                                              | binary search                 | [leetcode 1482](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)                                       | ⭐️⭐️⭐️                                                                                                 |
 | 675 | [H-Index](/leetcode/274-h-index-ii)                                                                                                                                                | binary search                 | [leetcode 275](https://leetcode.com/problems/h-index-ii/)                                                                       | ⭐️                                                                                                       |
 | 675 | [H-Index II](/leetcode/275-h-index)                                                                                                                                                | binary search                 | [leetcode 274](https://leetcode.com/problems/h-index/)                                                                          | ⭐️                                                                                                       |
+| 676 | [Kth Ancestor of a Tree Node](/leetcode/1483-kth-ancestor-of-a-tree-node)                                                                                                          | dynamoc programming           | [leetcode 1483](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/)                                                     | 📌📌📌 binary lifting                                                                                     |
