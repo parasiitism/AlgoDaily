@@ -3,7 +3,7 @@
 
 	Time	O(n)
 	Space	O(h)
-	0 ms, faster than 100.00%
+	68 ms, faster than 63.22%
 */
 var isSameTree = function (p, q) {
 	if (p == null && q == null) {
@@ -23,7 +23,7 @@ var isSameTree = function (p, q) {
 
 	Time	O(n)
 	Space	O(h)
-	0 ms, faster than 100.00%
+	116 ms, faster than 5.51%
 */
 var isSameTree = function (p, q) {
 	const stack = [[p, q]];
