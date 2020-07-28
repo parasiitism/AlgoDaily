@@ -26,23 +26,23 @@ class Solution(object):
         # count occurence for each task
         counter = Counter(tasks)
         pq = []
-        for key in counter:
-            heapq.heappush(pq, (-counter[key], key))
+        for task in counter:
+            heapq.heappush(pq, (-counter[task], task))
         res = []
         while len(pq) > 0:
             arr = []
             # pop the tasks from maxheap
-            for i in range(n+1):
+            for _ in range(n+1):
                 if len(pq) > 0:
-                    pop = heapq.heappop(pq)
-                    res.append(pop[1])
-                    arr.append(pop)
+                    count, task = heapq.heappop(pq)
+                    res.append(task)
+                    arr.append((count, task))
                 else:
                     res.append("-")
             # put the tasks back to the queue with decremented count
-            for count, key in arr:
+            for count, task in arr:
                 if abs(count) > 1:
-                    heapq.heappush(pq, (count+1, key))
+                    heapq.heappush(pq, (count+1, task))
         # remove trailing '-'(idle)
         while len(res) > 0:
             if res[-1] == '-':
