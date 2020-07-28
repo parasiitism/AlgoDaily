@@ -57,3 +57,54 @@ print(Solution().leastInterval(["A", "A", "A", "B", "B", "B"], 2))
 print(Solution().leastInterval(["A", "A", "A", "B", "B", "B", "C", "C"], 2))
 print(Solution().leastInterval(
     ["A", "A", "A", "A", "A", "B", "B", "B", "C", "C", "C", "D", "D"], 2))
+
+print('-----')
+
+"""
+    2nd: greedy?
+    - sort the tasks by frequency
+    - the total time is the most frequent task with the idle time in between
+    - calculate the number of vacancies we can use to insert the less frequent tasks
+    - the result = number of tasks + idle time
+
+    e.g.
+    A:5
+    B:3
+    C:2
+    D:1
+
+    => A x x A x x A x x A x x A
+    => A B x A B x A B x A x x A
+    => A B C A B C A B x A x x A
+    => A B C A B C A B D A x x A
+
+    Time    O(N)
+    Space   O(N)
+    436 ms, faster than 79.75%
+"""
+
+
+class Solution(object):
+    def leastInterval(self, tasks, n):
+        # frequencies of the tasks
+        frequencies = [0] * 26
+        for t in tasks:
+            frequencies[ord(t) - ord('A')] += 1
+
+        frequencies.sort()
+
+        # max frequency
+        f_max = frequencies.pop()
+        idle_time = (f_max - 1) * n
+
+        while frequencies and idle_time > 0:
+            idle_time -= min(f_max - 1, frequencies.pop())
+        idle_time = max(0, idle_time)
+
+        return idle_time + len(tasks)
+
+
+print(Solution().leastInterval(["A", "A", "A", "B", "B", "B"], 2))
+print(Solution().leastInterval(["A", "A", "A", "B", "B", "B", "C", "C"], 2))
+print(Solution().leastInterval(
+    ["A", "A", "A", "A", "A", "B", "B", "B", "C", "C", "C", "D", "D"], 2))
