@@ -25,6 +25,9 @@ import sys
     [1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1]]
+
+    ref:
+    - https://leetcode.com/discuss/interview-question/411357/
 """
 
 

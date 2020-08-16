@@ -22,6 +22,9 @@
     Explanation:
     There are 3 connected components [1, 4, 5], [2, 3] and [6].
     We can connect these components into a single component by connecting node 1 to node 2 and node 1 to node 6 at a minimum cost of 5 + 2 = 7.
+
+    ref:
+    - https://leetcode.com/discuss/interview-question/356981
 """
 
 

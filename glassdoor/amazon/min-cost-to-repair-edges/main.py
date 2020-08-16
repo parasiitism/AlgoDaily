@@ -38,6 +38,9 @@
     edgesToRepair = [[1, 5, 110], [2, 4, 84], [3, 4, 79]]
     
     Output: 79
+
+    ref:
+    - https://leetcode.com/discuss/interview-question/357310
 """
 
 

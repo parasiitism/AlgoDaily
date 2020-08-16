@@ -86,7 +86,7 @@ print("-----")
 
 """
     Variation: of size K only
-    https://leetcode.com/discuss/interview-question/370112
+    - https://leetcode.com/discuss/interview-question/370112
 """
 
 
