@@ -5,11 +5,13 @@
 
     Time    O(A+B + max(A, B))
     Space   O(A+B)
-    88 ms, faster than 64.59%
+    92 ms, faster than 33.74%
+
 */
 var addBinary = function (a, b) {
 	let carry = 0;
 	let res = "";
+
 	while (a.length > 0 || b.length > 0) {
 		let x = 0;
 		if (a.length > 0) {
@@ -22,7 +24,6 @@ var addBinary = function (a, b) {
 			y = parseInt(b[b.length - 1]);
 			b = b.slice(0, -1);
 		}
-
 		const z = (x + y + carry) % 2;
 		carry = Math.floor((x + y + carry) / 2);
 		res = String(z) + res;
