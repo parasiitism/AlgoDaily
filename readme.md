@@ -81,3 +81,4 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 722 | [Min Rewards](/algoexpert/easy/min-rewards)                                                                               | min-max                    | [algoexpert](https://www.algoexpert.io/questions/Min%20Rewards)                                     | ⭐️                                   |
 | 723 | [Find the Index of the Large Integer](/leetcode/1533-find-the-index-of-the-large-integer)                                 | binary search              | [leetcode 1533](https://leetcode.com/problems/find-the-index-of-the-large-integer/)                 | ⭐️                                   |
 | 724 | [Product Sum](/algoexpert/easy/product-sum) | recursion | [expert](https://www.algoexpert.io/questions/Product%20Sum) |         |
+| 725 | [Longest Peak](/algoexpert/easy/longest-peak) | min max | [expert](https://www.algoexpert.io/questions/Longest%20Peak) |         |
