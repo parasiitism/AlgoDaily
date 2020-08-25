@@ -1,5 +1,7 @@
 """
     in-place version
+    - similar to lc283, 75
+
     ref:
     - https://gist.github.com/imwally/58d6bb9bf9da098064054f73a19cdca1
     - https://www.youtube.com/watch?v=COk73cpQbFQ
