@@ -1,5 +1,6 @@
 /*
     dp, learned from others, more concise
+    - similar to lc746
     - actually it is similar to coin change, we can do it with a bottom up approach
     - be careful that:
         1. for non-present days, extand the previous day cost
