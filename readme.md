@@ -83,3 +83,4 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 724 | [Product Sum](/algoexpert/easy/product-sum) | recursion | [expert](https://www.algoexpert.io/questions/Product%20Sum) |         |
 | 725 | [Longest Peak](/algoexpert/easy/longest-peak) | min max | [expert](https://www.algoexpert.io/questions/Longest%20Peak) |         |
 | 726 | [Bulb Switcher](/leetcode/319-bulb-switcher)                                | math      | [leetcode 319](https://leetcode.com/problems/bulb-switcher/)                | ⭐️⭐️⭐️ observersation is king |
+| 727 | [Moving Stones Until Consecutive](/leetcode/1033-moving-stones-until-consecutive) | math      | [leetcode 1033](https://leetcode.com/problems/moving-stones-until-consecutive/) |         |
