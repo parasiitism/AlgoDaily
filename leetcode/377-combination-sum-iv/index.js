@@ -15,8 +15,8 @@ var combinationSum4 = function (nums, target) {
 	for (let j = 1; j <= target; j++) {
 		for (let c of nums) {
 			const remain = j - c;
-			if (j - c >= 0) {
-				ways[j] += ways[j - c];
+			if (remain >= 0) {
+				ways[j] += ways[remain];
 			}
 		}
 	}

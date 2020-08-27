@@ -1,16 +1,7 @@
-/**
- *  3rd attempt: shorten the 2nd approach by just using tuples as keys
-
-    Time O(nk) n:number of words, k:length of charactors
-    Space O(nk)
-    136ms beats 70.28%
-
- * @param {string[]} strs
- * @return {string[][]}
- */
-var groupAnagrams = function (strs) {
+function groupAnagrams(words) {
+	// Write your code here.
 	const ht = {};
-	for (let s of strs) {
+	for (let s of words) {
 		const alphabetsCount = Array(26).fill(0);
 		for (let c of s) {
 			const idx = c.charCodeAt(0) - "a".charCodeAt(0);
@@ -28,4 +19,7 @@ var groupAnagrams = function (strs) {
 		res.push(ht[key]);
 	}
 	return res;
-};
+}
+
+// Do not edit the line below.
+exports.groupAnagrams = groupAnagrams;
