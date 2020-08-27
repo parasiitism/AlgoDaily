@@ -1,5 +1,7 @@
 /*
     2nd approach: bottom-up DP, learned from others https://zhuanlan.zhihu.com/p/32980698
+    - similar to lc983
+
 	e.g. [10,15,20,30,4]
 	dp[0] = 10
 	dp[1] = 15 to get here, we must step on this stair, therefore it is not min(10, 15) = 10
