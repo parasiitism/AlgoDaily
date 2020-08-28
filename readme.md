@@ -85,3 +85,4 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 726 | [Bulb Switcher](/leetcode/319-bulb-switcher)                                | math      | [leetcode 319](https://leetcode.com/problems/bulb-switcher/)                | ⭐️⭐️⭐️ observersation is king |
 | 727 | [Moving Stones Until Consecutive](/leetcode/1033-moving-stones-until-consecutive) | math      | [leetcode 1033](https://leetcode.com/problems/moving-stones-until-consecutive/) |         |
 | 728 | [Detect Capital](/leetcode/520-detect-capital)                              | string    | [leetcode 520](https://leetcode.com/problems/detect-capital/)               |         |
+| 729 | [Count Good Triplets](/leetcode/1534-count-good-triplets)                                                                 | array            | [leetcode 1534](https://leetcode.com/problems/count-good-triplets/)                                 |         |
