@@ -1,5 +1,5 @@
 """
-    1st approach: hashtable
+    1st approach: 2 hashtables
 
     Time    O(n)
     Space   O(n)
