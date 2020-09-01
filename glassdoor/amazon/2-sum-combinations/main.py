@@ -71,13 +71,45 @@ def bsearch(nums, start, target):
 
 a = [1, 3, 5, 7, 9]
 print(twoSumCombo(a, 10))
+print(twoSumCombo(a, 13))
 print(twoSumCombo(a, 16))
 print(twoSumCombo(a, 1))
 
 a = [1]
 print(twoSumCombo(a, 10))
 
-print("-----")
+print("----- 0 -----")
+
+"""
+    Time    O(nlogn)
+    Space   O(1)
+"""
+
+
+def twoSumCombo(nums, target):
+    nums = sorted(nums)
+    res = 0
+    i = 0
+    j = len(nums) - 1
+    while i < j:
+        if nums[i] + nums[j] <= target:
+            res += j - i
+            i += 1
+        else:
+            j -= 1
+    return res
+
+
+a = [1, 3, 5, 7, 9]
+print(twoSumCombo(a, 10))
+print(twoSumCombo(a, 13))
+print(twoSumCombo(a, 16))
+print(twoSumCombo(a, 1))
+
+a = [1]
+print(twoSumCombo(a, 10))
+
+print("----- 1 -----")
 
 
 """
@@ -108,7 +140,7 @@ class Solution(object):
 a = [1, 3, 5, 7, 9]
 print(Solution().allCombo(a, 10))
 
-print("-----")
+print("----- 2 -----")
 
 """
     potential follow-up2: 
@@ -159,5 +191,6 @@ def bsearch(nums, start, target):
 
 a = [1, 3, 5, 7, 9]
 print(twoSumCombo(a, 10))
+print(twoSumCombo(a, 13))
 print(twoSumCombo(a, 16))
 print(twoSumCombo(a, 1))
