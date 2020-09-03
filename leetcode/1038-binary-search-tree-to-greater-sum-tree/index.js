@@ -16,7 +16,6 @@
 var bstToGst = function (root) {
 	const ht = {};
 	const arr = [];
-	let pfs = 0;
 	const inorder = (node) => {
 		if (node == null) {
 			return;
