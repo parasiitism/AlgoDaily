@@ -1,9 +1,15 @@
-/*
-    1st: backtracking
+function boggleBoard(board, words) {
+	// Write your code here.
+	const wordSet = new Set(words);
+	const res = [];
+	for (let w of wordSet) {
+		if (exist(board, w)) {
+			res.push(w);
+		}
+	}
+	return res;
+}
 
-    Time    O(N * 3^L) N: number of cells, L: length of target word, 3^L instead of 4^L because we dont go backward
-    Space   O(N)
-*/
 var exist = function (board, word) {
 	let R = board.length;
 	let C = board[0].length;
@@ -43,6 +49,10 @@ const dfs = (board, i, j, word, ht) => {
 		[1, 0],
 		[0, -1],
 		[0, 1],
+		[-1, -1],
+		[-1, 1],
+		[1, 1],
+		[1, -1],
 	];
 	for (let [di, dj] of dirs) {
 		const b = dfs(board, i + di, j + dj, word.slice(1), ht);
@@ -54,16 +64,5 @@ const dfs = (board, i, j, word, ht) => {
 	return false;
 };
 
-let a = [
-	["A", "B", "C", "E"],
-	["S", "F", "C", "S"],
-	["A", "D", "E", "E"],
-];
-let b = "ABCCED";
-console.log(exist(a, b));
-
-b = "SEE";
-console.log(exist(a, b));
-
-b = "ABCB";
-console.log(exist(a, b));
+// Do not edit the line below.
+exports.boggleBoard = boggleBoard;
