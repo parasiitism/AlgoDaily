@@ -49,7 +49,7 @@ class Solution(object):
                 return self.helper(nums, pIdx+1, right, k)
             else:
                 return self.helper(nums, left, pIdx-1, k)
-        return -1
+        return None
 
     def partition(self, nums, left, right):
         pivot = nums[right]
