@@ -51,7 +51,7 @@ class Solution(object):
 
     Time    O(2NlogN)
     Space   O(N)
-    64 ms, faster than 65.23%
+    52 ms, faster than 99.69%
 """
 
 
@@ -70,7 +70,8 @@ class Solution(object):
         for i in range(len(intervals)):
             start, end = intervals[i]
             if len(pq) > 0 and start >= pq[0]:
-                heapq.heapreplace(pq, end)
+                heapq.heappop(pq)
+                heapq.heappush(pq, end)
             else:
                 heapq.heappush(pq, end)
         return len(pq)
