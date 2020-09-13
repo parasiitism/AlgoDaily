@@ -15,9 +15,12 @@ const dfs = (s, ht) => {
 		return ht[s];
 	}
 	let minGroupLen = Number.MAX_SAFE_INTEGER;
+	let forwardSub = "";
+	let backwardSub = "";
 	for (let i = 0; i < s.length; i++) {
-		const sub = s.slice(0, i + 1);
-		if (sub == reverse(sub)) {
+		forwardSub += s[i];
+		backwardSub = s[i] + backwardSub;
+		if (forwardSub == backwardSub) {
 			const groupLen = dfs(s.slice(i + 1), ht) + 1;
 			if (groupLen < minGroupLen) {
 				minGroupLen = groupLen;
