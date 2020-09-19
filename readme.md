@@ -55,7 +55,6 @@ I believe that practising algorithms every day is a long-term investment in my l
 -   [Day 501 - 600](./markdowns/day501-600.md)
 -   [Day 601 - 700](./markdowns/day601-700.md)
 
-
 | Day | Question                                                                                                                        | Type                       | From                                                                                                   | remarks                               |
 | --- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------- |
 | 701 | [Unique Binary Search Trees II](/leetcode/95-unique-binary-search-trees-ii)                                                     | recursion                  | [leetcode 95](https://leetcode.com/problems/unique-binary-search-trees-ii/)                            | 📌📌📌                                |
@@ -109,3 +108,4 @@ I believe that practising algorithms every day is a long-term investment in my l
 | 748 | [Minimum Numbers of Function Calls to Make Target Array](/leetcode/1558-minimum-numbers-of-function-calls-to-make-target-array) | math                       | [leetcode 1558](https://leetcode.com/problems/minimum-numbers-of-function-calls-to-make-target-array/) | ⭐️                                   |
 | 749 | [Longest Arithmetic Subsequence](/leetcode/1027-longest-arithmetic-subsequence)                                                                             | dynamic programming                    | [leetcode 1027](https://leetcode.com/problems/longest-arithmetic-subsequence/)                                        | 📌                                      |
 | 750 | [Put Boxes Into the Warehouse I](/leetcode/1564-put-boxes-into-the-warehouse-i)                                           | sort, 2 pointers           | [leetcode 1564](https://leetcode.com/problems/put-boxes-into-the-warehouse-i/)                      |                                       |
+| 751 | [Swim in Rising Water](/leetcode/778-swim-in-rising-water)                                                                | binary search, BFS         | [leetcode 778](https://leetcode.com/problems/swim-in-rising-water/)                                 | ⭐️ good question                     |
