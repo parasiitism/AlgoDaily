@@ -45,7 +45,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 -   [GoogleCodeJam](https://github.com/calvinchankf/GoogleCodeJam)
 -   [GoogleKickStart](https://github.com/calvinchankf/GoogleKickStart)
 
-#### I started doing since September 1st 2018
+#### I started doing this since September 1st 2018
 
 ```js
 var start = new Date("09/01/2018");
@@ -115,3 +115,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 749 | [Longest Arithmetic Subsequence](/leetcode/1027-longest-arithmetic-subsequence)                                                                         | dynamic programming        | [leetcode 1027](https://leetcode.com/problems/longest-arithmetic-subsequence/)                                     | 📌                                      |
 | 750 | [Put Boxes Into the Warehouse I](/leetcode/1564-put-boxes-into-the-warehouse-i)                                                                         | sort, 2 pointers           | [leetcode 1564](https://leetcode.com/problems/put-boxes-into-the-warehouse-i/)                                     |                                         |
 | 751 | [Swim in Rising Water](/leetcode/778-swim-in-rising-water)                                                                                              | binary search, BFS         | [leetcode 778](https://leetcode.com/problems/swim-in-rising-water/)                                                | ⭐️ good question                       |
+| 752 | [Smallest Rectangle Enclosing Black Pixels](/leetcode/302-smallest-rectangle-enclosing-black-pixels)                                                    | graph                      | [leetcode 302](https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/)                           | BFS                                     |
