@@ -5,26 +5,23 @@ from typing import List
 
     Time    O(N^2)
     Space   O(N)
-    LTE 84 / 85 test cases passed.
+    9800 ms, faster than 5.02%
 """
 
 
 class Solution:
     def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
-        n = len(envelopes)
-        if n == 0:
+        if len(envelopes) == 0:
             return 0
-        nums = envelopes[:]
-        nums.sort(key=lambda x: x[0] * x[1])
-        # print(nums)
-        dp = n * [0]
-        for i in range(n):
-            maxPrev = 0
+        n = len(envelopes)
+        envelopes.sort(key=lambda x: x[0] * x[1])
+        dp = n * [1]
+        for i in range(1, n):
+            w1, h1 = envelopes[i]
             for j in range(i):
-                if nums[j][0] < nums[i][0] and nums[j][1] < nums[i][1]:
-                    maxPrev = max(maxPrev, dp[j])
-            dp[i] = maxPrev + 1
-        # print(dp)
+                w2, h2 = envelopes[j]
+                if w1 > w2 and h1 > h2:
+                    dp[i] = max(dp[i], dp[j] + 1)
         return max(dp)
 
 
