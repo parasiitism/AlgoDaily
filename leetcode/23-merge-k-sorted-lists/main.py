@@ -81,3 +81,9 @@ class Solution(object):
             cur.next = node
             cur = cur.next
         return dump.next
+
+"""
+    Variation: merge k sort arrays iterator
+
+    see /glassdoor/facebook/merge-sorted-lists-iterator
+"""
