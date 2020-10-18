@@ -48,8 +48,8 @@ I believe that practising algorithms every day is a long-term investment in my l
 #### I started doing this since September 1st 2018
 
 ```js
-var start = new Date("09/01/2018");
-var now = new Date();
+const start = new Date("09/01/2018");
+const now = new Date();
 console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 ```
 
