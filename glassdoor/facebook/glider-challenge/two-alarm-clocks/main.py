@@ -37,8 +37,9 @@ import os
 
 
 def solve(p,n,k,m):
-    if (n%m == 0 or m%n == 0) and p == k:
-        return -1
+    if p == k:
+        if m%n == 0 or n%m == 0 or abs(m - n)%p == 0 or abs(n - m)%k == 0:
+            return -1
     a = n
     b = m
     while a != b:
@@ -62,3 +63,6 @@ def solve(p,n,k,m):
 
 print(solve(10,4,7,3))
 print(solve(2,1,2,2))
+
+print(solve(10,1,10,3))
+print(solve(10,1,10,11))
