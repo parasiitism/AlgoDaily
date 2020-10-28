@@ -44,18 +44,20 @@ def prcocessDecimals(s1, s2):
         return s1 + (maxLen - len(s1)) * '0', s2
     return s1, s2 + (maxLen - len(s2)) * '0'
 
-def add2Integers(nums1, nums2):
-    stack1 = [int(x) for x in nums1]
-    stack2 = [int(x) for x in nums2]
+def add2Integers(num1, num2):
     res = ""
     carry = 0
-    while len(stack1) > 0 or len(stack2) > 0:
+    i = len(num1) - 1
+    j = len(num2) - 1
+    while i >= 0 or j >= 0:
         a = 0
-        if len(stack1) > 0:
-            a = stack1.pop()
+        if i >= 0:
+            a = int(num1[i])
+            i -= 1
         b = 0
-        if len(stack2) > 0:
-            b = stack2.pop()
+        if j >= 0:
+            b = int(num2[j])
+            j -= 1
         temp = a + b + carry
         d = temp%10
         carry = temp//10
