@@ -48,8 +48,8 @@ class Solution(object):
         res = n * [1]
         for i in range(1, n):
             res[i] = res[i-1] * nums[i-1]
-        backwardP = 1
+        productFromBack = 1
         for i in range(n-1, -1, -1):
-            res[i] = res[i] * backwardP
-            backwardP *= nums[i]
+            res[i] *= productFromBack
+            productFromBack *= nums[i]
         return res
