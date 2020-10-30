@@ -41,5 +41,4 @@ class Solution(object):
             cur = cur.next
         if carry > 0:
             cur.next = ListNode(carry)
-        
         return dumphead.next

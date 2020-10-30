@@ -56,7 +56,7 @@ var depthSumInverse = function(nestedList) {
         // update maxDepth
         maxDepth = Math.max(maxDepth, depth)
         // init ht[depth] if not existed
-        if (!(depth in ht)) {
+        if (depth in ht === false) {
             ht[depth] = []
         }
         // recursion

@@ -6,7 +6,7 @@
 	Space of Constructor O(n)
 	Time of SumRange O(1)
 	Space of SumRange O(1)
-	68 ms, faster than 67.78%
+	52 ms, faster than 99.56%
 """
 
 
