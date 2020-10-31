@@ -1,4 +1,4 @@
-"""
+/*
     1st approach: dynamic programming
 
     very similar to lc300
@@ -25,33 +25,35 @@
                                        [5,6]
     Time    O(n^2)
     Space   O(n)
-    804 ms, faster than 25.62%
-"""
-
-
-class Solution(object):
-    def findNumberOfLIS(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        n = len(nums)
-        dp = n * [1]
-        counts = n * [1]
-        maxLen = 1
-        for i in range(n):
-            for j in range(i):
-                if nums[j] >= nums[i]:
-                    continue
-                curLen = dp[j] + 1
-                if curLen > dp[i]:
+    112 ms, faster than 48.65%
+*/
+var findNumberOfLIS = function(nums) {
+    if (nums.length == 0) {
+        return 0
+    }
+    const n = nums.length
+    const dp = Array(n).fill(1)
+    const counts = Array(n).fill(1)
+    let maxLen = 1
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < i; j++) {
+            if (nums[j] < nums[i]) {
+                let curLen = dp[j] + 1
+                if (curLen > dp[i]) {
                     dp[i] = curLen
                     counts[i] = counts[j]
-                elif curLen == dp[i]:
+                } else if (curLen == dp[i]) {
                     counts[i] += counts[j]
-            maxLen = max(maxLen, dp[i])
-        res = 0
-        for i in range(n):
-            if dp[i] == maxLen:
-                res += counts[i]
-        return res
+                }
+            }
+        }
+        maxLen = Math.max(maxLen, dp[i])
+    }
+    let res = 0
+    for (let i = 0; i < n; i++) {
+        if (dp[i] == maxLen) {
+            res += counts[i]
+        }
+    }
+    return res
+};
