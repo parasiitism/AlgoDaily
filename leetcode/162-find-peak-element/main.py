@@ -19,8 +19,10 @@ class Solution(object):
                 return i-1
         return -1
 
+
 """
     2nd: upper bound binary search
+    - similar to lc162, 852
     - compare with the previous item, if prev < cur, then search on the right handside
 
     e.g.1 [1,2,1,3,5,6,4]
@@ -37,6 +39,8 @@ class Solution(object):
     Space   O(1)
     96 ms, faster than 15.38%
 """
+
+
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         left = 0
@@ -47,6 +51,6 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid
-        if left <= 0:
+        if right-1 < 0:
             return 0
-        return left - 1
+        return right - 1
