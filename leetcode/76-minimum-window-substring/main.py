@@ -1,3 +1,4 @@
+from collections import Counter
 import sys
 """
     Questions to ask:
@@ -48,7 +49,7 @@ import sys
     ref:
     - https://www.youtube.com/watch?v=eS6PZLjoaq8
 
-    Time    O(N^2 x 128) at most 128 characters in hashtable if we consider ascii code only
+    Time    O(128N) at most 128 characters in hashtable if we consider ascii code only
     Space   O(N)
     644 ms, faster than 6.97%
 """
@@ -75,11 +76,11 @@ class Solution(object):
                 last = s[j]
                 ht[last] -= 1
                 j += 1
-        
+
         if res == None:
             return ''
         return res
-    
+
     def containTarget(self, ht, target):
         for key in target:
             if key not in ht:
@@ -98,42 +99,114 @@ print(Solution().minWindow("ADOBBECCOBDEBANC", "ABC"))
 
 print("-----")
 
-from collections import Counter
 
 """
-    same as 1st approach but use indices
-    , so we dont use string slice which we can optimize the time complexity
+    2nd: hashtable + counting trick
 
-    Time    O(N x 128) at most 128 characters in hashtable if we consider ascii code only
+    e.g. string = azjskfzs, target = az
+
+    counter of az = { a: 1, z: 1 }
+
+    azjskfzs
+    ^
+       ^
+    azjs containts az, counter = {
+        a: -1,
+        z: 0,
+        j: -1,
+        s: 0
+    }
+
+    then we move the left pointer until the counter doesnt satisfy our target
+
+    1.
+    azjskfzs
+     ^
+       ^
+    azjs containts az, counter = {
+        z: 0,
+        j: -1,
+        s: 0
+    }
+
+    2.
+    azjskfzs
+      ^
+       ^
+    azjs containts az, counter = {
+        z: 1,
+        j: -1,
+        s: 0
+    }
+
+    Now we move our faster pointer until counter satisfy our target
+    azjskfzs
+      ^
+          ^
+    azjs containts az, counter = {
+        z: 0,
+        s: 0,
+        j: -1,
+        k: -1,
+        f: -1,
+    }
+
+    So now, we move our left pointer again to see if we can find out a shorter substring satasify our target
+    azjskfzs
+        ^
+          ^
+    azjs containts az, counter = {
+        z: 0,
+        s: 1,
+        k: -1,
+        f: -1,
+    }
+
+    Now, lets move the fast pointer again
+    azjskfzs
+        ^
+           ^
+    azjs containts az, counter = {
+        z: 0,
+        s: 0,
+        k: -1,
+        f: -1,
+    }
+
+    Then left pointer,
+    azjskfzs
+          ^
+           ^
+    azjs containts az, counter = {
+        z: 0,
+        s: 0,
+    }
+
+    At the end, the last two characters is the shortest substring that contains our target !!!
+
+    Time    O(N)
     Space   O(N)
-    644 ms, faster than 6.97%
+    128 ms, faster than 41.28%
 """
-class Solution:
-    def minWindow(self, s: str, t: str) -> str:
-        n = len(s)
-        targetHt = Counter(t)
-        ht = Counter()
+
+
+class Solution(object):
+    def minWindow(self, s, t):
+        ht = Counter(t)
         j = 0
-        L, R = 0, n+1
-        for i in range(n):
+        count = 0
+        res = ''
+        for i in range(len(s)):
             c = s[i]
-            ht[c] += 1
-            while self.containTarget(ht, targetHt):
-                if i - j + 1 < R - L + 1:
-                    L = j
-                    R = i + 1
-                last = s[j]
-                ht[last] -= 1
+            if ht[c] > 0:
+                count += 1
+            ht[c] -= 1
+            while count == len(t):
+                if res == '' or i-j+1 < len(res):
+                    res = s[j:i+1]
+                left = s[j]
                 j += 1
-        
-        if R == n+1:
-            return ''
-        return s[L:R]
-    
-    def containTarget(self, ht, target):
-        for key in target:
-            if key not in ht:
-                return False
-            if ht[key] < target[key]:
-                return False
-        return True
+                ht[left] += 1
+                if ht[left] > 0:
+                    count -= 1
+        return res
