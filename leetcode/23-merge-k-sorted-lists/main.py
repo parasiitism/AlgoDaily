@@ -50,7 +50,8 @@ class Solution(object):
 
 
 """
-    3rd approach: heap
+    3rd approach: min heap
+    - similar to lc23, 378
 	- iterate the list and put all the values into an array
 	- sort the array
 	- make that array into a linked list
@@ -71,7 +72,7 @@ class Solution(object):
         for head in lists:
             if head != None:
                 heapq.heappush(pq, (head.val, head))
-        
+
         dumphead = ListNode()
         cur = dumphead
         while len(pq) > 0:
@@ -82,6 +83,7 @@ class Solution(object):
                 nextNode = node.next
                 heapq.heappush(pq, (nextNode.val, nextNode))
         return dumphead.next
+
 
 """
     Variation: merge k sort arrays iterator

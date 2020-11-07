@@ -2,13 +2,16 @@ import sys
 import heapq
 
 """
-    1st: heap
+    1st: min heap
+    - similar to lc23, 373, 378
 
     Time of init()          O(NlogK) N: all items, K: number of lists
     Time of hasNext()       O(1)
     Time of returnNext()    O(logK)
     Space                   O(K)
 """
+
+
 class MergeListsIterator(object):
     def __init__(self, lists):
         self.pq = []
@@ -28,6 +31,7 @@ class MergeListsIterator(object):
             nextHead = nums.pop(0)
             heapq.heappush(self.pq, (nextHead, nums))
         return head
+
 
 a = [
     [1, 3, 6, 8],
@@ -49,6 +53,8 @@ print("-----")
     Time of returnNext()    O(K)
     Space                   O(kN)
 """
+
+
 class MergeListsIterator(object):
     def __init__(self, lists):
         self.lists = lists
@@ -73,6 +79,7 @@ class MergeListsIterator(object):
                 minPointer = i
         self.pointers[minPointer] += 1
         return minNum
+
 
 a = [
     [1, 3, 6, 8],
