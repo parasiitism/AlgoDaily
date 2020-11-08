@@ -26,7 +26,7 @@ class Solution(object):
         cur = dumphead
         cur1 = l1
         cur2 = l2
-        while cur1 != None or cur2 != None:
+        while cur1 != None or cur2 != None or carry > 0:
             a = 0
             if cur1 != None:
                 a = cur1.val
@@ -35,10 +35,8 @@ class Solution(object):
             if cur2 != None:
                 b = cur2.val
                 cur2 = cur2.next
-            d = (a + b + carry)%10
+            d = (a + b + carry) % 10
             carry = (a + b + carry)//10
             cur.next = ListNode(d)
             cur = cur.next
-        if carry > 0:
-            cur.next = ListNode(carry)
         return dumphead.next
