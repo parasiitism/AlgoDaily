@@ -47,7 +47,7 @@ class Solution(object):
 
 """
     3rd approach: Reservoir Sampling
-    - for unknown size array or data stream, we can do Reservoir Sampling such that we dont need to store the size of the array initially
+    - for an unknown size array or data stream, we can do Reservoir Sampling such that we dont need to store the size of the array initially
     e.g. [x1,x2,x3,x4,x5,.......]
 
     calculation of probability: selected * notselected * notselected * notselected..... * notselected
