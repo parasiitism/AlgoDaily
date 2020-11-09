@@ -58,7 +58,8 @@ class Solution(object):
         count = 0
         for i in range(len(self.nums)):
             if self.nums[i] == target:
-                if random.randint(0, count) == count:
+                # pick the current number with probability 1 / count (reservoir sampling)
+                if random.randint(0, count) == 0:
                     res = i
                 count += 1
         return res

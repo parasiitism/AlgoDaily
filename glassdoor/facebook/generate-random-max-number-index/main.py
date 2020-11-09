@@ -24,8 +24,18 @@ import random
 
 
     Having iterated up to the at element index 5 (where the last 30 is), randomly give an index among [1, 3, 4, 5] which are indices of 30 - the max value by far. Each index should have a 1/4 chance to get picked.
-
     Having iterated through the entire array, randomly give an index between 8 and 9 which are indices of the max value 62.
+"""
+
+
+"""
+    Reservoir Sampling:
+    the calculation of probability: selected * notselected * notselected * notselected..... * notselected
+
+    prob of any item = 1/i * (1-1/i+1) * (1-1/i+2) * ... * (1 - 1/n)
+                     = 1/i * i/(i+1) * (i+1)/(i+2) * ... * (n-1)/n
+                     = 1/1 *   1/2   *     2/3     * ... * (n-1)/n
+                     = 1/n
 """
 
 
@@ -41,7 +51,8 @@ def getRandomIndexOfMaxNumber(nums):
             maxIdx = i
             count = 1
         elif x == maxNum:
-            if random.randint(0, count) == count:
+            # pick the current number with probability 1 / count (reservoir sampling)
+            if random.randint(0, count) == 0:
                 maxIdx = i
             count += 1
         res.append(maxIdx)
