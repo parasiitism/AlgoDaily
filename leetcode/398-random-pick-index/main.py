@@ -55,11 +55,11 @@ class Solution(object):
         :rtype: int
         """
         res = None
-        count = 0
+        targetIndexCount = 0
         for i in range(len(self.nums)):
             if self.nums[i] == target:
-                # pick the current number with probability 1 / count (reservoir sampling)
-                if random.randint(0, count) == 0:
+                targetIndexCount += 1
+                # randomly pick from 1 to count, so the current number would have 1/count probability
+                if random.randint(1, targetIndexCount) == 1:
                     res = i
-                count += 1
         return res
