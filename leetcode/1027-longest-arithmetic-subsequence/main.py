@@ -1,4 +1,6 @@
-/*
+from collections import *
+
+"""
     1st: dynamic programming, hashtable
     - learned from others
     - longest increasing subsequnce but 2D because we want to store the diff between any arr[i] and arr[j]
@@ -34,43 +36,29 @@
 
     Time    O(N^2)
     Space   O(N)
-    3188 ms, faster than 20.63%
-*/
-var longestArithSeqLength = function (A) {
-    /*
-        dp = [
-            {
-                diff: count
-            },
-            {
-                diff: count
-            }
-            ,...
-        ]
-    */
-	const dp = [];
-	for (let i = 0; i < A.length; i++) {
-		dp[i] = {};
-	}
+    7088 ms, faster than 5.00% ???
+"""
 
-	let res = 0;
-	for (let i = 0; i < A.length; i++) {
-		for (let j = 0; j < i; j++) {
-			const x = A[i];
-			const y = A[j];
-			const diff = x - y;
 
-			if (dp[i][diff] == undefined) {
-				dp[i][diff] = 0;
-			}
-			if (dp[j][diff] == undefined) {
-				dp[j][diff] = 1;
-			}
-
-			dp[i][diff] = Math.max(dp[i][diff], dp[j][diff] + 1);
-			res = Math.max(res, dp[i][diff]);
-		}
-	}
-
-	return res;
-};
+class Solution:
+    def longestArithSeqLength(self, A: List[int]) -> int:
+        n = len(A)
+        """
+            dp = [{
+                diff1: count1
+            }, {
+                diff1: count2
+            },...]
+        """
+        dp = []
+        for i in range(n):
+            dp.append(Counter())
+        res = 0
+        for i in range(n):
+            for j in range(i):
+                diff = A[i] - A[j]
+                if diff not in dp[j]:
+                    dp[j][diff] = 1
+                dp[i][diff] = max(dp[i][diff], dp[j][diff] + 1)
+                res = max(res, dp[i][diff])
+        return res
