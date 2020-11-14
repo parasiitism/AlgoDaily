@@ -66,7 +66,7 @@ class Solution(object):
             remain = s[i+1:]
             num = int(prefix)
 
-            # to avoid leading zeros 0000 becoming 0
+            # to avoid leading zeros 01 becoming 1, 012 becoming 12...etc
             if str(num) != prefix:
                 break
 
@@ -74,9 +74,10 @@ class Solution(object):
                 self.dfs(remain, target, prefix, num, num)
             else:
                 self.dfs(remain, target, cur + '+' + prefix, total + num, num)
-                self.dfs(remain, target, cur + '-' + prefix, total - num, -num)
+                self.dfs(remain, target, cur + '-' + prefix,
+                         total - num, -num)  # prev = -num
                 self.dfs(remain, target, cur + '*' + prefix,
-                         total - prev + prev * num, prev*num)
+                         total - prev + prev * num, prev*num)  # prev = prev*num
 
 
 """
