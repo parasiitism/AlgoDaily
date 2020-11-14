@@ -4,17 +4,15 @@ from collections import *
     https://leetcode.com/discuss/interview-question/862600/
     https://aonecode.com/amazon-online-assessment-transaction-logs
 
-    Amazon parses logs of user transactions/activity to flag fraudulent activity. The log file is represented as an Array of arrays. The arrays consist of the following data:
+    Amazon parses logs of user transactions/activity to flag fraudulent activity. 
+    The log file is represented as an Array of arrays. 
+    The arrays consist of the following data:
 
-    '<userid1>, <userid2> <# of transactions>'
+    '<userid1>, <userid2> <number of transactions>'
 
-    For example:
-
-    '345366 89921 45'
-    Note the data is space delimited
+    For example: '345366 89921 45'
 
     So, the log data would look like:
-
     [
     '345366 89921 45',
     '029323 38239 23'

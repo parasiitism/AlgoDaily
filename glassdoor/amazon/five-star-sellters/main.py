@@ -63,7 +63,7 @@ def f(reviews, ratingsThreshold):
     while len(pq) > 0:
         increase, fiveStar, overall = heappop(pq)
         count += 1
-        # since we use negative value to mimick using a maxheap, the new total = total - diff instead of total + diff
+        # since we use negative values to mimick using a maxheap, the new total = total - increase instead of total + increase
         total = total - increase
         # print(total/n)
         if total >= threshold:
