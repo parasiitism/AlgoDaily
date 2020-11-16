@@ -14,8 +14,10 @@
 
     Time    O(N)
     Space   O(N/2) <- because there must be equal number of start and end
-    76 ms, faster than 49.13%
+    56 ms, faster than 98.43%
 """
+
+
 class Solution:
     def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:
         stack = []
