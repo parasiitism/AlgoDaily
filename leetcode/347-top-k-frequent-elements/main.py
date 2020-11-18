@@ -14,18 +14,15 @@ from collections import Counter
 
 class Solution(object):
     def topKFrequent(self, nums, k):
-        ht = Counter()
-        for x in nums:
-            ht[x] += 1
+        counter = Counter(nums)
         freqs = []
-        for key in ht:
-            freqs.append((ht[key], key))
-        freqs.sort()
+        for key in counter:
+            f = counter[key]
+            freqs.append((f, key))
+        freqs.sort(reverse=True)
         res = []
-        for i in range(k):
-            if len(freqs) > 0:
-                freq, num = freqs.pop()
-                res.append(num)
+        for f, key in freqs[:k]:
+            res.append(key)
         return res
 
 
@@ -102,7 +99,7 @@ print("-----")
 
     Time    O(N)
     Space   O(N)
-    92 ms, faster than 54.73%
+    84 ms, faster than 75.45%
 """
 
 
@@ -111,8 +108,7 @@ class Solution(object):
         # count occurence of each num
         ht = Counter(nums)
         # create buckets
-        minFreq = nums[0]
-        maxFreq = nums[0]
+        minFreq, maxFreq = 2**32, 0
         freqs = defaultdict(list)
         for x in ht:
             f = ht[x]
@@ -121,8 +117,11 @@ class Solution(object):
             maxFreq = max(maxFreq, f)
         # put k items into the array
         res = []
-        for i in range(maxFreq, minFreq-1, -1):
-            if i not in freqs:
+        for f in range(maxFreq, minFreq-1, -1):
+            if f not in freqs:
                 continue
-            res += freqs[i]
-        return res[:k]
+            for num in freqs[f]:
+                res.append(num)
+                if len(res) == k:
+                    return res
+        return res
