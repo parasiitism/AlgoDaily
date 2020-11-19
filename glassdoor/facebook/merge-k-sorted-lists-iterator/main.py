@@ -17,8 +17,8 @@ class MergeListsIterator(object):
         self.minHeap = []
         for nums in lists:
             if len(nums) > 0:
-                head = nums.pop(0)
-                heappush(self.minHeap, (head, nums))
+                minNum = nums.pop(0)
+                heappush(self.minHeap, (minNum, nums))
 
     def hasNext(self):
         return len(self.minHeap) > 0
@@ -28,8 +28,8 @@ class MergeListsIterator(object):
             return None
         head, nums = heappop(self.minHeap)
         if len(nums) > 0:
-            nextHead = nums.pop(0)
-            heappush(self.minHeap, (nextHead, nums))
+            minNum = nums.pop(0)
+            heappush(self.minHeap, (minNum, nums))
         return head
 
 
