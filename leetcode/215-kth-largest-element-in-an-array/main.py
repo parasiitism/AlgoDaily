@@ -171,13 +171,13 @@ s = Solution()
 # [1, 2, 3, 4, 5, 6]
 #  ^
 a = [3, 2, 1, 5, 6, 4]
-b = 5
+b = 6
 print(s.findKthLargest(a, b))
 
 # [1, 2, 2, 3, 3, 4, 5, 5, 6]
-#  ^
+#     ^
 a = [3, 2, 3, 1, 2, 4, 5, 5, 6]
-b = 9
+b = 8
 print(s.findKthLargest(a, b))
 
 print("-----")
