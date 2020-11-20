@@ -116,15 +116,15 @@ class Solution:
 
 
 """
-    followup1: kth smallest
-    followup2: distinct
+    followup1: distinct
+    followup2: do we have to put all the items in to the heap?
     followup3: k = N - 100 if N = 10B
 """
 
 
 class Solution(object):
     def findKthLargest(self, nums, k):
-        # followup2: distinct
+        # followup1: distinct
         if len(nums) == 0 or k <= 0:
             return -1
         seen = set()
@@ -156,10 +156,55 @@ print("-----")
 
 class Solution(object):
     def findKthLargest(self, nums, k):
-        # followup3: k = N - 100 if N = 10B
-        # if K is large, then we are going to find the N-K smallest element, then we can use a maxHeap
+        # followup2: do we have to put all the items in to the heap?
+        minHeap = []
+        for x in nums:
+            if len(minHeap) == k and x < minHeap[0]:
+                continue
+            heappush(minHeap, x)
+            if len(minHeap) > k:
+                heappop(minHeap)
+        return minHeap[0]
+
+
+s = Solution()
+
+a = [3, 2, 1, 5, 6, 4]
+b = 2
+print(s.findKthLargest(a, b))
+
+# [1, 2, 3, 4, 5, 6]
+#        ^
+a = [3, 2, 3, 1, 2, 4, 5, 5, 6]
+b = 4
+print(s.findKthLargest(a, b))
+
+print("-----")
+
+
+class Solution(object):
+    def findKthLargest(self, nums, k):
+        """
+            followup3: k = N - 100 if N = 1000b
+
+            Time    O(NlogK)
+            Space   O(N/2)
+            56 ms, faster than 55.93%
+        """
+        if k <= len(nums) - k + 1:
+            minHeap = []
+            for x in nums:
+                if len(minHeap) == k and x < minHeap[0]:
+                    continue
+                heappush(minHeap, x)
+                if len(minHeap) > k:
+                    heappop(minHeap)
+            return minHeap[0]
+        # if K is large, then it is actually finding the N-K+1 smallest element, then we can use a maxHeap
         maxHeap = []
         for x in nums:
+            if len(maxHeap) == len(nums) - k + 1 and x > -maxHeap[0]:
+                continue
             heappush(maxHeap, -x)
             if len(maxHeap) > len(nums) - k + 1:
                 heappop(maxHeap)
