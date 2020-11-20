@@ -118,12 +118,13 @@ class Solution:
 """
     followup1: kth smallest
     followup2: distinct
+    followup3: k = N - 100 if N = 10B
 """
 
 
 class Solution(object):
     def findKthLargest(self, nums, k):
-        # followup2
+        # followup2: distinct
         if len(nums) == 0 or k <= 0:
             return -1
         seen = set()
@@ -149,3 +150,34 @@ print(s.findKthLargest(a, b))
 a = [3, 2, 3, 1, 2, 4, 5, 5, 6]
 b = 4
 print(s.findKthLargest(a, b))
+
+print("-----")
+
+
+class Solution(object):
+    def findKthLargest(self, nums, k):
+        # followup3: k = N - 100 if N = 10B
+        # if K is large, then we are going to find the N-K smallest element, then we can use a maxHeap
+        maxHeap = []
+        for x in nums:
+            heappush(maxHeap, -x)
+            if len(maxHeap) > len(nums) - k + 1:
+                heappop(maxHeap)
+        return -maxHeap[0]
+
+
+s = Solution()
+
+# [1, 2, 3, 4, 5, 6]
+#  ^
+a = [3, 2, 1, 5, 6, 4]
+b = 5
+print(s.findKthLargest(a, b))
+
+# [1, 2, 2, 3, 3, 4, 5, 5, 6]
+#  ^
+a = [3, 2, 3, 1, 2, 4, 5, 5, 6]
+b = 9
+print(s.findKthLargest(a, b))
+
+print("-----")
