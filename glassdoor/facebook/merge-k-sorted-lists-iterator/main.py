@@ -5,10 +5,10 @@ from heapq import *
     1st: min heap
     - similar to lc23, 373, 378
 
-    Time of init()          O(NlogK) N: all items, K: number of lists
+    Time of init()          O(KlogK) K: number of lists
     Time of hasNext()       O(1)
     Time of returnNext()    O(logK)
-    Space                   O(K)
+    Space                   O(KN)
 """
 
 
@@ -48,10 +48,10 @@ print("-----")
 """
     2nd: k pointers
 
-    Time of init()          O(K)
+    Time of init()          O(K) K: k pointers
     Time of hasNext()       O(K)
     Time of returnNext()    O(K)
-    Space                   O(kN)
+    Space                   O(KN)
 """
 
 
