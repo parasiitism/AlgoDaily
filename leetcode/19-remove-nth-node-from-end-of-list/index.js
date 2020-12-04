@@ -10,10 +10,10 @@ var removeNthFromEnd = function(head, n) {
 	dumphead.next = head
 	let slow = dumphead
 	let fast = dumphead
-	for (let i = 0; i <= n; i++) {
+	for (let i = 0; i < n; i++) {
 		fast = fast.next
 	}
-	while (fast != null) {
+	while (fast.next != null) {
         fast = fast.next
         slow = slow.next
 	}
