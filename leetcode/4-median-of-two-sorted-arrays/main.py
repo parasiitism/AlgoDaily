@@ -90,7 +90,7 @@ print("---------------")
 
 	Time		O(log(min(M,N))
 	Space 	    O(1)
-	84 ms, faster than 41.34%
+	88 ms, faster than 78.54%
 """
 
 
