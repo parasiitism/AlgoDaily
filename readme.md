@@ -62,6 +62,7 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 -   [Day 601 - 700](./markdowns/day601-700.md)
 -   [Day 701 - 800](./markdowns/day701-800.md)
 
+=======
 | Day | Question                                                                                                                                    | Type                | From                                                                                                         | remarks                    |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------- |
 | 801 | [Number of Ways to Stay in the Same Place After Some Steps](/leetcode/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps)       | dynamic programming | [leetcode 1269](https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/)    | ⭐️                        |
@@ -124,4 +125,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 837 | [Concatenation of Consecutive Binary Numbers](/leetcode/1680-concatenation-of-consecutive-binary-numbers)                                   | bit op              | [leetcode 1680](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)                  |                            |
 | 838 | [Maximum Number of Occurrences of a Substring](/leetcode/1297-maximum-number-of-occurrences-of-a-substring)                                 | hashtable           | [leetcode 1297](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/)                 | ⭐️ hinted                 |
 | 839 | [Reaching Points](/leetcode/780-reaching-points)                                                                                            | math                | [leetcode 780](https://leetcode.com/problems/reaching-points/)                                               | 📌📌📌                     |
-
+| 840 | [Minimum Insertion Steps to Make a String Palindrome](/leetcode/1312-minimum-insertion-steps-to-make-a-string-palindrome)                   | dynamic programming | [leetcode 1312](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/)          | ⭐️⭐️⭐️ longest common subsequence |
