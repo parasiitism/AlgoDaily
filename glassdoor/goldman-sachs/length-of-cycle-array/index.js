@@ -16,7 +16,7 @@ let lengthOfCycle
 
 /*
     1st: hashtable
-    - store the { val: index } pair in cache
+    - store the { val: steps } pair in cache
     - steps - cache[val] is the length of the cycle
 */
 lengthOfCycle = (arr, startIndex) => {
