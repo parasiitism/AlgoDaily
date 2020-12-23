@@ -2,7 +2,10 @@ const flatten = (obj) => {
     let res = {}
     for (let key in obj) {
         const val = obj[key]
-        if (val instanceof Object && Array.isArray(val) === false) {
+        if (
+            val instanceof Object 
+            && Array.isArray(val) === false
+        ) {
             res = {...res, ...flatten(val)}
         } else {
             res[key] = val
