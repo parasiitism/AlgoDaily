@@ -61,7 +61,7 @@ def minOverallAwkwardness(arr):
     numsAtEvenIdx = arr[::2]
     numsAtOddIdx = arr[1::2]
     arr = numsAtEvenIdx + numsAtOddIdx[::-1]
-    res = 2**32
+    res = 0
     for i in range(1, len(arr)):
         res = max(res, abs(arr[i] - arr[i-1]))
     return res
