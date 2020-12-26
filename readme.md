@@ -62,8 +62,7 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 -   [Day 601 - 700](./markdowns/day601-700.md)
 -   [Day 701 - 800](./markdowns/day701-800.md)
 
-=======
-| Day | Question                                                                                                                                    | Type                | From                                                                                                         | remarks                    |
+| Day | Question | Type | From | remarks |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------- |
 | 801 | [Number of Ways to Stay in the Same Place After Some Steps](/leetcode/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps)       | dynamic programming | [leetcode 1269](https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/)    | ⭐️                        |
 | 802 | [Slowest Key](/leetcode/1629-slowest-key)                                                                                                   | array               | [leetcode 1629](https://leetcode.com/problems/slowest-key/)                                                  |                            |
@@ -133,4 +132,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 845 | [Partitioning Into Minimum Number Of Deci-Binary Numbers](/leetcode/1689-partitioning-into-minimum-number-of-deci-binary-numbers)           | math                | [leetcode 1689](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/)      |                            |
 | 846 | [Shortest Subarray with Sum at Least K](/leetcode/862-shortest-subarray-with-sum-at-least-k)                                                | heap, dequeue       | [leetcode 862](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)                         | 📌📌📌                     |
 | 847 | [Fraction Addition and Subtraction](/leetcode/592-fraction-addition-and-subtraction)                                                        | math                | [leetcode 592](https://leetcode.com/problems/fraction-addition-and-subtraction/)                             | ⭐⭐⭐ annoying math       |
-
+| 848 | [Knuth–Morris–Pratt Algorithm](/miscellaneous/knuth-morris-pratt/) | string | study | 📌📌📌 |
