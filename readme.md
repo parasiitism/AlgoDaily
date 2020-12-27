@@ -134,4 +134,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 847 | [Fraction Addition and Subtraction](/leetcode/592-fraction-addition-and-subtraction)                                                        | math                | [leetcode 592](https://leetcode.com/problems/fraction-addition-and-subtraction/)                             | ⭐⭐⭐ annoying math       |
 | 848 | [Knuth–Morris–Pratt Algorithm](/miscellaneous/knuth-morris-pratt/) | string | study | 📌📌📌 |
 | 849 | [Clumsy Factorial](/leetcode/1006-clumsy-factorial) | math | [leetcode 1006](https://leetcode.com/problems/clumsy-factorial/) | ⭐️ interesting |
+| 850 | [Longest Word Made](/glassdoor/goldman-sachs/longest-word-made) | hashtable | interview | |
 
