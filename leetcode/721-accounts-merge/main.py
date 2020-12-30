@@ -9,7 +9,7 @@ from collections import defaultdict
 
     Time    O(nlogn)
     Space   O(n)
-    228 ms, faster than 40.59% 
+    224 ms, faster than 46.85% 
 """
 
 
@@ -19,30 +19,30 @@ class Solution(object):
         :type accounts: List[List[str]]
         :rtype: List[List[str]]
         """
-        emails = {}
-        for row in accounts:
-            username = row[0]
-            for i in range(1, len(row)):
-                email = row[i]
-                emails[email] = username
+        emailToName = {}
+        for a in accounts:
+            name = a[0]
+            emails = a[1:]
+            for email in emails:
+                emailToName[email] = name
         # union
-        uf = UnionFind(emails)
-        for row in accounts:
-            a = row[1]
-            for i in range(2, len(row)):
-                b = row[i]
-                uf.union(a, b)
+        uf = UnionFind(emailToName.keys())
+        for a in accounts:
+            emails = a[1:]
+            first = emails[0]
+            for i in range(1, len(emails)):
+                uf.union(first, emails[i])
         # group the emails
-        resultSet = defaultdict(list)
-        for e in emails:
+        ht = defaultdict(list)
+        for e in emailToName:
             root = uf.find(e)
-            resultSet[root].append(e)
+            ht[root].append(e)
         # construct the result
         res = []
-        for rootEmail in resultSet:
-            username = emails[rootEmail]
-            row = [username] + sorted(resultSet[rootEmail])
-            res.append(row)
+        for key in ht:
+            name = emailToName[key]
+            emails = sorted(ht[key])
+            res.append([name] + emails)
         return res
 
 
