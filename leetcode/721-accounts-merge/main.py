@@ -7,8 +7,8 @@ from collections import defaultdict
     - union find all the emails using the input
     - iterate the input again: map each of the email to its corresponding root
 
-    Time    O(nlogn)
-    Space   O(n)
+    Time    O(N + NlogN)
+    Space   O(N)
     224 ms, faster than 46.85% 
 """
 
@@ -85,3 +85,53 @@ r = s.accountsMerge([
     ["John", "johnnybravo@mail.com"]
 ])
 print(r)
+
+print("-----")
+
+"""
+    2nd: BFS
+    - get all the emails
+    - map each email with a name
+    - union find all the emails using the input
+    - iterate the input again: map each of the email to its corresponding root
+
+    Time    O(N + NlogN) sort
+    Space   O(N)
+    204 ms, faster than 52.21%
+"""
+
+
+class Solution(object):
+    def accountsMerge(self, accounts):
+        emailToName = {}
+        graph = defaultdict(set)
+        for a in accounts:
+            name = a[0]
+            emails = a[1:]
+            first = emails[0]
+            for email in emails:
+                emailToName[email] = name
+                graph[first].add(email)
+                graph[email].add(first)
+        seen = set()
+        res = []
+        for email in graph:
+            if email in seen:
+                continue
+            name = emailToName[email]
+            emails = self.bfs(graph, email, seen)
+            res.append([name] + sorted(emails))
+        return res
+
+    def bfs(self, graph, start, seen):
+        q = [start]
+        nodes = []
+        while len(q) > 0:
+            node = q.pop(0)
+            if node in seen:
+                continue
+            seen.add(node)
+            nodes.append(node)
+            for nb in graph[node]:
+                q.append(nb)
+        return nodes
