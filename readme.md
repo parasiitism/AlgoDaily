@@ -137,3 +137,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 850 | [Longest Word Made](/glassdoor/goldman-sachs/longest-word-made) | hashtable | interview | |
 | 851 | [Musical Chairs](/glassdoor/goldman-sachs/musical-chairs) | linked list | interview | ⭐️ |
 | 852 | [Reformat Phone Number](/leetcode/1694-reformat-phone-number) | string | [leetcode 1694](https://leetcode.com/problems/reformat-phone-number/) | |
+| 853 | [Maximum Erasure Value](/leetcode/1695-maximum-erasure-value) | 2 pointers | [leetcode 1695](https://leetcode.com/problems/maximum-erasure-value/) | ⭐️ good question |
+
