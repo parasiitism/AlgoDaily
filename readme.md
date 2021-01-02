@@ -139,4 +139,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 852 | [Reformat Phone Number](/leetcode/1694-reformat-phone-number) | string | [leetcode 1694](https://leetcode.com/problems/reformat-phone-number/) | |
 | 853 | [Maximum Erasure Value](/leetcode/1695-maximum-erasure-value) | 2 pointers | [leetcode 1695](https://leetcode.com/problems/maximum-erasure-value/) | ⭐️ good question |
 | 854 | [Design Skiplist](/leetcode/1206-design-skiplist) | linked list | [leetcode 1206](https://leetcode.com/problems/design-skiplist/) | 📌📌📌 |
+| 855 | [Reverse To Make Equal](/glassdoor/facebook/facebookrecruiting/reverse-to-make-equal/) | hashtable | facebookrecruiting | |
 
