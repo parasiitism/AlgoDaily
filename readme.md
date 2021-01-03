@@ -141,3 +141,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 854 | [Design Skiplist](/leetcode/1206-design-skiplist) | linked list | [leetcode 1206](https://leetcode.com/problems/design-skiplist/) | 📌📌📌 |
 | 855 | [Reverse To Make Equal](/glassdoor/facebook/facebookrecruiting/reverse-to-make-equal/) | hashtable | facebookrecruiting | |
 | 856 | [Knight Dialer](/leetcode/935-knight-dialer) | dynamic programming | [leetcode 935](https://leetcode.com/problems/knight-dialer/) | ⭐️ |
+| 857 | [Groups of Special-Equivalent Strings](/leetcode/893-groups-of-special-equivalent-strings) | hashtable | [leetcode 893](https://leetcode.com/problems/groups-of-special-equivalent-strings/) | |
+
