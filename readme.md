@@ -143,3 +143,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 856 | [Knight Dialer](/leetcode/935-knight-dialer) | dynamic programming | [leetcode 935](https://leetcode.com/problems/knight-dialer/) | ⭐️ |
 | 857 | [Groups of Special-Equivalent Strings](/leetcode/893-groups-of-special-equivalent-strings) | hashtable | [leetcode 893](https://leetcode.com/problems/groups-of-special-equivalent-strings/) | |
 | 858 | [Number of Distinct Substrings in a String](/leetcode/1698-number-of-distinct-substrings-in-a-string) | string | [leetcode 1698](https://leetcode.com/problems/number-of-distinct-substrings-in-a-string/) | the testcases are too week |
+| 859 | [Reverse Operations](/glassdoor/facebook/facebookrecruiting/reverse-operations) | linked list | facebookrecruiting | |
+
