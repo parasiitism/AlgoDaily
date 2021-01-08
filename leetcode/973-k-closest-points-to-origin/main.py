@@ -149,6 +149,8 @@ print(Solution().kClosest([[3, 3], [5, -1], [-2, 4]], 2))
 
 """
     followup: the target is not orign, but a coordinate
+
+    d^2 = (x1 - x2)^2 + (y1 - y2)^2
 """
 
 
