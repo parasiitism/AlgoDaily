@@ -145,3 +145,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 858 | [Number of Distinct Substrings in a String](/leetcode/1698-number-of-distinct-substrings-in-a-string) | string | [leetcode 1698](https://leetcode.com/problems/number-of-distinct-substrings-in-a-string/) | the testcases are too week |
 | 859 | [Reverse Operations](/glassdoor/facebook/facebookrecruiting/reverse-operations) | linked list | facebookrecruiting | |
 | 860 | [Largest Triple Products](/glassdoor/facebook/facebookrecruiting/largest-triple-products) | heap | facebookrecruiting | ⭐ |
+| 861 | [Magical Candy Bags](/glassdoor/facebook/facebookrecruiting/magical-candy-bags) | heap | facebookrecruiting | ⭐️ |
+
