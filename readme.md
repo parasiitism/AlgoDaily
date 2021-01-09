@@ -146,4 +146,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 859 | [Reverse Operations](/glassdoor/facebook/facebookrecruiting/reverse-operations) | linked list | facebookrecruiting | |
 | 860 | [Largest Triple Products](/glassdoor/facebook/facebookrecruiting/largest-triple-products) | heap | facebookrecruiting | ⭐ |
 | 861 | [Magical Candy Bags](/glassdoor/facebook/facebookrecruiting/magical-candy-bags) | heap | facebookrecruiting | ⭐️ |
+| 862 | [Jump Game VI](/leetcode/1696-jump-game-vi) | dequeue | [leetcode 1696](https://leetcode.com/problems/jump-game-vi/) | ⭐️ 1st DP LTE 📌 2nd dequeue 👍🏻 |
 
