@@ -148,3 +148,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 861 | [Magical Candy Bags](/glassdoor/facebook/facebookrecruiting/magical-candy-bags) | heap | facebookrecruiting | ⭐️ |
 | 862 | [Jump Game VI](/leetcode/1696-jump-game-vi) | dequeue | [leetcode 1696](https://leetcode.com/problems/jump-game-vi/) | ⭐️ 1st DP LTE 📌 2nd dequeue 👍🏻 |
 | 863 | [Number of Subsequences That Satisfy the Given Sum Condition](/leetcode/1498-number-of-subsequences-that-satisfy-the-given-sum-condition) | 2 pointers | [leetcode 1498](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | ⭐⭐⭐ hinted |
+| 864 | [Shortest Way to Form String](/leetcode/1055-shortest-way-to-form-string) | greedy | [leetcode 1055](https://leetcode.com/problems/shortest-way-to-form-string/) | ⭐ interesting |
+
