@@ -150,3 +150,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 863 | [Number of Subsequences That Satisfy the Given Sum Condition](/leetcode/1498-number-of-subsequences-that-satisfy-the-given-sum-condition) | 2 pointers | [leetcode 1498](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | ⭐⭐⭐ hinted |
 | 864 | [Shortest Way to Form String](/leetcode/1055-shortest-way-to-form-string) | greedy | [leetcode 1055](https://leetcode.com/problems/shortest-way-to-form-string/) | ⭐ interesting |
 | 865 | [Previous Permutation With One Swap](/leetcode/1053-previous-permutation-with-one-swap)                                                     | greedy              | [leetcode 1053](https://leetcode.com/problems/previous-permutation-with-one-swap/)                           | ⭐️                                  |
+| 866 | [Pair Sums](/glassdoor/facebook/facebookrecruiting/pair-sums/)                                                                              | hashtable           | facebookrecruiting                                                                                           |                                      |
+
