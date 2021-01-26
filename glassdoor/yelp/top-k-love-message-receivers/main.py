@@ -46,6 +46,8 @@ def topKReceivers(comments, K):
         uniqueSenders = ht[receiver]
         freqs.append([receiver, len(uniqueSenders)])
 
+    # or to use a minheap, but need to know if there would be more than once key that appear more than once
+
     freqs.sort(key=lambda x: -x[1])
     res = []
     for receiver, count in freqs:
