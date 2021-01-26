@@ -27,7 +27,7 @@ from collections import *
 
 """ 
     1st: brute force
-    Time    O(NC + NW min(C, S))
+    Time    O(NW * min(C, S)) N=num of businesses, W=num of words, C=num of characters of every word
     Space   O(NC)
 """
 
@@ -66,7 +66,7 @@ print("-----")
 
 """ 
     2nd: Trie
-    Time    O(NC + NWC + S)
+    Time    O(NWC + S) N=num of businesses, W=num of words, C=num of characters of every word
     Space   O(NC)
 """
 
