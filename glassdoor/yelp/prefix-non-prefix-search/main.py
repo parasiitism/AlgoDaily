@@ -8,15 +8,21 @@ from collections import *
     Given a list of business_names (strings) and a searchTerm (string).
     Return a list of business_names that contains searchTerm as prefix in the business_names, case incensitive
 
-    E.g.
-    Example
-    
+    e.g.1
     Input:
     business_names = ["Burger King", "Burger King 2", "McDonald's", "super duper burger's", "subway", "pizza hut", "Walburgers"]
     searchTerm = "bur"
     
     Ouput:
     ["Burger King", "Burger King 2", "super duper burger's"]
+
+    e.g. 2
+    Input:
+    business_names = ["burger king", "McDonald's", "super duper burger's", "subway", "pizza hut"]
+    searchTerm = "duper bur"
+
+    Output:
+    ["super duper burger's"]
 """
 
 """ 
@@ -31,10 +37,19 @@ def searchBusiness(business_names, searchTerm):
     for i in range(len(business_names)):
         S = business_names[i]
         s = S.lower()
-        words = s.split(" ")
-        for w in words:
-            if w.startswith(searchTerm):
-                res.add(S)
+
+        # if no "duper bur"
+        # words = s.split(" ")
+        # for w in words:
+        #     if w.startswith(searchTerm):
+        #         res.add(S)
+
+        for i in range(len(s)):
+            if i == 0 or (s[i-1] == ' ' and s[i] != ' '):
+                remain = s[i:]
+                if remain.startswith(searchTerm):
+                    res.add(S)
+
     return list(res)
 
 
@@ -42,6 +57,12 @@ a = ["Burger King", "Burger King 2", "McDonald's",
      "super duper burger's", "subway", "pizza hut", "Walburgers"]
 b = "bur"
 print(searchBusiness(a, b))
+
+a = ["burger king", "McDonald's", "super duper burger's", "subway", "pizza hut"]
+b = "duper bur"
+print(searchBusiness(a, b))
+
+print("-----")
 
 """ 
     2nd: Trie
@@ -92,10 +113,18 @@ def searchBusiness(business_names, searchTerm):
     for i in range(len(business_names)):
         S = business_names[i]
         s = S.lower()
-        words = s.split(" ")
-        for w in words:
-            trie.insert(w)
-            mapping[w].add(S)
+
+        # if no "duper bur"
+        # words = s.split(" ")
+        # for w in words:
+        #     trie.insert(w)
+        #     mapping[w].add(S)
+
+        for i in range(len(s)):
+            if i == 0 or (s[i-1] == ' ' and s[i] != ' '):
+                remain = s[i:]
+                trie.insert(remain)
+                mapping[remain].add(S)
 
     res = set()
     words = trie.wordsStartWith(searchTerm)
@@ -108,6 +137,12 @@ a = ["Burger King", "Burger King 2", "McDonald's",
      "super duper burger's", "subway", "pizza hut", "Walburgers"]
 b = "bur"
 print(searchBusiness(a, b))
+
+a = ["burger king", "McDonald's", "super duper burger's", "subway", "pizza hut"]
+b = "duper bur"
+print(searchBusiness(a, b))
+
+print("-----")
 
 """
     Followup: string search
