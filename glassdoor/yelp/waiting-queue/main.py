@@ -47,8 +47,10 @@ wq = WaitingQueue()
 wq.lineUp(Customer('dog', 4, 150))
 wq.lineUp(Customer('cat', 2, 200))
 wq.lineUp(Customer('bird', 3, 300))
-print(wq.letCustomerIn(3).name)
-print(wq.letCustomerIn(4).name)
+# print(wq.letCustomerIn(3).name)
+assert wq.letCustomerIn(3).name == 'cat'
+# print(wq.letCustomerIn(4).name)
+assert wq.letCustomerIn(4).name == 'dog'
 
 print("-----")
 
@@ -137,7 +139,9 @@ wq.lineUp(Customer('dog', 4, 150))
 wq.lineUp(Customer('cat', 2, 200))
 wq.lineUp(Customer('bird', 3, 300))
 print(wq.letCustomerIn(5))
+assert wq.letCustomerIn(5) == None
 print(wq.letCustomerIn(3).name)
 print(wq.letCustomerIn(3))
+assert wq.letCustomerIn(3) == None
 print(wq.letCustomerIn(4).name)
 print(wq.letCustomerIn(2).name)
