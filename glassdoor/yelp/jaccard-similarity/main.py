@@ -9,7 +9,7 @@ from collections import *
     e.g.1
     abcd
     xbcdx
-    res = 3/4
+    res = 3/5
 
     e.g.2
     abcdd
@@ -26,25 +26,25 @@ def jaccard(s, t):
     B = Counter(t)
 
     # A or B
-    # mutual = 0
-    # total = 0
-    # keys = set(list(A.keys()) + list(B.keys()))
-    # for key in keys:
-    #     if key in A and key in B:
-    #         mutual += max(A[key], B[key])
-    #         total += max(A[key], B[key])
-    #     elif key in A:
-    #         total += A[key]
-    #     elif key in B:
-    #         total += B[key]
-    # return mutual / total
+    mutual = 0
+    total = 0
+    keys = set(list(A.keys()) + list(B.keys()))
+    for key in keys:
+        if key in A and key in B:
+            mutual += max(A[key], B[key])
+            total += max(A[key], B[key])
+        elif key in A:
+            total += A[key]
+        elif key in B:
+            total += B[key]
+    return mutual / total
 
-    # compare to S
-    count = 0
-    for key in A:
-        if key in B:
-            count += min(A[key], B[key])
-    return count / len(s)
+    # # compare to S
+    # count = 0
+    # for key in A:
+    #     if key in B:
+    #         count += min(A[key], B[key])
+    # return count / len(s)
 
 
 a = 'abcd'
@@ -54,6 +54,8 @@ print(jaccard(a, b))
 a = 'abcdd'
 b = 'xbcddx'
 print(jaccard(a, b))
+
+print("-----")
 
 """
     followup: given a list of objects, return the one with the highest jaccard score
