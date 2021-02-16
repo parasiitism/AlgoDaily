@@ -14,7 +14,7 @@ from collections import *
     e.g.2
     abcdd
     xbcddx
-    res = 4/5
+    res = 3/5
 
     Time    O(S+T)
     Space   O(S+T)
@@ -22,22 +22,13 @@ from collections import *
 
 
 def jaccard(s, t):
-    A = Counter(s)
-    B = Counter(t)
+    A = set([c for c in s])
+    B = set([c for c in t])
 
     # A or B
-    mutual = 0
-    total = 0
-    keys = set(list(A.keys()) + list(B.keys()))
-    for key in keys:
-        if key in A and key in B:
-            mutual += max(A[key], B[key])
-            total += max(A[key], B[key])
-        elif key in A:
-            total += A[key]
-        elif key in B:
-            total += B[key]
-    return mutual / total
+    mutual = A.intersection(B)
+    total = A.union(B)
+    return len(mutual) / len(total)
 
     # # compare to S
     # count = 0
@@ -85,8 +76,8 @@ def highestJaccard(original, objs):
 
 a = 'abcd'
 b = [
-    Restaurant('xbcdx', 100, 'blablabla'),
-    Restaurant('xbcddx', 100, 'blablabla'),
-    Restaurant('xbcddxa', 100, 'blablabla'),
+    Restaurant('xbcdx', 100, 'arbitary address'),
+    Restaurant('xbcddx', 100, 'arbitary address'),
+    Restaurant('xbcddxa', 100, 'arbitary address'),
 ]
 print(highestJaccard(a, b).name)
