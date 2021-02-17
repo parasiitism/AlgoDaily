@@ -66,3 +66,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | Day | Question                                             | Type | From                                                             | remarks         |
 | --- | ---------------------------------------------------- | ---- | ---------------------------------------------------------------- | --------------- |
 | 901 | [Escape The Ghosts](/leetcode/789-escape-the-ghosts) | math | [leetcode 789](https://leetcode.com/problems/escape-the-ghosts/) | ⭐️ i hate math |
+| 902 | [Find the Highest Altitude](/leetcode/1732-find-the-highest-altitude)                                                                       | array               | [leetcode 1732](https://leetcode.com/problems/find-the-highest-altitude/)                                    |                                      |
