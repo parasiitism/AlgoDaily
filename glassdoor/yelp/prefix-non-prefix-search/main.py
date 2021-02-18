@@ -66,7 +66,7 @@ print("-----")
 
 """ 
     2nd: Trie
-    Time    O(NWCC + S) N=num of businesses, W=num of words, C=num of characters of every word
+    Time    O(NWCC + NCS) N=num of businesses, W=num of words, C=num of characters of every word
     Space   O(NC)
 """
 

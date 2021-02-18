@@ -4,7 +4,7 @@ from collections import *
 """
     https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=664894&ctid=230591
 
-    Calculate the jaccard distance between 2 strings(compare to the first string)
+    Calculate the jaccard distance between 2 strings
 
     e.g.1
     abcd
@@ -13,8 +13,8 @@ from collections import *
 
     e.g.2
     abcdd
-    xbcddx
-    res = 3/5
+    xbcddy
+    res = 3/6
 
     Time    O(S+T)
     Space   O(S+T)
@@ -22,20 +22,28 @@ from collections import *
 
 
 def jaccard(s, t):
+
+    # approach 1: only the distinct characters
+    # e.g.1 => 3/5
+    # e.g.2 =>
     A = set([c for c in s])
     B = set([c for c in t])
-
-    # A or B
     mutual = A.intersection(B)
     total = A.union(B)
     return len(mutual) / len(total)
 
-    # # compare to S
-    # count = 0
-    # for key in A:
-    #     if key in B:
-    #         count += min(A[key], B[key])
-    # return count / len(s)
+    # # approach 2: all the characters
+    # # e.g.1 => 3/6
+    # # e.g.2 => 4/7
+    # A = Counter(s)
+    # B = Counter(t)
+    # mutual = 0
+    # total = 0
+    # keys = set(list(A.keys()) + list(B.keys()))
+    # for key in keys:
+    #     mutual += min(A[key], B[key])
+    #     total += max(A[key], B[key])
+    # return mutual / total
 
 
 a = 'abcd'
@@ -43,10 +51,11 @@ b = 'xbcdx'
 print(jaccard(a, b))
 
 a = 'abcdd'
-b = 'xbcddx'
+b = 'xbcddy'
 print(jaccard(a, b))
 
 print("-----")
+
 
 """
     followup: given a list of objects, return the one with the highest jaccard score
