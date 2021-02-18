@@ -3,6 +3,7 @@ from collections import *
 
 """
     https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=664894&ctid=230591
+    https://www.1point3acres.com/bbs/thread-685587-1-1.html
 
     Calculate the jaccard distance between 2 strings
 
@@ -23,27 +24,26 @@ from collections import *
 
 def jaccard(s, t):
 
-    # approach 1: only the distinct characters
-    # e.g.1 => 3/5
-    # e.g.2 =>
-    A = set([c for c in s])
-    B = set([c for c in t])
-    mutual = A.intersection(B)
-    total = A.union(B)
-    return len(mutual) / len(total)
+    # # approach 1: only the distinct characters
+    # # e.g.1 => 3/5
+    # # e.g.2 =>
+    # A = set([c for c in s])
+    # B = set([c for c in t])
+    # mutual = A.intersection(B)
+    # total = A.union(B)
+    # return len(mutual) / len(total)
 
-    # # approach 2: all the characters
-    # # e.g.1 => 3/6
-    # # e.g.2 => 4/7
-    # A = Counter(s)
-    # B = Counter(t)
-    # mutual = 0
-    # total = 0
-    # keys = set(list(A.keys()) + list(B.keys()))
-    # for key in keys:
-    #     mutual += min(A[key], B[key])
-    #     total += max(A[key], B[key])
-    # return mutual / total
+    # approach 2: len(overlapping) / (S + T - len(overlapping))
+    # e.g.1 => 3/6 = 0.5
+    # e.g.2 => 4/7 = 0.571...
+    A = Counter(s)
+    B = Counter(t)
+    mutual = 0
+    total = len(s) + len(t)
+    keys = set(list(A.keys()) + list(B.keys()))
+    for key in keys:
+        mutual += min(A[key], B[key])
+    return mutual / (total - mutual)
 
 
 a = 'abcd'
