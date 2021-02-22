@@ -63,10 +63,11 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 -   [Day 701 - 800](./markdowns/day701-800.md)
 -   [Day 801 - 900](./markdowns/day801-900.md)
 
-| Day | Question                                             | Type | From                                                             | remarks         |
-| --- | ---------------------------------------------------- | ---- | ---------------------------------------------------------------- | --------------- |
-| 901 | [Escape The Ghosts](/leetcode/789-escape-the-ghosts) | math | [leetcode 789](https://leetcode.com/problems/escape-the-ghosts/) | ⭐️ i hate math |
-| 902 | [Find the Highest Altitude](/leetcode/1732-find-the-highest-altitude)                                                                       | array               | [leetcode 1732](https://leetcode.com/problems/find-the-highest-altitude/)                                    |                                      |
-| 903 | [Minimum Number of People to Teach](/leetcode/1733-minimum-number-of-people-to-teach)                                                       | hashtable           | [leetcode 1733](https://leetcode.com/problems/minimum-number-of-people-to-teach/)                            | ⭐️                                  |
-| 904 | [Latest Time by Replacing Hidden Digits](/leetcode/1736-latest-time-by-replacing-hidden-digits)                                             | array               | [leetcode 1736](https://leetcode.com/problems/latest-time-by-replacing-hidden-digits/)                       |                                      |
-| 905 | [Find Kth Largest XOR Coordinate Value](/leetcode/1738-find-kth-largest-xor-coordinate-value)                                               | heap                | [leetcode 1738](https://leetcode.com/problems/find-kth-largest-xor-coordinate-value/)                        |                                      |
+| Day | Question                                                                                        | Type      | From                                                                                   | remarks         |
+| --- | ----------------------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------------------------- | --------------- |
+| 901 | [Escape The Ghosts](/leetcode/789-escape-the-ghosts)                                            | math      | [leetcode 789](https://leetcode.com/problems/escape-the-ghosts/)                       | ⭐️ i hate math |
+| 902 | [Find the Highest Altitude](/leetcode/1732-find-the-highest-altitude)                           | array     | [leetcode 1732](https://leetcode.com/problems/find-the-highest-altitude/)              |                 |
+| 903 | [Minimum Number of People to Teach](/leetcode/1733-minimum-number-of-people-to-teach)           | hashtable | [leetcode 1733](https://leetcode.com/problems/minimum-number-of-people-to-teach/)      | ⭐️             |
+| 904 | [Latest Time by Replacing Hidden Digits](/leetcode/1736-latest-time-by-replacing-hidden-digits) | array     | [leetcode 1736](https://leetcode.com/problems/latest-time-by-replacing-hidden-digits/) |                 |
+| 905 | [Find Kth Largest XOR Coordinate Value](/leetcode/1738-find-kth-largest-xor-coordinate-value)   | heap      | [leetcode 1738](https://leetcode.com/problems/find-kth-largest-xor-coordinate-value/)  |                 |
+| 906 | [Find Distance in a Binary Tree](/leetcode/1740-find-distance-in-a-binary-tree)                 | tree      | [leetcode 1740](https://leetcode.com/problems/find-distance-in-a-binary-tree/)         |                 |
