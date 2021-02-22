@@ -26,32 +26,57 @@
     Ouput
     [[1, 4, 20], [4, 6, 10], [6, 10, 20]]
 */
+
+/*
+    corner cases:
+    - a grid within another grid: [[1,5,10], [2,3,5]] 
+    - 2 consecutive grids with same height: [[1,2,10], [2,3,10]] ? merge intervals first
+*/
 const mergeIntervalsWithLowerPrice = (intervals) => {
     intervals.sort((a, b) => a[0] - b[0])
-    const intvs = []
+    const res = []
     for (let [s, e, p] of intervals) {
-        const n = intvs.length
-        if (n > 0 && s < intvs[n-1][1]) {
-            if (p < intvs[n-1][2]) {
-                if (e < intvs[n-1][1]) {
-                    const lastE = intvs[n-1][1]
-                    const lastP = intvs[n-1][2]
-                    intvs[n-1][1] = s
-                    intvs.push([s, e, p])
-                    intvs.push([e, lastE, lastP])
+        const n = res.length
+        if (n > 0 && s <= res[n-1][1]) {
+            if (p < res[n-1][2]) {
+                if (e < res[n-1][1]) {
+                    // within
+                    const lastE = res[n-1][1]
+                    const lastP = res[n-1][2]
+                    res[n-1][1] = s
+                    res.push([s, e, p])
+                    res.push([e, lastE, lastP])
                 } else {
-                    intvs[n-1][1] = s
-                    intvs.push([s, e, p])
+                    // not within
+                    res[n-1][1] = s
+                    res.push([s, e, p])
                 }
             } else {
-                const lastE = intvs[n-1][1]
-                intvs.push([lastE, e, p])
+                // extend and taller
+                const lastE = res[n-1][1]
+                res.push([lastE, e, p])
             }
         } else {
-            intvs.push([s, e, p])
+            res.push([s, e, p])
         }
     }
-    return intvs.filter(x => x[0] < x[1])
+    return mergeIntervals(res)
+}
+
+const mergeIntervals = (intervals) => {
+    const res = []
+    for (let [s, e, p] of intervals) {
+        if (e <= s) {
+            continue
+        }
+        const n = res.length
+        if (n > 0 && s <= res[n-1][1] && p == res[n-1][2]) {
+            res[n-1][1] = Math.max(res[n-1][1], e)
+        } else {
+            res.push([s, e, p])
+        }
+    }
+    return res
 }
 
 let a
@@ -68,18 +93,26 @@ console.log(mergeIntervalsWithLowerPrice(a))
 a = [[1, 10, 20], [4, 6, 10]]
 console.log(mergeIntervalsWithLowerPrice(a))
 
-// same end
+// same end => [[1, 5, 20], [5, 8, 10]]
 a = [[1, 5, 20], [4, 5, 30], [5, 8, 10]]
 console.log(mergeIntervalsWithLowerPrice(a))
 
-// same start
+// same start => [[1, 5, 20], [5, 8, 10]]
 a = [[1, 5, 20], [5, 6, 30], [5, 8, 10]]
 console.log(mergeIntervalsWithLowerPrice(a))
 
-// higher within 1
+// higher within => [[1, 5, 20], [5, 8, 10]]
 a = [[1, 5, 20], [3, 4, 30], [5, 8, 10]]
 console.log(mergeIntervalsWithLowerPrice(a))
 
-// higher within 2
-a = [[1, 5, 20], [3, 4, 30], [5, 8, 10]]
+// shorter within => [[1, 3, 20], [3, 4, 1], [4, 5, 20], [5, 8, 10]]
+a = [[1, 5, 20], [3, 4, 1], [5, 8, 10]]
+console.log(mergeIntervalsWithLowerPrice(a))
+
+// consecutive grids with same height => [[1, 8, 20]]
+a = [[1, 5, 20], [5, 8, 20]]
+console.log(mergeIntervalsWithLowerPrice(a))
+
+// consecutive grids with same height => [[1, 8, 20]]
+a = [[1, 5, 20], [4, 5, 30], [5, 8, 20]]
 console.log(mergeIntervalsWithLowerPrice(a))
