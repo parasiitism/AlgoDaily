@@ -5,6 +5,9 @@ I believe that practising algorithms every day is a long-term investment in my l
 [![](https://img.shields.io/badge/dynamic/json?style=flat&labelColor=black&color=green&label=Solved&query=solvedOverTotal&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fcalvinchankf&logo=leetcode&logoColor=yellow)](https://leetcode.com/calvinchankf/)
 [![](https://img.shields.io/badge/dynamic/json?style=flat&labelColor=black&color=green&label=Ranking&query=ranking&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fcalvinchankf&logo=leetcode&logoColor=yellow)](https://leetcode.com/calvinchankf/)
 
+![](https://badges.pufler.dev/created/calvinchankf/algodaily)
+![](https://badges.pufler.dev/updated/calvinchankf/algodaily)
+
 #### Languages
 
 -   golang, python, js
