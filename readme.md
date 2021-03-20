@@ -96,3 +96,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 929 | [Buildings With an Ocean View](/leetcode/1762-buildings-with-an-ocean-view) | dynamic programming | [leetcode 1762](https://leetcode.com/problems/buildings-with-an-ocean-view/) |                 |
 | 930 | [Construct the Lexicographically Largest Valid Sequence](/leetcode/1718-construct-the-lexicographically-largest-valid-sequence) | backtracking | [leetcode 1718](https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence/) | 👍🏻              |
 | 931 | [Check If Word Is Valid After Substitutions](/leetcode/1003-check-if-word-is-valid-after-substitutions) | stack     | [leetcode 1003](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) | 👍🏻              |
+| 932 | [Longest Nice Substring](/leetcode/1763-longest-nice-substring)                                     | string    | [leetcode 1763](https://leetcode.com/problems/longest-nice-substring/)                  |                 |
+
