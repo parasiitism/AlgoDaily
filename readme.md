@@ -102,3 +102,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 932 | [Longest Nice Substring](/leetcode/1763-longest-nice-substring)                                                                 | string                      | [leetcode 1763](https://leetcode.com/problems/longest-nice-substring/)                                 |                                  |
 | 933 | [Form Array by Concatenating Subarrays of Another Array](/leetcode/1764-form-array-by-concatenating-subarrays-of-another-array) | 2 pointers | [leetcode 1764](https://leetcode.com/problems/form-array-by-concatenating-subarrays-of-another-array/) |                 |
 | 934 | [Map of Highest Peak](/leetcode/1765-map-of-highest-peak)                                           | graph     | [leetcode 1765](https://leetcode.com/problems/map-of-highest-peak/)                     | ⭐️             |
+| 935 | [Merge Strings Alternately](/leetcode/1768-merge-strings-alternately)                               | 2 pointers | [leetcode 1768](https://leetcode.com/problems/merge-strings-alternately/)               |                 |
+
