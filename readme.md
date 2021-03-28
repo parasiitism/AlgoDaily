@@ -107,4 +107,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 937 | [Minimum Number of Operations to Move All Balls to Each Box](/leetcode/1769-minimum-number-of-operations-to-move-all-balls-to-each-box) | math      | [leetcode 1769](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/) | interesting     |
 | 938 | [Maximum Score from Performing Multiplication Operations](/leetcode/1770-maximum-score-from-performing-multiplication-operations) | dynamic programming | [leetcode 1770](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/) | 🤔              |
 | 939 | [Surface Area of 3D Shapes](/leetcode/892-surface-area-of-3d-shapes)                                | math                | [leetcode 892](https://leetcode.com/problems/surface-area-of-3d-shapes/)                |                                  |
-
+| 940 | [Count Items Matching a Rule](leetcode/1773-count-items-matching-a-rule)                            | hashtable           | [leetcode 1773](https://leetcode.com/problems/count-items-matching-a-rule/)              |                                  |
