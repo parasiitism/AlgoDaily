@@ -28,7 +28,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 -   Bit Operation
 -   Backtracking
 -   Dynamic programming(Kadan's, Binary Lifting)
--   Math (Reservoir Sampling...etc)
+-   Math (Reservoir Sampling, Rejection Sampling...etc)
 -   and more...
 
 #### Questions from
@@ -119,3 +119,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 949 | [Find Center of Star Graph](/leetcode/1791-find-center-of-star-graph)                                                           | graph                       | [leetcode 1791](https://leetcode.com/problems/find-center-of-star-graph/)                              |                                  |
 | 950 | [Maximum Average Pass Ratio](/leetcode/1792-maximum-average-pass-ratio)                                                         | heap                        | [leetcode 1792](https://leetcode.com/problems/maximum-average-pass-ratio/)                             | ⭐️                              |
 | 951 | [Before and After Puzzle](/leetcode/1181-before-and-after-puzzle)                                                               | hashtable                   | [leetcode 1181](https://leetcode.com/problems/before-and-after-puzzle/)                                | weird question                   |
+| 952 | [Generate Random Point in a Circle](/leetcode/478-generate-random-point-in-a-circle)                                            | rejection sampling          | [leetcode 478](https://leetcode.com/problems/generate-random-point-in-a-circle/)                       | 📌                               |
