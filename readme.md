@@ -128,4 +128,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 959 | [Push Dominoes](/leetcode/838-push-dominoes) | 2 arrays      | [leetcode 838](https://leetcode.com/problems/push-dominoes/) | 👍🏻     |
 | 960 | [Implement Trie II (Prefix Tree)](/leetcode/1804-implement-trie-ii-prefix-tree)                                                         | trie                        | [leetcode 1804](https://leetcode.com/problems/implement-trie-ii-prefix-tree/)                              | 👍🏻                               |
 | 961 | [Number of Different Integers in a String](/leetcode/1805-number-of-different-integers-in-a-string)                                     | string                      | [leetcode 1805](https://leetcode.com/problems/number-of-different-integers-in-a-string/)                   |                                  |
-
+| 962 | [Evaluate the Bracket Pairs of a String](leetcode/1807-evaluate-the-bracket-pairs-of-a-string)                                          | hashtable                   | [leetcode 1807](https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string/)                     |                                  |
