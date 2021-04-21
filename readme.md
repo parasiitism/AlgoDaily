@@ -27,7 +27,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 -   Linked list
 -   Bit Operation
 -   Backtracking
--   Dynamic programming(Kadan's, Binary Lifting)
+-   Dynamic programming(Kadan, Knapsack, Binary Lifting...etc)
 -   Math (Reservoir Sampling, Rejection Sampling...etc)
 -   and more...
 
@@ -131,3 +131,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 962 | [Evaluate the Bracket Pairs of a String](leetcode/1807-evaluate-the-bracket-pairs-of-a-string)                                          | hashtable                   | [leetcode 1807](https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string/)                     |                                  |
 | 963 | [Minimum Number of Operations to Reinitialize a Permutation](leetcode/1806-minimum-number-of-operations-to-reinitialize-a-permutation)  | array                       | [leetcode 1806](https://leetcode.com/problems/minimum-number-of-operations-to-reinitialize-a-permutation/) |                                  |
 | 964 | [Minimum Path Cost in a Hidden Grid](/leetcode/1810-minimum-path-cost-in-a-hidden-grid)                                                 | graph                       | [leetcode 1810](https://leetcode.com/problems/minimum-path-cost-in-a-hidden-grid/)                         | 👍🏻 dijkstra                      |
+| 965 | [Ones and Zeroes](/leetcode/474-ones-and-zeroes)                                                                                        | dynamic programming         | [leetcode 474](https://leetcode.com/problems/ones-and-zeroes/)                                             | 👍🏻 classic knapsack              |
