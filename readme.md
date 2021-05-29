@@ -72,3 +72,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | Day  | Question                                                                   | Type      | From                                                                         | remarks    |
 | ---- | -------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------- | ---------- |
 | 1001 | [Sum of All Subset XOR Totals](leetcode/1863-sum-of-all-subset-xor-totals) | recursion | [leetcode 1863](https://leetcode.com/problems/sum-of-all-subset-xor-totals/) | ⭐️ subset |
+| 1002 | [Rotating the Box](leetcode/1861-rotating-the-box)                                                                                      | array                       | [leetcode 1861](https://leetcode.com/problems/rotating-the-box/)                                           |                                                        |
