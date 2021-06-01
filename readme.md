@@ -49,9 +49,9 @@ I believe that practising algorithms every day is a long-term investment in my l
 
 # Journey
 
--   I have been doing this every day since September 1st 2018
--   On May 27th 2021, day 1000
--   On June 1st 2021, I started my jorney at Facebook as a Solutions Engineer
+-   I have been doing this every day **since September 1st, 2018**
+-   On May 27th, 2021, **day 1000**
+-   On June 1st, 2021, I started my jorney at **Facebook** as a Solutions Engineer
 
 ```js
 const start = new Date("09/01/2018");
