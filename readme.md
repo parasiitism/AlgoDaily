@@ -83,3 +83,5 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 1009 | [Minimum Number of Swaps to Make the Binary String Alternating](/leetcode/1864-minimum-number-of-swaps-to-make-the-binary-string-alternating) | array     | [leetcode 1864](https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-binary-string-alternating/) | ⭐️        |
 | 1010 | [Substrings of Size Three with Distinct Characters](/leetcode/1876-substrings-of-size-three-with-distinct-characters) | sliding window, hashtable | [leetcode 1876](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/) |            |
 | 1011 | [Minimize Maximum Pair Sum in Array](/leetcode/1877-minimize-maximum-pair-sum-in-array)                               | sort                      | [leetcode 1877](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/)                |            |
+| 1012 | [Check if Word Equals Summation of Two Words](/leetcode/1880-check-if-word-equals-summation-of-two-words) | string    | [leetcode 1880](https://leetcode.com/problems/check-if-word-equals-summation-of-two-words/) |            |
+
