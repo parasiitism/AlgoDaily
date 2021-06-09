@@ -84,4 +84,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 1010 | [Substrings of Size Three with Distinct Characters](/leetcode/1876-substrings-of-size-three-with-distinct-characters) | sliding window, hashtable | [leetcode 1876](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/) |            |
 | 1011 | [Minimize Maximum Pair Sum in Array](/leetcode/1877-minimize-maximum-pair-sum-in-array)                               | sort                      | [leetcode 1877](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/)                |            |
 | 1012 | [Check if Word Equals Summation of Two Words](/leetcode/1880-check-if-word-equals-summation-of-two-words) | string    | [leetcode 1880](https://leetcode.com/problems/check-if-word-equals-summation-of-two-words/) |            |
-
+| 1013 | [Maximum Value after Insertion](/leetcode/1881-maximum-value-after-insertion)                                 | greedy    | [leetcode 1881](https://leetcode.com/problems/maximum-value-after-insertion/)                 | ⭐️ interesting |
