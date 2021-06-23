@@ -70,6 +70,7 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 -   [Day 801 - 900](./markdowns/day801-900.md)
 -   [Day 901 - 1000](./markdowns/day901-1000.md)
 
+=======
 | Day  | Question                                                                                                                                      | Type                       | From                                                                                                          | remarks         |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------- | --------------- |
 | 1001 | [Sum of All Subset XOR Totals](leetcode/1863-sum-of-all-subset-xor-totals)                                                                    | recursion                  | [leetcode 1863](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)                                  | ⭐️ subset      |
@@ -98,3 +99,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 1024 | [Find the Student that Will Replace the Chalk](/leetcode/1894-find-the-student-that-will-replace-the-chalk)                                   | array, math                | [leetcode 1894](https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/)                  |                 |
 | 1025 | [Redistribute Characters to Make All Strings Equal](/leetcode/1897-redistribute-characters-to-make-all-strings-equal)                         | hashtable                  | [leetcode 1897](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/)             |                 |
 | 1026 | [Maximum Number of Removable Characters](/leetcode/1898-maximum-number-of-removable-characters)                                               | binary search              | [leetcode 1898](https://leetcode.com/problems/maximum-number-of-removable-characters/)                        |                 |
+| 1027 | [Merge Triplets to Form Target Triplet](/leetcode/1899-merge-triplets-to-form-target-triplet)                                                 | hashtable                          | [leetcode 1899](https://leetcode.com/problems/merge-triplets-to-form-target-triplet/)                         |                 |
