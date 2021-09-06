@@ -74,3 +74,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | Day  | Question                                                                  | Type  | From                                                                        | remarks |
 | ---- | ------------------------------------------------------------------------- | ----- | --------------------------------------------------------------------------- | ------- |
 | 1101 | [Find All Groups of Farmland](/leetcode/1992-find-all-groups-of-farmland) | graph | [leetcode 1992](https://leetcode.com/problems/find-all-groups-of-farmland/) |         |
+| 1102 | [Operations on Tree](/leetcode/1993-operations-on-tree)                                                                                       | graph                              | [leetcode 1992](https://leetcode.com/problems/operations-on-tree/)                                            |                                               |
