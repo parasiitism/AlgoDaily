@@ -39,8 +39,7 @@ class Solution:
             # we need to think about the next digit
             if cur not in digits:
                 break
-
-            # if the items in digits can compose entired n, res += 1
+            # so at the end, if the items in digits can compose entired n, res += 1
             if i+1 == N:
                 res += 1
 
