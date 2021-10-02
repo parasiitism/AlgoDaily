@@ -38,6 +38,7 @@ I believe that practising algorithms every day is a long-term investment in my l
 -   [AlgoExpert](https://www.algoexpert.io)
 -   [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam)
 -   [Google Kick Start](https://codingcompetitions.withgoogle.com/kickstart/)
+-   [Codeforces](https://codeforces.com)
 -   Glassdoor
 -   Interviews
 -   ...
@@ -101,3 +102,4 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 | 1125 | [Grid Game](/leetcode/2017-grid-game)                                                                                     | greedy                   | [leetcode 2017](https://leetcode.com/problems/grid-game/)                                           | ⭐️ prefix sum         |
 | 1126 | [Brightest Position on Street](/leetcode/2021-brightest-position-on-street)                                               | line sweeping            | [leetcode 2021](https://leetcode.com/problems/brightest-position-on-street/)                        |                        |
 | 1127 | [Find XOR Sum of All Pairs Bitwise AND](/leetcode/1835-find-xor-sum-of-all-pairs-bitwise-and)                             | bit op                   | [leetcode 1835](https://leetcode.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)               | 📌                     |
+| 1128 | [Wrong Subtraction](/codeforces/977A)                                                                                     | math                     | [codeforces 977a](https://codeforces.com/problemset/problem/977/A)                                  | 📌                     |
