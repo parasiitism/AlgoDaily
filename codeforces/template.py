@@ -16,8 +16,7 @@ def f():
 T = int(input())  # read a line with a single integer
 for t in range(1, T + 1):
     arr = [int(s) for s in input().split(" ")]
-    # or
-    # a, b = map(int, input().split())
+    # or a, b = map(int, input().split())
     k = int(input())
     res = f(arr, k)
     print("Case #{}: {}".format(t, res))
