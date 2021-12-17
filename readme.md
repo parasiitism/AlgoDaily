@@ -74,8 +74,9 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 -   [Day 1001 - 1100](./markdowns/day1001-1100.md)
 -   [Day 1101 - 1200](./markdowns/day1101-1200.md)
 
-| Day  | Question                                                        | Type       | From                                                                   | remarks |
-| ---- | --------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------- | ------- |
-| 1201 | [Rings and Rods](/leetcode/2103-rings-and-rods)                 | hashtable  | [leetcode 2103](https://leetcode.com/problems/rings-and-rods/)         |         |
-| 1202 | [Sum of Subarray Ranges](/leetcode/2104-sum-of-subarray-ranges) | array      | [leetcode 2104](https://leetcode.com/problems/sum-of-subarray-ranges/) |         |
-| 1203 | [Watering Plants II](/leetcode/2105-watering-plants-ii)         | 2 pointers | [leetcode 2105](https://leetcode.com/problems/watering-plants-ii/)     |         |
+| Day  | Question                                                                                                            | Type                      | From                                                                                             | remarks |
+| ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------ | ------- |
+| 1201 | [Rings and Rods](/leetcode/2103-rings-and-rods)                                                                     | hashtable                 | [leetcode 2103](https://leetcode.com/problems/rings-and-rods/)                                   |         |
+| 1202 | [Sum of Subarray Ranges](/leetcode/2104-sum-of-subarray-ranges)                                                     | array                     | [leetcode 2104](https://leetcode.com/problems/sum-of-subarray-ranges/)                           |         |
+| 1203 | [Watering Plants II](/leetcode/2105-watering-plants-ii)                                                             | 2 pointers                | [leetcode 2105](https://leetcode.com/problems/watering-plants-ii/)                               |         |
+| 1204 | [Number of Unique Flavors After Sharing K Candies](/leetcode/2107-number-of-unique-flavors-after-sharing-k-candies) | sliding window, hashtable | [leetcode 2107](https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/) |         |
