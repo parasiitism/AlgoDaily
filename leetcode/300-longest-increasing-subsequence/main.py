@@ -125,7 +125,7 @@ print(s.lengthOfLIS(a))
 print('-----')
 
 """
-    follow up: print the subsequence
+    follow up 1: print the subsequence
 """
 
 
@@ -165,3 +165,53 @@ print(s.printLIS(a))
 
 a = [7, 7, 7, 7, 7, 7, 7]
 print(s.printLIS(a))
+
+print('-----')
+
+"""
+    follow up 2: Longest Mono-Increasing Subsequence a.k.a. Longest Non-decreasing Subsequence
+
+    The approach is similar but there 2 diffs
+    - use x >= sub[-1] to append an item if it is equal to the end of the sorted subsequence
+    - use upperbound binary search to look for a positino to replace, current > target
+"""
+
+
+class Solution:
+    def longestMonoIncreasingSubsequence(self, nums):
+        n = len(nums)
+        sub = []
+        for i in range(n):
+            x = nums[i]
+            if len(sub) == 0 or x >= sub[-1]:  # diff 1
+                sub.append(x)
+            else:
+                j = self.upperBsearch(sub, x)  # diff 2
+                sub[j] = x
+        return len(sub)
+
+    def upperBsearch(self, nums, target):
+        left = 0
+        right = len(nums)
+        while left < right:
+            mid = (left + right)//2
+            if target >= nums[mid]:
+                left = mid + 1
+            else:
+                right = mid
+        return right
+
+
+s = Solution()
+
+a = [5, 7, -24, 12, 10, 2, 3, 12, 5, 6, 35]
+print(s.longestMonoIncreasingSubsequence(a))
+
+a = [10, 9, 2, 5, 3, 7, 101, 18]
+print(s.longestMonoIncreasingSubsequence(a))
+
+a = [0, 1, 0, 3, 2, 3]
+print(s.longestMonoIncreasingSubsequence(a))
+
+a = [7, 7, 7, 7, 7, 7, 7]
+print(s.longestMonoIncreasingSubsequence(a))
