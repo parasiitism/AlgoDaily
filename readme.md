@@ -56,9 +56,7 @@ I guess doing algorithms every day is a long-term investment in my life
 - On June 1st, 2021, **day 1004**, I joined **Facebook**
 
 ```js
-const start = new Date("09/01/2018");
-const now = new Date();
-console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
+const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 ```
 
 - [Day 1 - 100](./markdowns/day1-100.md)
@@ -73,6 +71,7 @@ console.log(Math.ceil((now - start) / (1000 * 3600 * 24)));
 - [Day 901 - 1000](./markdowns/day901-1000.md)
 - [Day 1001 - 1100](./markdowns/day1001-1100.md)
 - [Day 1101 - 1200](./markdowns/day1101-1200.md)
+- [Day 1201 - 1300](./markdowns/day1201-1300.md)
 
 | Day  | Question                                                                                                                                          | Type                       | From                                                                                                            | remarks                                    |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
