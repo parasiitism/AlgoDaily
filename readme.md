@@ -20,7 +20,7 @@ I guess doing algorithms every day is a long-term investment in my life
 - Graph(Dijkstra, Bellman-Ford, Floyd Warshall, Union Find, Kruskal, Prim's, Minimum Spanning Tree, Topological Ordering, Tarjan...etc)
 - Stack
 - Queue
-- Array
+- Array(Line Sweep, Partitionnig)
 - Sorting
 - Heap
 - Hash Table

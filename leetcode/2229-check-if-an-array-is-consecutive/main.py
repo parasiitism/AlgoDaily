@@ -16,6 +16,7 @@ class Solution:
             if prev+1 != curr:
                 return False
         return True
+        
 
 
 """
