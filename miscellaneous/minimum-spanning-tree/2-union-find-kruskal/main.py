@@ -32,7 +32,7 @@ class Solution(object):
         """
         uf = UnionFind(N)
         connections = sorted(connections, key=lambda x: x[2])
-        res = []
+        res = 0
         for a, b, c in connections:
             rootA = uf.find(a)
             rootB = uf.find(b)
