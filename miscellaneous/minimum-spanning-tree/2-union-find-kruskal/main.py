@@ -1,3 +1,5 @@
+from collections import *
+
 """
     Minimum Spanning Tree: 
     - find out the minium cost/edges to connect all the nodes
@@ -54,8 +56,15 @@ class UnionFind(object):
             self.ids[i] = i
             self.caps[i] = 1
 
-    def getCount(self):
+    def get_count(self):
         return self.count
+
+    def get_groups(self):
+        groups = defaultdict(set)
+        for node in self.ids:
+            root = self.find(node)
+            groups[root].add(node)
+        return groups
 
     def find(self, key):
         # loop to find to ultimate root
