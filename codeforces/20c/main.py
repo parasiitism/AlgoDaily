@@ -3,8 +3,9 @@ from heapq import *
 """
     dijkstra on a undirected graph
 
-    Time    O((E + V) x logV)
-    Space   O(V)
+    Time    O((E + V) x logV)   888 ms
+    Space   O(V)                42300 KB
+    https://codeforces.com/problemset/submission/20/166415948
 """
 
 
@@ -63,18 +64,14 @@ def dijkstra(edges, p, q):
     return path[::-1]
 
 
-# normal case: https://www.youtube.com/watch?v=_lHSawdgXpI
-# but
-# 1. change it to a undirected graph
-# 2. change C-E from 5 to 4
-r = [
-    ['A', 'B', 4],
-    ['A', 'C', 2],
-    ['B', 'C', 3],
-    ['B', 'D', 2],
-    ['B', 'E', 3],
-    ['C', 'D', 4],
-    ['C', 'E', 4],
-    ['D', 'E', 1],
-]
-print(dijkstra(r, 'A', 'E'))
+def f():
+    n, m = map(int, input().split())
+    edges = []
+    for _ in range(m):
+        u, v, w = map(int, input().split())
+        edges.append([u, v, w])
+    path = dijkstra(edges, 1, n)
+    print(' '.join([str(x) for x in path]))
+
+
+f()
