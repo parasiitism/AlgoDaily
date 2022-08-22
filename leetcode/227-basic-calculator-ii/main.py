@@ -84,6 +84,8 @@ class Solution(object):
 
 # 47
 print(Solution().calculate("3+22*2"))
+# 56
+print(Solution().calculate("100-22*2"))
 # 1
 print(Solution().calculate(" 3/2 "))
 # -1
@@ -160,15 +162,15 @@ class Solution(object):
 
 # python2 integer division floors to smaller integer, but we circumvent it by doing float division
 # https://www.quora.com/What-does-floor-division-in-Python-do
-a = -3
-b = 2
-print(a/b)
-print(int(a/float(b)))
-
-print('---')
+# a = -3
+# b = 2
+# print(a/b)
+# print(int(a/float(b)))
 
 # 47
 print(Solution().calculate("3+22*2"))
+# 56
+print(Solution().calculate("100-22*2"))
 # 1
 print(Solution().calculate(" 3/2 "))
 # -1
@@ -186,4 +188,68 @@ print(Solution().calculate("100-1-2-3-4-5-6-7-8-9-10"))
 # -5
 print(Solution().calculate("0-5"))
 # -2147483647
+print(Solution().calculate("0-2147483647"))
+
+print("-----")
+
+"""
+    3rd: without a stack
+
+    Time    O(N)
+    Space   O(1)
+    137 ms, faster than 52.67%
+"""
+
+
+class Solution(object):
+    def calculate(self, s):
+        res = 0
+        cur_num = 0
+        prev_num = 0
+        prev_op = '+'
+        for i in range(len(s)):
+            c = s[i]
+            if c.isdigit():
+                cur_num = 10 * cur_num + int(c)
+            if c in '+-*/' or i + 1 == len(s):
+                if prev_op == '+':
+                    res += prev_num
+                    prev_num = cur_num
+                elif prev_op == '-':
+                    res += prev_num
+                    prev_num = -cur_num
+                elif prev_op == '*':
+                    prev_num *= cur_num
+                elif prev_op == '/':
+                    if prev_num < 0:
+                        prev_num = -(-prev_num // cur_num)
+                    else:
+                        prev_num = prev_num // cur_num
+                prev_op = c
+                cur_num = 0
+        res += prev_num
+        return res
+
+
+# 47
+print(Solution().calculate("3+22*2"))
+# 56
+print(Solution().calculate("100-22*2"))
+# 1
+print(Solution().calculate(" 3/2 "))
+# -1
+print(Solution().calculate(" 0-3/2 "))
+# 5
+print(Solution().calculate(" 3+5 / 2"))
+# 12
+print(Solution().calculate("14-3/2"))
+# 7
+print(Solution().calculate("3+5/2*2"))
+# 6
+print(Solution().calculate("1+2 *5/3+6/4*2 "))
+# 45
+print(Solution().calculate("100-1-2-3-4-5-6-7-8-9-10"))
+# -5
+print(Solution().calculate("0-5"))
+# # -2147483647
 print(Solution().calculate("0-2147483647"))
