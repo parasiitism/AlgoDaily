@@ -75,3 +75,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | Day | Question | Type | From | remarks |
 | ---- | --- | --- | --- | --- |
 | 1501 | [Find The Original Array of Prefix Xor](/leetcode/2433) | bit op | [leetcode 2433](https://leetcode.com/problems/find-the-original-array-of-prefix-xor/) | |
+| 1502 | [Flipping Game](/codeforces/327a) | dynamic programming | [codeforces 327a](https://codeforces.com/contest/327/problem/A) | |
