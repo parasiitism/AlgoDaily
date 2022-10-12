@@ -76,3 +76,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | ---- | --- | --- | --- | --- |
 | 1501 | [Find The Original Array of Prefix Xor](/leetcode/2433) | bit op | [leetcode 2433](https://leetcode.com/problems/find-the-original-array-of-prefix-xor/) | |
 | 1502 | [Flipping Game](/codeforces/327a) | dynamic programming | [codeforces 327a](https://codeforces.com/contest/327/problem/A) | |
+| 1503 | [Road To Zero](/codeforces/1342a) | math | [codeforces 1342a](https://codeforces.com/problemset/problem/1342/A) | |
