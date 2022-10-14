@@ -78,3 +78,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1502 | [Flipping Game](/codeforces/327a) | dynamic programming | [codeforces 327a](https://codeforces.com/contest/327/problem/A) | |
 | 1503 | [Road To Zero](/codeforces/1342a) | math | [codeforces 1342a](https://codeforces.com/problemset/problem/1342/A) | |
 | 1504 | [Sereja and Coat Rack](/codeforces/368a) | array | [codeforces 368a](https://codeforces.com/contest/368/problem/A) | |
+| 1505 | [I_love_%username%](/codeforces/155a) | array | [codeforeces 155a](https://codeforces.com/problemset/problem/155/A) | |
