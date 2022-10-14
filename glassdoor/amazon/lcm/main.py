@@ -35,7 +35,7 @@ class Solution(object):
     def findGcd(self, a, b):
         if b == 0:
             return a
-        return findGcd(b, a % b)
+        return self.findGcd(b, a % b)
 
 
 print(Solution().lcm([3, 2]))
