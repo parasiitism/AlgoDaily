@@ -81,3 +81,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1505 | [I_love_%username%](/codeforces/155a) | array | [codeforeces 155a](https://codeforces.com/problemset/problem/155/A) | |
 | 1506 | [Minimum Split Into Subarrays With GCD Greater Than One](/leetcode/2436) | math | [leetcode 2436](https://leetcode.com/problems/minimum-split-into-subarrays-with-gcd-greater-than-one/) | |
 | 1507 | [Number of Valid Clock Times](/leetcode/2437) | hashtable | [leetcode 2437](https://leetcode.com/problems/number-of-valid-clock-times/) | |
+| 1508 | [Range Product Queries of Powers](/leetcode/2438) | hashtable | [leetcode 2438](https://leetcode.com/problems/range-product-queries-of-powers/) | |
