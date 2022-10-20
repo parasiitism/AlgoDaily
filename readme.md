@@ -83,3 +83,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1507 | [Number of Valid Clock Times](/leetcode/2437) | hashtable | [leetcode 2437](https://leetcode.com/problems/number-of-valid-clock-times/) | |
 | 1508 | [Range Product Queries of Powers](/leetcode/2438) | hashtable | [leetcode 2438](https://leetcode.com/problems/range-product-queries-of-powers/) | |
 | 1509 | [Minimize Maximum of Array](/leetcode/2430) | math | [leetcode 2430](https://leetcode.com/problems/minimize-maximum-of-array/) | |
+| 1510 | [Largest Positive Integer That Exists With Its Negative](/leetcode/2441) | sort, array | [leetcode 2441](https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/) | |
