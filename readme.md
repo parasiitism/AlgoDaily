@@ -85,3 +85,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1509 | [Minimize Maximum of Array](/leetcode/2430) | math | [leetcode 2430](https://leetcode.com/problems/minimize-maximum-of-array/) | |
 | 1510 | [Largest Positive Integer That Exists With Its Negative](/leetcode/2441) | sort, array | [leetcode 2441](https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/) | |
 | 1511 | [Count Number of Distinct Integers After Reverse Operations](/leetcode/2442) | hashtable | [leetcode 2441](https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations/) | |
+| 1512 | [Sum of Number and Its Reverse](/leetcode/2443) | math | [leetcode 2443](https://leetcode.com/problems/sum-of-number-and-its-reverse/) | |
