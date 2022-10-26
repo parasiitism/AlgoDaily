@@ -90,3 +90,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1514 | [Determine if Two Events Have Conflict](/leetcode/2446) | string | [leetcode 2446](https://leetcode.com/problems/determine-if-two-events-have-conflict/) | |
 | 1515 | [Number of Subarrays With GCD Equal to K](/leetcode/2447) | math | [leetcode 2447](https://leetcode.com/problems/number-of-subarrays-with-gcd-equal-to-k/) | |
 | 1516 | [Minimum Number of Operations to Make Arrays Similar](/leetcode/2449) | sort, math | [leetcode 2449](https://leetcode.com/problems/minimum-number-of-operations-to-make-arrays-similar/) | |
+| 1517 | [Minimum Cost to Make Array Equal](/leetcode/2448) | binary search | [leetcode 2448](https://leetcode.com/problems/minimum-cost-to-make-array-equal/) | |
