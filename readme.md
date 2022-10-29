@@ -93,3 +93,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1517 | [Minimum Cost to Make Array Equal](/leetcode/2448) | binary search | [leetcode 2448](https://leetcode.com/problems/minimum-cost-to-make-array-equal/) | |
 | 1518 | [Create Components With Same Value](/leetcode/2440) | graph, math | [leetcode 2440](https://leetcode.com/problems/create-components-with-same-value/) | |
 | 1519 | [Number of Distinct Binary Strings After Applying Operations](/leetcode/2450) | math | [leetcode 2450](https://leetcode.com/problems/number-of-distinct-binary-strings-after-applying-operations/) | |
+| 1520 | [Kevin and Permutation](/codeforces/1754b) | math | [codeforces 1754b](https://codeforces.com/problemset/problem/1754/B) | |
