@@ -96,3 +96,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1520 | [Kevin and Permutation](/codeforces/1754b) | math | [codeforces 1754b](https://codeforces.com/problemset/problem/1754/B) | |
 | 1521 | [Technical Support](/codeforces/1754a) | array | [codeforces 1754a](https://codeforces.com/problemset/problem/1754/A) | |
 | 1522 | [Odd String Difference](/leetcode/2451) | hashtable | [leetcode 2451](https://leetcode.com/problems/odd-string-difference/) | |
+| 1523 | [Words Within Two Edits of Dictionary](/leetcode/2452) | string | [leetcode 2452](https://leetcode.com/problems/words-within-two-edits-of-dictionary/) | |
