@@ -97,3 +97,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1521 | [Technical Support](/codeforces/1754a) | array | [codeforces 1754a](https://codeforces.com/problemset/problem/1754/A) | |
 | 1522 | [Odd String Difference](/leetcode/2451) | hashtable | [leetcode 2451](https://leetcode.com/problems/odd-string-difference/) | |
 | 1523 | [Words Within Two Edits of Dictionary](/leetcode/2452) | string | [leetcode 2452](https://leetcode.com/problems/words-within-two-edits-of-dictionary/) | |
+| 1524 | [Average Value of Even Numbers That Are Divisible by Three](/leetcode/2455) | array | [leetcode 2455](https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/) | |
