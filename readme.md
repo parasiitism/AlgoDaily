@@ -99,3 +99,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1523 | [Words Within Two Edits of Dictionary](/leetcode/2452) | string | [leetcode 2452](https://leetcode.com/problems/words-within-two-edits-of-dictionary/) | |
 | 1524 | [Average Value of Even Numbers That Are Divisible by Three](/leetcode/2455) | array | [leetcode 2455](https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/) | |
 | 1525 | [Most Popular Video Creator](/leetcode/2456) | hashtable, sort | [leetcode 2456](https://leetcode.com/problems/most-popular-video-creator/) | |
+| 1526 | [Design a Food Rating System](/leetcode/2353) | hashtable, SortedList | [leetcode 2353](https://leetcode.com/problems/design-a-food-rating-system/) | |
