@@ -101,3 +101,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1525 | [Most Popular Video Creator](/leetcode/2456) | hashtable, sort | [leetcode 2456](https://leetcode.com/problems/most-popular-video-creator/) | |
 | 1526 | [Design a Food Rating System](/leetcode/2353) | hashtable, SortedList | [leetcode 2353](https://leetcode.com/problems/design-a-food-rating-system/) | |
 | 1527 | [Height of Binary Tree After Subtree Removal Queries](/leetcode/2458) | recursion, hashtable | [leetcode 2458](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/) | |
+| 1528 | [Sum](/codeforces/1742a) | sort | [codeforces 1742a](https://codeforces.com/problemset/problem/174a/A) | |
