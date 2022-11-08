@@ -103,3 +103,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1527 | [Height of Binary Tree After Subtree Removal Queries](/leetcode/2458) | recursion, hashtable | [leetcode 2458](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/) | |
 | 1528 | [Sum](/codeforces/1742a) | sort | [codeforces 1742a](https://codeforces.com/problemset/problem/174a/A) | |
 | 1529 | [Increasing](/codeforces/1742b) | sort | [codeforces 1742b](https://codeforces.com/problemset/problem/1742/B) | |
+| 1530 | [Stripes](/codeforces/1742c) | array | [codeforces 1754c](https://codeforces.com/contest/1742/problem/C) | |
