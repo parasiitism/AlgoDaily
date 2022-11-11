@@ -38,7 +38,7 @@ I guess doing algorithms every day is a long-term investment in my life
 - [Google Kick Start](https://codingcompetitions.withgoogle.com/kickstart/)
 - Glassdoor
 - Interviews
-- ...
+- ......
 
 #### My other related repos
 
