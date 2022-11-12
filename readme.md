@@ -107,3 +107,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1531 | [Coprime](/codeforces/1742d) | hashtable | [codeforces 1742d](https://codeforces.com/problemset/problem/1742/D) | |
 | 1532 | [Scuza](/codeforces/1742e) | binary search | [codeforces 1742e](https://codeforces.com/problemset/problem/1742/E) | |
 | 1533 | [Apply Operations to an Array](/leetcode/2460) | 2 pointers | [leetcode 2460](https://leetcode.com/problems/apply-operations-to-an-array/) | |
+| 1534 | [Maximum Sum of Distinct Subarrays With Length K](/leetcode/2461) | hashtable | [leetcode 2461](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | |
