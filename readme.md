@@ -110,3 +110,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1534 | [Maximum Sum of Distinct Subarrays With Length K](/leetcode/2461) | hashtable | [leetcode 2461](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | |
 | 1535 | [Sum of Round Numbers](/codeforces/1352a) | math | [codeforces 1752a](https://codeforces.com/problemset/problem/1352/A) | |
 | 1536 | [Number of Distinct Averages](/leetcode/2465) | 2 pointers | [leetcode 2465](https://leetcode.com/problems/number-of-distinct-averages/) | |
+| 1537 | [Count Ways To Build Good Strings](/leetcode/2466) | dynamic programming | [leetcode 2466](https://leetcode.com/problems/count-ways-to-build-good-strings/) | |
