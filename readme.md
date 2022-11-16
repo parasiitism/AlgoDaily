@@ -111,3 +111,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1535 | [Sum of Round Numbers](/codeforces/1352a) | math | [codeforces 1752a](https://codeforces.com/problemset/problem/1352/A) | |
 | 1536 | [Number of Distinct Averages](/leetcode/2465) | 2 pointers | [leetcode 2465](https://leetcode.com/problems/number-of-distinct-averages/) | |
 | 1537 | [Count Ways To Build Good Strings](/leetcode/2466) | dynamic programming | [leetcode 2466](https://leetcode.com/problems/count-ways-to-build-good-strings/) | |
+| 1538 | [Convert the Temperature](/leetcode/2469) | math | [leetcode 2469](https://leetcode.com/problems/convert-the-temperature/) | |
