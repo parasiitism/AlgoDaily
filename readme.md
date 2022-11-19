@@ -114,3 +114,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1538 | [Convert the Temperature](/leetcode/2469) | math | [leetcode 2469](https://leetcode.com/problems/convert-the-temperature/) | |
 | 1539 | [Minimum Number of Operations to Sort a Binary Tree by Level](/leetcode/2471) | graph, hashtable | [leetcode 2471](https://leetcode.com/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level/) | ⭐️ |
 | 1540 | [Number of Subarrays With LCM Equal to K](/leetcode/2470) | math | [leetcode 2470](https://leetcode.com/problems/number-of-subarrays-with-lcm-equal-to-k/) | |
+| 1541 | [Same Parity Summands](/codeforces/1352b) | math | [codeforces 1752b](https://codeforces.com/problemset/problem/1352/B) | |
