@@ -117,3 +117,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1541 | [Same Parity Summands](/codeforces/1352b) | math | [codeforces 1752b](https://codeforces.com/problemset/problem/1352/B) | |
 | 1542 | [Minimum Cost to Buy Apples](/leetcode/2473) | graph | [leetcode 2473](https://leetcode.com/problems/minimum-cost-to-buy-apples/) | ⭐️ good |
 | 1543 | [Number of Unequal Triplets in Array](/leetcode/2475) | math | [leetcode 2475](https://leetcode.com/problems/number-of-unequal-triplets-in-array/) | ⭐️ good |
+| 1544 | [Closest Nodes Queries in a Binary Search Tree](/leetcode/2476) | tree | [leetcode 2476](https://leetcode.com/problems/closest-nodes-queries-in-a-binary-search-tree/) | 2 approaches |
