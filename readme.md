@@ -118,3 +118,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1542 | [Minimum Cost to Buy Apples](/leetcode/2473) | graph | [leetcode 2473](https://leetcode.com/problems/minimum-cost-to-buy-apples/) | ⭐️ good |
 | 1543 | [Number of Unequal Triplets in Array](/leetcode/2475) | math | [leetcode 2475](https://leetcode.com/problems/number-of-unequal-triplets-in-array/) | ⭐️ good |
 | 1544 | [Closest Nodes Queries in a Binary Search Tree](/leetcode/2476) | tree | [leetcode 2476](https://leetcode.com/problems/closest-nodes-queries-in-a-binary-search-tree/) | 2 approaches |
+| 1545 | [Minimum Fuel Cost to Report to the Capital](/leetcode/2477) | graph | [leetcode 2477](https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/) | ⭐️ good |
