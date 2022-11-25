@@ -119,4 +119,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1543 | [Number of Unequal Triplets in Array](/leetcode/2475) | math | [leetcode 2475](https://leetcode.com/problems/number-of-unequal-triplets-in-array/) | ⭐️ good |
 | 1544 | [Closest Nodes Queries in a Binary Search Tree](/leetcode/2476) | tree | [leetcode 2476](https://leetcode.com/problems/closest-nodes-queries-in-a-binary-search-tree/) | 2 approaches |
 | 1545 | [Minimum Fuel Cost to Report to the Capital](/leetcode/2477) | graph | [leetcode 2477](https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/) | ⭐️ good |
-| 1546 | [K-th Not Divisible by n](/codeforces/1352c) | binary search, math | [codeforces 1752c](https://codeforces.com/problemset/problem/1352/C) | |
+| 1546 | [K-th Not Divisible by n](/codeforces/1352c) | binary search, math | [codeforces 1352c](https://codeforces.com/problemset/problem/1352/C) | |
+| 1547 | [Alice, Bob and Candies](/codeforces/1352d) | 2 pointers | [codeforces 1352d](https://codeforces.com/problemset/problem/1352/D) | |
