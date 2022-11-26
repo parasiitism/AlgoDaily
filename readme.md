@@ -121,3 +121,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1545 | [Minimum Fuel Cost to Report to the Capital](/leetcode/2477) | graph | [leetcode 2477](https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/) | ⭐️ good |
 | 1546 | [K-th Not Divisible by n](/codeforces/1352c) | binary search, math | [codeforces 1352c](https://codeforces.com/problemset/problem/1352/C) | |
 | 1547 | [Alice, Bob and Candies](/codeforces/1352d) | 2 pointers | [codeforces 1352d](https://codeforces.com/problemset/problem/1352/D) | |
+| 1548 | [Medium Number](/codeforces/1760a) | sort | [codeforces 1760a](https://codeforces.com/problemset/problem/1760/A) | |
