@@ -35,7 +35,7 @@ f()
     hashtable
 
     Time    O(1000*1000 log1000)
-    LTE in python but would work in other language according to the tutorial
+    LTE in python but AC in pypy
 """
 
 
