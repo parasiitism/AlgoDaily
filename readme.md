@@ -123,4 +123,3 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1547 | [Alice, Bob and Candies](/codeforces/1352d) | 2 pointers | [codeforces 1352d](https://codeforces.com/problemset/problem/1352/D) | |
 | 1548 | [Medium Number](/codeforces/1760a) | sort | [codeforces 1760a](https://codeforces.com/problemset/problem/1760/A) | |
 | 1549 | [Atilla's Favorite Problem](/codeforces/1760b) | string | [codeforces 1760b](https://codeforces.com/problemset/problem/1760/B) | |
-| 1553 | [Minimum Cuts to Divide a Circle](/leetcode/2481) | math | [leetcode 2481](https://leetcode.com/problems/minimum-cuts-to-divide-a-circle/) |  |
