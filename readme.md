@@ -125,3 +125,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1549 | [Atilla's Favorite Problem](/codeforces/1760b) | string | [codeforces 1760b](https://codeforces.com/problemset/problem/1760/B) | |
 | 1550 | [Advantage](/codeforces/1760c) |  | [codeforces 1760c](https://codeforces.com/problemset/problem/1760/C) | |
 | 1551 | [Challenging Valleys](/codeforces/1760d) | array | [codeforces 1760d](https://codeforces.com/problemset/problem/1760/D) | |
+| 1552 | [Binary Inversions](/codeforces/1760e) | greedy | [codeforces 1760e](https://codeforces.com/problemset/problem/1760/E) | |
