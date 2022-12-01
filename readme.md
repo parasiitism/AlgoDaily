@@ -126,3 +126,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1550 | [Advantage](/codeforces/1760c) |  | [codeforces 1760c](https://codeforces.com/problemset/problem/1760/C) | |
 | 1551 | [Challenging Valleys](/codeforces/1760d) | array | [codeforces 1760d](https://codeforces.com/problemset/problem/1760/D) | |
 | 1552 | [Binary Inversions](/codeforces/1760e) | greedy | [codeforces 1760e](https://codeforces.com/problemset/problem/1760/E) | |
+| 1553 | [Quests](/codeforces/1760f) | binary search | [codeforces 1760f](https://codeforces.com/problemset/problem/1760/F) | ⭐️ hint |
