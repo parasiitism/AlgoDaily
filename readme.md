@@ -128,3 +128,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1552 | [Binary Inversions](/codeforces/1760e) | greedy | [codeforces 1760e](https://codeforces.com/problemset/problem/1760/E) | |
 | 1553 | [Quests](/codeforces/1760f) | binary search | [codeforces 1760f](https://codeforces.com/problemset/problem/1760/F) | ⭐️ hint |
 | 1554 | [Minimum Cuts to Divide a Circle](/leetcode/2481) | math | [leetcode 2481](https://leetcode.com/problems/minimum-cuts-to-divide-a-circle/) |  |
+| 1555 | [Difference Between Ones and Zeros in Row and Column](/leetcode/2482) | array | [leetcode 2482](https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/) | |
