@@ -129,3 +129,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1553 | [Quests](/codeforces/1760f) | binary search | [codeforces 1760f](https://codeforces.com/problemset/problem/1760/F) | ⭐️ hint |
 | 1554 | [Minimum Cuts to Divide a Circle](/leetcode/2481) | math | [leetcode 2481](https://leetcode.com/problems/minimum-cuts-to-divide-a-circle/) |  |
 | 1555 | [Difference Between Ones and Zeros in Row and Column](/leetcode/2482) | array | [leetcode 2482](https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/) | |
+| 1556 | [Minimum Penalty for a Shop](/leetcode/2483) | prefix sum, suffix sum | [leetcode 2483](https://leetcode.com/problems/minimum-penalty-for-a-shop/) | |
