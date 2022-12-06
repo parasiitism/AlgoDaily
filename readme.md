@@ -131,3 +131,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1555 | [Difference Between Ones and Zeros in Row and Column](/leetcode/2482) | array | [leetcode 2482](https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/) | |
 | 1556 | [Minimum Penalty for a Shop](/leetcode/2483) | prefix sum, suffix sum | [leetcode 2483](https://leetcode.com/problems/minimum-penalty-for-a-shop/) | |
 | 1557 | [Find the Pivot Integer](/leetcode/2485) | math, binary search | [leetcode 2485](https://leetcode.com/problems/find-the-pivot-integer/) | 2 approaces |
+| 1558 | [Append Characters to String to Make Subsequence](/leetcode/2486) | 2 pointers | [leetcode 2486](https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/) | ⭐️ good |
