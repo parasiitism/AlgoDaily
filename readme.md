@@ -134,3 +134,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1558 | [Append Characters to String to Make Subsequence](/leetcode/2486) | 2 pointers | [leetcode 2486](https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/) | ⭐️ good |
 | 1559 | [Remove Nodes From Linked List](/leetcode/2487) | linked list,stack | [leetcode 2487](https://leetcode.com/problems/remove-nodes-from-linked-list/) | |
 | 1560 | [Circular Sentence](/leetcode/2490) | string | [leetcode 2490](https://leetcode.com/problems/circular-sentence/) | |
+| 1561 | [Divide Players Into Teams of Equal Skill](/leetcode/2491) | hashtable, sort, 2 pointers | [leetcode 2491](https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/) | |
