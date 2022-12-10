@@ -136,3 +136,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1560 | [Circular Sentence](/leetcode/2490) | string | [leetcode 2490](https://leetcode.com/problems/circular-sentence/) | |
 | 1561 | [Divide Players Into Teams of Equal Skill](/leetcode/2491) | hashtable, sort, 2 pointers | [leetcode 2491](https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/) | |
 | 1562 | [Minimum Score of a Path Between Two Cities](/leetcode/2492) | graph | [leetcode 2492](https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/) | |
+| 1563 | [Special Elements](/codeforces/1352e) | hashtable | [codeforces 1352e](https://codeforces.com/problemset/problem/1352/E) | |
