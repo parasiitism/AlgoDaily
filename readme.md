@@ -138,3 +138,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1562 | [Minimum Score of a Path Between Two Cities](/leetcode/2492) | graph | [leetcode 2492](https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/) | |
 | 1563 | [Special Elements](/codeforces/1352e) | hashtable | [codeforces 1352e](https://codeforces.com/problemset/problem/1352/E) | |
 | 1564 | [Number of Subarrays Having Even Product](/leetcode/2495) | math | [leetcode 2495](https://leetcode.com/problems/number-of-subarrays-having-even-product/description/) | 📌 |
+| 1565 | [Maximum Value of a String in an Array](/leetcode/2496) | try catch | [leetcode 2496](https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/description/) | |
