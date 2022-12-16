@@ -141,3 +141,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1565 | [Maximum Value of a String in an Array](/leetcode/2496) | try catch | [leetcode 2496](https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/description/) | |
 | 1566 | [Maximum Star Sum of a Graph](/leetcode/2496) | graph | [leetcode 2497](https://leetcode.com/problems/maximum-star-sum-of-a-graph/) | |
 | 1567 | [Delete Greatest Value in Each Row](/leetcode/2500) | sort | [leetcode 2500](https://leetcode.com/problems/delete-greatest-value-in-each-row/) | |
+| 1568 | [Design Memory Allocator](/leetcode/2502) | array | [leetcode 2502](https://leetcode.com/problems/design-memory-allocator/) | |
