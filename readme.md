@@ -142,3 +142,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1566 | [Maximum Star Sum of a Graph](/leetcode/2496) | graph | [leetcode 2497](https://leetcode.com/problems/maximum-star-sum-of-a-graph/) | |
 | 1567 | [Delete Greatest Value in Each Row](/leetcode/2500) | sort | [leetcode 2500](https://leetcode.com/problems/delete-greatest-value-in-each-row/) | |
 | 1568 | [Design Memory Allocator](/leetcode/2502) | array | [leetcode 2502](https://leetcode.com/problems/design-memory-allocator/) | |
+| 1569 | [Longest Square Streak in an Array](/leetcode/2501) | sort, hashtable | [leetcode 2501](https://leetcode.com/problems/longest-square-streak-in-an-array/) | |
