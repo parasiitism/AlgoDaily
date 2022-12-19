@@ -144,3 +144,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1568 | [Design Memory Allocator](/leetcode/2502) | array | [leetcode 2502](https://leetcode.com/problems/design-memory-allocator/) | |
 | 1569 | [Longest Square Streak in an Array](/leetcode/2501) | sort, hashtable | [leetcode 2501](https://leetcode.com/problems/longest-square-streak-in-an-array/) | |
 | 1570 | [Backspace](/codeforces/1553d) | greedy | [codeforces 1553d](https://codeforces.com/problemset/problem/1553/D) | |
+| 1571 | [Digits Sum](/codeforces/1553a) | math | [codeforces 1553a](https://codeforces.com/contest/1553/problem/A) | |
