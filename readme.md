@@ -147,3 +147,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1571 | [Digits Sum](/codeforces/1553a) | math | [codeforces 1553a](https://codeforces.com/contest/1553/problem/A) | |
 | 1572 | [Reverse String](/codeforces/1553b) | string | [codeforces 1553b](https://codeforces.com/problemset/problem/1553/B) | |
 | 1573 | [Penalty](/codeforces/1553c) | math | [codeforces 1553c](https://codeforces.com/problemset/problem/1553/C) | |
+| 1574 | [Count Pairs Of Similar Strings](/leetcode/2506) | hashtable | [leetcode 2506](https://leetcode.com/problems/count-pairs-of-similar-strings/) | |
