@@ -30,22 +30,31 @@ print(getFactors(2310))
 
 print("-----")
 
+"""
+    prime-factorization
+
+    Time    O(sqrt(N))
+    Space   O(sqrt(N)) <- the result array
+"""
+
 
 def getPrimeFactors(n):
     i = 2
-    factors = set()
+    factors = []
     while i * i <= n:
         if n % i == 0:
-            factors.add(i)
+            factors.append(i)
             n //= i
         else:
             i += 1
     if n > 1:
-        factors.add(n)
-    return list(factors)
+        factors.append(n)
+    return factors
 
 
+print(getPrimeFactors(7))
 print(getPrimeFactors(40))
+print(getPrimeFactors(49))
 print(getPrimeFactors(60))
 print(getPrimeFactors(400))
 print(getPrimeFactors(500))
