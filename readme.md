@@ -149,3 +149,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1573 | [Penalty](/codeforces/1553c) | math | [codeforces 1553c](https://codeforces.com/problemset/problem/1553/C) | |
 | 1574 | [Count Pairs Of Similar Strings](/leetcode/2506) | hashtable | [leetcode 2506](https://leetcode.com/problems/count-pairs-of-similar-strings/) | |
 | 1575 | [Smallest Value After Replacing With Sum of Prime Factors](/leetcode/2507) | math | [leetcode 2507](https://leetcode.com/problems/smallest-value-after-replacing-with-sum-of-prime-factors/) | |
+| 1576 | [Cycle Length Queries in a Tree](/leetcode/2509) | math, tree | [leetcode 2509](https://leetcode.com/problems/cycle-length-queries-in-a-tree/) | ⭐️ |
