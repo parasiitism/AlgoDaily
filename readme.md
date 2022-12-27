@@ -152,3 +152,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1576 | [Cycle Length Queries in a Tree](/leetcode/2509) | math, tree | [leetcode 2509](https://leetcode.com/problems/cycle-length-queries-in-a-tree/) | ⭐️ |
 | 1577 | [Check if There is a Path With Equal Number of 0's And 1's](/leetcode/2510) | recursion | [leetcode 2510](https://leetcode.com/problems/check-if-there-is-a-path-with-equal-number-of-0s-and-1s/) | backtracking |
 | 1578 | [Minimum Number of Operations to Make Array Continuous](/leetcode/2009) | binary search | [leetcode 2009](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/) | |
+| 1579 | [Remove Comments](/leetcode/722) | array | [leetcode 722](https://leetcode.com/problems/remove-comments/description/) | 📌⭐️ tedious but practical |
