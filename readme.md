@@ -153,3 +153,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1577 | [Check if There is a Path With Equal Number of 0's And 1's](/leetcode/2510) | recursion | [leetcode 2510](https://leetcode.com/problems/check-if-there-is-a-path-with-equal-number-of-0s-and-1s/) | backtracking |
 | 1578 | [Minimum Number of Operations to Make Array Continuous](/leetcode/2009) | binary search | [leetcode 2009](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/) | |
 | 1579 | [Remove Comments](/leetcode/722) | array | [leetcode 722](https://leetcode.com/problems/remove-comments/description/) | 📌⭐️ tedious but practical |
+| 1580 | [Maximum Enemy Forts That Can Be Captured](/leetcode/2511) | array | [leetcode 2511](https://leetcode.com/problems/maximum-enemy-forts-that-can-be-captured) | |
