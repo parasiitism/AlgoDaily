@@ -154,3 +154,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1578 | [Minimum Number of Operations to Make Array Continuous](/leetcode/2009) | binary search | [leetcode 2009](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/) | |
 | 1579 | [Remove Comments](/leetcode/722) | array | [leetcode 722](https://leetcode.com/problems/remove-comments/description/) | 📌⭐️ tedious but practical |
 | 1580 | [Maximum Enemy Forts That Can Be Captured](/leetcode/2511) | array | [leetcode 2511](https://leetcode.com/problems/maximum-enemy-forts-that-can-be-captured) | |
+| 1581 | [Reward Top K Students](/leetcode/2512) | hashset, sort | [leetcode 2512](https://leetcode.com/problems/reward-top-k-students/) | |
