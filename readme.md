@@ -159,3 +159,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1583 | [Shortest Distance to Target String in a Circular Array](/leetcode/2515) | array | [leetcode 2515](https://leetcode.com/problems/shortest-distance-to-target-string-in-a-circular-array/) | |
 | 1584 | [Maximum Tastiness of Candy Basket](/leetcode/2517) | binary search | [leetcode 2517](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) | ⭐️ |
 | 1585 | [Take K of Each Character From Left and Right](/leetcode/2516) | binary search, 2 pointers | [leetcode 2516](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/) | |
+| 1586 | [Count the Number of K-Big Indices](/leetcode/2519) | binary index tree | [leetcode 2519](https://leetcode.com/problems/count-the-number-of-k-big-indices/) | |
