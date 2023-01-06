@@ -161,3 +161,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1585 | [Take K of Each Character From Left and Right](/leetcode/2516) | binary search, 2 pointers | [leetcode 2516](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/) | |
 | 1586 | [Count the Number of K-Big Indices](/leetcode/2519) | binary index tree | [leetcode 2519](https://leetcode.com/problems/count-the-number-of-k-big-indices/) | |
 | 1587 | [Range Sum Query 2D - Mutable](/leetcode/308) | binary indexed tree | [leetcode 308](https://leetcode.com/problems/range-sum-query-2d-mutable/) | |
+| 1588 | [Number of Pairs Satisfying Inequality](/leetcode/2426) | binary indexed tree, binary search | [leetcode 2426](https://leetcode.com/problems/number-of-pairs-satisfying-inequality/) | |
