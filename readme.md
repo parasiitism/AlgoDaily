@@ -163,3 +163,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1587 | [Range Sum Query 2D - Mutable](/leetcode/308) | binary indexed tree | [leetcode 308](https://leetcode.com/problems/range-sum-query-2d-mutable/) | |
 | 1588 | [Number of Pairs Satisfying Inequality](/leetcode/2426) | binary indexed tree, binary search | [leetcode 2426](https://leetcode.com/problems/number-of-pairs-satisfying-inequality/) | |
 | 1589 | [K-Goodness String](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/A/a.py) | 2 pointers | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068cca3) | |
+| 1590 | [Count the Digits That Divide a Number](/leetcode/2520) | string | [leetcode 2520](https://leetcode.com/problems/count-the-digits-that-divide-a-number/) | |
