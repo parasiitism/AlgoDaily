@@ -165,3 +165,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1589 | [K-Goodness String](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/A/a.py) | 2 pointers | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068cca3) | |
 | 1590 | [Count the Digits That Divide a Number](/leetcode/2520) | string | [leetcode 2520](https://leetcode.com/problems/count-the-digits-that-divide-a-number/) | |
 | 1591 | [Distinct Prime Factors of Product of Array](/leetcode/2521) | factorization | [leetcode 2521](https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/) | |
+| 1592 | [Partition String Into Substrings With Values at Most K](/leetcode/2522) | 2 pointers | [leetcode 2522](https://leetcode.com/problems/partition-string-into-substrings-with-values-at-most-k/) | |
