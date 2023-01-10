@@ -9,18 +9,22 @@
     136 ms, faster than 81.25%
 */
 var countPrimes = function(n) {
-    const isPrime = Array(n).fill(true)
-    isPrime[0] = false
-    isPrime[1] = false
-    let res = 0
-    for (let i = 2; i < n; i++) {
-        if (isPrime[i] === false) {
+    const arePrimes = Array(n).fill(true)
+    arePrimes[0] = false
+    arePrimes[1] = false
+    for (let i = 2; i*i <= n; i++) {
+        if (arePrimes[i] === false) {
             continue
         }
-        res += 1
-        for (let j = 2; i*j < n; j++) {
-            isPrime[i*j] = false
+        for (let j = i; i*j <= n; j++) {
+            arePrimes[i*j] = false
         }
     }
-    return res
+    const primes = []
+    for (let i = 0; i < arePrimes.length; i++) {
+        if (arePrimes[i] === true) {
+            primes.push(i)
+        }
+    }
+    return primes.length
 };
