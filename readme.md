@@ -13,7 +13,7 @@ I guess doing algorithms every day is a long-term investment in my life
 
 - Binary Search
 - Binary Search Tree
-- Tree(Binary Tree, N-aray Tree, Trie, Binary Indexed Tree, Segment Tree)
+- Tree(Binary Tree, N-aray Tree, Trie, Binary Indexed Tree, Segment Tree, Huffman Coding)
 - Graph(Dijkstra, Bellman-Ford, Floyd Warshall, Union Find, Kruskal, Prim's, Minimum Spanning Tree, Topological Ordering, Tarjan...etc)
 - Stack
 - Queue
@@ -167,4 +167,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1591 | [Distinct Prime Factors of Product of Array](/leetcode/2521) | factorization | [leetcode 2521](https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/) | |
 | 1592 | [Partition String Into Substrings With Values at Most K](/leetcode/2522) | 2 pointers | [leetcode 2522](https://leetcode.com/problems/partition-string-into-substrings-with-values-at-most-k/) | |
 | 1593 | [Closest Prime Numbers in Range](/leetcode/2523) | dynamic programming, binary search | [leetcode 2523](https://leetcode.com/problems/closest-prime-numbers-in-range/) | ⭐️ |
-
+| 1594 | [Huffman Coding](/miscellaneous/huffman-coding/) | huffman coding | study | 📌 classic string encoding approach |
