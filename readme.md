@@ -168,3 +168,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1592 | [Partition String Into Substrings With Values at Most K](/leetcode/2522) | 2 pointers | [leetcode 2522](https://leetcode.com/problems/partition-string-into-substrings-with-values-at-most-k/) | |
 | 1593 | [Closest Prime Numbers in Range](/leetcode/2523) | dynamic programming, binary search | [leetcode 2523](https://leetcode.com/problems/closest-prime-numbers-in-range/) | ⭐️ |
 | 1594 | [Huffman Coding](/miscellaneous/huffman-coding/) | huffman coding | study | 📌 classic string encoding approach |
+| 1595 | [Maximum Frequency Score of a Subarray](/leetcode/2524) | sliding window | [leetcode 2524](https://leetcode.com/problems/maximum-frequency-score-of-a-subarray/) | |
