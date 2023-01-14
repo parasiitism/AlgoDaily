@@ -170,3 +170,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1594 | [Huffman Coding](/miscellaneous/huffman-coding/) | huffman coding | study | 📌 classic string encoding approach |
 | 1595 | [Maximum Frequency Score of a Subarray](/leetcode/2524) | sliding window | [leetcode 2524](https://leetcode.com/problems/maximum-frequency-score-of-a-subarray/) | |
 | 1596 | [Categorize Box According to Criteria](/leetcode/2525) | logic | [leetcode 2525](https://leetcode.com/problems/categorize-box-according-to-criteria/) | |
+| 1597 | [Find Consecutive Integers from a Data Stream](/leetcode/2526) | sliding window, hashtable | [leetcode 2526](https://leetcode.com/problems/find-consecutive-integers-from-a-data-stream/) | |
