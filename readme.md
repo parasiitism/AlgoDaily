@@ -173,3 +173,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1597 | [Find Consecutive Integers from a Data Stream](/leetcode/2526) | sliding window, hashtable | [leetcode 2526](https://leetcode.com/problems/find-consecutive-integers-from-a-data-stream/) | |
 | 1598 | [Find Xor-Beauty of Array](/leetcode/2527) | bit-op | [leetcode 2527](https://leetcode.com/problems/find-xor-beauty-of-array/) | |
 | 1599 | [Maximum Count of Positive Integer and Negative Integer](/leetcode/2529) | binary search | [leetcode 2529](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/) | |
+| 1600 | [Maximal Score After Applying K Operations](/leetcode/2530) | max heap | [leetcode 2530](https://leetcode.com/problems/maximal-score-after-applying-k-operations/) | |
