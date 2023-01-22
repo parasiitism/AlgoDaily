@@ -78,3 +78,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1602 | [Create Sorted Array through Instructions](/leetcode/1649) | binary indexed tree | [leetcode 1649](https://leetcode.com/problems/create-sorted-array-through-instructions/) | |
 | 1603 | [Count of Range Sum](/leetcode/327) | binary search, binary indexed tree | [leetcode 327](https://leetcode.com/problems/count-of-range-sum/) | sorted container⭐️, binary indexed tree📌 |
 | 1604 | [Booking Concert Tickets in Groups](/leetcode/2286) | binary indexed tree | [leetcode 2286](https://leetcode.com/problems/booking-concert-tickets-in-groups/) | ⭐️ |
+| 1605 | [Rabbit House](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/A/c) | maxheap, BFS | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068cb14) | |
