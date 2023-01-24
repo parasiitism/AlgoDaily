@@ -80,4 +80,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1604 | [Booking Concert Tickets in Groups](/leetcode/2286) | binary indexed tree | [leetcode 2286](https://leetcode.com/problems/booking-concert-tickets-in-groups/) | ⭐️ |
 | 1605 | [Rabbit House](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/A/c) | maxheap, BFS | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068cb14) | |
 | 1606 | [Difference Between Element Sum and Digit Sum of an Array](/leetcode/2535) | array | [leetcode 2535](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) | |
-
+| 1607 | [Count the Number of Good Subarrays](/leetcode/2537) | sliding window, hashtable | [leetcode 2537](https://leetcode.com/problems/count-the-number-of-good-subarrays/) | ⭐️ |
