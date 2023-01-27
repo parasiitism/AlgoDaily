@@ -83,3 +83,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1607 | [Count the Number of Good Subarrays](/leetcode/2537) | sliding window, hashtable | [leetcode 2537](https://leetcode.com/problems/count-the-number-of-good-subarrays/) | ⭐️ |
 | 1608 | [Increment Submatrices by One](/leetcode/2536) | linesweep | [leetcode 2536](https://leetcode.com/problems/increment-submatrices-by-one/) | |
 | 1609 | [L Shaped Plots](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/A/c/) | array rotation, prefix sum | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068c509) | |
+| 1610 | [Number of Squareful Arrays](/leetcode/996) | recursion | [leetcode 996](https://leetcode.com/problems/number-of-squareful-arrays/) | |
