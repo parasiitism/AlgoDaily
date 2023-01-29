@@ -85,4 +85,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1609 | [L Shaped Plots](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/A/c/) | array rotation, prefix sum | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068c509) | |
 | 1610 | [Number of Squareful Arrays](/leetcode/996) | recursion | [leetcode 996](https://leetcode.com/problems/number-of-squareful-arrays/) | |
 | 1611 | [Consecutive Primes](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/c/main.py) | math | [Google KickStart 2021 B](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a8e6#analysis) | testset 1, testset 2|
-
+| 1612 | [Consecutive Primes](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/c/main.py) | math | [Google KickStart 2021 B](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a8e6#analysis) | testset 3: use Primality test instead of Sieve of Eratosthenes|
