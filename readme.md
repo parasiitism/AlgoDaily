@@ -88,3 +88,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1612 | [Consecutive Primes](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/c/main.py) | math | [Google KickStart 2021 B](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a8e6#analysis) | testset 3: use Primality test instead of Sieve of Eratosthenes|
 | 1613 | [Minimum Common Value](/leetcode/2540) | hashtable, binary search | [leetcode 2540](https://leetcode.com/problems/minimum-common-value/) | 2 approaches |
 | 1614 | [Minimum Operations to Make Array Equal II](/leetcode/2541) | math | [leetcode 2541](https://leetcode.com/problems/minimum-operations-to-make-array-equal-ii/) | |
+| 1615 | [Maximum Subsequence Score](/leetcode/2542) | sort + heap | [leetcode 2542](https://leetcode.com/problems/maximum-subsequence-score/) | ⭐️ |
+
