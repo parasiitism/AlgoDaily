@@ -89,4 +89,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1613 | [Minimum Common Value](/leetcode/2540) | hashtable, binary search | [leetcode 2540](https://leetcode.com/problems/minimum-common-value/) | 2 approaches |
 | 1614 | [Minimum Operations to Make Array Equal II](/leetcode/2541) | math | [leetcode 2541](https://leetcode.com/problems/minimum-operations-to-make-array-equal-ii/) | |
 | 1615 | [Maximum Subsequence Score](/leetcode/2542) | sort + heap | [leetcode 2542](https://leetcode.com/problems/maximum-subsequence-score/) | ⭐️ |
-
+| 1616 | [Alternating Digit Sum](/leetcode/2544) | array | [leetcode 2544](https://leetcode.com/problems/alternating-digit-sum/description/) | |
