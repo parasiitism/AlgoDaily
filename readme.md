@@ -90,3 +90,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1614 | [Minimum Operations to Make Array Equal II](/leetcode/2541) | math | [leetcode 2541](https://leetcode.com/problems/minimum-operations-to-make-array-equal-ii/) | |
 | 1615 | [Maximum Subsequence Score](/leetcode/2542) | sort + heap | [leetcode 2542](https://leetcode.com/problems/maximum-subsequence-score/) | ⭐️ |
 | 1616 | [Alternating Digit Sum](/leetcode/2544) | array | [leetcode 2544](https://leetcode.com/problems/alternating-digit-sum/description/) | |
+| 1617 | [Sort the Students by Their Kth Score](/leetcode/2545) | sort | [leetcode 2545](https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/) | |
