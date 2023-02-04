@@ -91,3 +91,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1615 | [Maximum Subsequence Score](/leetcode/2542) | sort + heap | [leetcode 2542](https://leetcode.com/problems/maximum-subsequence-score/) | ⭐️ |
 | 1616 | [Alternating Digit Sum](/leetcode/2544) | array | [leetcode 2544](https://leetcode.com/problems/alternating-digit-sum/description/) | |
 | 1617 | [Sort the Students by Their Kth Score](/leetcode/2545) | sort | [leetcode 2545](https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/) | |
+| 1618 | [Apply Bitwise Operations to Make Strings Equal](/leetcode/2546) | bit-op | [leetcode 2546](https://leetcode.com/problems/apply-bitwise-operations-to-make-strings-equal/description//) | ⭐️ observation |
