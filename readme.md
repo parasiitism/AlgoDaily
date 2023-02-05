@@ -92,3 +92,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1616 | [Alternating Digit Sum](/leetcode/2544) | array | [leetcode 2544](https://leetcode.com/problems/alternating-digit-sum/description/) | |
 | 1617 | [Sort the Students by Their Kth Score](/leetcode/2545) | sort | [leetcode 2545](https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/) | |
 | 1618 | [Apply Bitwise Operations to Make Strings Equal](/leetcode/2546) | bit-op | [leetcode 2546](https://leetcode.com/problems/apply-bitwise-operations-to-make-strings-equal/description//) | ⭐️ observation |
+| 1619 | [Truck Delivery](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/d.py) | graph, binary search | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a885) | |
+
