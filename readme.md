@@ -93,4 +93,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1617 | [Sort the Students by Their Kth Score](/leetcode/2545) | sort | [leetcode 2545](https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/) | |
 | 1618 | [Apply Bitwise Operations to Make Strings Equal](/leetcode/2546) | bit-op | [leetcode 2546](https://leetcode.com/problems/apply-bitwise-operations-to-make-strings-equal/description//) | ⭐️ observation |
 | 1619 | [Truck Delivery](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/d.py) | graph, binary search | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a885) | |
-
+| 1627 | [Maximum Number of Integers to Choose From a Range I](/leetcode/2554) | hashtable | [leetcode 2554](https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/) | |
