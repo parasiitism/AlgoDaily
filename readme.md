@@ -94,3 +94,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1618 | [Apply Bitwise Operations to Make Strings Equal](/leetcode/2546) | bit-op | [leetcode 2546](https://leetcode.com/problems/apply-bitwise-operations-to-make-strings-equal/description//) | ⭐️ observation |
 | 1619 | [Truck Delivery](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/d.py) | graph, binary search | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a885) | |
 | 1620 | [Longest Progression](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/d.py) | 2 pointers | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a3a5#problem) | |
+| 1621 | [Count Distinct Numbers on Board](/leetcode/2549) | graph, math | [leetcode 2549](https://leetcode.com/problems/count-distinct-numbers-on-board/) | |
