@@ -97,3 +97,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1621 | [Count Distinct Numbers on Board](/leetcode/2549) | graph, math | [leetcode 2549](https://leetcode.com/problems/count-distinct-numbers-on-board/) | |
 | 1622 | [Put Marbles in Bags](/leetcode/2551) | sort, heap | [leetcode 2551](https://leetcode.com/problems/put-marbles-in-bags/) | ⭐️ 2 approaches |
 | 1623 | [Smaller Strings](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/C/a) | greedy, math | [Google KickStart 2021 C](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ebe5e) | ⭐️ |
+| 1624 | [Alien Generator](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/C/b) | binary search | [Google KickStart 2021 C b](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec1cb) | testset 1 |
