@@ -89,9 +89,9 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1613 | [Minimum Common Value](/leetcode/2540) | hashtable, binary search | [leetcode 2540](https://leetcode.com/problems/minimum-common-value/) | 2 approaches |
 | 1614 | [Minimum Operations to Make Array Equal II](/leetcode/2541) | math | [leetcode 2541](https://leetcode.com/problems/minimum-operations-to-make-array-equal-ii/) | |
 | 1615 | [Maximum Subsequence Score](/leetcode/2542) | sort + heap | [leetcode 2542](https://leetcode.com/problems/maximum-subsequence-score/) | ⭐️ |
-| 1616 | [Alternating Digit Sum](/leetcode/2544) | array | [leetcode 2544](https://leetcode.com/problems/alternating-digit-sum/description/) | |
-| 1617 | [Sort the Students by Their Kth Score](/leetcode/2545) | sort | [leetcode 2545](https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/) | |
-| 1618 | [Apply Bitwise Operations to Make Strings Equal](/leetcode/2546) | bit-op | [leetcode 2546](https://leetcode.com/problems/apply-bitwise-operations-to-make-strings-equal/description//) | ⭐️ observation |
+| 1616 | [Alternating Digit Sum](/leetcode/2544) | array | [leetcode 2544](https://leetcode.com/problems/alternating-digit-sum//) | |
+| 1617 | [Sort the Students by Their Kth Score](/leetcode/2545) | sort | [leetcode 2545](https://leetcode.com/problems/sort-the-students-by-their-kth-score/) | |
+| 1618 | [Apply Bitwise Operations to Make Strings Equal](/leetcode/2546) | bit-op | [leetcode 2546](https://leetcode.com/problems/apply-bitwise-operations-to-make-strings-equal/) | ⭐️ observation |
 | 1619 | [Truck Delivery](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/d.py) | graph, binary search | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a885) | |
 | 1620 | [Longest Progression](https://github.com/calvinchankf/GoogleKickStart/blob/master/2021/B/d.py) | 2 pointers | [Google KickStart](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435a5b/000000000077a3a5#problem) | |
 | 1621 | [Count Distinct Numbers on Board](/leetcode/2549) | graph, math | [leetcode 2549](https://leetcode.com/problems/count-distinct-numbers-on-board/) | |
@@ -99,4 +99,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1623 | [Smaller Strings](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/C/a) | greedy, math | [Google KickStart 2021 C](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ebe5e) | ⭐️ |
 | 1624 | [Alien Generator](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/C/b) | binary search | [Google KickStart 2021 C b](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec1cb) | testset 1 |
 | 1625 | [Alien Generator](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/C/b) | math | [Google KickStart 2021 C b](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec1cb) | testset 2 |
-
+| 1626 | [Separate the Digits in an Array](/leetcode/2553) | array | [leetcode 2553](https://leetcode.com/problems/separate-the-digits-in-an-array/) | |
