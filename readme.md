@@ -100,3 +100,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1624 | [Alien Generator](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/C/b) | binary search | [Google KickStart 2021 C b](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec1cb) | testset 1 |
 | 1625 | [Alien Generator](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/C/b) | math | [Google KickStart 2021 C b](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec1cb) | testset 2 |
 | 1626 | [Separate the Digits in an Array](/leetcode/2553) | array | [leetcode 2553](https://leetcode.com/problems/separate-the-digits-in-an-array/) | |
+| 1627 | [Maximum Number of Integers to Choose From a Range I](/leetcode/2554) | hashtable | [leetcode 2554](https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/) | |
+
