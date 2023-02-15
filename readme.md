@@ -102,3 +102,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1626 | [Separate the Digits in an Array](/leetcode/2553) | array | [leetcode 2553](https://leetcode.com/problems/separate-the-digits-in-an-array/) | |
 | 1627 | [Maximum Number of Integers to Choose From a Range I](/leetcode/2554) | hashtable | [leetcode 2554](https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/) | |
 | 1628 | [Maximize Win From Two Segments](/leetcode/2555) | dynamic programming | [leetcode 2555](https://leetcode.com/problems/maximize-win-from-two-segments/) | ⭐️ |
+| 1629 | [Maximum Number of Integers to Choose From a Range II](/leetcode/2557) | binary search | [leetcode 2557](https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-ii/) | ⭐️ |
