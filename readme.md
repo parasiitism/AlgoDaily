@@ -103,3 +103,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1627 | [Maximum Number of Integers to Choose From a Range I](/leetcode/2554) | hashtable | [leetcode 2554](https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/) | |
 | 1628 | [Maximize Win From Two Segments](/leetcode/2555) | dynamic programming | [leetcode 2555](https://leetcode.com/problems/maximize-win-from-two-segments/) | ⭐️ |
 | 1629 | [Maximum Number of Integers to Choose From a Range II](/leetcode/2557) | binary search | [leetcode 2557](https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-ii/) | ⭐️ |
+| 1630 | [Take Gifts From the Richest Pile](/leetcode/2558) | heap | [leetcode 2558](https://leetcode.com/problems/take-gifts-from-the-richest-pile/) | |
