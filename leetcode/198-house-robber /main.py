@@ -1,5 +1,5 @@
 """
-    1st: dynamic programming
+    1st: dynamic programming (bottom-up)
     - at every point, we calculate the max filth from the previous filth dp[i-1] or dp[i-2] + nums[i]
 
     Time    O(N)
@@ -10,7 +10,7 @@
 
 class Solution:
     def rob(self, nums: List[int]) -> int:
-                n = len(nums)
+        n = len(nums)
         if n == 0:
             return 0
         if n == 1:
@@ -23,7 +23,33 @@ class Solution:
         return dp[n-1]
 
 """
-    2nd approach: dynamic programming
+    2nd: dynamic programming (top-down)
+    - at every point, 2 cases
+        - if we rob, go to the 2nd next house
+        - else, go to the next house
+        we just need the max amongst them, cache them for avoiding re-calculation
+
+    Time    O(N)
+    Space   O(N)
+    20 ms, faster than 52.67%
+"""
+class Solution(object):
+    def rob(self, nums):
+        cache = {}
+        def dfs(i):
+            if i >= len(nums):
+                return 0
+            if i in cache:
+                return cache[i]
+            a = dfs(i+1)
+            b = dfs(i+2) + nums[i]
+            best = max(a, b)
+            cache[i] = best
+            return cache[i]
+        return dfs(0)
+
+"""
+    3rd approach: dynamic programming with only vars
     
     Time    O(N)
     Space   O(1)
