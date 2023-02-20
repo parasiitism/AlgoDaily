@@ -107,3 +107,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1631 | [Count Vowel Strings in Ranges](/leetcode/2559) | prefix sum | [leetcode 2559](https://leetcode.com/problems/count-vowel-strings-in-ranges/) | |
 | 1632 | [Confusing Number II](/leetcode/1088) | recursion | [leetcode 1088](https://leetcode.com/problems/confusing-number-ii/) | |
 | 1633 | [House Robber](/leetcode/198) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | ⭐️ classic problem, adding a recursive approach |
+| 1634 | [Arithmetic Square](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/D/a) | array | [Google KickStart 2021 D 1](https://codingcompetitions.withgoogle.com/kickstart/round/00000000004361e3/000000000082b813#problem) |  |
