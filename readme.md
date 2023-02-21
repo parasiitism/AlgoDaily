@@ -108,3 +108,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1632 | [Confusing Number II](/leetcode/1088) | recursion | [leetcode 1088](https://leetcode.com/problems/confusing-number-ii/) | |
 | 1633 | [House Robber](/leetcode/198) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | ⭐️ classic problem, adding a recursive approach |
 | 1634 | [Arithmetic Square](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/D/a) | array | [Google KickStart 2021 D 1](https://codingcompetitions.withgoogle.com/kickstart/round/00000000004361e3/000000000082b813#problem) |  |
+| 1635 | [Find the Array Concatenation Value](/leetcode/2562) | 2 pointers | [leetcode 2562](\<https://leetcode.com/problems/find-the-array-concatenation-value/)> | |
