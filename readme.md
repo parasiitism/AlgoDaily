@@ -109,3 +109,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1633 | [House Robber](/leetcode/198) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | ⭐️ classic problem, adding a recursive approach |
 | 1634 | [Arithmetic Square](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/D/a) | array | [Google KickStart 2021 D 1](https://codingcompetitions.withgoogle.com/kickstart/round/00000000004361e3/000000000082b813#problem) |  |
 | 1635 | [Find the Array Concatenation Value](/leetcode/2562) | 2 pointers | [leetcode 2562](\<https://leetcode.com/problems/find-the-array-concatenation-value/)> | |
+| 1636 | [Count the Number of Fair Pairs](/leetcode/2563) | binary search, binary indexed tree | [leetcode 2563](https://leetcode.com/problems/count-the-number-of-fair-pairs/) | |
