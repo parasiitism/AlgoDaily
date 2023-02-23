@@ -111,3 +111,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1635 | [Find the Array Concatenation Value](/leetcode/2562) | 2 pointers | [leetcode 2562](\<https://leetcode.com/problems/find-the-array-concatenation-value/)> | |
 | 1636 | [Count the Number of Fair Pairs](/leetcode/2563) | binary search, binary indexed tree | [leetcode 2563](https://leetcode.com/problems/count-the-number-of-fair-pairs/) | |
 | 1637 | [2048 one dimension](/glassdoor/palantir/2048) | stack | glassdoor | ⭐️ |
+| 1638 | [stock portfolio](/glassdoor/palantir/stock-portfolio) | minheap | glassdoor |  |
