@@ -9,28 +9,23 @@
 """
 
 
-class Solution(object):
-    def subdomainVisits(self, cpdomains):
-        ht = {}
+class Solution:
+    def subdomainVisits(self, cpdomains: List[str]) -> List[str]:
+        cnter = Counter()
         for cpdomain in cpdomains:
-            rawCnt, dm = cpdomain.split()
-            cnt = int(rawCnt)
-            arr = dm.split(".")
-            if len(arr) == 2:
-                self.upsert(ht, arr[1], cnt)
-                self.upsert(ht, dm, cnt)
-            elif len(arr) == 3:
-                self.upsert(ht, arr[2], cnt)
-                self.upsert(ht, arr[1]+"."+arr[2], cnt)
-                self.upsert(ht, dm, cnt)
+            cnt, domain = cpdomain.split(' ')
+            cnt = int(cnt)
+            parts = domain.split(".")
+            subdomain = ''
+            for j in range(len(parts)-1, -1, -1):
+                p = parts[j]
+                if len(subdomain) == 0:
+                    subdomain = p
+                else:
+                    subdomain = p + '.' + subdomain
+                cnter[subdomain] += cnt
         res = []
-        for key in ht:
-            temp = str(ht[key])+" "+key
+        for key in cnter:
+            temp = str(cnter[key]) + " " + key
             res.append(temp)
         return res
-
-    def upsert(self, ht, key, val):
-        if key not in ht:
-            ht[key] = val
-        else:
-            ht[key] += val
