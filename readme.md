@@ -114,3 +114,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1638 | [stock portfolio](/glassdoor/palantir/stock-portfolio) | minheap | glassdoor |  |
 | 1639 | [Shortest Path to get all Diamonds](/glassdoor/palantir/shortest-paths-to-get-all-diamonds) | graph | glassdoor |  |
 | 1640 | [Subdomain Visit Count](/leetcode/811) | hashtable | [leetcode 811](https://leetcode.com/problems/subdomain-visit-count/) | revisiting the problem |
+| 1641 | [Longest Common Subarray](/glassdoor/palantir/longest-common-subarray/) | dynamic programming | glassdoor | |
