@@ -77,28 +77,20 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        ht = {}
-        slow = 0
-        res = ""
+        ht = Counter()
+        j = 0
+        res_left, res_right = 0, 0
         for i in range(len(s)):
             c = s[i]
-            # count with hashtable
-            if c not in ht:
-                ht[c] = 1
-            else:
-                ht[c] += 1
-            # remove the character from the left if count > 1
+            ht[c] += 1
             while ht[c] > 1:
-                last = s[slow]
-                ht[last] -= 1
-                if ht[last] == 0:
-                    del ht[last]
-                slow += 1
-            # update the result if necessary
-            temp = s[slow:i+1]
-            if len(temp) > len(res):
-                res = temp
-        return res
+                left = s[j]
+                ht[left] -= 1
+                j += 1
+            if i - j + 1 > res_right - res_left + 1:
+                res_left = j
+                res_right = i
+        return s[res_left: res_right+1]
 
 
 a = "abcabcbb"
