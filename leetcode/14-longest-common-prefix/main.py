@@ -26,3 +26,23 @@ class Solution(object):
                 j += 1
             res = s[:j]
         return res
+
+"""
+    2nd: greedy
+    - get the shortest string
+    - iterate that string and for every its own character, to check if there is a mismatch with the others
+
+    Time    O(SN) S:shortest, N:number of strs
+    Space   O(1)
+"""
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        if not strs:
+            return ""
+        shortest = min(strs,key=len)
+        for i in range(len(shortest)):
+            c = shortest[i]
+            for s in strs:
+                if s[i] != c:
+                    return shortest[:i]
+        return shortest
