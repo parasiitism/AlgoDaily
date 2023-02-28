@@ -73,3 +73,29 @@ class Solution(object):
             else:
                 res += m[cur]
         return res
+
+"""
+    3rd: math
+
+    Time    O(N)
+    Space   O(1)
+    51ms beats 60.23%
+"""
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        m = {
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000,
+        }
+        res = 0
+        for i in range(len(s)):
+            c = s[i]
+            res += m[c]
+            if i > 0 and m[s[i-1]] < m[c]:
+                res -= 2 * m[s[i-1]]
+        return res
