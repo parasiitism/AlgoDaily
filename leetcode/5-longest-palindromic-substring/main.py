@@ -60,30 +60,25 @@ class Solution1(object):
         Space   O(length of longest substring)
         10feb2019
         """
-        left = 0
-        right = 0
+        res_left, res_right = 0, 0
         for i in range(len(s)):
-            l1, r1 = self.expand(s, i, i)
-            l2, r2 = self.expand(s, i - 1, i)
-            if r1 - l1 + 1 > right - left + 1:
-                left = l1
-                right = r1
-            if r2 - l2 + 1 > right - left + 1:
-                left = l2
-                right = r2
-        return s[left:right + 1]
-
-    def expand(self, s, i, j):
-        if i < 0:
-            return 0, j
-        elif j > len(s) - 1:
-            return i, len(s) - 1
-        elif s[i] != s[j]:
-            return j, j
-        while i - 1 >= 0 and j + 1 < len(s) and s[i - 1] == s[j + 1]:
-            i -= 1
-            j += 1
-        return i, j
+            left1, right1 = self.expand(s, i, i)
+            left2, right2 = self.expand(s, i, i+1)
+            if right1 - left1 > res_right - res_left:
+                res_left, res_right = left1, right1
+            if right2 - left2 > res_right - res_left:
+                res_left, res_right = left2, right2
+        return s[res_left: res_right+1]
+    
+    def expand(self, s, left, right):
+        if right == len(s):
+            return 0, 0
+        if s[left] != s[right]:
+            return 0, 0
+        while left-1 >= 0 and right+1 < len(s) and s[left-1] == s[right+1]:
+            left -= 1
+            right += 1
+        return left, right
 
 
 print(Solution1().longestPalindrome(""))
