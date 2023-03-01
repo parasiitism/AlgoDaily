@@ -116,3 +116,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1640 | [Subdomain Visit Count](/leetcode/811) | hashtable | [leetcode 811](https://leetcode.com/problems/subdomain-visit-count/) | revisiting the problem |
 | 1641 | [Longest Common Subarray](/glassdoor/palantir/longest-common-subarray/) | dynamic programming | glassdoor | |
 | 1642 | [Ads Conversion](/glassdoor/palantir/ads-conversion) | hashtable | glassdoor | |
+| 1643 | [Count reverse pairs](/palantir/count-reverse-pairs) | hashtable | glassdoor | |
