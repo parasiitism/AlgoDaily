@@ -117,3 +117,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1641 | [Longest Common Subarray](/glassdoor/palantir/longest-common-subarray/) | dynamic programming | glassdoor | |
 | 1642 | [Ads Conversion](/glassdoor/palantir/ads-conversion) | hashtable | glassdoor | |
 | 1643 | [Count reverse pairs](/palantir/count-reverse-pairs) | hashtable | glassdoor | |
+| 1644 | [Pick a Restaurant](/palantir/pick-a-restaurant) | hashtable | glassdoor | |
