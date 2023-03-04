@@ -43,28 +43,19 @@ class Solution(object):
 
 class Solution(object):
     def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        arr = []
-        for i in range(len(nums)):
-            arr.append([nums[i], i])  # [num, index]
-        arr = sorted(arr, key=lambda x: x[0])
-        left = 0
-        right = len(arr) - 1
-        while left < right:
-            temp = arr[left][0] + arr[right][0]
-            if temp == target:
-                return [arr[left][1], arr[right][1]]
-                # if all pairs and use once
-                # left += 1
-                # right -= 1
-            elif temp < target:
-                left += 1
+        n = len(nums)
+        s_nums = [(nums[i], i) for i in range(n)]
+        s_nums.sort()
+        i, j = 0, n-1
+        while i < j:
+            total = s_nums[i][0] + s_nums[j][0]
+            if total > target:
+                j -= 1
+            elif total < target:
+                i += 1
             else:
-                right -= 1
+                return [s_nums[i][1], s_nums[j][1]]
+        return [-1,-1]
 
 
 """

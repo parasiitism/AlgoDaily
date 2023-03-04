@@ -92,19 +92,21 @@ print("---")
 
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
-        res = sys.maxsize
-        nums = sorted(nums)
-        for i in range(len(nums)):
-            left = i + 1
-            right = len(nums) - 1
-            while left < right:
-                cur = nums[i] + nums[left] + nums[right]
-                if abs(cur - target) < abs(res - target):
-                    res = cur
-                if cur == target:
-                    return cur
-                elif cur < target:
-                    left += 1
+        n = len(nums)
+        nums.sort()
+        res = 2**32
+        for i in range(n):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            j, k = i+1, n-1
+            while j < k:
+                total = nums[i] + nums[j] + nums[k]
+                if total > target:
+                    k -= 1
+                elif total < target:
+                    j += 1
                 else:
-                    right -= 1
+                    return total
+                if abs(total - target) < abs(res - target):
+                    res = total
         return res
