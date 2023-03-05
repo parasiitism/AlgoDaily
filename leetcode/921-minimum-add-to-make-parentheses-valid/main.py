@@ -13,23 +13,17 @@
 
 class Solution(object):
     def minAddToMakeValid(self, S):
-        """
-        :type S: str
-        :rtype: int
-        """
-        if len(S) == 0:
-            return 0
-        closeCount = 0
-        openCount = 0
+        opens = 0
+        closes = 0
         for c in S:
             if c == '(':
-                openCount += 1
+                opens += 1
             else:
-                if openCount == 0:
-                    closeCount += 1
+                if opens > 0:
+                    opens -= 1
                 else:
-                    openCount -= 1
-        return openCount + closeCount
+                    closes += 1
+        return opens + closes
 
 
 a = "())"
@@ -67,16 +61,16 @@ class Solution(object):
             "]": "[",
             ")": "(",
         }
-        extraClose = 0
+        extra_closes = 0
         for c in s:
-            if c == "{" or c == "[" or c == "(":
+            if c in '{[(':
                 stack.append(c)
             elif c in m:
                 if len(stack) > 0 and stack[-1] == m[c]:
                     stack.pop()
                 else:
-                    extraClose += 1
-        return len(stack) + extraClose
+                    extra_closes += 1
+        return len(stack) + extra_closes
 
 
 a = "())"
