@@ -1,10 +1,26 @@
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
+        """
+        classic approach: recursion
+
+        Time  O(n)
+        Space O(h)
+        24 ms, faster than 26.24%
+        """
         self.val = x
         self.left = None
         self.right = None
 
+class Solution(object):
+    def invertTree(self, root):
+        if root == None:
+            return None
+        left = self.invertTree(root.left)
+        right = self.invertTree(root.right)
+        root.left = right
+        root.right = left
+        return root
 
 class Solution(object):
     def invertTree(self, root):
@@ -12,7 +28,7 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
 
-        class approach: recursion
+        classic approach: recursion
 
         Time  O(n)
         Space O(h)
@@ -32,7 +48,7 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
 
-        class approach: iterative bfs
+        classic approach: iterative bfs
 
         Time  O(n)
         Space O(n)

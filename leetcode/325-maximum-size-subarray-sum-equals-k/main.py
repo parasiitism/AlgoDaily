@@ -1,31 +1,5 @@
 """
-    1st approach: prefix sum
-    Time O(n^2)
-    Space O(n)
-    TLE
-"""
-
-
-class Solution(object):
-    def maxSubArrayLen(self, nums, k):
-        res = 0
-        layer = []
-        for i in range(len(nums)):
-            newLayer = []
-            for j in range(len(layer)):
-                temp = layer[j] + nums[i]
-                newLayer.append(temp)
-                if temp == k and i-j+1 > res:
-                    res = i-j+1
-            newLayer.append(nums[i])
-            if nums[i] == k and 1 > res:
-                res = 1
-            layer = newLayer
-        return res
-
-
-"""
-    2nd approach: zero sum subarray
+    1st approach: zero sum subarray
     - this question is fucking similar to leetcode523, 525, 560, 930, 1124, 1171
     - learned from others: https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/discuss/77807/Clean-python-solution-one-pass
     - the basic idea is to store the previous sum in a hashtable
@@ -63,3 +37,22 @@ print(Solution().maxSubArrayLen([-2, -1, 2, 1], 1))
 print(Solution().maxSubArrayLen([-2, -1, 2, 1, 100], 100))
 print(Solution().maxSubArrayLen([-2, -1, 2, 100, 1], 100))
 print(Solution().maxSubArrayLen([-2, -1, 2, 1000], 99))
+
+print("-----")
+
+"""
+    2nd: same logic but just shorter
+"""
+class Solution:
+    def maxSubArrayLen(self, nums: List[int], k: int) -> int:
+        ht = {0:-1}
+        pfs = 0
+        res = 0
+        for i in range(len(nums)):
+            pfs += nums[i]
+            if pfs-k in ht:
+                j = ht[pfs-k]
+                res = max(res, i - j)
+            if pfs not in ht: 
+                ht[pfs] = i
+        return res

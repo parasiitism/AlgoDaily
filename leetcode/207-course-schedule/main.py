@@ -68,27 +68,27 @@ class Solution(object):
         :rtype: List[int]
         """
         n = numCourses
-        graph = {}
-        indegrees = {}
+        graph = {} # key: []
+        indegrees = {} # key: count
         for i in range(n):
             graph[i] = []
             indegrees[i] = 0
-        for dest, src in prerequisites:
-            graph[src].append(dest)
-            indegrees[dest] += 1
+        for a, b in prerequisites:
+            graph[b].append(a)
+            indegrees[a] += 1
         q = []
-        for key in indegrees:
-            if indegrees[key] == 0:
-                q.append(key)
-        count = 0
+        for cid in indegrees:
+            if indegrees[cid] == 0:
+                q.append(cid)
+        visited = set()
         while len(q) > 0:
-            node = q.pop(0)
-            count += 1
-            for nb in graph[node]:
-                indegrees[nb] -= 1
-                if indegrees[nb] == 0:
-                    q.append(nb)
-        return count == n
+            cid = q.pop(0)
+            visited.add(cid)
+            for child in graph[cid]:
+                indegrees[child] -= 1
+                if indegrees[child] == 0:
+                    q.append(child)
+        return len(visited) == n
 
 
 print(Solution().canFinish(2, [[1, 0]]))

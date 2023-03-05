@@ -155,33 +155,28 @@ class Solution(object):
         196 ms, faster than 19.02%
         28mar2019
         """
-
-        connections = {}
-        indegrees = {}
-        for num in range(numCourses):
-            connections[num] = []
-            indegrees[num] = 0
-
-        for cur, prev in prerequisites:
-            indegrees[cur] += 1
-            connections[prev].append(cur)
-
+        n = numCourses
+        graph = {} # key: []
+        indegrees = {} # key: count
+        for i in range(n):
+            graph[i] = []
+            indegrees[i] = 0
+        for a, b in prerequisites:
+            graph[b].append(a)
+            indegrees[a] += 1
         q = []
-        for x in indegrees:
-            if indegrees[x] == 0:
-                q.append(x)
-
+        for cid in indegrees:
+            if indegrees[cid] == 0:
+                q.append(cid)
         res = []
         while len(q) > 0:
-            pop0 = q.pop(0)
-            res.append(pop0)
-            children = connections[pop0]
-            for child in children:
+            cid = q.pop(0)
+            res.append(cid)
+            for child in graph[cid]:
                 indegrees[child] -= 1
                 if indegrees[child] == 0:
                     q.append(child)
-
-        if len(res) != numCourses:
+        if len(res) != n:
             return []
         return res
 

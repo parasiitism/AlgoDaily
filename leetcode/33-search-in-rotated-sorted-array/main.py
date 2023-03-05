@@ -18,18 +18,18 @@ class Solution(object):
         while left <= right:
             mid = (left + right)/2
             if target < nums[mid]:
-                if target >= nums[left] or nums[left] > nums[mid]:
-                    # search left when the pivot is here OR normally nums[left] < nums[mid] and target >= nums[left]
+                if nums[left] <= target < nums[mid] or nums[left] > nums[mid]:
+                    # either 2 conditions:
+                    # - target is within the range
+                    # - the part on the left is rotated
                     right = mid - 1
                 else:
                     # otherwise search in another half
                     left = mid + 1
             elif target > nums[mid]:
-                if target <= nums[right] or nums[mid] > nums[right]:
-                    # search right when the pivot is here OR normally nums[mid] < nums[right] and target <= nums[right]
+                if nums[mid] < target <= nums[right] or nums[mid] > nums[right]:
                     left = mid + 1
                 else:
-                    # otherwise search in another half
                     right = mid - 1
             else:
                 return mid

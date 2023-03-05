@@ -41,3 +41,15 @@ class Solution:
             else:
                 right = mid
         return right
+
+from bisect import *
+
+class Solution(object):
+    def searchRange(self, nums, target):
+        i = bisect_left(nums, target)
+        j = bisect_right(nums, target) - 1
+        if i < 0 or i >= len(nums) or j < 0 or j >= len(nums):
+            return [-1,-1]
+        if nums[i] == target and nums[j] == target:
+            return [i, j]
+        return [-1,-1]

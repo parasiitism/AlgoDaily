@@ -13,7 +13,7 @@ class Solution(object):
     def coinChange(self, coins, amount):
         ht = {}
         steps = self.dfs(coins, amount, ht)
-        if steps == sys.maxsize:
+        if steps == 2**32:
             return -1
         return steps
 
@@ -21,16 +21,16 @@ class Solution(object):
         if amount == 0:
             return 0
         if amount < 0:
-            return sys.maxsize
+            return 2**32
         if amount in seen:
             return seen[amount]
-        minSteps = sys.maxsize
-        for i in range(len(coins)):
-            remain = amount - coins[i]
+        min_steps = 2**32
+        for c in coins:
+            remain = amount - c
             steps = self.dfs(coins, remain, seen) + 1
-            minSteps = min(minSteps, steps)
-        seen[amount] = minSteps
-        return minSteps
+            min_steps = min(min_steps, steps)
+        seen[amount] = min_steps
+        return min_steps
 
 
 print(Solution().coinChange([5], 5))
@@ -64,17 +64,15 @@ print("--------------------")
 class Solution(object):
     def coinChange(self, coins, amount):
         n = amount + 1
-        dp = n * [0]
+        dp = n * [2**32]
+        dp[0] = 0
         coins.sort()
         for i in range(1, n):
-            minCount = 2**32
             for c in coins:
-                remain = i - c
-                if remain >= 0:
-                    minCount = min(minCount, dp[remain] + 1)
-                else:
-                    break
-            dp[i] = minCount
+                if i - c < 0:
+                    continue
+                temp = dp[i - c] + 1
+                dp[i] = min(dp[i], temp)
         if dp[amount] == 2**32:
             return -1
         return dp[amount]
