@@ -20,6 +20,9 @@ from heapq import *
     
     Output:
     [('8/7', 30), ('8/12', 90), ('9/3', 140), ('10/8', 230)]
+
+    Time    O(NlogN)
+    Space   O(N)
 """
 def int2date(n):
     mm = n // 100
