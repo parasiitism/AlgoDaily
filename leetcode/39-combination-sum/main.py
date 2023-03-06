@@ -108,28 +108,20 @@ class Solution(object):
     2nd approach: recursive dfs, avoid duplicate by considering the candidates which are >= num
     144 ms, faster than 14.76%
     """
-
-    def __init__(self):
-        self.result = []
-
     def combinationSum(self, candidates, target):
-        """
-        :type candidates: List[int]
-        :type target: int
-        :rtype: List[List[int]]
-        """
         candidates.sort()
-        self.dfs(candidates, target, [], 0)
-        return self.result
+        self.res = []
+        self.dfs(candidates, [], target)
+        return self.res
 
-    def dfs(self, candidates, target, path, total):
-        if total == target:
-            self.result.append(path)
-        elif total < target:
+    def dfs(self, candidates, chosen, target):
+        if target == 0:
+            self.res.append(chosen)
+        elif target > 0:
             for i in range(len(candidates)):
-                can = candidates[i]
-                if len(path) == 0 or path[-1] <= can:
-                    self.dfs(candidates, target, path+[can], total+can)
+                x = candidates[i]
+                if len(chosen) == 0 or chosen[-1] <= x:
+                    self.dfs(candidates, chosen + [x], target - x)
 
 
 s = Solution()

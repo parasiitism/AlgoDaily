@@ -73,8 +73,15 @@ class Solution(object):
         if len(cands) == 0:
             self.result.append(chosen)
         for i in range(len(cands)):
+            if i > 0 and nums[i-1] == nums[i]:
+                continue
+            self.dfs(chosen + [nums[i]], nums[:i] + nums[i+1:])
+            """
+            OR
+
             if i == 0 or cands[i-1] != cands[i]:
                 self.dfs(cands[:i] + cands[i+1:], chosen + [cands[i]])
+            """
 
 
 s = Solution()
