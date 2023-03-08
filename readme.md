@@ -123,3 +123,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1647 | [Flood Fill](/leetcode/733-flood-fill/) | graph | [leetcode 733](https://leetcode.com/problems/flood-fill/) | revist the problem |
 | 1648 | [Cipher](/palantir/cipher) | greedy | glassdoor | |
 | 1649 | [Perfect Rectangle](/leetcode/391) | math | [leetcode 391](https://leetcode.com/problems/perfect-rectangle/) | 📌 |
+| 1650 | [Maximum Difference by Remapping a Digit](/leetcode/2566) | greedy | [leetcode 2566](https://leetcode.com/problems/maximum-difference-by-remapping-a-digit) |  |
