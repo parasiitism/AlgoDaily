@@ -124,3 +124,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1648 | [Cipher](/palantir/cipher) | greedy | glassdoor | |
 | 1649 | [Perfect Rectangle](/leetcode/391) | math | [leetcode 391](https://leetcode.com/problems/perfect-rectangle/) | 📌 |
 | 1650 | [Maximum Difference by Remapping a Digit](/leetcode/2566) | greedy | [leetcode 2566](https://leetcode.com/problems/maximum-difference-by-remapping-a-digit) |  |
+| 1651 | [Minimum Score by Changing Two Elements](/leetcode/2567) | math | [leetcode 2567](https://leetcode.com/problems/minimum-score-by-changing-two-elements/) | 📌 |
