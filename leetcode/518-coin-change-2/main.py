@@ -131,3 +131,32 @@ class Solution:
         if dp[amount] == 2**32:
             return -1
         return dp[amount][m]
+
+
+"""
+    4th: dynamic programming
+    - recursion + hashtable
+    - this is a unbounded/unlimited knapscack problem
+"""
+
+
+class Solution:
+    def change(self, amount: int, coins: List[int]) -> int:
+        cache = {}
+
+        def dfs(i, target):
+            if target == 0:
+                return 1
+            elif i >= len(coins) or target < 0:
+                return 0
+            key = (i, target)
+            if key in cache:
+                return cache[key]
+            total = 0
+            # after use this coin, stay at the same coin
+            total += dfs(i, target - coins[i])
+            # don't use this coin, just consider the next coin
+            total += dfs(i+1, target)
+            cache[key] = total
+            return total
+        return dfs(0, amount)
