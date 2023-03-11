@@ -100,3 +100,34 @@ print(s.change(a, b))
 a = 10
 b = [1, 2, 5, 7]
 print(s.change(a, b))
+
+"""
+    3rd: dynamic programming
+    - based on lc377
+
+    
+"""
+
+
+class Solution:
+    def change(self, amount: int, coins: List[int]) -> int:
+        n = amount
+        m = len(coins)
+        dp = []
+        for i in range(n+1):
+            dp.append((m+1) * [0])
+
+        for i in range(n+1):
+            for j in range(m+1):
+                if i == 0:
+                    dp[i][j] = 1
+                elif j == 0:
+                    pass
+                else:
+                    if i >= coins[j-1]:
+                        dp[i][j] = dp[i][j-1] + dp[i - coins[j-1]][j]
+                    else:
+                        dp[i][j] = dp[i][j-1]
+        if dp[amount] == 2**32:
+            return -1
+        return dp[amount][m]
