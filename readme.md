@@ -127,3 +127,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1651 | [Minimum Score by Changing Two Elements](/leetcode/2567) | math | [leetcode 2567](https://leetcode.com/problems/minimum-score-by-changing-two-elements/) | 📌 |
 | 1652 | [Merge Two 2D Arrays by Summing Values](/leetcode/2570) | hashtable | [leetcode 2570](https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/) | |
 | 1653 | [Minimum Operations to Reduce an Integer to 0](/leetcode/2571) | bit op | [leetcode 2571](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0) | 📌 |
+| 1654 | [Word wrap](/glassdoor/palantir/word-wrap) | greedy | glassdoor | |
