@@ -129,4 +129,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1653 | [Minimum Operations to Reduce an Integer to 0](/leetcode/2571) | bit op | [leetcode 2571](https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0) | 📌 |
 | 1654 | [Word wrap](/glassdoor/palantir/word-wrap) | greedy | glassdoor | |
 | 1655 | [Nonogram](/glassdoor/palantir/nonogram) | hashtable | glassdoor | |
-
+| 1656 | [Ancestor](/glassdoor/palantir/ancestor) | graph, hashtable | glassdoor | |
