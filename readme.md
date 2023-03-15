@@ -130,3 +130,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1654 | [Word wrap](/glassdoor/palantir/word-wrap) | greedy | glassdoor | |
 | 1655 | [Nonogram](/glassdoor/palantir/nonogram) | hashtable | glassdoor | |
 | 1656 | [Ancestor](/glassdoor/palantir/ancestor) | graph, hashtable | glassdoor | |
+| 1657 | [Invalid Badge Access 1](/glassdoor/palantir/invalid-badge-access) | hashtable, stack | glassdoor | |
