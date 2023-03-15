@@ -1,6 +1,6 @@
 from collections import *
 """
-    Given a list of people who enter and exit, find the people who entered without badging-out and who exited without badging-in.
+    1st: Given a list of people who enter and exit, find the people who entered without badging-out and who exited without badging-in.
 
     badge_records = [
         ["Martha",   "exit"],
@@ -17,7 +17,7 @@ from collections import *
     ]
     output: [["Martha"], ["Paul", "Curtis"]]
 """
-def f(records):
+def f1(records):
     ht = defaultdict(list)
     for name, inout in records:
         if name in ht:
@@ -51,4 +51,34 @@ a = [
     ["Martha",   "exit"],
     ["Jennifer", "exit"],
 ]
-print(f(a))
+print(f1(a))
+
+"""
+    2nd:
+    Given a list of people who swipe their badge, return the people who frequently swipe their badge within an hour and the times involved
+
+    e.g.
+    [['James', '1300'], ['Martha', '1600'], ['Martha', '1620'], ['Martha', '1630']]
+
+    output:
+    {
+        'Martha': ['1600', '1620', '1530']
+    }
+"""
+def f2(records):
+    ht = defaultdict(list)
+    res = defaultdict(list)
+    for n, t in records:
+        t = int(t)
+        if n in ht:
+            if t - ht[n][-1] < 100:
+                if len(res[n]) > 0 and res[n][-1] == ht[n][-1]:
+                    res[n].append(t)
+                else:
+                    res[n].append(ht[n][-1])
+                    res[n].append(t)
+        ht[n].append(t)
+    return res
+
+a = [['James', '1300'], ['Martha', '1600'], ['Martha', '1620'], ['Martha', '1630']]
+print(f2(a))
