@@ -133,3 +133,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1657 | [Invalid Badge Access 1](/glassdoor/palantir/invalid-badge-access) | hashtable, stack | glassdoor | Q1 |
 | 1658 | [Invalid Badge Access 2](/glassdoor/palantir/invalid-badge-access) | hashtable, stack | glassdoor | Q2 |
 | 1659 | [Add a New Meeting](/glassdoor/palantir/meeting-room) | sort | glassdoor | Q1 |
+| 1675 | [Design a Todo Listg](/leetcode/2890) | hashtable, sort | [leetcode 2890](https://leetcode.com/problems/design-a-todo-list/) |  |
