@@ -132,3 +132,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1656 | [Ancestor](/glassdoor/palantir/ancestor) | graph, hashtable | glassdoor | |
 | 1657 | [Invalid Badge Access 1](/glassdoor/palantir/invalid-badge-access) | hashtable, stack | glassdoor | Q1 |
 | 1658 | [Invalid Badge Access 2](/glassdoor/palantir/invalid-badge-access) | hashtable, stack | glassdoor | Q2 |
+| 1659 | [Add a New Meeting](/glassdoor/palantir/meeting-room) | sort | glassdoor | Q1 |
