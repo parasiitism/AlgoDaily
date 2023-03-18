@@ -75,5 +75,61 @@ c = 1500
 print(f1_meetings_not_sorted(a, b, c))
 
 """
-    2nd: 
+    2nd: Given a list of intevals representing some meetings, return the free times (from 0 to 2359)
+    
+    e.g.1
+    Input:
+        meetings = [[830, 845], [930, 1200], [1300, 1500]]
+
+    Output:
+
+    e.g.2
+    Input:
+        meetings = [[830, 930], [930, 1200], [1300, 1500]]
+
+    Output:
+
+
+    note:
+    - meetings not sorted
+    - there might by some intervals overlap
 """
+def f2(meetings):
+    meetings.sort()
+    merged = []
+    for s, e in meetings:
+        if len(merged) > 0 and merged[-1][1] >= s:
+            merged[-1][1] = max(merged[-1][1], e)
+        else:
+            merged.append([s, e])
+    
+    res = []
+    if merged[0][0] > 0:
+        res.append([0, merged[0][0]])
+
+    for i in range(1, len(merged)):
+        s1, e1 = merged[i-1]
+        s2, e2 = merged[i]
+        res.append([e1, s2])
+    
+    if merged[-1][1] < 2359:
+        res.append([res[-1][1], 2359])
+    
+    return res
+
+print("-- f2 --")
+
+a = [[830, 845], [930, 1200], [1300, 1500]]
+print(f2(a))
+
+a = [[830, 930], [930, 1200], [1300, 1500]]
+print(f2(a))
+
+a = [[0,800], [830, 930], [930, 1200], [1300, 1500]]
+print(f2(a))
+
+a = [[830, 930], [930, 1200], [1300, 1500], [2358, 2359]]
+print(f2(a))
+
+a = [[0,800], [830, 930], [930, 1200], [1300, 1500], [2358, 2359]]
+print(f2(a))
