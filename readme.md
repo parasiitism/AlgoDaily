@@ -134,3 +134,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1658 | [Invalid Badge Access 2](/glassdoor/palantir/invalid-badge-access) | hashtable, stack | glassdoor | Q2 |
 | 1659 | [Add a New Meeting](/glassdoor/palantir/meeting-room) | sort | glassdoor | Q1 |
 | 1660 | [Vacancy for new meetings](/glassdoor/palantir/meeting-room) | sort, greedy | glassdoor | Q2 |
+| 1661 | [Left and Right Sum Differences](/leetcode/2574) | array | [leetcode 2574](https://leetcode.com/problems/left-and-right-sum-differences/) | |
