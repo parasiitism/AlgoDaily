@@ -108,7 +108,7 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1632 | [Confusing Number II](/leetcode/1088) | recursion | [leetcode 1088](https://leetcode.com/problems/confusing-number-ii/) | |
 | 1633 | [House Robber](/leetcode/198) | dynamic programming | [leetcode 198](https://leetcode.com/problems/house-robber/) | ⭐️ classic problem, adding a recursive approach |
 | 1634 | [Arithmetic Square](https://github.com/calvinchankf/GoogleKickStart/tree/master/2021/D/a) | array | [Google KickStart 2021 D 1](https://codingcompetitions.withgoogle.com/kickstart/round/00000000004361e3/000000000082b813#problem) |  |
-| 1635 | [Find the Array Concatenation Value](/leetcode/2562) | 2 pointers | [leetcode 2562](\<https://leetcode.com/problems/find-the-array-concatenation-value/)> | |
+| 1635 | [Find the Array Concatenation Value](/leetcode/2562) | 2 pointers | [leetcode 2562](https://leetcode.com/problems/find-the-array-concatenation-value/) | |
 | 1636 | [Count the Number of Fair Pairs](/leetcode/2563) | binary search, binary indexed tree | [leetcode 2563](https://leetcode.com/problems/count-the-number-of-fair-pairs/) | |
 | 1637 | [2048 one dimension](/glassdoor/palantir/2048) | stack | glassdoor | ⭐️ |
 | 1638 | [stock portfolio](/glassdoor/palantir/stock-portfolio) | minheap | glassdoor |  |
@@ -136,3 +136,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1660 | [Vacancy for new meetings](/glassdoor/palantir/meeting-room) | sort, greedy | glassdoor | Q2 |
 | 1661 | [Left and Right Sum Differences](/leetcode/2574) | array | [leetcode 2574](https://leetcode.com/problems/left-and-right-sum-differences/) | |
 | 1662 | [Find the Divisibility Array of a String](/leetcode/2575) | math | [leetcode 2575](https://leetcode.com/problems/find-the-divisibility-array-of-a-string/) | |
+| 1663 | [Find the Maximum Number of Marked Indices](/leetcode/2576) | sort, 2 pointers | [leetcode 2576](https://leetcode.com/problems/find-the-maximum-number-of-marked-indices/description/) | |
