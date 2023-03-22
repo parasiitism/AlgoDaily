@@ -137,3 +137,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1661 | [Left and Right Sum Differences](/leetcode/2574) | array | [leetcode 2574](https://leetcode.com/problems/left-and-right-sum-differences/) | |
 | 1662 | [Find the Divisibility Array of a String](/leetcode/2575) | math | [leetcode 2575](https://leetcode.com/problems/find-the-divisibility-array-of-a-string/) | |
 | 1663 | [Find the Maximum Number of Marked Indices](/leetcode/2576) | sort, 2 pointers | [leetcode 2576](https://leetcode.com/problems/find-the-maximum-number-of-marked-indices/description/) | |
+| 1664 | [Minimum Time to Visit a Cell In a Grid](/leetcode/2577) | graph, hashtable | [leetcode 2577](https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid/) | |
