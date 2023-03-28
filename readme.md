@@ -142,3 +142,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1666 | [Count Total Number of Colored Cells](/leetcode/2579) | math | [leetcode 2579](https://leetcode.com/problems/count-total-number-of-colored-cells/) | |
 | 1667 | [Split With Minimum Sum](/leetcode/2578) | sort | [leetcode 2578](https://leetcode.com/problems/split-with-minimum-sum/) | |
 | 1668 | [Pass the Pillow](/leetcode/2582/) | math | [leetcode 2582](https://leetcode.com/problems/pass-the-pillow/) | |
+| 1669 | [Flood Fill](/leetcode/733-flood-fill/) | graph | [leetcode 733](https://leetcode.com/problems/flood-fill/) | revist the problem |
+
