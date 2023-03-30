@@ -144,3 +144,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1668 | [Pass the Pillow](/leetcode/2582/) | math | [leetcode 2582](https://leetcode.com/problems/pass-the-pillow/) | |
 | 1669 | [Flood Fill](/leetcode/733-flood-fill/) | graph | [leetcode 733](https://leetcode.com/problems/flood-fill/) | revist the problem |
 | 1670 | [Number of Ways to Earn Points](/leetcode/2585) | dynamic programming | [leetcode 2585](https://leetcode.com/problems/number-of-ways-to-earn-points/) | 📌 |
+| 1671 | [Divide Array Into Increasing Sequences](/leetcode/1121) | math | [leetcode 1121](https://leetcode.com/problems/divide-array-into-increasing-sequences/description/) | 📌 |
