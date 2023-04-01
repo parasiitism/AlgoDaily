@@ -146,3 +146,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1670 | [Number of Ways to Earn Points](/leetcode/2585) | dynamic programming | [leetcode 2585](https://leetcode.com/problems/number-of-ways-to-earn-points/) | 📌 |
 | 1671 | [Divide Array Into Increasing Sequences](/leetcode/1121) | math | [leetcode 1121](https://leetcode.com/problems/divide-array-into-increasing-sequences/description/) | 📌 |
 | 1672 | [Count the Number of Vowel Strings in Range](/leetcode/2586) | string | [leetcode 2586](https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range/) | |
+| 1673 | [Rearrange Array to Maximize Prefix Score](/leetcode/2587) | greedy | [leetcode 2587](https://leetcode.com/problems/rearrange-array-to-maximize-prefix-score/) | |
