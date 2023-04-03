@@ -148,4 +148,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1672 | [Count the Number of Vowel Strings in Range](/leetcode/2586) | string | [leetcode 2586](https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range/) | |
 | 1673 | [Rearrange Array to Maximize Prefix Score](/leetcode/2587) | greedy | [leetcode 2587](https://leetcode.com/problems/rearrange-array-to-maximize-prefix-score/) | |
 | 1674 | [Count the Number of Beautiful Subarrays](/leetcode/2588) | bit op, hashtable, prefix sum | [leetcode 2588](https://leetcode.com/problems/count-the-number-of-beautiful-subarrays/) | 📌 |
+| 1675 | [Design a Todo Listg](/leetcode/2890) | hashtable, sort | [leetcode 2890](https://leetcode.com/problems/design-a-todo-list/) |  |
 | 1685 | [Form Smallest Number From Two Digit Arrays](/leetcode/2605) | greedy | [leetcode 2605](https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays/) | |
