@@ -149,7 +149,7 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1673 | [Rearrange Array to Maximize Prefix Score](/leetcode/2587) | greedy | [leetcode 2587](https://leetcode.com/problems/rearrange-array-to-maximize-prefix-score/) | |
 | 1674 | [Count the Number of Beautiful Subarrays](/leetcode/2588) | bit op, hashtable, prefix sum | [leetcode 2588](https://leetcode.com/problems/count-the-number-of-beautiful-subarrays/) | 📌 |
 | 1675 | [Design a Todo Listg](/leetcode/2890) | hashtable, sort | [leetcode 2890](https://leetcode.com/problems/design-a-todo-list/) |  |
-| 1676 | [Distribute Money to Maximum Children](/leetcode/2591) | array | [leetcode 2574](https://leetcode.com/problems/distribute-money-to-maximum-children/) | |
+| 1676 | [Distribute Money to Maximum Children](/leetcode/2590) | array | [leetcode 2574](https://leetcode.com/problems/distribute-money-to-maximum-children/) | |
 | 1677 | [Number of Even and Odd Bits](/leetcode/2595) | bit op | [leetcode 2595](https://leetcode.com/problems/number-of-even-and-odd-bits/) | |
 | 1678 | [Find Score of an Array After Marking All Elements](/leetcode/2593) | heap, hashtable | [leetcode 2593](https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements/) | |
 | 1685 | [Form Smallest Number From Two Digit Arrays](/leetcode/2605) | greedy | [leetcode 2605](https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays/) | |
