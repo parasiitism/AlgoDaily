@@ -155,4 +155,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1679 | [Maximize Greatness of an Array](/leetcode/2592) | sort, 2 pointers | [leetcode 2592](https://leetcode.com/problems/maximize-greatness-of-an-array/) | |
 | 1680 | [Minimum Time to Repair Cars](/leetcode/2594) | binary search | [leetcode 2594](https://leetcode.com/problems/minimum-time-to-repair-cars/) | |
 | 1681 | [Check Knight Tour Configuration](/leetcode/2596) | backtracking | [leetcode 2596](https://leetcode.com/problems/check-knight-tour-configuration/) | |
+| 1682 | [Make the Prefix Sum Non-negative](/leetcode/2599) | heap | [leetcode 2599](https://leetcode.com/problems/make-the-prefix-sum-non-negative/) | |
 | 1685 | [Form Smallest Number From Two Digit Arrays](/leetcode/2605) | greedy | [leetcode 2605](https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays/) | |
