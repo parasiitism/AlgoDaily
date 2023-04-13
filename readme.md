@@ -159,3 +159,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1683 | [K Items With the Maximum Sum](/leetcode/2600/) | math | [leetcode 2600](https://leetcode.com/problems/k-items-with-the-maximum-sum/) | |
 | 1684 | [Prime Subtraction Operation](/leetcode/2601/) | binary search | [leetcode 2601](https://leetcode.com/problems/prime-subtraction-operation/) | |
 | 1685 | [Form Smallest Number From Two Digit Arrays](/leetcode/2605) | greedy | [leetcode 2605](https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays/) | |
+| 1686 | [Find the Substring With Maximum Cost](/leetcode/2606) | dynamic programming | [leetcode 2606](https://leetcode.com/problems/find-the-substring-with-maximum-cost/) | |
