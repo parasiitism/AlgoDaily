@@ -160,3 +160,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1684 | [Prime Subtraction Operation](/leetcode/2601/) | binary search | [leetcode 2601](https://leetcode.com/problems/prime-subtraction-operation/) | |
 | 1685 | [Form Smallest Number From Two Digit Arrays](/leetcode/2605) | greedy | [leetcode 2605](https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays/) | |
 | 1686 | [Find the Substring With Maximum Cost](/leetcode/2606) | dynamic programming | [leetcode 2606](https://leetcode.com/problems/find-the-substring-with-maximum-cost/) | |
+| 1687 | [Find the Longest Balanced Substring of a Binary String](/leetcode/2609) | greedy | [leetcode 2609](https://leetcode.com/problems/find-the-longest-balanced-substring-of-a-binary-string/) | |
