@@ -163,3 +163,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1687 | [Find the Longest Balanced Substring of a Binary String](/leetcode/2609) | greedy | [leetcode 2609](https://leetcode.com/problems/find-the-longest-balanced-substring-of-a-binary-string/) | |
 | 1688 | [Convert an Array Into a 2D Array With Conditions](/leetcode/2610) | hashtable | [leetcode 2610](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/) | |
 | 1689 | [Mice and Cheese](/leetcode/2611) | math, heap | [leetcode 2611](https://leetcode.com/problems/mice-and-cheese/) | 2 approaches |
+| 1690 | [Maximum Number of Points From Grid Queries](/leetcode/2503) | heap, graph, binary search | [leetcode 2503](https://leetcode.com/problems/maximum-number-of-points-from-grid-queries/) | ⭐️⭐️⭐️ very interesting |
