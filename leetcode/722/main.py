@@ -8,30 +8,27 @@
 
 class Solution:
     def removeComments(self, source: List[str]) -> List[str]:
+        N = len(source)
+        real_code = ''
+        is_comment = False
         res = []
-        buffer = ''
-        is_within_block = False
-        for line in source:
-            n = len(line)
+        for i in range(N):
+            line = source[i]
+            L = len(line)
             j = 0
-            while j < len(line):
-                c = line[j]
-                # "//" -> Line comment
-                if c == '/' and j+1 < n and line[j+1] == '/' and not is_within_block:
-                    j = n  # Advance pointer to end of current line.
-                # "/*" -> Start of block comment
-                elif c == '/' and j+1 < n and line[j+1] == '*' and not is_within_block:
-                    is_within_block = True
+            while j < L:
+                if line[j] == '/' and j+1 < L and line[j+1] == '/' and is_comment == False:
+                    j = L
+                elif line[j] == '/' and j+1 < L and line[j+1] == '*' and is_comment == False:
+                    is_comment = True
                     j += 1
-                # "*/" -> End of block comment
-                elif c == '*' and j+1 < n and line[j+1] == '/' and is_within_block:
-                    is_within_block = False
+                elif line[j] == '*' and j+1 < L and line[j+1] == '/' and is_comment == True:
+                    is_comment = False
                     j += 1
-                # Normal character. Append to buffer if not in block comment
-                elif not is_within_block:
-                    buffer += c
+                elif is_comment == False:
+                    real_code += line[j]
                 j += 1
-            if buffer and not is_within_block:
-                res.append(buffer)
-                buffer = ''
+            if len(real_code) > 0 and is_comment == False:
+                res.append(real_code)
+                real_code = ''
         return res
