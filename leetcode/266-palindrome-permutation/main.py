@@ -11,18 +11,16 @@ from collections import Counter
 """
 
 
-class Solution(object):
-    def canPermutePalindrome(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
-        counter = Counter(s)
-        oddCount = 0
-        for key in counter:
-            if counter[key] % 2 == 1:
-                oddCount += 1
-        return oddCount <= 1
+class Solution:
+    def canPermutePalindrome(self, s: str) -> bool:
+        ctr = Counter(s)
+        seen_odd = False
+        for k in ctr:
+            if ctr[k] % 2 == 1:
+                if seen_odd:
+                    return False
+                seen_odd = True
+        return True
 
 
 """

@@ -65,6 +65,30 @@ class Solution:
         return True
 
 
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = s.upper()
+        left, right = 0, len(s) - 1
+        while left < right:
+            if self.is_alpha_numeric(s[left]) and self.is_alpha_numeric(s[right]):
+                if s[left] == s[right]:
+                    left += 1
+                    right -= 1
+                else:
+                    return False
+            elif self.is_alpha_numeric(s[left]):
+                right -= 1
+            elif self.is_alpha_numeric(s[right]):
+                left += 1
+            else:
+                left += 1
+                right -= 1
+        return True
+
+    def is_alpha_numeric(self, c):
+        return (c >= 'A' and c <= 'Z') or (c >= '0' and c <= '9')
+
+
 """
     3rd: recursion
 
