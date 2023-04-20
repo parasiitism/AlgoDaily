@@ -76,3 +76,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 
 | Day | Question | Type | From | remarks |
 | ---- | --- | --- | --- | --- |
+| 1701 | [Memoize](/leetcode/2623) | JS | [leetcode 2623](https://leetcode.com/problems/memoize/) | |
