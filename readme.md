@@ -172,3 +172,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1696 | [Check if Object Instance of Class](/leetcode/2618) | JS | [leetcode 2618](https://leetcode.com/problems/check-if-object-instance-of-class/) | |
 | 1697 | [Array Prototype Last](/leetcode/2619) | JS | [leetcode 2619](https://leetcode.com/problems/array-prototype-last/) | |
 | 1698 | [Counter](/leetcode/2620) | JS | [leetcode 2620](https://leetcode.com/problems/counter/) | |
+| 1699 | [Sleep](/leetcode/2621) | JS | [leetcode 2621](https://leetcode.com/problems/sleep/) | |
