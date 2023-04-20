@@ -173,3 +173,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1697 | [Array Prototype Last](/leetcode/2619) | JS | [leetcode 2619](https://leetcode.com/problems/array-prototype-last/) | |
 | 1698 | [Counter](/leetcode/2620) | JS | [leetcode 2620](https://leetcode.com/problems/counter/) | |
 | 1699 | [Sleep](/leetcode/2621) | JS | [leetcode 2621](https://leetcode.com/problems/sleep/) | |
+| 1700 | [Cache With Time Limit](/leetcode/2622) | JS | [leetcode 2610](https://leetcode.com/problems/cache-with-time-limit/) | Object vs Map |
