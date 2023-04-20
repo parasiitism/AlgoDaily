@@ -171,3 +171,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1695 | [Consecutive Numbers Sum](/leetcode/829/) | math | [leetcode 829](https://leetcode.com/problems/consecutive-numbers-sum/) | ⭐️ |
 | 1696 | [Check if Object Instance of Class](/leetcode/2618) | JS | [leetcode 2618](https://leetcode.com/problems/check-if-object-instance-of-class/) | |
 | 1697 | [Array Prototype Last](/leetcode/2619) | JS | [leetcode 2619](https://leetcode.com/problems/array-prototype-last/) | |
+| 1698 | [Counter](/leetcode/2620) | JS | [leetcode 2620](https://leetcode.com/problems/counter/) | |
