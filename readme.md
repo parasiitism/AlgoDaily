@@ -168,3 +168,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1692 | [Sum the diffs](/miscellaneous/sum_the_diffs) | math | practice | ⭐️ |>>>>>>> master
 | 1693 | [Sum of Distances](/leetcode/2615) | heap | [leetcode 2615](https://leetcode.com/problems/sum-of-distances/) | ⭐️ |
 | 1694 | [Minimize the Maximum Difference of Pairs](/leetcode/2616/) | sort, binary search | [leetcode 2616](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/) | |
+| 1695 | [Consecutive Numbers Sum](/leetcode/829/) | math | [leetcode 829](https://leetcode.com/problems/consecutive-numbers-sum/) | ⭐️ |
