@@ -78,3 +78,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | ---- | --- | --- | --- | --- |
 | 1701 | [Memoize](/leetcode/2623) | JS | [leetcode 2623](https://leetcode.com/problems/memoize/) | |
 | 1702 | [Snail Traversal](/leetcode/2624) | array | [leetcode 2624](https://leetcode.com/problems/snail-traversal/) | |
+| 1703 | [Flatten Deeply Nested Array](/leetcode/2625) | recursion | [leetcode 2625](https://leetcode.com/problems/flatten-deeply-nested-array/description/) | |
