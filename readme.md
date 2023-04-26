@@ -81,4 +81,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1703 | [Flatten Deeply Nested Array](/leetcode/2625) | recursion | [leetcode 2625](https://leetcode.com/problems/flatten-deeply-nested-array/description/) | |
 | 1704 | [Array Reduce Transformation](/leetcode/2626) | JS | [leetcode 2626](https://leetcode.com/problems/array-reduce-transformation/) | |
 | 1705 | [Debounce](/leetcode/2627) | JS | [leetcode 2627](https://leetcode.com/problems/debounce/) | |
+| 1706 | [JSON Deep Equal](/leetcode/2628) | recursion | [leetcode 2628](https://leetcode.com/problems/json-deep-equal/) | |
 | 1715 | [Check Sum of Two Fibonacci](/glassdoor/hrt/check-sum-of-two-fibonacci) | DP, 2 pointers | glassdoor | |
