@@ -16,7 +16,7 @@ var breakPalindrome = function(palindrome) {
     if (n <= 1) {
       return ""
     }
-    for (let i = 0; i < Math.floor(n/2); i++) {
+    for (let i = 0; i*2+1 < n; i++) {
       const c = palindrome[i]
       if (c != "a") {
         return palindrome.slice(0, i) + "a" + palindrome.slice(i+1)

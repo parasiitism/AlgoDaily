@@ -63,3 +63,20 @@ var eraseOverlapIntervals = function(intervals) {
     }
     return intervals.length - legitCount
 };
+
+/*
+    follow-up: print the intervals
+*/
+var eraseOverlapIntervals = function(intervals) {
+    intervals.sort((a, b) => a[1] - b[1])
+    const temp = []
+    let removed = 0
+    for (let [s, e] of intervals) {
+        if (temp.length == 0 || (temp.length > 0 && temp[temp.length-1][1] <= s)) {
+            temp.push([s, e])
+        } else {
+            removed += 1
+        }
+    }
+    return temp
+};

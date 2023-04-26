@@ -32,3 +32,23 @@ var numPairsDivisibleBy60 = function(time) {
     }
     return res
 };
+
+/*
+    followup: what if not only 60
+*/
+var numPairsDivisibleBy60 = function(time) {
+    const ctr = {}
+    let res = 0
+    for (let i = 0; i < time.length; i++) {
+        const t = time[i] % 60
+        const r = (60 - t) % 60
+        if (r in ctr) {
+            res += ctr[r]
+        }
+        if (t in ctr === false) {
+            ctr[t] = 0
+        }
+        ctr[t] += 1
+    }
+    return  res
+};
