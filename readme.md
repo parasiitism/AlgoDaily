@@ -92,3 +92,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1714 | [Convert Object to JSON String](/leetcode/2633) | recursion | [leetcode 2633](https://leetcode.com/problems/convert-object-to-json-string/description/) | ⭐️ practical |
 | 1715 | [Check Sum of Two Fibonacci](/glassdoor/hrt/check-sum-of-two-fibonacci) | DP, 2 pointers | glassdoor | |
 | 1716 | [Code Length Calculator](/glassdoor/hrt/code-length-calculator/) | greedy | glassdoor |  |
+| 1717 | [Is Chemical Reaction Balanced](/glassdoor/hrt/is-chemical-reaction-balanced) | greedy | glassdoor | ⭐️ |
