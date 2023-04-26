@@ -87,4 +87,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1709 | [Group By](/leetcode/2631) | hashtable | [leetcode 2631](https://leetcode.com/problems/group-by/) | |
 | 1710 | [Curry](/leetcode/2632) | recursion | [leetcode 2632](https://leetcode.com/problems/curry/) | ⭐️⭐️⭐️ very interesting |
 | 1711 | [Filter Elements from Array](/leetcode/2634) | array | [leetcode 2634](https://leetcode.com/problems/filter-elements-from-array/) |  |
+| 1712 | [Apply Transform Over Each Element in Array](/leetcode/2635) | array | [leetcode 2635](https://leetcode.com/problems/apply-transform-over-each-element-in-array/) | |
 | 1715 | [Check Sum of Two Fibonacci](/glassdoor/hrt/check-sum-of-two-fibonacci) | DP, 2 pointers | glassdoor | |
