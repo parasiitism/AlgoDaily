@@ -1,5 +1,5 @@
 from collections import Counter
-import heapq
+from heapq import *
 
 """
     1st: hashtable + minheap
@@ -14,20 +14,22 @@ import heapq
 
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        ht = Counter(arr)
-        minHeap = []
-        for key in ht:
-            occur = ht[key]
-            heapq.heappush(minHeap, (occur, key))
-
-        while len(minHeap) > 0:
-            if k == 0:
-                break
-            occur, key = heapq.heappop(minHeap)
-            if k >= occur:
-                k -= occur
-            else:
+        ctr = Counter(arr)
+        pq = []
+        for key in ctr:
+            heappush(pq, (ctr[key], key))
+        while len(pq) > 0:
+            cnt, key = heappop(pq)
+            if k >= cnt:
+                ctr[key] = 0
+                k -= cnt
+            elif k > 0:
+                ctr[key] -= k
                 k = 0
-                heapq.heappush(minHeap, (occur-k, key))
-
-        return len(minHeap)
+            else:
+                break
+        res = 0
+        for key in ctr:
+            if ctr[key] > 0:
+                res += 1
+        return res

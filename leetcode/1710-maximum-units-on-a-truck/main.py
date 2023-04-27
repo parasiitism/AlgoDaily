@@ -1,5 +1,5 @@
 """
-    1st: sort by unit
+    1st: sort by unit, take as many as boxes until truckSize = 0 
 
     Time    O(NlogN)
     Space   O(1)

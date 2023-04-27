@@ -1,4 +1,4 @@
-import heapq
+from heapq import *
 
 """
     2nd: learned from others
@@ -20,18 +20,18 @@ import heapq
 
 class Solution(object):
     def maxEvents(self, events):
-        pq = []
         events.sort(key=lambda x: x[0])
-        idx = 0
-        res = 0
         n = len(events)
-        for day in xrange(1, 100001):
-            while len(pq) > 0 and pq[0] < day:
-                heapq.heappop(pq)
-            while idx < n and events[idx][0] == day:
-                heapq.heappush(pq, events[idx][1])
-                idx += 1
+        pq = []
+        i = 0
+        res = 0
+        for d in range(1, 100001):
+            while len(pq) > 0 and pq[0] < d:
+                heappop(pq)
+            while i < n and events[i][0] == d:
+                heappush(pq, events[i][1])
+                i += 1
             if len(pq) > 0:
-                heapq.heappop(pq)
+                heappop(pq)
                 res += 1
         return res
