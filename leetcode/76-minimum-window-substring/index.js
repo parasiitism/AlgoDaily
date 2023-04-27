@@ -45,48 +45,38 @@
     328 ms, faster than 5.08%
 */
 var minWindow = function(s, t) {
-    const targetHt = {}
-    for (let c of t) {
-        if (c in targetHt === false) {
-            targetHt[c] = 0
-        }
-        targetHt[c] += 1
-    }
-    const curHt = {}
+    const ctr_t = count_alphabet(t)
+    const ctr_s = Array(128).fill(0)
     let j = 0
-    let res = s + '.'
-    for (let i = 0; i < s.length; i++) {
-        const c = s[i]
-        
-        if (c in curHt === false) {
-            curHt[c] = 0
-        }
-        curHt[c] += 1
-        
-        while (curContainTarget(curHt, targetHt)) {
-            
-            const sub = s.slice(j, i+1)
-            if (sub.length < res.length) {
-                res = sub
-            }
-            
+    let res_length = 2**32
+    let res = ''
+    for (let i = 0 ; i < s.length; i++) {
+        const right = s[i]
+        ctr_s[right.charCodeAt()] += 1
+        while (s_contains_t(ctr_s, ctr_t)) {
             const left = s[j]
+            ctr_s[left.charCodeAt()] -= 1
+            if (i - j + 1 < res_length) {
+                res = s.slice(j, i+1)
+                res_length = i - j + 1
+            }
             j += 1
-            curHt[left] -= 1
         }
-    }
-    if (res == s + '.') {
-        return ''
     }
     return res
 };
 
-const curContainTarget = (curHt, targetHt) => {
-    for (let key in targetHt) {
-        if (key in curHt === false) {
-            return false
-        }
-        if (curHt[key] < targetHt[key]) {
+const count_alphabet = T => {
+    const ctr = Array(128).fill(0)
+    for (let c of T) {
+        ctr[c.charCodeAt()] += 1
+    }
+    return ctr
+}
+
+const s_contains_t = (A, B) => {
+    for (let i = 0 ; i < 128; i++) {
+        if (A[i] < B[i]) {
             return false
         }
     }
