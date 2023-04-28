@@ -12,7 +12,7 @@ var solution = function(isBadVersion) {
      */
     return function(n) {
         var left = 1;
-        var right = n;
+        var right = n + 1;
         while (left < right) {
             var mid = Math.floor((left + right) / 2);
             if (isBadVersion(mid)) {

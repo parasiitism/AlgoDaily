@@ -9,14 +9,14 @@
 */
 var subsets = function (nums) {
 	const res = []
-    const dfs = (cands, chosen) => {
+    const dfs = (chosen, remain) => {
         res.push(chosen)
-        for (let i = 0; i < cands.length; i++) {
-            const _cands = cands.slice(i+1)
-            const _chosen = [...chosen, cands[i]]
-            dfs(_cands, _chosen)
+        for (let i = 0; i < remain.length; i++) {
+            const _chosen = [...chosen, remain[i]]
+            const _remain = remain.slice(i+1)
+            dfs(_chosen, _remain)
         }
     }
-    dfs(nums, [])
+    dfs([], nums)
     return res
 };

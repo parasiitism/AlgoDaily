@@ -11,7 +11,6 @@
  * @return {boolean}
  */
 var winnerOfGame = function(colors) {
-    let c = colors[0]
     let alice = 0
     let bob = 0
     for (let i = 1; i < colors.length - 1; i++) {

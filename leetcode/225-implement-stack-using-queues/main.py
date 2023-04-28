@@ -1,5 +1,5 @@
 """
-    classic approach: 2 queues
+    1st: classic approach - 2 queues
     
     Time    O(n)
     Space   O(n)
@@ -10,18 +10,10 @@
 class MyStack(object):
 
     def __init__(self):
-        """
-        Initialize your data structure here.
-        """
         self.mainQ = []
         self.minorQ = []
 
     def push(self, x):
-        """
-        Push element x onto stack.
-        :type x: int
-        :rtype: None
-        """
         while len(self.mainQ) > 0:
             self.minorQ.append(self.mainQ.pop(0))
         self.mainQ.append(x)
@@ -29,22 +21,40 @@ class MyStack(object):
             self.mainQ.append(self.minorQ.pop(0))
 
     def pop(self):
-        """
-        Removes the element on top of the stack and returns that element.
-        :rtype: int
-        """
         return self.mainQ.pop(0)
 
     def top(self):
-        """
-        Get the top element.
-        :rtype: int
-        """
         return self.mainQ[0]
 
     def empty(self):
-        """
-        Returns whether the stack is empty.
-        :rtype: bool
-        """
         return len(self.mainQ) == 0
+
+
+"""
+    2nd: classic approach - 1 queue
+    
+    Time    O(n)
+    Space   O(n)
+    20 ms, faster than 62.85%
+"""
+
+
+class MyStack:
+
+    def __init__(self):
+        self.q = []
+
+    def push(self, x: int) -> None:
+        n = len(self.q)
+        self.q.append(x)
+        for i in range(n):
+            self.q.append(self.q.pop(0))
+
+    def pop(self) -> int:
+        return self.q.pop(0)
+
+    def top(self) -> int:
+        return self.q[0]
+
+    def empty(self) -> bool:
+        return len(self.q) == 0

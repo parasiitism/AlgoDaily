@@ -69,25 +69,28 @@ MinStack.prototype.getMin = function () {
 */
 class MinStack {
 	constructor() {
-		this.arr = [];
+		this.A = [];
 	}
 	push(x) {
-		const n = this.arr.length;
-		if (n == 0) {
-			return this.arr.push([x, x]);
-		}
-		const newMin = Math.min(this.arr[n - 1][1], x);
-		this.arr.push([x, newMin]);
+		if (this.A.length > 0) {
+            const cur_min = this.A[this.A.length-1][1]
+            this.A.push([
+                val,
+                Math.min(val, cur_min)
+            ])
+        } else {
+            this.A.push([val, val])
+        }
 	}
 	pop() {
-		return this.arr.pop();
+		return this.A.pop();
 	}
 	top() {
-		const n = this.arr.length;
-		return this.arr[n - 1][0];
+		const n = this.A.length;
+		return this.A[n - 1][0];
 	}
 	getMin() {
-		const n = this.arr.length;
-		return this.arr[n - 1][1];
+		const n = this.A.length;
+		return this.A[n - 1][1];
 	}
 }

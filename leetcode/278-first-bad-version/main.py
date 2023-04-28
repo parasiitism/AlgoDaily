@@ -17,7 +17,7 @@ class Solution(object):
         20 ms, faster than 60.60%
         """
         left = 1
-        right = n
+        right = n + 1
         while left < right:
             mid = (left + right)//2
             if isBadVersion(mid):
