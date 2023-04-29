@@ -28,7 +28,7 @@ def f(S):
     right_compounds = split_compounds(right)
     left_compounds_count = count_elements(left_compounds)
     right_compounds_count = count_elements(right_compounds)
-    print(left_compounds_count, right_compounds_count)
+    # print(left_compounds_count, right_compounds_count)
     if len(left_compounds_count.keys()) != len(right_compounds_count.keys()):
         return False
     for key in left_compounds_count:
@@ -46,28 +46,33 @@ def split_compounds(S):
 
 def count_elements(compounds):
     total = Counter()
-    for ele in compounds:
+    for compound in compounds:
         # count the elements in every compound
-        prefix_count = 0
         ht = Counter()
-        cur = ''
+        compound_count = 0
+        ele = ''
         ele_count = 0
-        for i in range(len(ele)):
-            c = ele[i]
+        for i in range(len(compound)):
+            c = compound[i]
             if c.isdigit():
-                if len(cur) == 0:
-                    prefix_count = 10*prefix_count + int(c)
+                if len(ele) == 0:
+                    # the count of the compound
+                    compound_count = 10*compound_count + int(c)
                 else:
+                    # the count of element
                     ele_count = 10*ele_count + int(c)
             elif 0 <= ord(c) - ord('A') < 26:
-                if len(cur) > 0:
-                    ht[cur] += max(ele_count, 1) * max(prefix_count, 1)
+                # count the current element if any
+                if len(ele) > 0:
+                    ht[ele] += max(ele_count, 1) * max(compound_count, 1)
                     ele_count = 0
-                cur = c
+                # start with the new element
+                ele = c
             elif 0 <= ord(c) - ord('a') < 26:
-                cur += c
-        if len(cur) > 0:
-            ht[cur] += max(ele_count, 1) * max(prefix_count, 1)
+                ele += c
+        # count the remaining element if any
+        if len(ele) > 0:
+            ht[ele] += max(ele_count, 1) * max(compound_count, 1)
             ele_count = 0
         # put them in total
         for key in ht:
@@ -77,5 +82,5 @@ def count_elements(compounds):
 
 print(f("   2H2 + O2 =   2H2O "))   # T
 print(f("   1000H2O = Au + Ag "))   # F
-print(f("   2HH2 + O2O =   2H2O "))   # T
+print(f("   2HH2 + O2O =   2H2O "))   # F
 print(f("   1000H2O + 2Au + 3Ag = 2Au + 3Ag + 2000H + 1000O"))  # T

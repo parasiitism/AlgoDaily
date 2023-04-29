@@ -22,7 +22,7 @@ def f(source):
                 j = L
             elif line[j] == '/' and j+1 < L and line[j+1] == '*' and is_comment == False:
                 is_comment = True
-                j += 1
+                j += 1  # don't jump to the next line, because it is possible that there is */ on the same line and some real code after it
             elif line[j] == '*' and j+1 < L and line[j+1] == '/' and is_comment == True:
                 is_comment = False
                 j += 1

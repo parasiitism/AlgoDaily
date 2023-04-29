@@ -1,5 +1,5 @@
 """
-    encrpyt the matrix in 2 steps:
+    Encrpyt the matrix in 2 steps:
     
     abc             ro          djp
     def            qnli         agm
@@ -7,6 +7,15 @@
     jkl            jgeb         bhn
     mno             ba          flr
     pqr                         cio
+
+    The sequence is:
+
+    4   abc
+    1   def
+    5   ghi
+    2   jkl
+    6   mno
+    3   pqr
 """
 
 

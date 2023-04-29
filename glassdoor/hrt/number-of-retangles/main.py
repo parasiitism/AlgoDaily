@@ -21,7 +21,7 @@ from collections import *
 
 def get_dist_and_center(x1, x2, y1, y2):
     dist2 = (x1 - x2)**2 + (y1 - y2)**2
-    center = ((x1+x2)/2.0, (y1+y2)/2.0)
+    center = ((x1 + x2)/2.0, (y1 + y2)/2.0)
     return (dist2, center)
 
 
@@ -32,6 +32,7 @@ def count_rectangles(points):
         x1, y1 = points[i]
         for j in range(i+1, n):
             x2, y2 = points[j]
+            # For a rectange(including square), the center and 2 diagonal lines must be the same
             dist2, center = get_dist_and_center(x1, x2, y1, y2)
             key = (dist2, center)
             ctr[key] += 1

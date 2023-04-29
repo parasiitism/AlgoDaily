@@ -15,7 +15,7 @@ def f(M):
     for i in range(n):
         cur_min = min(cur_min, fisrt_indices[i])
         decreasing[i] = cur_min
-        if cur_min == 0:  # corner-case where, a block blocks 'road'
+        if cur_min == 0:  # corner-case where, a block blocks the rest of a row e.g. second row of example1
             cur_min = len(M[0])
     res_min = sum(decreasing)
     return (res_min, res_max)

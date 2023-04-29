@@ -18,15 +18,15 @@ class Solution:
             j = 0
             while j < L:
                 if line[j] == '/' and j+1 < L and line[j+1] == '/' and is_comment == False:
-                    j = L
+                    j = L       # jump to the new line
                 elif line[j] == '/' and j+1 < L and line[j+1] == '*' and is_comment == False:
                     is_comment = True
-                    j += 1
+                    j += 1      # don't jump to the next line, because it is possible that there is */ on the same line and some real code after it
                 elif line[j] == '*' and j+1 < L and line[j+1] == '/' and is_comment == True:
                     is_comment = False
                     j += 1
                 elif is_comment == False:
-                    real_code += line[j]
+                    real_code += line[j]  # adding the real code in our buffer
                 j += 1
             if len(real_code) > 0 and is_comment == False:
                 res.append(real_code)
