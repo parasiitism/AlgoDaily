@@ -13,29 +13,29 @@
     Space   O(N)
     1248 ms, faster than 100.00%
 """
+
+
 class Solution:
     def minOperations(self, nums1: List[int], nums2: List[int]) -> int:
         A, B = sum(nums1), sum(nums2)
-        
-        larger = nums1
-        smaller = nums2
-        if B > A:
-            larger = nums2
-            smaller = nums1
-        elif A == B:
+        if A == B:
             return 0
-        
-        gains_in_larger = [x-1 for x in larger]
-        gains_in_smaller = [6-x for x in smaller]
-        gains = gains_in_larger + gains_in_smaller
-        gains.sort(reverse = True)
-        
-        count = 0
-        target_diff = abs(A - B)
-        
-        for i in range(len(gains)):
-            target_diff -= gains[i]
-            count += 1
-            if target_diff <= 0:
-                return count
+        larger, smaller = None, None
+        if A > B:
+            larger, smaller = nums1, nums2
+        else:
+            smaller, larger = nums1, nums2
+
+        larger_to_subtract = [x-1 for x in larger]
+        smaller_to_add = [6-x for x in smaller]
+        diffs = larger_to_subtract + smaller_to_add
+        diffs.sort(key=lambda x: -x)
+
+        target_offset = abs(A - B)
+        res = 0
+        for d in diffs:
+            target_offset -= d
+            res += 1
+            if target_offset <= 0:
+                return res
         return -1
