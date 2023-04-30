@@ -1,6 +1,8 @@
 """
     Given a circle with x, y, r indicating the coordinate of the center (x, y) and the radius (r),
     find the number of coordinates with non-negative integer coordinates in the circle
+
+    LTE
 """
 
 
@@ -20,3 +22,7 @@ def f(x, y, r):
 
 
 print(f(2, 3, 1))
+
+"""
+    TODO: binary search
+"""
