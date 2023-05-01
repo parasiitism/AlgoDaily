@@ -8,34 +8,32 @@
     Space		O(N)
     92 ms, faster than 46.85%
 */
-var findCircleNum = function(M) {
-    const n = M.length
-    const seen = new Set()
+var findCircleNum = function(isConnected) {
+    const n = isConnected.length
     let res = 0
+    const seen = new Set()
     for (let i = 0; i < n; i++) {
-        if (bfs(M, i, seen) > 0) {
-            res += 1
+        if (seen.has(i)) {
+            continue
         }
+        bfs(isConnected, i, seen)
+        res += 1
     }
     return res
 };
 
-const bfs = (M, start, seen) => {
-    let count = 0
-    const q = [[start, start]]
+const bfs = (isConnected, start, seen) => {
+    const q = [start]
     while (q.length > 0) {
-        const [i, j] = q.shift()
-        if (M[i][j] == 0) {
+        const i = q.shift()
+        if (seen.has(i)) {
             continue
         }
-        if (seen.has(j)) {
-            continue
-        }
-        seen.add(j)
-        count += 1
-        for (let k = 0; k < M[j].length; k++) {
-            q.push([j, k])
+        seen.add(i)
+        for (let j = 0; j < isConnected[i].length; j++) {
+            if (isConnected[i][j] == 1) {
+                q.push(j)
+            }
         }
     }
-    return count
 }
