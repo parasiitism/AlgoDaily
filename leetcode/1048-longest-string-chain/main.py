@@ -46,7 +46,7 @@ class Solution:
         - slicing every character to see if there is a match in the dp array
         - if yes, use dp[key] + 1 to see if we can come up with the longest chain, save the 'longest' to avoid redundant calculation
 
-    Time    O(NlogN)
+    Time    O(NlogN + W*W)
     Space   O(N)
     164 ms, faster than 45.36%
 """
