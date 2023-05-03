@@ -26,12 +26,13 @@ const f = S => {
             vowel_last_idx = i
         } else {
             if (vowel_first_idx === -1) {
+                // it also means vowel_last_idx == -1
                 continue
             }
             const short_sub = S.slice(vowel_last_idx, i+1)
             if (min_length_sub === null) {
                 min_length_sub = short_sub
-                max_length_sub = short_sub
+                max_length_sub = short_sub // the first substring
             }
             const long_sub = S.slice(vowel_first_idx, i+1)
             if (long_sub.length > max_length_sub.length) {

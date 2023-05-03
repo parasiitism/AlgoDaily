@@ -54,7 +54,7 @@ const f = (bids, k) => {
         return a[1] - b[1]
     })
 
-    // reduce from highest price to lowest price (if every price is unique)
+    // pop the bids from highest price to lowest price (if every price is unique)
     while (k > 0 && sortedBids.length > 0) {
         const highestBid = sortedBids[0]
         const price = highestBid[0]
@@ -66,7 +66,6 @@ const f = (bids, k) => {
             k -= highestBid[2]
             sortedBids.shift()
         } else {
-            k = 0
             sortedBids.shift()
             // no more IPO stocks to allocate, the users from the remaining bids is the result
             if (sortedBids.length > 0) {
@@ -86,13 +85,14 @@ const f = (bids, k) => {
         }
         // console.log(i, total_asks, sortedBids)
         if (k >= total_asks) {
+            // if k >= all the ASKs in this round, pop all bids 
             k -= total_asks
             sortedBids = sortedBids.slice(i+1)
         } else if (k >= i+1) {
-            // we don't have enough stocks, but everyone at least have 1 IPO stock
+            // if k >= all the ASKs in  this round, but everyone at least have 1 IPO stock even tho we don't have enough stocks
             return []
         } else {
-            // we even don't have enough stocks for 1 round of rotation
+            // we even don't have enough stocks for 1 round of rotation, pop the first i bids
             sortedBids = sortedBids.slice(i)
             k = 0
         }

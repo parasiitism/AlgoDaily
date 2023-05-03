@@ -29,18 +29,13 @@ const f = S => {
         left_ants = left_ants.map(x => x+1)
         right_ants = right_ants.map(x => x-1)
         const counter = {}
-        count_ants_on_string(counter, left_ants, '>')
-        count_ants_on_string(counter, right_ants, '<')
+        ants_on_string(counter, left_ants, '>')
+        ants_on_string(counter, right_ants, '<')
 
         let snapshot = ''
         for (let j = 0; j < n; j++) {
             if (j in counter) {
-                if (counter[j].length > 1) {
-                    snapshot += '+'
-                } else {
-                    const ant = counter[j][0]
-                    snapshot += ant
-                }
+                snapshot += counter[j]
             } else {
                 snapshot += '.'
             }
@@ -51,12 +46,13 @@ const f = S => {
     return res
 }
 
-const count_ants_on_string = (counter, arr, ant) => {
+const ants_on_string = (counter, arr, ant) => {
     for (let x of arr) {
         if (x in counter === false) {
-            counter[x] = []
+            counter[x] = ant
+        } else {
+            counter[x] = '+'
         }
-        counter[x].push(ant)
     }
 }
 
