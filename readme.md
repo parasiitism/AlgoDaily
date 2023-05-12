@@ -78,18 +78,18 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | ---- | --- | --- | --- | --- |
 | 1701 | [Memoize](/leetcode/2623) | JS | [leetcode 2623](https://leetcode.com/problems/memoize/) | |
 | 1702 | [Snail Traversal](/leetcode/2624) | array | [leetcode 2624](https://leetcode.com/problems/snail-traversal/) | |
-| 1703 | [Flatten Deeply Nested Array](/leetcode/2625) | recursion | [leetcode 2625](https://leetcode.com/problems/flatten-deeply-nested-array/description/) | |
+| 1703 | [Flatten Deeply Nested Array](/leetcode/2625) | recursion | [leetcode 2625](https://leetcode.com/problems/flatten-deeply-nested-array/) | |
 | 1704 | [Array Reduce Transformation](/leetcode/2626) | JS | [leetcode 2626](https://leetcode.com/problems/array-reduce-transformation/) | |
 | 1705 | [Debounce](/leetcode/2627) | JS | [leetcode 2627](https://leetcode.com/problems/debounce/) | |
 | 1706 | [JSON Deep Equal](/leetcode/2628) | recursion | [leetcode 2628](https://leetcode.com/problems/json-deep-equal/) | |
 | 1707 | [Sum of all subarrays](/glassdoor/jpmorgan/sum-of-all-subarrays/) | math | glassdoor | 📌 |
-| 1708 | [Function Composition](/leetcode/2629) | JS | [leetcode 2629](https://leetcode.com/problems/function-composition/description/) | ✅ iterative, ⭐️ recursive |
+| 1708 | [Function Composition](/leetcode/2629) | JS | [leetcode 2629](https://leetcode.com/problems/function-composition/) | ✅ iterative, ⭐️ recursive |
 | 1709 | [Group By](/leetcode/2631) | hashtable | [leetcode 2631](https://leetcode.com/problems/group-by/) | |
 | 1710 | [Curry](/leetcode/2632) | recursion | [leetcode 2632](https://leetcode.com/problems/curry/) | ⭐️⭐️⭐️ very interesting |
 | 1711 | [Filter Elements from Array](/leetcode/2634) | array | [leetcode 2634](https://leetcode.com/problems/filter-elements-from-array/) |  |
 | 1712 | [Apply Transform Over Each Element in Array](/leetcode/2635) | array | [leetcode 2635](https://leetcode.com/problems/apply-transform-over-each-element-in-array/) | |
-| 1713 | [Promise Time Limit](/leetcode/2637) | JS | [leetcode 2637](https://leetcode.com/problems/promise-time-limit/description/) | ⭐️ JS promise |
-| 1714 | [Convert Object to JSON String](/leetcode/2633) | recursion | [leetcode 2633](https://leetcode.com/problems/convert-object-to-json-string/description/) | ⭐️ practical |
+| 1713 | [Promise Time Limit](/leetcode/2637) | JS | [leetcode 2637](https://leetcode.com/problems/promise-time-limit/) | ⭐️ JS promise |
+| 1714 | [Convert Object to JSON String](/leetcode/2633) | recursion | [leetcode 2633](https://leetcode.com/problems/convert-object-to-json-string/) | ⭐️ practical |
 | 1715 | [Check Sum of Two Fibonacci](/glassdoor/hrt/check-sum-of-two-fibonacci) | DP, 2 pointers | glassdoor | |
 | 1716 | [Code Length Calculator](/glassdoor/hrt/code-length-calculator/) | greedy | glassdoor |  |
 | 1717 | [Is Chemical Reaction Balanced](/glassdoor/hrt/is-chemical-reaction-balanced) | greedy | glassdoor | ⭐️ |
