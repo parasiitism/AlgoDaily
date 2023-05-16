@@ -95,3 +95,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1717 | [Is Chemical Reaction Balanced](/glassdoor/hrt/is-chemical-reaction-balanced) | greedy | glassdoor | ⭐️ |
 | 1718 | [Ways to Make Palindrome](/glassdoor/hrt/ways-to-make-palindrome) | string , math, backtracking | glassdoor |  |
 | 1719 | [Find the Width of Columns of a Grid](/leetcode/2639) | array | [leetcode 2623](https://leetcode.com/problems/find-the-width-of-columns-of-a-grid/) | |
+| 1720 | [Find the Score of All Prefixes of an Array](/leetcode/2640) | prefix sum | [leetcode 2640](https://leetcode.com/problems/find-the-score-of-all-prefixes-of-an-array/) | |
