@@ -100,4 +100,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1721 | [Design Graph With Shortest Path Calculator](/leetcode/2642) | JS | [leetcode 2642](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/) | |
 | 1722 | [Row With Maximum Ones](/leetcode/2643) | array | [leetcode 2643](https://leetcode.com/problems/row-with-maximum-ones/) | |
 | 1723 | [Find the Maximum Divisibility Score](/leetcode/2644) | math | [leetcode 2644](https://leetcode.com/problems/find-the-maximum-divisibility-score/) | |
-| 1734 | [Minimum Additions to Make Valid String](/leetcode/2645) | greedy | [leetcode 2645](https://leetcode.com/problems/minimum-additions-to-make-valid-string/) | |
+| 1724 | [Minimum Additions to Make Valid String](/leetcode/2645) | greedy | [leetcode 2645](https://leetcode.com/problems/minimum-additions-to-make-valid-string/) | |
+| 1725 | [Highly Profitable Months](/glassdoor/jpmorgan/highly-profitable-months/) | 2 pointers | glassdoor | |
