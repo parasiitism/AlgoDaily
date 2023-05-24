@@ -102,3 +102,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1723 | [Find the Maximum Divisibility Score](/leetcode/2644) | math | [leetcode 2644](https://leetcode.com/problems/find-the-maximum-divisibility-score/) | |
 | 1724 | [Minimum Additions to Make Valid String](/leetcode/2645) | greedy | [leetcode 2645](https://leetcode.com/problems/minimum-additions-to-make-valid-string/) | |
 | 1725 | [Highly Profitable Months](/glassdoor/jpmorgan/highly-profitable-months/) | 2 pointers | glassdoor | |
+| 1726 | [Array Reduction](/glassdoor/jpmorgan/array-reduction/) | heap | glassdoor | |
