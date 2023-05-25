@@ -104,3 +104,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1725 | [Highly Profitable Months](/glassdoor/jpmorgan/highly-profitable-months/) | 2 pointers | glassdoor | |
 | 1726 | [Array Reduction](/glassdoor/jpmorgan/array-reduction/) | heap | glassdoor | |
 | 1727 | [Checksum](/glassdoor/jpmorgan/checksum) | string | glassdoor | |
+| 1728 | [Generate Fibonacci Sequence](/leetcode/2648) | JS | [leetcode 2648](https://leetcode.com/problems/generate-fibonacci-sequence/) | |
+
