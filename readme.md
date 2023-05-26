@@ -105,4 +105,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1726 | [Array Reduction](/glassdoor/jpmorgan/array-reduction/) | heap | glassdoor | |
 | 1727 | [Checksum](/glassdoor/jpmorgan/checksum) | string | glassdoor | |
 | 1728 | [Generate Fibonacci Sequence](/leetcode/2648) | JS | [leetcode 2648](https://leetcode.com/problems/generate-fibonacci-sequence/) | |
-
+| 1729 | [Nested Array Generator](/leetcode/2649) | JS | [leetcode 2649](https://leetcode.com/problems/nested-array-generator/) | |
