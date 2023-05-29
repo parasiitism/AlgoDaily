@@ -106,3 +106,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1727 | [Checksum](/glassdoor/jpmorgan/checksum) | string | glassdoor | |
 | 1728 | [Generate Fibonacci Sequence](/leetcode/2648) | JS | [leetcode 2648](https://leetcode.com/problems/generate-fibonacci-sequence/) | |
 | 1729 | [Nested Array Generator](/leetcode/2649) | JS | [leetcode 2649](https://leetcode.com/problems/nested-array-generator/) | |
+| 1730 | [Calculate Delayed Arrival Time](/leetcode/2651) | math | [leetcode 2651](https://leetcode.com/problems/calculate-delayed-arrival-time/) | |
+
