@@ -110,3 +110,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1731 | [Sum Multiples](/leetcode/2652) | math | [leetcode 2652](https://leetcode.com/problems/sum-multiples/description/) | |
 | 1732 | [Maximum Sum With Exactly K Elements](/leetcode/2656) | math | [leetcode 2656](https://leetcode.com/problems/maximum-sum-with-exactly-k-elements/) |  |
 | 1733 | [Find the Prefix Common Array of Two Arrays](/leetcode/2657) | hashtable | [leetcode 2657](https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/) | ⭐️ practical |
+| 1734 | [Maximum Number of Fish in a Grid](/leetcode/2658) | graph | [leetcode 2658](https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/) | ⭐️ practical |
+
