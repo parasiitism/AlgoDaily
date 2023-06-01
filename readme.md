@@ -24,7 +24,7 @@ I guess doing algorithms every day is a long-term investment in my life
 - Linked list
 - Bit Operation
 - Backtracking
-- Dynamic programming(Kadan, Knapsack, Binary Lifting...etc)
+- Dynamic programming(Kadan, Knapsack, Binary Lifting, MinMax...etc)
 - Math (Reservoir Sampling, Rejection Sampling...etc)
 - and more...
 
@@ -112,3 +112,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1733 | [Find the Prefix Common Array of Two Arrays](/leetcode/2657) | hashtable | [leetcode 2657](https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/) | ⭐️ practical |
 | 1734 | [Maximum Number of Fish in a Grid](/leetcode/2658) | graph | [leetcode 2658](https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/) | ⭐️ practical |
 | 1735 | [Sliding Subarray Beauty](/leetcode/2653) | sliding window | [leetcode 2653](https://leetcode.com/problems/sliding-subarray-beauty/) |  |
+| 1735 | [Find Can I Win](/leetcode/464) | recursion, hashtable, minmax | [leetcode 464](https://leetcode.com/problems/can-i-win/) | 📌📌📌 |
