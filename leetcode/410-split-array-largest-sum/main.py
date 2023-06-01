@@ -34,6 +34,35 @@ class Solution:
 
 
 """
+    2nd: 
+    optimization 1: using an index to indicate the start instead of doing array slicing
+
+    LTE
+"""
+
+
+class Solution:
+    def splitArray(self, nums: List[int], k: int) -> int:
+        return self.dfs(nums, 0, k, {})
+
+    def dfs(self, nums, start, k, cache):
+        if k == 1:
+            return sum(nums[start:])
+        key = (start, k)
+        if key in cache:
+            return cache[key]
+        pfs = 0
+        res = 2**32
+        for i in range(start, len(nums)):
+            pfs += nums[i]
+            sfs = self.dfs(nums, i+1, k - 1, cache)
+            cur = max(pfs, sfs)
+            res = min(res, cur)
+        cache[key] = res
+        return res
+
+
+"""
     2nd:
     - similar to lc813, 1043, 1335
     - optimize 1st approach with suffix sum and use start index instead of array slicing
@@ -106,3 +135,41 @@ class Solution:
                     dp[i][j] = min(dp[i][j], cur)
 
         return dp[-1][-1]
+
+
+"""
+    4th: binary search
+    - the best approach for this problem, easier to implement and best in time complexity
+    - the idea is to binary-search the subarray sum, (inversely proportional)
+        the smaller the subsarray sum, the more number of subarrays
+        the bigger the subsarray sum, the fewer number of subarrays
+
+    Time    O(NlogS)
+    Space   O(1)
+"""
+
+
+class Solution:
+    def splitArray(self, nums: List[int], k: int) -> int:
+        left = max(nums)
+        right = 2**32
+        while left < right:
+            mid = (left + right) // 2
+            # not intuitive for this condition, but the idea is mid is too big to leads to a small number of pieces,
+            # we need to have smaller mid, so we search on the left
+            if self.countSubarray(nums, mid) <= k:
+                right = mid
+            else:
+                left = mid + 1
+        return left
+
+    def countSubarray(self, nums, suggestion):
+        cur_sum = 0
+        split_cnt = 0
+        for x in nums:
+            if cur_sum + x <= suggestion:
+                cur_sum += x
+            else:
+                cur_sum = x
+                split_cnt += 1
+        return split_cnt + 1
