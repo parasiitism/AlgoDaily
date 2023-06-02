@@ -1,5 +1,5 @@
-"""
-    1st approach: sort + math, learned from others
+/*
+    1st approach: sort + mono-increase stack, learned from others
     - for each car, if the time it takes to desitination (transit time) is less than the car in front of it, 
         it is going to catach up that car
     
@@ -17,20 +17,20 @@
     Time    O(nlogn)
     Space   O(n)
     168 ms, faster than 45.27%
-"""
-
-
-class Solution(object):
-    def carFleet(self, target, position, speed):
-        cars = []
-        for i in range(len(position)):
-            t = (target-position[i]) / float(speed[i])
-            cars.append((position[i], t))
-        cars.sort(key=lambda x: x[0])
-        count = 0
-        cur_max = 0
-        for i in range(len(cars)-1, -1, -1):
-            if cars[i][1] > cur_max:
-                cur_max = cars[i][1]
-                count += 1
-        return count
+*/
+var carFleet = function(target, position, speed) {
+    const n = position.length
+    const cars = []
+    for (let i = 0; i < n; i++) {
+        const t = (target - position[i]) / speed[i]
+        cars.push([t, position[i]])
+    }
+    cars.sort((a, b) => b[1] - a[1])
+    const S = []
+    for (let [t, _pos] of cars) {
+        if (S.length == 0 || t > S[S.length-1]) {
+            S.push(t)
+        }
+    }
+    return S.length
+};
