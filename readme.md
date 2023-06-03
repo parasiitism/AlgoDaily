@@ -114,3 +114,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1735 | [Sliding Subarray Beauty](/leetcode/2653) | sliding window | [leetcode 2653](https://leetcode.com/problems/sliding-subarray-beauty/) |  |
 | 1735 | [Find Can I Win](/leetcode/464) | recursion, hashtable, minmax | [leetcode 464](https://leetcode.com/problems/can-i-win/) | 📌📌📌 |
 | 1736 | [Find Maximal Uncovered Ranges](/leetcode/2655) | sort | [leetcode 2655](https://leetcode.com/problems/find-maximal-uncovered-ranges/) | ⭐️ practical |
+| 1737 | [Determine the Winner of a Bowling Game](/leetcode/2660) | array | [leetcode 2660](https://leetcode.com/problems/determine-the-winner-of-a-bowling-game/) | |
