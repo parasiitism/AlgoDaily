@@ -116,4 +116,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1736 | [Find Maximal Uncovered Ranges](/leetcode/2655) | sort | [leetcode 2655](https://leetcode.com/problems/find-maximal-uncovered-ranges/) | ⭐️ practical |
 | 1737 | [Determine the Winner of a Bowling Game](/leetcode/2660) | array | [leetcode 2660](https://leetcode.com/problems/determine-the-winner-of-a-bowling-game/) | |
 | 1738 | [First Completely Painted Row or Column](/leetcode/2661) | hashtable | [leetcode 2661](https://leetcode.com/problems/first-completely-painted-row-or-column/) | |
+| 1739 | [Circle and Rectangle Overlapping](/leetcode/1401) | math | [leetcode 1401](https://leetcode.com/problems/circle-and-rectangle-overlapping/) | binary search |
 | 1740 | [The Knight’s Tour](/leetcode/2664) | backtracking | [leetcode 2664](https://leetcode.com/problems/the-knights-tour/) | ⭐️ i like this |
