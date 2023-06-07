@@ -118,3 +118,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1738 | [First Completely Painted Row or Column](/leetcode/2661) | hashtable | [leetcode 2661](https://leetcode.com/problems/first-completely-painted-row-or-column/) | |
 | 1739 | [Circle and Rectangle Overlapping](/leetcode/1401) | math | [leetcode 1401](https://leetcode.com/problems/circle-and-rectangle-overlapping/) | binary search |
 | 1740 | [The Knight’s Tour](/leetcode/2664) | backtracking | [leetcode 2664](https://leetcode.com/problems/the-knights-tour/) | ⭐️ i like this |
+| 1741 | [Counter II](/leetcode/2665) | JS | [leetcode 2665](https://leetcode.com/problems/counter-ii/) | |
+
