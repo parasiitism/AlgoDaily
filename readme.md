@@ -120,3 +120,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1740 | [The Knight’s Tour](/leetcode/2664) | backtracking | [leetcode 2664](https://leetcode.com/problems/the-knights-tour/) | ⭐️ i like this |
 | 1741 | [Counter II](/leetcode/2665) | JS | [leetcode 2665](https://leetcode.com/problems/counter-ii/) | |
 | 1742 | [Allow One Function Call](/leetcode/2666) | JS | [leetcode 2666](https://leetcode.com/problems/allow-one-function-call/) | |
+| 1743 | [Create Hello World Function](/leetcode/2667) | JS | [leetcode 2667](https://leetcode.com/problems/create-hello-world-function/) | |
