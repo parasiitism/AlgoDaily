@@ -76,6 +76,27 @@ class Solution(object):
 
 
 """
+    OR
+"""
+
+
+class Solution:
+    def numDistinct(self, S: str, T: str) -> int:
+        return self.dfs(S, T, 0, 0)
+
+    @cache
+    def dfs(self, S, T, i, j):
+        if j >= len(T):
+            return 1
+        elif i == len(S):
+            return 0
+        cnt = self.dfs(S, T, i+1, j)
+        if S[i] == T[j]:
+            cnt += self.dfs(S, T, i+1, j+1)
+        return cnt
+
+
+"""
     3rd: dynamic programming with an 2D array
     
 
