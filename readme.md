@@ -123,3 +123,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1743 | [Create Hello World Function](/leetcode/2667) | JS | [leetcode 2667](https://leetcode.com/problems/create-hello-world-function/) | |
 | 1744 | [Find the Distinct Difference Array](/leetcode/2670) | hashtable | [leetcode 2670](https://leetcode.com/problems/find-the-distinct-difference-array/) | ⭐️ prefix sum, suffix sum, hashtable |
 | 1745 | [Frequency Tracker](/leetcode/2671) | hashtable | [leetcode 2671](https://leetcode.com/problems/frequency-tracker/) | ⭐️ practical |
+| 1746 | [Make Costs of Paths Equal in a Binary Tree](/leetcode/2673) | recursion | [leetcode 2673](https://leetcode.com/problems/make-costs-of-paths-equal-in-a-binary-tree/) | ⭐️ hinted, interesting problem |
+
