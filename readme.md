@@ -125,3 +125,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1745 | [Frequency Tracker](/leetcode/2671) | hashtable | [leetcode 2671](https://leetcode.com/problems/frequency-tracker/) | ⭐️ practical |
 | 1746 | [Make Costs of Paths Equal in a Binary Tree](/leetcode/2673) | recursion | [leetcode 2673](https://leetcode.com/problems/make-costs-of-paths-equal-in-a-binary-tree/) | ⭐️ hinted, interesting problem |
 | 1747 | [Number of Adjacent Elements With the Same Color](/leetcode/2672) | math | [leetcode 2672](https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color/) | ⭐️ hinted |
+| 1748 | [Split a Circular Linked List](/leetcode/2674) | linked list | [leetcode 2674](https://leetcode.com/problems/split-a-circular-linked-list/description/) | i hate linked list |
+
