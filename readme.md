@@ -127,3 +127,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1747 | [Number of Adjacent Elements With the Same Color](/leetcode/2672) | math | [leetcode 2672](https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color/) | ⭐️ hinted |
 | 1748 | [Split a Circular Linked List](/leetcode/2674) | linked list | [leetcode 2674](https://leetcode.com/problems/split-a-circular-linked-list/description/) | i hate linked list |
 | 1749 | [Number of Senior Citizens](/leetcode/2678) | string | [leetcode 2678](https://leetcode.com/problems/number-of-senior-citizens/) | |
+| 1750 | [Sum in a Matrix](/leetcode/2679) | sort | [leetcode 2679](https://leetcode.com/problems/sum-in-a-matrix/) | |
+
