@@ -129,3 +129,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1749 | [Number of Senior Citizens](/leetcode/2678) | string | [leetcode 2678](https://leetcode.com/problems/number-of-senior-citizens/) | |
 | 1750 | [Sum in a Matrix](/leetcode/2679) | sort | [leetcode 2679](https://leetcode.com/problems/sum-in-a-matrix/) | |
 | 1751 | [Throttle](/leetcode/2676) | JS | [leetcode 2676](https://leetcode.com/problems/throttle/) | ⭐️ practical, 2 approaches |
+| 1752 | [Chunk Array](/leetcode/2677) | JS | [leetcode 2677](https://leetcode.com/problems/chunk-array/) | |
