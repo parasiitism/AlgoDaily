@@ -10,21 +10,22 @@
 */
 var groupStrings = function(strings) {
     const ht = {}
-    for (let s of strings) {
-        const k = generateKey(s)
-        if (k in ht == false) {
+    for (let i = 0; i < strings.length; i++) {
+        const s = strings[i]
+        const k = genKey(s)
+        if (k in ht === false) {
             ht[k] = []
         }
         ht[k].push(s)
     }
     const res = []
-    for (let k in ht) {
-        res.push(ht[k])
+    for (let key in ht) {
+        res.push(ht[key])
     }
     return res
 };
 
-const generateKey = (s) => {
+const genKey = (s) => {
     let diffs = []
     for (let i = 1; i < s.length; i++) {
         let diff = s[i].charCodeAt() - s[i-1].charCodeAt()

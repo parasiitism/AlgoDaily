@@ -8,27 +8,25 @@
     148 ms, faster than 15.16%
 */
 var lengthOfLongestSubstringTwoDistinct = function (s) {
-	let ht = {};
-	let slow = 0;
-	let res = 0;
-	for (let i = 0; i < s.length; i++) {
-		const x = s[i];
-
-		if (x in ht) {
-			ht[x] += 1;
-		} else {
-			ht[x] = 1;
-		}
-
-		while (Object.keys(ht).length > 2) {
-			const last = s[slow];
-			ht[last] -= 1;
-			slow += 1;
-			if (ht[last] == 0) {
-				delete ht[last];
-			}
-		}
-		res = Math.max(res, i - slow + 1);
-	}
-	return res;
+	const counter = {}
+    let res = 0
+    let j = 0
+    for (let i = 0 ; i < s.length; i++) {
+        const c = s[i]
+        if (c in counter === false) {
+            counter[c] = 0
+        }
+        counter[c] += 1
+        
+        while (Object.keys(counter).length > 2) {
+            const left = s[j]
+            j += 1
+            counter[left] -= 1
+            if (counter[left] === 0) {
+                delete counter[left]
+            }
+        }
+        res = Math.max(res, i - j + 1)
+    }
+    return res
 };

@@ -22,20 +22,18 @@
     104 ms, faster than 55.43% 
 */
 var wiggleSort = function (nums) {
-	const n = nums.length;
-	if (n == 0) {
-		return [];
-	}
-	const arr = [...nums];
-	arr.sort((a, b) => a - b);
-	const half = Math.ceil(n / 2);
-	for (let i = 0; i < half; i++) {
-		const idx = i * 2;
-		nums[idx] = arr[i];
-		if (idx + 1 < n) {
-			nums[idx + 1] = arr[i + half];
-		}
-	}
+	var wiggleSort = function(nums) {
+        const n = nums.length
+        const A = [...nums]
+        A.sort((a, b) => a - b)
+        const h = Math.ceil(n/2)
+        for (let i = 0; i < h; i++) {
+            nums[2*i] = A[i]
+            if (2*i+1 < n) {
+                nums[2*i+1] = A[h+i]
+            }
+        }
+    };
 };
 
 /*
