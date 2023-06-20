@@ -131,3 +131,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1751 | [Throttle](/leetcode/2676) | JS | [leetcode 2676](https://leetcode.com/problems/throttle/) | ⭐️ practical, 2 approaches |
 | 1752 | [Chunk Array](/leetcode/2677) | JS | [leetcode 2677](https://leetcode.com/problems/chunk-array/) | |
 | 1753 | [Find the Losers of the Circular Game](/leetcode/2682) | array | [leetcode 2682](https://leetcode.com/problems/find-the-losers-of-the-circular-game/) | |
+| 1754 | [Maximum Number of Moves in a Grid](/leetcode/2684) | graph | [leetcode 2684](https://leetcode.com/problems/maximum-number-of-moves-in-a-grid/) | |
+
