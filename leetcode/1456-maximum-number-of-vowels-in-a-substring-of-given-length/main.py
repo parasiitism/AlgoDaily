@@ -14,17 +14,15 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        resCount = 0
-        curCount = 0
+        res = 0
+        cur = 0
         for i in range(len(s)):
-
+            c = s[i]
+            if c in 'aeiou':
+                cur += 1
             if i >= k:
-                lastChar = s[i-k]
-                if lastChar in ['a', 'e', 'i', 'o', 'u']:
-                    curCount -= 1
-
-            char = s[i]
-            if char in ['a', 'e', 'i', 'o', 'u']:
-                curCount += 1
-            resCount = max(resCount, curCount)
-        return resCount
+                left = s[i-k]
+                if left in 'aeiou':
+                    cur -= 1
+            res = max(res, cur)
+        return res

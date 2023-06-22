@@ -8,27 +8,27 @@
     104 ms, faster than 17.31%
 */
 var rightSideView = function (root) {
-	if (!root) {
-		return [];
-	}
-	const res = [];
-	const q = [[root, 0]];
-	while (q.length > 0) {
-		const [node, depth] = q.shift();
-
-        // we can also do it with a hashtable
-		if (depth >= res.length) {
-			res.push(node.val);
-		}
-
-		if (node.right) {
-			q.push([node.right, depth + 1]);
-		}
-		if (node.left) {
-			q.push([node.left, depth + 1]);
-		}
-	}
-	return res;
+	if (root === null) {
+        return []
+    }
+    const q = [root]
+    let res = []
+    while (q.length > 0) {
+        const n = q.length
+        for (let i = 0; i < n; i++) {
+            const node = q.shift()
+            if (i === 0) {
+                res.push(node.val)
+            }
+            if (node.right) {
+                q.push(node.right)
+            }
+            if (node.left) {
+                q.push(node.left)
+            }
+        }
+    }
+    return res
 };
 
 /*

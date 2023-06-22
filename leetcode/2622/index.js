@@ -16,9 +16,8 @@ var TimeLimitedCache = function() {
  * @return {boolean} if un-expired key already existed
  */
 TimeLimitedCache.prototype.set = function(key, value, duration) {
-    let is_existed = false
-    if (key in this.key2values) {
-        is_existed = true
+    let is_existed = key in this.key2values
+    if (is_existed) {
         const old_timeout_ID = this.key2timeoutIDs[key]
         clearTimeout(old_timeout_ID)
     }

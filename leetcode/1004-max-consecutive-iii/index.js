@@ -10,20 +10,20 @@
 	60 ms, faster than 100.00%
 */
 var longestOnes = function(A, K) {
-    const n = A.length
-    let zeroCount = 0
     let j = 0
     let res = 0
-    for (let i = 0; i < n; i++) {
-        if (A[i] == 0) {
-            zeroCount += 1
+    let zeros = 0
+    for (let i = 0; i < nums.length; i++) {
+        const right = nums[i]
+        if (right === 0) {
+            zeros += 1
         }
-        while (zeroCount > K) {
-            const left = A[j]
-            j += 1
-            if (left == 0) {
-                zeroCount -= 1
+        while (zeros > k) {
+            const left = nums[j]
+            if (left === 0) {
+                zeros -= 1
             }
+            j += 1
         }
         res = Math.max(res, i - j + 1)
     }

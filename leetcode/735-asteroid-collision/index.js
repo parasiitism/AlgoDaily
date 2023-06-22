@@ -12,27 +12,21 @@
     88 ms, faster than 63.04%
 */
 var asteroidCollision = function (asteroids) {
-	const s = [];
-	for (let i = 0; i < asteroids.length; i++) {
-		const x = asteroids[i];
-		if (x > 0) {
-			s.push(x);
-		} else {
-			while (
-				s.length > 0 &&
-				s[s.length - 1] > 0 &&
-				s[s.length - 1] < -x
-			) {
-				s.pop();
-			}
-			if (s[s.length - 1] == -x) {
-				s.pop();
-				continue;
-			}
-			if (s.length == 0 || s[s.length - 1] < 0) {
-				s.push(x);
-			}
-		}
-	}
-	return s;
+	const S = []
+    for (let i = 0; i < asteroids.length; i++) {
+        const x = asteroids[i]
+        if (x >= 0) {
+            S.push(x)
+        } else {
+            while (S.length > 0 && S[S.length-1] > 0 && S[S.length-1] < -x ) {
+                S.pop()
+            }
+            if (S.length > 0 && S[S.length-1] == -x) {
+                S.pop()
+            } else if (S.length === 0 || S[S.length-1] < 0) {
+                S.push(x)
+            }
+        }
+    }
+    return S
 };

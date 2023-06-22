@@ -40,17 +40,13 @@ var pivotIndex = function(nums) {
     108 ms, faster than 98.64%
 */
 var pivotIndex = function(nums) {
-    const n = nums.length
+    const total = nums.reduce((acc, cur) => acc+cur, 0)
     let pfs = 0
-    nums.forEach(x => pfs += x)
-    let sfs = 0
-    let res = -1
-    for (let i = n - 1; i >=0; i--) {
-        sfs += nums[i]
-        if (sfs == pfs) {
-            res = i
+    for (let i = 0; i < nums.length; i++) {
+        if (pfs === total - pfs - nums[i]) {
+            return i
         }
-        pfs -= nums[i]
+        pfs += nums[i]
     }
-    return res
+    return -1
 };

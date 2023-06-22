@@ -28,3 +28,26 @@ var minCostClimbingStairs = function (cost) {
 	}
 	return Math.min(dp[n - 2], dp[n - 1]);
 };
+
+/*
+    2nd: top-down DP + hashtable
+
+    Time 	O(n)
+	Space	O(n) the dp array
+*/
+var minCostClimbingStairs = function(cost) {
+    const cache = {}
+    const dfs = i => {
+        if (i >= cost.length) {
+            return 0
+        }
+        if (i in cache) {
+            return cache[i]
+        }
+        const a = cost[i] + dfs(i+1)
+        const b = cost[i] + dfs(i+2)
+        cache[i] = Math.min(a, b)
+        return cache[i]
+    }
+    return Math.min(dfs(0), dfs(1))
+};

@@ -14,26 +14,17 @@
     88 ms, faster than 91.45%
 */
 var lowestCommonAncestor = function (root, p, q) {
-	if (!root) {
-		return null;
-	}
-	return dfs(root, p, q);
-};
-
-const dfs = (node, p, q) => {
-	if (node == null || node == p || node == q) {
-		return node;
-	}
-	let left = dfs(node.left, p, q);
-	let right = dfs(node.right, p, q);
-	if (left != null && right != null) {
-		return node;
-	}
-	if (left != null) {
-		return left;
-	}
-	if (right != null) {
-		return right;
-	}
-	return null;
+	if (root === null || root.val == p.val || root.val == q.val) {
+        return root
+    }
+    const L = lowestCommonAncestor(root.left, p, q)
+    const R = lowestCommonAncestor(root.right, p, q)
+    if (L !== null && R !== null) {
+        return root
+    } else if (L !== null) {
+        return L
+    } else if (R !== null) {
+        return R
+    }
+    return null
 };
