@@ -33,3 +33,38 @@ var compress = function(chars) {
     }
     return chars.length
 };
+
+/*
+    2nd
+    
+    Time    O(N)
+    Space   O(N)
+*/
+var compress = function(chars) {
+    let cur = chars[0]
+    let cnt = 1
+    const temp = []
+    for (let i = 1; i < chars.length; i++) {
+        const x = chars[i]
+        if (cur == x) {
+            cnt += 1
+        } else {
+            temp.push({cur, cnt})
+            cur = x
+            cnt = 1
+        }
+    }
+    temp.push({cur, cnt})
+    let res = ''
+    for (let {cur, cnt} of temp) {
+        res += cur
+        if (cnt > 1) {
+            res += `${cnt}`
+        }
+    }
+    const A = res.split('')
+    for (let i = 0; i < A.length; i++) {
+        chars[i] = A[i]
+    }
+    return A.length
+};
