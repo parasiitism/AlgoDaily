@@ -133,3 +133,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1753 | [Find the Losers of the Circular Game](/leetcode/2682) | array | [leetcode 2682](https://leetcode.com/problems/find-the-losers-of-the-circular-game/) | |
 | 1754 | [Maximum Number of Moves in a Grid](/leetcode/2684) | graph | [leetcode 2684](https://leetcode.com/problems/maximum-number-of-moves-in-a-grid/) | |
 | 1755 | [Count the Number of Complete Components](/leetcode/2685) | graph | [leetcode 2685](https://leetcode.com/problems/count-the-number-of-complete-components/) | |
+| 1756 | [Extract Kth Character From The Rope Tree](/leetcode/2689) | tree | [leetcode 2689](https://leetcode.com/problems/extract-kth-character-from-the-rope-tree/) | |
