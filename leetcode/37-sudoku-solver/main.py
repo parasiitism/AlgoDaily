@@ -25,16 +25,13 @@ from collections import defaultdict
 
 class Solution:
     def solveSudoku(self, board: List[List[str]]) -> None:
-        """
-        Do not return anything, modify board in-place instead.
-        """
         R, C = len(board), len(board[0])
-        rowHt = defaultdict(set)    # record the used numbers in every row
-        colHt = defaultdict(set)    # record the used numbers in every column
-        gridHt = defaultdict(set)   # 3x3: (0,0), (0,3), (0,6), (3,0), (3,3)...
+        ht_row = defaultdict(set)    # record the used numbers in every row
+        ht_col = defaultdict(set)    # record the used numbers in every column
+        # UpperLefts: (0,0), (0,3), (0,6), (3,0), (3,3)...
+        ht_region = defaultdict(set)
 
         # 1. clone the original board
-        # 2. put the filled cells in hashtables accordingly
         original = []
         for i in range(len(board)):
             temp = []
@@ -42,9 +39,9 @@ class Solution:
                 x = board[i][j]
                 temp.append(x)
                 if x != '.':
-                    rowHt[i].add(x)
-                    colHt[j].add(x)
-                    gridHt[i//3*3, j//3*3].add(x)
+                    ht_row[i].add(x)
+                    ht_col[j].add(x)
+                    ht_region[i//3*3, j//3*3].add(x)
             original.append(temp)
 
         def backtrack(i, j):
@@ -60,25 +57,20 @@ class Solution:
                     b = backtrack(i+1, 0)
                 return b
 
-            # merge the hashtable for specific i, j, 3x3 key
-            key = i//3*3, j//3*3
-            s = set()
-            s |= rowHt[i]
-            s |= colHt[j]
-            s |= gridHt[key]
-
-            # we only consider the numbers which hasnt been used
+            # filter the used
+            key = (i//3*3, j//3*3)
             cands = []
-            for num in range(1, 10):
-                x = str(num)
-                if x not in s:
-                    cands.append(x)
+            for x in range(1, 10):
+                c = str(x)
+                if (c in ht_row[i]) or (c in ht_col[j]) or (c in ht_region[key]):
+                    continue
+                cands.append(c)
 
             # try all possibilities
             for cand in cands:
-                rowHt[i].add(cand)
-                colHt[j].add(cand)
-                gridHt[key].add(cand)
+                ht_row[i].add(cand)
+                ht_col[j].add(cand)
+                ht_region[key].add(cand)
                 board[i][j] = cand
                 b = 0
                 if j+1 < C:
@@ -88,9 +80,9 @@ class Solution:
                 if b:
                     return True
                 # False means we cannot reach to the end, therefore backtrack the candidate
-                rowHt[i].remove(cand)
-                colHt[j].remove(cand)
-                gridHt[key].remove(cand)
+                ht_row[i].remove(cand)
+                ht_col[j].remove(cand)
+                ht_region[key].remove(cand)
                 board[i][j] = '.'
             return False
 
