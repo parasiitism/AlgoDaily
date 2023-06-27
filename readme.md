@@ -137,3 +137,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1757 | [Infinite Method Object](/leetcode/2690) | JS | [leetcode 2690](https://leetcode.com/problems/infinite-method-object/) | JS Proxy |
 | 1758 | [Event Emitter](/leetcode/2694) | JS | [leetcode 2694](https://leetcode.com/problems/event-emitter/) | ⭐️ very practical |
 | 1759 | [Array Wrapper](/leetcode/2695) | JS | [leetcode 2695](https://leetcode.com/problems/array-wrapper/) | |
+| 1760 | [Minimum String Length After Removing Substrings](/leetcode/2696) | stack | [leetcode 2696](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) | |
