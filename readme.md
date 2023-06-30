@@ -141,3 +141,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1761 | [Lexicographically Smallest Palindrome](/leetcode/2697) | 2 pointers | [leetcode 2697](https://leetcode.com/problems/lexicographically-smallest-palindrome/) | |
 | 1762 | [Differences Between Two Objects](/leetcode/2700) | JS | [leetcode 2700](https://leetcode.com/problems/differences-between-two-objects/) | |
 | 1763 | [2 Keys Keyboard](/leetcode/650) | recursion | [leetcode 650](https://leetcode.com/problems/2-keys-keyboard/) | 📌📌📌 easy to understand but hard to come up with the solution |
+| 1764 | [Find the Punishment Number of an Integer](/leetcode/2698) | recursion | [leetcode 2698](https://leetcode.com/problems/find-the-punishment-number-of-an-integer/) | ⭐️ interesting |
