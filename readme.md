@@ -143,3 +143,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1763 | [2 Keys Keyboard](/leetcode/650) | recursion | [leetcode 650](https://leetcode.com/problems/2-keys-keyboard/) | 📌📌📌 easy to understand but hard to come up with the solution |
 | 1764 | [Find the Punishment Number of an Integer](/leetcode/2698) | recursion | [leetcode 2698](https://leetcode.com/problems/find-the-punishment-number-of-an-integer/) | ⭐️ interesting |
 | 1765 | [Return Length of Arguments Passed](/leetcode/2703) | logic | [leetcode 2703](https://leetcode.com/problems/return-length-of-arguments-passed/) | |
+| 1802 | [Mirror Reflection](/leetcode/858) | math | [leetcode 858](https://leetcode.com/problems/mirror-reflection/) | 📌 |
