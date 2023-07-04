@@ -145,4 +145,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1765 | [Return Length of Arguments Passed](/leetcode/2703) | logic | [leetcode 2703](https://leetcode.com/problems/return-length-of-arguments-passed/) | |
 | 1766 | [To Be Or Not To Be](/leetcode/2704) | JS | [leetcode 2704](https://leetcode.com/problems/to-be-or-not-to-be/) | |
 | 1767 | [Compact Object](/leetcode/2705) | JS | [leetcode 2705](https://leetcode.com/problems/compact-object/) | |
-
+| 1768 | [Buy Two Chocolates](/leetcode/2706) | array | [leetcode 2706](https://leetcode.com/problems/buy-two-chocolates/) | |
