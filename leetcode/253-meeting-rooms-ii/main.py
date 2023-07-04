@@ -1,4 +1,4 @@
-import heapq
+from heapq import *
 
 """
     1st approach
@@ -55,16 +55,12 @@ class Solution(object):
 """
 
 
-class Solution(object):
-    def minMeetingRooms(self, intervals):
-        """
-        :type intervals: List[List[int]]
-        :rtype: int
-        """
+class Solution:
+    def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         intervals.sort()
-        pq = []
+        ends = []
         for s, e in intervals:
-            if len(pq) > 0 and s >= pq[0]:
-                heapq.heappop(pq)
-            heapq.heappush(pq, e)
-        return len(pq)
+            if len(ends) > 0 and ends[0] <= s:
+                heappop(ends)
+            heappush(ends, e)
+        return len(ends)

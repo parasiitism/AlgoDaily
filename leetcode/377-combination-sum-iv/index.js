@@ -1,7 +1,9 @@
 /*
     1st: dp
-    - similar to lc518 but diff loop arrangement
-
+    - similar to lc518, the only difference is
+    - lc518 doesn't care about the order
+    - this question cares
+    
     Time    O(NA)
     Space   O(N)
     92 ms, faster than 35.05%
@@ -33,23 +35,24 @@ var combinationSum4 = function (nums, target) {
     Space   O(N)
     84 ms, faster than 64.90%
 */
-var combinationSum4 = function (nums, target) {
-	const ht = {}
-    const dfs = (remain) => {
-        if (remain == 0) {
-            return 1
-        }
+var combinationSum4 = function(nums, target) {
+    const cache = {}
+    const dfs = remain => {
         if (remain < 0) {
             return 0
         }
-        if (remain in ht) {
-            return ht[remain]
+        if (remain == 0) {
+            return 1
+        }
+        if (remain in cache) {
+            return cache[remain]
         }
         let total = 0
-        for (let c of nums) {
-            total += dfs(remain - c)
+        for (let i = 0; i < nums.length; i++) {
+            const x = nums[i]
+            total += dfs(remain - x)
         }
-        ht[remain] = total
+        cache[remain] = total
         return total
     }
     return dfs(target)

@@ -6,28 +6,27 @@
     168 ms, faster than 27.24%
 */
 var coinChange = function(coins, amount) {
-    const ht = {}
-    const dfs = (_amount) => {
-        if (_amount == 0) {
-            return 0
-        }
-        if (_amount < 0) {
+    const cache = {}
+    const dfs = remain => {
+        if (remain < 0) {
             return 2**32
         }
-        if (_amount in ht) {
-            return ht[_amount]
+        if (remain == 0) {
+            return 0
         }
-        let minCount = 2**32
+        if (remain in cache) {
+            return cache[remain]
+        }
+        let minCnt = 2**32
         for (let c of coins) {
-            const remain = _amount - c
-            const count = dfs(remain) + 1
-            minCount = Math.min(minCount, count)
+            const cnt = dfs(remain - c) + 1
+            minCnt = Math.min(minCnt, cnt)
         }
-        ht[_amount] = minCount
-        return ht[_amount]
+        cache[remain] = minCnt
+        return minCnt
     }
     const res = dfs(amount)
-    if (res == 2**32) { return -1 }
+    if (res === 2**32) { return -1 }
     return res
 };
 
@@ -50,17 +49,17 @@ var coinChange = function(coins, amount) {
     152 ms, faster than 42.49%
 */
 var coinChange = function (coins, amount) {
-	const dp = Array(amount+1).fill(0)
+	const dp = Array(amount+1).fill(2**32)
+    dp[0] = 0
     for (let i = 1; i <= amount; i++) {
-        let minCount = 2**32
         for (let c of coins) {
-            const remain = i - c
-            if (remain >= 0) {
-                minCount = Math.min(minCount, dp[remain] + 1)
+            if (i - c >= 0) {
+                dp[i] = Math.min(dp[i], dp[i-c]+1)
             }
         }
-        dp[i] = minCount
     }
-    if (dp[amount] == 2**32) { return -1 }
+    if (dp[amount] === 2**32) {
+        return -1
+    }
     return dp[amount]
 };

@@ -22,3 +22,34 @@ var change = function (amount, coins) {
 	}
 	return ways[amount];
 };
+
+/*
+    This is very similar to lc377, the only difference is
+    - lc377 cares about the order
+    - this question doesn't care
+
+    So we use (index, remain) to cache the number of combinations of every sub-problem 
+*/
+var change = function(amount, coins) {
+    const cache = {}
+    const dfs = (start, remain) => {
+        if (remain < 0) {
+            return 0
+        }
+        if (remain == 0) {
+            return 1
+        }
+        const key = `${start},${remain}`
+        if (key in cache) {
+            return cache[key]
+        }
+        let total = 0
+        for (let i = start; i < coins.length; i++) {
+            const c = coins[i]
+            total += dfs(i, remain - c)
+        }
+        cache[key] = total
+        return total
+    }
+    return dfs(0, amount)
+};
