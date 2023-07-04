@@ -94,6 +94,29 @@ print(lowerBsearch([1, 3, 5, 5, 5, 7, 9], 10))   # 7
 # Or how many numbers < k
 
 
+def lowerBsearch2(arr, target):
+    left = 0
+    right = len(arr) - 1
+    result = len(arr)
+    while left <= right:
+        mid = (left + right) // 2
+        if target <= arr[mid]:
+            result = mid
+            right = mid - 1
+        else:
+            left = mid + 1
+    return result
+
+
+print("--lowerBsearch2--")
+print(lowerBsearch2([1, 3, 5, 5, 5, 7, 9], 0))   # 0
+print(lowerBsearch2([1, 3, 5, 5, 5, 7, 9], 1))   # 0
+print(lowerBsearch2([1, 3, 5, 5, 5, 7, 9], 4))   # 2 <- 4 is just <= 5
+print(lowerBsearch2([1, 3, 5, 5, 5, 7, 9], 5))   # 2
+print(lowerBsearch2([1, 3, 5, 5, 5, 7, 9], 6))   # 5 <- 6 is just <= 7
+print(lowerBsearch2([1, 3, 5, 5, 5, 7, 9], 10))   # 7
+
+
 def upperBsearch(nums, target):
     left = 0
     right = len(nums)
@@ -117,6 +140,29 @@ print(upperBsearch([1, 3, 5, 5, 5, 7, 9], 10))   # 7
 #      0    |   1    |    2
 # -inf -> 0 | 1 -> 9 | 10 -> 23
 # Or how many numbers <= k
+
+
+def upperBsearch2(arr, target):
+    left = 0
+    right = len(arr) - 1
+    res = len(arr)
+    while left <= right:
+        mid = (left + right) // 2
+        if target >= arr[mid]:
+            left = mid + 1
+        else:
+            res = mid
+            right = mid - 1
+    return res
+
+
+print("--upperBsearch2--")
+print(upperBsearch2([1, 3, 5, 5, 5, 7, 9], 0))   # 0
+print(upperBsearch2([1, 3, 5, 5, 5, 7, 9], 1))   # 1
+print(upperBsearch2([1, 3, 5, 5, 5, 7, 9], 4))   # 2 <-
+print(upperBsearch2([1, 3, 5, 5, 5, 7, 9], 5))   # 5
+print(upperBsearch2([1, 3, 5, 5, 5, 7, 9], 6))   # 5 <-
+print(upperBsearch2([1, 3, 5, 5, 5, 7, 9], 10))   # 7
 
 
 def descending_bsearch(nums, target):
@@ -147,26 +193,45 @@ print(descending_bsearch([11, 9, 7, 5, 3, 1], 5))   # 2
 print(descending_bsearch([11, 9, 7, 5, 3, 1], 7))   # 1
 
 
-def descending_upperBsearch(nums, target):
-    """
-    [9, 7, 5, 5, 5, 3, 1]
-                 ^
-            find this
-    """
-    left = -1
+def descending_lowerBsearch(nums, target):
+    left = 0
     right = len(nums)-1
-    while left < right:
-        mid = (left + right + 1)//2
+    res = -1
+    while left <= right:
+        mid = (left + right)//2
         if target <= nums[mid]:
-            left = mid
+            res = mid
+            left = mid + 1
         else:
             right = mid - 1
-    return left
+    return res
+
+
+print("--descending_lowerBsearch--")
+print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 0))   # 6
+print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 1))   # 5
+print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 4))   # 4 <-
+print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 5))   # 4 <-
+print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 10))   # -1
+
+
+def descending_upperBsearch(nums, target):
+    left = 0
+    right = len(nums)-1
+    res = -1
+    while left <= right:
+        mid = (left + right)//2
+        if target >= nums[mid]:
+            right = mid - 1
+        else:
+            res = mid
+            left = mid + 1
+    return res
 
 
 print("--descending_lowerBsearch--")
 print(descending_upperBsearch([9, 7, 5, 5, 5, 3, 1], 0))   # 6
-print(descending_upperBsearch([9, 7, 5, 5, 5, 3, 1], 1))   # 6
+print(descending_upperBsearch([9, 7, 5, 5, 5, 3, 1], 1))   # 5
 print(descending_upperBsearch([9, 7, 5, 5, 5, 3, 1], 4))   # 4 <-
-print(descending_upperBsearch([9, 7, 5, 5, 5, 3, 1], 5))   # 4 <-
+print(descending_upperBsearch([9, 7, 5, 5, 5, 3, 1], 5))   # 1 <-
 print(descending_upperBsearch([9, 7, 5, 5, 5, 3, 1], 10))   # -1
