@@ -44,24 +44,24 @@ var minRemoveToMakeValid = function(s) {
     const stack = []
     for (let i = 0; i < n; i++) {
         const c = s[i]
-        if (c == '(') {
-            stack.push([c, i])
-        } else if (c == ')') {
+        if (c === '(') {
+            stack.push(['(', i])
+        } else if (c === ')') {
             if (stack.length > 0 && stack[stack.length-1][0] == '(') {
                 stack.pop()
             } else {
-                stack.push([c, i])
+                stack.push([')', i])
             }
         }
     }
     const hs = new Set()
-    stack.forEach((x) => hs.add(x[1]))
+    stack.forEach(([_, idx]) => hs.add(idx))
     let res = ''
     for (let i = 0; i < n; i++) {
-        const c = s[i]
-        if (hs.has(i) === false) {
-            res += c
+        if (hs.has(i)) {
+            continue
         }
+        res += s[i]
     }
     return res
 };

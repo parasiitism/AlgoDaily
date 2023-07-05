@@ -3,21 +3,24 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
-    s = s.toUpperCase()
-    let i = 0
-    let j = s.length - 1
-    while (i <= j) {
-        if (!isAlphaNumeric(s[i])) {
-            i += 1
-        } else if (!isAlphaNumeric(s[j])) {
-            j -= 1
-        } else {
-            if (s[i] !== s[j]) {
-                return false
+    s = s.toLowerCase()
+
+    let left = 0
+    let right = s.length - 1
+    while (left < right) {
+        const x = isAlphaNumeric(s[left])
+        const y = isAlphaNumeric(s[right])
+        if (x && y) {
+            if (s[left] === s[right]) {
+                left += 1
+                right -= 1
             } else {
-                i += 1
-                j -= 1
+                return false
             }
+        } else if (!x) {
+            left += 1
+        } else if (!y) {
+            right -= 1
         }
     }
     return true
