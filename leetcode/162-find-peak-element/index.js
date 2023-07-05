@@ -21,3 +21,20 @@ var findPeakElement = function (nums) {
 	}
 	return left;
 };
+
+
+var findPeakElement = function(A) {
+    let left = 0
+    let right = A.length-1
+    let res = -1
+    while (left <= right) {
+        const mid = Math.floor((left + right)/2)
+        if (A[mid] <= A[mid+1]) {
+            left = mid + 1
+        } else {
+            res = mid
+            right = mid - 1
+        }
+    }
+    return res
+};
