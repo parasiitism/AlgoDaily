@@ -50,3 +50,46 @@ print(s.invalidTransactions(a))
 
 a = ["alice,20,800,mtv", "bob,50,1200,mtv"]
 print(s.invalidTransactions(a))
+
+
+"""
+    2nd: hashtable
+    - pre-compute the cache: key:value as { time: { user: [city] } 
+    - for every transaction, check from time-60 to time+60
+
+    Time    O(120*N)
+    Space   O(N)
+"""
+
+
+class Solution:
+    def invalidTransactions(self, transactions: List[str]) -> List[str]:
+        cache = {}
+        res = []
+        for T in transactions:
+            user, time, amount, city = T.split(",")
+            time, amount = int(time), int(amount)
+            if time not in cache:
+                cache[time] = {}
+            if user not in cache[time]:
+                cache[time][user] = []
+            cache[time][user].append(city)
+
+        for T in transactions:
+            user, time, amount, city = T.split(",")
+            time, amount = int(time), int(amount)
+
+            if amount > 1000:
+                res.append(T)
+                continue
+
+            for t in range(time-60, time+61):
+                if t not in cache:
+                    continue
+                if user not in cache[t]:
+                    continue
+                if len(cache[t][user]) > 1 or cache[t][user][0] != city:
+                    res.append(T)
+                    break
+
+        return res

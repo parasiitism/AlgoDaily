@@ -33,19 +33,18 @@ var uniquePaths = function(m, n) {
     return dfs(m-1, n-1, {})
 };
 
-const dfs = (m, n, ht) => {
-    if (m == 0 && n == 0) {
-        return 1
-    } else if (m < 0 || n < 0) {
+const dfs = (i, j, cache) => {
+    if (i < 0 || j < 0) {
         return 0
     }
-    const key = `${m},${n}`
-    if (key in ht) {
-        return ht[key]
+    if (i == 0 || j == 0) {
+        return 1
     }
-    let total = 0
-    total += dfs(m-1, n, ht)
-    total += dfs(m, n-1, ht)
-    ht[key] = total
-    return ht[key]
+    const key = `${i},${j}`
+    if (key in cache) {
+        return cache[key]
+    }
+    const total = dfs(i-1, j, cache) + dfs(i, j-1, cache)
+    cache[key] = total
+    return total
 }

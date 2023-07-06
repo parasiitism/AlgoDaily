@@ -39,11 +39,11 @@ var flatten = function(head) {
     80 ms, faster than 66.09%
 */
 var flatten = function(head) {
-    if (head == null) {
+    if (head === null) {
         return null
     }
-    const dumphead = new Node()
-    let prev = dumphead
+    const dummy = new Node()
+    let prev = dummy
     const stack = [head]
     while (stack.length > 0) {
         const node = stack.pop()
@@ -58,7 +58,6 @@ var flatten = function(head) {
             stack.push(node.child)
         }
     }
-    // the catch: the first node.prev = null instead of dumphead
     head.prev = null
-    return head
+    return dummy.next
 };
