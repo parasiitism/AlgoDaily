@@ -147,3 +147,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1767 | [Compact Object](/leetcode/2705) | JS | [leetcode 2705](https://leetcode.com/problems/compact-object/) | |
 | 1768 | [Buy Two Chocolates](/leetcode/2706) | array | [leetcode 2706](https://leetcode.com/problems/buy-two-chocolates/) | |
 | 1769 | [Maximum Strength of a Group](/leetcode/2708) | recursion, greedy | [leetcode 2708](https://leetcode.com/problems/maximum-strength-of-a-group/) | 1st brute-force, 2nd 📌 learned from others |
+| 1770 | [Remove Trailing Zeros From a String](/leetcode/2710) | array | [leetcode 2710](https://leetcode.com/problems/remove-trailing-zeros-from-a-string/) | |
