@@ -112,3 +112,42 @@ class UndergroundSystem {
         return totalTime / totalCount
     }
 }
+
+/*
+    3rd: 3 hashtables
+
+    Time of checkIn()           O(1)
+    Time of checkOut()          O(1)
+    Time of getAverageTime()    O(1)
+    Space                       O(U + S^2) U: number of users, S: number of stations
+*/
+class UndergroundSystem {
+    constructor() {
+        this.userStationIn = {}
+        this.travelTotal = {} // {station e2e: time}
+        this.travelCount = {} // {station e2e: number of travels}
+    }
+    checkIn(id, stationName, t) {
+        this.userStationIn[id] = [t, stationName]
+    }
+    checkOut(id, stationName, t) {
+        if (id in this.userStationIn === false) { return }
+        const [time_start, station_start] = this.userStationIn[id]
+        const key = `${station_start},${stationName}`
+        if (key in this.travelTotal === false || key in this.travelCount === false ) {
+            this.travelTotal[key] = 0
+            this.travelCount[key] = 0
+        }
+        this.travelTotal[key] += t - time_start
+        this.travelCount[key] += 1
+    }
+    getAverageTime(startStation, endStation) {
+        const key = `${startStation},${endStation}`
+        if (key in this.travelTotal === false || key in this.travelCount === false ) {
+            return -1
+        }
+        const total = this.travelTotal[key]
+        const cnt = this.travelCount[key]
+        return total / cnt
+    }
+}

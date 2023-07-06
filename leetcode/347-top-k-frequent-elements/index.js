@@ -12,29 +12,23 @@
  * @param {number} k
  * @return {number[]}
  */
-var topKFrequent = function (nums, k) {
-	const ht = {};
-	nums.forEach((num) => {
-		if (ht[num] === undefined) {
-			ht[num] = 1;
-		} else {
-			ht[num] += 1;
-		}
-	});
-	const arr = [];
-	for (let key in ht) {
-		arr.push([ht[key], key]);
-	}
-	arr.sort((a, b) => {
-		if (a[0] === b[0]) {
-			return b[1] - a[1];
-		}
-		return b[0] - a[0];
-	});
-	const res = [];
-	const n = Math.min(arr.length, k);
-	for (let i = 0; i < n; i++) {
-		res.push(arr[i][1]);
-	}
-	return res;
+var topKFrequent = function(nums, k) {
+    const ctr = {};
+    nums.forEach(x => {
+        if (x in ctr === false) {
+            ctr[x] = 0
+        }
+        ctr[x] += 1
+    })
+    const arr = [];
+    for (let key in ctr) {
+        arr.push([ctr[key], key]);
+    }
+    arr.sort((a, b) => b[0] - a[0]);
+    const res = []
+    const n = Math.min(arr.length, k)
+    for (let i = 0; i < n; i++) {
+        res.push(arr[i][1])
+    }
+    return res
 };

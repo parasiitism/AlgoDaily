@@ -6,33 +6,31 @@
     Space   O(1)
     100 ms, faster than 78.74%
 */
-var longestPalindrome = function (s) {
-	let left = 0;
-	let right = 0;
-	for (let i = 0; i < s.length; i++) {
-		const [a1, b1] = expand(s, i - 1, i);
-		const [a2, b2] = expand(s, i, i);
-		if (b1 - a1 > right - left) {
-			left = a1;
-			right = b1;
-		}
-		if (b2 - a2 > right - left) {
-			left = a2;
-			right = b2;
-		}
-	}
-	return s.slice(left, right + 1);
+var longestPalindrome = function(s) {
+    const n = s.length
+    let res = ''
+    for (let i = 0; i < n; i++) {
+        const [L1, R1] = expand(s, i, i)
+        const [L2, R2] = expand(s, i, i+1)
+        if (R1 - L1 + 1 > res.length) {
+            res = s.slice(L1, R1+1)
+        }
+        if (R2 - L2 + 1 > res.length) {
+            res = s.slice(L2, R2+1)
+        }
+    }
+    return res
 };
 
-const expand = (s, i, j) => {
-	if (i < 0) {
-		return [j, j];
-	} else if (s[i] != s[j]) {
-		return [j, j];
-	}
-	while (i - 1 >= 0 && j + 1 < s.length && s[i - 1] === s[j + 1]) {
-		i -= 1;
-		j += 1;
-	}
-	return [i, j];
-};
+const expand = (s, L, R) => {
+    if (s[L] !== s[R]) {
+        return [L, L]
+    }
+    let i = L
+    let j = R
+    while (i-1 >= 0 && j+1 < s.length && s[i-1] === s[j+1]) {
+        i -= 1
+        j += 1
+    }
+    return [i, j]
+}
