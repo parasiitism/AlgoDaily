@@ -57,39 +57,68 @@ var decodeString = function(s) {
 };
 
 /*
-    2nd approach: recursion
+    2nd approach: recursion + queue
 
     Time    O(2n)
     Space   O(n)
     108 ms, faster than 6.34%
 */
-var decodeString = function (s) {
-	const q = [];
-	for (let x of s) {
-		q.push(x);
-	}
-	return recur(q);
+var decodeString = function(s) {
+    const q = []
+    for (let c of s) {
+        q.push(c)
+    }
+
+    const dfs = () => {
+        let res = ''
+        let num = 0
+        while (q.length > 0) {
+            const c = q.shift()
+            if (c >= '0' && c <= '9') {
+                num = 10 * num + parseInt(c)
+            } else if (c === '[') {
+                const sub =  dfs()
+                res += sub.repeat(num)
+                num = 0
+            } else if (c === ']') {
+                break
+            } else {
+                res += c
+            }
+        }
+        return res
+    }
+    return dfs()
 };
 
-const recur = (q) => {
-	if (q.length === 0) {
-		return "";
-	}
-	let s = "";
-	let num = 0;
-	while (q.length > 0) {
-		const x = q.shift();
-		if (parseInt(x) >= 0 && parseInt(x) < 10) {
-			num = num * 10 + parseInt(x);
-		} else if (x === "[") {
-			const single = recur(q);
-            s += single.repeat(num);
-            num = 0;
-		} else if (x === "]") {
-			return s;
-		} else {
-			s += x;
-		}
-	}
-	return s;
+/*
+    3rd approach: recursion + string iteration with a global index
+
+    Time    O(n)
+    Space   O(n)
+    58 ms, faster than 56.11%
+*/
+var decodeString = function(s) {
+    let idx = 0
+    const dfs = () => {
+        let res = ''
+        let num = 0
+        while (idx < s.length) {
+            const c = s[idx]
+            idx += 1
+            if (c >= '0' && c <= '9') {
+                num = 10 * num + parseInt(c)
+            } else if (c === '[') {
+                const sub =  dfs()
+                res += sub.repeat(num)
+                num = 0
+            } else if (c === ']') {
+                break
+            } else {
+                res += c
+            }
+        }
+        return res
+    }
+    return dfs()
 };

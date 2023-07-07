@@ -37,18 +37,20 @@ var lowestCommonAncestor = function (root, p, q) {
     Time    O(logn) height of the bst
     68 ms, faster than 99.7%
 */
-var lowestCommonAncestor = function (root, p, q) {
-	let cur = root;
-	while (cur !== null) {
-		if (cur.val > p.val && cur.val > q.val) {
-			cur = cur.left;
-		} else if (cur.val < p.val && cur.val < q.val) {
-			cur = cur.right;
-		} else {
-			return cur;
-		}
-	}
-	return cur;
+var lowestCommonAncestor = function(root, p, q) {
+    const P = p.val
+    const Q = q.val
+    let cur = root
+    while (cur !== null) {
+        if (P < cur.val && Q < cur.val) {
+            cur = cur.left
+        } else if (P > cur.val && Q > cur.val) {
+            cur = cur.right
+        } else {
+            return cur
+        }
+    }
+    return cur
 };
 
 /*
