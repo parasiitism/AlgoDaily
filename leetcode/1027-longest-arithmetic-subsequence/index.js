@@ -74,3 +74,30 @@ var longestArithSeqLength = function (A) {
 
 	return res;
 };
+
+/*
+    2nd: same approach but easier to come up with
+    
+    Time    O(N^2)
+    Space   O(N^2)
+*/
+var longestArithSeqLength = function(A) {
+    const n = A.length
+    const diffs = []
+    for (let i = 0; i < n; i++) {
+        diffs.push({})
+    }
+    let res = 0
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < i; j++) {
+            const d = A[i] - A[j]
+            if (d in diffs[j]) {
+                diffs[i][d] = diffs[j][d] + 1
+            } else {
+                diffs[i][d] = 1
+            }
+            res = Math.max(res, diffs[i][d] + 1)
+        }
+    }
+    return res
+};
