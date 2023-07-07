@@ -12,33 +12,36 @@
 */
 class CurrencyExchange {
     constructor() {
-        this.graph = {}
+        this.G = {}
     }
     upsertRate(a, b, rate) {
-        if (a in this.graph === false) { this.graph[a] = {} }
-        if (b in this.graph === false) { this.graph[b] = {} }
+        if (a in this.G === false) { this.G[a] = {} }
+        if (b in this.G === false) { this.G[b] = {} }
         
-        this.graph[a][b] = rate
-        this.graph[b][a] = 1.0/rate
+        this.G[a][b] = rate
+        this.G[b][a] = 1.0/rate
     }
-    queryRate(a, b) {
-        if (a in this.graph === false || b in this.graph === false) {
+    queryRate(src, dest) {
+        if (src in this.G === false || dest in this.G === false) {
             return -1
         }
         const seen = new Set()
-        const q = [[a, 1.0]]
+        const q = [[src, 1.0]]
         while (q.length > 0) {
-            const [node, r] = q.shift()
-            if (node == b) {
-                return r
+            const [node, ratio] = q.shift()
+            if (node == dest) {
+                return ratio
+            }
+            if (node in this.G == false) {
+                continue
             }
             if (seen.has(node)) {
                 continue
             }
             seen.add(node)
-            if (node in this.graph == false) { continue }
-            for (let nb in this.graph[node]) {
-                q.push([nb, r * this.graph[node][nb]])
+            for (let child in this.G[node]) {
+                const toMultiply = this.G[node][child]
+                q.push([child, ratio * toMultiply])
             }
         }
         return -1

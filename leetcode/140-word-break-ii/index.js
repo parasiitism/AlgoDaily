@@ -11,28 +11,31 @@
     76 ms, faster than 96.35%
 */
 var wordBreak = function(s, wordDict) {
-    return dfs(s, wordDict, {})
-};
-
-const dfs = (s, wordDict, seen) => {
-    if (s.length == 0) {
-        return ['']
-    }
-    if (s in seen) {
-        return seen[s]
-    }
-    const sentences = []
-    for (let w of wordDict) {
-        const n = w.length
-        const sub = s.slice(0, n)
-        if (w == sub) {
-            const _sentences = dfs(s.slice(n), wordDict, seen)
-            for (let _s of _sentences) {
-                const temp = `${sub} ${_s}`.trim()
-                sentences.push(temp)
+    const wordSet = new Set(wordDict)
+    const cache = {}
+    
+    const dfs = idx => {
+        if (idx === s.length) {
+            return [[]]
+        }
+        if (idx in cache) {
+            return cache[idx]
+        }
+        const subResult = []
+        let cur = ''
+        for (let i = idx; i < s.length; i++) {
+            cur += s[i]
+            if (wordSet.has(cur)) {
+                const sentences = dfs(i+1)
+                for (let words of sentences) {
+                    const _words = [cur, ...words]
+                    subResult.push(_words)
+                }
             }
         }
+        cache[idx] = subResult
+        return subResult
     }
-    seen[s] = sentences
-    return seen[s]
-}
+    const sentenses = dfs(0)
+    return sentenses.map(v => v.join(" "))
+};

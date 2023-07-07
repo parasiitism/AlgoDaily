@@ -15,30 +15,29 @@
 
     84 ms, faster than 78.08%
 */
-var wordBreak = function (s, wordDict) {
-	const m = {};
-	const wordSet = new Set(wordDict);
-	return explore(s, wordSet, m);
-};
+var wordBreak = function(s, wordDict) {
+    const wordSet = new Set(wordDict)
+    const cache = {}
+    
+    const dfs = idx => {
+        if (idx == s.length) {
+            return true
+        }
+        if (idx in cache) {
+            return cache[idx]
+        }
+        let cur = ''
+        for (let i = idx; i < s.length; i++) {
+            cur += s[i]
+            if (wordSet.has(cur)) {
+                if (dfs(i+1)) {
+                    return true
+                }
+            }
+        }
+        cache[idx] = false
+        return false
+    }
 
-const explore = (s, wordSet, m) => {
-	if (s.length === 0) {
-		return true;
-	}
-	if (s in m) {
-		return m[s];
-	}
-	for (let w of wordSet) {
-		const n = w.length;
-		const cand = s.slice(0, n);
-		if (w === cand) {
-			const isFound = explore(s.slice(n), wordSet, m);
-			if (isFound) {
-				m[s] = true;
-				return true;
-			}
-		}
-	}
-	m[s] = false;
-	return false;
+    return dfs(0)
 };

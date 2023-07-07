@@ -62,59 +62,67 @@ const upperBsearch = (arr, ht, target) => {
 };
 
 /*
-    in ES6
+    2nd: binary search + hashtable
 
-    Time of addScore()      O(k), it can be O(logN) depends on language becos of array.insert()
-    Time of top()           O(k)
-    Time of reset()         O(N) binary search + linear search
+    Time of addScore()      O(logN + N) binary search + remove
+    Time of top()           O(K)
+    Time of reset()         O(logN + N) binary search + remove
     Space                   O(2N)
     96 ms, faster than 92.31%
 */
 class Leaderboard {
     constructor() {
-        this.ht = {}
-        this.ids = [] // sorted
+        this.sortedList = []    // scores
+        this.playerScore = {}   // playerId: score
     }
     addScore(playerId, score) {
-        if (playerId in this.ht == false) {
-            this.ht[playerId] = 0
+        if (playerId in this.playerScore === false) {
+            this.playerScore[playerId] = score
+            const i = this.lowerBsearch(score)
+            this.sortedList.splice(i, 0, score) // insert
+        } else {
+            const oldScore = this.playerScore[playerId]
+            const i = this.lowerBsearch(oldScore)
+            this.sortedList.splice(i, 1) // delete
+            
+            const newScore = oldScore + score
+            this.playerScore[playerId] = newScore
+            const j = this.lowerBsearch(newScore)
+            this.sortedList.splice(j, 0, newScore) // insert
         }
-        this.ht[playerId] += score
-        const i = this.ids.indexOf(playerId)
-        if (i > -1) {
-            this.ids.splice(i, 1)
-        }
-        const j = this._upperBsearch(this.ht[playerId])
-        this.ids.splice(j, 0, playerId)
     }
-    _upperBsearch(target) {
-        let left = 0
-        let right = this.ids.length
-        while (left < right) {
-            const mid = Math.floor((left + right) / 2)
-            if (target >= this.ht[this.ids[mid]]) {
-                left = mid + 1
-            } else {
-                right = mid
-            }
-        }
-        return left
-    }
-    top(K) {
+    top(k) {
+        const n = this.sortedList.length
         let total = 0
-        let i = this.ids.length-1
-        while (K > 0) {
-            total += this.ht[this.ids[i]]
-            i -= 1
-            K -= 1
+        const bound = Math.max(0, n-k)
+        for (let i = n-1; i >= bound; i--) {
+            total += this.sortedList[i]
         }
         return total
     }
     reset(playerId) {
-        delete this.ht[playerId]
-        const i = this.ids.indexOf(playerId)
-        if (i > -1) {
-            this.ids.splice(i, 1)
+        if (playerId in this.playerScore === false) {
+            return
         }
+        const oldScore = this.playerScore[playerId]
+        const i = this.lowerBsearch(oldScore)
+        this.sortedList.splice(i, 1) // delete
+        
+        delete this.playerScore[playerId]
+    }
+    lowerBsearch(target) {
+        let left = 0
+        let right = this.sortedList.length - 1
+        let res = this.sortedList.length
+        while (left <= right) {
+            const mid = Math.floor((left + right) / 2)
+            if (target <= this.sortedList[mid]) {
+                res = mid
+                right = mid - 1
+            } else {
+                left = mid + 1
+            }
+        }
+        return res
     }
 }

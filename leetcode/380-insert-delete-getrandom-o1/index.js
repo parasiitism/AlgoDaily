@@ -48,34 +48,29 @@ class RandomizedSet {
 class RandomizedSet {
     constructor() {
         this.ht = {}
-        this.nums = []
+        this.A = []
     }
     insert(x) {
-        if (x in this.ht) {
-            return false
-        }
-        this.ht[x] = this.nums.length
-        this.nums.push(x)
+        if (x in this.ht) { return false }
+        this.ht[x] = this.A.length
+        this.A.push(x)
         return true
     }
     remove(x) {
-        if (x in this.ht == false) {
-            return false;
-        }
+        if (x in this.ht === false) { return false }
         const i = this.ht[x];
-        const last = this.nums[this.nums.length-1];
-        const j = this.ht[last];
-        
-        [this.nums[i], this.nums[j]] = [this.nums[j], this.nums[i]];
-        this.ht[last] = i;
-        
-        this.nums.pop();
-        delete this.ht[x];
-        
-        return true;
+        const y = this.A[this.A.length-1];
+        const j = this.ht[y];
+        // swap the indices, relocate the last element of A to x's original index 
+        [this.A[i], this.A[j]] = [this.A[j], this.A[i]];
+        this.ht[y] = i;
+        // remove the x
+        this.A.pop()
+        delete this.ht[x]
+        return true
     }
     getRandom() {
-        const i = Math.floor(Math.random() * this.nums.length)
-        return this.nums[i]
+        const i = Math.floor(Math.random() * this.A.length)
+        return this.A[i]
     }
 }

@@ -1,5 +1,6 @@
 from collections import defaultdict
 from collections import Counter
+from heapq import *
 
 """
     1st: binary search + hashtable
@@ -91,6 +92,37 @@ class Leaderboard(object):
 
     def top(self, K):
         return sum(v for i, v in self.A.most_common(K))
+
+    def reset(self, playerId):
+        self.A[playerId] = 0
+
+
+"""
+    2nd: hashtable + minheap
+
+    Time of addScore()      O(1)
+    Time of top()           O(N) -> O(NlogK)
+    Time of reset()         O(1)
+    Space                   O(1)
+    112 ms, faster than 23.24%
+"""
+
+
+class Leaderboard(object):
+
+    def __init__(self):
+        self.A = collections.Counter()
+
+    def addScore(self, playerId, score):
+        self.A[playerId] += score
+
+    def top(self, K):
+        pq = []
+        for user in self.A:
+            heappush(pq, (self.A[user], user))
+            if len(pq) > K:
+                heappop(pq)
+        return sum([score for score, _user in pq])
 
     def reset(self, playerId):
         self.A[playerId] = 0
