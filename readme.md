@@ -149,3 +149,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1769 | [Maximum Strength of a Group](/leetcode/2708) | recursion, greedy | [leetcode 2708](https://leetcode.com/problems/maximum-strength-of-a-group/) | 1st brute-force, 2nd 📌 learned from others |
 | 1770 | [Remove Trailing Zeros From a String](/leetcode/2710) | array | [leetcode 2710](https://leetcode.com/problems/remove-trailing-zeros-from-a-string/) | |
 | 1771 | [Difference of Number of Distinct Values on Diagonals](/leetcode/2711) | array | [leetcode 2711](https://leetcode.com/problems/difference-of-number-of-distinct-values-on-diagonals/) | |
+| 1772 | [Car Fleet II](/leetcode/1776) | stack, math | [leetcode 1776](https://leetcode.com/problems/car-fleet-ii/) | 📌📌📌 |
