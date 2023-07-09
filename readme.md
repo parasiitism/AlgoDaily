@@ -150,3 +150,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1770 | [Remove Trailing Zeros From a String](/leetcode/2710) | array | [leetcode 2710](https://leetcode.com/problems/remove-trailing-zeros-from-a-string/) | |
 | 1771 | [Difference of Number of Distinct Values on Diagonals](/leetcode/2711) | array | [leetcode 2711](https://leetcode.com/problems/difference-of-number-of-distinct-values-on-diagonals/) | |
 | 1772 | [Car Fleet II](/leetcode/1776) | stack, math | [leetcode 1776](https://leetcode.com/problems/car-fleet-ii/) | 📌📌📌 |
+| 1773 | [Minimum Cost to Make All Characters Equal](/leetcode/2712) | greedy | [leetcode 2712](https://leetcode.com/problems/minimum-cost-to-make-all-characters-equal/) | 📌📌📌 |
