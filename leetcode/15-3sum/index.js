@@ -61,7 +61,11 @@ var threeSum = function (nums) {
         let right = n - 1
         while (left < right) {
             const total = nums[i] + nums[left] + nums[right]
-            if (total == 0) {
+            if (total < 0) {
+                left += 1
+            } else if (total > 0) {
+                right -= 1
+            } else {
                 res.push([nums[i], nums[left], nums[right]])
                 while (left + 1 < right && nums[left + 1] == nums[left]) {
                     left += 1
@@ -70,10 +74,6 @@ var threeSum = function (nums) {
                 while (left < right - 1 && nums[right - 1] == nums[right]) {
                     right -= 1
                 }
-                right -= 1
-            } else if (total < 0) {
-                left += 1
-            } else if (total > 0) {
                 right -= 1
             }
         }

@@ -56,7 +56,36 @@ class BrowserHistory {
     }
 }
 
-s = new BrowserHistory()
+let s = new BrowserHistory()
+s.visit('google.com')
+s.visit('youtube.com')
+s.visit('facebook.com')
+s.printHistory()
+s.visit('google.com')
+s.printHistory()
+s.visit('twitter.com')
+s.printHistory()
+
+console.log("--- another approach ---")
+
+class BrowserHistory2 {
+    constructor() {
+        this.map = new Set()
+    }
+    visit(url) {
+        if (this.map.has(url)) {
+            this.map.delete(url)
+        }
+        this.map.add(url)
+    }
+    printHistory() {
+        const history = []
+        this.map.forEach((v) => history.push(v))
+        console.log(history)
+    }
+}
+
+s = new BrowserHistory2()
 s.visit('google.com')
 s.visit('youtube.com')
 s.visit('facebook.com')

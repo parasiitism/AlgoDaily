@@ -39,3 +39,30 @@ var topKFrequent = function (words, k) {
     }
     return res
 };
+
+
+var topKFrequent = function(words, k) {
+    const ctr = {}
+    for (let w of words) {
+        if (w in ctr === false) {
+            ctr[w] = 0
+        }
+        ctr[w] += 1
+    }
+    const arr = []
+    for (let w in ctr) {
+        const freq = ctr[w]
+        arr.push([freq, w])
+    }
+    arr.sort((a, b) => {
+        if (a[0] == b[0]) {
+            if (a[1] < b[1]) {
+                return -1
+            }
+            return 1
+        }
+        return b[0] - a[0]
+    })
+    const res = arr.slice(0, k)
+    return res.map(([_freq, w]) => w)
+};

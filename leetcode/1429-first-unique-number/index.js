@@ -64,40 +64,31 @@ class FirstUnique {
 */
 class FirstUnique {
     constructor(nums) {
-        this.counter = {}
-        this.nums = [...nums]
-        this.firstUniqueIdx = 0
-
+        this.ctr = {}
+        this.order = []
+        this.cursor = 0
         for (let x of nums) {
-            if ((x in this.counter) == false) {
-                this.counter[x] = 0
+            if (x in this.ctr === false) {
+                this.ctr[x] = 0
+                this.order.push(x)
             }
-            this.counter[x] += 1
+            this.ctr[x] += 1
         }
-        this._findUnique()
     }
     showFirstUnique() {
-        if (this.firstUniqueIdx < this.nums.length) {
-            return this.nums[this.firstUniqueIdx]
+        while (this.ctr[this.order[this.cursor]] > 1) {
+            this.cursor += 1
         }
-        return -1
+        if (this.cursor == this.order.length) {
+            return -1
+        }
+        return this.order[this.cursor]
     }
     add(x) {
-        if (x in this.counter) {
-            this.counter[x] += 1
-            this._findUnique()
-        } else {
-            this.counter[x] = 1
-            this.nums.push(x)
+        if (x in this.ctr === false) {
+            this.ctr[x] = 0
+            this.order.push(x)
         }
-    }
-    _findUnique() {
-        while (this.firstUniqueIdx < this.nums.length) {
-            const x = this.nums[this.firstUniqueIdx]
-            if (this.counter[x] == 1) {
-                break
-            }
-            this.firstUniqueIdx += 1
-        }
+        this.ctr[x] += 1
     }
 }
