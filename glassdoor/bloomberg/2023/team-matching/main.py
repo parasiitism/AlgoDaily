@@ -80,9 +80,9 @@ def team_matching2(employee_preferences, team_preferences):
 
             if employee_pref.index(team) < employee_pref.index(cur_team):
                 unmatched_teams.append(cur_team)
-                matches[first_employee] = team
+                matches[first_employee] = team  # replace the current partner
             else:
-                unmatched_teams.append(team)
+                unmatched_teams.append(team)  # put the 'team' back to the q
 
     return matches
 
