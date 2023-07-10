@@ -44,6 +44,68 @@ class RandomizedSet {
 	GetRandom Time		    O(1)
 	Space					O(n) the unique keys
     120 ms beats 99.01%
+
+    e.g.
+    {
+        a: 0,
+        b: 1,
+        c: 2,
+        d: 3
+    }
+    [a, b, c, d]
+    
+    ---- remove 'b' ----
+
+    step1:
+    {
+        a: 0,
+        b: 3,
+        c: 2,
+        d: 1
+    }
+    [a, b, c, d]
+    
+    step2:
+    {
+        a: 0,
+        b: 3, <- Important: remove the key and a non-existing index. We don't care about whether a key is pointing the exactly location  
+        c: 2,
+        d: 1
+    }
+    [a, c, d]
+
+    step3:
+    {
+        a: 0,
+        c: 2,
+        d: 1
+    }
+    [a, c, d]
+    
+    ---- remove 'c' ----
+
+    step1:
+    {
+        a: 0,
+        c: 1,
+        d: 2
+    }
+    [a, c, d]
+
+    step2:
+    {
+        a: 0,
+        c: 1,
+        d: 2 <- remove
+    }
+    [a, d]
+
+    step3:
+    {
+        a: 0,
+        c: 1,
+    }
+    [a, d]
 */
 class RandomizedSet {
     constructor() {

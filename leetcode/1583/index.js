@@ -1,5 +1,5 @@
 /*
-    1st: brute-force
+    1st: hashtable
     - pre-comput a list of preferences for every person, which the list lists all the higher priority than his current partner 
     - for every person, loop over his perferences, if check if thier preference's perference has this person
 
@@ -28,7 +28,7 @@ var unhappyFriends = function(n, preferences, pairs) {
 };
 
 /*
-
+    2nd: hashtable + hashset to optimize
 */
 var unhappyFriends = function(n, preferences, pairs) {
     const d = {}
