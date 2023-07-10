@@ -21,30 +21,17 @@ const largerThanX = (A, k) => {
 }
 
 const findDip = A => {
-    // let left = 0
-    // let right = A.length - 1
-    // while (left < right) {
-    //     const mid = Math.floor((left + right) / 2)
-    //     if (A[mid] <= A[mid+1]) {
-    //         right = mid
-    //     } else {
-    //         left = mid + 1
-    //     }
-    // }
-    // return left
     let left = 0
     let right = A.length-1
-    let res = A.length
-    while (left <= right) {
+    while (left < right) {
         const mid = Math.floor((left + right)/2)
-        if (A[mid] <= A[mid+1]) {
-            right = mid - 1
-            res = mid
+        if (A[mid] < A[mid+1]) {
+            right = mid
         } else {
             left = mid + 1
         }
     }
-    return res
+    return left
 }
 
 const bSearchLeft = (A, target, dipIdx) => {

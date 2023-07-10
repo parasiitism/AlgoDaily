@@ -12,7 +12,7 @@ def getFactors(n):
     i = 1
     while i * i <= n:
         if n % i == 0:
-            if i == n//i:
+            if i*i == n:
                 smalls.append(i)
             else:
                 smalls.append(i)

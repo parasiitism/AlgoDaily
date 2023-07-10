@@ -60,19 +60,6 @@ class NLPTraining {
     }
 
     getTheMostPossibleNextWord(word) {
-        // if (word in this.freqs === false) {
-        //     return null
-        // }
-        // let maxFreqWord = null
-        // let maxFreq = 0
-        // for (let next in this.freqs[word]) {
-        //     const f = this.freqs[word][next]
-        //     if (f > maxFreq) {
-        //         maxFreq = f
-        //         maxFreqWord = next
-        //     }
-        // }
-        // return maxFreqWord
         if (word in this.cacheMostFreq === false) {
             return null
         }

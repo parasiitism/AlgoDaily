@@ -23,3 +23,25 @@ var subsetsWithDup = function (nums) {
 	dfs(nums, []);
 	return res;
 };
+
+/*
+    Optimize 1st with indices only 
+*/
+var subsetsWithDup = function(nums) {
+    nums.sort((a, b) => a - b)
+    const res = []
+    const dfs = (start, chosen) => {
+        res.push(chosen)
+        for (let i = start; i < nums.length; i++) {
+            if (i-1 >= start && nums[i-1] === nums[i]) {
+                continue
+            }
+            const c = nums[i]
+            const _chosen = [...chosen, c]
+            dfs(i+1, _chosen)
+        }
+    }
+    dfs(0, [])
+
+    return res
+};

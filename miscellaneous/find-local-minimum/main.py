@@ -1,6 +1,11 @@
 """
     The similar classic question is leetcode162: Find Peak Element (find the local maximum)
 
+    To conclude:
+    - find local max: lower bound binary search
+    - find local min: upper bouund binary search
+    Always compare to the next number on the right
+
     Time    O(logN)
     Space   O(1)
 """

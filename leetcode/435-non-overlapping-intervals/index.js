@@ -51,17 +51,17 @@ var eraseOverlapIntervals = function (intervals) {
     84 ms, faster than 62.50%
 */
 var eraseOverlapIntervals = function(intervals) {
-    if (intervals.length == 0) { return 0 }
     intervals.sort((a, b) => a[1] - b[1])
-    let curEnd = -(2**32)
-    let nonOverlaped = 0
+    let max_end = -(2**32)
+    let res = 0
     for (let [s, e] of intervals) {
-        if (s >= curEnd) {
-            curEnd = e
-            nonOverlaped += 1
+        if (s >= max_end) {
+            max_end = e
+        } else {
+            res += 1
         }
     }
-    return intervals.length - nonOverlaped
+    return res
 };
 
 /*

@@ -8,25 +8,25 @@
 */
 var combinationSum = function(candidates, target) {
     candidates.sort((a, b) => a - b)
-
     const res = []
+    
     const dfs = (chosen, remain) => {
-        if (remain < 0) {
-            return
-        }
         if (remain == 0) {
             return res.push(chosen)
         }
+        if (remain < 0) {
+            return
+        }
         for (let i = 0; i < candidates.length; i++) {
             const c = candidates[i]
-            if (chosen.length === 0 || chosen[chosen.length-1] <= c) {
-                const _chosen = [...chosen, c]
-                const _target = remain - c
-                dfs(_chosen, _target)
+            if (chosen.length > 0 && c < chosen[chosen.length-1]) {
+                continue
             }
+            const _chosen = [...chosen, c]
+            dfs(_chosen, remain - c)
         }
     }
     dfs([], target)
-
+    
     return res
 };

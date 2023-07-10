@@ -35,21 +35,19 @@ var allPathsSourceTarget = function (graph) {
     88 ms, faster than 87.93%
 */
 var allPathsSourceTarget = function (graph) {
-	const res = [];
-
-	const dfs = (node, target, path) => {
-		const newPath = [...path, node];
-		if (node === target) {
-			res.push(newPath);
-			return;
-		}
-		for (let child of graph[node]) {
-			dfs(child, target, newPath);
-		}
-	};
-	dfs(0, graph.length - 1, []);
-
-	return res;
+	const n = graph.length
+    const res = []
+    const dfs = (node, path) => {
+        const _path = [...path, node]
+        if (node === n-1) {
+            return res.push(_path)
+        }
+        for (let child of graph[node]) {
+            dfs(child, _path)
+        }
+    }
+    dfs(0, [])
+    return res
 };
 
 /*

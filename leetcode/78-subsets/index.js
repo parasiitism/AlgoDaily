@@ -20,3 +20,21 @@ var subsets = function (nums) {
     dfs([], nums)
     return res
 };
+
+/*
+    Optimize 1st with indices only 
+*/
+var subsets = function(nums) {
+    const res = []
+    const dfs = (start, chosen) => {
+        res.push(chosen)
+        for (let i = start; i < nums.length; i++) {
+            const c = nums[i]
+            const _chosen = [...chosen, c]
+            dfs(i+1, _chosen)
+        }
+    }
+    dfs(0, [])
+
+    return res
+};

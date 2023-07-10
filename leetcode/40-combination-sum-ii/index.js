@@ -33,3 +33,29 @@ var combinationSum2 = function (candidates, target) {
     dfs(candidates, [], 0)
     return res
 };
+
+/*
+    optimize 1st using index
+*/
+var combinationSum2 = function(candidates, target) {
+    candidates.sort((a, b) => a - b)
+    const res = []
+    const dfs = (start, chosen, remain) => {
+        if (remain == 0) {
+            return res.push(chosen)
+        }
+        if (remain < 0) {
+            return
+        }
+        for (let i = start; i < candidates.length; i++) {
+            const c = candidates[i]
+            if (i-1 >= start && candidates[i-1] === candidates[i]) {
+                continue
+            }
+            const _chosen = [...chosen, c]
+            dfs(i+1, _chosen, remain - c)
+        }
+    }
+    dfs(0, [], target)
+    return res
+};

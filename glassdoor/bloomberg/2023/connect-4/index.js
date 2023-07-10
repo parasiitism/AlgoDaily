@@ -83,7 +83,7 @@ const check = B => {
             if (_j - j + 1 >= 4) {
                 return B[i][j]
             }
-            // check to the right
+            // check to the bottom
             let _i = i
             while (_i+1 < R && B[_i][j] == B[_i+1][j]) {
                 _i += 1

@@ -39,3 +39,54 @@ var wordBreak = function(s, wordDict) {
     const sentenses = dfs(0)
     return sentenses.map(v => v.join(" "))
 };
+
+/*
+    2nd: just recursion
+    - we don't need DP for this question
+    - the reason we have to print all the possibilities - meaning that we have to append subresults for every match anyway, so DP doesn't help 
+*/
+var wordBreak = function(s, wordDict) {
+    const wordSet = new Set(wordDict)
+    const dfs = idx => {
+        if (idx === s.length) {
+            return [[]]
+        }
+        const subResult = []
+        let cur = ''
+        for (let i = idx; i < s.length; i++) {
+            cur += s[i]
+            if (wordSet.has(cur)) {
+                const sentences = dfs(i+1)
+                for (let words of sentences) {
+                    const _words = [cur, ...words]
+                    subResult.push(_words)
+                }
+            }
+        }
+        return subResult
+    }
+    const sentenses = dfs(0)
+    return sentenses.map(v => v.join(" "))
+};
+/*
+    same as above
+*/
+var wordBreak = function(s, wordDict) {
+    const wordSet = new Set(wordDict)
+    const res = []
+    
+    const dfs = (idx, path) => {
+        if (idx === s.length) {
+            return res.push(path)
+        }
+        let cur = ''
+        for (let i = idx; i < s.length; i++) {
+            cur += s[i]
+            if (wordSet.has(cur)) {
+                dfs(i+1, [...path, cur])
+            }
+        }
+    }
+    dfs(0, [])
+    return res.map(v => v.join(" "))
+};
