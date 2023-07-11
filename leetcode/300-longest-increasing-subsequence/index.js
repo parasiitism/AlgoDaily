@@ -100,7 +100,6 @@ var lengthOfLIS = function(nums) {
     if (nums.length == 0) {
         return 0
     }
-    const n = nums.length
     const sub = []
     for (let x of nums) {
         if (sub.length > 0 && x > sub[sub.length-1]) {

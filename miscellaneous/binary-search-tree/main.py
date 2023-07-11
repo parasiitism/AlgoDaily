@@ -37,15 +37,12 @@ class BST(object):
             if val < cur.val:
                 if cur.left == None:
                     cur.left = TreeNode(val)
-                    cur = cur.right
                     break
                 else:
                     cur = cur.left
             elif val > cur.val:
                 if cur.right == None:
                     cur.right = TreeNode(val)
-                    cur = cur.right
-                    cur = cur.right
                     break
                 else:
                     cur = cur.right

@@ -11,5 +11,161 @@
     return the top k total amount
 */
 
+/*
+    leetcode1244, there are a few solutions. 
+    The most optimal one is to use a BST, then do a inorder travesal to get Top(K)
+*/
+class BSTNode {
+    constructor(volume) {
+        this.volume = volume
+        this.tickers = new Set()
+        this.left = null
+        this.right = null
+    }
+}
+class BST {
+    constructor() {
+        this.root = null
+    }
+    insert(ticker, volume) {
+        if (this.root === null) {
+            const node = new BSTNode(volume)
+            node.tickers.add(ticker)
+            this.root = node
+            return
+        }
+        let cur = this.root
+        while (cur !== null) {
+            if (volume < cur.volume) {
+                if (!cur.left) {
+                    cur.left = new BSTNode(volume)
+                    cur.left.tickers.add(ticker)
+                    return
+                }
+                cur = cur.left
+            } else if (volume > cur.volume) {
+                if (!cur.right) {
+                    cur.right = new BSTNode(volume)
+                    cur.right.tickers.add(ticker)
+                    return
+                }
+                cur = cur.right
+            } else {
+                break
+            }
+        }
+        cur.tickers.add(ticker)
+    }
+    delete(ticker, volume) {
+        // we can just delete the key in target_node hashset, 
+        // instead of deleting a BST node
+        let cur = this.root
+        while (cur !== null) {
+            if (volume < cur.volume) {
+                cur = cur.left
+            } else if (volume > cur.volume) {
+                cur = cur.right
+            } else {
+                break
+            }
+        }
+        cur.tickers.delete(ticker)
+    }
+    topK(k) {
+        let total = 0
+        const inorder = node => {
+            if (node === null) {
+                return
+            }
+            inorder(node.right)
+            if (node.tickers.size <= k) {
+                total += node.volume * node.tickers.size
+                k -= node.tickers.size
+            } else if (k > 0){
+                total += node.volume * k
+                k = 0
+            } else if (k == 0) {
+                return
+            }
+            inorder(node.left)
+        }
+        inorder(this.root)
 
-// leetcode1244, there are a few solutions
+        return total
+    }
+}
+
+class Exchange {
+    constructor() {
+        this.ht = {}
+        this.bst = new BST()
+    }
+    execute(ticker, volume) {
+        if (ticker in this.ht === false) {
+            this.ht[ticker] = volume
+            this.bst.insert(ticker, volume)
+        } else {
+            const oldVolume = this.ht[ticker]
+            const newVolume = oldVolume + volume
+            this.ht[ticker] = newVolume
+
+            this.bst.delete(ticker, oldVolume)
+            this.bst.insert(ticker, newVolume)
+        }
+    }
+    topK(k) {
+        return this.bst.topK(k)
+    }
+}
+
+const exchange = new Exchange()
+exchange.execute('HKDJPN', 300)
+exchange.execute('EURUSD', 100)
+exchange.execute('CHFEUR', 200)
+exchange.execute('HKDGBP', 400)
+console.log(exchange.topK(3))
+/*
+    result = 400 + 300 + 200 = 900
+
+    because
+    400: HKDGBP
+    300: HKDJPN
+    200: CHFEUR
+    100: EURUSD
+*/
+exchange.execute('EURUSD', 1000)
+exchange.execute('CHFEUR', 999)
+console.log(exchange.topK(3))
+/*
+    result = 1199 + 1100 + 400 = 2699
+    
+    because
+    1199: CHFEUR
+    1100: EURUSD
+    400: HKDGBP
+    300: HKDJPN
+*/
+exchange.execute('JPNUSD', 1100)
+console.log(exchange.topK(3))
+/*
+    result = 1199 + 1100 + 1100 = 3399
+    
+    because
+    1199: CHFEUR
+    1100: EURUSD
+    1100: JPNUSD
+    400: HKDGBP
+    300: HKDJPN
+*/
+exchange.execute('EURUSD', 1000)
+console.log(exchange.topK(3))
+/*
+    result = 1100 + 1199 + 1100 = 3399
+    
+    because
+    2100: EURUSD
+    1199: CHFEUR
+    1100: JPNUSD
+    400: HKDGBP
+    300: HKDJPN
+*/

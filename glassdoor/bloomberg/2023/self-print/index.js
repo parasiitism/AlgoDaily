@@ -24,12 +24,13 @@
 const selfPrint = (pattern, n) => {
     const L = pattern.length
     
-    for (let _ = 0; _ < n; _++) {
+    for (let _ = 0; _ < n-1; _++) {
         
+        const newPattern = []
         const M = pattern.length * L
-        const newMatrix = []
+        
         for (let _ = 0; _ < M; _++) {
-            newMatrix.push(Array(M).fill(false))
+            newPattern.push(Array(M).fill(false))
         }
 
         for (let i = 0; i < pattern.length; i++) {
@@ -39,12 +40,12 @@ const selfPrint = (pattern, n) => {
                 }
                 for (let i2 = 0; i2 < L; i2++) {
                     for (let j2 = 0; j2 < L; j2++) {
-                        newMatrix[i*L+i2][j*L+j2] = pattern[i2][j2]
+                        newPattern[i*L+i2][j*L+j2] = pattern[i2][j2]
                     }
                 }
             }
         }
-        pattern = newMatrix
+        pattern = newPattern
     }
 
     pattern.forEach(row => {
@@ -70,14 +71,18 @@ console.log(selfPrint(a, b))
 
 console.log('-----')
 
-a = [[true, true, true], [true, false, false], [true, false, false]]
+a = [[true, true], [true, false]]
 b = 1
 console.log(selfPrint(a, b))
 
-a = [[true, true, true], [true, false, false], [true, false, false]]
+a = [[true, true], [true, false]]
 b = 2
 console.log(selfPrint(a, b))
 
-a = [[true, true, true], [true, false, false], [true, false, false]]
+a = [[true, true], [true, false]]
 b = 3
+console.log(selfPrint(a, b))
+
+a = [[true, true], [true, false]]
+b = 4
 console.log(selfPrint(a, b))

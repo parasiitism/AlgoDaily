@@ -27,3 +27,27 @@ var permute = function (nums) {
     dfs(nums, [])
     return res
 };
+
+/*
+    2nd: backtracking
+
+    Time    O(N * N!)
+    Space   O(N)
+*/
+var permute = function(nums) {
+    const res = []
+    const backtrack = path => {
+        if (path.length === nums.length) {
+            res.push([...path])
+        }
+        for (let x of nums) {
+            if (path.indexOf(x) === -1) {
+                path.push(x)
+                backtrack(path)
+                path.pop()
+            }
+        }
+    }
+    backtrack([])
+    return res
+};
