@@ -16,9 +16,9 @@
     The most optimal one is to use a BST, then do a inorder travesal to get Top(K)
 */
 class BSTNode {
-    constructor(volume) {
+    constructor(volume, ticker) {
         this.volume = volume
-        this.tickers = new Set()
+        this.tickers = new Set([ticker])
         this.left = null
         this.right = null
     }
@@ -29,8 +29,7 @@ class BST {
     }
     insert(ticker, volume) {
         if (this.root === null) {
-            const node = new BSTNode(volume)
-            node.tickers.add(ticker)
+            const node = new BSTNode(volume, ticker)
             this.root = node
             return
         }
@@ -38,15 +37,13 @@ class BST {
         while (cur !== null) {
             if (volume < cur.volume) {
                 if (!cur.left) {
-                    cur.left = new BSTNode(volume)
-                    cur.left.tickers.add(ticker)
+                    cur.left = new BSTNode(volume, ticker)
                     return
                 }
                 cur = cur.left
             } else if (volume > cur.volume) {
                 if (!cur.right) {
-                    cur.right = new BSTNode(volume)
-                    cur.right.tickers.add(ticker)
+                    cur.right = new BSTNode(volume, ticker)
                     return
                 }
                 cur = cur.right

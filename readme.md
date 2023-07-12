@@ -152,4 +152,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1772 | [Car Fleet II](/leetcode/1776) | stack, math | [leetcode 1776](https://leetcode.com/problems/car-fleet-ii/) | 📌📌📌 |
 | 1773 | [Minimum Cost to Make All Characters Equal](/leetcode/2712) | greedy | [leetcode 2712](https://leetcode.com/problems/minimum-cost-to-make-all-characters-equal/) | 📌📌📌 |
 | 1774 | [Execute Cancellable Function With Delay](/leetcode/2715) | JS | [leetcode 2715](https://leetcode.com/problems/execute-cancellable-function-with-delay/) | |
-| 1775 | [Minimize String Length](/leetcode/2716) | hashset | [leetcode 2716](https://leetcode.com/problems/minimize-string-length/descriptiona/) | || 1776 | [Semi-Ordered Permutation](/leetcode/2717) | math | [leetcode 2717](https://leetcode.com/problems/semi-ordered-permutation/description/) | |
+| 1775 | [Minimize String Length](/leetcode/2716) | hashset | [leetcode 2716](https://leetcode.com/problems/minimize-string-length/descriptiona/) | |
+| 1776 | [Semi-Ordered Permutation](/leetcode/2717) | math | [leetcode 2717](https://leetcode.com/problems/semi-ordered-permutation/description/) | |

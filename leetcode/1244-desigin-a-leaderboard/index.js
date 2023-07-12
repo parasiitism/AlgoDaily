@@ -126,3 +126,126 @@ class Leaderboard {
         return res
     }
 }
+
+/*
+    3rd: BST
+    - for interview purpose
+        - don't rebalance the tree
+        - don't implement BST.deleteNode(), just search the node and delete the user from hashset instead
+    - worst time complexity of insert() and deleted() is O(N), but O(logN) on average
+    - time of topk() is still O(K)
+
+    Time of addScore()      O(logN)
+    Time of top()           O(logN)
+    Time of reset()         O(K)
+    Space   O(N)
+    149ms beats 20%
+*/
+class Leaderboard {
+    constructor() {
+        this.ht = {} // { player: score }
+        this.bst = new BST()
+    }
+    addScore(playerId, score) {
+        if (playerId in this.ht === false) {
+            this.ht[playerId] = score
+            this.bst.insert(playerId, score)
+        } else {
+            const oldScore = this.ht[playerId]
+            const newScore = oldScore + score
+            this.ht[playerId] += score
+
+            this.bst.delete(playerId, oldScore)
+            this.bst.insert(playerId, newScore)
+        }
+    }
+    top(k) {
+        return this.bst.topK(k)
+    }
+    reset(playerId) {
+        if (playerId in this.ht === false) {
+            return
+        }
+        const oldScore = this.ht[playerId]
+        this.bst.delete(playerId, oldScore)
+        delete this.ht[playerId]
+    }
+}
+
+class BSTNode {
+    constructor(score, player) {
+        this.score = score
+        this.players = new Set([player])
+        this.left = null
+        this.right = null
+    }
+}
+
+class BST {
+    constructor() {
+        this.root = null
+    }
+    insert(player, score) {
+        if (this.root === null) {
+            const node = new BSTNode(score, player)
+            this.root = node
+            return
+        }
+        let cur = this.root
+        while (cur !== null) {
+            if (score < cur.score) {
+                if (!cur.left) {
+                    cur.left = new BSTNode(score, player)
+                    return
+                }
+                cur = cur.left
+            } else if (score > cur.score) {
+                if (!cur.right) {
+                    cur.right = new BSTNode(score, player)
+                    return
+                }
+                cur = cur.right
+            } else {
+                break
+            }
+        }
+        cur.players.add(player)
+    }
+    delete(player, score) {
+        // we can just delete the key in target-node hashset, instead of deleting a BST node
+        let cur = this.root
+        while (cur !== null) {
+            if (score < cur.score) {
+                cur = cur.left
+            } else if (score > cur.score) {
+                cur = cur.right
+            } else {
+                break
+            }
+        }
+        cur.players.delete(player)
+    }
+    topK(k) {
+        console.log(this.root)
+        let total = 0
+        const inorder = node => {
+            if (node === null) {
+                return
+            }
+            inorder(node.right)
+            if (node.players.size <= k) {
+                total += node.score * node.players.size
+                k -= node.players.size
+            } else if (k > 0){
+                total += node.score * k
+                k = 0
+            } else if (k == 0) {
+                return
+            }
+            inorder(node.left)
+        }
+        inorder(this.root)
+
+        return total
+    }
+}
