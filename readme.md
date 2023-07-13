@@ -154,3 +154,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1774 | [Execute Cancellable Function With Delay](/leetcode/2715) | JS | [leetcode 2715](https://leetcode.com/problems/execute-cancellable-function-with-delay/) | |
 | 1775 | [Minimize String Length](/leetcode/2716) | hashset | [leetcode 2716](https://leetcode.com/problems/minimize-string-length/descriptiona/) | |
 | 1776 | [Semi-Ordered Permutation](/leetcode/2717) | math | [leetcode 2717](https://leetcode.com/problems/semi-ordered-permutation/description/) | |
+| 1777 | [Sum of Matrix After Queries](/leetcode/2718) | hashtable, brain teaser | [leetcode 2718](https://leetcode.com/problems/sum-of-matrix-after-queries/) | ⭐️ |
