@@ -156,3 +156,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1776 | [Semi-Ordered Permutation](/leetcode/2717) | math | [leetcode 2717](https://leetcode.com/problems/semi-ordered-permutation/description/) | |
 | 1777 | [Sum of Matrix After Queries](/leetcode/2718) | hashtable, brain teaser | [leetcode 2718](https://leetcode.com/problems/sum-of-matrix-after-queries/) | ⭐️ |
 | 1778 | [Call Function with Custom Context](/leetcode/2693) | JS | [leetcode 2693](https://leetcode.com/problems/call-function-with-custom-context/) | JS binding |
+| 1779 | [Count Houses in a Circular Street](/leetcode/2728) | greedy | [leetcode 2728](https://leetcode.com/problems/count-houses-in-a-circular-street/) | ⭐️ observation more than algorithm |
