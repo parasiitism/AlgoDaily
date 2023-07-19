@@ -1,69 +1,6 @@
 /*
     1st: binary search + hashtable
 
-    - maintain an array to store the ids sorted by scores
-    - a hashtable to store the relation for every {id: score}
-
-    Time of addScore()      O(k), it can be O(logN) depends on language becos of array.insert()
-    Time of top()           O(k)
-    Time of reset()         O(N) binary search + linear search
-    Space                   O(2N)
-    96 ms, faster than 92.31%
-*/
-var Leaderboard = function() {
-    this.arr = []   // ids sort by scores
-    this.ht = {}    // {id1: score1, id2: score2}
-};
-Leaderboard.prototype.addScore = function(playerId, score) {
-    let newScore = 0
-    if (playerId in this.ht) {
-        newScore = this.ht[playerId] + score
-        this.ht[playerId] = newScore
-        // remove
-        const i = this.arr.indexOf(playerId)
-        this.arr.splice(i, 1)
-    } else {
-        this.ht[playerId] = score
-        newScore = score
-    }
-    // add
-    const j = upperBsearch(this.arr, this.ht, newScore)
-    this.arr.splice(j, 0, playerId)
-};
-Leaderboard.prototype.top = function(K) {
-    let res = 0
-    let count = 0
-    for (let i = this.arr.length-1; i >= 0; i--) {
-        const pId = this.arr[i]
-        res += this.ht[pId]
-        count += 1
-        if (count === K) { break }
-    }
-    return res
-};
-Leaderboard.prototype.reset = function(playerId) {
-    const i = this.arr.indexOf(playerId)
-    this.arr.splice(i, 1)
-    delete this.ht[playerId]
-};
-const upperBsearch = (arr, ht, target) => {
-	let left = 0;
-	let right = arr.length;
-	while (left < right) {
-		const mid = Math.floor((left + right) / 2);
-        const pId = arr[mid]
-		if (target >= ht[pId]) {
-			left = mid + 1;
-		} else {
-			right = mid;
-		}
-	}
-	return left;
-};
-
-/*
-    2nd: binary search + hashtable
-
     Time of addScore()      O(logN + N) binary search + remove
     Time of top()           O(K)
     Time of reset()         O(logN + N) binary search + remove
@@ -128,7 +65,7 @@ class Leaderboard {
 }
 
 /*
-    3rd: BST
+    2nd: BST
     - for interview purpose
         - don't rebalance the tree
         - don't implement BST.deleteNode(), just search the node and delete the user from hashset instead
@@ -233,15 +170,146 @@ class BST {
                 return
             }
             inorder(node.right)
-            if (node.players.size <= k) {
-                total += node.score * node.players.size
-                k -= node.players.size
-            } else if (k > 0){
-                total += node.score * k
-                k = 0
-            } else if (k == 0) {
+            const toConsider = Math.min(node.players.size, k)
+            total += node.score * toConsider
+            k -= toConsider
+            inorder(node.left)
+        }
+        inorder(this.root)
+
+        return total
+    }
+}
+
+/*
+    3rd: optimization with rebalancing
+*/
+class Leaderboard {
+    constructor() {
+        this.ht = {} // { player: score }
+        this.bst = new BST()
+    }
+    addScore(playerId, score) {
+        if (playerId in this.ht === false) {
+            this.ht[playerId] = score
+            this.bst.insert(playerId, score)
+        } else {
+            const oldScore = this.ht[playerId]
+            const newScore = oldScore + score
+            this.ht[playerId] += score
+
+            this.bst.delete(playerId, oldScore)
+            this.bst.insert(playerId, newScore)
+        }
+    }
+    top(k) {
+        return this.bst.topK(k)
+    }
+    reset(playerId) {
+        if (playerId in this.ht === false) {
+            return
+        }
+        const oldScore = this.ht[playerId]
+        this.bst.delete(playerId, oldScore)
+        delete this.ht[playerId]
+    }
+}
+
+class BSTNode {
+    constructor(score, players=[]) {
+        this.score = score
+        this.players = new Set(players)
+        this.left = null
+        this.right = null
+    }
+}
+
+class BST {
+    constructor() {
+        this.root = null
+        this.deleteCount = 0
+    }
+    insert(player, score) {
+        if (this.root === null) {
+            this.root = new BSTNode(score, [player])
+            return
+        }
+        let cur = this.root
+        while (cur !== null) {
+            if (score < cur.score) {
+                if (!cur.left) {
+                    cur.left = new BSTNode(score, [player])
+                    return
+                }
+                cur = cur.left
+            } else if (score > cur.score) {
+                if (!cur.right) {
+                    cur.right = new BSTNode(score, [player])
+                    return
+                }
+                cur = cur.right
+            } else {
+                break
+            }
+        }
+        cur.players.add(player)
+    }
+    delete(player, score) {
+        let cur = this.root
+        while (cur !== null) {
+            if (score < cur.score) {
+                cur = cur.left
+            } else if (score > cur.score) {
+                cur = cur.right
+            } else {
+                break
+            }
+        }
+        cur.players.delete(player)
+        this.deleteCount += 1
+        if (this.deleteCount > 30) { // just a random number for now
+            this._rebalance()
+            this.deleteCount = 0
+        }
+    }
+    _rebalance() {
+        const A = []
+        const inorder = node => {
+            if (node === null) {
                 return
             }
+            inorder(node.left)
+            if (node.players.size > 0) {
+                A.push(node)
+            }
+            inorder(node.right)
+        }
+        inorder(this.root)
+
+        const partition = (L, R) => {
+            if (L > R) {
+                return null
+            }
+            const half = Math.floor((L+R)/2)
+            const oldNode = A[half]
+            const node = new BSTNode(oldNode.score, oldNode.players)
+            node.left = partition(L, half-1)
+            node.right = partition(half+1, R)
+            return node
+        }
+
+        this.root = partition(0, A.length-1)
+    }
+    topK(k) {
+        let total = 0
+        const inorder = node => {
+            if (node === null) {
+                return
+            }
+            inorder(node.right)
+            const toConsider = Math.min(node.players.size, k)
+            total += node.score * toConsider
+            k -= toConsider
             inorder(node.left)
         }
         inorder(this.root)
