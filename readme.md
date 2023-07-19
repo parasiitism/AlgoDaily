@@ -161,4 +161,3 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1781 | [Join Two Arrays by ID](/leetcode/2722) | JS | [leetcode 2722](https://leetcode.com/problems/join-two-arrays-by-id/) | |
 | 1782 | [Add Two Promises](/leetcode/2723) | JS | [leetcode 2723](https://leetcode.com/problems/add-two-promises/) | ⭐️ promise |
 | 1783 | [Sort By](/leetcode/2724) | JS | [leetcode 2724](https://leetcode.com/problems/sort-by/) | |
-| 1820 | [Minimize the Total Price of the Trips](/leetcode/2646) | graph | [leetcode 2646](https://leetcode.com/problems/minimize-the-total-price-of-the-trips/) | |
