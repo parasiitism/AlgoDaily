@@ -5,7 +5,7 @@
 """
 
 
-class Heap(object):
+class MinHeap(object):
     def __init__(self):
         self.nums = []
 
@@ -73,9 +73,9 @@ class Heap(object):
             parentIdx = (curIdx - 1) // 2
 
 
-h = Heap()
+h = MinHeap()
 
-# test insert()
+print("--- insert() ---")
 h.heapPush(8)
 h.heapPush(9)
 h.heapPush(6)
@@ -87,10 +87,8 @@ print(h.nums)
 while len(h.nums) > 0:
     print(h.heapPop())
 
-print("------------------------------------------------")
-
-# test insert() with duplicate values
-h = Heap()
+print("--- insert() with duplicate values ----")
+h = MinHeap()
 h.heapPush(8)
 h.heapPush(8)
 h.heapPush(6)
@@ -101,32 +99,29 @@ h.heapPush(5)
 while len(h.nums) > 0:
     print(h.heapPop())
 
-print("------------------------------------------------")
-
-# test heapify()
-h = Heap()
+print("--- heapify() --- ")
+h = MinHeap()
 h.heapify([6, 4, 2, 8, 9, 5, 7, 3])
 res = []
 while len(h.nums) > 0:
     res.append(h.heapPop())
 print(res)
 
-# test heapify() with duplicate
-h = Heap()
+print("--- heapify() with duplicates --- ")
+h = MinHeap()
 h.heapify([6, 4, 2, 8, 9, 5, 7, 4])
 res = []
 while len(h.nums) > 0:
     res.append(h.heapPop())
 print(res)
 
-"""
-    Heap Sort
-"""
+
+print("--- HeapSort --- ")
 
 
 def heapSort(nums):
     res = []
-    h = Heap()
+    h = MinHeap()
     h.heapify(nums)
     n = len(nums)
     for i in range(n):

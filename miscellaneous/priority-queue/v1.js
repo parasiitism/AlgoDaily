@@ -1,13 +1,13 @@
-class Heap {
+class MinHeap {
   constructor() {
     this.arr = []
   }
 
   heapify(values) {
     // O(nlogn) version
-    for (let i = 0; i < values.length; i++) {
-      this.heapPush(values[i])
-    }
+    // for (let i = 0; i < values.length; i++) {
+    //   this.heapPush(values[i])
+    // }
     /*
       O(n) version
       bottom-up
@@ -87,8 +87,8 @@ class Heap {
   }
 }
 
-// unique values
-let h = new Heap()
+console.log("--- insert() ---")
+let h = new MinHeap()
 h.heapPush(8)
 h.heapPush(9)
 h.heapPush(6)
@@ -101,8 +101,8 @@ while (h.arr.length > 0) {
   console.log(h.heapPop())
 }
 
-// duplicate values
-h = new Heap()
+console.log("--- insert() with duplicate values ---")
+h = new MinHeap()
 h.heapPush(8)
 h.heapPush(8)
 h.heapPush(6)
@@ -115,10 +115,8 @@ while (h.arr.length > 0) {
   console.log(h.heapPop())
 }
 
-console.log("-------------------------")
-
-// unique values
-h = new Heap()
+console.log("--- heapify() ---")
+h = new MinHeap()
 h.heapify([6, 4, 2, 8, 9, 5, 7, 3])
 let res = []
 while (h.arr.length > 0) {
@@ -126,8 +124,8 @@ while (h.arr.length > 0) {
 }
 console.log(res)
 
-// duplicate values
-h = new Heap()
+console.log("--- heapify() with duplicates --- ")
+h = new MinHeap()
 h.heapify([6, 4, 2, 8, 9, 5, 7, 4])
 res = []
 while (h.arr.length > 0) {
@@ -135,12 +133,10 @@ while (h.arr.length > 0) {
 }
 console.log(res)
 
-console.log("-------------------------")
-
-// Heap Sort
+console.log("--- HeapSort ---")
 function heapsort(values) {
   const res = []
-  const h = new Heap()
+  const h = new MinHeap()
   h.heapify(values)
   const n = values.length
   for (let i = 0; i < n; i++) {
