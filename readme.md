@@ -162,3 +162,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1782 | [Add Two Promises](/leetcode/2723) | JS | [leetcode 2723](https://leetcode.com/problems/add-two-promises/) | ⭐️ promise |
 | 1783 | [Sort By](/leetcode/2724) | JS | [leetcode 2724](https://leetcode.com/problems/sort-by/) | |
 | 1784 | [Interval Cancellation](/leetcode/2725) | JS | [leetcode 2725](https://leetcode.com/problems/interval-cancellation/) | |
+| 1785 | [Check if The Number is Fascinating](/leetcode/2729) | math | [leetcode 2729](https://leetcode.com/problems/check-if-the-number-is-fascinating/) | |
