@@ -163,3 +163,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1783 | [Sort By](/leetcode/2724) | JS | [leetcode 2724](https://leetcode.com/problems/sort-by/) | |
 | 1784 | [Interval Cancellation](/leetcode/2725) | JS | [leetcode 2725](https://leetcode.com/problems/interval-cancellation/) | |
 | 1785 | [Check if The Number is Fascinating](/leetcode/2729) | math | [leetcode 2729](https://leetcode.com/problems/check-if-the-number-is-fascinating/) | |
+| 1786 | [Find the Longest Semi-Repetitive Substring](/leetcode/2730) | 2 pointers | [leetcode 2730](https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/) | ⭐️ interesting |
