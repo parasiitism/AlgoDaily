@@ -72,41 +72,34 @@ var exist = function(board, word) {
     const R = board.length
     const C = board[0].length
 
-    const used = new Set()
-
-    const backtracking = (i, j, idx) => {
-        if (idx === word.length) {
+    const backtrack = (i, j, idx, visited) => {
+        if (idx == word.length) {
             return true
         }
         if (i < 0 || i == R || j < 0 || j == C) {
             return false
         }
-        if (board[i][j] !== word[idx]) {
+        if (word[idx] != board[i][j]) {
             return false
         }
         const key = `${i},${j}`
-        if (used.has(key)) {
-            return used[key]
+        if (key in visited) {
+            return false
         }
-        used.add(key)
-
-        const dirs = [[-1,0],[1,0],[0,-1],[0,1]]
-        for (let [di, dj] of dirs) {
-            const _i = i+di
-            const _j = j+dj
-            if(backtracking(_i, _j, idx+1)) {
+        visited[key] = true
+        for (let [di, dj] of [[-1, 0],[1, 0],[0,-1],[0,1]]) {
+            if (backtrack(i+di, j+dj, idx+1, visited)) {
                 return true
             }
         }
-        // board[i][j] = cache
-        used.delete(key)
+        delete visited[key]
         return false
     }
 
     for (let i = 0; i < R; i++) {
         for (let j = 0; j < C; j++) {
-            if (board[i][j] === word[0]) {
-                if (backtracking(i, j, 0)) {
+            if (board[i][j] == word[0]) {
+                if (backtrack(i, j, 0, {})) {
                     return true
                 }
             }
