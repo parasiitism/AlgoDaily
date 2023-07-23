@@ -15,14 +15,18 @@ class DLLNode {
 }
 
 class LRUCache {
-    constructor(capacity = 0) {
-        this.capacity = capacity
+    constructor(capacity) {
+        this.cap = capacity
         this.ht = {}
+        this.htSize = 0
         this.head = new DLLNode()
         this.tail = new DLLNode()
         this.head.next = this.tail
         this.tail.prev = this.head
-        this.length = 0
+    }
+    _removeNode(node) {
+        node.prev.next = node.next
+        node.next.prev = node.prev
     }
     _addToTail(node) {
         const last = this.tail.prev
@@ -31,36 +35,32 @@ class LRUCache {
         node.next = this.tail
         this.tail.prev = node
     }
-    _moveToTail(node) {
-        node.prev.next = node.next
-        node.next.prev = node.prev
-        this._addToTail(node)
-    }
     get(key) {
-        if (key in this.ht == false) {
+        if (key in this.ht === false) {
             return -1
         }
         const node = this.ht[key]
-        this._moveToTail(node)
+        this._removeNode(node)
+        this._addToTail(node)
         return node.val
     }
-    put(key, val) {
-        if (key in this.ht == false) {
-            const node = new DLLNode(key, val)
-            this.ht[key] = node
-            this._addToTail(node)
-            this.length += 1
-        } else {
+    put(key, value) {
+        if (key in this.ht) {
             const node = this.ht[key]
-            node.val = val
-            this._moveToTail(node)
+            node.val = value
+            this._removeNode(node)
+            this._addToTail(node)
+        } else {
+            const newNode = new DLLNode(key, value)
+            this._addToTail(newNode)
+            this.ht[key] = newNode
+            this.htSize += 1
         }
-        if (this.length > this.capacity) {
+        if (this.htSize > this.cap) {
             const first = this.head.next
-            first.prev.next = first.next
-            first.next.prev = first.prev
+            this._removeNode(first)
             delete this.ht[first.key]
-            this.length -= 1
+            this.htSize -= 1
         }
     }
 }
@@ -70,44 +70,31 @@ class LRUCache {
     
     Time  put:O(1), get: O(1)
 */
-
-/**
- * @param {number} capacity
- */
-var LRUCache = function(capacity) {
-    this.cap = capacity
-    this.map = new Map()
-};
-
-/** 
- * @param {number} key
- * @return {number}
- */
-LRUCache.prototype.get = function(key) {
-    if (this.map.has(key)) {
-        const val = this.map.get(key)
+class LRUCache {
+    constructor(capacity) {
+        this.cap = capacity
+        this.map = new Map()
+    }
+    get(key) {
+        if (this.map.has(key) === false) {
+            return -1
+        }
+        const value = this.map.get(key)
         this.map.delete(key)
-        this.map.set(key, val)
-        return val
+        this.map.set(key, value)
+        return value
     }
-    return -1
-};
-
-/** 
- * @param {number} key 
- * @param {number} value
- * @return {void}
- */
-LRUCache.prototype.put = function(key, value) {
-    if (this.map.has(key)) {
-        this.map.delete(key)
+    put(key, value) {
+        if (this.map.has(key)) {
+            this.map.delete(key)
+        }
+        this.map.set(key, value)
+        if (this.map.size > this.cap) {
+            const oldest = this.map.keys().next().value
+            this.map.delete(oldest)
+        }
     }
-    this.map.set(key, value)
-    if (this.map.size > this.cap) {
-        const first = this.map.keys().next().value
-        this.map.delete(first)
-    }
-};
+}
 
 /** 
  * Your LRUCache object will be instantiated and called as such:

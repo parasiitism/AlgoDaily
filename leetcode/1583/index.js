@@ -39,11 +39,11 @@ var unhappyFriends = function(n, preferences, pairs) {
         d[v] = new Set(preferences[v].slice(0, j))
     }
     let res = 0
-    for (let x in d) {
+    for (let x = 0; x < n; x++) {
         for (let y of d[x]) {
-            if (d[y].has(parseInt(x))) {
+            if (d[y].has(x)) {
                 res += 1
-                break
+                break // rmb to break because it means: we already know that x is unhappy
             }
         }
     }
