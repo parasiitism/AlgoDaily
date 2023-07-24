@@ -55,10 +55,10 @@ var triangleNumber = function(A) {
         let right = i-1
         while (left < right) {
             if (A[left] + A[right] > A[i]) {
-                res += right - left
-                right -= 1
-            } else {
                 left += 1
+            } else {
+                res += right - left // e.g. [2,2,2,2,3,4] => there are 4 pairs of [2,3]s we can combine with the [4] to make a triangle
+                right -= 1
             }
         }
     }
