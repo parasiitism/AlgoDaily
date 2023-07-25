@@ -166,3 +166,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1786 | [Find the Longest Semi-Repetitive Substring](/leetcode/2730) | 2 pointers | [leetcode 2730](https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/) | ⭐️ interesting |
 | 1787 | [Neither Minimum nor Maximum](/leetcode/2733) | JS | [leetcode 2733](https://leetcode.com/problems/neither-minimum-nor-maximum/) | |
 | 1788 | [Find the Closest Marked Node](/leetcode/2737) | graph | [leetcode 2737](https://leetcode.com/problems/find-the-closest-marked-node/) | |
+| 1789 | [Total Distance Traveled](/leetcode/2739) | logic | [leetcode 2739](https://leetcode.com/problems/total-distance-traveled/) | |
