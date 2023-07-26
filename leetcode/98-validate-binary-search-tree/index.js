@@ -24,21 +24,16 @@ var dfs = function (node, min, max) {
     2nd
 */
 var isValidBST = function(root) {
-    return validate(root, -(2**32)-1, 2**32)
+    const check = (node, min, max) => {
+        if (node == null) {
+            return true
+        }
+        if (node.val <= min || node.val >= max) {
+            return false
+        }
+        const left = check(node.left, min, node.val)
+        const right = check(node.right, node.val, max)
+        return left && right
+    }
+    return check(root, -(2**32)-1, 2**32)
 };
-
-const validate = (node, left_limit, right_limit) => {
-    if (node === null) {
-        return true
-    }
-    if (node.val <= left_limit || node.val >= right_limit) {
-        return false
-    }
-    if (validate(node.left, left_limit, node.val) == false) {
-        return false
-    }
-    if (validate(node.right, node.val, right_limit) == false) {
-        return false
-    }
-    return true
-}

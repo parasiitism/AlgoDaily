@@ -31,19 +31,19 @@ var unhappyFriends = function(n, preferences, pairs) {
     2nd: hashtable + hashset to optimize
 */
 var unhappyFriends = function(n, preferences, pairs) {
-    const d = {}
+    const priorities = {}
     for (let [u, v] of pairs) {
         const i = preferences[u].indexOf(v)
         const j = preferences[v].indexOf(u)
-        d[u] = new Set(preferences[u].slice(0, i))
-        d[v] = new Set(preferences[v].slice(0, j))
+        priorities[u] = new Set(preferences[u].slice(0, i))
+        priorities[v] = new Set(preferences[v].slice(0, j))
     }
     let res = 0
-    for (let x = 0; x < n; x++) {
-        for (let y of d[x]) {
-            if (d[y].has(x)) {
+    for (let u = 0; u < n; u++) {
+        for (let v of priorities[u]) {
+            if (priorities[v].has(u)) {
                 res += 1
-                break // rmb to break because it means: we already know that x is unhappy
+                break
             }
         }
     }

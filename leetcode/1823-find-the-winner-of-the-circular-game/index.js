@@ -33,3 +33,28 @@ class LLNode {
         this.next = null
     }
 }
+
+var findTheWinner = function(n, k) {
+    if (n == 1) {
+        return 1
+    }
+    if (k == 1) {
+        return n
+    }
+    const dumb = new LLNode()
+    let cur = dumb
+    for (let i = 1; i <= n; i++) {
+        cur.next = new LLNode(i)
+        cur = cur.next
+    }
+    cur.next = dumb.next
+    
+    // cur is already nodeN (the node which point to the head)
+    while (cur.next != cur) {
+        for (let _i = 0; _i < k-1; _i++) {
+            cur = cur.next
+        }
+        cur.next = cur.next.next
+    }
+    return cur.val
+};

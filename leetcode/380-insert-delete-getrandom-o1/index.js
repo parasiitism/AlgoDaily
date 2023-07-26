@@ -127,8 +127,8 @@ class RandomizedSet {
         [this.A[i], this.A[j]] = [this.A[j], this.A[i]];
         this.ht[y] = i;
         // remove the x
-        this.A.pop()
         delete this.ht[x]
+        this.A.pop()
         return true
     }
     getRandom() {

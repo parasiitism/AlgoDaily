@@ -45,18 +45,16 @@
     80 ms, faster than 46.10% 
 */
 var depthSum = function(nestedList) {
-    
-    let res = 0
-    const dfs = (arr, depth) => {
-        for (let x of arr) {
+    const dfs = (nL, depth) => {
+        let total = 0
+        for (let x of nL) {
             if (x.isInteger()) {
-                res += depth * x.getInteger()
+                total += x.getInteger() * depth
             } else {
-                dfs(x.getList(), depth + 1)
+                total += dfs(x.getList(), depth + 1)
             }
         }
+        return total
     }
-    dfs(nestedList, 1)
-    
-    return res
+    return dfs(nestedList, 1)
 };

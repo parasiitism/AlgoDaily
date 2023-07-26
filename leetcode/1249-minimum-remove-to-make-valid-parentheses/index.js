@@ -40,28 +40,27 @@ var minRemoveToMakeValid = function(s) {
     108 ms, faster than 48.36%
 */
 var minRemoveToMakeValid = function(s) {
-    const n = s.length
     const stack = []
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < s.length; i++) {
         const c = s[i]
-        if (c === '(') {
-            stack.push(['(', i])
-        } else if (c === ')') {
+        if (c == '(') {
+            stack.push([c, i])
+        } else if (c == ')') {
             if (stack.length > 0 && stack[stack.length-1][0] == '(') {
                 stack.pop()
             } else {
-                stack.push([')', i])
+                stack.push([c, i])
             }
         }
     }
-    const hs = new Set()
-    stack.forEach(([_, idx]) => hs.add(idx))
+    const toRemove = new Set()
+    stack.forEach(([_, idx]) => toRemove.add(idx))
     let res = ''
-    for (let i = 0; i < n; i++) {
-        if (hs.has(i)) {
-            continue
+    for (let i = 0; i < s.length; i++) {
+        const c = s[i]
+        if (toRemove.has(i) === false) {
+            res += c
         }
-        res += s[i]
     }
     return res
 };

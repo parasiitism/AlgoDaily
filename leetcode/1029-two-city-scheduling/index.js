@@ -84,6 +84,8 @@ var twoCitySchedCost = function(costs) {
         const diffB = b[0] - b[1]
         return diffA - diffB
     })
+    // OR
+    // costs.sort((a, b) => (a[0] - a[1]) - (b[0] - b[1]))
     let res = 0
     for (let i = 0; i < costs.length; i++) {
         if (i < costs.length/2) {
