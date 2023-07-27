@@ -7,7 +7,7 @@
     learned from others
     - https://leetcode.com/problems/allocate-mailboxes/solutions/685620/java-c-python-top-down-dp-prove-median-mailbox-o-n-3/
 
-    Time    O(N^3 + NK)
+    Time    O(N^2 * K + NK)
     Space   O(N^2)
 */
 var minDistance = function(houses, k) {

@@ -81,22 +81,22 @@ var longestArithSeqLength = function (A) {
     Time    O(N^2)
     Space   O(N^2)
 */
-var longestArithSeqLength = function(A) {
-    const n = A.length
-    const diffs = []
+var longestArithSeqLength = function(nums) {
+    const n = nums.length
+    const dp = []
     for (let i = 0; i < n; i++) {
-        diffs.push({})
+        dp.push({})
     }
     let res = 0
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < i; j++) {
-            const d = A[i] - A[j]
-            if (d in diffs[j]) {
-                diffs[i][d] = diffs[j][d] + 1
+            const diff = nums[i] - nums[j]
+            if (diff in dp[j]) {
+                dp[i][diff] = dp[j][diff] + 1
             } else {
-                diffs[i][d] = 1
+                dp[i][diff] = 2
             }
-            res = Math.max(res, diffs[i][d] + 1)
+            res = Math.max(res, dp[i][diff])
         }
     }
     return res

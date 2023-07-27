@@ -12,14 +12,14 @@
     88 ms, faster than 93.02%
 */
 var findLongestChain = function (pairs) {
-	let res = 0;
-	let curEnd = Number.MIN_SAFE_INTEGER;
-	pairs.sort((a, b) => a[1] - b[1]);
-	for (let [s, e] of pairs) {
-		if (s > curEnd) {
-			curEnd = e;
-			res += 1;
-		}
-	}
-	return res;
+	pairs.sort((a, b) => a[1] - b[1])
+    let max_end = -(2**32)
+    let res = 0
+    for (let [s, e] of pairs) {
+        if (s > max_end) {
+            max_end = e
+            res += 1
+        }
+    }
+    return res
 };
