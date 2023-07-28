@@ -34,12 +34,11 @@ const largestIsland = (matrix) => {
                 continue
             }
             const area = bfs(matrix, i, j, seen)
-            const cell = matrix[i][j]
-            if (cell in ht) {
-                ht[cell] = Math.max(ht[cell], area)
-            } else {
-                ht[cell] = area
+            const color = matrix[i][j]
+            if (color in ht === false) {
+                ht[color] = 0   
             }
+            ht[color] = Math.max(ht[color], area)
         }
     }
     let islands = []
@@ -52,7 +51,7 @@ const largestIsland = (matrix) => {
             islands.push(key)
         }
     }
-    return {islands, maxArea}
+    return { maxArea, islands }
 }
 
 const bfs = (matrix, x, y, seen) => {

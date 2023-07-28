@@ -29,9 +29,9 @@ class BrowserHistory {
     }
     _addToTail(node) {
         const last = this.tail.prev
+        last.next = node
         node.prev = last
         node.next = this.tail
-        last.next = node
         this.tail.prev = node
     }
     visit(url) {
@@ -68,7 +68,7 @@ s.printHistory()
 
 console.log("--- another approach ---")
 
-class BrowserHistory2 {
+class BrowserHistory {
     constructor() {
         this.map = new Set()
     }
@@ -79,13 +79,12 @@ class BrowserHistory2 {
         this.map.add(url)
     }
     printHistory() {
-        const history = []
-        this.map.forEach((v) => history.push(v))
+        const history = Array.from(this.map.keys())
         console.log(history)
     }
 }
 
-s = new BrowserHistory2()
+s = new BrowserHistory()
 s.visit('google.com')
 s.visit('youtube.com')
 s.visit('facebook.com')

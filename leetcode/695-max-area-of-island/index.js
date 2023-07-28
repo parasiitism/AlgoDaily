@@ -9,18 +9,16 @@
 	152 ms, faster than 15.95%
 */
 var maxAreaOfIsland = function(grid) {
-    let res = 0
-    const seen = new Set() // 'i,j'
     const R = grid.length
     const C = grid[0].length
+    const seen = new Set()
+    let res = 0
     for (let i = 0; i < R; i++) {
         for (let j = 0; j < C; j++) {
-            const key = `${i},${j}`
-            if (grid[i][j] == 0 || seen.has(key)) {
-                continue
+            if (grid[i][j] === 1 && seen.has(`${i},${j}`) === false) {
+                const area = bfs(grid, i, j, seen)
+                res = Math.max(res, area)
             }
-            const area = bfs(grid, i, j, seen)
-            res = Math.max(res, area)
         }
     }
     return res
@@ -29,14 +27,14 @@ var maxAreaOfIsland = function(grid) {
 const bfs = (grid, x, y, seen) => {
     const R = grid.length
     const C = grid[0].length
-    let area = 0
+    let res = 0
     const q = [[x, y]]
     while (q.length > 0) {
         const [i, j] = q.shift()
-        if (i < 0 || i == R || j < 0 || j == C) {
+        if (i < 0 || i >= R || j < 0 || j >= C) {
             continue
         }
-        if (grid[i][j] == 0) {
+        if (grid[i][j] != 1) {
             continue
         }
         const key = `${i},${j}`
@@ -44,11 +42,11 @@ const bfs = (grid, x, y, seen) => {
             continue
         }
         seen.add(key)
-        area += 1
+        res += 1
         q.push([i-1, j])
         q.push([i+1, j])
         q.push([i, j-1])
         q.push([i, j+1])
     }
-    return area
+    return res
 }
