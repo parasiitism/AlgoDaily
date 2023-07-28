@@ -167,3 +167,5 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1787 | [Neither Minimum nor Maximum](/leetcode/2733) | JS | [leetcode 2733](https://leetcode.com/problems/neither-minimum-nor-maximum/) | |
 | 1788 | [Find the Closest Marked Node](/leetcode/2737) | graph | [leetcode 2737](https://leetcode.com/problems/find-the-closest-marked-node/) | |
 | 1789 | [Total Distance Traveled](/leetcode/2739) | logic | [leetcode 2739](https://leetcode.com/problems/total-distance-traveled/) | |
+| 1790 | [Allocate Mailboxes](/leetcode/1478) | dynamic programming | [leetcode 1478](https://leetcode.com/problems/allocate-mailboxes/) | |
+| 1791 | [Special Permutations](/leetcode/2741) | dynamic programming | [leetcode 2741](https://leetcode.com/problems/special-permutations/) | ⭐️ good question |
