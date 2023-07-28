@@ -169,3 +169,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1789 | [Total Distance Traveled](/leetcode/2739) | logic | [leetcode 2739](https://leetcode.com/problems/total-distance-traveled/) | |
 | 1790 | [Allocate Mailboxes](/leetcode/1478) | dynamic programming | [leetcode 1478](https://leetcode.com/problems/allocate-mailboxes/) | |
 | 1791 | [Special Permutations](/leetcode/2741) | dynamic programming | [leetcode 2741](https://leetcode.com/problems/special-permutations/) | ⭐️ good question |
+| 1792 | [Calculator with Method Chaining](/leetcode/2726) | JS | [leetcode 2726](https://leetcode.com/problems/calculator-with-method-chaining/) | |
