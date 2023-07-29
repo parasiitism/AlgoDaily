@@ -6,13 +6,13 @@
     112 ms, faster than 17.76%
 */
 var smallestRangeI = function(nums, k) {
-    let min = 2**32
-    let max = -(2**32)
-    for (let x of nums) {
-        min = Math.min(min, x)
-        max = Math.max(max, x)
+    let smallest = nums[0]
+    let largest = nums[0]
+    for (let i = 0; i < nums.length; i++) {
+        smallest = Math.min(smallest, nums[i])
+        largest = Math.max(largest, nums[i])
     }
-    return Math.max(max-k - (min+k), 0)
+    return Math.max(0, largest - smallest - 2*k)
 };
 /*
     2nd: sort + compare the min and max

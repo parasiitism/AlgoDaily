@@ -1,49 +1,60 @@
 /*
     Given a welsh dictionary, sorted in welsh alphabetical order, 
-    and a list of words written in the welsh language, sort the list of words in welsh alphabetical order
+    and a list of words written in the welsh language, sort the list of words in welsh alphabetical 
+    
+    e.g. 
+    Input:
+    welshDict = ["a","b","c","ch","d","dd","e", "f", "ff", "g", "ng", "h", "i", "j", "l", "ll", "m", "n", "o", "p", "ph", "r", "rh", "s", "t", "th", "u", "w", "y"]
+    words = ["ddr", "nah", "dea", "dd", "ngah"]
+
+    Output: ["dea", "dd", "ddr", "ngah", "nah"]
+    
 
     ref: https://leetcode.com/discuss/interview-question/682583/bloomberg-phone-order-list-in-welsh-alphabetical-order
 */
-const sortByWelish = input => {
-    const welsh = ["a","b","c","ch","d","dd","e", "f", "ff", "g", "ng", "h", "i", "j", "l", "ll", "m", "n", "o", "p", "ph", "r", "rh", "s", "t", "th", "u", "w", "y"]
-
+const f = (welshDict, words) => {
     const dict = {}
-    for (let i = 0 ; i < welsh.length; i++) {
-        dict[welsh[i]] = i
+    for (let i = 0; i < welshDict.length; i++) {
+        const w = welshDict[i]
+        dict[w] = i
     }
 
-    const process = word => {
+    const process = w => {
         const vals = []
         let i = 0
-        while (i < word.length) {
-            if (i+1 < word.length && word[i]+word[i+1] in dict) {
-                vals.push(dict[word[i] + word[i+1]])
-                i += 2
-            } else if (word[i] in dict) {
-                vals.push(dict[word[i]])
+        while (i < w.length) {
+            if (i+1 < w.length && w[i]+w[i+1] in dict) {
+                const order = dict[w[i]+w[i+1]]
+                vals.push(order)
                 i += 1
+            } else if (w[i] in dict) {
+                const order = dict[w[i]]
+                vals.push(order)
             }
+            i += 1
         }
         return vals
     }
 
-    input.sort((a, b) => {
-        const A = process(a)
-        const B = process(b)
-        
-        const minLength = Math.min(A.length, B.length)
+    words.sort((a, b) => {
+        const valuesA = process(a)
+        const valuesB = process(b)
+
+        const minLength = Math.min(valuesA.length, valuesB.length)
         for (let i = 0; i < minLength; i++) {
-            if (A[i] !== B[i]) {
-                return A[i] - B[i]
+            if (valuesA[i] != valuesB[i]) {
+                return valuesA[i] - valuesB[i]
             }
         }
-        return A.length - B.length
+        return valuesA.length - valuesB.length
     })
 
-    return input
+    return words
 }
 
-console.log(sortByWelish(["ddr", "nah", "dea", "dd", "ngah"]))  // ["dea", "dd", "ddr", "ngah", "nah"]
+let a = ["a","b","c","ch","d","dd","e", "f", "ff", "g", "ng", "h", "i", "j", "l", "ll", "m", "n", "o", "p", "ph", "r", "rh", "s", "t", "th", "u", "w", "y"]
+let b = ["ddr", "nah", "dea", "dd", "ngah"]
+console.log(f(a, b))  // ["dea", "dd", "ddr", "ngah", "nah"]
 /*
 dea: [4, 6, 0]
 dd: [5]

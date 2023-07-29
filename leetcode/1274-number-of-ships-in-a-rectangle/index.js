@@ -13,7 +13,7 @@
 
 
 /*
-    1st: BFS + binary search <- iterative
+    2nd: DFS + 2-dimension binary search <- iterative
     - divide 1 grid into 4 grids
     - when the left = right and top = bottom, we reach to a point where a ship is
     - see ./idea.png
@@ -23,29 +23,22 @@
     92 ms, faster than 35.90%
 */
 var countShips = function(sea, topRight, bottomLeft) {
-    let count = 0
-    const q = [[topRight, bottomLeft]]
-    while (q.length > 0) {
-        const [_topRight, _bottomLeft] = q.shift()
-        
-        if ( _topRight[0] < _bottomLeft[0] || _topRight[1] < _bottomLeft[1] ) {
-            continue
-        }
-        
-        const hasShips = sea.hasShips(_topRight, _bottomLeft)
-        if (hasShips == false) { continue }
-        
-        if (_topRight[0] == _bottomLeft[0] && _topRight[1] == _bottomLeft[1]) {
-            count += 1
-        } else {
-            const midX = Math.floor((_topRight[0] + _bottomLeft[0]) / 2)
-            const midY = Math.floor((_topRight[1] + _bottomLeft[1]) / 2)
-
-            q.push([ _topRight, [midX + 1, midY + 1] ])
-            q.push([ [_topRight[0], midY], [midX + 1, _bottomLeft[1]] ])
-            q.push([ [midX, midY], _bottomLeft ])
-            q.push([ [midX, _topRight[1]], [_bottomLeft[0], midY + 1] ])
-        }
+    const [right, top] = topRight
+    const [left, bottom] = bottomLeft
+    if (top < bottom || right < left) {
+        return 0
     }
-    return count
+    if (!sea.hasShips(topRight, bottomLeft)) {
+        return 0
+    }
+    if (top == bottom && right == left) {
+        return 1
+    }
+    const midX = Math.floor((left + right)/2)
+    const midY = Math.floor((top + bottom)/2)
+    const bottomLeftCorner = countShips(sea, [midX, midY], bottomLeft)
+    const topLeftCorner = countShips(sea, [midX, top], [left, midY+1])
+    const topRightCorner = countShips(sea, topRight, [midX+1, midY+1])
+    const bottomRightCorner = countShips(sea, [right, midY], [midX+1, bottom])
+    return bottomLeftCorner + topLeftCorner + topRightCorner + bottomRightCorner
 };

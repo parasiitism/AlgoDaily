@@ -40,6 +40,7 @@ class Solution:
 
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
+        MOD = 10**9 + 7
         n = len(nums)
         nums.sort()
         res = 0
@@ -48,9 +49,9 @@ class Solution:
         while left <= right:
             total = nums[left] + nums[right]
             if total <= target:
-                temp = 2**(right - left) % (10**9 + 7)
-                res += temp
+                res += 2**(right - left)
+                res %= MOD
                 left += 1
             else:
                 right -= 1
-        return res % (10**9 + 7)
+        return res % MOD

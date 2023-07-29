@@ -26,11 +26,11 @@ const selfPrint = (pattern, n) => {
     
     for (let _ = 0; _ < n-1; _++) {
         
-        const newPattern = []
-        const M = pattern.length * L
+        const pattern2 = []
+        const L2 = pattern.length * L
         
-        for (let _ = 0; _ < M; _++) {
-            newPattern.push(Array(M).fill(false))
+        for (let _ = 0; _ < L2; _++) {
+            pattern2.push(Array(L2).fill(false))
         }
 
         for (let i = 0; i < pattern.length; i++) {
@@ -40,12 +40,12 @@ const selfPrint = (pattern, n) => {
                 }
                 for (let i2 = 0; i2 < L; i2++) {
                     for (let j2 = 0; j2 < L; j2++) {
-                        newPattern[i*L+i2][j*L+j2] = pattern[i2][j2]
+                        pattern2[i*L+i2][j*L+j2] = pattern[i2][j2] // the crux
                     }
                 }
             }
         }
-        pattern = newPattern
+        pattern = pattern2
     }
 
     pattern.forEach(row => {

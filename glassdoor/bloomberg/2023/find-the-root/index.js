@@ -1,5 +1,7 @@
 /*
-    A process tree has crashed and you are given a sequence of it's nodes in random order, each representing a process and possible child(s). Each node has at most two child process. Find the root process node
+    A process tree has crashed and you are given a sequence of it's nodes in random order, 
+    seach representing a process and possible child(s). 
+    Each node has at most two child process. Find the root process node
 
     Input:
     {5 : [], 1: [2, 3], 4 : [], 3: [6], 6 : [], 2 : [4, 5]}

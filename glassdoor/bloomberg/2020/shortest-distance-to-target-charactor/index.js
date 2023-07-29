@@ -26,34 +26,28 @@
 */
 const shortestDistances = (s, target) => {
     const n = s.length
-    const forward = Array(n).fill(2**32)
-    const backward = Array(n).fill(2**32)
-    let targetIdx = -1 
+    let left_target_idx = null
+    const distances = Array(n).fill(2**32)
     for (let i = 0; i < n; i++) {
         if (s[i] == target) {
-            targetIdx = i
+            left_target_idx = i
         }
-        if (targetIdx != -1) {
-            forward[i] = i - targetIdx
+        if (left_target_idx != null) {
+            distances[i] = i - left_target_idx
         }
     }
-    targetIdx = -1 
+
+    let right_target_idx = null
     for (let i = n-1; i >= 0; i--) {
         if (s[i] == target) {
-            targetIdx = i
+            right_target_idx = i
         }
-        if (targetIdx != -1) {
-            backward[i] = targetIdx - i
-        }
-    }
-    const res = Array(n).fill(2**32)
-    for (let i = 0; i < n; i++) {
-        res[i] = Math.min(forward[i], backward[i])
-        if (res[i] == 2**32) {
-            res[i] = -1
+        if (right_target_idx != null) {
+            distances[i] = Math.min(distances[i], right_target_idx - i)
         }
     }
-    return res
+
+    return distances
 }
 
 let a, b
