@@ -171,3 +171,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1791 | [Special Permutations](/leetcode/2741) | dynamic programming | [leetcode 2741](https://leetcode.com/problems/special-permutations/) | ⭐️ good question |
 | 1792 | [Calculator with Method Chaining](/leetcode/2726) | JS | [leetcode 2726](https://leetcode.com/problems/calculator-with-method-chaining/) | |
 | 1793 | [Is Object Empty](/leetcode/2727) | JS | [leetcode 2727](https://leetcode.com/problems/is-object-empty/) | |
+| 1794 | [Count Substrings Without Repeating Character](/leetcode/2743) | 2 pointers | [leetcode 2743](https://leetcode.com/problems/count-substrings-without-repeating-character/) | |
