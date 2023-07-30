@@ -90,3 +90,25 @@ var wordBreak = function(s, wordDict) {
     dfs(0, [])
     return res.map(v => v.join(" "))
 };
+/*
+    same as above + wordDict iteration
+*/
+var wordBreak = function(s, wordDict) {
+    const d = new Set(wordDict)
+    const res = []
+    const dfs = (idx, path) => {
+        if (idx == s.length) {
+            return res.push(path)
+        }
+        for (let w of d) {
+            const n = w.length
+            const sub = s.slice(idx, idx+n)
+            if (sub === w) {
+                const _path = [...path, w]
+                dfs(idx+n, _path)
+            }
+        }
+    }
+    dfs(0, [])
+    return res.map(arr => arr.join(' '))
+};

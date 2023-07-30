@@ -42,22 +42,26 @@ var flatten = function(head) {
     if (head === null) {
         return null
     }
-    const dummy = new Node()
-    let prev = dummy
+    const dumb = new Node()
+    let prev = dumb
+
     const stack = [head]
     while (stack.length > 0) {
         const node = stack.pop()
-        node.prev = prev
+        
         prev.next = node
-        prev.child = null
+        node.prev = prev
         prev = node
+
         if (node.next) {
             stack.push(node.next)
         }
+
         if (node.child) {
             stack.push(node.child)
+            node.child = null
         }
     }
     head.prev = null
-    return dummy.next
+    return dumb.next
 };

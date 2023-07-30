@@ -10,7 +10,6 @@
 */
 var maxUncrossedLines = function(A, B) {
     const cache = {}
-
     const dfs = (i, j) => {
         if (i == A.length || j == B.length) {
             return 0
@@ -19,17 +18,14 @@ var maxUncrossedLines = function(A, B) {
         if (key in cache) {
             return cache[key]
         }
-        let max_lines = 0
-        if (A[i] === B[j]) {
-            max_lines = dfs(i+1, j+1) + 1
-        } else {
-            const a = dfs(i+1, j)
-            const b = dfs(i, j+1)
-            max_lines = Math.max(a, b)
+        let total = 0
+        if (A[i] == B[j]) {
+            total = Math.max(total, dfs(i+1, j+1) + 1)
         }
-        cache[key] = max_lines
-        return max_lines
+        total = Math.max(total, dfs(i+1, j))
+        total = Math.max(total, dfs(i, j+1))
+        cache[key] = total
+        return total
     }
-
     return dfs(0, 0)
 };

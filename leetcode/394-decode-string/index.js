@@ -39,7 +39,7 @@ var decodeString = function(s) {
     const chars_stack = ['']
     let num = 0
     for (let c of s) {
-        if (parseInt(c) >= 0 && parseInt(c) <= 9) {
+        if (c >= '0' && c <= '9') {
             num = num * 10 + parseInt(c)
         } else if (c == '[') {
             chars_stack.push('')

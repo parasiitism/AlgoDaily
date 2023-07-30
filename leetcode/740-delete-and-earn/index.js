@@ -11,34 +11,34 @@
     111 ms, faster than 10.34%
 */
 var deleteAndEarn = function(nums) {
-    const ht = {}
+    const keySum = {}
     for (let x of nums) {
-        if (x in ht === false) {
-            ht[x] = 0
+        if (x in keySum === false) {
+            keySum[x] = 0
         }
-        ht[x] += x
+        keySum[x] += x
     }
-    const kvs = Object.entries(ht)
+    const kvs = Object.entries(keySum)
     kvs.sort((a, b) => a[0] - b[0])
 
     const cache = {}
-    const dfs = i => {
-        if (i >= kvs.length) {
+    const dfs = idx => {
+        if (idx >= kvs.length) {
             return 0
         }
-        if (i in cache) {
-            return cache[i]
+        if (idx in cache) {
+            return cache[idx]
         }
-        if (i+1 < kvs.length && kvs[i][0] == kvs[i+1][0] - 1) {
-            const a = dfs(i+1)
-            const b = dfs(i+2) + kvs[i][1]
-            const best = Math.max(a, b)
-            cache[i] = best
-            return best
-        }
-        const c = dfs(i+1) + kvs[i][1]
-        cache[i] = c
-        return c
+        let total = 0
+        if (idx+1 < kvs.length && Number(kvs[idx][0])+1 == Number(kvs[idx+1][0])) {
+            const a = dfs(idx+1)
+            const b = dfs(idx+2) + kvs[idx][1]
+            total = Math.max(a, b)
+        } else {
+            total = dfs(idx+1) + kvs[idx][1]
+        }   
+        cache[idx] = total
+        return total
     }
     return dfs(0)
 };

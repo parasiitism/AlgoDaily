@@ -7,30 +7,30 @@
     100 ms, faster than 78.74%
 */
 var longestPalindrome = function(s) {
-    const n = s.length
-    let res = ''
-    for (let i = 0; i < n; i++) {
+    let resL = 0
+    let resR = 0
+    for (let i = 0; i < s.length ; i++) {
         const [L1, R1] = expand(s, i, i)
         const [L2, R2] = expand(s, i, i+1)
-        if (R1 - L1 + 1 > res.length) {
-            res = s.slice(L1, R1+1)
+        if (R1 - L1 > resR - resL) {
+            resR = R1
+            resL = L1
         }
-        if (R2 - L2 + 1 > res.length) {
-            res = s.slice(L2, R2+1)
+        if (R2 - L2 > resR - resL) {
+            resR = R2
+            resL = L2
         }
     }
-    return res
+    return s.slice(resL, resR+1)
 };
 
 const expand = (s, L, R) => {
-    if (s[L] !== s[R]) {
+    if (s[L] != s[R]) {
         return [L, L]
     }
-    let i = L
-    let j = R
-    while (i-1 >= 0 && j+1 < s.length && s[i-1] === s[j+1]) {
-        i -= 1
-        j += 1
+    while (L-1 >= 0 && R+1 < s.length && s[L-1] == s[R+1]) {
+        L -= 1
+        R += 1
     }
-    return [i, j]
+    return [L, R]
 }

@@ -47,18 +47,18 @@ const lowerbsearch = (A, start, target) => {
     1500 ms, faster than 10.24%
 */
 var triangleNumber = function(A) {
-    const n = A.length
-    A.sort((a, b) => a - b)
+    const n = nums.length
+    nums.sort((a, b) => a - b)
     let res = 0
     for (let i = 2; i < n; i++) {
         let left = 0
-        let right = i-1
+        let right = i - 1
         while (left < right) {
-            if (A[left] + A[right] > A[i]) {
-                left += 1
-            } else {
+            if (nums[left] + nums[right] > nums[i]) {
                 res += right - left // e.g. [2,2,2,2,3,4] => there are 4 pairs of [2,3]s we can combine with the [4] to make a triangle
                 right -= 1
+            } else {
+                left += 1
             }
         }
     }

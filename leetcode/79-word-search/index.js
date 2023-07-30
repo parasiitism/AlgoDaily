@@ -71,35 +71,39 @@ console.log("-----")
 var exist = function(board, word) {
     const R = board.length
     const C = board[0].length
+    const used = new Set()
 
-    const backtrack = (i, j, idx, visited) => {
+    const backtracking = (x, y, idx) => {
         if (idx == word.length) {
             return true
         }
-        if (i < 0 || i == R || j < 0 || j == C) {
+        if (x < 0 || x == R || y < 0 || y == C) {
             return false
         }
-        if (word[idx] != board[i][j]) {
+        if (board[x][y] !== word[idx]) {
             return false
         }
-        const key = `${i},${j}`
-        if (key in visited) {
+        const key = `${x},${y}`
+        if (used.has(key)) {
             return false
         }
-        visited[key] = true
-        for (let [di, dj] of [[-1, 0],[1, 0],[0,-1],[0,1]]) {
-            if (backtrack(i+di, j+dj, idx+1, visited)) {
+        used.add(key)
+        const dirs = [[-1,0],[1,0],[0,-1],[0,1]]
+        for (let [di, dj] of dirs) {
+            const i = x+di
+            const j = y+dj
+            if (backtracking(i, j, idx+1) === true) {
                 return true
             }
         }
-        delete visited[key]
+        used.delete(key)
         return false
     }
 
-    for (let i = 0; i < R; i++) {
-        for (let j = 0; j < C; j++) {
+    for (let i = 0 ; i < R; i++) {
+        for (let j = 0 ; j < C; j++) {
             if (board[i][j] == word[0]) {
-                if (backtrack(i, j, 0, {})) {
+                if (backtracking(i, j, 0)) {
                     return true
                 }
             }
