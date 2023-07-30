@@ -11,34 +11,33 @@
  * @param {number} key
  * @return {TreeNode}
  */
-var deleteNode = function(root, key) {
-    if (root === null) {
+var deleteNode = function(node, key) {
+    if (node == null) {
         return null
     }
-    if (key < root.val) {
-        root.left = deleteNode(root.left, key)
-    } else if (key > root.val) {
-        root.right = deleteNode(root.right, key)
+    if (key < node.val) {
+        node.left = deleteNode(node.left, key)
+    } else if (key > node.val) {
+        node.right = deleteNode(node.right, key)
     } else {
-        if (root.left === null && root.right === null) {
+        if (!node.left && !node.right) {
             return null
-        } else if (root.left === null) {
-            return root.right
-        } else if (root.right === null) {
-            return root.left
+        } else if (!node.left) {
+            return node.right
+        } else if (!node.right) {
+            return node.left
         } else {
-            const successor = leftMostFromRight(root.right)
-            root.val = successor.val
-            root.right = deleteNode(root.right, successor.val)
-            return root
+            const succ = getMinFromRight(node.right)
+            succ.left = node.left
+            return node.right
         }
     }
-    return root
+    return node
 };
 
-const leftMostFromRight = root => {
-    let cur = root
-    while (cur.left !== null) {
+const getMinFromRight = node => {
+    let cur = node
+    while (cur.left != null) {
         cur = cur.left
     }
     return cur
