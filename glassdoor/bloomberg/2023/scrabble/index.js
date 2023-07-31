@@ -17,8 +17,8 @@ const scrabble = (dict, input) => {
     let res = ''
     const ctr_input = countChars(input)
     dict.forEach((w) => {
-        const ctr = countChars(w)
-        if (ifAHasB(ctr_input, ctr)) {
+        const ctr_cur = countChars(w)
+        if (ifInputHasCur(ctr_input, ctr_cur)) {
             if (w.length > res.length) {
                 res = w
             }
@@ -36,7 +36,7 @@ const countChars = word => {
     return ctr
 }
 
-const ifAHasB = (A, B) => {
+const ifInputHasCur = (A, B) => {
     for (let i = 0; i < 26; i++) {
         if (A[i] < B[i]) {
             return false

@@ -23,38 +23,38 @@ const reorderArray = (employees, order) => {
         }
         roleEmployeeMap[role].push(person)
     }
-
-    const roles = new Set()
-    for (let [role, boss] of order) {
-        roles.add(role)
-        roles.add(boss)
-    }
     const graph = {}
     const indegrees = {}
-    for (let role of roles) {
-        graph[role] = []
-        indegrees[role] = 0
-    }
     for (let [role, boss] of order) {
+        if (role in graph === false) {
+            graph[role] = []
+            indegrees[role] = 0
+        }
+        if (boss in graph === false) {
+            graph[boss] = []
+            indegrees[boss] = 0
+        }
         graph[boss].push(role)
         indegrees[role] += 1
     }
+
     const q = []
-    for (let role of roles) {
+    for (let role in graph) {
         if (indegrees[role] == 0) {
             q.push(role)
         }
     }
+    
     const res = []
     while (q.length > 0) {
         const role = q.shift()
         for (let person of roleEmployeeMap[role]) {
             res.push([person, role])
         }
-        for (let _role of graph[role]) {
-            indegrees[_role] -= 1
-            if (indegrees[_role] == 0) {
-                q.push(_role)
+        for (let boss of graph[role]) {
+            indegrees[boss] -= 1
+            if (indegrees[boss] == 0) {
+                q.push(boss)
             }
         }
     }

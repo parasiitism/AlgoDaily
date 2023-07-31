@@ -41,11 +41,12 @@ class MinOrder {
     }
     addOrder(order) {
         const n = this.stack.length
-        if (n == 0) {
-            return this.stack.push([order, order])
+        if (this.stack.length > 0 && this.stack[n-1][1] < order) {
+            const min = this.stack[n-1][1]
+            this.stack.push([order, min])
+        } else {
+            this.stack.push([order, val])
         }
-        const minNum = Math.min(this.stack[n - 1][1], order)
-        this.stack.push([order, minNum])
     }
     executeOrder() {
         const n = this.stack.length

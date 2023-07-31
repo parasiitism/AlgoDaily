@@ -23,16 +23,12 @@
 */
 const selfPrint = (pattern, n) => {
     const L = pattern.length
-    
     for (let _ = 0; _ < n-1; _++) {
-        
         const pattern2 = []
         const L2 = pattern.length * L
-        
         for (let _ = 0; _ < L2; _++) {
             pattern2.push(Array(L2).fill(false))
         }
-
         for (let i = 0; i < pattern.length; i++) {
             for (let j = 0; j < pattern[0].length; j++) {
                 if (pattern[i][j] === false) {
@@ -47,7 +43,6 @@ const selfPrint = (pattern, n) => {
         }
         pattern = pattern2
     }
-
     pattern.forEach(row => {
         let s = ''
         for (let c of row) {
