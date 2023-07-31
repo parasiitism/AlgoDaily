@@ -172,3 +172,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1792 | [Calculator with Method Chaining](/leetcode/2726) | JS | [leetcode 2726](https://leetcode.com/problems/calculator-with-method-chaining/) | |
 | 1793 | [Is Object Empty](/leetcode/2727) | JS | [leetcode 2727](https://leetcode.com/problems/is-object-empty/) | |
 | 1794 | [Count Substrings Without Repeating Character](/leetcode/2743) | 2 pointers | [leetcode 2743](https://leetcode.com/problems/count-substrings-without-repeating-character/) | |
+| 1795 | [Find Maximum Number of String Pairs](/leetcode/2744) | hashtable | [leetcode 2744](https://leetcode.com/problems/find-maximum-number-of-string-pairs/) | |
