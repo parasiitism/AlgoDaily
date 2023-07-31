@@ -34,16 +34,16 @@ var isPowerOfTwo = function (n) {
     Space   O(1) 
     80 ms, faster than 85.90% 
 */
-var isPowerOfTwo = function (n) {
-	if (n <= 0) {
-		return false;
-	}
-	while (n > 1) {
-		const m = n % 2;
-		if (m !== 0) {
-			return false;
-		}
-		n /= 2;
-	}
-	return true;
+var isPowerOfTwo = function(n) {
+    if (n <= 0) {
+        return  false
+    }
+    while (n > 1) {
+        const d = n % 2
+        if (d > 0) {
+            return false
+        }
+        n = Math.floor(n / 2)
+    }
+    return true
 };

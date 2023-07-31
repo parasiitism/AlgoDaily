@@ -199,39 +199,36 @@ print(descending_bsearch([11, 9, 7, 5, 3, 1], 7))   # 1
 
 
 def descending_lowerBsearch(nums, target):
-    left = 0
+    left = -1
     right = len(nums)-1
-    res = -1
-    while left <= right:
-        mid = (left + right)//2
+    while left < right:
+        mid = (left + right + 1)//2
         if target <= nums[mid]:
-            res = mid
-            left = mid + 1
+            left = mid
         else:
             right = mid - 1
-    return res
+    return left
 
 
 print("--descending_lowerBsearch--")
 print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 0))   # 6
-print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 1))   # 5
+print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 1))   # 6
 print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 4))   # 4 <-
 print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 5))   # 4 <-
 print(descending_lowerBsearch([9, 7, 5, 5, 5, 3, 1], 10))   # -1
 
 
 def descending_upperBsearch(nums, target):
-    left = 0
+    left = -1
     right = len(nums)-1
-    res = -1
-    while left <= right:
-        mid = (left + right)//2
-        if target >= nums[mid]:
-            right = mid - 1
+    while left < right:
+        mid = (left + right + 1)//2
+        if target < nums[mid]:
+            left = mid
         else:
-            res = mid
-            left = mid + 1
-    return res
+            right = mid - 1
+
+    return left
 
 
 print("--descending_lowerBsearch--")

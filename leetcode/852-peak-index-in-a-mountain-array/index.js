@@ -28,6 +28,23 @@ var peakIndexInMountainArray = function (A) {
 };
 
 /*
+    same as lc162
+*/
+var peakIndexInMountainArray = function(nums) {
+    let left = 0
+    let right = nums.length-1
+    while (left < right) {
+        const mid = Math.floor((left + right) / 2)
+        if (nums[mid] < nums[mid+1]) {
+            left = mid + 1
+        } else {
+            right = mid
+        }
+    }
+    return left
+};
+
+/*
     2nd: upper boundy binary search
     - same as lc162
 

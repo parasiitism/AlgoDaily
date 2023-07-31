@@ -10,16 +10,21 @@
 */
 
 const largerThanX = (A, k) => {
+    const n = A.length
     // binary search the dip
     const dipIdx = findDip(A)
+    if (A[dipIdx] > k) {
+        return n
+    }
     // do binary search on the left
-    const left = bSearchLeft(A, k, dipIdx-1)
+    const left = bSearchLeft(A, k, dipIdx)
     // do binary search on the right
     const right = bSearchRight(A, k, dipIdx)
-    console.log(dipIdx, left, right)
-    return left + A.length - right + 1
+    console.log(left, dipIdx, right)
+    return (left + 1) + (n - right)
 }
 
+// upper bound
 const findDip = A => {
     let left = 0
     let right = A.length-1
@@ -35,69 +40,66 @@ const findDip = A => {
 }
 
 const bSearchLeft = (A, target, dipIdx) => {
-    let left = 0
-    let right = dipIdx
-    let res = -1
-    while (left <= right) {
-        const mid = Math.floor((left + right) / 2)
-        if (target >= A[mid]) {
-            right = mid - 1
+    let left = -1
+    let right = dipIdx - 1
+    while (left < right) {
+        const mid = Math.ceil((left + right) / 2)
+        if (target < A[mid]) {
+            left = mid
         } else {
-            res = mid
-            left = mid + 1
+            right = mid - 1
         }
     }
-    return res
+    return left
 }
 
+// upper bound
 const bSearchRight = (A, target, dipIdx) => {
-    let left = dipIdx
-    let right = A.length - 1
-    let res = A.length
-    while (left <= right) {
+    let left = dipIdx + 1
+    let right = A.length
+    while (left < right) {
         const mid = Math.floor((left + right) / 2)
-        if (target >= A[mid]) {
-            left = mid + 1
+        if (target < A[mid]) {
+            right = mid
         } else {
-            res = mid
-            right = mid - 1
+            left = mid + 1
         }
     }
-    return res
+    return left
 }
 
 let a = [22, 19, 18, 15, 14, 10, 5, 1, 3, 4, 7, 20, 25]
 let b = 21
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // (0, 7, 12), 2
 
 a = [23, 22, 19, 18, 15, 14, 10, 5, 1, 3, 4, 7, 20, 25]
 b = 21
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // (1, 8, 13), 13
 
 a = [19, 18, 15, 14, 10, 5, 1, 3, 4, 7, 20, 25]
 b = 21
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // (-1, 6, 11), 1
 
 a = [22, 19, 18, 15, 14, 10, 5, 1, 3, 4, 7, 20, 25]
 b = 0
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // 13
 
 a = [22, 19, 18, 15, 14, 10, 5, 1, 3, 4, 7, 20, 25]
 b = 1
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // (6, 7, 8), 12
 
 a = [1, 3, 4, 7, 20, 25]
 b = 1
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // (-1, 0, 1), 5
 
 a = [1, 3, 4, 7, 20, 25]
 b = 0
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // 6
 
 a = [22, 19, 18, 15, 14, 10, 5, 1]
 b = 1
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // (6, 7, 8), 7
 
 a = [22, 19, 18, 15, 14, 10, 5, 1]
 b = 0
-console.log(largerThanX(a, b))
+console.log(largerThanX(a, b)) // 8

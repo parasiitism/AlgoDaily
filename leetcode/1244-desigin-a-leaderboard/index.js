@@ -317,3 +317,78 @@ class BST {
         return total
     }
 }
+
+/*
+    minheap
+*/
+class Leaderboard {
+    constructor() {
+        this.ht = {}
+    }
+    addScore(playerId, score) {
+        if (playerId in this.ht == false) {
+            this.ht[playerId] = 0
+        }
+        this.ht[playerId] += score
+    }
+    top(K) {
+        const minheap = new MinHeap()
+        for (let player in this.ht) {
+            const score = this.ht[player]
+            minheap.push(score)
+            if (minheap.size() > K) {
+                minheap.pop()
+            }
+        }
+        const scores = minheap.A
+        let res = 0
+        for (let s of scores) { res += s }
+        return res
+    }
+    reset(playerId) {
+        this.ht[playerId] = 0
+    }
+}
+
+class MinHeap {
+    constructor() {
+        this.A = []
+    }
+    size() {
+        return this.A.length
+    }
+    _shiftUp(idx) {
+        const parentIdx = Math.floor((idx - 1)/2)
+        if (parentIdx >= 0 && this.A[idx] < this.A[parentIdx]) {
+            [this.A[idx], this.A[parentIdx]] =  [this.A[parentIdx], this.A[idx]]
+            this._shiftUp(parentIdx)
+        }
+    }
+    _shiftDown(idx) {
+        const children = [idx*2+1, idx*2+2]
+        let minChildIdx = idx
+        for (let i of children) {
+            if (i >= this.A.length) {
+                continue
+            }
+            if (this.A[i] < this.A[minChildIdx]) {
+                minChildIdx = i
+            }
+        }
+        if (minChildIdx > idx) {
+            [this.A[idx], this.A[minChildIdx]] =  [this.A[minChildIdx], this.A[idx]]
+            this._shiftDown(minChildIdx)
+        }
+    }
+    push(x) {
+        this.A.push(x)
+        this._shiftUp(this.A.length-1)
+    }
+    pop() {
+        const n = this.A.length;
+        [this.A[0], this.A[n-1]] =  [this.A[n-1], this.A[0]]
+        const top = this.A.pop()
+        this._shiftDown(0)
+        return top
+    }
+}

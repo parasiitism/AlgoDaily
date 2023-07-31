@@ -5,18 +5,16 @@ var toHex = function(num) {
     if (num < 0) {
         num += 2**32
     }
-    let res = ''
+    const res = []
     while (num > 0) {
         const d = num % 16
         if (d < 10) {
-            res = `${d}` + res
+            res.push(`${d}`)
         } else {
-            const m = {
-                10: 'a', 11: 'b', 12: 'c', 13: 'd', 14: 'e', 15: 'f'
-            }
-            res = m[d] + res
+            const alphabet = 'abcdef'
+            res.push(alphabet[d%10])
         }
         num = Math.floor(num / 16)
     }
-    return res
+    return res.reverse().join('')
 };

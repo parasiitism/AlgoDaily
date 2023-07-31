@@ -42,3 +42,49 @@ const getStack = (l) => {
     }
     return stack
 }
+
+/*
+    intuitive
+
+    Time    O(A+B)
+    Space   O(A+B)
+*/
+var addTwoNumbers = function(l1, l2) {
+    const s1 = convert2stack(l1)
+    const s2 = convert2stack(l2)
+    const resFromRight = []
+    let carry = 0
+    while (s1.length > 0 || s2.length > 0) {
+        let a = 0
+        let b = 0
+        if (s1.length > 0) {
+            a = s1.pop()
+        }
+        if (s2.length > 0) {
+            b = s2.pop()
+        }
+        const d = a + b + carry
+        carry = Math.floor(d / 10)
+        resFromRight.push(d % 10)
+    }
+    if (carry > 0) {
+        resFromRight.push(carry)
+    }
+    const dumb = new ListNode()
+    let cur = dumb
+    while (resFromRight.length > 0) {
+        cur.next = new ListNode(resFromRight.pop())
+        cur = cur.next
+    }
+    return dumb.next
+};
+
+const convert2stack = head => {
+    const stack = []
+    let cur = head
+    while (cur != null) {
+        stack.push(cur.val)
+        cur = cur.next
+    }
+    return stack
+}

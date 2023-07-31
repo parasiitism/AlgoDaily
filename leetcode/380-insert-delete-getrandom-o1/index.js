@@ -112,23 +112,25 @@ class RandomizedSet {
         this.ht = {}
         this.A = []
     }
-    insert(x) {
-        if (x in this.ht) { return false }
-        this.ht[x] = this.A.length
-        this.A.push(x)
+    insert(val) {
+        if (val in this.ht) { return false }
+        this.ht[val] = this.A.length
+        this.A.push(val)
         return true
     }
-    remove(x) {
-        if (x in this.ht === false) { return false }
-        const i = this.ht[x];
-        const y = this.A[this.A.length-1];
-        const j = this.ht[y];
-        // swap the indices, relocate the last element of A to x's original index 
-        [this.A[i], this.A[j]] = [this.A[j], this.A[i]];
-        this.ht[y] = i;
-        // remove the x
-        delete this.ht[x]
+    remove(val) {
+        if (val in this.ht === false) { return false }
+        const idx = this.ht[val]
+
+        const n = this.A.length
+        const last = this.A[n-1];
+        
+        [this.A[idx], this.A[n-1]] = [this.A[n-1], this.A[idx]]
+        this.ht[last] = idx
+
         this.A.pop()
+        delete this.ht[val]
+
         return true
     }
     getRandom() {

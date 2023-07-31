@@ -58,9 +58,6 @@ const bsearch = (nums, target) => {
 	return right;
 };
 
-const abs = Math.abs;
-const floor = Math.floor;
-
 /*
     2nd approach: 2 pointers
 	- e.g. [2,3,6,10], 10
@@ -82,21 +79,21 @@ const floor = Math.floor;
 var threeSumClosest = function (nums, target) {
 	const n = nums.length
     nums.sort((a, b) => a - b)
-    
-    let res = Number.MAX_SAFE_INTEGER
-    
-    for (let i = 0; i < n; i++) {
-        let left = i + 1
-        let right = n - 1
-        while (left < right) {
-            const total = nums[i] + nums[left] + nums[right]
-            if (abs(total - target) < abs(res - target)) {
+    let res = 2**32
+    for (let i = 0; i < n-2; i++) {
+        let j = i+1
+        let k = n - 1
+        while (j < k) {
+            const total = nums[i] + nums[j] + nums[k]
+            
+            if (Math.abs(total - target) < Math.abs(res - target)) {
                 res = total
             }
+
             if (total < target) {
-                left += 1
+                j += 1
             } else if (total > target) {
-                right -= 1
+                k -= 1
             } else {
                 return total
             }
