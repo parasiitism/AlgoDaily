@@ -75,20 +75,42 @@ class BST {
                 return
             }
             inorder(node.right)
-            if (node.tickers.size <= k) {
-                total += node.volume * node.tickers.size
-                k -= node.tickers.size
-            } else if (k > 0){
-                total += node.volume * k
-                k = 0
-            } else if (k == 0) {
-                return
-            }
+            const toConsider = Math.min(node.tickers.size, k)
+            total += node.volume * toConsider
+            k -= toConsider
             inorder(node.left)
         }
         inorder(this.root)
 
         return total
+    }
+    _rebalance() {
+        const A = []
+        const inorder = node => {
+            if (node === null) {
+                return
+            }
+            inorder(node.left)
+            if (node.tickers.size > 0) {
+                A.push(node)
+            }
+            inorder(node.right)
+        }
+        inorder(this.root)
+
+        const partition = (L, R) => {
+            if (L > R) {
+                return null
+            }
+            const half = Math.floor((L+R)/2)
+            const oldNode = A[half]
+            const node = new BSTNode(oldNode.volume, oldNode.tickers)
+            node.left = partition(L, half-1)
+            node.right = partition(half+1, R)
+            return node
+        }
+
+        this.root = partition(0, A.length-1)
     }
 }
 
@@ -157,7 +179,7 @@ console.log(exchange.topK(3))
 exchange.execute('EURUSD', 1000)
 console.log(exchange.topK(3))
 /*
-    result = 1100 + 1199 + 1100 = 3399
+    result = 2100 + 1199 + 1100 = 4399
     
     because
     2100: EURUSD
