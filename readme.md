@@ -175,3 +175,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1795 | [Find Maximum Number of String Pairs](/leetcode/2744) | hashtable | [leetcode 2744](https://leetcode.com/problems/find-maximum-number-of-string-pairs/) | |
 | 1796 | [Construct the Longest New String](/leetcode/2745) | math | [leetcode 2745](https://leetcode.com/problems/construct-the-longest-new-string/) | |
 | 1797 | [Decremental String Concatenation](/leetcode/2746) | dynamic programming | [leetcode 2746](https://leetcode.com/problems/decremental-string-concatenation/) | ⭐️ |
+| 1798 | [Number of Beautiful Pairs](/leetcode/2748) | math | [leetcode 2748](https://leetcode.com/problems/number-of-beautiful-pairs/) | |
