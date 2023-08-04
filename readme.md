@@ -76,3 +76,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 
 | Day | Question | Type | From | remarks |
 | ---- | --- | --- | --- | --- |
+| 1801 | [Magical String](/leetcode/481) | array | [leetcode 481](https://leetcode.com/problems/magical-string/) | |
