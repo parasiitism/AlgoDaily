@@ -189,26 +189,24 @@ class Solution(object):
 
             Time    O(NlogK)
             Space   O(N/2)
-            56 ms, faster than 55.93%
+            474 ms, faster than 474ms
         """
-        if k <= len(nums) - k + 1:
-            minHeap = []
-            for x in nums:
-                if len(minHeap) == k and x < minHeap[0]:
-                    continue
-                heappush(minHeap, x)
-                if len(minHeap) > k:
-                    heappop(minHeap)
-            return minHeap[0]
-        # if K is large, then it is actually finding the N-K+1 smallest element, then we can use a maxHeap
-        maxHeap = []
-        for x in nums:
-            if len(maxHeap) == len(nums) - k + 1 and x > -maxHeap[0]:
-                continue
-            heappush(maxHeap, -x)
-            if len(maxHeap) > len(nums) - k + 1:
-                heappop(maxHeap)
-        return -maxHeap[0]
+        n = len(nums)
+        kk = n - k + 1
+        if k < kk:
+            minheap = []
+            for i in range(n):
+                heappush(minheap, nums[i])
+                if len(minheap) > k:
+                    heappop(minheap)
+            return minheap[0]
+        else:
+            maxheap = []
+            for i in range(n):
+                heappush(maxheap, -nums[i])
+                if len(maxheap) > kk:
+                    heappop(maxheap)
+            return -maxheap[0]
 
 
 s = Solution()
