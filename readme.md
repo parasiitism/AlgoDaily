@@ -77,3 +77,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | Day | Question | Type | From | remarks |
 | ---- | --- | --- | --- | --- |
 | 1801 | [Magical String](/leetcode/481) | array | [leetcode 481](https://leetcode.com/problems/magical-string/) | |
+| 1833 | [Find the Safest Path in a Grid](/leetcode/2812) | binary search, graph | [leetcode 2812](https://leetcode.com/problems/find-the-safest-path-in-a-grid/) | ⭐️ |
