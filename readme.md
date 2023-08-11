@@ -82,3 +82,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1803 | [Maximum Number of Achievable Transfer Requests](/leetcode/1601) | graph, backtracking | [leetcode 1601](https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/) | ⭐️ |
 | 1804 | [Longest Even Odd Subarray With Threshold](/leetcode/2760) | 2 pointers | [leetcode 2760](https://leetcode.com/problems/longest-even-odd-subarray-with-threshold/) | |
 | 1805 | [Prime Pairs With Target Sum](/leetcode/2761) | dynamic programming, binary search | [leetcode 2761](https://leetcode.com/problems/prime-pairs-with-target-sum/) | |
+| 1806 | [Continuous Subarrays](/leetcode/2762) | 2 pointers | [leetcode 2762](https://leetcode.com/problems/continuous-subarrays/) | ⭐️ interesting |
