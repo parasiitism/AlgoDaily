@@ -87,3 +87,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1808 | [Promise Pool](/leetcode/2636) | recursion | [leetcode 2636](https://leetcode.com/problems/promise-pool/) | ⭐️ interesting |
 | 1809 | [Longest Alternating Subarray](/leetcode/2765) | array | [leetcode 2765](https://leetcode.com/problems/longest-alternating-subarray/) | |
 | 1810 | [Relocate Marbles](/leetcode/2766) | hashtable | [leetcode 2766](https://leetcode.com/problems/relocate-marbles/) | |
+| 1811 | [Partition String Into Minimum Beautiful Substrings](/leetcode/2767) | recursion | [leetcode 2767](https://leetcode.com/problems/partition-string-into-minimum-beautiful-substrings/) | |
