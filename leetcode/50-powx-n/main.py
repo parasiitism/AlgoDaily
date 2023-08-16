@@ -85,3 +85,27 @@ print(Solution().myPow(2.1, 3))
 print(Solution().myPow(2, -2))
 print(Solution().myPow(2, 0))
 print(Solution().myPow(2, 1))
+
+"""
+    4th approach: iteratively
+
+    Time    O(logn)
+    Space   O(logn) recursion tree
+    20 ms, faster than 96.88%
+"""
+
+
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if n < 0:
+            return 1.0 / self.pow(x, -n)
+        return self.pow(x, n)
+
+    def pow(self, x, n):
+        res = 1
+        while (n > 0):
+            if (n % 2 == 1):
+                res *= x
+            x *= x
+            n //= 2
+        return res

@@ -45,3 +45,41 @@ class Solution(object):
         if left != None:
             return left
         return right
+
+
+"""
+    2nd: iteration
+    - find the common height
+    - poping the nodes from P and Q until p === q
+
+    Time    O(A+B)
+    Space   O(1)
+"""
+
+
+class Solution:
+    def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
+        height_p = self.getHeight(p)
+        height_q = self.getHeight(q)
+
+        while height_p > height_q:
+            p = p.parent
+            height_p -= 1
+
+        while height_p < height_q:
+            q = q.parent
+            height_q -= 1
+
+        while p != q:
+            p = p.parent
+            q = q.parent
+
+        return p
+
+    def getHeight(self, node):
+        h = 0
+        cur = node
+        while cur != None:
+            h += 1
+            cur = cur.parent
+        return h

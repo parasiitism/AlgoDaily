@@ -1,3 +1,5 @@
+from random import *
+from bisect import *
 from typing import List
 import random
 
@@ -44,3 +46,22 @@ class Solution:
             else:
                 left = mid + 1
         return left
+
+
+"""
+    2nd: using bisect
+"""
+
+
+class Solution:
+    def __init__(self, w: List[int]):
+        self.nums = []
+        pfs = 0
+        for x in w:
+            pfs += x
+            self.nums.append(pfs)
+
+    def pickIndex(self) -> int:
+        r = randint(1, self.nums[-1])
+        i = bisect_left(self.nums, r)
+        return i
