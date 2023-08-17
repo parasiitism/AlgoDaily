@@ -2,23 +2,18 @@
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function (s) {
-    const counter = {}
+var lengthOfLongestSubstring = function(s) {
+    const n = s.length
+    const ctr = {}
     let j = 0
     let res = 0
-    for (let i = 0; i < s.length; i++) {
+    for (let i = 0; i < n; i++) {
         const c = s[i]
-        if (c in counter === false) {
-            counter[c] = 0
-        }
-        counter[c] += 1
-        while (counter[c] > 1) {
+        ctr[c] = ctr[c] ? ctr[c]+1 : 1
+        while (ctr[c] > 1) {
             const left = s[j]
-            j += 1
-            counter[left] -= 1
-            if (counter[left] === 0) {
-                delete counter[left]
-            }
+            ctr[left] -= 1
+            j += 1 
         }
         res = Math.max(res, i - j + 1)
     }
