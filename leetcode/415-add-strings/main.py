@@ -46,6 +46,7 @@ class Solution(object):
             res = '1' + res
         return res
 
+
 """
     2nd: 2 pointers
 
@@ -53,6 +54,8 @@ class Solution(object):
     Space   O(M+N)
     36 ms, faster than 54.53%
 """
+
+
 class Solution(object):
     def addStrings(self, num1, num2):
         """
@@ -74,9 +77,42 @@ class Solution(object):
                 b = int(num2[j])
                 j -= 1
             temp = a + b + carry
-            d = temp%10
+            d = temp % 10
             carry = temp//10
             res = str(d) + res
         if carry > 0:
             res = str(carry) + res
         return res
+
+
+"""
+    3rd: also 2 pointers
+
+    Time    O(M+N)
+    Space   O(M+N)
+    36 ms, faster than 54.53%
+"""
+
+
+class Solution:
+    def addStrings(self, num1: str, num2: str) -> str:
+        num1 = num1[::-1]
+        num2 = num2[::-1]
+        res = []
+        i = 0
+        j = 0
+        carry = 0
+        while i < len(num1) or j < len(num2):
+            a, b = 0, 0
+            if i < len(num1):
+                a = int(num1[i])
+                i += 1
+            if j < len(num2):
+                b = int(num2[j])
+                j += 1
+            d = (a + b + carry) % 10
+            carry = (a + b + carry) // 10
+            res.append(str(d))
+        if carry > 0:
+            res.append(str(carry))
+        return ''.join(res[::-1])

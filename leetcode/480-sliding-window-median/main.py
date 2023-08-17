@@ -1,3 +1,4 @@
+from sortedcontainers import SortedList
 import bisect
 
 """
@@ -104,3 +105,32 @@ class Solution(object):
 print(Solution().medianSlidingWindow([1, 2, 3, 4, 5, 6, 7], 3))
 print(Solution().medianSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3))
 print(Solution().medianSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 4))
+
+"""
+    3rd: bst (in python we can use SortedList)
+
+    Time    O(NlogK)
+    Space   O(K)
+
+    200 ms, faster than 57.24%
+"""
+
+
+class Solution:
+    def medianSlidingWindow(self, nums: List[int], k: int) -> List[float]:
+        n = len(nums)
+        window = SortedList(nums[:k])
+
+        if k % 2 == 1:
+            res = [window[k//2]]
+            for i in range(k, n):
+                window.discard(nums[i-k])
+                window.add(nums[i])
+                res.append(window[k//2])
+            return res
+        res = [(window[k//2-1] + window[k//2]) / 2.0]
+        for i in range(k, n):
+            window.discard(nums[i-k])
+            window.add(nums[i])
+            res.append((window[k//2-1] + window[k//2]) / 2.0)
+        return res

@@ -17,21 +17,24 @@
     76 ms, faster than 49.13%
 */
 var exclusiveTime = function(n, logs) {
-    let curTime = 0
-    const stack = []
     const res = Array(n).fill(0)
-    for (let log of logs) {
-        let [task, se, t] = log.split(':')
-        task = parseInt(task)
-        t = parseInt(t)
-        if (se == 'start') {
-            const prevTask = stack[stack.length-1]
-            res[prevTask] += t - curTime
+    const stack = [] // fid
+    let curTime = 0
+    for (let i = 0; i < logs.length; i++) {
+        const log = logs[i]
+        let [fid, se, t] = log.split(':')
+        fid = Number(fid)
+        t = Number(t)
+        if (se === 'start') {
+            if (stack.length > 0) {
+                const prevFid = stack[stack.length-1]
+                res[prevFid] += t - curTime
+            }
             curTime = t
-            stack.push(task)
+            stack.push(fid)
         } else {
-            const startTime = stack.pop()
-            res[task] += t - curTime + 1
+            const curFid = stack.pop()
+            res[curFid] += t - curTime + 1
             curTime = t + 1
         }
     }

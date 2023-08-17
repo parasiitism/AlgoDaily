@@ -15,7 +15,7 @@ class Solution(object):
     explanation:
     in the recursion tree, for each number, we can either include or exclude it the result, therefore we have 2^n options in total
 
-    Time    O(2^N)
+    Time    O(N * 2^N)
     Space   O(2^N) recursion
     20 ms, faster than 75.55%
     """
@@ -46,7 +46,7 @@ print("-----")
 class Solution(object):
     """
     Iterative DFS
-    Time    O(2^N)
+    Time    O(N * 2^N)
     Space   O(2^N)
     beats   3.67%
     """
@@ -82,7 +82,7 @@ class Solution(object):
     - the way similar to lc416
     - for each number, we can either include or exclude it the result, therefore we have 2^n options in total
 
-    Time    O(2^n)
+    Time    O(N * 2^n)
     Space   O(2^n) recursion tree
     24 ms, faster than 79.31%
     """
@@ -124,7 +124,7 @@ class Solution(object):
     [],[1]
     [],[1],[2],[1,2]
     [],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]
-    Time    O(2^n)
+    Time    O(N * 2^n)
     Space   O(2^n)
     16 ms, faster than 94.11%
     """
@@ -141,3 +141,28 @@ class Solution(object):
 s = Solution()
 print(s.subsets([1, 2, 3]))
 print(s.subsets([1, 2, 3, 4]))
+
+"""
+    backtracking
+
+    Time    O(N * 2^N)
+    Space   O(N)
+"""
+
+
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        n = len(nums)
+        res = []
+
+        def backtrack(L, first=0, chosen=[]):
+            if len(chosen) == L:
+                res.append(chosen[:])
+                return
+            for i in range(first, n):
+                chosen.append(nums[i])
+                backtrack(L, i+1, chosen)
+                chosen.pop()
+        for L in range(n+1):
+            backtrack(L)
+        return res

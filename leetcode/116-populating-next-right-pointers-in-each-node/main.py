@@ -21,22 +21,22 @@ class Solution:
     # @return TreeLinkNode
     def connect(self, root):
         if root == None:
-            return
-        queue = [root]
-        while len(queue) > 0:
-            cnt = len(queue)
+            return None
+        q = deque()
+        q.append(root)
+        while len(q) > 0:
+            n = len(q)
             prev = None
-            for i in range(cnt):
-                head = queue.pop(0)
-                # here is the crux
-                head.next = prev
-                prev = head
-                # add items into queue
-                if head.right != None:
-                    queue.append(head.right)
-                if head.left != None:
-                    queue.append(head.left)
-    return root
+            for _ in range(n):
+                node = q.popleft()
+                if prev:
+                    prev.next = node
+                prev = node
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+        return root
 
 
 #     5

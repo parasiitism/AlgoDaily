@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import *
 
 """
     1st: BFS + hashtable
@@ -99,53 +99,55 @@ print("-----")
 
 class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
-        if len(grid) == 0 or len(grid[0]) == 0:
-            return 0
         R, C = len(grid), len(grid[0])
         seen = {}
-        areas = {}
-        for i in range(R):
-            for j in range(C):
-                if grid[i][j] == 1 and (i, j) not in seen:
-                    areaKey = len(areas)
-                    area = self.bfs(grid, i, j, seen, areaKey)
-                    areas[areaKey] = area
-        # find the max area
+        lslands_size = {}
         res = 0
         for i in range(R):
             for j in range(C):
+                if grid[i][j] == 0 or (i, j) in seen:
+                    continue
+                island_id = len(lslands_size)
+                size = self.bfs(grid, i, j, seen, island_id)
+                lslands_size[island_id] = size
+                res = max(res, size)
+        for i in range(R):
+            for j in range(C):
                 if grid[i][j] == 0:
-                    islands = set()
-                    dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-                    for di, dj in dirs:  # O(4) 4 directions
-                        coor = (i+di, j+dj)
-                        if coor in seen:
-                            islands.add(seen[coor])
-                    areaSum = 1
-                    for key in islands:  # O(4) at most 4 islands
-                        areaSum += areas[key]
-                    res = max(res, areaSum)
-        # corner case: all cells are filled
-        if res == 0:
-            return R * C
+                    connected_ids = set()
+                    area = 1
+                    for r, c in [[i-1, j], [i+1, j], [i, j-1], [i, j+1]]:
+                        if r < 0 or r >= R or c < 0 or c >= C:
+                            continue
+                        key = (r, c)
+                        if key not in seen:
+                            continue
+                        island_id = seen[(r, c)]
+                        if island_id in connected_ids:
+                            continue
+                        connected_ids.add(island_id)
+                        area += lslands_size[island_id]
+
+                    res = max(res, area)
         return res
 
-    def bfs(self, grid, x, y, seen, areaKey):
+    def bfs(self, grid, x, y, seen, island_id):
         R, C = len(grid), len(grid[0])
-        area = 0
-        q = [(x, y)]
+        q = deque()
+        q.append([x, y])
+        res = 0
         while len(q) > 0:
-            i, j = q.pop(0)
-            if i < 0 or i == R or j < 0 or j == C:
+            i, j = q.popleft()
+            if i < 0 or i >= R or j < 0 or j >= C:
                 continue
-            if grid[i][j] == 0:
-                continue
-            if (i, j) in seen:
-                continue
-            seen[(i, j)] = areaKey
-            area += 1
-            q.append((i-1, j))
-            q.append((i+1, j))
-            q.append((i, j-1))
-            q.append((i, j+1))
-        return area
+            if grid[i][j] == 1:
+                key = (i, j)
+                if key in seen:
+                    continue
+                res += 1
+                seen[key] = island_id
+                q.append((i-1, j))
+                q.append((i+1, j))
+                q.append((i, j-1))
+                q.append((i, j+1))
+        return res

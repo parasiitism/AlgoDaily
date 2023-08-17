@@ -13,22 +13,22 @@ from collections import *
 
 
 class Solution(object):
-    def customSortString(self, S, T):
+    def customSortString(self, order: str, s: str) -> str:
         # count the occurence, N, of each character and put the count in a hashtable
-        counter = Counter(T)
+        ctr = Counter(s)
         # for each c in S, if c is in the hashtable,
         # append the N*"c" in the result string and remove c from the hashtbale
-        res = ''
-        for c in S:
-            if c in counter:
-                count = counter[c]
-                res += count * c
-                del counter[c]
+        res = []
+        for i in range(len(order)):
+            c = order[i]
+            freq = ctr[c]
+            res.append(freq * c)
+            ctr[c] = 0
         # for the remaining characters in the hashtable, put them back to the result string
-        for c in counter:
-            count = counter[c]
-            res += count * c
-        return res
+        for remain_key in ctr:
+            freq = ctr[remain_key]
+            res.append(freq * remain_key)
+        return ''.join(res)
 
 
 a = "kqep"

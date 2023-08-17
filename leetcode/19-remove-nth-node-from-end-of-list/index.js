@@ -6,17 +6,17 @@
     76 ms, faster than 95.16%
 */
 var removeNthFromEnd = function(head, n) {
-    const dumphead = new ListNode()
-	dumphead.next = head
-	let slow = dumphead
-	let fast = dumphead
-	for (let i = 0; i < n; i++) {
-		fast = fast.next
-	}
-	while (fast.next != null) {
+    const dummy = new ListNode()
+    dummy.next = head
+    let slow = dummy
+    let fast = dummy
+    for (let i = 0; i < n; i++) {
         fast = fast.next
+    }
+    while (fast.next !== null) {
         slow = slow.next
-	}
-	slow.next = slow.next.next
-	return dumphead.next
+        fast = fast.next
+    }
+    slow.next = slow.next.next
+    return dummy.next
 };

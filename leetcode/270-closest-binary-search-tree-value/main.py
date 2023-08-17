@@ -117,3 +117,28 @@ class Solution(object):
             else:
                 cur = cur.right
         return res
+
+
+"""
+    3rd: BST traversal
+"""
+
+
+class Solution:
+    def closestValue(self, root: Optional[TreeNode], target: float) -> int:
+        cur = root
+        res = root.val
+        while cur != None:
+
+            if abs(cur.val - target) < abs(res - target):
+                res = cur.val
+            elif abs(cur.val - target) == abs(res - target):
+                res = min(res, cur.val)
+
+            if target < cur.val:
+                cur = cur.left
+            elif target > cur.val:
+                cur = cur.right
+            else:
+                return cur.val
+        return res

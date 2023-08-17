@@ -10,13 +10,12 @@
 """
 
 
-class Solution(object):
-    def findBuildings(self, heights):
-        maxH = 0
+class Solution:
+    def findBuildings(self, A: List[int]) -> List[int]:
+        peak = -1
         res = []
-        for i in range(len(heights)-1, -1, -1):
-            h = heights[i]
-            if h > maxH:
-                maxH = h
+        for i in range(len(A)-1, -1, -1):
+            if A[i] > peak:
+                peak = A[i]
                 res.append(i)
         return res[::-1]

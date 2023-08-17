@@ -22,3 +22,27 @@ var plusOne = function (digits) {
 	}
 	return digits;
 };
+
+/*
+    2nd: input immutable, use an extra array for the result
+
+    Time    O(N)
+    Space   O(N) the result
+    52 ms, faster than 82.83%
+*/
+var plusOne = function(digits) {
+    const n = digits.length
+    const res = []
+    let carry = 1
+    for (let i = n-1; i >= 0; i--) {
+        const x = digits[i]
+        const d = (x + carry) % 10
+        carry = Math.floor((x + carry) / 10)
+        res.push(d)
+    }
+    if (carry > 0) {
+        res.push(carry)
+    }
+    res.reverse()
+    return res
+};

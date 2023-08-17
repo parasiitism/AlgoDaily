@@ -15,21 +15,23 @@
 """
 
 
-class Solution(object):
-    def countSubstrings(self, s):
+class Solution:
+    def countSubstrings(self, s: str) -> int:
         res = 0
         for i in range(len(s)):
-            a = self.explore(s, i, i)
-            b = self.explore(s, i, i+1)
-            res += a + b
+            singleMiddle = self.countPalindromes(s, i, i)
+            doubleMiddle = self.countPalindromes(s, i, i+1)
+            res += singleMiddle + doubleMiddle
         return res
 
-    def explore(self, s, left, right):
-        if right == len(s) or s[left] != s[right]:
+    def countPalindromes(self, s, L, R):
+        if R >= len(s):
             return 0
-        count = 1
-        while left-1 >= 0 and right+1 < len(s) and s[left-1] == s[right+1]:
-            count += 1
-            left -= 1
-            right += 1
-        return count
+        if s[L] != s[R]:
+            return 0
+        total = 1
+        while L-1 >= 0 and R+1 < len(s) and s[L-1] == s[R+1]:
+            total += 1
+            L -= 1
+            R += 1
+        return total

@@ -8,78 +8,60 @@ from collections import *
 """
 
 
-class ListNode(object):
-
-    def __init__(self, key, val):
+class LLNode:
+    def __init__(self, key=-1, val=-1):
         self.key = key
         self.val = val
         self.prev = None
         self.next = None
 
 
-class LRUCache(object):
+class LRUCache:
 
-    def __init__(self, capacity):
-        """
-        :type capacity: int
-        """
-        self.capacity = capacity
-        self.listCount = 0
-        self.map = {}
-        self.listHead = ListNode(-1, -1)
-        self.listTail = ListNode(-1, -1)
-        self.listHead.next = self.listTail
-        self.listTail.prev = self.listHead
+    def __init__(self, capacity: int):
+        self.cap = capacity
+        self.size = 0
+        self.head = LLNode()
+        self.tail = LLNode()
+        self.head.next = self.tail
+        self.tail.prev = self.head
+        self.ht = {}
 
-    def get(self, key):
-        """
-        :type key: int
-        :rtype: int
-        """
-        if key in self.map:
-            self._moveToTail(self.map[key])
-            return self.map[key].val
-        return -1
-
-    def put(self, key, value):
-        """
-        :type key: int
-        :type value: int
-        :rtype: void
-        """
-        if key in self.map:
-            node = self.map[key]
-            node.val = value
-            self._moveToTail(node)
-        else:
-            node = ListNode(key, value)
-            self._addToTail(node)
-            self.listCount += 1
-            self.map[key] = node
-
-        if self.listCount > self.capacity:
-            firstKey = self._removeHead()
-            del self.map[firstKey]
-            self.listCount -= 1
-
-    def _addToTail(self, node):
-        last = self.listTail.prev
-        last.next = node
-        node.prev = last
-        node.next = self.listTail
-        self.listTail.prev = node
-
-    def _moveToTail(self, node):
+    def _removeNode(self, node):
         node.prev.next = node.next
         node.next.prev = node.prev
-        self._addToTail(node)
 
-    def _removeHead(self):
-        # since we will check if self.listCount > self.capacity, we dont need to check if first would be listTail
-        first = self.listHead.next
-        self.listHead.next = first.next
-        first.next.prev = self.listHead
-        return first.key
+    def _addToTail(self, node):
+        last = self.tail.prev
+        last.next = node
+        node.prev = last
+        node.next = self.tail
+        self.tail.prev = node
+
+    def get(self, key: int) -> int:
+        if key not in self.ht:
+            return -1
+        node = self.ht[key]
+        self._removeNode(node)
+        self._addToTail(node)
+        return node.val
+
+    def put(self, key: int, value: int) -> None:
+        if key not in self.ht:
+            node = LLNode(key, value)
+            self._addToTail(node)
+            self.ht[key] = node
+            self.size += 1
+        else:
+            node = self.ht[key]
+            node.val = value
+            self._removeNode(node)
+            self._addToTail(node)
+        if self.size > self.cap:
+            first = self.head.next
+            self._removeNode(first)
+            del self.ht[first.key]
+            self.size -= 1
 
 
 c = LRUCache(2)

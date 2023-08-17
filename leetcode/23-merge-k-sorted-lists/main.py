@@ -1,4 +1,4 @@
-import heapq
+from heapq import *
 
 
 class ListNode(object):
@@ -62,26 +62,25 @@ class Solution(object):
 """
 
 
-class Solution(object):
-    def mergeKLists(self, lists):
-        """
-        :type lists: List[ListNode]
-        :rtype: ListNode
-        """
-        pq = []
-        for head in lists:
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        minheap = []  # (num, index)
+        for list_index in range(len(lists)):
+            head = lists[list_index]
             if head != None:
-                heapq.heappush(pq, (head.val, head))
-
-        dumphead = ListNode()
+                heappush(minheap, (head.val, list_index))
+                lists[list_index] = head.next
+        dumphead = ListNode(-1)
         cur = dumphead
-        while len(pq) > 0:
-            val, node = heapq.heappop(pq)
-            cur.next = ListNode(val)
+        while len(minheap) > 0:
+            smallest, list_index = heappop(minheap)
+            cur.next = ListNode(smallest)
             cur = cur.next
-            if node.next != None:
-                nextNode = node.next
-                heapq.heappush(pq, (nextNode.val, nextNode))
+
+            head = lists[list_index]
+            if head != None:
+                heappush(minheap, (head.val, list_index))
+                lists[list_index] = head.next
         return dumphead.next
 
 

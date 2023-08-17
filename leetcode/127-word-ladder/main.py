@@ -12,8 +12,8 @@ from typing import List
     - but this time we change the word to get the next combination instead of finding it from the wordList,
     because there might be a lot of words in the wordList which just have 1 digit difference
 
-    Time    O(n^26*wordLength) for each word, traverse the similar words
-    Space   O(n)
+    Time    O(N * 26L) for each word, traverse the similar words
+    Space   O(N * 26L)
     628 ms, faster than 25.28%
 """
 
@@ -24,19 +24,19 @@ class Solution(object):
         wordSet = set(wordList)
         if endWord not in wordSet:
             return 0
-        seen = set()
         q = [(beginWord, 1)]
+        seen = set()
         while len(q) > 0:
-            node, steps = q.pop(0)
-            if node == endWord:
+            word, steps = q.pop(0)
+            if word == endWord:
                 return steps
-            if node in seen:
+            if word in seen:
                 continue
-            seen.add(node)
-            for i in range(len(node)):
+            seen.add(word)
+            for i in range(len(word)):
                 for j in range(26):
                     c = alphabets[j]
-                    cand = node[:i] + c + node[i+1:]
+                    cand = word[:i] + c + word[i+1:]
                     if cand in wordSet:
                         q.append((cand, steps + 1))
         return 0
@@ -75,8 +75,8 @@ print("-----")
     - but this time we change the word to get the next combination instead of finding it from the wordList,
     because there might be a lot of words in the wordList which just have 1 digit difference
 
-    Time    O(n^26*wordLength) for each word, traverse the similar words
-    Space   O(n)
+    Time    O(N * 26L) for each word, traverse the similar words
+    Space   O(N * 26L)
     524 ms, faster than 31.22%
 """
 
