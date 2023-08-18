@@ -89,3 +89,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1810 | [Relocate Marbles](/leetcode/2766) | hashtable | [leetcode 2766](https://leetcode.com/problems/relocate-marbles/) | |
 | 1811 | [Partition String Into Minimum Beautiful Substrings](/leetcode/2767) | recursion | [leetcode 2767](https://leetcode.com/problems/partition-string-into-minimum-beautiful-substrings/) | |
 | 1812 | [Find the Maximum Achievable Number](/leetcode/2769) | math | [leetcode 2769](https://leetcode.com/problems/find-the-maximum-achievable-number/) | |
+| 1813 | [Undefined to Null](/leetcode/2775) | recursion | [leetcode 2775](https://leetcode.com/problems/undefined-to-null/description/) | |
