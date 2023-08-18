@@ -25,7 +25,7 @@ var longestPalindrome = function(s) {
 };
 
 const expand = (s, L, R) => {
-    if (s[L] != s[R]) {
+    if (R == n || s[L] != s[R]) {
         return [L, L]
     }
     while (L-1 >= 0 && R+1 < s.length && s[L-1] == s[R+1]) {
