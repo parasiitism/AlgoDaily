@@ -16,37 +16,33 @@
     Space   O(V)
     76 ms, faster than 99.33%
 */
-var findOrder = function(numCourses, prerequisites) {
-    const n = numCourses
-    const graph = []
-    const indegrees = []
+var findOrder = function(n, edges) {
+    const G = {}
+    const indegrees = {}
     for (let i = 0; i < n; i++) {
-        graph.push([])
-        indegrees.push(0)
+        G[i] = []
+        indegrees[i] = 0
     }
-    for (let [dest, src] of prerequisites) {
-        graph[src].push(dest)
-        indegrees[dest] += 1
+    for (let [child, parent] of edges) {
+        G[parent].push(child)
+        indegrees[child] += 1
     }
     const q = []
-    for (let i = 0; i < n; i++) {
-        if (indegrees[i] == 0) {
-            q.push(i)
+    for (let node in indegrees) {
+        if (indegrees[node] == 0) {
+            q.push(node)
         }
     }
     const res = []
     while (q.length > 0) {
         const node = q.shift()
         res.push(node)
-        for (let child of graph[node]) {
+        for (let child of G[node]) {
             indegrees[child] -= 1
             if (indegrees[child] == 0) {
                 q.push(child)
             }
         }
     }
-    if (res.length != n) {
-        return []
-    }
-    return res
+    return res.length == n ? res : []
 };
