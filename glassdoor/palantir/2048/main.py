@@ -8,7 +8,11 @@
     - [4,2,2,3] -> [8,0,0,3]
     - [8,4,2,2,3] -> [16,0,0,0,3]
     - [0,0,10,-5,-5,0,3] -> 
+
+    https://www.1point3acres.com/bbs/thread-963716-1-1.html
 """
+
+
 def f(arr):
     n = len(arr)
     stack = []
@@ -28,7 +32,8 @@ def f(arr):
         res[i] = x
     return res
 
-print(f([4,0,2,2]))
+
+print(f([4, 0, 2, 2]))
 # print(f([4,2,2,3]))
 # print(f([8,4,2,2,3]))
 # print(f([0,0,10,-5,-5,0,3]))
