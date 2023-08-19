@@ -29,8 +29,10 @@
     1st: DFS with space
     - extra param for the path 
 
+    []
+
     Time    O(N * H) H: height
-    Space   O(H + N * H)
+    Space   O(H + N * H^2)
 */
 const flatten1 = object => {
     const res = {}
@@ -73,12 +75,13 @@ console.log('-----')
     1st: DFS with space
     - extra param for the path 
 
-    Time    O(N * H + W) H: height
+    Time    O(N + W) H: height
     Space   O(N)
 */
 const flatten2 = object => {
     const res = {}
     const parents = {} // child: parent
+    const leaves = []
     const dfs = (node, p) => {
         if (!node) {
             return
@@ -90,19 +93,21 @@ const flatten2 = object => {
             if (typeof v === 'object' && !Array.isArray(v)) {
                 dfs(v, k)
             } else {
-                // O(H)
-                const path = []
-                let cur = k
-                while (cur != null) {
-                    path.push(cur)
-                    cur = parents[cur]
-                }
-                path.reverse()
-                res[path.join('.')] = v
+                leaves.push([k, v])
             }
         }
     }
     dfs(object, null)
+    for (let [k, v] of leaves) {
+        const path = []
+        let cur = k
+        while (cur != null) {
+            path.push(cur)
+            cur = parents[cur]
+        }
+        path.reverse()
+        res[path.join('.')] = v
+    }
     return res
 }
 
