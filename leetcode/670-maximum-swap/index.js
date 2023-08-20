@@ -30,3 +30,35 @@ var maximumSwap = function(num) {
     }
     return maxNum
 };
+
+/*
+    2nd:
+
+    - Starting from the right, calculate the largest digit on the right of it. Example: for the number 4 3 1 8 3, we will can build the array: 8 8 8 8 3.
+    - Now start from the left, the first digit that is smaller than the largest on its right is the one we want to swap.
+
+    Time    O(N)
+    Space   O(N)
+*/
+var maximumSwap = function(num) {
+    const digits = [...`${num}`].map(c => Number(c))
+
+    const n = digits.length
+    const backward = Array(n).fill(n-1)
+    let running_max_index = n-1
+    for (let i = n-1; i >= 0; i--) {
+        const x = digits[i]
+        if (x > digits[running_max_index]) {
+            running_max_index = i
+        }
+        backward[i] = running_max_index
+    }
+    for (let i = 0; i < n; i++) {
+        const j = backward[i]
+        if (digits[i] < digits[j]) {
+            [digits[i], digits[j]] = [digits[j], digits[i]]
+            return digits.map(x => `${x}`).join('')
+        }
+    }
+    return num
+};
