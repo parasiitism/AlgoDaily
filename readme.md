@@ -91,3 +91,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1812 | [Find the Maximum Achievable Number](/leetcode/2769) | math | [leetcode 2769](https://leetcode.com/problems/find-the-maximum-achievable-number/) | |
 | 1813 | [Undefined to Null](/leetcode/2775) | recursion | [leetcode 2775](https://leetcode.com/problems/undefined-to-null/description/) | |
 | 1814 | [Convert Callback Based Function to Promise Based Function](/leetcode/2776) | JS | [leetcode 2776](https://leetcode.com/problems/convert-callback-based-function-to-promise-based-function/) | ⭐️ |
+| 1815 | [Maximum Number of Jumps to Reach the Last Index](/leetcode/2770) | dynamic programming | [leetcode 2770](https://leetcode.com/problems/maximum-number-of-jumps-to-reach-the-last-index/) | |
