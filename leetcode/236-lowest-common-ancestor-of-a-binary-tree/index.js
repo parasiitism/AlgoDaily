@@ -28,3 +28,23 @@ var lowestCommonAncestor = function (root, p, q) {
     }
     return null
 };
+
+/*
+    - find the path for each target
+    - the last common node is the LCA 
+*/
+var lowestCommonAncestor = function(root, p, q) {
+    if (root === null || root.val == p.val || root.val == q.val) {
+        return root
+    }
+    const L = lowestCommonAncestor(root.left, p, q)
+    const R = lowestCommonAncestor(root.right, p, q)
+    if (L !== null && R !== null) {
+        return root
+    } else if (L !== null) {
+        return L
+    } else if (R !== null) {
+        return R
+    }
+    return null
+};

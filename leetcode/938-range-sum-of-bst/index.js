@@ -43,23 +43,22 @@ var rangeSumBST = function (root, L, R) {
     Space   O(h)
     224 ms, faster than 70.31% 
 */
-var rangeSumBST = function(root, L, R) {
-    if (root == null || L > R) {
-        return 0
-    }
-    let res = 0
-    const q = [root]
-    while (q.length > 0) {
-        const node = q.shift()
-        if (node.val >= L && node.val <= R) {
-            res += node.val
+var rangeSumBST = function(root, low, high) {
+    let total = 0
+    
+    const dfs = node => {
+        if (node === null) return
+        if (node.val >= low && node.val <= high) {
+            total += node.val
         }
-        if (node.left && node.val >= L) {
-            q.push(node.left)
+        if (node.left && low <= node.val) {
+            dfs(node.left)
         }
-        if (node.right && node.val <= R) {
-            q.push(node.right)
+        if (node.right && node.val <= high) {
+            dfs(node.right)
         }
     }
-    return res
+    dfs(root)
+
+    return total
 };

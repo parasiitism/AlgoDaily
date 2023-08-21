@@ -32,3 +32,45 @@ class Solution(object):
             m[num % 10] += 1
             num /= 10
         return tuple(m)
+
+
+"""
+    2nd: hashtable
+    - build a hashtable to store the parent relation of every node
+    - BFS to find all the nodes which are k-distance away from target
+
+    Time    O(N)
+    Space   O(N)
+"""
+
+
+class Solution:
+    def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
+
+        parents = {}
+
+        def dfs(node, prev):
+            if node == None:
+                return
+            parents[node] = prev
+            dfs(node.left, node)
+            dfs(node.right, node)
+        dfs(root, None)
+
+        res = []
+        q = [(target, 0)]
+        seen = set()
+        while len(q) > 0:
+            node, steps = q.pop(0)
+            if node == None:
+                continue
+            if node in seen:
+                continue
+            seen.add(node)
+            if steps == k:
+                res.append(node.val)
+            else:
+                q.append((node.left, steps + 1))
+                q.append((node.right, steps + 1))
+                q.append((parents[node], steps + 1))
+        return res

@@ -100,3 +100,40 @@ class Solution(object):
         for x in opens:
             res[x] = '*'
         return ''.join(c for c in res if c != '*')
+
+
+"""
+    4th: back-and-forth
+
+    Time    O(N)
+    Space   O(1) if input is character array (because string is not mutable)
+"""
+
+
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        n = len(s)
+        res = [c for c in s]
+        opens = 0
+        for i in range(n):
+            if s[i] == '(':
+                opens += 1
+            elif s[i] == ')':
+                if opens == 0:
+                    res[i] = '*'
+                else:
+                    opens -= 1
+
+        # go backward
+        opens = 0
+        for i in range(n-1, -1, -1):
+            if s[i] == ')':
+                opens += 1
+            elif s[i] == '(':
+                if opens == 0:
+                    res[i] = '*'
+                else:
+                    opens -= 1
+
+        res = [c for c in res if c != '*']
+        return ''.join(res)
