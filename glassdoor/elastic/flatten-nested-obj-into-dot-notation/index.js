@@ -40,8 +40,7 @@ const flatten0 = object => {
         if (!node) {
             return
         }
-        const keys = Object.keys(node) // O(W)
-        for (let k of keys) {
+        for (let k in node) {
             const v = node[k]
             const _path = path.length > 0 ? `${path}.${k}` : k // O(N)
             if (typeof v === 'object' && !Array.isArray(v)) {
@@ -86,8 +85,7 @@ const flatten1 = object => {
         if (!node) {
             return
         }
-        const keys = Object.keys(node) // O(W)
-        for (let k of keys) {
+        for (let k in node) {
             const v = node[k]
             const _path = [...path, k] // O(N)
             if (typeof v === 'object' && !Array.isArray(v)) {
@@ -132,8 +130,7 @@ const flatten2 = object => {
         if (!node) {
             return
         }
-        const keys = Object.keys(node)
-        for (let k of keys) {
+        for (let k in node) {
             const v = node[k]
             parents[k] = p
             if (typeof v === 'object' && !Array.isArray(v)) {
@@ -181,8 +178,7 @@ const flatten3 = object => {
     const stack = [[object, null]]
     while (stack.length > 0) {
         const [node, p] = stack.pop()
-        const keys = Object.keys(node)
-        for (let k of keys) {
+        for (let k in node) {
             const v = node[k]
             parents[k] = p
             if (typeof v === 'object' && !Array.isArray(v)) {
