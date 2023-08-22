@@ -5,23 +5,25 @@
 */
 class TimeLimitedCache {
     constructor() {
-        this.cache = {}
-        this.timeouts = {}
+        this.cache = {}     // key: value
+        this.timeouts = {}  // key: timeout id
     }
-    set(key, val, duration) {
-        const existed = key in this.cache
-        if (existed) {
-            const tID = this.timeouts[key]
-            delete this.timeouts[key]
-            clearTimeout(tID)
-        }
-        this.cache[key] = val
-        const tID = setTimeout(() => {
+    set(key, value, duration) {
+        let didExisted = key in this.cache
+        if (didExisted) {
             delete this.cache[key]
+            const timeoutID = this.timeouts[key]
+            clearTimeout(timeoutID)
+            delete this.timeouts[key]
+        }
+        this.cache[key] = value
+        this.timeouts[key] = setTimeout(() => {
+            delete this.cache[key]
+            const timeoutID = this.timeouts[key]
+            clearTimeout(timeoutID)
             delete this.timeouts[key]
         }, duration)
-        this.timeouts[key] = tID
-        return existed
+        return didExisted
     }
     get(key) {
         if (key in this.cache == false) {
