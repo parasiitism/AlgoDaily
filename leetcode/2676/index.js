@@ -69,13 +69,13 @@ var throttle = function(fn, t) {
 */
 var throttle = function(fn, t) {
     let nextTime = 0
-    let curTimeout = null
-    return (...args) => {
-        const delay = Math.max(0, nextTime - Date.now())
-        clearTimeout(curTimeout) // meaning that the calls in-between are cancelled
-        curTimeout = setTimeout(() => {
+    let timeoutID = null
+    return function(...args) {
+        const time_to_execuate = Math.max(0, nextTime - Date.now())
+        clearTimeout(timeoutID)  // meaning that the calls in-between are cancelled
+        timeoutID = setTimeout(() => {
             fn(...args)
             nextTime = Date.now() + t
-        }, delay)
+        }, time_to_execuate)
     }
 };
