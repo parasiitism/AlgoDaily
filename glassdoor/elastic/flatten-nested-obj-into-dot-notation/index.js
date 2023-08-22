@@ -121,7 +121,7 @@ console.log('-----')
     2nd: DFS + space optimization
     - extra param for the path 
 
-    Time    O(N + WH) W: leaves, H: height; W*H = N actually
+    Time    O(N + WH) W: leaves, H: height
     Space   O(N)
 */
 const flatten2 = object => {
