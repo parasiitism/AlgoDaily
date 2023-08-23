@@ -23,6 +23,7 @@
 
     questions to ask:
     - will there be other types: array, undefined, null...etc
+    - corner case: '.' as a key? no, for now
 */
 
 /*
@@ -32,7 +33,7 @@
     []
 
     Time    O(N * H) -> O(N^2) H: height
-    Space   O(H + N * H^2)
+    Space   O(H * K^2)
 */
 const flatten0 = object => {
     const res = {}
