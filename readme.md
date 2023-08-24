@@ -95,3 +95,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1816 | [Sum of Squares of Special Elements](/leetcode/2778) | array | [leetcode 2778](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | |
 | 1817 | [Maximum Beauty of an Array After Applying Operation](/leetcode/2779) | sort | [leetcode 2779](https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/) | |
 | 1818 | [Minimum Index of a Valid Split](/leetcode/2780) | Array | [leetcode 2780](https://leetcode.com/problems/minimum-index-of-a-valid-split/) | ⭐️ |
+| 1819 | [Apply Operations to Make All Array Elements Equal to Zero](/leetcode/2772) | sliding window | [leetcode 2772](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/) | ⭐️ |
