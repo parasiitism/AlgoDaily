@@ -31,3 +31,13 @@ var isToeplitzMatrix = function(m) {
     }
     return true
 };
+
+var isToeplitzMatrix = function(matrix) {
+    const R = matrix.length
+    const C = matrix[0].length
+    for (let i = 0; i < R; i++)
+        for (let j = 0; j < C; j++)
+            if (i > 0 && j > 0 && matrix[i-1][j-1] != matrix[i][j])
+                return false;
+    return true;
+};

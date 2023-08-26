@@ -98,67 +98,54 @@ class Solution:
         return None
 
 
-class Solution(object):
-    def kthSmallest(self, matrix, k):
-        """
-        :type matrix: List[List[int]]
-        :type k: int
-        :rtype: int
+"""
+    2nd: suggested approach: binary search
+    - start from left=first smallest number and right=largest number, and compute the mid point
+    - for each row, calculate how many numbers <= mid point and adjust the mid point until we reach to a number where matrix[i][j] == kth
 
-        suggested approach: binary search
-        - start from left=first smallest number and right=largest number, and compute the mid point
-        - for each row, calculate how many numbers <= mid point and adjust the mid point until we reach to a number where matrix[i][j] == kth
+    e.g.
+    nums = [
+        [1,5,10]
+        [9,10,13]
+        [12,13,15]
+    ]
+    k = 6
 
-        e.g.
-        nums = [
-            [1,5,10]
-            [9,10,13]
-            [12,13,15]
-        ]
-        k = 6
+    for each iteration:
 
-        for each iteration:
+    (1+15)/2=8, there are 2 numbers <= 6, so we assign left = 8+1 = 9
+    (9+15)/2=12, there are 7 numbers ! <= 6, so we assign right = 12-1 = 11
+    (9+11)/2=10, there are 5 numbers <= 6, so we assign left = 10+1 = 11
+    (11+11)/2=11, there are 5 numbers <= 6, so we assign left = 11+1 = 12
 
-        (1+15)/2=8, there are 2 numbers <= 6, so we assign left = 8+1 = 9
-        (9+15)/2=12, there are 7 numbers ! <= 6, so we assign right = 12-1 = 11
-        (9+11)/2=10, there are 5 numbers <= 6, so we assign left = 10+1 = 11
-        (11+11)/2=11, there are 5 numbers <= 6, so we assign left = 11+1 = 12
+    the loop exits, return left = 12
 
-        the loop exits, return left = 12
+    ref:
+    - https://www.hrwhisper.me/leetcode-kth-smallest-element-sorted-matrix/
 
-        ref:
-        - https://www.hrwhisper.me/leetcode-kth-smallest-element-sorted-matrix/
+    40 ms, faster than 82.78%
+"""
 
-        40 ms, faster than 82.78%
-        """
-        left = matrix[0][0]
-        right = matrix[-1][-1]
-        while left <= right:
-            mid = (left + right) / 2
 
-            # for each row, binary search through itself to find the number of items which <= target
-            count = 0
-            for arr in matrix:
-                x = self.upperboundBsearch(arr, mid)
-                count += x
+class Solution:
+    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
+        if len(matrix) == 0 or len(matrix[0]) == 0:
+            return None
+        pq = []
+        for row in matrix:
+            first = row.pop(0)
+            heapq.heappush(pq, (first, row))
 
-            # if count >= k, narrow down the scope to left and mid-1
-            if count >= k:
-                right = mid - 1
-            else:
-                left = mid + 1
-        return left
-
-    def upperboundBsearch(self, nums, target):
-        left = 0
-        right = len(nums)
-        while left < right:
-            mid = (left + right) / 2
-            if target >= nums[mid]:
-                left = mid + 1
-            else:
-                right = mid
-        return left
+        count = 1
+        while len(pq) > 0:
+            num, row = heapq.heappop(pq)
+            if count == k:
+                return num
+            count += 1
+            if len(row) > 0:
+                first = row.pop(0)
+                heapq.heappush(pq, (first, row))
+        return None
 
 
 a = [

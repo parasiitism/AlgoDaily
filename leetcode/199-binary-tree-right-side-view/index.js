@@ -41,22 +41,17 @@ var rightSideView = function (root) {
     80 ms, faster than 81.25%
 */
 var rightSideView = function(root) {
-    if (root === null) {
-        return []
-    }
     const res = []
-    
     const dfs = (node, level) => {
-        if (node === null) {
+        if (node == null) {
             return
         }
         if (level >= res.length) {
             res.push(node.val)
         }
-        dfs(node.right, level + 1)
-        dfs(node.left, level + 1)
+        dfs(node.right, level+1)
+        dfs(node.left, level+1)
     }
     dfs(root, 0)
-    
     return res
 };

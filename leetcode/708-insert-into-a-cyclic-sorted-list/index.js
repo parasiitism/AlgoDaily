@@ -10,39 +10,29 @@
     92 ms, faster than 27.43%
 */
 var insert = function(head, insertVal) {
+    const newNode = new Node(insertVal)
     if (head == null) {
-        const node = new Node(insertVal)
-        node.next = node
-        return node
+        newNode.next = newNode
+        return newNode
     }
-    // find the min node
-    let minNode = head
-    let cur = head
+    let prev = head
+    let curr = head.next
     while (true) {
-        cur = cur.next
-        if (cur.val < minNode.val) {
-            minNode = cur
+        if (prev.val <= insertVal && insertVal <= curr.val) {
+            break
         }
-        if (cur === head) {
+        if (prev.val > curr.val) {
+            if (prev.val <= insertVal || insertVal <= curr.val) {
+                break
+            }
+        }
+        prev = curr
+        curr = curr.next
+        if (prev == head) {
             break
         }
     }
-    // start from min node
-    cur = minNode
-    while (true) {
-        if (cur.val <= insertVal && cur.next.val > insertVal) {
-            const node = new Node(insertVal)
-            node.next = cur.next
-            cur.next = node
-            break
-        }
-        if (cur.next == minNode) {
-            const node = new Node(insertVal)
-            node.next = cur.next
-            cur.next = node
-            break
-        }
-        cur = cur.next
-    }
+    prev.next = newNode
+    newNode.next = curr
     return head
 };

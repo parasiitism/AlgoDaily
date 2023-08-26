@@ -1,78 +1,38 @@
-/**
- * Initialize your data structure here.
- * @param {number} n
- */
-var TicTacToe = function (n) {
-	this.board = [];
-	for (let i = 0; i < n; i++) {
-		this.board.push(Array(n).fill(0));
-	}
-};
+const abs = Math.abs
 
-/**
- * Player {player} makes a move at ({row}, {col}).
-        @param row The row of the board.
-        @param col The column of the board.
-        @param player The player, can be either 1 or 2.
-        @return The current winning condition, can be either:
-                0: No one wins.
-                1: Player 1 wins.
-                2: Player 2 wins. 
- * @param {number} row 
- * @param {number} col 
- * @param {number} player
- * @return {number}
- */
-TicTacToe.prototype.move = function (row, col, player) {
-	const n = this.board.length;
-	this.board[row][col] = player;
-
-	// row
-	let count = 0;
-	for (let i = 0; i < n; i++) {
-		if (this.board[i][col] == player) {
-			count += 1;
-		}
-	}
-	if (count == n) {
-		return player;
-	}
-
-	// col
-	count = 0;
-	for (let j = 0; j < n; j++) {
-		if (this.board[row][j] == player) {
-			count += 1;
-		}
-	}
-	if (count == n) {
-		return player;
-	}
-
-	// diag
-	count = 0;
-	for (let d = 0; d < n; d++) {
-		if (this.board[d][d] == player) {
-			count += 1;
-		}
-	}
-	if (count == n) {
-		return player;
-	}
-
-	// anti - diag
-	count = 0;
-	for (let d = 0; d < n; d++) {
-		if (this.board[d][n - d - 1] == player) {
-			count += 1;
-		}
-	}
-	if (count == n) {
-		return player;
-	}
-
-	return 0;
-};
+class TicTacToe {
+    constructor(n) {
+        this.n = n
+        this.rows = Array(n).fill(0)
+        this.cols = Array(n).fill(0)
+        this.diag = 0       // i,j; i+1, j+1
+        this.antiDiag = 0   // i+j == n-1
+    }
+    move(i, j, player) {
+        const n = this.n
+        let score = 0
+        if (player == 2) {
+            score = -1
+        } else {
+            score = 1
+        }
+        this.rows[i] += score
+        this.cols[j] += score
+        if (i == j) {
+            this.diag += score
+        }
+        if (i+j+1 == n) {
+            this.antiDiag += score
+        }
+        if (
+            abs(this.rows[i]) == n || abs(this.cols[j]) == n 
+            || abs(this.diag) == n || abs(this.antiDiag) == n
+        ) {
+            return player
+        }
+        return 0
+    }
+}
 
 /**
  * Your TicTacToe object will be instantiated and called as such:

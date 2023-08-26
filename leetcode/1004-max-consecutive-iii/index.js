@@ -9,7 +9,7 @@
 	Space	O(1)
 	60 ms, faster than 100.00%
 */
-var longestOnes = function(A, K) {
+var longestOnes = function(nums, k) {
     let j = 0
     let res = 0
     let zeros = 0

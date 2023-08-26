@@ -1,44 +1,33 @@
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {string} s
- * @return {TreeNode}
- */
+/*
+    2nd: global index
+*/
 var str2tree = function(s) {
-    const arr = []
-    for (let c of s) {
-        arr.push(c)
-    }
-    return dfs(arr)
-};
+    let idx = 0
 
-const dfs = (arr) => {
-    if (arr.length == 0) {
-        return null
+    const dfs = () => {
+        if (idx == s.length) {
+            return null
+        }
+        let numStr = ''
+        while (idx < s.length && s[idx] != '(' && s[idx] != ')') {
+            numStr += s[idx]
+            idx += 1
+        }
+        const num = Number(numStr)
+        const node = new TreeNode(num)
+        if (idx < s.length && s[idx] == '(') {
+            idx += 1
+            node.left = dfs()
+        }
+        if (idx < s.length && s[idx] == '(') {
+            idx += 1
+            node.right = dfs()
+        }
+        if (idx < s.length && s[idx] == ')') {
+            idx += 1
+        }
+        return node
     }
-    let s = ''
-    while (arr.length > 0 && arr[0] != '(' && arr[0] != ")") {
-        s += arr.shift()
-    }
-    const num = parseInt(s)
-    const node = new TreeNode(num)
-    
-    if (arr.length > 0 && arr[0] == '(') {
-        arr.shift()
-        node.left = dfs(arr)
-    }
-    if (arr.length > 0 && arr[0] == '(') {
-        arr.shift()
-        node.right = dfs(arr)
-    }
-    if (arr.length > 0 && arr[0] == ')') {
-        arr.shift()
-    }
-    return node
-}
+
+    return dfs()
+};
