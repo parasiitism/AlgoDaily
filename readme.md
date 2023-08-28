@@ -99,3 +99,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1820 | [Length of the Longest Valid Substring](/leetcode/2781) | sliding window | [leetcode 2781](https://leetcode.com/problems/length-of-the-longest-valid-substring/) | 📌📌📌 |
 | 1821 | [Number of Unique Categories](/leetcode/2782) | union find | [leetcode 2782](https://leetcode.com/problems/number-of-unique-categories/) | |
 | 1822 | [Check if Array is Good](/leetcode/2784) | hashtable | [leetcode 2784](https://leetcode.com/problems/check-if-array-is-good/) | |
+| 1823 | [Sort Vowels in a String](/leetcode/2785) | sort | [leetcode 2785](https://leetcode.com/problems/sort-vowels-in-a-string/) | |
