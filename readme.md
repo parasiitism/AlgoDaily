@@ -100,3 +100,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1821 | [Number of Unique Categories](/leetcode/2782) | union find | [leetcode 2782](https://leetcode.com/problems/number-of-unique-categories/) | |
 | 1822 | [Check if Array is Good](/leetcode/2784) | hashtable | [leetcode 2784](https://leetcode.com/problems/check-if-array-is-good/) | |
 | 1823 | [Sort Vowels in a String](/leetcode/2785) | sort | [leetcode 2785](https://leetcode.com/problems/sort-vowels-in-a-string/) | |
+| 1824 | [Ways to Express an Integer as Sum of Powers](/leetcode/2787) | dynamic programming | [leetcode 2787](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/) | |
