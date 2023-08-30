@@ -36,8 +36,7 @@ var promisePool1 = async function(functions, n) {
     let idx = 0
     const worker = async () => {
         if (idx == functions.length) { return }
-        const fn = functions[idx]
-        idx += 1
+        const fn = functions[idx++]
         await fn()
         await worker()
     }
