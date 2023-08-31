@@ -102,3 +102,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1823 | [Sort Vowels in a String](/leetcode/2785) | sort | [leetcode 2785](https://leetcode.com/problems/sort-vowels-in-a-string/) | |
 | 1824 | [Ways to Express an Integer as Sum of Powers](/leetcode/2787) | dynamic programming | [leetcode 2787](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/) | |
 | 1825 | [Split Strings by Separator](/leetcode/2788) | string | [leetcode 2788](https://leetcode.com/problems/split-strings-by-separator/) | |
+| 1826 | [Count Nodes That Are Great Enough](/leetcode/2792) | recursion | [leetcode 2792](https://leetcode.com/problems/count-nodes-that-are-great-enough/) | |
