@@ -4,10 +4,10 @@
         The swipe left function moves the number left and merges equal numbers
     
     e.g.
-    - [4,0,2,2] -> [4,0,4,0]
-    - [4,2,2,3] -> [8,0,0,3]
-    - [8,4,2,2,3] -> [16,0,0,0,3]
-    - [0,0,10,-5,-5,0,3] -> 
+    - [4,0,2,2] -> [4,4,0,0]
+    - [4,2,2,3] -> [4,4,0,3]
+    - [8,4,2,2,3] -> [8,4,4,3,0]
+    - [0,0,10,-5,-5,0,3] -> [10, -10, 3, 0, 0, 0, 0]
 
     https://www.1point3acres.com/bbs/thread-963716-1-1.html
 """
@@ -19,21 +19,18 @@ def f(arr):
     for i in range(n):
         x = arr[i]
         if x == 0:
-            stack.append((x, i))
+            continue
+        if len(stack) > 0 and stack[-1] == x:
+            stack[-1] += x
         else:
-            j = i
-            while len(stack) > 0 and stack[-1][0] == x:
-                y, j = stack.pop()
-                x = x + y
-            stack.append((x, j))
+            stack.append(x)
     res = n * [0]
-    print(stack)
-    for x, i in stack:
-        res[i] = x
+    for i in range(len(stack)):
+        res[i] = stack[i]
     return res
 
 
 print(f([4, 0, 2, 2]))
-# print(f([4,2,2,3]))
-# print(f([8,4,2,2,3]))
-# print(f([0,0,10,-5,-5,0,3]))
+print(f([4, 2, 2, 3]))
+print(f([8, 4, 2, 2, 3]))
+print(f([0, 0, 10, -5, -5, 0, 3]))

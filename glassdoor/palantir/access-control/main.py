@@ -13,6 +13,12 @@ from datetime import datetime
     When you grant user access to a resource, you're also granting the user access to all resources under it. Same goes for revoke.
 """
 
+"""
+    2nd approach: a global cache table
+    node: { user: timestamp }
+"""
+user_access_per_node = {}
+
 
 class Resource:
 
@@ -21,8 +27,9 @@ class Resource:
         self.data = data
         self.children = []
         self.parent = parent
+        # 1st approach: hash table within every node
         # key: value = user: (boolean, timestamp) or a big integer; good thing about timestamp is we also know 'when'
-        self.user_access = {}
+        # self.user_access = {}
 
     def _getTimestamp(self):
         dt = datetime.now()
@@ -30,12 +37,24 @@ class Resource:
 
     def grant_access(self, user):
         ts = self._getTimestamp()
-        self.user_access[user] = (True, ts)
+
+        # self.user_access[user] = (True, ts)
+
+        if self not in user_access_per_node:
+            user_access_per_node[self] = {}
+        user_access_per_node[self][user] = (True, ts)
+
         return True
 
     def revoke_access(self, user):
         ts = self._getTimestamp()
-        self.user_access[user] = (False, ts)
+
+        # self.user_access[user] = (False, ts)
+
+        if self not in user_access_per_node:
+            user_access_per_node[self] = {}
+        user_access_per_node[self][user] = (False, ts)
+
         return True
 
     def has_access(self, user):
@@ -43,8 +62,13 @@ class Resource:
         latest_access_bool = False
         cur = self
         while cur != None:
-            if user in cur.user_access:
-                access_bool, ts = cur.user_access[user]
+            # if user in cur.user_access:
+            #     access_bool, ts = cur.user_access[user]
+            #     if ts > latest_ts:
+            #         latest_ts = ts
+            #         latest_access_bool = access_bool
+            if user in user_access_per_node[cur]:
+                access_bool, ts = user_access_per_node[cur][user]
                 if ts > latest_ts:
                     latest_ts = ts
                     latest_access_bool = access_bool
