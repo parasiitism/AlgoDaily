@@ -104,3 +104,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1825 | [Split Strings by Separator](/leetcode/2788) | string | [leetcode 2788](https://leetcode.com/problems/split-strings-by-separator/) | |
 | 1826 | [Count Nodes That Are Great Enough](/leetcode/2792) | recursion | [leetcode 2792](https://leetcode.com/problems/count-nodes-that-are-great-enough/) | |
 | 1827 | [Number of Employees Who Met the Target](/leetcode/2798) | array | [leetcode 2798](https://leetcode.com/problems/number-of-employees-who-met-the-target/) | |
+| 1828 | [Count Complete Subarrays in an Array](/leetcode/2799) | hashtable, sliding window | [leetcode 2799](https://leetcode.com/problems/count-complete-subarrays-in-an-array/) | 📌📌📌 |
