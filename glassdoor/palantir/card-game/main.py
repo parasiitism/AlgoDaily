@@ -2,160 +2,105 @@ import random
 from enum import Enum
 
 """
-    In the 1st half of the below code, 
-    we have implemented Deck with generics but restricted the type of T to Card. 
-    We have also implemented Card as an abstract class, 
-    since methods like value() don't make much sense without a specific game attached to them
+    Given 52 cards to N players 
+    
+    When the game starts, every player has a deck of cards.
+    1. In rvery round, every player can only take 1 card from the deck at the top.
+    2. The one who has the biggest card will win and s/he will take all other 3 cards from other players.
+    3. If tie? no tie
+    4. The game ends when there is a player who lose all cards
 """
 
 
-class Suit(Enum):
-    DIAMOND = 0  # smallest in big two
-    CLUBS = 1
-    HEART = 2
-    SPADE = 3
-
-
-class Card(object):
-    def __init__(self, suit, value, isAvailable=True):
+class Card:
+    def __init__(self, suit, rank) -> None:
         self.suit = suit
-        self.value = value
-        # self.isAvailable = isAvailable
+        self.rank = rank
+
+    def __str__(self):
+        return f"{self.suit}.{self.rank}"
 
 
-class Hand(object):
+class Player:
+    def __init__(self, name) -> None:
+        self.name = name
+        self.hand = []
 
-    def __init__(self, cards):
-        self.cards = cards
+    def draw(self):
+        card = self.hand.pop()
+        return card
 
-    def addCard(self, card):
-        self.cards.append(card)
-
-    def score(self):
-        total = 0
-        for card in self.cards:
-            total += card.value
-        return total
+    def __str__(self):
+        return f"{self.name}: {', '.join(str(card) for card in self.hand)}"
 
 
-class Deck(object):
-    def __init__(self):
-        # suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
-        values = ["A", "2", "3", "4", "5", "6",
-                  "7", "8", "9", "10", "J", "Q", "K"]
+class CardGame:
+    def __init__(self, N) -> None:
+        self.N = N
+        self.players = [Player(f"Player {i}") for i in range(N)]
+        self.deck = []
+        self.suits_mapping = {
+            "spade": 0,
+            "heart": 1,
+            "club": 2,
+            "diamond": 3
+        }
+        self.rank_mapping = {
+            "2": 0,
+            "3": 1,
+            "4": 2,
+            "5": 3,
+            "6": 4,
+            "7": 5,
+            "8": 6,
+            "9": 7,
+            "10": 8,
+            "jack": 9,
+            "queen": 10,
+            "king": 11,
+            "ace": 12
+        }
 
-        cards = []
-        for i in range(len(Suit)):
-            for j in range(len(values)):
-                card = Card(i, values[j])
-                cards.append(card)
-        self.cards = cards
-        self.shuffled = []
+    def initialize_deck(self):
+        suits = ["spade", "heart", "club", "diamond"]
+        ranks = ["2", "3", "4", "5", "6", "7", "8",
+                 "9", "10", "jack", "queen", "king", "ace"]
+        deck = []
+        for r in ranks:
+            for s in suits:
+                deck.append(Card(s, r))
+        random.shuffle(deck)
+        return deck
 
-    def shuffle(self):
-        clone = []
-        for card in self.cards:
-            clone.append(Card(card.suit, card.value))
+    def play_game(self):
+        deck = self.initialize_deck()
+        cars_to_distribute = self.N * (52 // self.N)
+        while cars_to_distribute > 0:
+            for p in self.players:
+                p.hand.append(deck.pop())
+                cars_to_distribute -= 1
 
-        for i in range(len(clone)):
-            j = random.randint(i, len(clone)-1)
-            clone[i], clone[j] = clone[j], clone[i]
-        self.shuffled = clone
-        return clone
+        while all(len(player.hand) > 0 for player in self.players):
+            self.play_round()
 
-    def getCardFromShuffle(self):
-        if len(self.shuffled) == 0:
-            raise Exception('please shuffle first')
-        return self.shuffled.pop()
+        for player in self.players:
+            if len(player.hand) == 0:
+                print(f"{player.name} lost")
 
+    def play_round(self):
+        cards_in_round = []
+        for player in self.players:
+            card = player.draw()
+            cards_in_round.append((player, card))
 
-deck = Deck()
-for c in deck.cards:
-    print(c.suit, c.value)
-print("-----")
-deck.shuffle()
-for c in deck.shuffled:
-    print(c.suit, c.value)
-print("-----")
-
-"""
-    Now based on the above base implementation of the Card, Hand, Deck,
-    we can extend it to the blackjack game(21)
-"""
-
-
-class BlackJackHand(Hand):
-
-    def __init__(self, cards):
-        self.BLACKJACK = 21
-        # python2.7
-        super(BlackJackHand, self).__init__(cards)
-        # python3
-        # super().__init__(cards)
-
-    def score(self):
-        minOver = sys.maxsize
-        maxUnder = -sys.maxsize
-        for score in self.possibleScores(self.cards):
-            if self.BLACKJACK < score < minOver:
-                minOver = score
-            elif maxUnder < score <= self.BLACKJACK:
-                maxUnder = score
-        if maxUnder == -sys.maxsize:
-            return minOver
-        return maxUnder
-
-    def possibleScores(self, cards):
-        """
-            Score of the non-digit:
-            ace = either 1 or 11, J = 10, Q = 10, K = 10
-
-            idea: Combinations
-        """
-        res = []
-
-        def dfs(cands, total):
-            if len(cands) == 0:
-                res.append(total)
-                return
-            card = cands[0]
-            if card.value.isdigit():
-                dfs(cands[1:], total + int(card.value))
-            elif card.value in 'JQK':
-                dfs(cands[1:], total + 10)
-            elif card.value == 'A':
-                dfs(cands[1:], total + 1)
-                dfs(cands[1:], total + 11)
-        dfs(cards, 0)
-        return res
-
-    def isBusted(self):
-        return self.score() > self.BLACKJACK
-
-    def isBlackJacke(self):
-        return self.score() == self.BLACKJACK
+        cards_in_round.sort(key=lambda c: (
+            self.rank_mapping[c[1].rank], self.suits_mapping[c[1].suit]), reverse=True)
+        winner, winner_card = cards_in_round[0]
+        for player, card in cards_in_round:
+            # add to the back of the playe's hand
+            winner.hand.insert(0, card)
+        # print(f"winner = {winner.name} who has {len(winner.hand)} cards")
 
 
-bkh = BlackJackHand([])
-
-cards = [
-    Card(0, 'A'),
-    Card(0, '1'),
-    Card(0, '3'),
-]
-print(bkh.possibleScores(cards))
-
-cards = [
-    Card(0, 'A'),
-    Card(0, '2'),
-    Card(0, 'J'),
-]
-print(bkh.possibleScores(cards))
-
-cards = [
-    Card(0, 'A'),
-    Card(0, '2'),
-    Card(0, 'J'),
-    Card(0, 'A'),
-]
-print(bkh.possibleScores(cards))
+game = CardGame(4)
+game.play_game()
