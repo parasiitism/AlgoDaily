@@ -73,3 +73,34 @@ class TimeLimitedCache {
         return Object.keys(this.cache).length
     }
 }
+
+/*
+    2nd prototype with ES6 Map
+    - we can optimize 1st with only one hashtable
+*/
+class TimeLimitedCache {
+    constructor() {
+        this.cache = new Map() // key: {value, timeoutID}
+    }
+    set(key, value, duration) {
+        const isExisted = this.cache.has(key)
+        if (isExisted) {
+            const timeoutID = this.cache.get(key).timeoutID
+            clearTimeout(timeoutID)
+        }
+        const timeoutID = setTimeout(() => {
+            this.cache.delete(key)
+        }, duration)
+        this.cache.set(key, { value, timeoutID })
+        return isExisted
+    }
+    get(key) {
+        if (!this.cache.has(key)) {
+            return -1
+        }
+        return this.cache.get(key).value
+    }
+    count() {
+        return this.cache.size
+    }
+}
