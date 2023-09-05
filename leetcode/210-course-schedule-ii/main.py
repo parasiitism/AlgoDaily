@@ -141,38 +141,39 @@ print(Solution().findOrder(
 print("---------------------------------------------")
 
 
+"""
+    3rd approach: topo sort with hashtable but not int array
+
+    Time    O(V+E)
+    Space   O(V)
+    196 ms, faster than 19.02%
+    28mar2019
+"""
+
+
 class Solution(object):
-    def findOrder(self, numCourses, prerequisites):
-        """
-        :type numCourses: int
-        :type prerequisites: List[List[int]]
-        :rtype: List[int]
-
-        3rd approach: topo sort with hashtable but not int array
-
-        Time    O(V+E)
-        Space   O(V)
-        196 ms, faster than 19.02%
-        28mar2019
-        """
-        n = numCourses
-        graph = {} # key: []
-        indegrees = {} # key: count
+    def findOrder(self, n: int, prereqs: List[List[int]]) -> List[int]:
+        G = {}
+        indegrees = {}
         for i in range(n):
-            graph[i] = []
+            G[i] = []
             indegrees[i] = 0
-        for a, b in prerequisites:
-            graph[b].append(a)
-            indegrees[a] += 1
-        q = []
-        for cid in indegrees:
-            if indegrees[cid] == 0:
-                q.append(cid)
+
+        for course, prereq in prereqs:
+            G[prereq].append(course)
+            indegrees[course] += 1
+
+        q = deque()
+        for course in indegrees:
+            if indegrees[course] == 0:
+                q.append(course)
+
         res = []
         while len(q) > 0:
-            cid = q.pop(0)
-            res.append(cid)
-            for child in graph[cid]:
+            course = q.popleft()
+            res.append(course)
+            children = G[course]
+            for child in children:
                 indegrees[child] -= 1
                 if indegrees[child] == 0:
                     q.append(child)

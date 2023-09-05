@@ -5,19 +5,23 @@
     Time    O(NlogN)
     Space   O(N)
 """
+
+
 class Solution:
     def findMinDifference(self, timePoints: List[str]) -> int:
         times = []
-        for s in timePoints:
-            hh, mm = s.split(":")
-            hh = int(hh)
-            mm = int(mm)
-            times.append((hh*60 + mm))
+        for t in timePoints:
+            x = self.s2int(t)
+            times.append(x)
+            times.append(x+1440)
         times.sort()
-        if len(times) > 1:
-            first = times[0]
-            times.append(first + 60*24)
-        res = 60*24
+        res = 24*60
         for i in range(1, len(times)):
-            res = min(res, times[i] - times[i-1])
+            diff = times[i] - times[i-1]
+            res = min(res, diff)
         return res
+
+    def s2int(self, s):
+        hh, mm = s.split(':')
+        h, m = int(hh), int(mm)
+        return h*60+m

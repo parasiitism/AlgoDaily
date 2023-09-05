@@ -137,3 +137,64 @@ class Solution:
                 clone[i][j] = col.pop(0)
                 i -= 1
         return clone
+
+
+"""
+    3rd: similar to 2nd
+    - just transform the board into columns, so the board building process will be easier to manage
+"""
+
+
+class Solution:
+    def candyCrush(self, board: List[List[int]]) -> List[List[int]]:
+        R, C = len(board), len(board[0])
+        cols = self.board2cols(board)
+        while True:
+            to_collapse = set()
+            for j in range(C):
+                for i in range(R):
+                    cell = cols[j][i]
+                    if cell == 0:
+                        continue
+                    if i+2 < R and cols[j][i] == cols[j][i+1] == cols[j][i+2]:
+                        to_collapse.add((i, j))
+                        to_collapse.add((i+1, j))
+                        to_collapse.add((i+2, j))
+                    if j+2 < C and cols[j][i] == cols[j+1][i] == cols[j+2][i]:
+                        to_collapse.add((i, j))
+                        to_collapse.add((i, j+1))
+                        to_collapse.add((i, j+2))
+            if len(to_collapse) == 0:
+                break
+            for i, j in to_collapse:
+                cols[j][i] = 0
+
+            for j in range(C):
+                zeroIdx = R-1
+                # moving zeros
+                for i in range(R-1, -1, -1):
+                    if cols[j][i] != 0:
+                        cols[j][i], cols[j][zeroIdx] = cols[j][zeroIdx], cols[j][i]
+                        zeroIdx -= 1
+
+        return self.cols2board(cols)
+
+    def board2cols(self, board):
+        R, C = len(board), len(board[0])
+        cols = []
+        for j in range(C):
+            col = []
+            for i in range(R):
+                col.append(board[i][j])
+            cols.append(col)
+        return cols
+
+    def cols2board(self, cols):
+        C, R = len(cols), len(cols[0])
+        rows = []
+        for i in range(R):
+            row = []
+            for j in range(C):
+                row.append(cols[j][i])
+            rows.append(row)
+        return rows
