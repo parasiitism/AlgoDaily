@@ -107,3 +107,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1828 | [Count Complete Subarrays in an Array](/leetcode/2799) | hashtable, sliding window | [leetcode 2799](https://leetcode.com/problems/count-complete-subarrays-in-an-array/) | 📌📌📌 |
 | 1829 | [Find The K-th Lucky Number](/leetcode/2802) | math | [leetcode 2802](https://leetcode.com/problems/find-the-k-th-lucky-number/) | |
 | 1830 | [Account Balance After Rounded Purchase](/leetcode/2806) | math | [leetcode 2806](https://leetcode.com/problems/https://leetcode.com/problems/account-balance-after-rounded-purchase/) | |
+| 1831 | [Insert Greatest Common Divisors in Linked List](/leetcode/2807) | linked list | [leetcode 2807](https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/) | |
