@@ -125,70 +125,67 @@ print("-----")
 """
 
 
-class Node(object):
+class Node:
     def __init__(self):
-        self.children = {}
-        self.count = 0
+        self.children = {}  # { char: Node }
+        self.weight = 0
 
 
-class Trie(object):
+class Trie:
     def __init__(self):
         self.root = Node()
 
-    def insert(self, word, count=1):
+    def insert(self, s, times):
         cur = self.root
-        for c in word:
+        for c in s:
             if c not in cur.children:
                 cur.children[c] = Node()
             cur = cur.children[c]
-        cur.count += count
+        cur.weight += times
 
-    def search(self, word):
+    def search(self, s):
         cur = self.root
-        for c in word:
+        for c in s:
             if c not in cur.children:
-                return []
+                return None
             cur = cur.children[c]
-        cands = []
-
-        def dfs(node, path):
-            if node == None:
-                return
-            if node.count > 0:
-                cands.append((node.count, word + path))
-            for key in node.children:
-                dfs(node.children[key], path + key)
-        dfs(cur, '')
-
-        def cmptr(a, b):
-            if a[0] == b[0]:
-                return -1 if a[1] < b[1] else 1
-            return b[0] - a[0]
-        cands.sort(key=cmp_to_key(cmptr))
-
-        res = []
-        for i in range(min(3, len(cands))):
-            res.append(cands[i][1])
-        return res
+        return cur
 
 
 class AutocompleteSystem:
 
-    def __init__(self, sentences, times):
+    def __init__(self, sentences: List[str], times: List[int]):
         self.trie = Trie()
-        for i in range(len(sentences)):
+        n = len(sentences)
+        for i in range(n):
             s = sentences[i]
             t = times[i]
             self.trie.insert(s, t)
-        self.userInput = ''
+        self.query = ''
 
-    def input(self, c):
+    def input(self, c: str) -> List[str]:
         if c == '#':
-            self.trie.insert(self.userInput)
-            self.userInput = ''
+            self.trie.insert(self.query, 1)
+            self.query = ''
             return []
-        self.userInput += c
-        return self.trie.search(self.userInput)
+        self.query += c
+        parent = self.trie.search(self.query)
+
+        if parent == None:
+            return []
+
+        res = []
+
+        def dfs(node, s):
+            if node.weight > 0:
+                res.append((s, node.weight))
+            for key in node.children:
+                child = node.children[key]
+                dfs(child, s + key)
+        dfs(parent, self.query)
+
+        res.sort(key=lambda x: (-x[1], x[0]))
+        return map(lambda x: x[0], res[:3])
 
 
 sentences = ['i love you', 'island', 'ironman', 'i love leetcode', 'ia']
