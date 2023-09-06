@@ -108,3 +108,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1829 | [Find The K-th Lucky Number](/leetcode/2802) | math | [leetcode 2802](https://leetcode.com/problems/find-the-k-th-lucky-number/) | |
 | 1830 | [Account Balance After Rounded Purchase](/leetcode/2806) | math | [leetcode 2806](https://leetcode.com/problems/https://leetcode.com/problems/account-balance-after-rounded-purchase/) | |
 | 1831 | [Insert Greatest Common Divisors in Linked List](/leetcode/2807) | linked list | [leetcode 2807](https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/) | |
+| 1832 | [Max Pair Sum in an Array](/leetcode/2815) | hashtable | [leetcode 2815](https://leetcode.com/problems/max-pair-sum-in-an-array/description/) | |
