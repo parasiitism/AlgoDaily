@@ -3,7 +3,7 @@ from collections import *
     1st:
     Given some edges e.g. [u, v] where u represent the parent and v represent the child, return the nodes who have 0 or 1 parent
 
-    e.g. [
+    e.g. Input: [
         [1,4],[1,5],[2,5],[3,6],[6,7]
     ]
 
@@ -12,13 +12,17 @@ from collections import *
     4    5        6
                    \
                     7
+    
+    Output: [1, 2, 3, 4, 6, 7]
 """
+
+
 def f1(edges):
     nodes = set()
     for u, v in edges:
         nodes.add(u)
         nodes.add(v)
-    indegrees = { x: set() for x in nodes }
+    indegrees = {x: set() for x in nodes}
     for u, v in edges:
         indegrees[v].add(u)
     res = []
@@ -28,7 +32,8 @@ def f1(edges):
             res.append(node)
     return res
 
-a = [[1,4],[1,5],[2,5],[3,6],[6,7]]
+
+a = [[1, 4], [1, 5], [2, 5], [3, 6], [6, 7]]
 print(f1(a))
 
 """
@@ -49,13 +54,15 @@ print(f1(a))
 
     To ask: will there be a cycle? 
 """
+
+
 def f2(edges, node1, node2):
 
     nodes = set()
     for u, v in edges:
         nodes.add(u)
         nodes.add(v)
-    indegrees = { x: set() for x in nodes }
+    indegrees = {x: set() for x in nodes}
     for u, v in edges:
         indegrees[v].add(u)
 
@@ -68,7 +75,7 @@ def f2(edges, node1, node2):
         path1set.add(x)
         for parent in indegrees[x]:
             q.append(parent)
-    
+
     q = [node2]
     while len(q) > 0:
         x = q.pop(0)
@@ -79,9 +86,10 @@ def f2(edges, node1, node2):
 
     return False
 
+
 print('-----2-----')
 
-a = [[1,4],[1,5],[2,5],[3,6],[6,7]]
+a = [[1, 4], [1, 5], [2, 5], [3, 6], [6, 7]]
 print(f2(a, 4, 5))
 print(f2(a, 4, 7))
 
@@ -107,16 +115,18 @@ print(f2(a, 4, 7))
     
     If node1 = 5, node2 = 7, return -4 (instead of 0) 
 """
+
+
 def f3(edges, node1, node2):
 
     nodes = set()
     for u, v in edges:
         nodes.add(u)
         nodes.add(v)
-    indegrees = { x: set() for x in nodes }
+    indegrees = {x: set() for x in nodes}
     for u, v in edges:
         indegrees[v].add(u)
-    
+
     path1steps = Counter()
     q = [(node1, 0)]
     while len(q) > 0:
@@ -126,24 +136,28 @@ def f3(edges, node1, node2):
         path1steps[x] = steps
         for parent in indegrees[x]:
             q.append((parent, steps+1))
-    
+
     q = [(node2, 0)]
     res_steps = 0
     res = None
     while len(q) > 0:
         x, steps = q.pop(0)
         if x in path1steps:
-            if steps + path1steps[x] > res_steps:
-                res_steps = steps + path1steps[x]
+            # or total = steps + path1steps[x]
+            max_steps = max(steps, path1steps[x])
+            if max_steps > res_steps:
+                res_steps = max_steps
                 res = x
         for parent in indegrees[x]:
             q.append((parent, steps+1))
 
     return res
 
+
 print('-----3-----')
 a = [
-    [1,4],[1,5],[2,5],[3,6],[6,7],[0,2],[0,3],[-1,0],[-2,-1],[-3,-1],[-4,-3]
+    [1, 4], [1, 5], [2, 5], [3, 6], [6, 7], [0, 2], [
+        0, 3], [-1, 0], [-2, -1], [-3, -1], [-4, -3]
 ]
 print(f3(a, 5, 7))
 print(f3(a, 4, 7))

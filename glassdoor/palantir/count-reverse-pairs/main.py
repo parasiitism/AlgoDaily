@@ -15,6 +15,8 @@
 
     note: there are 2 'cba' which maps to 'abc', but we only count the unique ones
 """
+
+
 def f1(strs):
     seen = set()
     res = set()
@@ -27,7 +29,8 @@ def f1(strs):
             seen.add(r)
     return len(res)
 
-a = ['abc','bac','adc','cba','cba','cda','abc']
+
+a = ['abc', 'bac', 'adc', 'cba', 'cba', 'cda', 'abc']
 print(f1(a))
 
 print("-----")
@@ -48,5 +51,24 @@ def f2(strs):
             seen.add(r)
     return res
 
-a = ['abc','bac','adc','cba','cba','cda','abc']
+
+a = ['abc', 'bac', 'adc', 'cba', 'cba', 'cda', 'abc']
 print(f2(a))
+
+print("-----")
+
+
+def f3(strs):
+    reverseds = set()
+    for s in strs:
+        r = s[::-1]
+        reverseds.add(r)
+    res = set()
+    for s in strs:
+        if s in reverseds:
+            res.add(s)
+    return len(res)
+
+
+a = ['abc', 'bac', 'adc', 'cba', 'cba', 'cda', 'abc']
+print(f3(a))

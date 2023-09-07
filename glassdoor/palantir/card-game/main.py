@@ -26,9 +26,15 @@ class Player:
         self.name = name
         self.hand = []
 
-    def draw(self):
+    def getCard(self, card):
+        self.hand.append(card)
+
+    def drawCard(self):
         card = self.hand.pop()
         return card
+
+    def hasCard(self):
+        return len(self.hand) > 0
 
     def __str__(self):
         return f"{self.name}: {', '.join(str(card) for card in self.hand)}"
@@ -74,27 +80,28 @@ class CardGame:
 
     def play_game(self):
         deck = self.initialize_deck()
-        cars_to_distribute = self.N * (52 // self.N)
-        while cars_to_distribute > 0:
+        cards_to_distribute = self.N * (52 // self.N)
+        while cards_to_distribute > 0:
             for p in self.players:
-                p.hand.append(deck.pop())
-                cars_to_distribute -= 1
+                p.getCard(deck.pop())
+                cards_to_distribute -= 1
 
-        while all(len(player.hand) > 0 for player in self.players):
+        while all(player.hasCard() for player in self.players):
             self.play_round()
 
         for player in self.players:
-            if len(player.hand) == 0:
+            if not player.hasCard():
                 print(f"{player.name} lost")
 
     def play_round(self):
         cards_in_round = []
         for player in self.players:
-            card = player.draw()
+            card = player.drawCard()
             cards_in_round.append((player, card))
 
         cards_in_round.sort(key=lambda c: (
             self.rank_mapping[c[1].rank], self.suits_mapping[c[1].suit]), reverse=True)
+
         winner, winner_card = cards_in_round[0]
         for player, card in cards_in_round:
             # add to the back of the playe's hand
