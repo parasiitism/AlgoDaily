@@ -110,3 +110,4 @@ const start = new Date("09/01/2018"); const now = new Date(); console.log(Math.c
 | 1831 | [Insert Greatest Common Divisors in Linked List](/leetcode/2807) | linked list | [leetcode 2807](https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/) | |
 | 1832 | [Max Pair Sum in an Array](/leetcode/2815) | hashtable | [leetcode 2815](https://leetcode.com/problems/max-pair-sum-in-an-array/description/) | |
 | 1833 | [Double a Number Represented as a Linked List](/leetcode/2816) | linked list | [leetcode 2816](https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/) | |
+| 1834 | [Minimum Absolute Difference Between Elements With Constraint](/leetcode/2817) | BST | [leetcode 2817](https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint/) | |
